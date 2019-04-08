@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-libraries=[{"package"\:"esp32","platform"\:"esp32","library"\:"WiFi"},"MQTT"]
+libraries=[{"package"\:"esp32","platform"\:"esp32","library"\:"WiFi"},"NTPClient","MQTT"]

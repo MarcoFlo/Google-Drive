@@ -1,21 +1,19 @@
-// This example uses an ESP32 Development Board
-// to connect to shiftr.io.
-//
-// You can check on your device after a successful
-// connection here: https://shiftr.io/try.
-//
-// by Joël Gähwiler
 // https://github.com/256dpi/arduino-mqtt
 
+#include <NTPClient.h>
 #include <WiFi.h>
 #include <MQTT.h>
 
-const char ssid[] = "TISCALI-Moschettieri";
-const char pass[] = "Ciao33trentini!";
-const char hostname[] = "192.168.1.143";
+const char ssid[] = "AndroidMA2";
+const char pass[] = "montagna";
+const char hostname[] = "192.168.43.225";
+
+
 
 WiFiClient net;
 MQTTClient client;
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, hostname, 3600, 60000);
 
 unsigned long lastMillis = 0;
 unsigned long elapsedTime = 0;
@@ -31,7 +29,7 @@ void connect() {
 	Serial.print("\nconnecting to Mqtt broker...");
 
 	while (!client.connect("esp32", false)) {
-			Serial.print(".");
+		Serial.print(".");
 		delay(1000);
 	}
 
@@ -39,11 +37,13 @@ void connect() {
 
 	client.subscribe("/time");
 	// client.unsubscribe("/hello");
+
+	timeClient.begin();
+
 }
 
-
 void messageReceived(String &topic, String &payload) {
-	Serial.println("incoming msg " + topic + " - " + payload);
+	Serial.println("incoming msg: " + topic + " - " + payload);
 
 	//Serial.println("incoming msg: " + " topic : " + topic + "  payload : " + payload + " ");
 }
@@ -54,10 +54,7 @@ void setup() {
 
 	WiFi.begin(ssid, pass);
 
-	// Note: Local domain names (e.g. "Computer.local" on OSX) are not supported by Arduino.
-	// You need to set the IP address directly.
-
-	client.begin(hostname,1883, net);
+	client.begin(hostname, 1883, net);
 	client.onMessage(messageReceived);
 
 	connect();
@@ -77,6 +74,10 @@ void loop() {
 
 		client.publish("/time", String(elapsedTime));
 		lastMillis = millis();
+
+		timeClient.update();
+
+		Serial.println(timeClient.getFormattedTime());
 
 	}
 }
