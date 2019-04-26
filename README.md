@@ -10,5 +10,5 @@ git clone https://github.com/MarcoFlo/WiFiScanner-Malnati.git
 
 cd WiFiScanner-Malnati  
 git add .  
-git commit -m "message"
+git commit -m "message"  
 git push
