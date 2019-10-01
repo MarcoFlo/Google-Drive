@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-20189/Progetto-Malnati/Client/main.cpp
+iostream
+-
+

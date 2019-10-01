@@ -1,0 +1,3 @@
+C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-20189/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir
+C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-20189/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-20189/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
