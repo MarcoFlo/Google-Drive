@@ -1,9 +1,15 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/main.cpp.obj"
+  "CMakeFiles/Server.dir/messageP.grpc.pb.cc.obj"
+  "CMakeFiles/Server.dir/messageP.pb.cc.obj"
   "Server.exe"
   "Server.exe.manifest"
   "Server.lib"
   "Server.pdb"
+  "messageP.grpc.pb.cc"
+  "messageP.grpc.pb.h"
+  "messageP.pb.cc"
+  "messageP.pb.h"
 )
 
 # Per-language clean rules from dependency scanning.

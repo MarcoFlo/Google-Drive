@@ -49,13 +49,47 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Client"
+CMAKE_SOURCE_DIR = "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Client\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"libprotobuf\" \"libprotobuf-lite\" \"libprotoc\" \"protobuf-export\" \"protobuf-headers\" \"protobuf-protos\" \"protoc\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components\fast: list_install_components
+
+.PHONY : list_install_components\fast
+
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
+
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	echo >nul && "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install\fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -81,9 +115,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +158,1761 @@ Client\fast:
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\build
 .PHONY : Client\fast
 
+#=============================================================================
+# Target rules for targets named grpc_cronet
+
+# Build rule for target.
+grpc_cronet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_cronet
+.PHONY : grpc_cronet
+
+# fast build rule for target.
+grpc_cronet\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_cronet.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_cronet.dir\build
+.PHONY : grpc_cronet\fast
+
+#=============================================================================
+# Target rules for targets named plugins
+
+# Build rule for target.
+plugins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) plugins
+.PHONY : plugins
+
+# fast build rule for target.
+plugins\fast:
+	$(MAKE) -f grpc\CMakeFiles\plugins.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\plugins.dir\build
+.PHONY : plugins\fast
+
+#=============================================================================
+# Target rules for targets named grpc++_unsecure
+
+# Build rule for target.
+grpc++_unsecure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc++_unsecure
+.PHONY : grpc++_unsecure
+
+# fast build rule for target.
+grpc++_unsecure\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc++_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_unsecure.dir\build
+.PHONY : grpc++_unsecure\fast
+
+#=============================================================================
+# Target rules for targets named tools_c
+
+# Build rule for target.
+tools_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) tools_c
+.PHONY : tools_c
+
+# fast build rule for target.
+tools_c\fast:
+	$(MAKE) -f grpc\CMakeFiles\tools_c.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\build
+.PHONY : tools_c\fast
+
+#=============================================================================
+# Target rules for targets named tools_cxx
+
+# Build rule for target.
+tools_cxx: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) tools_cxx
+.PHONY : tools_cxx
+
+# fast build rule for target.
+tools_cxx\fast:
+	$(MAKE) -f grpc\CMakeFiles\tools_cxx.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_cxx.dir\build
+.PHONY : tools_cxx\fast
+
+#=============================================================================
+# Target rules for targets named tools
+
+# Build rule for target.
+tools: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) tools
+.PHONY : tools
+
+# fast build rule for target.
+tools\fast:
+	$(MAKE) -f grpc\CMakeFiles\tools.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\build
+.PHONY : tools\fast
+
+#=============================================================================
+# Target rules for targets named gpr
+
+# Build rule for target.
+gpr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gpr
+.PHONY : gpr
+
+# fast build rule for target.
+gpr\fast:
+	$(MAKE) -f grpc\CMakeFiles\gpr.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gpr.dir\build
+.PHONY : gpr\fast
+
+#=============================================================================
+# Target rules for targets named grpc_ruby_plugin
+
+# Build rule for target.
+grpc_ruby_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_ruby_plugin
+.PHONY : grpc_ruby_plugin
+
+# fast build rule for target.
+grpc_ruby_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_ruby_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_ruby_plugin.dir\build
+.PHONY : grpc_ruby_plugin\fast
+
+#=============================================================================
+# Target rules for targets named address_sorting
+
+# Build rule for target.
+address_sorting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) address_sorting
+.PHONY : address_sorting
+
+# fast build rule for target.
+address_sorting\fast:
+	$(MAKE) -f grpc\CMakeFiles\address_sorting.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\address_sorting.dir\build
+.PHONY : address_sorting\fast
+
+#=============================================================================
+# Target rules for targets named grpc
+
+# Build rule for target.
+grpc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc
+.PHONY : grpc
+
+# fast build rule for target.
+grpc\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc.dir\build
+.PHONY : grpc\fast
+
+#=============================================================================
+# Target rules for targets named grpc_unsecure
+
+# Build rule for target.
+grpc_unsecure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_unsecure
+.PHONY : grpc_unsecure
+
+# fast build rule for target.
+grpc_unsecure\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_unsecure.dir\build
+.PHONY : grpc_unsecure\fast
+
+#=============================================================================
+# Target rules for targets named grpc++
+
+# Build rule for target.
+grpc++: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc++
+.PHONY : grpc++
+
+# fast build rule for target.
+grpc++\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc++.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++.dir\build
+.PHONY : grpc++\fast
+
+#=============================================================================
+# Target rules for targets named grpc++_error_details
+
+# Build rule for target.
+grpc++_error_details: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc++_error_details
+.PHONY : grpc++_error_details
+
+# fast build rule for target.
+grpc++_error_details\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc++_error_details.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_error_details.dir\build
+.PHONY : grpc++_error_details\fast
+
+#=============================================================================
+# Target rules for targets named grpc++_reflection
+
+# Build rule for target.
+grpc++_reflection: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc++_reflection
+.PHONY : grpc++_reflection
+
+# fast build rule for target.
+grpc++_reflection\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc++_reflection.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_reflection.dir\build
+.PHONY : grpc++_reflection\fast
+
+#=============================================================================
+# Target rules for targets named grpc_plugin_support
+
+# Build rule for target.
+grpc_plugin_support: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_plugin_support
+.PHONY : grpc_plugin_support
+
+# fast build rule for target.
+grpc_plugin_support\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_plugin_support.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_plugin_support.dir\build
+.PHONY : grpc_plugin_support\fast
+
+#=============================================================================
+# Target rules for targets named grpcpp_channelz
+
+# Build rule for target.
+grpcpp_channelz: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpcpp_channelz
+.PHONY : grpcpp_channelz
+
+# fast build rule for target.
+grpcpp_channelz\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpcpp_channelz.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpcpp_channelz.dir\build
+.PHONY : grpcpp_channelz\fast
+
+#=============================================================================
+# Target rules for targets named grpc_csharp_ext
+
+# Build rule for target.
+grpc_csharp_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_csharp_ext
+.PHONY : grpc_csharp_ext
+
+# fast build rule for target.
+grpc_csharp_ext\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_csharp_ext.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_csharp_ext.dir\build
+.PHONY : grpc_csharp_ext\fast
+
+#=============================================================================
+# Target rules for targets named check_epollexclusive
+
+# Build rule for target.
+check_epollexclusive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) check_epollexclusive
+.PHONY : check_epollexclusive
+
+# fast build rule for target.
+check_epollexclusive\fast:
+	$(MAKE) -f grpc\CMakeFiles\check_epollexclusive.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\check_epollexclusive.dir\build
+.PHONY : check_epollexclusive\fast
+
+#=============================================================================
+# Target rules for targets named grpc_create_jwt
+
+# Build rule for target.
+grpc_create_jwt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_create_jwt
+.PHONY : grpc_create_jwt
+
+# fast build rule for target.
+grpc_create_jwt\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_create_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_create_jwt.dir\build
+.PHONY : grpc_create_jwt\fast
+
+#=============================================================================
+# Target rules for targets named grpc_objective_c_plugin
+
+# Build rule for target.
+grpc_objective_c_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_objective_c_plugin
+.PHONY : grpc_objective_c_plugin
+
+# fast build rule for target.
+grpc_objective_c_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_objective_c_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_objective_c_plugin.dir\build
+.PHONY : grpc_objective_c_plugin\fast
+
+#=============================================================================
+# Target rules for targets named grpc_print_google_default_creds_token
+
+# Build rule for target.
+grpc_print_google_default_creds_token: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_print_google_default_creds_token
+.PHONY : grpc_print_google_default_creds_token
+
+# fast build rule for target.
+grpc_print_google_default_creds_token\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\build
+.PHONY : grpc_print_google_default_creds_token\fast
+
+#=============================================================================
+# Target rules for targets named grpc_verify_jwt
+
+# Build rule for target.
+grpc_verify_jwt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_verify_jwt
+.PHONY : grpc_verify_jwt
+
+# fast build rule for target.
+grpc_verify_jwt\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_verify_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_verify_jwt.dir\build
+.PHONY : grpc_verify_jwt\fast
+
+#=============================================================================
+# Target rules for targets named gen_hpack_tables
+
+# Build rule for target.
+gen_hpack_tables: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gen_hpack_tables
+.PHONY : gen_hpack_tables
+
+# fast build rule for target.
+gen_hpack_tables\fast:
+	$(MAKE) -f grpc\CMakeFiles\gen_hpack_tables.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_hpack_tables.dir\build
+.PHONY : gen_hpack_tables\fast
+
+#=============================================================================
+# Target rules for targets named gen_legal_metadata_characters
+
+# Build rule for target.
+gen_legal_metadata_characters: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gen_legal_metadata_characters
+.PHONY : gen_legal_metadata_characters
+
+# fast build rule for target.
+gen_legal_metadata_characters\fast:
+	$(MAKE) -f grpc\CMakeFiles\gen_legal_metadata_characters.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_legal_metadata_characters.dir\build
+.PHONY : gen_legal_metadata_characters\fast
+
+#=============================================================================
+# Target rules for targets named gen_percent_encoding_tables
+
+# Build rule for target.
+gen_percent_encoding_tables: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gen_percent_encoding_tables
+.PHONY : gen_percent_encoding_tables
+
+# fast build rule for target.
+gen_percent_encoding_tables\fast:
+	$(MAKE) -f grpc\CMakeFiles\gen_percent_encoding_tables.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_percent_encoding_tables.dir\build
+.PHONY : gen_percent_encoding_tables\fast
+
+#=============================================================================
+# Target rules for targets named grpc_cpp_plugin
+
+# Build rule for target.
+grpc_cpp_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_cpp_plugin
+.PHONY : grpc_cpp_plugin
+
+# fast build rule for target.
+grpc_cpp_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_cpp_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_cpp_plugin.dir\build
+.PHONY : grpc_cpp_plugin\fast
+
+#=============================================================================
+# Target rules for targets named grpc_csharp_plugin
+
+# Build rule for target.
+grpc_csharp_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_csharp_plugin
+.PHONY : grpc_csharp_plugin
+
+# fast build rule for target.
+grpc_csharp_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_csharp_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_csharp_plugin.dir\build
+.PHONY : grpc_csharp_plugin\fast
+
+#=============================================================================
+# Target rules for targets named grpc_node_plugin
+
+# Build rule for target.
+grpc_node_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_node_plugin
+.PHONY : grpc_node_plugin
+
+# fast build rule for target.
+grpc_node_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_node_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_node_plugin.dir\build
+.PHONY : grpc_node_plugin\fast
+
+#=============================================================================
+# Target rules for targets named grpc_php_plugin
+
+# Build rule for target.
+grpc_php_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_php_plugin
+.PHONY : grpc_php_plugin
+
+# fast build rule for target.
+grpc_php_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_php_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_php_plugin.dir\build
+.PHONY : grpc_php_plugin\fast
+
+#=============================================================================
+# Target rules for targets named grpc_python_plugin
+
+# Build rule for target.
+grpc_python_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc_python_plugin
+.PHONY : grpc_python_plugin
+
+# fast build rule for target.
+grpc_python_plugin\fast:
+	$(MAKE) -f grpc\CMakeFiles\grpc_python_plugin.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_python_plugin.dir\build
+.PHONY : grpc_python_plugin\fast
+
+#=============================================================================
+# Target rules for targets named benchmark_main
+
+# Build rule for target.
+benchmark_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) benchmark_main
+.PHONY : benchmark_main
+
+# fast build rule for target.
+benchmark_main\fast:
+	$(MAKE) -f grpc\third_party\benchmark\src\CMakeFiles\benchmark_main.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\src\CMakeFiles\benchmark_main.dir\build
+.PHONY : benchmark_main\fast
+
+#=============================================================================
+# Target rules for targets named benchmark
+
+# Build rule for target.
+benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) benchmark
+.PHONY : benchmark
+
+# fast build rule for target.
+benchmark\fast:
+	$(MAKE) -f grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\build
+.PHONY : benchmark\fast
+
+#=============================================================================
+# Target rules for targets named basic_test
+
+# Build rule for target.
+basic_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) basic_test
+.PHONY : basic_test
+
+# fast build rule for target.
+basic_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\basic_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\basic_test.dir\build
+.PHONY : basic_test\fast
+
+#=============================================================================
+# Target rules for targets named options_test
+
+# Build rule for target.
+options_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) options_test
+.PHONY : options_test
+
+# fast build rule for target.
+options_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\options_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\options_test.dir\build
+.PHONY : options_test\fast
+
+#=============================================================================
+# Target rules for targets named output_test_helper
+
+# Build rule for target.
+output_test_helper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) output_test_helper
+.PHONY : output_test_helper
+
+# fast build rule for target.
+output_test_helper\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\build
+.PHONY : output_test_helper\fast
+
+#=============================================================================
+# Target rules for targets named user_counters_tabular_test
+
+# Build rule for target.
+user_counters_tabular_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) user_counters_tabular_test
+.PHONY : user_counters_tabular_test
+
+# fast build rule for target.
+user_counters_tabular_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\build
+.PHONY : user_counters_tabular_test\fast
+
+#=============================================================================
+# Target rules for targets named benchmark_test
+
+# Build rule for target.
+benchmark_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) benchmark_test
+.PHONY : benchmark_test
+
+# fast build rule for target.
+benchmark_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\benchmark_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\benchmark_test.dir\build
+.PHONY : benchmark_test\fast
+
+#=============================================================================
+# Target rules for targets named filter_test
+
+# Build rule for target.
+filter_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) filter_test
+.PHONY : filter_test
+
+# fast build rule for target.
+filter_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\filter_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\filter_test.dir\build
+.PHONY : filter_test\fast
+
+#=============================================================================
+# Target rules for targets named diagnostics_test
+
+# Build rule for target.
+diagnostics_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) diagnostics_test
+.PHONY : diagnostics_test
+
+# fast build rule for target.
+diagnostics_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\diagnostics_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\diagnostics_test.dir\build
+.PHONY : diagnostics_test\fast
+
+#=============================================================================
+# Target rules for targets named donotoptimize_test
+
+# Build rule for target.
+donotoptimize_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) donotoptimize_test
+.PHONY : donotoptimize_test
+
+# fast build rule for target.
+donotoptimize_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\donotoptimize_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\donotoptimize_test.dir\build
+.PHONY : donotoptimize_test\fast
+
+#=============================================================================
+# Target rules for targets named skip_with_error_test
+
+# Build rule for target.
+skip_with_error_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) skip_with_error_test
+.PHONY : skip_with_error_test
+
+# fast build rule for target.
+skip_with_error_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\skip_with_error_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\skip_with_error_test.dir\build
+.PHONY : skip_with_error_test\fast
+
+#=============================================================================
+# Target rules for targets named memory_manager_test
+
+# Build rule for target.
+memory_manager_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) memory_manager_test
+.PHONY : memory_manager_test
+
+# fast build rule for target.
+memory_manager_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\build
+.PHONY : memory_manager_test\fast
+
+#=============================================================================
+# Target rules for targets named fixture_test
+
+# Build rule for target.
+fixture_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) fixture_test
+.PHONY : fixture_test
+
+# fast build rule for target.
+fixture_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\fixture_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\fixture_test.dir\build
+.PHONY : fixture_test\fast
+
+#=============================================================================
+# Target rules for targets named register_benchmark_test
+
+# Build rule for target.
+register_benchmark_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) register_benchmark_test
+.PHONY : register_benchmark_test
+
+# fast build rule for target.
+register_benchmark_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\register_benchmark_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\register_benchmark_test.dir\build
+.PHONY : register_benchmark_test\fast
+
+#=============================================================================
+# Target rules for targets named map_test
+
+# Build rule for target.
+map_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) map_test
+.PHONY : map_test
+
+# fast build rule for target.
+map_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\map_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\map_test.dir\build
+.PHONY : map_test\fast
+
+#=============================================================================
+# Target rules for targets named multiple_ranges_test
+
+# Build rule for target.
+multiple_ranges_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) multiple_ranges_test
+.PHONY : multiple_ranges_test
+
+# fast build rule for target.
+multiple_ranges_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\multiple_ranges_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\multiple_ranges_test.dir\build
+.PHONY : multiple_ranges_test\fast
+
+#=============================================================================
+# Target rules for targets named templated_fixture_test
+
+# Build rule for target.
+templated_fixture_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) templated_fixture_test
+.PHONY : templated_fixture_test
+
+# fast build rule for target.
+templated_fixture_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\build
+.PHONY : templated_fixture_test\fast
+
+#=============================================================================
+# Target rules for targets named link_main_test
+
+# Build rule for target.
+link_main_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) link_main_test
+.PHONY : link_main_test
+
+# fast build rule for target.
+link_main_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\link_main_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\link_main_test.dir\build
+.PHONY : link_main_test\fast
+
+#=============================================================================
+# Target rules for targets named reporter_output_test
+
+# Build rule for target.
+reporter_output_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) reporter_output_test
+.PHONY : reporter_output_test
+
+# fast build rule for target.
+reporter_output_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\build
+.PHONY : reporter_output_test\fast
+
+#=============================================================================
+# Target rules for targets named user_counters_test
+
+# Build rule for target.
+user_counters_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) user_counters_test
+.PHONY : user_counters_test
+
+# fast build rule for target.
+user_counters_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\build
+.PHONY : user_counters_test\fast
+
+#=============================================================================
+# Target rules for targets named internal_threading_test
+
+# Build rule for target.
+internal_threading_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) internal_threading_test
+.PHONY : internal_threading_test
+
+# fast build rule for target.
+internal_threading_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\build
+.PHONY : internal_threading_test\fast
+
+#=============================================================================
+# Target rules for targets named report_aggregates_only_test
+
+# Build rule for target.
+report_aggregates_only_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) report_aggregates_only_test
+.PHONY : report_aggregates_only_test
+
+# fast build rule for target.
+report_aggregates_only_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\build
+.PHONY : report_aggregates_only_test\fast
+
+#=============================================================================
+# Target rules for targets named complexity_test
+
+# Build rule for target.
+complexity_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) complexity_test
+.PHONY : complexity_test
+
+# fast build rule for target.
+complexity_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\build
+.PHONY : complexity_test\fast
+
+#=============================================================================
+# Target rules for targets named display_aggregates_only_test
+
+# Build rule for target.
+display_aggregates_only_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) display_aggregates_only_test
+.PHONY : display_aggregates_only_test
+
+# fast build rule for target.
+display_aggregates_only_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\build
+.PHONY : display_aggregates_only_test\fast
+
+#=============================================================================
+# Target rules for targets named user_counters_thousands_test
+
+# Build rule for target.
+user_counters_thousands_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) user_counters_thousands_test
+.PHONY : user_counters_thousands_test
+
+# fast build rule for target.
+user_counters_thousands_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\build
+.PHONY : user_counters_thousands_test\fast
+
+#=============================================================================
+# Target rules for targets named cxx03_test
+
+# Build rule for target.
+cxx03_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cxx03_test
+.PHONY : cxx03_test
+
+# fast build rule for target.
+cxx03_test\fast:
+	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\cxx03_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\cxx03_test.dir\build
+.PHONY : cxx03_test\fast
+
+#=============================================================================
+# Target rules for targets named c-ares
+
+# Build rule for target.
+c-ares: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) c-ares
+.PHONY : c-ares
+
+# fast build rule for target.
+c-ares\fast:
+	$(MAKE) -f grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\build
+.PHONY : c-ares\fast
+
+#=============================================================================
+# Target rules for targets named acountry
+
+# Build rule for target.
+acountry: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) acountry
+.PHONY : acountry
+
+# fast build rule for target.
+acountry\fast:
+	$(MAKE) -f grpc\third_party\cares\cares\CMakeFiles\acountry.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\cares\cares\CMakeFiles\acountry.dir\build
+.PHONY : acountry\fast
+
+#=============================================================================
+# Target rules for targets named ahost
+
+# Build rule for target.
+ahost: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ahost
+.PHONY : ahost
+
+# fast build rule for target.
+ahost\fast:
+	$(MAKE) -f grpc\third_party\cares\cares\CMakeFiles\ahost.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\cares\cares\CMakeFiles\ahost.dir\build
+.PHONY : ahost\fast
+
+#=============================================================================
+# Target rules for targets named adig
+
+# Build rule for target.
+adig: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) adig
+.PHONY : adig
+
+# fast build rule for target.
+adig\fast:
+	$(MAKE) -f grpc\third_party\cares\cares\CMakeFiles\adig.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\cares\cares\CMakeFiles\adig.dir\build
+.PHONY : adig\fast
+
+#=============================================================================
+# Target rules for targets named gflags_nothreads_static
+
+# Build rule for target.
+gflags_nothreads_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gflags_nothreads_static
+.PHONY : gflags_nothreads_static
+
+# fast build rule for target.
+gflags_nothreads_static\fast:
+	$(MAKE) -f grpc\third_party\gflags\CMakeFiles\gflags_nothreads_static.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\gflags\CMakeFiles\gflags_nothreads_static.dir\build
+.PHONY : gflags_nothreads_static\fast
+
+#=============================================================================
+# Target rules for targets named libprotobuf-lite
+
+# Build rule for target.
+libprotobuf-lite: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) libprotobuf-lite
+.PHONY : libprotobuf-lite
+
+# fast build rule for target.
+libprotobuf-lite\fast:
+	$(MAKE) -f grpc\third_party\protobuf\CMakeFiles\libprotobuf-lite.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\protobuf\CMakeFiles\libprotobuf-lite.dir\build
+.PHONY : libprotobuf-lite\fast
+
+#=============================================================================
+# Target rules for targets named protoc
+
+# Build rule for target.
+protoc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) protoc
+.PHONY : protoc
+
+# fast build rule for target.
+protoc\fast:
+	$(MAKE) -f grpc\third_party\protobuf\CMakeFiles\protoc.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\protobuf\CMakeFiles\protoc.dir\build
+.PHONY : protoc\fast
+
+#=============================================================================
+# Target rules for targets named libprotoc
+
+# Build rule for target.
+libprotoc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) libprotoc
+.PHONY : libprotoc
+
+# fast build rule for target.
+libprotoc\fast:
+	$(MAKE) -f grpc\third_party\protobuf\CMakeFiles\libprotoc.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\protobuf\CMakeFiles\libprotoc.dir\build
+.PHONY : libprotoc\fast
+
+#=============================================================================
+# Target rules for targets named libprotobuf
+
+# Build rule for target.
+libprotobuf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) libprotobuf
+.PHONY : libprotobuf
+
+# fast build rule for target.
+libprotobuf\fast:
+	$(MAKE) -f grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\build
+.PHONY : libprotobuf\fast
+
+#=============================================================================
+# Target rules for targets named boringssl_gtest
+
+# Build rule for target.
+boringssl_gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) boringssl_gtest
+.PHONY : boringssl_gtest
+
+# fast build rule for target.
+boringssl_gtest\fast:
+	$(MAKE) -f grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\build
+.PHONY : boringssl_gtest\fast
+
+#=============================================================================
+# Target rules for targets named crypto_test_data
+
+# Build rule for target.
+crypto_test_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) crypto_test_data
+.PHONY : crypto_test_data
+
+# fast build rule for target.
+crypto_test_data\fast:
+	$(MAKE) -f grpc\third_party\boringssl\CMakeFiles\crypto_test_data.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\CMakeFiles\crypto_test_data.dir\build
+.PHONY : crypto_test_data\fast
+
+#=============================================================================
+# Target rules for targets named all_tests
+
+# Build rule for target.
+all_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all_tests
+.PHONY : all_tests
+
+# fast build rule for target.
+all_tests\fast:
+	$(MAKE) -f grpc\third_party\boringssl\CMakeFiles\all_tests.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\CMakeFiles\all_tests.dir\build
+.PHONY : all_tests\fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests\fast:
+	$(MAKE) -f grpc\third_party\boringssl\CMakeFiles\run_tests.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\CMakeFiles\run_tests.dir\build
+.PHONY : run_tests\fast
+
+#=============================================================================
+# Target rules for targets named crypto
+
+# Build rule for target.
+crypto: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) crypto
+.PHONY : crypto
+
+# fast build rule for target.
+crypto\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build
+.PHONY : crypto\fast
+
+#=============================================================================
+# Target rules for targets named crypto_base
+
+# Build rule for target.
+crypto_base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) crypto_base
+.PHONY : crypto_base
+
+# fast build rule for target.
+crypto_base\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\build
+.PHONY : crypto_base\fast
+
+#=============================================================================
+# Target rules for targets named crypto_test
+
+# Build rule for target.
+crypto_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) crypto_test
+.PHONY : crypto_test
+
+# fast build rule for target.
+crypto_test\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\build
+.PHONY : crypto_test\fast
+
+#=============================================================================
+# Target rules for targets named stack
+
+# Build rule for target.
+stack: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) stack
+.PHONY : stack
+
+# fast build rule for target.
+stack\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\build
+.PHONY : stack\fast
+
+#=============================================================================
+# Target rules for targets named lhash
+
+# Build rule for target.
+lhash: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) lhash
+.PHONY : lhash
+
+# fast build rule for target.
+lhash\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\lhash\CMakeFiles\lhash.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\lhash\CMakeFiles\lhash.dir\build
+.PHONY : lhash\fast
+
+#=============================================================================
+# Target rules for targets named err
+
+# Build rule for target.
+err: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) err
+.PHONY : err
+
+# fast build rule for target.
+err\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\build
+.PHONY : err\fast
+
+#=============================================================================
+# Target rules for targets named buf
+
+# Build rule for target.
+buf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) buf
+.PHONY : buf
+
+# fast build rule for target.
+buf\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\buf\CMakeFiles\buf.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\buf\CMakeFiles\buf.dir\build
+.PHONY : buf\fast
+
+#=============================================================================
+# Target rules for targets named base64
+
+# Build rule for target.
+base64: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) base64
+.PHONY : base64
+
+# fast build rule for target.
+base64\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\build
+.PHONY : base64\fast
+
+#=============================================================================
+# Target rules for targets named bytestring
+
+# Build rule for target.
+bytestring: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bytestring
+.PHONY : bytestring
+
+# fast build rule for target.
+bytestring\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\bytestring\CMakeFiles\bytestring.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\bytestring\CMakeFiles\bytestring.dir\build
+.PHONY : bytestring\fast
+
+#=============================================================================
+# Target rules for targets named pool
+
+# Build rule for target.
+pool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pool
+.PHONY : pool
+
+# fast build rule for target.
+pool\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\pool\CMakeFiles\pool.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\pool\CMakeFiles\pool.dir\build
+.PHONY : pool\fast
+
+#=============================================================================
+# Target rules for targets named rc4
+
+# Build rule for target.
+rc4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) rc4
+.PHONY : rc4
+
+# fast build rule for target.
+rc4\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\rc4\CMakeFiles\rc4.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\rc4\CMakeFiles\rc4.dir\build
+.PHONY : rc4\fast
+
+#=============================================================================
+# Target rules for targets named conf
+
+# Build rule for target.
+conf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) conf
+.PHONY : conf
+
+# fast build rule for target.
+conf\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\conf\CMakeFiles\conf.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\conf\CMakeFiles\conf.dir\build
+.PHONY : conf\fast
+
+#=============================================================================
+# Target rules for targets named chacha
+
+# Build rule for target.
+chacha: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) chacha
+.PHONY : chacha
+
+# fast build rule for target.
+chacha\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\chacha\CMakeFiles\chacha.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\chacha\CMakeFiles\chacha.dir\build
+.PHONY : chacha\fast
+
+#=============================================================================
+# Target rules for targets named poly1305
+
+# Build rule for target.
+poly1305: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) poly1305
+.PHONY : poly1305
+
+# fast build rule for target.
+poly1305\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\build
+.PHONY : poly1305\fast
+
+#=============================================================================
+# Target rules for targets named curve25519
+
+# Build rule for target.
+curve25519: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) curve25519
+.PHONY : curve25519
+
+# fast build rule for target.
+curve25519\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\curve25519\CMakeFiles\curve25519.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\curve25519\CMakeFiles\curve25519.dir\build
+.PHONY : curve25519\fast
+
+#=============================================================================
+# Target rules for targets named digest_extra
+
+# Build rule for target.
+digest_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) digest_extra
+.PHONY : digest_extra
+
+# fast build rule for target.
+digest_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\digest_extra\CMakeFiles\digest_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\digest_extra\CMakeFiles\digest_extra.dir\build
+.PHONY : digest_extra\fast
+
+#=============================================================================
+# Target rules for targets named cipher_extra
+
+# Build rule for target.
+cipher_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cipher_extra
+.PHONY : cipher_extra
+
+# fast build rule for target.
+cipher_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\build
+.PHONY : cipher_extra\fast
+
+#=============================================================================
+# Target rules for targets named rand_extra
+
+# Build rule for target.
+rand_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) rand_extra
+.PHONY : rand_extra
+
+# fast build rule for target.
+rand_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\build
+.PHONY : rand_extra\fast
+
+#=============================================================================
+# Target rules for targets named bio
+
+# Build rule for target.
+bio: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bio
+.PHONY : bio
+
+# fast build rule for target.
+bio\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\bio\CMakeFiles\bio.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\bio\CMakeFiles\bio.dir\build
+.PHONY : bio\fast
+
+#=============================================================================
+# Target rules for targets named bn_extra
+
+# Build rule for target.
+bn_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bn_extra
+.PHONY : bn_extra
+
+# fast build rule for target.
+bn_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\bn_extra\CMakeFiles\bn_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\bn_extra\CMakeFiles\bn_extra.dir\build
+.PHONY : bn_extra\fast
+
+#=============================================================================
+# Target rules for targets named obj
+
+# Build rule for target.
+obj: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) obj
+.PHONY : obj
+
+# fast build rule for target.
+obj\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\build
+.PHONY : obj\fast
+
+#=============================================================================
+# Target rules for targets named asn1
+
+# Build rule for target.
+asn1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) asn1
+.PHONY : asn1
+
+# fast build rule for target.
+asn1\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\asn1\CMakeFiles\asn1.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\asn1\CMakeFiles\asn1.dir\build
+.PHONY : asn1\fast
+
+#=============================================================================
+# Target rules for targets named engine
+
+# Build rule for target.
+engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) engine
+.PHONY : engine
+
+# fast build rule for target.
+engine\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\build
+.PHONY : engine\fast
+
+#=============================================================================
+# Target rules for targets named dh
+
+# Build rule for target.
+dh: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) dh
+.PHONY : dh
+
+# fast build rule for target.
+dh\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\build
+.PHONY : dh\fast
+
+#=============================================================================
+# Target rules for targets named dsa
+
+# Build rule for target.
+dsa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) dsa
+.PHONY : dsa
+
+# fast build rule for target.
+dsa\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\dsa\CMakeFiles\dsa.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\dsa\CMakeFiles\dsa.dir\build
+.PHONY : dsa\fast
+
+#=============================================================================
+# Target rules for targets named rsa_extra
+
+# Build rule for target.
+rsa_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) rsa_extra
+.PHONY : rsa_extra
+
+# fast build rule for target.
+rsa_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\build
+.PHONY : rsa_extra\fast
+
+#=============================================================================
+# Target rules for targets named ec_extra
+
+# Build rule for target.
+ec_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ec_extra
+.PHONY : ec_extra
+
+# fast build rule for target.
+ec_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\build
+.PHONY : ec_extra\fast
+
+#=============================================================================
+# Target rules for targets named ecdh
+
+# Build rule for target.
+ecdh: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ecdh
+.PHONY : ecdh
+
+# fast build rule for target.
+ecdh\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\ecdh\CMakeFiles\ecdh.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\ecdh\CMakeFiles\ecdh.dir\build
+.PHONY : ecdh\fast
+
+#=============================================================================
+# Target rules for targets named ecdsa_extra
+
+# Build rule for target.
+ecdsa_extra: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ecdsa_extra
+.PHONY : ecdsa_extra
+
+# fast build rule for target.
+ecdsa_extra\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\build
+.PHONY : ecdsa_extra\fast
+
+#=============================================================================
+# Target rules for targets named cmac
+
+# Build rule for target.
+cmac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cmac
+.PHONY : cmac
+
+# fast build rule for target.
+cmac\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\build
+.PHONY : cmac\fast
+
+#=============================================================================
+# Target rules for targets named evp
+
+# Build rule for target.
+evp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) evp
+.PHONY : evp
+
+# fast build rule for target.
+evp\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\evp\CMakeFiles\evp.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\evp\CMakeFiles\evp.dir\build
+.PHONY : evp\fast
+
+#=============================================================================
+# Target rules for targets named hkdf
+
+# Build rule for target.
+hkdf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) hkdf
+.PHONY : hkdf
+
+# fast build rule for target.
+hkdf\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\hkdf\CMakeFiles\hkdf.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\hkdf\CMakeFiles\hkdf.dir\build
+.PHONY : hkdf\fast
+
+#=============================================================================
+# Target rules for targets named pem
+
+# Build rule for target.
+pem: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pem
+.PHONY : pem
+
+# fast build rule for target.
+pem\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\build
+.PHONY : pem\fast
+
+#=============================================================================
+# Target rules for targets named x509
+
+# Build rule for target.
+x509: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) x509
+.PHONY : x509
+
+# fast build rule for target.
+x509\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\build
+.PHONY : x509\fast
+
+#=============================================================================
+# Target rules for targets named x509v3
+
+# Build rule for target.
+x509v3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) x509v3
+.PHONY : x509v3
+
+# fast build rule for target.
+x509v3\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\build
+.PHONY : x509v3\fast
+
+#=============================================================================
+# Target rules for targets named pkcs7
+
+# Build rule for target.
+pkcs7: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pkcs7
+.PHONY : pkcs7
+
+# fast build rule for target.
+pkcs7\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\build
+.PHONY : pkcs7\fast
+
+#=============================================================================
+# Target rules for targets named pkcs8_lib
+
+# Build rule for target.
+pkcs8_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) pkcs8_lib
+.PHONY : pkcs8_lib
+
+# fast build rule for target.
+pkcs8_lib\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\pkcs8\CMakeFiles\pkcs8_lib.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\pkcs8\CMakeFiles\pkcs8_lib.dir\build
+.PHONY : pkcs8_lib\fast
+
+#=============================================================================
+# Target rules for targets named test_support
+
+# Build rule for target.
+test_support: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) test_support
+.PHONY : test_support
+
+# fast build rule for target.
+test_support\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\build
+.PHONY : test_support\fast
+
+#=============================================================================
+# Target rules for targets named boringssl_gtest_main
+
+# Build rule for target.
+boringssl_gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) boringssl_gtest_main
+.PHONY : boringssl_gtest_main
+
+# fast build rule for target.
+boringssl_gtest_main\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\build
+.PHONY : boringssl_gtest_main\fast
+
+#=============================================================================
+# Target rules for targets named fipsmodule
+
+# Build rule for target.
+fipsmodule: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) fipsmodule
+.PHONY : fipsmodule
+
+# fast build rule for target.
+fipsmodule\fast:
+	$(MAKE) -f grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\build
+.PHONY : fipsmodule\fast
+
+#=============================================================================
+# Target rules for targets named fiat
+
+# Build rule for target.
+fiat: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) fiat
+.PHONY : fiat
+
+# fast build rule for target.
+fiat\fast:
+	$(MAKE) -f grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\build
+.PHONY : fiat\fast
+
+#=============================================================================
+# Target rules for targets named ssl
+
+# Build rule for target.
+ssl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ssl
+.PHONY : ssl
+
+# fast build rule for target.
+ssl\fast:
+	$(MAKE) -f grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\build
+.PHONY : ssl\fast
+
+#=============================================================================
+# Target rules for targets named ssl_test
+
+# Build rule for target.
+ssl_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ssl_test
+.PHONY : ssl_test
+
+# fast build rule for target.
+ssl_test\fast:
+	$(MAKE) -f grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\build
+.PHONY : ssl_test\fast
+
+#=============================================================================
+# Target rules for targets named bssl_shim
+
+# Build rule for target.
+bssl_shim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bssl_shim
+.PHONY : bssl_shim
+
+# fast build rule for target.
+bssl_shim\fast:
+	$(MAKE) -f grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\build
+.PHONY : bssl_shim\fast
+
+#=============================================================================
+# Target rules for targets named bssl
+
+# Build rule for target.
+bssl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bssl
+.PHONY : bssl
+
+# fast build rule for target.
+bssl\fast:
+	$(MAKE) -f grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\build
+.PHONY : bssl\fast
+
+#=============================================================================
+# Target rules for targets named decrepit
+
+# Build rule for target.
+decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) decrepit
+.PHONY : decrepit
+
+# fast build rule for target.
+decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build
+.PHONY : decrepit\fast
+
+#=============================================================================
+# Target rules for targets named decrepit_test
+
+# Build rule for target.
+decrepit_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) decrepit_test
+.PHONY : decrepit_test
+
+# fast build rule for target.
+decrepit_test\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\build
+.PHONY : decrepit_test\fast
+
+#=============================================================================
+# Target rules for targets named bio_decrepit
+
+# Build rule for target.
+bio_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) bio_decrepit
+.PHONY : bio_decrepit
+
+# fast build rule for target.
+bio_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\bio\CMakeFiles\bio_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\bio\CMakeFiles\bio_decrepit.dir\build
+.PHONY : bio_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named blowfish
+
+# Build rule for target.
+blowfish: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) blowfish
+.PHONY : blowfish
+
+# fast build rule for target.
+blowfish\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\blowfish\CMakeFiles\blowfish.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\blowfish\CMakeFiles\blowfish.dir\build
+.PHONY : blowfish\fast
+
+#=============================================================================
+# Target rules for targets named cast
+
+# Build rule for target.
+cast: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cast
+.PHONY : cast
+
+# fast build rule for target.
+cast\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\cast\CMakeFiles\cast.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\cast\CMakeFiles\cast.dir\build
+.PHONY : cast\fast
+
+#=============================================================================
+# Target rules for targets named cfb
+
+# Build rule for target.
+cfb: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cfb
+.PHONY : cfb
+
+# fast build rule for target.
+cfb\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\cfb\CMakeFiles\cfb.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\cfb\CMakeFiles\cfb.dir\build
+.PHONY : cfb\fast
+
+#=============================================================================
+# Target rules for targets named des_decrepit
+
+# Build rule for target.
+des_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) des_decrepit
+.PHONY : des_decrepit
+
+# fast build rule for target.
+des_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\build
+.PHONY : des_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named dh_decrepit
+
+# Build rule for target.
+dh_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) dh_decrepit
+.PHONY : dh_decrepit
+
+# fast build rule for target.
+dh_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\dh\CMakeFiles\dh_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\dh\CMakeFiles\dh_decrepit.dir\build
+.PHONY : dh_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named dsa_decrepit
+
+# Build rule for target.
+dsa_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) dsa_decrepit
+.PHONY : dsa_decrepit
+
+# fast build rule for target.
+dsa_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\dsa\CMakeFiles\dsa_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\dsa\CMakeFiles\dsa_decrepit.dir\build
+.PHONY : dsa_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named evp_decrepit
+
+# Build rule for target.
+evp_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) evp_decrepit
+.PHONY : evp_decrepit
+
+# fast build rule for target.
+evp_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\evp\CMakeFiles\evp_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\evp\CMakeFiles\evp_decrepit.dir\build
+.PHONY : evp_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named obj_decrepit
+
+# Build rule for target.
+obj_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) obj_decrepit
+.PHONY : obj_decrepit
+
+# fast build rule for target.
+obj_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\obj\CMakeFiles\obj_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\obj\CMakeFiles\obj_decrepit.dir\build
+.PHONY : obj_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named rc4_decrepit
+
+# Build rule for target.
+rc4_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) rc4_decrepit
+.PHONY : rc4_decrepit
+
+# fast build rule for target.
+rc4_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\rc4\CMakeFiles\rc4_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\rc4\CMakeFiles\rc4_decrepit.dir\build
+.PHONY : rc4_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named ripemd_decrepit
+
+# Build rule for target.
+ripemd_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ripemd_decrepit
+.PHONY : ripemd_decrepit
+
+# fast build rule for target.
+ripemd_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\ripemd\CMakeFiles\ripemd_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\ripemd\CMakeFiles\ripemd_decrepit.dir\build
+.PHONY : ripemd_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named rsa_decrepit
+
+# Build rule for target.
+rsa_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) rsa_decrepit
+.PHONY : rsa_decrepit
+
+# fast build rule for target.
+rsa_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\rsa\CMakeFiles\rsa_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\rsa\CMakeFiles\rsa_decrepit.dir\build
+.PHONY : rsa_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named ssl_decrepit
+
+# Build rule for target.
+ssl_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) ssl_decrepit
+.PHONY : ssl_decrepit
+
+# fast build rule for target.
+ssl_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\ssl\CMakeFiles\ssl_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\ssl\CMakeFiles\ssl_decrepit.dir\build
+.PHONY : ssl_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named x509_decrepit
+
+# Build rule for target.
+x509_decrepit: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) x509_decrepit
+.PHONY : x509_decrepit
+
+# fast build rule for target.
+x509_decrepit\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\build
+.PHONY : x509_decrepit\fast
+
+#=============================================================================
+# Target rules for targets named xts
+
+# Build rule for target.
+xts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) xts
+.PHONY : xts
+
+# fast build rule for target.
+xts\fast:
+	$(MAKE) -f grpc\third_party\boringssl\decrepit\xts\CMakeFiles\xts.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\xts\CMakeFiles\xts.dir\build
+.PHONY : xts\fast
+
+#=============================================================================
+# Target rules for targets named zlib
+
+# Build rule for target.
+zlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) zlib
+.PHONY : zlib
+
+# fast build rule for target.
+zlib\fast:
+	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\zlib.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\zlib.dir\build
+.PHONY : zlib\fast
+
+#=============================================================================
+# Target rules for targets named zlibstatic
+
+# Build rule for target.
+zlibstatic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) zlibstatic
+.PHONY : zlibstatic
+
+# fast build rule for target.
+zlibstatic\fast:
+	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\build
+.PHONY : zlibstatic\fast
+
+#=============================================================================
+# Target rules for targets named example
+
+# Build rule for target.
+example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) example
+.PHONY : example
+
+# fast build rule for target.
+example\fast:
+	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\example.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\example.dir\build
+.PHONY : example\fast
+
+#=============================================================================
+# Target rules for targets named minigzip
+
+# Build rule for target.
+minigzip: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) minigzip
+.PHONY : minigzip
+
+# fast build rule for target.
+minigzip\fast:
+	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\minigzip.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\minigzip.dir\build
+.PHONY : minigzip\fast
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -151,18 +1940,216 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\main.cpp.s
 .PHONY : main.cpp.s
 
+messageP.grpc.pb.obj: messageP.grpc.pb.cc.obj
+
+.PHONY : messageP.grpc.pb.obj
+
+# target to build an object file
+messageP.grpc.pb.cc.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj
+.PHONY : messageP.grpc.pb.cc.obj
+
+messageP.grpc.pb.i: messageP.grpc.pb.cc.i
+
+.PHONY : messageP.grpc.pb.i
+
+# target to preprocess a source file
+messageP.grpc.pb.cc.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.grpc.pb.cc.i
+.PHONY : messageP.grpc.pb.cc.i
+
+messageP.grpc.pb.s: messageP.grpc.pb.cc.s
+
+.PHONY : messageP.grpc.pb.s
+
+# target to generate assembly for a file
+messageP.grpc.pb.cc.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.grpc.pb.cc.s
+.PHONY : messageP.grpc.pb.cc.s
+
+messageP.pb.obj: messageP.pb.cc.obj
+
+.PHONY : messageP.pb.obj
+
+# target to build an object file
+messageP.pb.cc.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.pb.cc.obj
+.PHONY : messageP.pb.cc.obj
+
+messageP.pb.i: messageP.pb.cc.i
+
+.PHONY : messageP.pb.i
+
+# target to preprocess a source file
+messageP.pb.cc.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.pb.cc.i
+.PHONY : messageP.pb.cc.i
+
+messageP.pb.s: messageP.pb.cc.s
+
+.PHONY : messageP.pb.s
+
+# target to generate assembly for a file
+messageP.pb.cc.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.pb.cc.s
+.PHONY : messageP.pb.cc.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... list_install_components
 	@echo ... Client
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... grpc_cronet
+	@echo ... plugins
+	@echo ... grpc++_unsecure
+	@echo ... tools_c
+	@echo ... tools_cxx
+	@echo ... tools
+	@echo ... gpr
+	@echo ... grpc_ruby_plugin
+	@echo ... address_sorting
+	@echo ... grpc
+	@echo ... grpc_unsecure
+	@echo ... grpc++
+	@echo ... grpc++_error_details
+	@echo ... grpc++_reflection
+	@echo ... grpc_plugin_support
+	@echo ... grpcpp_channelz
+	@echo ... grpc_csharp_ext
+	@echo ... check_epollexclusive
+	@echo ... grpc_create_jwt
+	@echo ... grpc_objective_c_plugin
+	@echo ... grpc_print_google_default_creds_token
+	@echo ... grpc_verify_jwt
+	@echo ... gen_hpack_tables
+	@echo ... gen_legal_metadata_characters
+	@echo ... gen_percent_encoding_tables
+	@echo ... grpc_cpp_plugin
+	@echo ... grpc_csharp_plugin
+	@echo ... grpc_node_plugin
+	@echo ... grpc_php_plugin
+	@echo ... grpc_python_plugin
+	@echo ... benchmark_main
+	@echo ... benchmark
+	@echo ... basic_test
+	@echo ... options_test
+	@echo ... output_test_helper
+	@echo ... user_counters_tabular_test
+	@echo ... benchmark_test
+	@echo ... filter_test
+	@echo ... diagnostics_test
+	@echo ... donotoptimize_test
+	@echo ... skip_with_error_test
+	@echo ... memory_manager_test
+	@echo ... fixture_test
+	@echo ... register_benchmark_test
+	@echo ... map_test
+	@echo ... multiple_ranges_test
+	@echo ... templated_fixture_test
+	@echo ... link_main_test
+	@echo ... reporter_output_test
+	@echo ... user_counters_test
+	@echo ... internal_threading_test
+	@echo ... report_aggregates_only_test
+	@echo ... complexity_test
+	@echo ... display_aggregates_only_test
+	@echo ... user_counters_thousands_test
+	@echo ... cxx03_test
+	@echo ... c-ares
+	@echo ... acountry
+	@echo ... ahost
+	@echo ... adig
+	@echo ... gflags_nothreads_static
+	@echo ... libprotobuf-lite
+	@echo ... protoc
+	@echo ... libprotoc
+	@echo ... libprotobuf
+	@echo ... boringssl_gtest
+	@echo ... crypto_test_data
+	@echo ... all_tests
+	@echo ... run_tests
+	@echo ... crypto
+	@echo ... crypto_base
+	@echo ... crypto_test
+	@echo ... stack
+	@echo ... lhash
+	@echo ... err
+	@echo ... buf
+	@echo ... base64
+	@echo ... bytestring
+	@echo ... pool
+	@echo ... rc4
+	@echo ... conf
+	@echo ... chacha
+	@echo ... poly1305
+	@echo ... curve25519
+	@echo ... digest_extra
+	@echo ... cipher_extra
+	@echo ... rand_extra
+	@echo ... bio
+	@echo ... bn_extra
+	@echo ... obj
+	@echo ... asn1
+	@echo ... engine
+	@echo ... dh
+	@echo ... dsa
+	@echo ... rsa_extra
+	@echo ... ec_extra
+	@echo ... ecdh
+	@echo ... ecdsa_extra
+	@echo ... cmac
+	@echo ... evp
+	@echo ... hkdf
+	@echo ... pem
+	@echo ... x509
+	@echo ... x509v3
+	@echo ... pkcs7
+	@echo ... pkcs8_lib
+	@echo ... test_support
+	@echo ... boringssl_gtest_main
+	@echo ... fipsmodule
+	@echo ... fiat
+	@echo ... ssl
+	@echo ... ssl_test
+	@echo ... bssl_shim
+	@echo ... bssl
+	@echo ... decrepit
+	@echo ... decrepit_test
+	@echo ... bio_decrepit
+	@echo ... blowfish
+	@echo ... cast
+	@echo ... cfb
+	@echo ... des_decrepit
+	@echo ... dh_decrepit
+	@echo ... dsa_decrepit
+	@echo ... evp_decrepit
+	@echo ... obj_decrepit
+	@echo ... rc4_decrepit
+	@echo ... ripemd_decrepit
+	@echo ... rsa_decrepit
+	@echo ... ssl_decrepit
+	@echo ... x509_decrepit
+	@echo ... xts
+	@echo ... zlib
+	@echo ... zlibstatic
+	@echo ... example
+	@echo ... minigzip
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... messageP.grpc.pb.obj
+	@echo ... messageP.grpc.pb.i
+	@echo ... messageP.grpc.pb.s
+	@echo ... messageP.pb.obj
+	@echo ... messageP.pb.i
+	@echo ... messageP.pb.s
 .PHONY : help
 
 

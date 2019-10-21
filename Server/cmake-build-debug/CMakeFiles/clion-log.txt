@@ -1,18 +1,22 @@
-"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-20189\Progetto-Malnati\Server"
--- The C compiler identification is MSVC 19.23.28105.4
--- The CXX compiler identification is MSVC 19.23.28105.4
--- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe
--- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe
--- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server"
+-- git Version: v1.5.0
+-- Version: 1.5.0
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- 
+-- 3.8.0.0
+CMake Warning (dev) at C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/install.cmake:60 (message):
+  The file "C:/Users/flori/Documents/Universita/Programmazione di
+  sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/src/google/protobuf/stubs/io_win32.h"
+  is listed in "C:/Users/flori/Documents/Universita/Programmazione di
+  sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/cmake/extract_includes.bat.in"
+  but there not exists.  The file will not be installed.
+Call Stack (most recent call first):
+  C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:231 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-20189/Progetto-Malnati/Server/cmake-build-debug
+-- Build files have been written to: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug
