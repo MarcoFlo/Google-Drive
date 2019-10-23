@@ -1,7 +1,18 @@
 syntax = "proto3";
+package protobuf;
 
+service CharacterService {
+    rpc ExchangeSymbol (stream Message) returns (stream Message) {}
+}
 
-message MessageP {
-    string id = 1;
-    int32 timestamp = 2;
+message Message {
+    int32 idEditor = 1;
+    Symbol symbol = 2;
+    bool isEraseBool = 3;
+}
+
+message Symbol {
+    string character = 4;
+    int32 uniqueId = 5;
+    repeated int32 pos = 6;
 }

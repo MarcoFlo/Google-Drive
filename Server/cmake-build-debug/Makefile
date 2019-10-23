@@ -1913,6 +1913,33 @@ minigzip\fast:
 	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\minigzip.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\minigzip.dir\build
 .PHONY : minigzip\fast
 
+CharacterServiceImpl.obj: CharacterServiceImpl.cpp.obj
+
+.PHONY : CharacterServiceImpl.obj
+
+# target to build an object file
+CharacterServiceImpl.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj
+.PHONY : CharacterServiceImpl.cpp.obj
+
+CharacterServiceImpl.i: CharacterServiceImpl.cpp.i
+
+.PHONY : CharacterServiceImpl.i
+
+# target to preprocess a source file
+CharacterServiceImpl.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.i
+.PHONY : CharacterServiceImpl.cpp.i
+
+CharacterServiceImpl.s: CharacterServiceImpl.cpp.s
+
+.PHONY : CharacterServiceImpl.s
+
+# target to generate assembly for a file
+CharacterServiceImpl.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.s
+.PHONY : CharacterServiceImpl.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -2141,6 +2168,9 @@ help:
 	@echo ... zlibstatic
 	@echo ... example
 	@echo ... minigzip
+	@echo ... CharacterServiceImpl.obj
+	@echo ... CharacterServiceImpl.i
+	@echo ... CharacterServiceImpl.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

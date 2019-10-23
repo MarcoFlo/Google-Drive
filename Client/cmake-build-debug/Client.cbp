@@ -9142,6 +9142,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/CharacterClient.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/CharacterClient.h">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/gens/src/proto/grpc/channelz/channelz.grpc.pb.cc">
 			<Option target="grpcpp_channelz"/>
 		</Unit>

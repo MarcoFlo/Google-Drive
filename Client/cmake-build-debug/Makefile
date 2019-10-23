@@ -1913,6 +1913,33 @@ minigzip\fast:
 	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\minigzip.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\minigzip.dir\build
 .PHONY : minigzip\fast
 
+CharacterClient.obj: CharacterClient.cpp.obj
+
+.PHONY : CharacterClient.obj
+
+# target to build an object file
+CharacterClient.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.obj
+.PHONY : CharacterClient.cpp.obj
+
+CharacterClient.i: CharacterClient.cpp.i
+
+.PHONY : CharacterClient.i
+
+# target to preprocess a source file
+CharacterClient.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.i
+.PHONY : CharacterClient.cpp.i
+
+CharacterClient.s: CharacterClient.cpp.s
+
+.PHONY : CharacterClient.s
+
+# target to generate assembly for a file
+CharacterClient.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.s
+.PHONY : CharacterClient.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -2141,6 +2168,9 @@ help:
 	@echo ... zlibstatic
 	@echo ... example
 	@echo ... minigzip
+	@echo ... CharacterClient.obj
+	@echo ... CharacterClient.i
+	@echo ... CharacterClient.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

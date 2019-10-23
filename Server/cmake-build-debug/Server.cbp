@@ -9142,6 +9142,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CharacterServiceImpl.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CharacterServiceImpl.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/gens/src/proto/grpc/channelz/channelz.grpc.pb.cc">
 			<Option target="grpcpp_channelz"/>
 		</Unit>
@@ -16227,6 +16233,18 @@
 			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/cmake/benchmark.pc.in">
+			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/cmake/gnu_posix_regex.cpp">
+			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/cmake/posix_regex.cpp">
+			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/cmake/std_regex.cpp">
+			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/cmake/steady_clock.cpp">
 			<Option virtualFolder="CMake Files\..\third_party\grpc\third_party\benchmark\cmake\"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/../third_party/grpc/third_party/benchmark/src/CMakeLists.txt">

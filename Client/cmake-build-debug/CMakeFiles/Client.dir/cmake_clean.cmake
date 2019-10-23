@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Client.dir/CharacterClient.cpp.obj"
   "CMakeFiles/Client.dir/main.cpp.obj"
   "CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
   "CMakeFiles/Client.dir/messageP.pb.cc.obj"

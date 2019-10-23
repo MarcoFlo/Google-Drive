@@ -90,9 +90,28 @@ CMakeFiles\Client.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\main.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\main.cpp"
 <<
 
+CMakeFiles\Client.dir\CharacterClient.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\CharacterClient.cpp.obj: ..\CharacterClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/CharacterClient.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\CharacterClient.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+<<
+
+CMakeFiles\Client.dir\CharacterClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/CharacterClient.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\CharacterClient.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+<<
+
+CMakeFiles\Client.dir\CharacterClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/CharacterClient.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\CharacterClient.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+<<
+
 CMakeFiles\Client.dir\messageP.pb.cc.obj: CMakeFiles\Client.dir\flags.make
 CMakeFiles\Client.dir\messageP.pb.cc.obj: messageP.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/messageP.pb.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Client.dir/messageP.pb.cc.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\messageP.pb.cc.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\messageP.pb.cc"
 <<
@@ -111,7 +130,7 @@ CMakeFiles\Client.dir\messageP.pb.cc.s: cmake_force
 
 CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj: CMakeFiles\Client.dir\flags.make
 CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj: messageP.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\messageP.grpc.pb.cc.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\messageP.grpc.pb.cc"
 <<
@@ -131,6 +150,7 @@ CMakeFiles\Client.dir\messageP.grpc.pb.cc.s: cmake_force
 # Object files for target Client
 Client_OBJECTS = \
 "CMakeFiles\Client.dir\main.cpp.obj" \
+"CMakeFiles\Client.dir\CharacterClient.cpp.obj" \
 "CMakeFiles\Client.dir\messageP.pb.cc.obj" \
 "CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj"
 
@@ -138,6 +158,7 @@ Client_OBJECTS = \
 Client_EXTERNAL_OBJECTS =
 
 Client.exe: CMakeFiles\Client.dir\main.cpp.obj
+Client.exe: CMakeFiles\Client.dir\CharacterClient.cpp.obj
 Client.exe: CMakeFiles\Client.dir\messageP.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\build.make
@@ -149,7 +170,7 @@ Client.exe: grpc\third_party\zlib\zlibstaticd.lib
 Client.exe: grpc\third_party\cares\cares\lib\cares.lib
 Client.exe: grpc\address_sorting.lib
 Client.exe: CMakeFiles\Client.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Client.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Client.exe"
 	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Client.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Client.dir\objects1.rsp @<<
  /out:Client.exe /implib:Client.lib /pdb:"C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Client.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console grpc\grpc++_unsecure.lib grpc\third_party\protobuf\libprotobufd.lib grpc\grpc_unsecure.lib grpc\gpr.lib grpc\third_party\zlib\zlibstaticd.lib grpc\third_party\cares\cares\lib\cares.lib grpc\address_sorting.lib wsock32.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
