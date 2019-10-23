@@ -8,3 +8,8 @@ Il metodo migliore per aggiungere grpc e le sue dipendenze (tra cui protobuf) è
 > git submodule update --init  //per scaricare i submoduli di grpc   
 
 N.B -> I sottomoduli non si aggiornano automaticamente con la repository a cui sono linkati
+
+
+### Guida
+https://grpc.io/docs/tutorials/basic/cpp/   
+https://github.com/grpc/grpc/tree/v1.24.0/examples/cpp/route_guide
