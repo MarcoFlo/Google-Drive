@@ -37,7 +37,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Client main.cpp CharacterClient.cpp CharacterClient.h
+add_executable(Client main.cpp comunication/CharacterClient.cpp comunication/CharacterClient.h
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
 target_link_libraries(Client Qt5::Widgets ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})

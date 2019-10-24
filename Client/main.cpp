@@ -19,7 +19,7 @@
 #include <grpcpp/create_channel.h>
 #include <grpcpp/security/credentials.h>
 #include "messageP.grpc.pb.h"
-#include "CharacterClient.h"
+#include "comunication/CharacterClient.h"
 
 
 int main(int argc, char **argv) {
