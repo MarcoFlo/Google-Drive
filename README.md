@@ -15,10 +15,10 @@ I moduli di qt di cui abbiamo bisogno sono questi:
 Si può modificare una precedente installazione facendo:   
 windows -> installazione applicazioni -> qt -> modifica -> add or remove components  
 
-Se non è stato installato in C ditemelo ([Marco Florian](https://github.com/MarcoFlo)), perchè dovremmo usare un'altra delle strategie possibili CMakeList.txt:
+Se non è stato installato in C ditemelo ([Marco Florian](https://github.com/MarcoFlo)), perchè dovremmo usare un'altra delle strategie possibili:  
 1. variabili d'ambiente -> path -> C:\Qt\5.12.5\msvc2017\bin
 2. settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
-3. set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/msvc2017/lib/cmake")
+3. [current] CMakeList.txt -> set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/msvc2017/lib/cmake")
 
 ### Error msg breakdown
 0xC0000135 = non c'è il server che gira
