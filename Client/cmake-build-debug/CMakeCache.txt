@@ -377,6 +377,18 @@ LIBRT:FILEPATH=LIBRT-NOTFOUND
 //Path to a program.
 PERL_EXECUTABLE:FILEPATH=C:/Perl64/bin/perl.exe
 
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Sql.
+Qt5Sql_DIR:PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets
+
 //Dependencies for the target
 address_sorting_LIB_DEPENDS:STATIC=general;wsock32;general;ws2_32;
 

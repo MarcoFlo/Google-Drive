@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.5.1)
 project(Client)
 
 set(CMAKE_CXX_STANDARD 17)
+#-DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake
+set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/mingw73_64/lib/cmake")
+
 add_definitions(-D_WIN32_WINNT=0x600)
+
 
 add_subdirectory(../third_party/grpc ${CMAKE_CURRENT_BINARY_DIR}/grpc EXCLUDE_FROM_ALL)
 
@@ -36,8 +40,10 @@ add_custom_command(
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Sql REQUIRED)
+
 
 add_executable(Client main.cpp comunication/CharacterClient.cpp comunication/CharacterClient.h
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
-target_link_libraries(Client Qt5::Widgets ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
+target_link_libraries(Client Qt5::Widgets Qt5::Sql ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
