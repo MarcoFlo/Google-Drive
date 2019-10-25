@@ -4,6 +4,7 @@ C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-M
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/install.dir
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client_autogen.dir
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc_cronet.dir
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/plugins.dir
 C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc++_unsecure.dir

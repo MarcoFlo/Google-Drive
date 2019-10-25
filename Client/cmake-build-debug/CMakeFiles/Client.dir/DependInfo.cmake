@@ -4,10 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/Client_autogen/mocs_compilation.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/CharacterClient.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/comunication/CharacterClient.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/main.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/main.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/messageP.grpc.pb.cc" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/messageP.pb.cc" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/messageP.pb.cc.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/condividi.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/editor.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/importa.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/loginpage.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/nuovo.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/principale.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/registrationpage.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/Client.dir/qt/splashscreen.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
@@ -23,18 +32,19 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "Client_autogen/include"
   "."
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/include"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/src"
   "grpc/third_party/cares/cares"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares"
-  "C:/Qt/5.12.5/mingw73_64/include"
-  "C:/Qt/5.12.5/mingw73_64/include/QtWidgets"
-  "C:/Qt/5.12.5/mingw73_64/include/QtGui"
-  "C:/Qt/5.12.5/mingw73_64/include/QtANGLE"
-  "C:/Qt/5.12.5/mingw73_64/include/QtCore"
-  "C:/Qt/5.12.5/mingw73_64/./mkspecs/win32-g++"
-  "C:/Qt/5.12.5/mingw73_64/include/QtSql"
+  "C:/Qt/5.12.5/msvc2017/include"
+  "C:/Qt/5.12.5/msvc2017/include/QtWidgets"
+  "C:/Qt/5.12.5/msvc2017/include/QtGui"
+  "C:/Qt/5.12.5/msvc2017/include/QtANGLE"
+  "C:/Qt/5.12.5/msvc2017/include/QtCore"
+  "C:/Qt/5.12.5/msvc2017/./mkspecs/win32-msvc"
+  "C:/Qt/5.12.5/msvc2017/include/QtSql"
   )
 
 # Pairs of files generated by the same build rule.

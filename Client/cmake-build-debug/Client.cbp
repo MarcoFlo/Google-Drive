@@ -5,7 +5,7 @@
 		<Option title="Client"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\third_party\;CMake Files\..\third_party\grpc\;CMake Files\..\third_party\grpc\third_party\;CMake Files\..\third_party\grpc\third_party\boringssl\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\stack\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\lhash\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\err\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\buf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\base64\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bytestring\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pool\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rc4\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\conf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\chacha\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\poly1305\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\curve25519\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\digest_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\cipher_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rand_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bio\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bn_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\obj\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\asn1\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\engine\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\dh\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\dsa\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rsa_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ec_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ecdh\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ecdsa_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\cmac\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\evp\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\hkdf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pem\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\x509\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\x509v3\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pkcs7\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pkcs8\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\test\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\fipsmodule\;CMake Files\..\third_party\grpc\third_party\boringssl\third_party\;CMake Files\..\third_party\grpc\third_party\boringssl\third_party\fiat\;CMake Files\..\third_party\grpc\third_party\boringssl\ssl\;CMake Files\..\third_party\grpc\third_party\boringssl\ssl\test\;CMake Files\..\third_party\grpc\third_party\boringssl\fipstools\;CMake Files\..\third_party\grpc\third_party\boringssl\tool\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\bio\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\blowfish\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\cast\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\cfb\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\des\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\dh\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\dsa\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\evp\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\obj\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\rc4\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\ripemd\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\rsa\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\ssl\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\x509\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\xts\;CMake Files\..\third_party\grpc\third_party\benchmark\;CMake Files\..\third_party\grpc\third_party\benchmark\cmake\;CMake Files\..\third_party\grpc\third_party\benchmark\src\;CMake Files\..\third_party\grpc\third_party\benchmark\test\;CMake Files\..\third_party\grpc\third_party\cares\;CMake Files\..\third_party\grpc\third_party\cares\cares\;CMake Files\..\third_party\grpc\third_party\gflags\;CMake Files\..\third_party\grpc\third_party\gflags\cmake\;CMake Files\..\third_party\grpc\third_party\gflags\src\;CMake Files\..\third_party\grpc\third_party\protobuf\;CMake Files\..\third_party\grpc\third_party\protobuf\cmake\;CMake Files\..\third_party\grpc\third_party\zlib\;CMake Files\..\third_party\grpc\cmake\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\grpc\;CMake Files\cmake-build-debug\grpc\third_party\;CMake Files\cmake-build-debug\grpc\third_party\cares\;CMake Files\cmake-build-debug\grpc\third_party\cares\cares\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\third_party\;CMake Files\..\third_party\grpc\;CMake Files\..\third_party\grpc\third_party\;CMake Files\..\third_party\grpc\third_party\boringssl\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\stack\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\lhash\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\err\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\buf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\base64\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bytestring\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pool\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rc4\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\conf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\chacha\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\poly1305\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\curve25519\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\digest_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\cipher_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rand_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bio\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\bn_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\obj\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\asn1\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\engine\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\dh\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\dsa\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\rsa_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ec_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ecdh\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\ecdsa_extra\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\cmac\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\evp\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\hkdf\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pem\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\x509\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\x509v3\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pkcs7\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\pkcs8\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\test\;CMake Files\..\third_party\grpc\third_party\boringssl\crypto\fipsmodule\;CMake Files\..\third_party\grpc\third_party\boringssl\third_party\;CMake Files\..\third_party\grpc\third_party\boringssl\third_party\fiat\;CMake Files\..\third_party\grpc\third_party\boringssl\ssl\;CMake Files\..\third_party\grpc\third_party\boringssl\ssl\test\;CMake Files\..\third_party\grpc\third_party\boringssl\fipstools\;CMake Files\..\third_party\grpc\third_party\boringssl\tool\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\bio\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\blowfish\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\cast\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\cfb\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\des\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\dh\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\dsa\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\evp\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\obj\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\rc4\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\ripemd\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\rsa\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\ssl\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\x509\;CMake Files\..\third_party\grpc\third_party\boringssl\decrepit\xts\;CMake Files\..\third_party\grpc\third_party\benchmark\;CMake Files\..\third_party\grpc\third_party\benchmark\cmake\;CMake Files\..\third_party\grpc\third_party\benchmark\src\;CMake Files\..\third_party\grpc\third_party\benchmark\test\;CMake Files\..\third_party\grpc\third_party\cares\;CMake Files\..\third_party\grpc\third_party\cares\cares\;CMake Files\..\third_party\grpc\third_party\gflags\;CMake Files\..\third_party\grpc\third_party\gflags\cmake\;CMake Files\..\third_party\grpc\third_party\gflags\src\;CMake Files\..\third_party\grpc\third_party\protobuf\;CMake Files\..\third_party\grpc\third_party\protobuf\cmake\;CMake Files\..\third_party\grpc\third_party\zlib\;CMake Files\..\third_party\grpc\cmake\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\grpc\;CMake Files\cmake-build-debug\grpc\third_party\;CMake Files\cmake-build-debug\grpc\third_party\cares\;CMake Files\cmake-build-debug\grpc\third_party\cares\cares\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug"/>
@@ -40,18 +40,19 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_SQL_LIB"/>
 					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/Client_autogen/include"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/include"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/src"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/cares/cares"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtANGLE"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtSql"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtWidgets"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtGui"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtANGLE"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/./mkspecs/win32-msvc"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtSql"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
@@ -80,18 +81,19 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_SQL_LIB"/>
 					<Add option="-DCARES_STATICLIB"/>
+					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/Client_autogen/include"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/include"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/src"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/cares/cares"/>
 					<Add directory="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtWidgets"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtGui"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtANGLE"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtCore"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/./mkspecs/win32-g++"/>
-					<Add directory="C:/Qt/5.12.5/mingw73_64/include/QtSql"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtWidgets"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtGui"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtANGLE"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtCore"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/./mkspecs/win32-msvc"/>
+					<Add directory="C:/Qt/5.12.5/msvc2017/include/QtSql"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
@@ -142,6 +144,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client_autogen">
+				<Option working_dir="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 Client_autogen"/>
 					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
@@ -9164,6 +9176,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/Client_autogen/mocs_compilation.cpp">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/gens/src/proto/grpc/channelz/channelz.grpc.pb.cc">
 			<Option target="grpcpp_channelz"/>
 		</Unit>
@@ -9996,6 +10011,78 @@
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/main.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.ui">
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/src/compiler/cpp_generator.cc">
@@ -16389,101 +16476,110 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../third_party/grpc/cmake/zlib.cmake">
 			<Option virtualFolder="CMake Files\..\third_party\grpc\cmake\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Widgets\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Gui\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Core\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql/Qt5Sql_QPSQLDriverPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/mingw73_64/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\mingw73_64\lib\cmake\Qt5Sql\"/>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql/Qt5Sql_QPSQLDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/../../../../../../../../Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Qt\5.12.5\msvc2017\lib\cmake\Qt5Sql\"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/cares/cares/Makefile.inc.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\grpc\third_party\cares\cares\"/>

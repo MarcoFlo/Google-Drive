@@ -2,8 +2,14 @@ cmake_minimum_required(VERSION 3.5.1)
 project(Client)
 
 set(CMAKE_CXX_STANDARD 17)
-#-DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/mingw73_64/lib/cmake
-set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/mingw73_64/lib/cmake")
+# Bisogna specificare a cmake dove andare a recuperare le librerie di qt, ci sono 3 modi:
+# 1: variabili d'ambiente -> path -> C:\Qt\5.12.5\msvc2017\bin
+# 2: settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
+# 3:
+set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/msvc2017/lib/cmake")
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
 add_definitions(-D_WIN32_WINNT=0x600)
 
@@ -39,11 +45,18 @@ add_custom_command(
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5Sql REQUIRED)
 
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets Sql)
 
-add_executable(Client main.cpp comunication/CharacterClient.cpp comunication/CharacterClient.h
+# mantenere in ordine alfabetico per comodità
+add_executable(Client main.cpp
+        comunication/CharacterClient.cpp comunication/CharacterClient.h
+        qt/condividi.h qt/editor.h qt/importa.h qt/loginpage.h qt/nuovo.h qt/principale.h qt/registrationpage.h  qt/splashscreen.h
+        qt/condividi.cpp qt/editor.cpp qt/importa.cpp qt/loginpage.cpp qt/nuovo.cpp qt/principale.cpp qt/registrationpage.cpp qt/splashscreen.cpp
+        qt/condividi.ui qt/editor.ui qt/importa.ui qt/loginpage.ui qt/nuovo.ui qt/principale.ui qt/registrationpage.ui qt/splashscreen.ui
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
-target_link_libraries(Client Qt5::Widgets Qt5::Sql ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
+
+target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
+
+
