@@ -1913,32 +1913,32 @@ minigzip\fast:
 	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\minigzip.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\minigzip.dir\build
 .PHONY : minigzip\fast
 
-CharacterClient.obj: CharacterClient.cpp.obj
+comunication\CharacterClient.obj: comunication\CharacterClient.cpp.obj
 
-.PHONY : CharacterClient.obj
+.PHONY : comunication\CharacterClient.obj
 
 # target to build an object file
-CharacterClient.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.obj
-.PHONY : CharacterClient.cpp.obj
+comunication\CharacterClient.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj
+.PHONY : comunication\CharacterClient.cpp.obj
 
-CharacterClient.i: CharacterClient.cpp.i
+comunication\CharacterClient.i: comunication\CharacterClient.cpp.i
 
-.PHONY : CharacterClient.i
+.PHONY : comunication\CharacterClient.i
 
 # target to preprocess a source file
-CharacterClient.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.i
-.PHONY : CharacterClient.cpp.i
+comunication\CharacterClient.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\CharacterClient.cpp.i
+.PHONY : comunication\CharacterClient.cpp.i
 
-CharacterClient.s: CharacterClient.cpp.s
+comunication\CharacterClient.s: comunication\CharacterClient.cpp.s
 
-.PHONY : CharacterClient.s
+.PHONY : comunication\CharacterClient.s
 
 # target to generate assembly for a file
-CharacterClient.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\CharacterClient.cpp.s
-.PHONY : CharacterClient.cpp.s
+comunication\CharacterClient.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\CharacterClient.cpp.s
+.PHONY : comunication\CharacterClient.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -2168,9 +2168,9 @@ help:
 	@echo ... zlibstatic
 	@echo ... example
 	@echo ... minigzip
-	@echo ... CharacterClient.obj
-	@echo ... CharacterClient.i
-	@echo ... CharacterClient.s
+	@echo ... comunication/CharacterClient.obj
+	@echo ... comunication/CharacterClient.i
+	@echo ... comunication/CharacterClient.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

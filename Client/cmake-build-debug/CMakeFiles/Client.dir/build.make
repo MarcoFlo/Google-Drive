@@ -90,23 +90,23 @@ CMakeFiles\Client.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\main.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\main.cpp"
 <<
 
-CMakeFiles\Client.dir\CharacterClient.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\CharacterClient.cpp.obj: ..\CharacterClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/CharacterClient.cpp.obj"
+CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: ..\comunication\CharacterClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Client.dir/comunication/CharacterClient.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\CharacterClient.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\CharacterClient.cpp"
 <<
 
-CMakeFiles\Client.dir\CharacterClient.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/CharacterClient.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\CharacterClient.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+CMakeFiles\Client.dir\comunication\CharacterClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/comunication/CharacterClient.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\comunication\CharacterClient.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\CharacterClient.cpp"
 <<
 
-CMakeFiles\Client.dir\CharacterClient.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/CharacterClient.cpp.s"
+CMakeFiles\Client.dir\comunication\CharacterClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/comunication/CharacterClient.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\CharacterClient.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\CharacterClient.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\comunication\CharacterClient.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\CharacterClient.cpp"
 <<
 
 CMakeFiles\Client.dir\messageP.pb.cc.obj: CMakeFiles\Client.dir\flags.make
@@ -150,7 +150,7 @@ CMakeFiles\Client.dir\messageP.grpc.pb.cc.s: cmake_force
 # Object files for target Client
 Client_OBJECTS = \
 "CMakeFiles\Client.dir\main.cpp.obj" \
-"CMakeFiles\Client.dir\CharacterClient.cpp.obj" \
+"CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj" \
 "CMakeFiles\Client.dir\messageP.pb.cc.obj" \
 "CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj"
 
@@ -158,7 +158,7 @@ Client_OBJECTS = \
 Client_EXTERNAL_OBJECTS =
 
 Client.exe: CMakeFiles\Client.dir\main.cpp.obj
-Client.exe: CMakeFiles\Client.dir\CharacterClient.cpp.obj
+Client.exe: CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj
 Client.exe: CMakeFiles\Client.dir\messageP.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\build.make
