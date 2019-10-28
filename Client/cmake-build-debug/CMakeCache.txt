@@ -377,14 +377,8 @@ LIBRT:FILEPATH=LIBRT-NOTFOUND
 //Path to a program.
 PERL_EXECUTABLE:FILEPATH=C:/Perl64/bin/perl.exe
 
-//The directory containing a CMake configuration file for Qt5Application.
-Qt5Application_DIR:PATH=Qt5Application_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Core
-
-//The directory containing a CMake configuration file for Qt5Dialog.
-Qt5Dialog_DIR:PATH=Qt5Dialog_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui

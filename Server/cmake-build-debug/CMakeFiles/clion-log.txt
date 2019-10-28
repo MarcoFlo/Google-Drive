@@ -252,6 +252,10 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Looking for fseeko - not found
 -- Looking for unistd.h
 -- Looking for unistd.h - not found
+-- Renaming
+--     C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/zlib/zconf.h
+-- to 'zconf.h.included' because this file is included with zlib
+-- but CMake generates it automatically in the build directory.
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug

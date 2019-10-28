@@ -50,61 +50,61 @@ The CXX compiler identification is MSVC, found in "C:/Users/flori/Documents/Univ
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f6656\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f6656.dir\build.make /nologo -L                  CMakeFiles\cmTC_f6656.dir\build
-Building C object CMakeFiles/cmTC_f6656.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmBD51.tmp
+Run Build Command(s):nmake /nologo cmTC_04e62\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_04e62.dir\build.make /nologo -L                  CMakeFiles\cmTC_04e62.dir\build
+Building C object CMakeFiles/cmTC_04e62.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6428.tmp
 testCCompiler.c
-Linking C executable cmTC_f6656.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f6656.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f6656.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmBFC3.tmp
+Linking C executable cmTC_04e62.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_04e62.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_04e62.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6503.tmp
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_0ae3c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_0ae3c.dir\build.make /nologo -L                  CMakeFiles\cmTC_0ae3c.dir\build
-Building C object CMakeFiles/cmTC_0ae3c.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmC63A.tmp
+Run Build Command(s):nmake /nologo cmTC_9f20a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9f20a.dir\build.make /nologo -L                  CMakeFiles\cmTC_9f20a.dir\build
+Building C object CMakeFiles/cmTC_9f20a.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6D7E.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_0ae3c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_0ae3c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_0ae3c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmC7E1.tmp
+Linking C executable cmTC_9f20a.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9f20a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9f20a.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6ED7.tmp
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_e612f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_e612f.dir\build.make /nologo -L                  CMakeFiles\cmTC_e612f.dir\build
-Building CXX object CMakeFiles/cmTC_e612f.dir/testCXXCompiler.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmCC06.tmp
+Run Build Command(s):nmake /nologo cmTC_60752\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_60752.dir\build.make /nologo -L                  CMakeFiles\cmTC_60752.dir\build
+Building CXX object CMakeFiles/cmTC_60752.dir/testCXXCompiler.cxx.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm76F4.tmp
 testCXXCompiler.cxx
-Linking CXX executable cmTC_e612f.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e612f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_e612f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmCCD2.tmp
+Linking CXX executable cmTC_60752.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_60752.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_60752.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7928.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9973f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9973f.dir\build.make /nologo -L                  CMakeFiles\cmTC_9973f.dir\build
-Building CXX object CMakeFiles/cmTC_9973f.dir/CMakeCXXCompilerABI.cpp.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmD751.tmp
+Run Build Command(s):nmake /nologo cmTC_dad54\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_dad54.dir\build.make /nologo -L                  CMakeFiles\cmTC_dad54.dir\build
+Building CXX object CMakeFiles/cmTC_dad54.dir/CMakeCXXCompilerABI.cpp.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm884A.tmp
 CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_9973f.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9973f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9973f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmD8AA.tmp
+Linking CXX executable cmTC_dad54.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_dad54.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_dad54.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8A10.tmp
 
 
 
 Performing C++ SOURCE FILE Test BENCHMARK_HAS_O3_FLAG succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_e7cdb\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_e7cdb.dir\build.make /nologo -L                  CMakeFiles\cmTC_e7cdb.dir\build
-Building CXX object CMakeFiles/cmTC_e7cdb.dir/src.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm381.tmp
+Run Build Command(s):nmake /nologo cmTC_db9c4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_db9c4.dir\build.make /nologo -L                  CMakeFiles\cmTC_db9c4.dir\build
+Building CXX object CMakeFiles/cmTC_db9c4.dir/src.cxx.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmB2F4.tmp
 cl : warning della riga di comando D9002 : l'opzione sconosciuta '-O3' verrà ignorata
 src.cxx
-Linking CXX executable cmTC_e7cdb.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e7cdb.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_e7cdb.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm567.tmp
+Linking CXX executable cmTC_db9c4.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_db9c4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_db9c4.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmB46C.tmp
 
 
 Source file was:
@@ -112,13 +112,13 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test BENCHMARK_HAS_CXX03_FLAG succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c601a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c601a.dir\build.make /nologo -L                  CMakeFiles\cmTC_c601a.dir\build
-Building CXX object CMakeFiles/cmTC_c601a.dir/src.cxx.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm10DF.tmp
+Run Build Command(s):nmake /nologo cmTC_f1618\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f1618.dir\build.make /nologo -L                  CMakeFiles\cmTC_f1618.dir\build
+Building CXX object CMakeFiles/cmTC_f1618.dir/src.cxx.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmBA66.tmp
 cl : warning della riga di comando D9002 : l'opzione sconosciuta '-std=c++03' verrà ignorata
 src.cxx
-Linking CXX executable cmTC_c601a.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c601a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c601a.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm13BF.tmp
+Linking CXX executable cmTC_f1618.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f1618.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f1618.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmBB80.tmp
 
 
 Source file was:
@@ -126,240 +126,240 @@ int main() { return 0; }
 Determining if files sys/types.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_404c1\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_404c1.dir\build.make /nologo -L                  CMakeFiles\cmTC_404c1.dir\build
-Building C object CMakeFiles/cmTC_404c1.dir/HAVE_SYS_TYPES_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm42AD.tmp
+Run Build Command(s):nmake /nologo cmTC_bcf0b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_bcf0b.dir\build.make /nologo -L                  CMakeFiles\cmTC_bcf0b.dir\build
+Building C object CMakeFiles/cmTC_bcf0b.dir/HAVE_SYS_TYPES_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmCD52.tmp
 HAVE_SYS_TYPES_H.c
-Linking C executable cmTC_404c1.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_404c1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_404c1.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm4483.tmp
+Linking C executable cmTC_bcf0b.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_bcf0b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_bcf0b.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmCE2D.tmp
 
 
 
 Determining if files assert.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c5dae\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c5dae.dir\build.make /nologo -L                  CMakeFiles\cmTC_c5dae.dir\build
-Building C object CMakeFiles/cmTC_c5dae.dir/HAVE_ASSERT_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6568.tmp
+Run Build Command(s):nmake /nologo cmTC_7b16b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_7b16b.dir\build.make /nologo -L                  CMakeFiles\cmTC_7b16b.dir\build
+Building C object CMakeFiles/cmTC_7b16b.dir/HAVE_ASSERT_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmD716.tmp
 HAVE_ASSERT_H.c
-Linking C executable cmTC_c5dae.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c5dae.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c5dae.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6682.tmp
+Linking C executable cmTC_7b16b.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_7b16b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_7b16b.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmD801.tmp
 
 
 
 Determining if files errno.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_98b28\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_98b28.dir\build.make /nologo -L                  CMakeFiles\cmTC_98b28.dir\build
-Building C object CMakeFiles/cmTC_98b28.dir/HAVE_ERRNO_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6DD4.tmp
+Run Build Command(s):nmake /nologo cmTC_a4b7f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_a4b7f.dir\build.make /nologo -L                  CMakeFiles\cmTC_a4b7f.dir\build
+Building C object CMakeFiles/cmTC_a4b7f.dir/HAVE_ERRNO_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmDBC9.tmp
 HAVE_ERRNO_H.c
-Linking C executable cmTC_98b28.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_98b28.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_98b28.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6FE8.tmp
+Linking C executable cmTC_a4b7f.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_a4b7f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_a4b7f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmDC76.tmp
 
 
 
 Determining if files fcntl.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_dacad\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_dacad.dir\build.make /nologo -L                  CMakeFiles\cmTC_dacad.dir\build
-Building C object CMakeFiles/cmTC_dacad.dir/HAVE_FCNTL_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm75C3.tmp
+Run Build Command(s):nmake /nologo cmTC_285cc\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_285cc.dir\build.make /nologo -L                  CMakeFiles\cmTC_285cc.dir\build
+Building C object CMakeFiles/cmTC_285cc.dir/HAVE_FCNTL_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmDFC0.tmp
 HAVE_FCNTL_H.c
-Linking C executable cmTC_dacad.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_dacad.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_dacad.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7690.tmp
+Linking C executable cmTC_285cc.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_285cc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_285cc.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmE0FA.tmp
 
 
 
 Determining if files inttypes.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_60f3c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_60f3c.dir\build.make /nologo -L                  CMakeFiles\cmTC_60f3c.dir\build
-Building C object CMakeFiles/cmTC_60f3c.dir/HAVE_INTTYPES_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7BFD.tmp
+Run Build Command(s):nmake /nologo cmTC_de05a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_de05a.dir\build.make /nologo -L                  CMakeFiles\cmTC_de05a.dir\build
+Building C object CMakeFiles/cmTC_de05a.dir/HAVE_INTTYPES_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmE5BC.tmp
 HAVE_INTTYPES_H.c
-Linking C executable cmTC_60f3c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_60f3c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_60f3c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7F0B.tmp
+Linking C executable cmTC_de05a.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_de05a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_de05a.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmE678.tmp
 
 
 
 Determining if files limits.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9c71e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9c71e.dir\build.make /nologo -L                  CMakeFiles\cmTC_9c71e.dir\build
-Building C object CMakeFiles/cmTC_9c71e.dir/HAVE_LIMITS_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm81F8.tmp
+Run Build Command(s):nmake /nologo cmTC_c8abc\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c8abc.dir\build.make /nologo -L                  CMakeFiles\cmTC_c8abc.dir\build
+Building C object CMakeFiles/cmTC_c8abc.dir/HAVE_LIMITS_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm941.tmp
 HAVE_LIMITS_H.c
-Linking C executable cmTC_9c71e.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9c71e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9c71e.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8322.tmp
+Linking C executable cmTC_c8abc.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c8abc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c8abc.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9EE.tmp
 
 
 
 Determining if files malloc.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_8cb95\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_8cb95.dir\build.make /nologo -L                  CMakeFiles\cmTC_8cb95.dir\build
-Building C object CMakeFiles/cmTC_8cb95.dir/HAVE_MALLOC_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm862F.tmp
+Run Build Command(s):nmake /nologo cmTC_4a2dc\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_4a2dc.dir\build.make /nologo -L                  CMakeFiles\cmTC_4a2dc.dir\build
+Building C object CMakeFiles/cmTC_4a2dc.dir/HAVE_MALLOC_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmE14.tmp
 HAVE_MALLOC_H.c
-Linking C executable cmTC_8cb95.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_8cb95.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_8cb95.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm871A.tmp
+Linking C executable cmTC_4a2dc.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4a2dc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_4a2dc.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmEE0.tmp
 
 
 
 Determining if files memory.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9fca6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9fca6.dir\build.make /nologo -L                  CMakeFiles\cmTC_9fca6.dir\build
-Building C object CMakeFiles/cmTC_9fca6.dir/HAVE_MEMORY_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8AC2.tmp
+Run Build Command(s):nmake /nologo cmTC_0ada9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_0ada9.dir\build.make /nologo -L                  CMakeFiles\cmTC_0ada9.dir\build
+Building C object CMakeFiles/cmTC_0ada9.dir/HAVE_MEMORY_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1288.tmp
 HAVE_MEMORY_H.c
-Linking C executable cmTC_9fca6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9fca6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9fca6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8BDD.tmp
+Linking C executable cmTC_0ada9.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_0ada9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_0ada9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1335.tmp
 
 
 
 Determining if files signal.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d44f0\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d44f0.dir\build.make /nologo -L                  CMakeFiles\cmTC_d44f0.dir\build
-Building C object CMakeFiles/cmTC_d44f0.dir/HAVE_SIGNAL_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm9235.tmp
+Run Build Command(s):nmake /nologo cmTC_c62d6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c62d6.dir\build.make /nologo -L                  CMakeFiles\cmTC_c62d6.dir\build
+Building C object CMakeFiles/cmTC_c62d6.dir/HAVE_SIGNAL_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1A0A.tmp
 HAVE_SIGNAL_H.c
-Linking C executable cmTC_d44f0.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d44f0.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d44f0.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm92A3.tmp
+Linking C executable cmTC_c62d6.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c62d6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c62d6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1A98.tmp
 
 
 
 Determining if files stdbool.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_503f3\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_503f3.dir\build.make /nologo -L                  CMakeFiles\cmTC_503f3.dir\build
-Building C object CMakeFiles/cmTC_503f3.dir/HAVE_STDBOOL_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm965B.tmp
+Run Build Command(s):nmake /nologo cmTC_74228\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_74228.dir\build.make /nologo -L                  CMakeFiles\cmTC_74228.dir\build
+Building C object CMakeFiles/cmTC_74228.dir/HAVE_STDBOOL_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1E60.tmp
 HAVE_STDBOOL_H.c
-Linking C executable cmTC_503f3.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_503f3.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_503f3.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm96CA.tmp
+Linking C executable cmTC_74228.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_74228.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_74228.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1F2C.tmp
 
 
 
 Determining if files stdint.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_3876e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_3876e.dir\build.make /nologo -L                  CMakeFiles\cmTC_3876e.dir\build
-Building C object CMakeFiles/cmTC_3876e.dir/HAVE_STDINT_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm9949.tmp
+Run Build Command(s):nmake /nologo cmTC_ba66c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_ba66c.dir\build.make /nologo -L                  CMakeFiles\cmTC_ba66c.dir\build
+Building C object CMakeFiles/cmTC_ba66c.dir/HAVE_STDINT_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm21EA.tmp
 HAVE_STDINT_H.c
-Linking C executable cmTC_3876e.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3876e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3876e.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm99B8.tmp
+Linking C executable cmTC_ba66c.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_ba66c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_ba66c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm22B6.tmp
 
 
 
 Determining if files stdlib.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_5cc5d\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_5cc5d.dir\build.make /nologo -L                  CMakeFiles\cmTC_5cc5d.dir\build
-Building C object CMakeFiles/cmTC_5cc5d.dir/HAVE_STDLIB_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm9C66.tmp
+Run Build Command(s):nmake /nologo cmTC_7a5ef\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_7a5ef.dir\build.make /nologo -L                  CMakeFiles\cmTC_7a5ef.dir\build
+Building C object CMakeFiles/cmTC_7a5ef.dir/HAVE_STDLIB_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm2610.tmp
 HAVE_STDLIB_H.c
-Linking C executable cmTC_5cc5d.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_5cc5d.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_5cc5d.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9CF4.tmp
+Linking C executable cmTC_7a5ef.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_7a5ef.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_7a5ef.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm26BD.tmp
 
 
 
 Determining if files string.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_1e4ee\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_1e4ee.dir\build.make /nologo -L                  CMakeFiles\cmTC_1e4ee.dir\build
-Building C object CMakeFiles/cmTC_1e4ee.dir/HAVE_STRING_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmA0BB.tmp
+Run Build Command(s):nmake /nologo cmTC_95acd\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_95acd.dir\build.make /nologo -L                  CMakeFiles\cmTC_95acd.dir\build
+Building C object CMakeFiles/cmTC_95acd.dir/HAVE_STRING_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm2B8F.tmp
 HAVE_STRING_H.c
-Linking C executable cmTC_1e4ee.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_1e4ee.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_1e4ee.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmA139.tmp
+Linking C executable cmTC_95acd.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_95acd.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_95acd.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm2C99.tmp
 
 
 
 Determining if files sys/stat.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c080b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c080b.dir\build.make /nologo -L                  CMakeFiles\cmTC_c080b.dir\build
-Building C object CMakeFiles/cmTC_c080b.dir/HAVE_SYS_STAT_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmA705.tmp
+Run Build Command(s):nmake /nologo cmTC_6a419\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_6a419.dir\build.make /nologo -L                  CMakeFiles\cmTC_6a419.dir\build
+Building C object CMakeFiles/cmTC_6a419.dir/HAVE_SYS_STAT_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm33FB.tmp
 HAVE_SYS_STAT_H.c
-Linking C executable cmTC_c080b.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c080b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c080b.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmA773.tmp
+Linking C executable cmTC_6a419.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_6a419.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_6a419.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm34A8.tmp
 
 
 
 Determining if files time.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_3a7ba\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_3a7ba.dir\build.make /nologo -L                  CMakeFiles\cmTC_3a7ba.dir\build
-Building C object CMakeFiles/cmTC_3a7ba.dir/HAVE_TIME_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmAB89.tmp
+Run Build Command(s):nmake /nologo cmTC_e8afb\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_e8afb.dir\build.make /nologo -L                  CMakeFiles\cmTC_e8afb.dir\build
+Building C object CMakeFiles/cmTC_e8afb.dir/HAVE_TIME_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm3A25.tmp
 HAVE_TIME_H.c
-Linking C executable cmTC_3a7ba.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3a7ba.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3a7ba.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmAC26.tmp
+Linking C executable cmTC_e8afb.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e8afb.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_e8afb.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm3AE1.tmp
 
 
 
 Determining if files winsock2.h;windows.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d3224\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d3224.dir\build.make /nologo -L                  CMakeFiles\cmTC_d3224.dir\build
-Building C object CMakeFiles/cmTC_d3224.dir/HAVE_WINSOCK2_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmB05B.tmp
+Run Build Command(s):nmake /nologo cmTC_f8fb9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f8fb9.dir\build.make /nologo -L                  CMakeFiles\cmTC_f8fb9.dir\build
+Building C object CMakeFiles/cmTC_f8fb9.dir/HAVE_WINSOCK2_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm42A1.tmp
 HAVE_WINSOCK2_H.c
-Linking C executable cmTC_d3224.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d3224.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d3224.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmB260.tmp
+Linking C executable cmTC_f8fb9.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f8fb9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f8fb9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm44D4.tmp
 
 
 
 Determining if files winsock2.h;ws2tcpip.h;windows.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_7c96d\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_7c96d.dir\build.make /nologo -L                  CMakeFiles\cmTC_7c96d.dir\build
-Building C object CMakeFiles/cmTC_7c96d.dir/HAVE_WS2TCPIP_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmB4C0.tmp
+Run Build Command(s):nmake /nologo cmTC_8589f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_8589f.dir\build.make /nologo -L                  CMakeFiles\cmTC_8589f.dir\build
+Building C object CMakeFiles/cmTC_8589f.dir/HAVE_WS2TCPIP_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm47A2.tmp
 HAVE_WS2TCPIP_H.c
-Linking C executable cmTC_7c96d.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_7c96d.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_7c96d.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmB6B5.tmp
+Linking C executable cmTC_8589f.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_8589f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_8589f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm49E5.tmp
 
 
 
 Determining if files winsock.h;windows.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_b3e61\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_b3e61.dir\build.make /nologo -L                  CMakeFiles\cmTC_b3e61.dir\build
-Building C object CMakeFiles/cmTC_b3e61.dir/HAVE_WINSOCK_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmB906.tmp
+Run Build Command(s):nmake /nologo cmTC_442f1\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_442f1.dir\build.make /nologo -L                  CMakeFiles\cmTC_442f1.dir\build
+Building C object CMakeFiles/cmTC_442f1.dir/HAVE_WINSOCK_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm502E.tmp
 HAVE_WINSOCK_H.c
-Linking C executable cmTC_b3e61.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_b3e61.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_b3e61.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmBADC.tmp
+Linking C executable cmTC_442f1.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_442f1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_442f1.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm534B.tmp
 
 
 
 Determining if files windows.h exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_70f91\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_70f91.dir\build.make /nologo -L                  CMakeFiles\cmTC_70f91.dir\build
-Building C object CMakeFiles/cmTC_70f91.dir/HAVE_WINDOWS_H.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmBD5C.tmp
+Run Build Command(s):nmake /nologo cmTC_265fe\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_265fe.dir\build.make /nologo -L                  CMakeFiles\cmTC_265fe.dir\build
+Building C object CMakeFiles/cmTC_265fe.dir/HAVE_WINDOWS_H.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm5677.tmp
 HAVE_WINDOWS_H.c
-Linking C executable cmTC_70f91.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_70f91.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_70f91.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmBF51.tmp
+Linking C executable cmTC_265fe.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_265fe.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_265fe.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm58F9.tmp
 
 
 
 Performing C SOURCE FILE Test HAVE_SOCKLEN_T succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_6e53c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_6e53c.dir\build.make /nologo -L                  CMakeFiles\cmTC_6e53c.dir\build
-Building C object CMakeFiles/cmTC_6e53c.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmC192.tmp
+Run Build Command(s):nmake /nologo cmTC_d9383\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d9383.dir\build.make /nologo -L                  CMakeFiles\cmTC_d9383.dir\build
+Building C object CMakeFiles/cmTC_d9383.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm5BC6.tmp
 src.c
-Linking C executable cmTC_6e53c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_6e53c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_6e53c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmC2CB.tmp
+Linking C executable cmTC_d9383.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d9383.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d9383.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm5D8C.tmp
 
 
 Source file was:
@@ -386,12 +386,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_TYPE_SOCKET succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_afe14\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_afe14.dir\build.make /nologo -L                  CMakeFiles\cmTC_afe14.dir\build
-Building C object CMakeFiles/cmTC_afe14.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmC51C.tmp
+Run Build Command(s):nmake /nologo cmTC_c0cd9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c0cd9.dir\build.make /nologo -L                  CMakeFiles\cmTC_c0cd9.dir\build
+Building C object CMakeFiles/cmTC_c0cd9.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm601C.tmp
 src.c
-Linking C executable cmTC_afe14.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_afe14.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_afe14.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmC655.tmp
+Linking C executable cmTC_c0cd9.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c0cd9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c0cd9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm61C3.tmp
 
 
 Source file was:
@@ -418,12 +418,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_BOOL_T succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_90113\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_90113.dir\build.make /nologo -L                  CMakeFiles\cmTC_90113.dir\build
-Building C object CMakeFiles/cmTC_90113.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmC8A6.tmp
+Run Build Command(s):nmake /nologo cmTC_4b275\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_4b275.dir\build.make /nologo -L                  CMakeFiles\cmTC_4b275.dir\build
+Building C object CMakeFiles/cmTC_4b275.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6490.tmp
 src.c
-Linking C executable cmTC_90113.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_90113.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_90113.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmC9E0.tmp
+Linking C executable cmTC_4b275.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4b275.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_4b275.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6618.tmp
 
 
 Source file was:
@@ -450,12 +450,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_LONGLONG succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d0eb0\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d0eb0.dir\build.make /nologo -L                  CMakeFiles\cmTC_d0eb0.dir\build
-Building C object CMakeFiles/cmTC_d0eb0.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmCE34.tmp
+Run Build Command(s):nmake /nologo cmTC_7461a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_7461a.dir\build.make /nologo -L                  CMakeFiles\cmTC_7461a.dir\build
+Building C object CMakeFiles/cmTC_7461a.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6AE9.tmp
 src.c
-Linking C executable cmTC_d0eb0.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d0eb0.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d0eb0.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmCFEB.tmp
+Linking C executable cmTC_7461a.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_7461a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_7461a.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6C52.tmp
 
 
 Source file was:
@@ -482,12 +482,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_SIG_ATOMIC_T succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_775f9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_775f9.dir\build.make /nologo -L                  CMakeFiles\cmTC_775f9.dir\build
-Building C object CMakeFiles/cmTC_775f9.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmD289.tmp
+Run Build Command(s):nmake /nologo cmTC_f1c1c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f1c1c.dir\build.make /nologo -L                  CMakeFiles\cmTC_f1c1c.dir\build
+Building C object CMakeFiles/cmTC_f1c1c.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6F3F.tmp
 src.c
-Linking C executable cmTC_775f9.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_775f9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_775f9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmD3F2.tmp
+Linking C executable cmTC_f1c1c.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f1c1c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f1c1c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm70D6.tmp
 
 
 Source file was:
@@ -514,12 +514,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_ADDRINFO succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d2aa9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d2aa9.dir\build.make /nologo -L                  CMakeFiles\cmTC_d2aa9.dir\build
-Building C object CMakeFiles/cmTC_d2aa9.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmD691.tmp
+Run Build Command(s):nmake /nologo cmTC_691c4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_691c4.dir\build.make /nologo -L                  CMakeFiles\cmTC_691c4.dir\build
+Building C object CMakeFiles/cmTC_691c4.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm73E2.tmp
 src.c
-Linking C executable cmTC_d2aa9.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d2aa9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d2aa9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmD7E9.tmp
+Linking C executable cmTC_691c4.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_691c4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_691c4.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm75C8.tmp
 
 
 Source file was:
@@ -546,12 +546,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_IN6_ADDR succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_532d5\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_532d5.dir\build.make /nologo -L                  CMakeFiles\cmTC_532d5.dir\build
-Building C object CMakeFiles/cmTC_532d5.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmDAE6.tmp
+Run Build Command(s):nmake /nologo cmTC_80e1c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_80e1c.dir\build.make /nologo -L                  CMakeFiles\cmTC_80e1c.dir\build
+Building C object CMakeFiles/cmTC_80e1c.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7A2C.tmp
 src.c
-Linking C executable cmTC_532d5.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_532d5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_532d5.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmDC5E.tmp
+Linking C executable cmTC_80e1c.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_80e1c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_80e1c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7BC3.tmp
 
 
 Source file was:
@@ -578,12 +578,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_SOCKADDR_IN6 succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_6b3c6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_6b3c6.dir\build.make /nologo -L                  CMakeFiles\cmTC_6b3c6.dir\build
-Building C object CMakeFiles/cmTC_6b3c6.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmE19D.tmp
+Run Build Command(s):nmake /nologo cmTC_d713b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d713b.dir\build.make /nologo -L                  CMakeFiles\cmTC_d713b.dir\build
+Building C object CMakeFiles/cmTC_d713b.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7ECF.tmp
 src.c
-Linking C executable cmTC_6b3c6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_6b3c6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_6b3c6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmE4F9.tmp
+Linking C executable cmTC_d713b.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d713b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d713b.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8066.tmp
 
 
 Source file was:
@@ -610,12 +610,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_SOCKADDR_STORAGE succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_bfee9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_bfee9.dir\build.make /nologo -L                  CMakeFiles\cmTC_bfee9.dir\build
-Building C object CMakeFiles/cmTC_bfee9.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmFAE2.tmp
+Run Build Command(s):nmake /nologo cmTC_502ca\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_502ca.dir\build.make /nologo -L                  CMakeFiles\cmTC_502ca.dir\build
+Building C object CMakeFiles/cmTC_502ca.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8334.tmp
 src.c
-Linking C executable cmTC_bfee9.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_bfee9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_bfee9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmFDC1.tmp
+Linking C executable cmTC_502ca.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_502ca.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_502ca.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm84FA.tmp
 
 
 Source file was:
@@ -642,12 +642,12 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_STRUCT_TIMEVAL succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_18fd6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_18fd6.dir\build.make /nologo -L                  CMakeFiles\cmTC_18fd6.dir\build
-Building C object CMakeFiles/cmTC_18fd6.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm774.tmp
+Run Build Command(s):nmake /nologo cmTC_17752\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_17752.dir\build.make /nologo -L                  CMakeFiles\cmTC_17752.dir\build
+Building C object CMakeFiles/cmTC_17752.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8835.tmp
 src.c
-Linking C executable cmTC_18fd6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_18fd6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_18fd6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm91B.tmp
+Linking C executable cmTC_17752.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_17752.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_17752.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8A2A.tmp
 
 
 Source file was:
@@ -674,12 +674,12 @@ Source file was:
 Determining if the AF_INET6 exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_a47a5\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_a47a5.dir\build.make /nologo -L                  CMakeFiles\cmTC_a47a5.dir\build
-Building C object CMakeFiles/cmTC_a47a5.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1705.tmp
+Run Build Command(s):nmake /nologo cmTC_4964a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_4964a.dir\build.make /nologo -L                  CMakeFiles\cmTC_4964a.dir\build
+Building C object CMakeFiles/cmTC_4964a.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8CF8.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_a47a5.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_a47a5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_a47a5.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1A71.tmp
+Linking C executable cmTC_4964a.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4964a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_4964a.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8EED.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -709,12 +709,12 @@ int main(int argc, char** argv)
 Determining if the FIONBIO exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_04cfc\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_04cfc.dir\build.make /nologo -L                  CMakeFiles\cmTC_04cfc.dir\build
-Building C object CMakeFiles/cmTC_04cfc.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm2BC5.tmp
+Run Build Command(s):nmake /nologo cmTC_93310\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_93310.dir\build.make /nologo -L                  CMakeFiles\cmTC_93310.dir\build
+Building C object CMakeFiles/cmTC_93310.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm93FD.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_04cfc.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_04cfc.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_04cfc.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm2F7F.tmp
+Linking C executable cmTC_93310.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_93310.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_93310.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9585.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -744,12 +744,12 @@ int main(int argc, char** argv)
 Determining if the PF_INET6 exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f6ceb\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f6ceb.dir\build.make /nologo -L                  CMakeFiles\cmTC_f6ceb.dir\build
-Building C object CMakeFiles/cmTC_f6ceb.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm901D.tmp
+Run Build Command(s):nmake /nologo cmTC_3eb17\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_3eb17.dir\build.make /nologo -L                  CMakeFiles\cmTC_3eb17.dir\build
+Building C object CMakeFiles/cmTC_3eb17.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmA69B.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_f6ceb.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f6ceb.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f6ceb.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9500.tmp
+Linking C executable cmTC_3eb17.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3eb17.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3eb17.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmA9F7.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -779,12 +779,12 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_858e6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_858e6.dir\build.make /nologo -L                  CMakeFiles\cmTC_858e6.dir\build
-Building C object CMakeFiles/cmTC_858e6.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmAB94.tmp
+Run Build Command(s):nmake /nologo cmTC_99f45\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_99f45.dir\build.make /nologo -L                  CMakeFiles\cmTC_99f45.dir\build
+Building C object CMakeFiles/cmTC_99f45.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmDD89.tmp
 src.c
-Linking C executable cmTC_858e6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_858e6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_858e6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmB22C.tmp
+Linking C executable cmTC_99f45.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_99f45.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_99f45.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmE54A.tmp
 
 
 Source file was:
@@ -809,12 +809,12 @@ int main()
 Performing C SOURCE FILE Test HAVE_LL succeeded with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f183c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f183c.dir\build.make /nologo -L                  CMakeFiles\cmTC_f183c.dir\build
-Building C object CMakeFiles/cmTC_f183c.dir/src.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmCE3F.tmp
+Run Build Command(s):nmake /nologo cmTC_a1ef4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_a1ef4.dir\build.make /nologo -L                  CMakeFiles\cmTC_a1ef4.dir\build
+Building C object CMakeFiles/cmTC_a1ef4.dir/src.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm17B4.tmp
 src.c
-Linking C executable cmTC_f183c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f183c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f183c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmCF4A.tmp
+Linking C executable cmTC_a1ef4.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_a1ef4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_a1ef4.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm3138.tmp
 
 
 Source file was:
@@ -822,12 +822,12 @@ int main() { int n=1234LL; return 0; }
 Determining if the closesocket exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9cff6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9cff6.dir\build.make /nologo -L                  CMakeFiles\cmTC_9cff6.dir\build
-Building C object CMakeFiles/cmTC_9cff6.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmE1F6.tmp
+Run Build Command(s):nmake /nologo cmTC_3ab77\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_3ab77.dir\build.make /nologo -L                  CMakeFiles\cmTC_3ab77.dir\build
+Building C object CMakeFiles/cmTC_3ab77.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm834F.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_9cff6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9cff6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9cff6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmE497.tmp
+Linking C executable cmTC_3ab77.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3ab77.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3ab77.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm984F.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -857,12 +857,12 @@ int main(int argc, char** argv)
 Determining if the connect exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_4469c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_4469c.dir\build.make /nologo -L                  CMakeFiles\cmTC_4469c.dir\build
-Building C object CMakeFiles/cmTC_4469c.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmFFDE.tmp
+Run Build Command(s):nmake /nologo cmTC_cd4a1\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_cd4a1.dir\build.make /nologo -L                  CMakeFiles\cmTC_cd4a1.dir\build
+Building C object CMakeFiles/cmTC_cd4a1.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm55F.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_4469c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4469c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_4469c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm231.tmp
+Linking C executable cmTC_cd4a1.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_cd4a1.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_cd4a1.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7B2.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -892,12 +892,12 @@ int main(int argc, char** argv)
 Determining if the freeaddrinfo exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_ff693\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_ff693.dir\build.make /nologo -L                  CMakeFiles\cmTC_ff693.dir\build
-Building C object CMakeFiles/cmTC_ff693.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1059.tmp
+Run Build Command(s):nmake /nologo cmTC_9fce7\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9fce7.dir\build.make /nologo -L                  CMakeFiles\cmTC_9fce7.dir\build
+Building C object CMakeFiles/cmTC_9fce7.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmFCF.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_ff693.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_ff693.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_ff693.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm129C.tmp
+Linking C executable cmTC_9fce7.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9fce7.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9fce7.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1147.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -927,12 +927,12 @@ int main(int argc, char** argv)
 Determining if the getaddrinfo exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9af93\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9af93.dir\build.make /nologo -L                  CMakeFiles\cmTC_9af93.dir\build
-Building C object CMakeFiles/cmTC_9af93.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm171F.tmp
+Run Build Command(s):nmake /nologo cmTC_69bf5\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_69bf5.dir\build.make /nologo -L                  CMakeFiles\cmTC_69bf5.dir\build
+Building C object CMakeFiles/cmTC_69bf5.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm15BB.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_9af93.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9af93.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9af93.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm18E5.tmp
+Linking C executable cmTC_69bf5.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_69bf5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_69bf5.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1714.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -962,12 +962,12 @@ int main(int argc, char** argv)
 Determining if the getenv exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9a067\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9a067.dir\build.make /nologo -L                  CMakeFiles\cmTC_9a067.dir\build
-Building C object CMakeFiles/cmTC_9a067.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1DC6.tmp
+Run Build Command(s):nmake /nologo cmTC_1294b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_1294b.dir\build.make /nologo -L                  CMakeFiles\cmTC_1294b.dir\build
+Building C object CMakeFiles/cmTC_1294b.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1AEB.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_9a067.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9a067.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9a067.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm20B5.tmp
+Linking C executable cmTC_1294b.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_1294b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_1294b.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm1C92.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -997,12 +997,12 @@ int main(int argc, char** argv)
 Determining if the gethostbyaddr exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_08dcd\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_08dcd.dir\build.make /nologo -L                  CMakeFiles\cmTC_08dcd.dir\build
-Building C object CMakeFiles/cmTC_08dcd.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm28F2.tmp
+Run Build Command(s):nmake /nologo cmTC_5fafe\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_5fafe.dir\build.make /nologo -L                  CMakeFiles\cmTC_5fafe.dir\build
+Building C object CMakeFiles/cmTC_5fafe.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm1FEC.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_08dcd.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_08dcd.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_08dcd.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm2D58.tmp
+Linking C executable cmTC_5fafe.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_5fafe.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_5fafe.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm21A3.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1032,12 +1032,12 @@ int main(int argc, char** argv)
 Determining if the gethostbyname exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_59a9f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_59a9f.dir\build.make /nologo -L                  CMakeFiles\cmTC_59a9f.dir\build
-Building C object CMakeFiles/cmTC_59a9f.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm3D35.tmp
+Run Build Command(s):nmake /nologo cmTC_023d3\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_023d3.dir\build.make /nologo -L                  CMakeFiles\cmTC_023d3.dir\build
+Building C object CMakeFiles/cmTC_023d3.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm24DE.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_59a9f.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_59a9f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_59a9f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm412E.tmp
+Linking C executable cmTC_023d3.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_023d3.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_023d3.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm2675.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1067,12 +1067,12 @@ int main(int argc, char** argv)
 Determining if the gethostname exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_145e6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_145e6.dir\build.make /nologo -L                  CMakeFiles\cmTC_145e6.dir\build
-Building C object CMakeFiles/cmTC_145e6.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm4812.tmp
+Run Build Command(s):nmake /nologo cmTC_2e124\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_2e124.dir\build.make /nologo -L                  CMakeFiles\cmTC_2e124.dir\build
+Building C object CMakeFiles/cmTC_2e124.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm29B0.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_145e6.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_145e6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_145e6.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm49F8.tmp
+Linking C executable cmTC_2e124.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_2e124.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_2e124.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm2B28.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1102,12 +1102,12 @@ int main(int argc, char** argv)
 Determining if the getnameinfo exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_0978e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_0978e.dir\build.make /nologo -L                  CMakeFiles\cmTC_0978e.dir\build
-Building C object CMakeFiles/cmTC_0978e.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm514A.tmp
+Run Build Command(s):nmake /nologo cmTC_c00a4\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c00a4.dir\build.make /nologo -L                  CMakeFiles\cmTC_c00a4.dir\build
+Building C object CMakeFiles/cmTC_c00a4.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm2F00.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_0978e.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_0978e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_0978e.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm52D1.tmp
+Linking C executable cmTC_c00a4.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c00a4.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c00a4.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm3133.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1137,12 +1137,12 @@ int main(int argc, char** argv)
 Determining if the ioctlsocket exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_405f0\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_405f0.dir\build.make /nologo -L                  CMakeFiles\cmTC_405f0.dir\build
-Building C object CMakeFiles/cmTC_405f0.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6697.tmp
+Run Build Command(s):nmake /nologo cmTC_9b1da\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9b1da.dir\build.make /nologo -L                  CMakeFiles\cmTC_9b1da.dir\build
+Building C object CMakeFiles/cmTC_9b1da.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm4026.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_405f0.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_405f0.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_405f0.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6A70.tmp
+Linking C executable cmTC_9b1da.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9b1da.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9b1da.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm421B.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1172,12 +1172,12 @@ int main(int argc, char** argv)
 Determining if the recv exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f5576\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f5576.dir\build.make /nologo -L                  CMakeFiles\cmTC_f5576.dir\build
-Building C object CMakeFiles/cmTC_f5576.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6FEE.tmp
+Run Build Command(s):nmake /nologo cmTC_721ce\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_721ce.dir\build.make /nologo -L                  CMakeFiles\cmTC_721ce.dir\build
+Building C object CMakeFiles/cmTC_721ce.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm4B90.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_f5576.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f5576.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f5576.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7137.tmp
+Linking C executable cmTC_721ce.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_721ce.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_721ce.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm4D56.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1207,12 +1207,12 @@ int main(int argc, char** argv)
 Determining if the recvfrom exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_2fa67\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_2fa67.dir\build.make /nologo -L                  CMakeFiles\cmTC_2fa67.dir\build
-Building C object CMakeFiles/cmTC_2fa67.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm73B6.tmp
+Run Build Command(s):nmake /nologo cmTC_cc363\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_cc363.dir\build.make /nologo -L                  CMakeFiles\cmTC_cc363.dir\build
+Building C object CMakeFiles/cmTC_cc363.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm510E.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_2fa67.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_2fa67.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_2fa67.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm74FF.tmp
+Linking C executable cmTC_cc363.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_cc363.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_cc363.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm5296.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1242,12 +1242,12 @@ int main(int argc, char** argv)
 Determining if the send exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_34326\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_34326.dir\build.make /nologo -L                  CMakeFiles\cmTC_34326.dir\build
-Building C object CMakeFiles/cmTC_34326.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm77AE.tmp
+Run Build Command(s):nmake /nologo cmTC_f401f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f401f.dir\build.make /nologo -L                  CMakeFiles\cmTC_f401f.dir\build
+Building C object CMakeFiles/cmTC_f401f.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm5852.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_34326.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_34326.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_34326.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7907.tmp
+Linking C executable cmTC_f401f.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f401f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f401f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm5A85.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1277,12 +1277,12 @@ int main(int argc, char** argv)
 Determining if the setsockopt exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f1689\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f1689.dir\build.make /nologo -L                  CMakeFiles\cmTC_f1689.dir\build
-Building C object CMakeFiles/cmTC_f1689.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7BB5.tmp
+Run Build Command(s):nmake /nologo cmTC_c5723\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c5723.dir\build.make /nologo -L                  CMakeFiles\cmTC_c5723.dir\build
+Building C object CMakeFiles/cmTC_c5723.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm5EDA.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_f1689.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f1689.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f1689.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7D3D.tmp
+Linking C executable cmTC_c5723.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c5723.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c5723.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm615B.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1312,12 +1312,12 @@ int main(int argc, char** argv)
 Determining if the socket exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c1611\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c1611.dir\build.make /nologo -L                  CMakeFiles\cmTC_c1611.dir\build
-Building C object CMakeFiles/cmTC_c1611.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7FDC.tmp
+Run Build Command(s):nmake /nologo cmTC_d02d3\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d02d3.dir\build.make /nologo -L                  CMakeFiles\cmTC_d02d3.dir\build
+Building C object CMakeFiles/cmTC_d02d3.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm667B.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_c1611.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c1611.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c1611.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8115.tmp
+Linking C executable cmTC_d02d3.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d02d3.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_d02d3.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6851.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1347,12 +1347,12 @@ int main(int argc, char** argv)
 Determining if the strcmpi exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_9ed7e\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_9ed7e.dir\build.make /nologo -L                  CMakeFiles\cmTC_9ed7e.dir\build
-Building C object CMakeFiles/cmTC_9ed7e.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm855A.tmp
+Run Build Command(s):nmake /nologo cmTC_bfc08\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_bfc08.dir\build.make /nologo -L                  CMakeFiles\cmTC_bfc08.dir\build
+Building C object CMakeFiles/cmTC_bfc08.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm6D8F.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_9ed7e.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9ed7e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_9ed7e.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8693.tmp
+Linking C executable cmTC_bfc08.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_bfc08.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_bfc08.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm6EF8.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1382,12 +1382,12 @@ int main(int argc, char** argv)
 Determining if the strdup exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_22a8c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_22a8c.dir\build.make /nologo -L                  CMakeFiles\cmTC_22a8c.dir\build
-Building C object CMakeFiles/cmTC_22a8c.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8913.tmp
+Run Build Command(s):nmake /nologo cmTC_031d3\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_031d3.dir\build.make /nologo -L                  CMakeFiles\cmTC_031d3.dir\build
+Building C object CMakeFiles/cmTC_031d3.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7446.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_22a8c.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_22a8c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_22a8c.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8A5C.tmp
+Linking C executable cmTC_031d3.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_031d3.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_031d3.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm76B8.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1417,12 +1417,12 @@ int main(int argc, char** argv)
 Determining if the stricmp exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c8619\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c8619.dir\build.make /nologo -L                  CMakeFiles\cmTC_c8619.dir\build
-Building C object CMakeFiles/cmTC_c8619.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm8CFB.tmp
+Run Build Command(s):nmake /nologo cmTC_acf8f\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_acf8f.dir\build.make /nologo -L                  CMakeFiles\cmTC_acf8f.dir\build
+Building C object CMakeFiles/cmTC_acf8f.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm7CB2.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_c8619.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c8619.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c8619.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8E44.tmp
+Linking C executable cmTC_acf8f.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_acf8f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_acf8f.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm7E88.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1452,12 +1452,12 @@ int main(int argc, char** argv)
 Determining if the strnicmp exist passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_f8858\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f8858.dir\build.make /nologo -L                  CMakeFiles\cmTC_f8858.dir\build
-Building C object CMakeFiles/cmTC_f8858.dir/CheckSymbolExists.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm94DB.tmp
+Run Build Command(s):nmake /nologo cmTC_228ce\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_228ce.dir\build.make /nologo -L                  CMakeFiles\cmTC_228ce.dir\build
+Building C object CMakeFiles/cmTC_228ce.dir/CheckSymbolExists.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm886A.tmp
 CheckSymbolExists.c
-Linking C executable cmTC_f8858.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f8858.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f8858.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9633.tmp
+Linking C executable cmTC_228ce.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_228ce.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_228ce.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm8A40.tmp
 
 
 File C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1487,24 +1487,24 @@ int main(int argc, char** argv)
 Determining size of __int32 passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_346c7\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_346c7.dir\build.make /nologo -L                  CMakeFiles\cmTC_346c7.dir\build
-Building CXX object CMakeFiles/cmTC_346c7.dir/__int32.cpp.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm9CAB.tmp
+Run Build Command(s):nmake /nologo cmTC_a26da\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_a26da.dir\build.make /nologo -L                  CMakeFiles\cmTC_a26da.dir\build
+Building CXX object CMakeFiles/cmTC_a26da.dir/__int32.cpp.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm93D4.tmp
 __int32.cpp
-Linking CXX executable cmTC_346c7.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_346c7.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_346c7.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9D48.tmp
+Linking CXX executable cmTC_a26da.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_a26da.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_a26da.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm94B0.tmp
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_c49f9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_c49f9.dir\build.make /nologo -L                  CMakeFiles\cmTC_c49f9.dir\build
-Building C object CMakeFiles/cmTC_c49f9.dir/CheckIncludeFile.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nmA381.tmp
+Run Build Command(s):nmake /nologo cmTC_585b9\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_585b9.dir\build.make /nologo -L                  CMakeFiles\cmTC_585b9.dir\build
+Building C object CMakeFiles/cmTC_585b9.dir/CheckIncludeFile.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @C:\Users\flori\AppData\Local\Temp\nm9C02.tmp
 CheckIncludeFile.c
-Linking C executable cmTC_c49f9.exe
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c49f9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_c49f9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nmA3EF.tmp
+Linking C executable cmTC_585b9.exe
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_585b9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_585b9.dir\objects1.rsp @C:\Users\flori\AppData\Local\Temp\nm9CAF.tmp
 
 
 

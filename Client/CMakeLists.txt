@@ -2,11 +2,10 @@ cmake_minimum_required(VERSION 3.5.1)
 project(Client)
 
 set(CMAKE_CXX_STANDARD 17)
-# Bisogna specificare a cmake dove andare a recuperare le librerie di qt, ci sono 3 modi:
-# 1: variabili d'ambiente -> path -> C:\Qt\5.12.5\msvc2017\bin
-# 2: settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
-# 3:
+
+# alternativa: settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
 set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/msvc2017/lib/cmake")
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
