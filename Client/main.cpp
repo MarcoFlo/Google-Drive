@@ -1,9 +1,5 @@
-#include <chrono>
 #include <iostream>
-#include <memory>
-#include <random>
 #include <string>
-#include <thread>
 #include <QApplication>
 #include "qt/loginpage.h"
 #include "qt/registrationpage.h"
@@ -13,41 +9,33 @@
 #include "qt/nuovo.h"
 
 #include <grpcpp/grpcpp.h>
-#include <grpc/grpc.h>
-#include <grpcpp/channel.h>
-#include <grpcpp/client_context.h>
-#include <grpcpp/create_channel.h>
-#include <grpcpp/security/credentials.h>
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
 
 
 int main(int argc, char **argv) {
 
-        QApplication a(argc, argv);
-        SplashScreen w;
-        LoginPage l;
-        Principale p;
-        RegistrationPage r;
-        Editor e;
+    QApplication a(argc, argv);
+    SplashScreen w;
+    LoginPage l;
+    Principale p;
+    RegistrationPage r;
+    Editor e;
 
-        e.show();
+    e.show();
 
-        QObject::connect(&w, SIGNAL(openL()), &l, SLOT(Mostra()));
-        QObject::connect(&l, SIGNAL(openR()), &r, SLOT(Mostra()));
-        QObject::connect(&l, SIGNAL(openP()), &p, SLOT(Mostra()));
-        QObject::connect(&r, SIGNAL(openL()), &l, SLOT(Mostra()));
-        QObject::connect(&r, SIGNAL(openP()), &p, SLOT(Mostra()));
-        QObject::connect(&p, SIGNAL(openL()), &l, SLOT(Mostra()));
-        QObject::connect(&e, SIGNAL(openP()), &p, SLOT(Mostra()));
-        QObject::connect(&p, SIGNAL(openE()), &e, SLOT(Mostra()));
-
-
+    QObject::connect(&w, SIGNAL(openL()), &l, SLOT(Mostra()));
+    QObject::connect(&l, SIGNAL(openR()), &r, SLOT(Mostra()));
+    QObject::connect(&l, SIGNAL(openP()), &p, SLOT(Mostra()));
+    QObject::connect(&r, SIGNAL(openL()), &l, SLOT(Mostra()));
+    QObject::connect(&r, SIGNAL(openP()), &p, SLOT(Mostra()));
+    QObject::connect(&p, SIGNAL(openL()), &l, SLOT(Mostra()));
+    QObject::connect(&e, SIGNAL(openP()), &p, SLOT(Mostra()));
+    QObject::connect(&p, SIGNAL(openE()), &e, SLOT(Mostra()));
 
 
-    std::string db = "path/to/route_guide_db.json";
-    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()), db);
-    client.ExchangeSymbol();
+    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+    std::cout << "Expected a: " << client.GetSymbols("prova@test.it") << std::endl;
 
     return a.exec();
 

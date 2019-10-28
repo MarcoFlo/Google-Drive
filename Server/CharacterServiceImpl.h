@@ -8,10 +8,16 @@
 
 class CharacterServiceImpl final : public protobuf::CharacterService::Service {
 public:
-    explicit CharacterServiceImpl(const std::string& db);
+    ~CharacterServiceImpl();
+    void Run();
+    
+private:
+    void HandleRpcs();
 
-    grpc::Status ExchangeSymbol(grpc::ServerContext *context,
-                                          grpc::ServerReaderWriter<protobuf::Message, protobuf::Message> *stream) override;
+    std::unique_ptr<grpc::ServerCompletionQueue> cq_;
+    protobuf::CharacterService::AsyncService service_;
+    std::unique_ptr<grpc::Server> server_;
+
 };
 
 

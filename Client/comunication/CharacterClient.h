@@ -5,19 +5,11 @@
 #ifndef CLIENT_CHARACTERCLIENT_H
 #define CLIENT_CHARACTERCLIENT_H
 
-#include <grpcpp/channel.h>
-#include <grpc/grpc.h>
-#include <grpcpp/channel.h>
-#include <grpcpp/client_context.h>
-#include <grpcpp/create_channel.h>
-#include <grpcpp/security/credentials.h>
-#include "messageP.grpc.pb.h"
-
 
 class CharacterClient {
 public:
-    CharacterClient(std::shared_ptr<grpc::Channel> channel, const std::string &db);
-    void ExchangeSymbol();
+    CharacterClient(std::shared_ptr<grpc::Channel> channel);
+    std::string GetSymbols(const std::string &user);
 
 private:
     std::unique_ptr<protobuf::CharacterService::Stub> stub_;

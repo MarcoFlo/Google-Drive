@@ -3,28 +3,49 @@
 //
 #include <algorithm>
 #include <iostream>
-#include <memory>
 #include <string>
 #include <grpcpp/grpcpp.h>
-#include <grpc/grpc.h>
-#include <grpcpp/server.h>
-#include <grpcpp/server_builder.h>
-#include <grpcpp/server_context.h>
-#include <grpcpp/security/server_credentials.h>
 #include "messageP.grpc.pb.h"
 #include "CharacterServiceImpl.h"
+#include "CallData.h"
 
 
-CharacterServiceImpl::CharacterServiceImpl(const std::string &db) {
-//cose
+
+CharacterServiceImpl::~CharacterServiceImpl() {
+    server_->Shutdown();
+    // Always shutdown the completion queue after the server.
+    cq_->Shutdown();
 }
 
-grpc::Status CharacterServiceImpl::ExchangeSymbol(grpc::ServerContext *context,
-                                                  grpc::ServerReaderWriter<protobuf::Message, protobuf::Message> *stream) {
-    protobuf::Message msg;
-    while (stream->Read(&msg)) {
-        std::cout << "Just received " << msg.symbol().character() << " gonna echo" << std::endl;
-        stream->Write(msg);
+void CharacterServiceImpl::Run() {
+    std::string server_address("0.0.0.0:50051");
+
+    grpc::ServerBuilder builder;
+    builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+    builder.RegisterService(&service_);
+    cq_ = builder.AddCompletionQueue();
+    server_ = builder.BuildAndStart();
+
+    std::cout << "Server listening on " << server_address << std::endl;
+
+    // Proceed to the server's main loop.
+    HandleRpcs();
+}
+
+void CharacterServiceImpl::HandleRpcs() {
+    // Spawn a new CallData instance to serve new clients.
+    new CallData(&service_, cq_.get());
+    void* tag;  // uniquely identifies a request.
+    bool ok;
+    while (true) {
+        // Block waiting to read the next event from the completion queue. The
+        // event is uniquely identified by its tag, which in this case is the
+        // memory address of a CallData instance.
+        // The return value of Next should always be checked. This return value
+        // tells us whether there is any kind of event or cq_ is shutting down.
+        GPR_ASSERT(cq_->Next(&tag, &ok));
+        GPR_ASSERT(ok);
+        static_cast<CallData*>(tag)->Proceed();
     }
-    return grpc::Status::OK;
 }
+

@@ -35,7 +35,10 @@ add_custom_command(
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-add_executable(Server main.cpp CharacterServiceImpl.cpp CharacterServiceImpl.h
+add_executable(Server
         ${hw_proto_srcs}
-        ${hw_grpc_srcs} )
+        ${hw_grpc_srcs}
+        main.cpp
+        CharacterServiceImpl.cpp CharacterServiceImpl.h
+        CallData.cpp CallData.h)
 target_link_libraries(Server ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
