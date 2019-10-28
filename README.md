@@ -12,11 +12,12 @@ La cosa migliore è installarlo in C: direttamente.
 I moduli di qt di cui abbiamo bisogno sono questi:  
 ![alt text](https://github.com/MarcoFlo/Progetto-Malnati/blob/master/qt_install.png)   
 
-Aggiungerlo alle variabili d'ambiente facendo:
-windows -> variabili d'ambiente -> path -> C:\Qt\5.12.5\msvc2017\bin
-
 Si può modificare una precedente installazione facendo:   
 windows -> installazione applicazioni -> qt -> modifica -> add or remove components  
+
+Aggiungete qt alle variabili d'ambiente:
+windows -> variabili d'ambiente -> path -> C:\Qt\5.12.5\msvc2017\bin
+Riavviate
 
 Se non è stato installato in C ditemelo ([Marco Florian](https://github.com/MarcoFlo)), perchè dovremmo modificare CMakeList.txt specificando inline il path di cmake:  
 1. settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
