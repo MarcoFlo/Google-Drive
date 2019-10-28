@@ -96,3 +96,5 @@ fabric.properties
 
 # qt  
 build-*/
+
+.idea
