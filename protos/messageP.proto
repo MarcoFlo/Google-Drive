@@ -2,7 +2,7 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc GetSymbols (User) returns (Message) {}
+    rpc GetSymbols (User) returns (stream Message) {}
 }
 
 message User {

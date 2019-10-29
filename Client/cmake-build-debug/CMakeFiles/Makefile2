@@ -75,16 +75,16 @@ preinstall: grpc\preinstall
 # Target rules for target CMakeFiles/Client.dir
 
 # All Build rule for target.
-CMakeFiles\Client.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
-CMakeFiles\Client.dir\all: grpc\CMakeFiles\grpc_unsecure.dir\all
-CMakeFiles\Client.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-CMakeFiles\Client.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
-CMakeFiles\Client.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-CMakeFiles\Client.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 CMakeFiles\Client.dir\all: grpc\CMakeFiles\grpc++_unsecure.dir\all
+CMakeFiles\Client.dir\all: grpc\CMakeFiles\grpc_unsecure.dir\all
 CMakeFiles\Client.dir\all: grpc\CMakeFiles\gpr.dir\all
-CMakeFiles\Client.dir\all: CMakeFiles\Client_autogen.dir\all
+CMakeFiles\Client.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+CMakeFiles\Client.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+CMakeFiles\Client.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+CMakeFiles\Client.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+CMakeFiles\Client.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
 CMakeFiles\Client.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
+CMakeFiles\Client.dir\all: CMakeFiles\Client_autogen.dir\all
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\depend
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target Client"
@@ -111,8 +111,8 @@ CMakeFiles\Client.dir\clean:
 # Target rules for target CMakeFiles/Client_autogen.dir
 
 # All Build rule for target.
-CMakeFiles\Client_autogen.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 CMakeFiles\Client_autogen.dir\all: grpc\CMakeFiles\grpc++_unsecure.dir\all
+CMakeFiles\Client_autogen.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 	$(MAKE) -f CMakeFiles\Client_autogen.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client_autogen.dir\depend
 	$(MAKE) -f CMakeFiles\Client_autogen.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client_autogen.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target Client_autogen"
@@ -202,10 +202,10 @@ grpc\preinstall: grpc\third_party\zlib\preinstall
 # Target rules for target grpc/CMakeFiles/grpc_cronet.dir
 
 # All Build rule for target.
+grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_cronet.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_cronet.dir\depend
@@ -234,13 +234,13 @@ grpc\CMakeFiles\grpc_cronet.dir\clean:
 # Target rules for target grpc/CMakeFiles/plugins.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_csharp_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_objective_c_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_php_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_node_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_python_plugin.dir\all
 grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_ruby_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_objective_c_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_python_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_node_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_csharp_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_php_plugin.dir\all
 	$(MAKE) -f grpc\CMakeFiles\plugins.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\plugins.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\plugins.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\plugins.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target plugins"
@@ -268,10 +268,10 @@ grpc\CMakeFiles\plugins.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\grpc_unsecure.dir\all
+grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_unsecure.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\grpc++_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_unsecure.dir\build
@@ -299,10 +299,10 @@ grpc\CMakeFiles\grpc++_unsecure.dir\clean:
 # Target rules for target grpc/CMakeFiles/tools_c.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_verify_jwt.dir\all
+grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all
 grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\check_epollexclusive.dir\all
 grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_create_jwt.dir\all
-grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all
+grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_verify_jwt.dir\all
 	$(MAKE) -f grpc\CMakeFiles\tools_c.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\tools_c.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target tools_c"
@@ -358,8 +358,8 @@ grpc\CMakeFiles\tools_cxx.dir\clean:
 # Target rules for target grpc/CMakeFiles/tools.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_cxx.dir\all
 grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_c.dir\all
+grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_cxx.dir\all
 	$(MAKE) -f grpc\CMakeFiles\tools.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\tools.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target tools"
@@ -469,10 +469,10 @@ grpc\CMakeFiles\address_sorting.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc.dir
 
 # All Build rule for target.
+grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc.dir\depend
@@ -501,9 +501,9 @@ grpc\CMakeFiles\grpc.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc_unsecure.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_unsecure.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_unsecure.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\grpc_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_unsecure.dir\build
@@ -532,11 +532,11 @@ grpc\CMakeFiles\grpc_unsecure.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++.dir\depend
@@ -565,15 +565,15 @@ grpc\CMakeFiles\grpc++.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc++_error_details.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc++.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc++.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_error_details.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_error_details.dir\depend
@@ -602,15 +602,15 @@ grpc\CMakeFiles\grpc++_error_details.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc++_reflection.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc++.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc++.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_reflection.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_reflection.dir\depend
@@ -667,15 +667,15 @@ grpc\CMakeFiles\grpc_plugin_support.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpcpp_channelz.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc++.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc++.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpcpp_channelz.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpcpp_channelz.dir\depend
@@ -705,10 +705,10 @@ grpc\CMakeFiles\grpcpp_channelz.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_csharp_ext.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_csharp_ext.dir\depend
@@ -738,10 +738,10 @@ grpc\CMakeFiles\grpc_csharp_ext.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\check_epollexclusive.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\check_epollexclusive.dir\depend
@@ -771,10 +771,10 @@ grpc\CMakeFiles\check_epollexclusive.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_create_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_create_jwt.dir\depend
@@ -833,10 +833,10 @@ grpc\CMakeFiles\grpc_objective_c_plugin.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\depend
@@ -866,10 +866,10 @@ grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
-grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_verify_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_verify_jwt.dir\depend
@@ -899,11 +899,11 @@ grpc\CMakeFiles\grpc_verify_jwt.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\address_sorting.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\gen_hpack_tables.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_hpack_tables.dir\depend
@@ -1347,8 +1347,8 @@ grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/user_counters_tabular_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_tabular_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target user_counters_tabular_test"
@@ -1510,8 +1510,8 @@ grpc\third_party\benchmark\test\CMakeFiles\skip_with_error_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/memory_manager_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\memory_manager_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target memory_manager_test"
@@ -1646,8 +1646,8 @@ grpc\third_party\benchmark\test\CMakeFiles\multiple_ranges_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/templated_fixture_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\templated_fixture_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target templated_fixture_test"
@@ -1702,8 +1702,8 @@ grpc\third_party\benchmark\test\CMakeFiles\link_main_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/reporter_output_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=91 "Built target reporter_output_test"
@@ -1730,8 +1730,8 @@ grpc\third_party\benchmark\test\CMakeFiles\reporter_output_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/user_counters_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target user_counters_test"
@@ -1758,8 +1758,8 @@ grpc\third_party\benchmark\test\CMakeFiles\user_counters_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/internal_threading_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target internal_threading_test"
@@ -1786,8 +1786,8 @@ grpc\third_party\benchmark\test\CMakeFiles\internal_threading_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/report_aggregates_only_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target report_aggregates_only_test"
@@ -1814,8 +1814,8 @@ grpc\third_party\benchmark\test\CMakeFiles\report_aggregates_only_test.dir\clean
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/complexity_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target complexity_test"
@@ -1842,8 +1842,8 @@ grpc\third_party\benchmark\test\CMakeFiles\complexity_test.dir\clean:
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/display_aggregates_only_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target display_aggregates_only_test"
@@ -1870,8 +1870,8 @@ grpc\third_party\benchmark\test\CMakeFiles\display_aggregates_only_test.dir\clea
 # Target rules for target grpc/third_party/benchmark/test/CMakeFiles/user_counters_thousands_test.dir
 
 # All Build rule for target.
-grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\all: grpc\third_party\benchmark\src\CMakeFiles\benchmark.dir\all
+grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\all: grpc\third_party\benchmark\test\CMakeFiles\output_test_helper.dir\all
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\depend
 	$(MAKE) -f grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\benchmark\test\CMakeFiles\user_counters_thousands_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=94 "Built target user_counters_thousands_test"
@@ -2506,43 +2506,43 @@ grpc\third_party\boringssl\crypto\preinstall: grpc\third_party\boringssl\crypto\
 # Target rules for target grpc/third_party/boringssl/crypto/CMakeFiles/crypto.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bn_extra\CMakeFiles\bn_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\digest_extra\CMakeFiles\digest_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\curve25519\CMakeFiles\curve25519.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bio\CMakeFiles\bio.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\lhash\CMakeFiles\lhash.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rc4\CMakeFiles\rc4.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bytestring\CMakeFiles\bytestring.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\chacha\CMakeFiles\chacha.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\conf\CMakeFiles\conf.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pool\CMakeFiles\pool.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\buf\CMakeFiles\buf.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\asn1\CMakeFiles\asn1.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdh\CMakeFiles\ecdh.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bytestring\CMakeFiles\bytestring.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rc4\CMakeFiles\rc4.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\curve25519\CMakeFiles\curve25519.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\digest_extra\CMakeFiles\digest_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\chacha\CMakeFiles\chacha.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pool\CMakeFiles\pool.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\conf\CMakeFiles\conf.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bn_extra\CMakeFiles\bn_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bio\CMakeFiles\bio.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\asn1\CMakeFiles\asn1.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\dsa\CMakeFiles\dsa.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdh\CMakeFiles\ecdh.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\hkdf\CMakeFiles\hkdf.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\evp\CMakeFiles\evp.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs8\CMakeFiles\pkcs8_lib.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target crypto"
@@ -2596,9 +2596,9 @@ grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\clean:
 # Target rules for target grpc/third_party/boringssl/crypto/CMakeFiles/crypto_test.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\CMakeFiles\crypto_test_data.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\depend
@@ -4366,8 +4366,8 @@ grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\clean:
 # Target rules for target grpc/third_party/boringssl/ssl/CMakeFiles/ssl_test.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
+grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
@@ -4573,20 +4573,20 @@ grpc\third_party\boringssl\decrepit\preinstall: grpc\third_party\boringssl\decre
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\bio\CMakeFiles\bio_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cast\CMakeFiles\cast.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\blowfish\CMakeFiles\blowfish.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cfb\CMakeFiles\cfb.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dh\CMakeFiles\dh_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dsa\CMakeFiles\dsa_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ripemd\CMakeFiles\ripemd_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\blowfish\CMakeFiles\blowfish.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\evp\CMakeFiles\evp_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rc4\CMakeFiles\rc4_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\obj\CMakeFiles\obj_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rc4\CMakeFiles\rc4_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ssl\CMakeFiles\ssl_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ripemd\CMakeFiles\ripemd_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rsa\CMakeFiles\rsa_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\xts\CMakeFiles\xts.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target decrepit"
@@ -4613,12 +4613,12 @@ grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\clean:
 # Target rules for target grpc/third_party/boringssl/decrepit/CMakeFiles/decrepit_test.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num= "Built target decrepit_test"

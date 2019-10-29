@@ -31,13 +31,16 @@ private:
     protobuf::Message reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::Message> responder_;
+    grpc::ServerAsyncWriter<protobuf::Message> responder_;
 
 // Let's implement a tiny state machine with the following states.
     enum CallStatus {
         CREATE, PROCESS, FINISH
     };
     CallStatus status_;  // The current serving state.
+
+    int times_;
+
 };
 
 

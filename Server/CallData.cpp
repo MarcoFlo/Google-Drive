@@ -31,7 +31,7 @@ protobuf::Symbol MakeSymbol(std::string character, int uniqueId, std::vector<int
 // server) and the completion queue "cq" used for asynchronous communication
 // with the gRPC runtime.
 CallData::CallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq)
-        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE) {
+        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE), times_(0) {
     // Invoke the serving logic right away.
     Proceed();
 }
@@ -52,19 +52,17 @@ void CallData::Proceed() {
     } else if (status_ == PROCESS) {
         std::cout << "Received a request from: " << request_.username() << std::endl;
 
-        // Spawn a new CallData instance to serve new clients while we process
-        // the one for this CallData. The instance will deallocate itself as
-        // part of its FINISH state.
-        new CallData(service_, cq_);
+        if (times_ == 0)
+            new CallData(service_, cq_);
 
-        reply_ = MakeMessage(0, MakeSymbol("a", 0, {0}), false);
-        std::this_thread::sleep_for(std::chrono::seconds(5));
-
-        // And we are done! Let the gRPC runtime know we've finished, using the
-        // memory address of this instance as the uniquely identifying tag for
-        // the event.
-        status_ = FINISH;
-        responder_.Finish(reply_, grpc::Status::OK, this);
+        if (times_++ <= 3) {
+            reply_ = MakeMessage(0, MakeSymbol("a", times_, {0}), false);
+            responder_.Write(reply_, this);
+            std::this_thread::sleep_for(std::chrono::seconds(5));
+        } else {
+            status_ = FINISH;
+            responder_.Finish(grpc::Status::OK, this);
+        }
     } else {
         GPR_ASSERT(status_ == FINISH);
         // Once in the FINISH state, deallocate ourselves (CallData).

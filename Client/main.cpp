@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include <thread>
 #include <QApplication>
 #include "qt/loginpage.h"
@@ -18,8 +17,7 @@ int main(int argc, char **argv) {
 
     CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
 
-    std::thread thread_ = std::thread(&CharacterClient::AsyncCompleteRpc, &client);
-    client.GetSymbols("prova@test.it");
+    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
 
     QApplication a(argc, argv);
     SplashScreen w;
