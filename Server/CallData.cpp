@@ -58,7 +58,7 @@ void CallData::Proceed() {
         new CallData(service_, cq_);
 
         reply_ = MakeMessage(0, MakeSymbol("a", 0, {0}), false);
-        std::this_thread::sleep_for(std::chrono::seconds(15));
+        std::this_thread::sleep_for(std::chrono::seconds(5));
 
         // And we are done! Let the gRPC runtime know we've finished, using the
         // memory address of this instance as the uniquely identifying tag for

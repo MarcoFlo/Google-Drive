@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <thread>
 #include <QApplication>
 #include "qt/loginpage.h"
 #include "qt/registrationpage.h"
@@ -14,6 +15,11 @@
 
 
 int main(int argc, char **argv) {
+
+    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+
+    std::thread thread_ = std::thread(&CharacterClient::AsyncCompleteRpc, &client);
+    client.GetSymbols("prova@test.it");
 
     QApplication a(argc, argv);
     SplashScreen w;
@@ -33,10 +39,12 @@ int main(int argc, char **argv) {
     QObject::connect(&e, SIGNAL(openP()), &p, SLOT(Mostra()));
     QObject::connect(&p, SIGNAL(openE()), &e, SLOT(Mostra()));
 
+    //fa partire l'interfaccia grafica
+    //non lasciarlo nel return
+    //è bloccante
+    a.exec();
 
-    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
-    std::cout << "Expected a: " << client.GetSymbols("prova@test.it") << std::endl;
-
-    return a.exec();
+    thread_.join(); //blocks forever
+    return 0;
 
 }
