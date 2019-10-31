@@ -12,39 +12,48 @@
 CharacterClient::CharacterClient(std::shared_ptr<grpc::Channel> channel) : stub_(
         protobuf::CharacterService::NewStub(channel)) {}
 
-int CharacterClient::Connect(protobuf::User user) {
+void CharacterClient::Connect(protobuf::User user) {
 
-    protobuf::Identifier reply;
     grpc::ClientContext context;
+    protobuf::Identifier reply;
     grpc::CompletionQueue cq;
     grpc::Status status;
-
-    std::unique_ptr<grpc::ClientAsyncResponseReader<protobuf::Identifier>> rpc(
-            stub_->PrepareAsyncConnect(&context, user, &cq));
-
-    rpc->StartCall();
-    rpc->Finish(&reply, &status, this);
-    void* got_tag;
+    void *got_tag;
     bool ok = false;
-    // Block until the next result is available in the completion queue "cq".
-    // The return value of Next should always be checked. This return value
-    // tells us whether there is any kind of event or the cq_ is shutting down.
-    GPR_ASSERT(cq.Next(&got_tag, &ok));
 
-    // Verify that the result from "cq" corresponds, by its tag, our previous
-    // request.
-    GPR_ASSERT(got_tag == this);
-
-    GPR_ASSERT(ok);
+    //sync
+    status = stub_->Connect(&context, user, &reply);
 
 
-    if (status.ok()) {
-        return reply.editorid();
-    } else {
-        std::cout << status.error_code() << ": " << status.error_message() << std::endl;
-        return -1;
-    }
+    //async1 bloccante
+//    std::unique_ptr<grpc::ClientAsyncResponseReader<protobuf::Identifier> > rpc(
+//            stub_->AsyncConnect(&context, user, &cq));
+//    rpc->Finish(&reply, &status, this);
+//
+//    GPR_ASSERT(cq.Next(&got_tag, &ok));
+//    GPR_ASSERT(got_tag == this);
+//    GPR_ASSERT(ok);
+
+
+    // async 2 bloccante
+//    std::unique_ptr<grpc::ClientAsyncResponseReader<protobuf::Identifier>> rpc(
+//            stub_->PrepareAsyncConnect(&context, user, &cq));
+//    rpc->StartCall();
+//    rpc->Finish(&reply, &status, this);
+//
+//    GPR_ASSERT(cq.Next(&got_tag, &ok));
+//    GPR_ASSERT(got_tag == this);
+//    GPR_ASSERT(ok);
+
+
+    //parte comune
+    if (status.ok())
+        std::cout << "Just received: " << reply.editorid() << std::endl;
+    else
+        std::cout << "RPC failed" << std::endl;
+
 }
+
 
 void CharacterClient::GetSymbols() {
     protobuf::User request;

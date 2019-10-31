@@ -5,8 +5,9 @@
 #ifndef SERVER_CONNECTCALLDATA_H
 #define SERVER_CONNECTCALLDATA_H
 
+#include "CallData.h"
 
-class ConnectCallData {
+class ConnectCallData final: public CallData {
 public:
     ConnectCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
     void Proceed();

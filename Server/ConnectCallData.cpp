@@ -25,10 +25,10 @@ void ConnectCallData::Proceed() {
         service_->RequestConnect(&ctx_, &request_, &responder_, cq_, cq_,
                                  this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a request from: " << request_.username() << std::endl;
+        std::cout << "Received a Connect request from: " << request_.username() << std::endl;
         new ConnectCallData(service_, cq_);
 
-        reply_.set_editorid(0);
+        reply_.set_editorid(55);
         status_ = FINISH;
         responder_.Finish(reply_, grpc::Status::OK, this);
 

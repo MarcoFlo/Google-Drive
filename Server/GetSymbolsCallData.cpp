@@ -44,7 +44,7 @@ void GetSymbolsCallData::Proceed() {
         service_->RequestGetSymbols(&ctx_, &request_, &responder_, cq_, cq_,
                                     this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a request from: " << request_.username() << std::endl;
+        std::cout << "Received a GetSymbol request from: " << request_.username() << std::endl;
 
         if (times_ == 0)
             new GetSymbolsCallData(service_, cq_);

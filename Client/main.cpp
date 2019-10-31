@@ -19,7 +19,8 @@ int main(int argc, char **argv) {
     CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
     protobuf::User user;
     user.set_username("prova@test.it");
-//    SharedEditor editor(client, user);
+    SharedEditor editor(client, user);
+
     std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
 
     QApplication a(argc, argv);
