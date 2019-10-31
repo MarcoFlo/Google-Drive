@@ -1913,33 +1913,6 @@ minigzip\fast:
 	$(MAKE) -f grpc\third_party\zlib\CMakeFiles\minigzip.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\zlib\CMakeFiles\minigzip.dir\build
 .PHONY : minigzip\fast
 
-CallData.obj: CallData.cpp.obj
-
-.PHONY : CallData.obj
-
-# target to build an object file
-CallData.cpp.obj:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CallData.cpp.obj
-.PHONY : CallData.cpp.obj
-
-CallData.i: CallData.cpp.i
-
-.PHONY : CallData.i
-
-# target to preprocess a source file
-CallData.cpp.i:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CallData.cpp.i
-.PHONY : CallData.cpp.i
-
-CallData.s: CallData.cpp.s
-
-.PHONY : CallData.s
-
-# target to generate assembly for a file
-CallData.cpp.s:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CallData.cpp.s
-.PHONY : CallData.cpp.s
-
 CharacterServiceImpl.obj: CharacterServiceImpl.cpp.obj
 
 .PHONY : CharacterServiceImpl.obj
@@ -1966,6 +1939,60 @@ CharacterServiceImpl.s: CharacterServiceImpl.cpp.s
 CharacterServiceImpl.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.s
 .PHONY : CharacterServiceImpl.cpp.s
+
+ConnectCallData.obj: ConnectCallData.cpp.obj
+
+.PHONY : ConnectCallData.obj
+
+# target to build an object file
+ConnectCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.obj
+.PHONY : ConnectCallData.cpp.obj
+
+ConnectCallData.i: ConnectCallData.cpp.i
+
+.PHONY : ConnectCallData.i
+
+# target to preprocess a source file
+ConnectCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.i
+.PHONY : ConnectCallData.cpp.i
+
+ConnectCallData.s: ConnectCallData.cpp.s
+
+.PHONY : ConnectCallData.s
+
+# target to generate assembly for a file
+ConnectCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.s
+.PHONY : ConnectCallData.cpp.s
+
+GetSymbolsCallData.obj: GetSymbolsCallData.cpp.obj
+
+.PHONY : GetSymbolsCallData.obj
+
+# target to build an object file
+GetSymbolsCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetSymbolsCallData.cpp.obj
+.PHONY : GetSymbolsCallData.cpp.obj
+
+GetSymbolsCallData.i: GetSymbolsCallData.cpp.i
+
+.PHONY : GetSymbolsCallData.i
+
+# target to preprocess a source file
+GetSymbolsCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetSymbolsCallData.cpp.i
+.PHONY : GetSymbolsCallData.cpp.i
+
+GetSymbolsCallData.s: GetSymbolsCallData.cpp.s
+
+.PHONY : GetSymbolsCallData.s
+
+# target to generate assembly for a file
+GetSymbolsCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetSymbolsCallData.cpp.s
+.PHONY : GetSymbolsCallData.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -2195,12 +2222,15 @@ help:
 	@echo ... zlibstatic
 	@echo ... example
 	@echo ... minigzip
-	@echo ... CallData.obj
-	@echo ... CallData.i
-	@echo ... CallData.s
 	@echo ... CharacterServiceImpl.obj
 	@echo ... CharacterServiceImpl.i
 	@echo ... CharacterServiceImpl.s
+	@echo ... ConnectCallData.obj
+	@echo ... ConnectCallData.i
+	@echo ... ConnectCallData.s
+	@echo ... GetSymbolsCallData.obj
+	@echo ... GetSymbolsCallData.i
+	@echo ... GetSymbolsCallData.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

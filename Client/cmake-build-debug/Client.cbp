@@ -10010,79 +10010,100 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/CharacterClient.h">
 			<Option target="Client"/>
 		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/Message.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/Message.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/SharedEditor.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/SharedEditor.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/Symbol.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/Symbol.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/definitions.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/condividi.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/condividi.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/condividi.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/editor.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/editor.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/editor.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/importa.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/importa.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/importa.ui">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/loginpage.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/loginpage.h">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/loginpage.ui">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/main.cpp">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.cpp">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/nuovo.cpp">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.h">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/nuovo.h">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/condividi.ui">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/nuovo.ui">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.cpp">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/principale.cpp">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.h">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/principale.h">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/editor.ui">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/principale.ui">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.cpp">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/registrationpage.cpp">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.h">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/registrationpage.h">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/importa.ui">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/registrationpage.ui">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.cpp">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/splashscreen.cpp">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.h">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/splashscreen.h">
 			<Option target="Client"/>
 		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/loginpage.ui">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.cpp">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.h">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/nuovo.ui">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.cpp">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.h">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/principale.ui">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.cpp">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.h">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/registrationpage.ui">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.cpp">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.h">
-			<Option target="Client"/>
-		</Unit>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/qt/splashscreen.ui">
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/splashscreen.ui">
 			<Option target="Client"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/src/compiler/cpp_generator.cc">

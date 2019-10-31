@@ -49,12 +49,12 @@ find_package(Qt5 REQUIRED COMPONENTS Core Widgets Sql)
 
 # mantenere in ordine alfabetico per comodità
 add_executable(Client main.cpp
-        comunication/CharacterClient.cpp comunication/CharacterClient.h
-        qt/condividi.h qt/editor.h qt/importa.h qt/loginpage.h qt/nuovo.h qt/principale.h qt/registrationpage.h  qt/splashscreen.h
-        qt/condividi.cpp qt/editor.cpp qt/importa.cpp qt/loginpage.cpp qt/nuovo.cpp qt/principale.cpp qt/registrationpage.cpp qt/splashscreen.cpp
-        qt/condividi.ui qt/editor.ui qt/importa.ui qt/loginpage.ui qt/nuovo.ui qt/principale.ui qt/registrationpage.ui qt/splashscreen.ui
+        comunication/CharacterClient.cpp comunication/CharacterClient.h comunication/definitions.h comunication/Message.cpp comunication/Message.h comunication/SharedEditor.cpp comunication/SharedEditor.h comunication/Symbol.h comunication/Symbol.cpp
+        condividi.h editor.h importa.h loginpage.h nuovo.h principale.h registrationpage.h splashscreen.h
+        condividi.cpp editor.cpp importa.cpp loginpage.cpp nuovo.cpp principale.cpp registrationpage.cpp splashscreen.cpp
+        condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui
         ${hw_proto_srcs}
-        ${hw_grpc_srcs})
+        ${hw_grpc_srcs} )
 
 target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
 

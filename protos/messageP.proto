@@ -3,10 +3,15 @@ package protobuf;
 
 service CharacterService {
     rpc GetSymbols (User) returns (stream Message) {}
+    rpc Connect (User) returns (Identifier) {}
 }
 
 message User {
     string username = 7;
+}
+
+message Identifier{
+    int32 editorId = 8;
 }
 
 message Message {

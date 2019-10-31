@@ -74,14 +74,14 @@ preinstall: grpc\preinstall
 # Target rules for target CMakeFiles/Server.dir
 
 # All Build rule for target.
-CMakeFiles\Server.dir\all: grpc\CMakeFiles\grpc++_unsecure.dir\all
 CMakeFiles\Server.dir\all: grpc\CMakeFiles\gpr.dir\all
-CMakeFiles\Server.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
 CMakeFiles\Server.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 CMakeFiles\Server.dir\all: grpc\CMakeFiles\grpc_unsecure.dir\all
-CMakeFiles\Server.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-CMakeFiles\Server.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+CMakeFiles\Server.dir\all: grpc\CMakeFiles\grpc++_unsecure.dir\all
 CMakeFiles\Server.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+CMakeFiles\Server.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+CMakeFiles\Server.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+CMakeFiles\Server.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
 CMakeFiles\Server.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\depend
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\build
@@ -173,9 +173,9 @@ grpc\preinstall: grpc\third_party\zlib\preinstall
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_cronet.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_cronet.dir\depend
@@ -185,7 +185,7 @@ grpc\CMakeFiles\grpc_cronet.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc_cronet.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 36
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 35
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_cronet.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc_cronet.dir\rule
@@ -204,13 +204,13 @@ grpc\CMakeFiles\grpc_cronet.dir\clean:
 # Target rules for target grpc/CMakeFiles/plugins.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_ruby_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_csharp_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_php_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_node_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_python_plugin.dir\all
-grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
 grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_objective_c_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_ruby_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_php_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_csharp_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_python_plugin.dir\all
+grpc\CMakeFiles\plugins.dir\all: grpc\CMakeFiles\grpc_node_plugin.dir\all
 	$(MAKE) -f grpc\CMakeFiles\plugins.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\plugins.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\plugins.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\plugins.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target plugins"
@@ -240,8 +240,8 @@ grpc\CMakeFiles\plugins.dir\clean:
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\gpr.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\CMakeFiles\grpc_unsecure.dir\all
-grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 grpc\CMakeFiles\grpc++_unsecure.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_unsecure.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\grpc++_unsecure.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_unsecure.dir\build
@@ -269,10 +269,10 @@ grpc\CMakeFiles\grpc++_unsecure.dir\clean:
 # Target rules for target grpc/CMakeFiles/tools_c.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_create_jwt.dir\all
 grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\check_epollexclusive.dir\all
-grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all
+grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_create_jwt.dir\all
 grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_verify_jwt.dir\all
+grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all
 	$(MAKE) -f grpc\CMakeFiles\tools_c.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\tools_c.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target tools_c"
@@ -280,7 +280,7 @@ grpc\CMakeFiles\tools_c.dir\all: grpc\CMakeFiles\grpc_verify_jwt.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\tools_c.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 40
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 39
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_c.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\tools_c.dir\rule
@@ -309,7 +309,7 @@ grpc\CMakeFiles\tools_cxx.dir\all: grpc\CMakeFiles\gen_legal_metadata_characters
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\tools_cxx.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 42
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 41
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools_cxx.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\tools_cxx.dir\rule
@@ -328,8 +328,8 @@ grpc\CMakeFiles\tools_cxx.dir\clean:
 # Target rules for target grpc/CMakeFiles/tools.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_c.dir\all
 grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_cxx.dir\all
+grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_c.dir\all
 	$(MAKE) -f grpc\CMakeFiles\tools.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\depend
 	$(MAKE) -f grpc\CMakeFiles\tools.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target tools"
@@ -337,7 +337,7 @@ grpc\CMakeFiles\tools.dir\all: grpc\CMakeFiles\tools_cxx.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\tools.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 44
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 43
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\tools.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\tools.dir\rule
@@ -440,9 +440,9 @@ grpc\CMakeFiles\address_sorting.dir\clean:
 
 # All Build rule for target.
 grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc.dir\depend
@@ -452,7 +452,7 @@ grpc\CMakeFiles\grpc.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\al
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 37
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc.dir\rule
@@ -501,12 +501,12 @@ grpc\CMakeFiles\grpc_unsecure.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc++.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
+grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++.dir\depend
@@ -516,7 +516,7 @@ grpc\CMakeFiles\grpc++.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc++.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 45
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 44
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc++.dir\rule
@@ -535,15 +535,15 @@ grpc\CMakeFiles\grpc++.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc++_error_details.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc++.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_error_details.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_error_details.dir\depend
@@ -553,7 +553,7 @@ grpc\CMakeFiles\grpc++_error_details.dir\all: grpc\third_party\zlib\CMakeFiles\z
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc++_error_details.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 49
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 48
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_error_details.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc++_error_details.dir\rule
@@ -572,15 +572,15 @@ grpc\CMakeFiles\grpc++_error_details.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc++_reflection.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc++.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc++_reflection.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_reflection.dir\depend
@@ -590,7 +590,7 @@ grpc\CMakeFiles\grpc++_reflection.dir\all: grpc\third_party\zlib\CMakeFiles\zlib
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc++_reflection.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 49
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 48
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc++_reflection.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc++_reflection.dir\rule
@@ -637,15 +637,15 @@ grpc\CMakeFiles\grpc_plugin_support.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpcpp_channelz.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc++.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
-grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\CMakeFiles\grpc_cpp_plugin.dir\all
+grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\protobuf\CMakeFiles\protoc.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpcpp_channelz.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpcpp_channelz.dir\depend
@@ -655,7 +655,7 @@ grpc\CMakeFiles\grpcpp_channelz.dir\all: grpc\third_party\zlib\CMakeFiles\zlibst
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpcpp_channelz.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 49
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 48
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpcpp_channelz.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpcpp_channelz.dir\rule
@@ -674,11 +674,11 @@ grpc\CMakeFiles\grpcpp_channelz.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc_csharp_ext.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_csharp_ext.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_csharp_ext.dir\depend
@@ -688,7 +688,7 @@ grpc\CMakeFiles\grpc_csharp_ext.dir\all: grpc\third_party\zlib\CMakeFiles\zlibst
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc_csharp_ext.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 37
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_csharp_ext.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc_csharp_ext.dir\rule
@@ -707,11 +707,11 @@ grpc\CMakeFiles\grpc_csharp_ext.dir\clean:
 # Target rules for target grpc/CMakeFiles/check_epollexclusive.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\check_epollexclusive.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\check_epollexclusive.dir\depend
@@ -721,7 +721,7 @@ grpc\CMakeFiles\check_epollexclusive.dir\all: grpc\third_party\zlib\CMakeFiles\z
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\check_epollexclusive.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 37
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\check_epollexclusive.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\check_epollexclusive.dir\rule
@@ -740,11 +740,11 @@ grpc\CMakeFiles\check_epollexclusive.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc_create_jwt.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_create_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_create_jwt.dir\depend
@@ -754,7 +754,7 @@ grpc\CMakeFiles\grpc_create_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibst
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc_create_jwt.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 37
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_create_jwt.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc_create_jwt.dir\rule
@@ -802,11 +802,11 @@ grpc\CMakeFiles\grpc_objective_c_plugin.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc_print_google_default_creds_token.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\depend
@@ -816,7 +816,7 @@ grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all: grpc\third_party\
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 39
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\rule
@@ -835,11 +835,11 @@ grpc\CMakeFiles\grpc_print_google_default_creds_token.dir\clean:
 # Target rules for target grpc/CMakeFiles/grpc_verify_jwt.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\grpc.dir\all
+grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\grpc_verify_jwt.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_verify_jwt.dir\depend
@@ -849,7 +849,7 @@ grpc\CMakeFiles\grpc_verify_jwt.dir\all: grpc\third_party\zlib\CMakeFiles\zlibst
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\grpc_verify_jwt.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 39
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 38
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\grpc_verify_jwt.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\grpc_verify_jwt.dir\rule
@@ -868,12 +868,12 @@ grpc\CMakeFiles\grpc_verify_jwt.dir\clean:
 # Target rules for target grpc/CMakeFiles/gen_hpack_tables.dir
 
 # All Build rule for target.
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\gpr.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\grpc.dir\all
-grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\gpr.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\CMakeFiles\address_sorting.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\cares\cares\CMakeFiles\c-ares.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
+grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\protobuf\CMakeFiles\libprotobuf.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\zlib\CMakeFiles\zlibstatic.dir\all
 	$(MAKE) -f grpc\CMakeFiles\gen_hpack_tables.dir\build.make /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_hpack_tables.dir\depend
@@ -883,7 +883,7 @@ grpc\CMakeFiles\gen_hpack_tables.dir\all: grpc\third_party\zlib\CMakeFiles\zlibs
 
 # Build rule for subdir invocation for target.
 grpc\CMakeFiles\gen_hpack_tables.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 42
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 41
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\CMakeFiles\gen_hpack_tables.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\CMakeFiles\gen_hpack_tables.dir\rule
@@ -2477,42 +2477,42 @@ grpc\third_party\boringssl\crypto\preinstall: grpc\third_party\boringssl\crypto\
 
 # All Build rule for target.
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bytestring\CMakeFiles\bytestring.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pool\CMakeFiles\pool.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\buf\CMakeFiles\buf.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\base64\CMakeFiles\base64.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\chacha\CMakeFiles\chacha.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rc4\CMakeFiles\rc4.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\conf\CMakeFiles\conf.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bio\CMakeFiles\bio.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\bn_extra\CMakeFiles\bn_extra.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\digest_extra\CMakeFiles\digest_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\poly1305\CMakeFiles\poly1305.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\curve25519\CMakeFiles\curve25519.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\lhash\CMakeFiles\lhash.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rand_extra\CMakeFiles\rand_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs8\CMakeFiles\pkcs8_lib.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\dsa\CMakeFiles\dsa.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\lhash\CMakeFiles\lhash.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\buf\CMakeFiles\buf.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\stack\CMakeFiles\stack.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\asn1\CMakeFiles\asn1.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\obj\CMakeFiles\obj.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\rsa_extra\CMakeFiles\rsa_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\dsa\CMakeFiles\dsa.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ec_extra\CMakeFiles\ec_extra.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdh\CMakeFiles\ecdh.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pem\CMakeFiles\pem.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\evp\CMakeFiles\evp.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\hkdf\CMakeFiles\hkdf.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509\CMakeFiles\x509.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\evp\CMakeFiles\evp.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\ecdsa_extra\CMakeFiles\ecdsa_extra.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\x509v3\CMakeFiles\x509v3.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\fipsmodule\CMakeFiles\fipsmodule.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\third_party\fiat\CMakeFiles\fiat.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs7\CMakeFiles\pkcs7.dir\all
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\boringssl\crypto\pkcs8\CMakeFiles\pkcs8_lib.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target crypto"
@@ -2520,7 +2520,7 @@ grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all: grpc\third_party\bo
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 11
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 10
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\rule
@@ -2566,9 +2566,9 @@ grpc\third_party\boringssl\crypto\CMakeFiles\crypto_base.dir\clean:
 # Target rules for target grpc/third_party/boringssl/crypto/CMakeFiles/crypto_test.dir
 
 # All Build rule for target.
+grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\CMakeFiles\crypto_test_data.dir\all
-grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\depend
@@ -2578,7 +2578,7 @@ grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all: grpc\third_par
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 13
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\CMakeFiles\crypto_test.dir\rule
@@ -2708,12 +2708,12 @@ grpc\third_party\boringssl\crypto\err\preinstall:
 grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=15 "Built target err"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target err"
 .PHONY : grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\err\CMakeFiles\err.dir\rule
@@ -3203,12 +3203,12 @@ grpc\third_party\boringssl\crypto\cipher_extra\preinstall:
 grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target cipher_extra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=10 "Built target cipher_extra"
 .PHONY : grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\cipher_extra\CMakeFiles\cipher_extra.dir\rule
@@ -3473,12 +3473,12 @@ grpc\third_party\boringssl\crypto\engine\preinstall:
 grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=15 "Built target engine"
 .PHONY : grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\engine\CMakeFiles\engine.dir\rule
@@ -3518,12 +3518,12 @@ grpc\third_party\boringssl\crypto\dh\preinstall:
 grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=14 "Built target dh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target dh"
 .PHONY : grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\dh\CMakeFiles\dh.dir\rule
@@ -3788,12 +3788,12 @@ grpc\third_party\boringssl\crypto\cmac\preinstall:
 grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=10 "Built target cmac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target cmac"
 .PHONY : grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\crypto\cmac\CMakeFiles\cmac.dir\rule
@@ -4317,7 +4317,7 @@ grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all: grpc\third_party\boringss
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 13
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 12
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\rule
@@ -4336,8 +4336,8 @@ grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\clean:
 # Target rules for target grpc/third_party/boringssl/ssl/CMakeFiles/ssl_test.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
+grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
@@ -4348,7 +4348,7 @@ grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all: grpc\third_party\bor
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 13
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\ssl\CMakeFiles\ssl_test.dir\rule
@@ -4395,7 +4395,7 @@ grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\all: grpc\third_par
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 13
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\ssl\test\CMakeFiles\bssl_shim.dir\rule
@@ -4459,7 +4459,7 @@ grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\all: grpc\third_party\boring
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 13
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 12
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\tool\CMakeFiles\bssl.dir\rule
@@ -4542,21 +4542,21 @@ grpc\third_party\boringssl\decrepit\preinstall: grpc\third_party\boringssl\decre
 # All Build rule for target.
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dh\CMakeFiles\dh_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\bio\CMakeFiles\bio_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\blowfish\CMakeFiles\blowfish.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cast\CMakeFiles\cast.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cfb\CMakeFiles\cfb.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\evp\CMakeFiles\evp_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\obj\CMakeFiles\obj_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dsa\CMakeFiles\dsa_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rc4\CMakeFiles\rc4_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cfb\CMakeFiles\cfb.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dh\CMakeFiles\dh_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rsa\CMakeFiles\rsa_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\cast\CMakeFiles\cast.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\dsa\CMakeFiles\dsa_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\evp\CMakeFiles\evp_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\obj\CMakeFiles\obj_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ripemd\CMakeFiles\ripemd_decrepit.dir\all
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ssl\CMakeFiles\ssl_decrepit.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\xts\CMakeFiles\xts.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\rsa\CMakeFiles\rsa_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\ssl\CMakeFiles\ssl_decrepit.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\all: grpc\third_party\boringssl\decrepit\x509\CMakeFiles\x509_decrepit.dir\all
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target decrepit"
@@ -4583,8 +4583,8 @@ grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit.dir\clean:
 # Target rules for target grpc/third_party/boringssl/decrepit/CMakeFiles/decrepit_test.dir
 
 # All Build rule for target.
-grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\CMakeFiles\boringssl_gtest.dir\all
+grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\CMakeFiles\crypto.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\ssl\CMakeFiles\ssl.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\boringssl_gtest_main.dir\all
 grpc\third_party\boringssl\decrepit\CMakeFiles\decrepit_test.dir\all: grpc\third_party\boringssl\crypto\test\CMakeFiles\test_support.dir\all
@@ -4816,12 +4816,12 @@ grpc\third_party\boringssl\decrepit\des\preinstall:
 grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all:
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\depend
 	$(MAKE) -f grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\build.make /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num= "Built target des_decrepit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=14 "Built target des_decrepit"
 .PHONY : grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all
 
 # Build rule for subdir invocation for target.
 grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 1
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" 0
 .PHONY : grpc\third_party\boringssl\decrepit\des\CMakeFiles\des_decrepit.dir\rule

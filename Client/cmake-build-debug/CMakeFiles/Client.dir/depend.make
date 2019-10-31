@@ -266,23 +266,23 @@ CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: C:\Qt\5.12.5\msvc
 CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
 CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
 CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_condividi.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_editor.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_importa.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_loginpage.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_nuovo.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_principale.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_registrationpage.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\WTNNEUUVOU\moc_splashscreen.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_condividi.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_editor.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_importa.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_loginpage.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_nuovo.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_principale.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_registrationpage.cpp
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\EWIEGA46WW\moc_splashscreen.cpp
 CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: Client_autogen\mocs_compilation.cpp
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\editor.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\importa.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\loginpage.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\principale.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\registrationpage.h
-CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\qt\splashscreen.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\editor.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\importa.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\loginpage.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\principale.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\registrationpage.h
+CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj: ..\splashscreen.h
 
 CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: ..\comunication\CharacterClient.cpp
 CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: ..\comunication\CharacterClient.h
@@ -470,6 +470,1116 @@ CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: "C:\Users\flori\Docu
 CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format_lite.h"
 CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: messageP.grpc.pb.h
 CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj: messageP.pb.h
+
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: ..\comunication\Message.cpp
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: ..\comunication\Message.h
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: ..\comunication\Symbol.h
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena_impl.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arenastring.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\extension_set.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_reflection.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_util.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_reflection.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_table_driven.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_util.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\has_bits.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\implicit_weak_message.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\inlined_string_field.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\coded_stream.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\zero_copy_stream.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_entry_lite.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_field_lite.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_type_handler.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message_lite.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata_lite.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\parse_context.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_def.inc"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_undef.inc"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\repeated_field.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\casts.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\common.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\fastmem.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\hash.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\logging.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\macros.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\mutex.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\once.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\platform_macros.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\port.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\stringpiece.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\strutil.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\unknown_field_set.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format_lite.h"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: messageP.pb.h
+
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\CharacterClient.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\Message.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\SharedEditor.cpp
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\SharedEditor.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\Symbol.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\definitions.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\byte_buffer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\compression.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\grpc.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\grpc_security_constants.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_gcc_atomic.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_gcc_sync.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_windows.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\byte_buffer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\byte_buffer_reader.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\compression_types.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\connectivity_state.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\gpr_slice.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\gpr_types.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\grpc_types.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\log.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\port_platform.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\propagation_bits.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\slice.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\status.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_custom.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_generic.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_posix.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_windows.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\slice.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\slice_buffer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\status.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\atm.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\cpu.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\log.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\port_platform.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\sync.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\time.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\support\workaround_list.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\channel.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\channel_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\client_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\completion_queue.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\completion_queue_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\create_channel.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\create_channel_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\create_channel_posix.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\create_channel_posix_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\grpcpp.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\health_check_service_interface.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\health_check_service_interface_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\call.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\channel_argument_option.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_generic_service.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_stream.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_stream_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_unary_call.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_unary_call_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\byte_buffer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_hook.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_op_set.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_op_set_interface.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\callback_common.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\channel_interface.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_callback.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_callback_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_context_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_interceptor.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue_tag.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\config.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\config_protobuf.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\core_codegen_interface.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\create_auth_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\grpc_library.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\intercepted_channel.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\interceptor.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\interceptor_common.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\message_allocator.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\metadata_map.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\method_handler.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\method_handler_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_buffer_reader.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_buffer_writer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_utils.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\rpc_method.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\rpc_service_method.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\security\auth_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\serialization_traits.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_callback.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_callback_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_context_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_interceptor.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_interface.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\service_type.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\slice.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\status.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\status_code_enum.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\string_ref.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\stub_options.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync_stream.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync_stream_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\time.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\rpc_service_method.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\server_builder_option.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\server_builder_option_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\server_builder_plugin.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\resource_quota.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\resource_quota_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\auth_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\auth_metadata_processor.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\auth_metadata_processor_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\credentials.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\credentials_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\server_credentials.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\server_credentials_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\security\tls_credentials_options.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_builder.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_builder_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_posix.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\server_posix_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\support\channel_arguments.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\support\channel_arguments_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\support\config.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\support\status.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\support\string_ref.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\any.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\any.pb.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena_impl.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arenastring.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor.pb.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor_database.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\extension_set.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_reflection.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_util.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_reflection.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_table_driven.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_util.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\has_bits.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\implicit_weak_message.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\inlined_string_field.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\coded_stream.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\zero_copy_stream.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_entry_lite.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_field_lite.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_type_handler.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message_lite.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata_lite.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\parse_context.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_def.inc"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_undef.inc"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\repeated_field.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\source_context.pb.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\bytestream.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\casts.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\common.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\fastmem.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\hash.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\logging.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\macros.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\mutex.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\once.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\platform_macros.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\port.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\status.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\stringpiece.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\strutil.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\type.pb.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\unknown_field_set.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\field_comparator.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\json_util.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\message_differencer.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\type_resolver.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format_lite.h"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: messageP.grpc.pb.h
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: messageP.pb.h
+
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: ..\comunication\Symbol.cpp
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: ..\comunication\Symbol.h
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_gcc_atomic.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_gcc_sync.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\atm_windows.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\byte_buffer.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\byte_buffer_reader.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\compression_types.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\connectivity_state.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\gpr_slice.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\gpr_types.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\grpc_types.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\log.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\port_platform.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\propagation_bits.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\slice.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\status.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_custom.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_generic.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_posix.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\impl\codegen\sync_windows.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_generic_service.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_stream.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_stream_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_unary_call.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\async_unary_call_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\byte_buffer.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_hook.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_op_set.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\call_op_set_interface.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\callback_common.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\channel_interface.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_callback.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_callback_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_context.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_context_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\client_interceptor.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\completion_queue_tag.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\config.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\config_protobuf.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\core_codegen_interface.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\create_auth_context.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\grpc_library.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\intercepted_channel.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\interceptor.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\interceptor_common.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\message_allocator.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\metadata_map.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\method_handler.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\method_handler_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_buffer_reader.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_buffer_writer.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\proto_utils.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\rpc_method.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\rpc_service_method.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\security\auth_context.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\serialization_traits.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_callback.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_callback_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_context.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_context_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_interceptor.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\server_interface.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\service_type.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\slice.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\status.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\status_code_enum.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\string_ref.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\stub_options.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync_stream.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\sync_stream_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpcpp\impl\codegen\time.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\any.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\any.pb.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arena_impl.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\arenastring.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor.pb.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\descriptor_database.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\extension_set.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_reflection.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_enum_util.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_reflection.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_table_driven.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\generated_message_util.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\has_bits.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\implicit_weak_message.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\inlined_string_field.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\coded_stream.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\io\zero_copy_stream.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_entry_lite.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_field_lite.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\map_type_handler.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\message_lite.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\metadata_lite.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\parse_context.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_def.inc"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\port_undef.inc"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\repeated_field.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\source_context.pb.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\bytestream.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\casts.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\common.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\fastmem.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\hash.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\logging.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\macros.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\mutex.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\once.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\platform_macros.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\port.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\status.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\stringpiece.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\stubs\strutil.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\type.pb.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\unknown_field_set.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\json_util.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\util\type_resolver.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format_lite.h"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: messageP.grpc.pb.h
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: messageP.pb.h
+
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QProcess
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\QKeyEvent
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\condividi.cpp.obj: ..\condividi.cpp
+CMakeFiles\Client.dir\condividi.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\condividi.cpp.obj: Client_autogen\include\ui_condividi.h
+
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextdocument.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QAbstractScrollArea
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QAction
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenu
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenuBar
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QScrollArea
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QScrollBar
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QTextEdit
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QToolBar
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qaction.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qactiongroup.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenu.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenubar.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qscrollarea.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qscrollbar.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtextedit.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtoolbar.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\editor.cpp.obj: ..\editor.cpp
+CMakeFiles\Client.dir\editor.cpp.obj: ..\editor.h
+CMakeFiles\Client.dir\editor.cpp.obj: Client_autogen\include\ui_editor.h
+
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\importa.cpp.obj: ..\importa.cpp
+CMakeFiles\Client.dir\importa.cpp.obj: ..\importa.h
+CMakeFiles\Client.dir\importa.cpp.obj: Client_autogen\include\ui_importa.h
+
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QFile
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QFileInfo
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QObject
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QStringList
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QTextStream
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtCore
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtDebug
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcache.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdir.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qendian.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qexception.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmath.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qresource.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstack.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthread.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\quuid.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\QtSql
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFormLayout
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLayout
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenuBar
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qaction.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qactiongroup.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qformlayout.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenu.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenubar.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\loginpage.cpp
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\loginpage.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\principale.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\registrationpage.h
+CMakeFiles\Client.dir\loginpage.cpp.obj: Client_autogen\include\ui_loginpage.h
 
 CMakeFiles\Client.dir\main.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QFileInfo
 CMakeFiles\Client.dir\main.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QObject
@@ -742,14 +1852,17 @@ CMakeFiles\Client.dir\main.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwi
 CMakeFiles\Client.dir\main.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
 CMakeFiles\Client.dir\main.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
 CMakeFiles\Client.dir\main.cpp.obj: ..\comunication\CharacterClient.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\comunication\Message.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\comunication\SharedEditor.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\comunication\Symbol.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\editor.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\loginpage.h
 CMakeFiles\Client.dir\main.cpp.obj: ..\main.cpp
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\editor.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\loginpage.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\principale.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\registrationpage.h
-CMakeFiles\Client.dir\main.cpp.obj: ..\qt\splashscreen.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\principale.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\registrationpage.h
+CMakeFiles\Client.dir\main.cpp.obj: ..\splashscreen.h
 CMakeFiles\Client.dir\main.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\byte_buffer.h"
 CMakeFiles\Client.dir\main.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\compression.h"
 CMakeFiles\Client.dir\main.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\grpc.h"
@@ -1115,1317 +2228,580 @@ CMakeFiles\Client.dir\messageP.pb.cc.obj: "C:\Users\flori\Documents\Universita\P
 CMakeFiles\Client.dir\messageP.pb.cc.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format.h"
 CMakeFiles\Client.dir\messageP.pb.cc.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\third_party\protobuf\src\google\protobuf\wire_format_lite.h"
 
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QProcess
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\QKeyEvent
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: ..\qt\condividi.cpp
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: Client_autogen\include\ui_condividi.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: ..\nuovo.cpp
+CMakeFiles\Client.dir\nuovo.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\nuovo.cpp.obj: Client_autogen\include\ui_nuovo.h
 
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextdocument.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QAbstractScrollArea
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QAction
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenu
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenuBar
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QScrollArea
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QScrollBar
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QTextEdit
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QToolBar
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qaction.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qactiongroup.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenu.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenubar.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qscrollarea.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qscrollbar.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtextedit.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtoolbar.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: ..\qt\editor.cpp
-CMakeFiles\Client.dir\qt\editor.cpp.obj: ..\qt\editor.h
-CMakeFiles\Client.dir\qt\editor.cpp.obj: Client_autogen\include\ui_editor.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdir.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFileDialog
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QListView
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QSpacerItem
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QSplitter
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qfiledialog.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsplitter.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\principale.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\principale.cpp.obj: ..\importa.h
+CMakeFiles\Client.dir\principale.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\principale.cpp.obj: ..\principale.cpp
+CMakeFiles\Client.dir\principale.cpp.obj: ..\principale.h
+CMakeFiles\Client.dir\principale.cpp.obj: Client_autogen\include\ui_principale.h
 
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: ..\qt\importa.cpp
-CMakeFiles\Client.dir\qt\importa.cpp.obj: ..\qt\importa.h
-CMakeFiles\Client.dir\qt\importa.cpp.obj: Client_autogen\include\ui_importa.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFormLayout
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLayout
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qformlayout.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\condividi.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\nuovo.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\principale.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\registrationpage.cpp
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\registrationpage.h
+CMakeFiles\Client.dir\registrationpage.cpp.obj: Client_autogen\include\ui_registrationpage.h
 
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QFile
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QFileInfo
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QObject
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QStringList
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QTextStream
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtCore
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtCoreDepends
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QtDebug
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractanimation.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstracteventdispatcher.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractnativeeventfilter.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractproxymodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractstate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstracttransition.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qanimationgroup.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydataops.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydatapointer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbitarray.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbuffer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraymatcher.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcache.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborarray.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborcommon.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcbormap.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborstream.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcborvalue.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcollator.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineoption.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcommandlineparser.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcryptographichash.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatetime.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdeadlinetimer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdir.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdiriterator.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeasingcurve.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qelapsedtimer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qendian.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventtransition.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qexception.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfactoryinterface.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileselector.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfilesystemwatcher.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfinalstate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfloat16.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuture.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfutureinterface.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuturesynchronizer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfuturewatcher.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhistorystate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qidentityproxymodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qisenum.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonarray.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsondocument.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonobject.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qjsonvalue.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlibrary.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlibraryinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlinkedlist.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlockfile.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qloggingcategory.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmath.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmessageauthenticationcode.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetaobject.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimedata.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimedatabase.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmimetype.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectcleanuphandler.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qoperatingsystemversion.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qparallelanimationgroup.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpauseanimation.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qplugin.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpluginloader.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpointer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocess.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpropertyanimation.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qqueue.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrandom.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qreadwritelock.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qresource.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qresultstore.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrunnable.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsavefile.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedvaluerollback.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopeguard.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsemaphore.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsequentialanimationgroup.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsettings.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedmemory.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsignalmapper.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsignaltransition.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsocketnotifier.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsortfilterproxymodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstack.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstandardpaths.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstatemachine.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstorageinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlistmodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemsemaphore.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcoreversion.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtemporarydir.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtemporaryfile.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextboundaryfinder.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextcodec.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthread.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthreadpool.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qthreadstorage.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimeline.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimezone.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtranslator.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypetraits.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\quuid.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariantanimation.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversionnumber.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qwaitcondition.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qwineventnotifier.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qxmlstream.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\QtSql
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\QtSqlDepends
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldatabase.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldriver.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqldriverplugin.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlerror.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlfield.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlindex.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlquery.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlquerymodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrecord.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaldelegate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlrelationaltablemodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqlresult.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qsqltablemodel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsql-config.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsqlglobal.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtSql\qtsqlversion.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFormLayout
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLayout
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMenuBar
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qaction.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qactiongroup.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qcombobox.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qformlayout.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qitemdelegate.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenu.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmenubar.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\loginpage.cpp
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\loginpage.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\principale.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\registrationpage.h
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: Client_autogen\include\ui_loginpage.h
-
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: ..\qt\nuovo.cpp
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: Client_autogen\include\ui_nuovo.h
-
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qabstractitemmodel.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdir.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfileinfo.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qitemselectionmodel.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregularexpression.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvalidator.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFileDialog
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QListView
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMessageBox
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QSpacerItem
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QSplitter
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemdelegate.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractitemview.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractscrollarea.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractslider.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractspinbox.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qfiledialog.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlistview.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmessagebox.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qrubberband.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qslider.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsplitter.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyle.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstyleoption.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabbar.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\importa.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\principale.cpp
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\principale.h
-CMakeFiles\Client.dir\qt\principale.cpp.obj: Client_autogen\include\ui_principale.h
-
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qicon.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpen.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextcursor.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextformat.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtextoption.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QFormLayout
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QGroupBox
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QHBoxLayout
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLabel
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLayout
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QLineEdit
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QMainWindow
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QPushButton
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QStatusBar
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QVBoxLayout
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QWidget
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qabstractbutton.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qboxlayout.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qformlayout.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qframe.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgridlayout.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qgroupbox.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlabel.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayout.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlayoutitem.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qlineedit.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qmainwindow.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qpushbutton.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qstatusbar.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtabwidget.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\condividi.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\nuovo.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\principale.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\registrationpage.cpp
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\registrationpage.h
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: Client_autogen\include\ui_registrationpage.h
-
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QTimer
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: ..\qt\splashscreen.cpp
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: ..\qt\splashscreen.h
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: Client_autogen\include\ui_splashscreen.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QTimer
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\QVariant
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qalgorithms.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qarraydata.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_bootstrap.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_cxx11.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qatomic_msvc.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasicatomic.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbasictimer.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearray.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qbytearraylist.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qchar.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcompilerdetection.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig-bootstrapped.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qconfig.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontainerfwd.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcontiguouscache.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreapplication.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qcoreevent.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdatastream.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qdebug.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qeventloop.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfile.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qfiledevice.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qflags.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qgenericatomic.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobal.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qglobalstatic.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhash.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qhashfunctions.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiodevice.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qiterator.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qline.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlist.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlocale.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qlogging.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmap.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmargins.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmetatype.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qmutex.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnamespace.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qnumeric.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobject_impl.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qobjectdefs_impl.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpair.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qpoint.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qprocessordetection.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrect.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qrefcount.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qregexp.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qscopedpointer.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qset.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qshareddata.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsharedpointer_impl.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsize.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstring.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringalgorithms.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringbuilder.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringlist.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringliteral.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringmatcher.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qstringview.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsysinfo.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qsystemdetection.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtcore-config.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtextstream.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtimer.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qtypeinfo.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurl.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qurlquery.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvariant.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvarlengtharray.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qvector.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtCore\qversiontagging.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qbrush.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcolor.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qcursor.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qevent.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfont.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontinfo.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qfontmetrics.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qguiapplication.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qimage.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qinputmethod.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qkeysequence.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qmatrix.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpaintdevice.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpainterpath.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpalette.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixelformat.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpixmap.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qpolygon.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qregion.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgb.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qrgba64.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtgui-config.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtguiglobal.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtouchdevice.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qtransform.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qvector2d.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtGui\qwindowdefs_win.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QApplication
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\QDialog
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qapplication.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdesktopwidget.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qdialog.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qsizepolicy.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgets-config.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qtwidgetsglobal.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: C:\Qt\5.12.5\msvc2017\include\QtWidgets\qwidget.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: ..\splashscreen.cpp
+CMakeFiles\Client.dir\splashscreen.cpp.obj: ..\splashscreen.h
+CMakeFiles\Client.dir\splashscreen.cpp.obj: Client_autogen\include\ui_splashscreen.h
 

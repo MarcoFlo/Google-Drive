@@ -39,6 +39,8 @@ add_executable(Server
         ${hw_proto_srcs}
         ${hw_grpc_srcs}
         main.cpp
+        CallData.h
         CharacterServiceImpl.cpp CharacterServiceImpl.h
-        CallData.cpp CallData.h)
+        ConnectCallData.cpp ConnectCallData.h
+        GetSymbolsCallData.cpp GetSymbolsCallData.h)
 target_link_libraries(Server ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})

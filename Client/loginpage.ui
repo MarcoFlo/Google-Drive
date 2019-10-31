@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginPage</class>
+ <widget class="QMainWindow" name="LoginPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>345</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LoginPage</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
+    <item>
+     <widget class="QLabel" name="logo">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="images.qrc">:/images/img/logo.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Accedi</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <property name="formAlignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="Email">
+           <property name="text">
+            <string>Email</string>
+           </property>
+           <property name="buddy">
+            <cstring>EmailEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="EmailEdit"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="Password">
+           <property name="text">
+            <string>Password</string>
+           </property>
+           <property name="buddy">
+            <cstring>PasswordEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="PasswordEdit">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>40</number>
+         </property>
+         <property name="leftMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>20</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="Login">
+           <property name="text">
+            <string>Login</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="registrati">
+           <property name="text">
+            <string>Registrati</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>622</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

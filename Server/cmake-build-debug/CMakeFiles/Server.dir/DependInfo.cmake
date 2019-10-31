@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CallData.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/CallData.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CharacterServiceImpl.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/CharacterServiceImpl.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/ConnectCallData.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/ConnectCallData.cpp.obj"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetSymbolsCallData.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/GetSymbolsCallData.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/main.cpp" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/main.cpp.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/messageP.grpc.pb.cc" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/messageP.grpc.pb.cc.obj"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/messageP.pb.cc" "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/CMakeFiles/Server.dir/messageP.pb.cc.obj"

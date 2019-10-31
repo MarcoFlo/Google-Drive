@@ -1980,6 +1980,195 @@ comunication\CharacterClient.cpp.s:
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\CharacterClient.cpp.s
 .PHONY : comunication\CharacterClient.cpp.s
 
+comunication\Message.obj: comunication\Message.cpp.obj
+
+.PHONY : comunication\Message.obj
+
+# target to build an object file
+comunication\Message.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Message.cpp.obj
+.PHONY : comunication\Message.cpp.obj
+
+comunication\Message.i: comunication\Message.cpp.i
+
+.PHONY : comunication\Message.i
+
+# target to preprocess a source file
+comunication\Message.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Message.cpp.i
+.PHONY : comunication\Message.cpp.i
+
+comunication\Message.s: comunication\Message.cpp.s
+
+.PHONY : comunication\Message.s
+
+# target to generate assembly for a file
+comunication\Message.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Message.cpp.s
+.PHONY : comunication\Message.cpp.s
+
+comunication\SharedEditor.obj: comunication\SharedEditor.cpp.obj
+
+.PHONY : comunication\SharedEditor.obj
+
+# target to build an object file
+comunication\SharedEditor.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj
+.PHONY : comunication\SharedEditor.cpp.obj
+
+comunication\SharedEditor.i: comunication\SharedEditor.cpp.i
+
+.PHONY : comunication\SharedEditor.i
+
+# target to preprocess a source file
+comunication\SharedEditor.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\SharedEditor.cpp.i
+.PHONY : comunication\SharedEditor.cpp.i
+
+comunication\SharedEditor.s: comunication\SharedEditor.cpp.s
+
+.PHONY : comunication\SharedEditor.s
+
+# target to generate assembly for a file
+comunication\SharedEditor.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\SharedEditor.cpp.s
+.PHONY : comunication\SharedEditor.cpp.s
+
+comunication\Symbol.obj: comunication\Symbol.cpp.obj
+
+.PHONY : comunication\Symbol.obj
+
+# target to build an object file
+comunication\Symbol.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Symbol.cpp.obj
+.PHONY : comunication\Symbol.cpp.obj
+
+comunication\Symbol.i: comunication\Symbol.cpp.i
+
+.PHONY : comunication\Symbol.i
+
+# target to preprocess a source file
+comunication\Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Symbol.cpp.i
+.PHONY : comunication\Symbol.cpp.i
+
+comunication\Symbol.s: comunication\Symbol.cpp.s
+
+.PHONY : comunication\Symbol.s
+
+# target to generate assembly for a file
+comunication\Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Symbol.cpp.s
+.PHONY : comunication\Symbol.cpp.s
+
+condividi.obj: condividi.cpp.obj
+
+.PHONY : condividi.obj
+
+# target to build an object file
+condividi.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\condividi.cpp.obj
+.PHONY : condividi.cpp.obj
+
+condividi.i: condividi.cpp.i
+
+.PHONY : condividi.i
+
+# target to preprocess a source file
+condividi.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\condividi.cpp.i
+.PHONY : condividi.cpp.i
+
+condividi.s: condividi.cpp.s
+
+.PHONY : condividi.s
+
+# target to generate assembly for a file
+condividi.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\condividi.cpp.s
+.PHONY : condividi.cpp.s
+
+editor.obj: editor.cpp.obj
+
+.PHONY : editor.obj
+
+# target to build an object file
+editor.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\editor.cpp.obj
+.PHONY : editor.cpp.obj
+
+editor.i: editor.cpp.i
+
+.PHONY : editor.i
+
+# target to preprocess a source file
+editor.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\editor.cpp.i
+.PHONY : editor.cpp.i
+
+editor.s: editor.cpp.s
+
+.PHONY : editor.s
+
+# target to generate assembly for a file
+editor.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\editor.cpp.s
+.PHONY : editor.cpp.s
+
+importa.obj: importa.cpp.obj
+
+.PHONY : importa.obj
+
+# target to build an object file
+importa.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\importa.cpp.obj
+.PHONY : importa.cpp.obj
+
+importa.i: importa.cpp.i
+
+.PHONY : importa.i
+
+# target to preprocess a source file
+importa.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\importa.cpp.i
+.PHONY : importa.cpp.i
+
+importa.s: importa.cpp.s
+
+.PHONY : importa.s
+
+# target to generate assembly for a file
+importa.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\importa.cpp.s
+.PHONY : importa.cpp.s
+
+loginpage.obj: loginpage.cpp.obj
+
+.PHONY : loginpage.obj
+
+# target to build an object file
+loginpage.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\loginpage.cpp.obj
+.PHONY : loginpage.cpp.obj
+
+loginpage.i: loginpage.cpp.i
+
+.PHONY : loginpage.i
+
+# target to preprocess a source file
+loginpage.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\loginpage.cpp.i
+.PHONY : loginpage.cpp.i
+
+loginpage.s: loginpage.cpp.s
+
+.PHONY : loginpage.s
+
+# target to generate assembly for a file
+loginpage.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\loginpage.cpp.s
+.PHONY : loginpage.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -2061,221 +2250,113 @@ messageP.pb.cc.s:
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\messageP.pb.cc.s
 .PHONY : messageP.pb.cc.s
 
-qt\condividi.obj: qt\condividi.cpp.obj
+nuovo.obj: nuovo.cpp.obj
 
-.PHONY : qt\condividi.obj
-
-# target to build an object file
-qt\condividi.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\condividi.cpp.obj
-.PHONY : qt\condividi.cpp.obj
-
-qt\condividi.i: qt\condividi.cpp.i
-
-.PHONY : qt\condividi.i
-
-# target to preprocess a source file
-qt\condividi.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\condividi.cpp.i
-.PHONY : qt\condividi.cpp.i
-
-qt\condividi.s: qt\condividi.cpp.s
-
-.PHONY : qt\condividi.s
-
-# target to generate assembly for a file
-qt\condividi.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\condividi.cpp.s
-.PHONY : qt\condividi.cpp.s
-
-qt\editor.obj: qt\editor.cpp.obj
-
-.PHONY : qt\editor.obj
+.PHONY : nuovo.obj
 
 # target to build an object file
-qt\editor.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\editor.cpp.obj
-.PHONY : qt\editor.cpp.obj
+nuovo.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\nuovo.cpp.obj
+.PHONY : nuovo.cpp.obj
 
-qt\editor.i: qt\editor.cpp.i
+nuovo.i: nuovo.cpp.i
 
-.PHONY : qt\editor.i
+.PHONY : nuovo.i
 
 # target to preprocess a source file
-qt\editor.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\editor.cpp.i
-.PHONY : qt\editor.cpp.i
+nuovo.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\nuovo.cpp.i
+.PHONY : nuovo.cpp.i
 
-qt\editor.s: qt\editor.cpp.s
+nuovo.s: nuovo.cpp.s
 
-.PHONY : qt\editor.s
+.PHONY : nuovo.s
 
 # target to generate assembly for a file
-qt\editor.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\editor.cpp.s
-.PHONY : qt\editor.cpp.s
+nuovo.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\nuovo.cpp.s
+.PHONY : nuovo.cpp.s
 
-qt\importa.obj: qt\importa.cpp.obj
+principale.obj: principale.cpp.obj
 
-.PHONY : qt\importa.obj
+.PHONY : principale.obj
 
 # target to build an object file
-qt\importa.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\importa.cpp.obj
-.PHONY : qt\importa.cpp.obj
+principale.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\principale.cpp.obj
+.PHONY : principale.cpp.obj
 
-qt\importa.i: qt\importa.cpp.i
+principale.i: principale.cpp.i
 
-.PHONY : qt\importa.i
+.PHONY : principale.i
 
 # target to preprocess a source file
-qt\importa.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\importa.cpp.i
-.PHONY : qt\importa.cpp.i
+principale.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\principale.cpp.i
+.PHONY : principale.cpp.i
 
-qt\importa.s: qt\importa.cpp.s
+principale.s: principale.cpp.s
 
-.PHONY : qt\importa.s
+.PHONY : principale.s
 
 # target to generate assembly for a file
-qt\importa.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\importa.cpp.s
-.PHONY : qt\importa.cpp.s
+principale.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\principale.cpp.s
+.PHONY : principale.cpp.s
 
-qt\loginpage.obj: qt\loginpage.cpp.obj
+registrationpage.obj: registrationpage.cpp.obj
 
-.PHONY : qt\loginpage.obj
+.PHONY : registrationpage.obj
 
 # target to build an object file
-qt\loginpage.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\loginpage.cpp.obj
-.PHONY : qt\loginpage.cpp.obj
+registrationpage.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\registrationpage.cpp.obj
+.PHONY : registrationpage.cpp.obj
 
-qt\loginpage.i: qt\loginpage.cpp.i
+registrationpage.i: registrationpage.cpp.i
 
-.PHONY : qt\loginpage.i
+.PHONY : registrationpage.i
 
 # target to preprocess a source file
-qt\loginpage.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\loginpage.cpp.i
-.PHONY : qt\loginpage.cpp.i
+registrationpage.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\registrationpage.cpp.i
+.PHONY : registrationpage.cpp.i
 
-qt\loginpage.s: qt\loginpage.cpp.s
+registrationpage.s: registrationpage.cpp.s
 
-.PHONY : qt\loginpage.s
+.PHONY : registrationpage.s
 
 # target to generate assembly for a file
-qt\loginpage.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\loginpage.cpp.s
-.PHONY : qt\loginpage.cpp.s
+registrationpage.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\registrationpage.cpp.s
+.PHONY : registrationpage.cpp.s
 
-qt\nuovo.obj: qt\nuovo.cpp.obj
+splashscreen.obj: splashscreen.cpp.obj
 
-.PHONY : qt\nuovo.obj
+.PHONY : splashscreen.obj
 
 # target to build an object file
-qt\nuovo.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\nuovo.cpp.obj
-.PHONY : qt\nuovo.cpp.obj
+splashscreen.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\splashscreen.cpp.obj
+.PHONY : splashscreen.cpp.obj
 
-qt\nuovo.i: qt\nuovo.cpp.i
+splashscreen.i: splashscreen.cpp.i
 
-.PHONY : qt\nuovo.i
-
-# target to preprocess a source file
-qt\nuovo.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\nuovo.cpp.i
-.PHONY : qt\nuovo.cpp.i
-
-qt\nuovo.s: qt\nuovo.cpp.s
-
-.PHONY : qt\nuovo.s
-
-# target to generate assembly for a file
-qt\nuovo.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\nuovo.cpp.s
-.PHONY : qt\nuovo.cpp.s
-
-qt\principale.obj: qt\principale.cpp.obj
-
-.PHONY : qt\principale.obj
-
-# target to build an object file
-qt\principale.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\principale.cpp.obj
-.PHONY : qt\principale.cpp.obj
-
-qt\principale.i: qt\principale.cpp.i
-
-.PHONY : qt\principale.i
+.PHONY : splashscreen.i
 
 # target to preprocess a source file
-qt\principale.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\principale.cpp.i
-.PHONY : qt\principale.cpp.i
+splashscreen.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\splashscreen.cpp.i
+.PHONY : splashscreen.cpp.i
 
-qt\principale.s: qt\principale.cpp.s
+splashscreen.s: splashscreen.cpp.s
 
-.PHONY : qt\principale.s
-
-# target to generate assembly for a file
-qt\principale.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\principale.cpp.s
-.PHONY : qt\principale.cpp.s
-
-qt\registrationpage.obj: qt\registrationpage.cpp.obj
-
-.PHONY : qt\registrationpage.obj
-
-# target to build an object file
-qt\registrationpage.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\registrationpage.cpp.obj
-.PHONY : qt\registrationpage.cpp.obj
-
-qt\registrationpage.i: qt\registrationpage.cpp.i
-
-.PHONY : qt\registrationpage.i
-
-# target to preprocess a source file
-qt\registrationpage.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\registrationpage.cpp.i
-.PHONY : qt\registrationpage.cpp.i
-
-qt\registrationpage.s: qt\registrationpage.cpp.s
-
-.PHONY : qt\registrationpage.s
+.PHONY : splashscreen.s
 
 # target to generate assembly for a file
-qt\registrationpage.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\registrationpage.cpp.s
-.PHONY : qt\registrationpage.cpp.s
-
-qt\splashscreen.obj: qt\splashscreen.cpp.obj
-
-.PHONY : qt\splashscreen.obj
-
-# target to build an object file
-qt\splashscreen.cpp.obj:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\splashscreen.cpp.obj
-.PHONY : qt\splashscreen.cpp.obj
-
-qt\splashscreen.i: qt\splashscreen.cpp.i
-
-.PHONY : qt\splashscreen.i
-
-# target to preprocess a source file
-qt\splashscreen.cpp.i:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\splashscreen.cpp.i
-.PHONY : qt\splashscreen.cpp.i
-
-qt\splashscreen.s: qt\splashscreen.cpp.s
-
-.PHONY : qt\splashscreen.s
-
-# target to generate assembly for a file
-qt\splashscreen.cpp.s:
-	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\qt\splashscreen.cpp.s
-.PHONY : qt\splashscreen.cpp.s
+splashscreen.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\splashscreen.cpp.s
+.PHONY : splashscreen.cpp.s
 
 # Help Target
 help:
@@ -2431,6 +2512,27 @@ help:
 	@echo ... comunication/CharacterClient.obj
 	@echo ... comunication/CharacterClient.i
 	@echo ... comunication/CharacterClient.s
+	@echo ... comunication/Message.obj
+	@echo ... comunication/Message.i
+	@echo ... comunication/Message.s
+	@echo ... comunication/SharedEditor.obj
+	@echo ... comunication/SharedEditor.i
+	@echo ... comunication/SharedEditor.s
+	@echo ... comunication/Symbol.obj
+	@echo ... comunication/Symbol.i
+	@echo ... comunication/Symbol.s
+	@echo ... condividi.obj
+	@echo ... condividi.i
+	@echo ... condividi.s
+	@echo ... editor.obj
+	@echo ... editor.i
+	@echo ... editor.s
+	@echo ... importa.obj
+	@echo ... importa.i
+	@echo ... importa.s
+	@echo ... loginpage.obj
+	@echo ... loginpage.i
+	@echo ... loginpage.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -2440,30 +2542,18 @@ help:
 	@echo ... messageP.pb.obj
 	@echo ... messageP.pb.i
 	@echo ... messageP.pb.s
-	@echo ... qt/condividi.obj
-	@echo ... qt/condividi.i
-	@echo ... qt/condividi.s
-	@echo ... qt/editor.obj
-	@echo ... qt/editor.i
-	@echo ... qt/editor.s
-	@echo ... qt/importa.obj
-	@echo ... qt/importa.i
-	@echo ... qt/importa.s
-	@echo ... qt/loginpage.obj
-	@echo ... qt/loginpage.i
-	@echo ... qt/loginpage.s
-	@echo ... qt/nuovo.obj
-	@echo ... qt/nuovo.i
-	@echo ... qt/nuovo.s
-	@echo ... qt/principale.obj
-	@echo ... qt/principale.i
-	@echo ... qt/principale.s
-	@echo ... qt/registrationpage.obj
-	@echo ... qt/registrationpage.i
-	@echo ... qt/registrationpage.s
-	@echo ... qt/splashscreen.obj
-	@echo ... qt/splashscreen.i
-	@echo ... qt/splashscreen.s
+	@echo ... nuovo.obj
+	@echo ... nuovo.i
+	@echo ... nuovo.s
+	@echo ... principale.obj
+	@echo ... principale.i
+	@echo ... principale.s
+	@echo ... registrationpage.obj
+	@echo ... registrationpage.i
+	@echo ... registrationpage.s
+	@echo ... splashscreen.obj
+	@echo ... splashscreen.i
+	@echo ... splashscreen.s
 .PHONY : help
 
 

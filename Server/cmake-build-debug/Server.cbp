@@ -9142,9 +9142,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CallData.cpp">
-			<Option target="Server"/>
-		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CallData.h">
 			<Option target="Server"/>
 		</Unit>
@@ -9152,6 +9149,18 @@
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CharacterServiceImpl.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/ConnectCallData.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/ConnectCallData.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetSymbolsCallData.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetSymbolsCallData.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/gens/src/proto/grpc/channelz/channelz.grpc.pb.cc">

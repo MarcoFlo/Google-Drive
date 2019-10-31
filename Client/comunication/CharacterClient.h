@@ -9,7 +9,10 @@
 class CharacterClient {
 public:
     CharacterClient(std::shared_ptr<grpc::Channel> channel);
+    int Connect(protobuf::User user);
+
     void GetSymbols();
+
 
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the

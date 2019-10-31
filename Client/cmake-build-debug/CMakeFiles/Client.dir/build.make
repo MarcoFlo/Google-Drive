@@ -128,161 +128,218 @@ CMakeFiles\Client.dir\comunication\CharacterClient.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\comunication\CharacterClient.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\CharacterClient.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\condividi.cpp.obj: ..\qt\condividi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Client.dir/qt/condividi.cpp.obj"
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\comunication\Message.cpp.obj: ..\comunication\Message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Client.dir/comunication/Message.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\condividi.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\condividi.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\comunication\Message.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Message.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\condividi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/condividi.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\condividi.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\condividi.cpp"
+CMakeFiles\Client.dir\comunication\Message.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/comunication/Message.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\comunication\Message.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Message.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\condividi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/condividi.cpp.s"
+CMakeFiles\Client.dir\comunication\Message.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/comunication/Message.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\condividi.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\condividi.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\comunication\Message.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Message.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\editor.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\editor.cpp.obj: ..\qt\editor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Client.dir/qt/editor.cpp.obj"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj: ..\comunication\SharedEditor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Client.dir/comunication/SharedEditor.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\editor.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\editor.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\SharedEditor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\editor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/editor.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\editor.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\editor.cpp"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/comunication/SharedEditor.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\comunication\SharedEditor.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\SharedEditor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\editor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/editor.cpp.s"
+CMakeFiles\Client.dir\comunication\SharedEditor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/comunication/SharedEditor.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\editor.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\editor.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\comunication\SharedEditor.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\SharedEditor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\importa.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\importa.cpp.obj: ..\qt\importa.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Client.dir/qt/importa.cpp.obj"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\comunication\Symbol.cpp.obj: ..\comunication\Symbol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Client.dir/comunication/Symbol.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\importa.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\importa.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\comunication\Symbol.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Symbol.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\importa.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/importa.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\importa.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\importa.cpp"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/comunication/Symbol.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\comunication\Symbol.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Symbol.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\importa.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/importa.cpp.s"
+CMakeFiles\Client.dir\comunication\Symbol.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/comunication/Symbol.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\importa.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\importa.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\comunication\Symbol.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\comunication\Symbol.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\loginpage.cpp.obj: ..\qt\loginpage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Client.dir/qt/loginpage.cpp.obj"
+CMakeFiles\Client.dir\condividi.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\condividi.cpp.obj: ..\condividi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Client.dir/condividi.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\loginpage.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\loginpage.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\condividi.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\condividi.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\loginpage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/loginpage.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\loginpage.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\loginpage.cpp"
+CMakeFiles\Client.dir\condividi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/condividi.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\condividi.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\condividi.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\loginpage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/loginpage.cpp.s"
+CMakeFiles\Client.dir\condividi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/condividi.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\loginpage.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\loginpage.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\condividi.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\condividi.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\nuovo.cpp.obj: ..\qt\nuovo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Client.dir/qt/nuovo.cpp.obj"
+CMakeFiles\Client.dir\editor.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\editor.cpp.obj: ..\editor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Client.dir/editor.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\nuovo.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\nuovo.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\editor.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\editor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\nuovo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/nuovo.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\nuovo.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\nuovo.cpp"
+CMakeFiles\Client.dir\editor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/editor.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\editor.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\editor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\nuovo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/nuovo.cpp.s"
+CMakeFiles\Client.dir\editor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/editor.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\nuovo.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\nuovo.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\editor.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\editor.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\principale.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\principale.cpp.obj: ..\qt\principale.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Client.dir/qt/principale.cpp.obj"
+CMakeFiles\Client.dir\importa.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\importa.cpp.obj: ..\importa.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Client.dir/importa.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\principale.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\principale.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\importa.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\importa.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\principale.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/principale.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\principale.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\principale.cpp"
+CMakeFiles\Client.dir\importa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/importa.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\importa.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\importa.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\principale.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/principale.cpp.s"
+CMakeFiles\Client.dir\importa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/importa.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\principale.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\principale.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\importa.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\importa.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\registrationpage.cpp.obj: ..\qt\registrationpage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Client.dir/qt/registrationpage.cpp.obj"
+CMakeFiles\Client.dir\loginpage.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\loginpage.cpp.obj: ..\loginpage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Client.dir/loginpage.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\registrationpage.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\registrationpage.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\loginpage.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\loginpage.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\registrationpage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/registrationpage.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\registrationpage.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\registrationpage.cpp"
+CMakeFiles\Client.dir\loginpage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/loginpage.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\loginpage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\loginpage.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\registrationpage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/registrationpage.cpp.s"
+CMakeFiles\Client.dir\loginpage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/loginpage.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\registrationpage.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\registrationpage.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\loginpage.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\loginpage.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: CMakeFiles\Client.dir\flags.make
-CMakeFiles\Client.dir\qt\splashscreen.cpp.obj: ..\qt\splashscreen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Client.dir/qt/splashscreen.cpp.obj"
+CMakeFiles\Client.dir\nuovo.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\nuovo.cpp.obj: ..\nuovo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Client.dir/nuovo.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\qt\splashscreen.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\splashscreen.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\nuovo.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\nuovo.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\splashscreen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/qt/splashscreen.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\qt\splashscreen.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\splashscreen.cpp"
+CMakeFiles\Client.dir\nuovo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/nuovo.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\nuovo.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\nuovo.cpp"
 <<
 
-CMakeFiles\Client.dir\qt\splashscreen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/qt/splashscreen.cpp.s"
+CMakeFiles\Client.dir\nuovo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/nuovo.cpp.s"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\qt\splashscreen.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\qt\splashscreen.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\nuovo.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\nuovo.cpp"
+<<
+
+CMakeFiles\Client.dir\principale.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\principale.cpp.obj: ..\principale.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Client.dir/principale.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\principale.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\principale.cpp"
+<<
+
+CMakeFiles\Client.dir\principale.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/principale.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\principale.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\principale.cpp"
+<<
+
+CMakeFiles\Client.dir\principale.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/principale.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\principale.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\principale.cpp"
+<<
+
+CMakeFiles\Client.dir\registrationpage.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\registrationpage.cpp.obj: ..\registrationpage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Client.dir/registrationpage.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\registrationpage.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\registrationpage.cpp"
+<<
+
+CMakeFiles\Client.dir\registrationpage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/registrationpage.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\registrationpage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\registrationpage.cpp"
+<<
+
+CMakeFiles\Client.dir\registrationpage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/registrationpage.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\registrationpage.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\registrationpage.cpp"
+<<
+
+CMakeFiles\Client.dir\splashscreen.cpp.obj: CMakeFiles\Client.dir\flags.make
+CMakeFiles\Client.dir\splashscreen.cpp.obj: ..\splashscreen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Client.dir/splashscreen.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\splashscreen.cpp.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\splashscreen.cpp"
+<<
+
+CMakeFiles\Client.dir\splashscreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/splashscreen.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Client.dir\splashscreen.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\splashscreen.cpp"
+<<
+
+CMakeFiles\Client.dir\splashscreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/splashscreen.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Client.dir\splashscreen.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\splashscreen.cpp"
 <<
 
 CMakeFiles\Client.dir\messageP.pb.cc.obj: CMakeFiles\Client.dir\flags.make
 CMakeFiles\Client.dir\messageP.pb.cc.obj: messageP.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Client.dir/messageP.pb.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Client.dir/messageP.pb.cc.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\messageP.pb.cc.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\messageP.pb.cc"
 <<
@@ -301,7 +358,7 @@ CMakeFiles\Client.dir\messageP.pb.cc.s: cmake_force
 
 CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj: CMakeFiles\Client.dir\flags.make
 CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj: messageP.grpc.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Client.dir/messageP.grpc.pb.cc.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Client.dir\messageP.grpc.pb.cc.obj /FdCMakeFiles\Client.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\messageP.grpc.pb.cc"
 <<
@@ -323,14 +380,17 @@ Client_OBJECTS = \
 "CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj" \
 "CMakeFiles\Client.dir\main.cpp.obj" \
 "CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj" \
-"CMakeFiles\Client.dir\qt\condividi.cpp.obj" \
-"CMakeFiles\Client.dir\qt\editor.cpp.obj" \
-"CMakeFiles\Client.dir\qt\importa.cpp.obj" \
-"CMakeFiles\Client.dir\qt\loginpage.cpp.obj" \
-"CMakeFiles\Client.dir\qt\nuovo.cpp.obj" \
-"CMakeFiles\Client.dir\qt\principale.cpp.obj" \
-"CMakeFiles\Client.dir\qt\registrationpage.cpp.obj" \
-"CMakeFiles\Client.dir\qt\splashscreen.cpp.obj" \
+"CMakeFiles\Client.dir\comunication\Message.cpp.obj" \
+"CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj" \
+"CMakeFiles\Client.dir\comunication\Symbol.cpp.obj" \
+"CMakeFiles\Client.dir\condividi.cpp.obj" \
+"CMakeFiles\Client.dir\editor.cpp.obj" \
+"CMakeFiles\Client.dir\importa.cpp.obj" \
+"CMakeFiles\Client.dir\loginpage.cpp.obj" \
+"CMakeFiles\Client.dir\nuovo.cpp.obj" \
+"CMakeFiles\Client.dir\principale.cpp.obj" \
+"CMakeFiles\Client.dir\registrationpage.cpp.obj" \
+"CMakeFiles\Client.dir\splashscreen.cpp.obj" \
 "CMakeFiles\Client.dir\messageP.pb.cc.obj" \
 "CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj"
 
@@ -340,14 +400,17 @@ Client_EXTERNAL_OBJECTS =
 Client.exe: CMakeFiles\Client.dir\Client_autogen\mocs_compilation.cpp.obj
 Client.exe: CMakeFiles\Client.dir\main.cpp.obj
 Client.exe: CMakeFiles\Client.dir\comunication\CharacterClient.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\condividi.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\editor.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\importa.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\loginpage.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\nuovo.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\principale.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\registrationpage.cpp.obj
-Client.exe: CMakeFiles\Client.dir\qt\splashscreen.cpp.obj
+Client.exe: CMakeFiles\Client.dir\comunication\Message.cpp.obj
+Client.exe: CMakeFiles\Client.dir\comunication\SharedEditor.cpp.obj
+Client.exe: CMakeFiles\Client.dir\comunication\Symbol.cpp.obj
+Client.exe: CMakeFiles\Client.dir\condividi.cpp.obj
+Client.exe: CMakeFiles\Client.dir\editor.cpp.obj
+Client.exe: CMakeFiles\Client.dir\importa.cpp.obj
+Client.exe: CMakeFiles\Client.dir\loginpage.cpp.obj
+Client.exe: CMakeFiles\Client.dir\nuovo.cpp.obj
+Client.exe: CMakeFiles\Client.dir\principale.cpp.obj
+Client.exe: CMakeFiles\Client.dir\registrationpage.cpp.obj
+Client.exe: CMakeFiles\Client.dir\splashscreen.cpp.obj
 Client.exe: CMakeFiles\Client.dir\messageP.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\messageP.grpc.pb.cc.obj
 Client.exe: CMakeFiles\Client.dir\build.make
@@ -363,7 +426,7 @@ Client.exe: grpc\third_party\zlib\zlibstaticd.lib
 Client.exe: grpc\third_party\cares\cares\lib\cares.lib
 Client.exe: grpc\address_sorting.lib
 Client.exe: CMakeFiles\Client.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Client.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Client.exe"
 	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Client.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Client.dir\objects1.rsp @<<
  /out:Client.exe /implib:Client.lib /pdb:"C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client\cmake-build-debug\Client.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console C:\Qt\5.12.5\msvc2017\lib\Qt5Widgetsd.lib C:\Qt\5.12.5\msvc2017\lib\Qt5Sqld.lib grpc\grpc++_unsecure.lib grpc\third_party\protobuf\libprotobufd.lib C:\Qt\5.12.5\msvc2017\lib\Qt5Guid.lib C:\Qt\5.12.5\msvc2017\lib\Qt5Cored.lib grpc\grpc_unsecure.lib grpc\gpr.lib grpc\third_party\zlib\zlibstaticd.lib grpc\third_party\cares\cares\lib\cares.lib grpc\address_sorting.lib wsock32.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Editor</class>
+ <widget class="QMainWindow" name="Editor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>809</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>0</y>
+      <width>71</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>utenti</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>721</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="lineWidth">
+     <number>7</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>719</width>
+       <height>489</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>50</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>150</number>
+      </property>
+      <property name="rightMargin">
+       <number>150</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTextEdit" name="txt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>100</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustIgnored</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>809</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menutools">
+    <property name="title">
+     <string>tools</string>
+    </property>
+    <addaction name="actionredo"/>
+    <addaction name="actioncopia"/>
+    <addaction name="separator"/>
+    <addaction name="actionincolla"/>
+    <addaction name="actiontaglia"/>
+    <addaction name="actionundo"/>
+   </widget>
+   <widget class="QMenu" name="menuoj">
+    <property name="title">
+     <string>oj</string>
+    </property>
+    <addaction name="actionzoom"/>
+    <addaction name="actionallineaD"/>
+    <addaction name="actionallineaS"/>
+    <addaction name="actionallineaC"/>
+    <addaction name="actionalineaG"/>
+   </widget>
+   <widget class="QMenu" name="menutesto">
+    <property name="title">
+     <string>testo</string>
+    </property>
+    <addaction name="actionfont"/>
+    <addaction name="actiondimensione"/>
+    <addaction name="actiongrassetto"/>
+    <addaction name="actioncorsivo"/>
+    <addaction name="actionsottolineato"/>
+    <addaction name="actioncolore"/>
+   </widget>
+   <addaction name="menutools"/>
+   <addaction name="menuoj"/>
+   <addaction name="menutesto"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionindietro"/>
+   <addaction name="actionlogo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionlogoU"/>
+   <addaction name="actionutete"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionundo"/>
+   <addaction name="actionredo"/>
+   <addaction name="separator"/>
+   <addaction name="actiontaglia"/>
+   <addaction name="actioncopia"/>
+   <addaction name="actionincolla"/>
+   <addaction name="separator"/>
+   <addaction name="actionzoom"/>
+   <addaction name="separator"/>
+   <addaction name="actionallineaS"/>
+   <addaction name="actionallineaC"/>
+   <addaction name="actionallineaD"/>
+   <addaction name="actionalineaG"/>
+   <addaction name="separator"/>
+   <addaction name="actionfont"/>
+   <addaction name="actiondimensione"/>
+   <addaction name="actioncolore"/>
+   <addaction name="separator"/>
+   <addaction name="actiongrassetto"/>
+   <addaction name="actioncorsivo"/>
+   <addaction name="actionsottolineato"/>
+  </widget>
+  <action name="actionindietro">
+   <property name="text">
+    <string>indietro</string>
+   </property>
+  </action>
+  <action name="actionlogo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/logo.png</normaloff>:/images/img/logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>logo</string>
+   </property>
+  </action>
+  <action name="actionlogoU">
+   <property name="text">
+    <string>logoU</string>
+   </property>
+  </action>
+  <action name="actionutete">
+   <property name="text">
+    <string>utente</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="text">
+    <string>redo</string>
+   </property>
+  </action>
+  <action name="actioncopia">
+   <property name="text">
+    <string>copia</string>
+   </property>
+  </action>
+  <action name="actionincolla">
+   <property name="text">
+    <string>incolla</string>
+   </property>
+  </action>
+  <action name="actiontaglia">
+   <property name="text">
+    <string>taglia</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="text">
+    <string>undo</string>
+   </property>
+  </action>
+  <action name="actionzoom">
+   <property name="text">
+    <string>zoom</string>
+   </property>
+  </action>
+  <action name="actionallineaD">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>allineaD</string>
+   </property>
+  </action>
+  <action name="actionallineaS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>allineaS</string>
+   </property>
+  </action>
+  <action name="actionallineaC">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>allineaC</string>
+   </property>
+  </action>
+  <action name="actionalineaG">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>alineaG</string>
+   </property>
+  </action>
+  <action name="actionfont">
+   <property name="text">
+    <string>font</string>
+   </property>
+  </action>
+  <action name="actiondimensione">
+   <property name="text">
+    <string>dimensione</string>
+   </property>
+  </action>
+  <action name="actiongrassetto">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>grassetto</string>
+   </property>
+  </action>
+  <action name="actioncorsivo">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>corsivo</string>
+   </property>
+  </action>
+  <action name="actionsottolineato">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>sottolineato</string>
+   </property>
+  </action>
+  <action name="actioncolore">
+   <property name="text">
+    <string>colore</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

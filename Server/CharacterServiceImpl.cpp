@@ -7,9 +7,15 @@
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "CharacterServiceImpl.h"
-#include "CallData.h"
+#include "GetSymbolsCallData.h"
+#include "ConnectCallData.h"
 
+grpc::Status CharacterServiceImpl::Connect(grpc::ServerContext *context, const protobuf::User *user,
+                                           protobuf::Identifier *identifier) {
+    identifier->set_editorid(1234);
+    return grpc::Status::OK;
 
+}
 
 CharacterServiceImpl::~CharacterServiceImpl() {
     server_->Shutdown();
@@ -32,10 +38,15 @@ void CharacterServiceImpl::Run() {
     HandleRpcs();
 }
 
+
 void CharacterServiceImpl::HandleRpcs() {
     // Spawn a new CallData instance to serve new clients.
-    new CallData(&service_, cq_.get());
-    void* tag;  // uniquely identifies a request.
+
+
+
+    new ConnectCallData(&service_, cq_.get());
+    new GetSymbolsCallData(&service_, cq_.get());
+    void *tag;  // uniquely identifies a request.
     bool ok;
     while (true) {
         // Block waiting to read the next event from the completion queue. The
@@ -45,7 +56,12 @@ void CharacterServiceImpl::HandleRpcs() {
         // tells us whether there is any kind of event or cq_ is shutting down.
         GPR_ASSERT(cq_->Next(&tag, &ok));
         GPR_ASSERT(ok);
-        static_cast<CallData*>(tag)->Proceed();
+        static_cast<CallData *>(tag)->Proceed();
+//        auto proceed = static_cast<std::function<void()>*>(tag);
+//        (*proceed)();
     }
 }
+
+
+
 
