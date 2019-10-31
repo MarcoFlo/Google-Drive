@@ -11,6 +11,7 @@ N.B -> I sottomoduli non si aggiornano automaticamente con la repository a cui s
 
 
 ### Guida
-https://grpc.io/docs/tutorials/basic/cpp/   
-https://github.com/grpc/grpc/tree/v1.24.0/examples/cpp/route_guide
+Esempi google -> https://grpc.io/docs/tutorials/basic/cpp/     
+Codice esempi google -> https://github.com/grpc/grpc/tree/v1.24.0/examples/cpp/helloworld    
+Async stream -> https://www.gresearch.co.uk/2019/03/20/lessons-learnt-from-writing-asynchronous-streaming-grpc-services-in-c/
 
