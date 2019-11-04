@@ -3,6 +3,8 @@
 #include <QScrollBar>
 #include <QAbstractScrollArea>
 #include <QTextEdit>
+#include <QColorDialog>
+#include <QFontDialog>
 
 Editor::Editor(QWidget *parent) :
     QMainWindow(parent),
@@ -119,4 +121,46 @@ void Editor::on_actionsottolineato_triggered()
     else {
         ui->txt->setFontUnderline(false);
     }
+}
+
+void Editor::on_actioncolore_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::black, this, "Scegli un colore");
+    if(color.isValid()) {
+        ui->txt->setTextColor(color);
+    }
+    else return;
+}
+
+void Editor::on_actionfont_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, this);
+    if(ok) {
+        ui->txt->setFont(font);
+    }
+    else return;
+}
+
+void Editor::ShowContextMenu(const QPoint &pos)
+{
+    QMenu contextMenu(tr("Context menu"), this);
+
+       QAction action1("Gisella", this);
+       QAction action2("Marco", this);
+       QAction action3("Simone", this);
+       connect(&action1, SIGNAL(triggered()), this, SLOT(removeDataPoint()));
+       connect(&action2, SIGNAL(triggered()), this, SLOT(removeDataPoint()));
+       connect(&action3, SIGNAL(triggered()), this, SLOT(removeDataPoint()));
+
+       contextMenu.addAction(&action1);
+       contextMenu.addAction(&action2);
+       contextMenu.addAction(&action3);
+
+       contextMenu.exec(mapToGlobal(pos));
+}
+
+void Editor::on_actiondimensione_triggered()
+{
+
 }

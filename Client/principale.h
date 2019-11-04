@@ -34,6 +34,8 @@ private slots:
 
     void on_importa_clicked();
 
+    void open_edi();
+
 private:
     Ui::Principale *ui;
 

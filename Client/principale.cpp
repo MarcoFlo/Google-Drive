@@ -23,6 +23,7 @@ void Principale::on_nuovo_clicked()
     Nuovo nuovo;
     QString doc;
     nuovo.setModal(true);
+    QObject::connect(&nuovo, SIGNAL(openE()), this, SLOT(open_edi()));
     nuovo.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     nuovo.exec();
 }
@@ -64,4 +65,10 @@ void Principale::on_importa_clicked()
     importa.setModal(true);
     importa.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     importa.exec();
+}
+
+void Principale::open_edi()
+{
+    hide();
+    emit openE();
 }

@@ -47,6 +47,14 @@ private slots:
 
         void on_actionsottolineato_triggered();
 
+        void on_actioncolore_triggered();
+
+        void on_actionfont_triggered();
+
+        void ShowContextMenu(const QPoint &);
+
+        void on_actiondimensione_triggered();
+
 private:
     Ui::Editor *ui;
 
