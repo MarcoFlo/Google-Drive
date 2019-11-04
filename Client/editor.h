@@ -53,7 +53,6 @@ private slots:
 
         void ShowContextMenu(const QPoint &);
 
-        void on_actiondimensione_triggered();
 
 private:
     Ui::Editor *ui;

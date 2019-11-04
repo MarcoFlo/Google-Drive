@@ -5,14 +5,98 @@
 #include <QTextEdit>
 #include <QColorDialog>
 #include <QFontDialog>
+#include <QToolButton>
+#include <QWidgetAction>
+#include <QLineEdit>
+#include <QLayout>
+#include <QFont>
 
 Editor::Editor(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Editor)
 {
     ui->setupUi(this);
-    //ui->txt->verticalScrollBar()->setDisabled(true);
-    //ui->textEdit->setSizePolicy(QAbstractScrollArea::AdjustToContents);
+
+    this->setContextMenuPolicy(Qt::CustomContextMenu);
+
+        connect(this, SIGNAL(customContextMenuRequested(const QPoint &)),
+                this, SLOT(ShowContextMenu(const QPoint &)));
+
+        //MENU FONT
+
+        QMenu *fontMenu = new QMenu();
+        QAction *arial = new QAction("Arial", this);
+        arial->setFont(QFont("Arial"));
+        fontMenu->addAction(arial);
+        QAction *comic = new QAction("Comic Sans", this);
+        comic->setFont(QFont("Comic Sans MS"));
+        fontMenu->addAction(comic);
+        QAction *georgia = new QAction("Georgia", this);
+        georgia->setFont(QFont("Georgia"));
+        fontMenu->addAction(georgia);
+        QAction *roboto = new QAction("Roboto", this);
+        roboto->setFont(QFont("Roboto"));
+        fontMenu->addAction(roboto);
+        QAction *times = new QAction("Times New Roman", this);
+        times->setFont(QFont("Times New Roman"));
+        fontMenu->addAction(times);
+        QAction *verdana = new QAction("Verdana", this);
+        verdana->setFont(QFont("Verdana"));
+        fontMenu->addAction(verdana);
+
+        fontMenu->addAction(new QAction("Altri Caratteri", this));
+
+        QToolButton *font = new QToolButton(this);
+        font->setText("font");
+        font->setMenu(fontMenu);
+        font->setPopupMode(QToolButton::InstantPopup);
+
+        ui->toolBar_2->insertWidget(ui->actioncolore, font);
+
+       //MENU DIM
+
+       QMenu *dimMenu = new QMenu();
+       dimMenu->addAction(new QAction("8", this));
+       dimMenu->addAction(new QAction("10", this));
+       dimMenu->addAction(new QAction("11", this));
+       dimMenu->addAction(new QAction("12", this));
+       dimMenu->addAction(new QAction("14", this));
+       dimMenu->addAction(new QAction("18", this));
+       dimMenu->addAction(new QAction("24", this));
+       dimMenu->addAction(new QAction("30", this));
+       dimMenu->addAction(new QAction("36", this));
+       dimMenu->addAction(new QAction("48", this));
+       dimMenu->addAction(new QAction("72", this));
+       QWidgetAction *edit = new QWidgetAction(this);
+       edit->setDefaultWidget(new QLineEdit(this));
+       dimMenu->addAction(edit);
+
+       //dimMenu->setStyleSheet("QMenu::item { text-align: center; }");
+
+       //MENU ZOOM
+
+       QToolButton *dim = new QToolButton(this);
+       dim->setText("dimensione");
+       dim->setMenu(dimMenu);
+       dim->setPopupMode(QToolButton::InstantPopup);
+
+       ui->toolBar_2->insertWidget(ui->actioncolore, dim);
+
+       QMenu *zoomMenu = new QMenu();
+       zoomMenu->addAction(new QAction("200%", this));
+       zoomMenu->addAction(new QAction("150%", this));
+       zoomMenu->addAction(new QAction("100%", this));
+       zoomMenu->addAction(new QAction("80%", this));
+       zoomMenu->addAction(new QAction("50%", this));
+       zoomMenu->addAction(new QAction("30%", this));
+       zoomMenu->addAction(new QAction("10%", this));
+
+       QToolButton *zoom = new QToolButton(this);
+       zoom->setText("zoom");
+       zoom->setMenu(zoomMenu);
+       zoom->setPopupMode(QToolButton::InstantPopup);
+
+       ui->toolBar_2->insertWidget(ui->actionallineaS, zoom);
 }
 
 Editor::~Editor()
@@ -160,7 +244,4 @@ void Editor::ShowContextMenu(const QPoint &pos)
        contextMenu.exec(mapToGlobal(pos));
 }
 
-void Editor::on_actiondimensione_triggered()
-{
 
-}

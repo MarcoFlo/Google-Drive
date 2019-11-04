@@ -41,8 +41,8 @@
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>-30</x>
+      <y>-10</y>
       <width>721</width>
       <height>491</height>
      </rect>
@@ -125,7 +125,7 @@
      <x>0</x>
      <y>0</y>
      <width>809</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menutools">
@@ -143,7 +143,6 @@
     <property name="title">
      <string>oj</string>
     </property>
-    <addaction name="actionzoom"/>
     <addaction name="actionallineaD"/>
     <addaction name="actionallineaS"/>
     <addaction name="actionallineaC"/>
@@ -154,7 +153,6 @@
      <string>testo</string>
     </property>
     <addaction name="actionfont"/>
-    <addaction name="actiondimensione"/>
     <addaction name="actiongrassetto"/>
     <addaction name="actioncorsivo"/>
     <addaction name="actionsottolineato"/>
@@ -217,15 +215,12 @@
    <addaction name="actioncopia"/>
    <addaction name="actionincolla"/>
    <addaction name="separator"/>
-   <addaction name="actionzoom"/>
-   <addaction name="separator"/>
    <addaction name="actionallineaS"/>
    <addaction name="actionallineaC"/>
    <addaction name="actionallineaD"/>
    <addaction name="actionalineaG"/>
    <addaction name="separator"/>
    <addaction name="actionfont"/>
-   <addaction name="actiondimensione"/>
    <addaction name="actioncolore"/>
    <addaction name="separator"/>
    <addaction name="actiongrassetto"/>
@@ -281,11 +276,6 @@
     <string>undo</string>
    </property>
   </action>
-  <action name="actionzoom">
-   <property name="text">
-    <string>zoom</string>
-   </property>
-  </action>
   <action name="actionallineaD">
    <property name="checkable">
     <bool>true</bool>
@@ -321,11 +311,6 @@
   <action name="actionfont">
    <property name="text">
     <string>font</string>
-   </property>
-  </action>
-  <action name="actiondimensione">
-   <property name="text">
-    <string>dimensione</string>
    </property>
   </action>
   <action name="actiongrassetto">
