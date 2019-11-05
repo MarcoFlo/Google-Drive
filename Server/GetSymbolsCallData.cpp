@@ -1,6 +1,4 @@
-//
-// Created by flori on 30/10/2019.
-//
+#include <string>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
@@ -25,7 +23,8 @@ protobuf::Symbol MakeSymbol(std::string character, int uniqueId, std::vector<int
 // Take in the "service" instance (in this case representing an asynchronous
 // server) and the completion queue "cq" used for asynchronous communication
 // with the gRPC runtime.
-GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq)
+GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service,
+                                       grpc::ServerCompletionQueue *cq)
         : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE), times_(0) {
     // Invoke the serving logic right away.
     Proceed();
@@ -44,6 +43,17 @@ void GetSymbolsCallData::Proceed() {
         service_->RequestGetSymbols(&ctx_, &request_, &responder_, cq_, cq_,
                                     this);
     } else if (status_ == PROCESS) {
+        std::cout << ctx_.auth_context()->GetPeerIdentityPropertyName() << std::endl;
+        std::for_each(ctx_.auth_context()->begin(),
+                      ctx_.auth_context()->end(),
+                      [](const grpc::AuthProperty &elem) {
+                          std::cout << elem.first << "    " << elem.second << std::endl;
+                      });
+        std::for_each(ctx_.client_metadata().begin(), ctx_.client_metadata().end(),
+                      [](auto &elem) {
+                          std::cout << elem.first << "     " << elem.second << std::endl;
+                      });
+
         std::cout << "Received a GetSymbol request from: " << request_.editorid() << std::endl;
 
         if (times_ == 0)

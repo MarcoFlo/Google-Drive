@@ -10016,6 +10016,12 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/Message.h">
 			<Option target="Client"/>
 		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/MyCustomAuthenticator.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/MyCustomAuthenticator.h">
+			<Option target="Client"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/comunication/SharedEditor.cpp">
 			<Option target="Client"/>
 		</Unit>

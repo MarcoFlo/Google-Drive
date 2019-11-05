@@ -2007,6 +2007,33 @@ comunication\Message.cpp.s:
 	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\Message.cpp.s
 .PHONY : comunication\Message.cpp.s
 
+comunication\MyCustomAuthenticator.obj: comunication\MyCustomAuthenticator.cpp.obj
+
+.PHONY : comunication\MyCustomAuthenticator.obj
+
+# target to build an object file
+comunication\MyCustomAuthenticator.cpp.obj:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\MyCustomAuthenticator.cpp.obj
+.PHONY : comunication\MyCustomAuthenticator.cpp.obj
+
+comunication\MyCustomAuthenticator.i: comunication\MyCustomAuthenticator.cpp.i
+
+.PHONY : comunication\MyCustomAuthenticator.i
+
+# target to preprocess a source file
+comunication\MyCustomAuthenticator.cpp.i:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\MyCustomAuthenticator.cpp.i
+.PHONY : comunication\MyCustomAuthenticator.cpp.i
+
+comunication\MyCustomAuthenticator.s: comunication\MyCustomAuthenticator.cpp.s
+
+.PHONY : comunication\MyCustomAuthenticator.s
+
+# target to generate assembly for a file
+comunication\MyCustomAuthenticator.cpp.s:
+	$(MAKE) -f CMakeFiles\Client.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Client.dir\comunication\MyCustomAuthenticator.cpp.s
+.PHONY : comunication\MyCustomAuthenticator.cpp.s
+
 comunication\SharedEditor.obj: comunication\SharedEditor.cpp.obj
 
 .PHONY : comunication\SharedEditor.obj
@@ -2515,6 +2542,9 @@ help:
 	@echo ... comunication/Message.obj
 	@echo ... comunication/Message.i
 	@echo ... comunication/Message.s
+	@echo ... comunication/MyCustomAuthenticator.obj
+	@echo ... comunication/MyCustomAuthenticator.i
+	@echo ... comunication/MyCustomAuthenticator.s
 	@echo ... comunication/SharedEditor.obj
 	@echo ... comunication/SharedEditor.i
 	@echo ... comunication/SharedEditor.s

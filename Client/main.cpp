@@ -31,9 +31,12 @@ int main(int argc, char **argv) {
 //    read ( "../../certs/server.cert", serverCert );
 //    grpc::SslCredentialsOptions opts;
 //    opts.pem_root_certs = serverCert;
-//    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::SslCredentials(opts)));
 //
-//    protobuf::User user;
+//    auto channel_creds = grpc::SslCredentials(opts);
+//
+//    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
+//
+//    protobuf::UserR user;
 //    user.set_username("prova@test.it");
 //    SharedEditor editor(client, user);
 //

@@ -13,7 +13,7 @@
 #include "CharacterClient.h"
 #include "SharedEditor.h"
 
-SharedEditor::SharedEditor(CharacterClient &client, protobuf::User user) : _client(client), _counter(0) {
+SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserR user) : _client(client), _counter(0) {
     _siteId = 0;
             client.Connect(user);
     std::cout << _siteId;

@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <memory>
 #include <sstream>
 #include <fstream>
 #include <string>
@@ -8,6 +9,7 @@
 #include "CharacterServiceImpl.h"
 #include "GetSymbolsCallData.h"
 #include "ConnectCallData.h"
+#include "MyServiceAuthProcessor.h"
 
 void read(const std::string &filename, std::string &data) {
     std::ifstream file(filename.c_str(), std::ios::in);
@@ -48,9 +50,11 @@ void CharacterServiceImpl::Run() {
     sslOps.pem_root_certs = "";
     sslOps.pem_key_cert_pairs.push_back(keycert);
 
-    builder.AddListeningPort(server_address, grpc::SslServerCredentials(sslOps));
+    std::shared_ptr<grpc::ServerCredentials> creds = grpc::SslServerCredentials(sslOps);
+    creds->SetAuthMetadataProcessor(std::make_shared<MyServiceAuthProcessor>());
 
-//    builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+    builder.AddListeningPort(server_address, creds);
+
     // Register "service_" as the instance through which we'll communicate with
     // clients. In this case it corresponds to an *asynchronous* service.
     builder.RegisterService(&service_);

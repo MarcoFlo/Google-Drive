@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Client.dir/Client_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/Client.dir/comunication/CharacterClient.cpp.obj"
   "CMakeFiles/Client.dir/comunication/Message.cpp.obj"
+  "CMakeFiles/Client.dir/comunication/MyCustomAuthenticator.cpp.obj"
   "CMakeFiles/Client.dir/comunication/SharedEditor.cpp.obj"
   "CMakeFiles/Client.dir/comunication/Symbol.cpp.obj"
   "CMakeFiles/Client.dir/condividi.cpp.obj"

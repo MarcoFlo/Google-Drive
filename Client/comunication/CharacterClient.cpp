@@ -12,9 +12,10 @@
 CharacterClient::CharacterClient(std::shared_ptr<grpc::Channel> channel) : stub_(
         protobuf::CharacterService::NewStub(channel)) {}
 
-void CharacterClient::Connect(protobuf::User user) {
+void CharacterClient::Connect(protobuf::UserR user) {
 
     grpc::ClientContext context;
+    context.AddMetadata("token", "abcd");
     protobuf::Identifier reply;
     grpc::CompletionQueue cq;
     grpc::Status status;
@@ -47,9 +48,10 @@ void CharacterClient::Connect(protobuf::User user) {
 
 
     //parte comune
-    if (status.ok())
+    if (status.ok()) {
+        std::cout << context.GetServerInitialMetadata().find("ideditor")->second << std::endl;
         std::cout << "Connect just received: " << reply.editorid() << std::endl;
-    else
+    }else
         std::cout << "Connect rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 
 }
@@ -60,6 +62,7 @@ void CharacterClient::GetSymbols() {
     request.set_editorid(55);
 
     grpc::ClientContext context;
+    context.AddMetadata("token", "abcd");
     std::unique_ptr<grpc::ClientReader<protobuf::Message>> reader(stub_->GetSymbols(&context, request));
 
     protobuf::Message reply;

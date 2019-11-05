@@ -1994,6 +1994,33 @@ GetSymbolsCallData.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetSymbolsCallData.cpp.s
 .PHONY : GetSymbolsCallData.cpp.s
 
+MyServiceAuthProcessor.obj: MyServiceAuthProcessor.cpp.obj
+
+.PHONY : MyServiceAuthProcessor.obj
+
+# target to build an object file
+MyServiceAuthProcessor.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj
+.PHONY : MyServiceAuthProcessor.cpp.obj
+
+MyServiceAuthProcessor.i: MyServiceAuthProcessor.cpp.i
+
+.PHONY : MyServiceAuthProcessor.i
+
+# target to preprocess a source file
+MyServiceAuthProcessor.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.i
+.PHONY : MyServiceAuthProcessor.cpp.i
+
+MyServiceAuthProcessor.s: MyServiceAuthProcessor.cpp.s
+
+.PHONY : MyServiceAuthProcessor.s
+
+# target to generate assembly for a file
+MyServiceAuthProcessor.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s
+.PHONY : MyServiceAuthProcessor.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -2231,6 +2258,9 @@ help:
 	@echo ... GetSymbolsCallData.obj
 	@echo ... GetSymbolsCallData.i
 	@echo ... GetSymbolsCallData.s
+	@echo ... MyServiceAuthProcessor.obj
+	@echo ... MyServiceAuthProcessor.i
+	@echo ... MyServiceAuthProcessor.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -1,7 +1,4 @@
-//
-// Created by flori on 30/10/2019.
-//
-
+#include <string>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "ConnectCallData.h"
@@ -26,6 +23,8 @@ void ConnectCallData::Proceed() {
                                  this);
     } else if (status_ == PROCESS) {
         std::cout << "Received a Connect request from: " << request_.username() << std::endl;
+        const grpc::string_ref ideditor = ctx_.auth_context()->FindPropertyValues("ideditor")[0];
+        ctx_.AddInitialMetadata("ideditor", {ideditor.begin(), ideditor.end()});
         new ConnectCallData(service_, cq_);
 
         reply_.set_editorid(55);

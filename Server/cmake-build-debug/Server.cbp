@@ -9163,6 +9163,12 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetSymbolsCallData.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/MyServiceAuthProcessor.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/MyServiceAuthProcessor.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug/gens/src/proto/grpc/channelz/channelz.grpc.pb.cc">
 			<Option target="grpcpp_channelz"/>
 		</Unit>

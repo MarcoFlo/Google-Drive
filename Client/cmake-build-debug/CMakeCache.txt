@@ -770,7 +770,7 @@ COMPILE_HAVE_STEADY_CLOCK:INTERNAL=TRUE
 //ADVANCED property for variable: CYGWIN_BAT
 CYGWIN_BAT-ADVANCED:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[C:/Program Files/Git/cmd/git.exe][v2.23.0.windows.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[C:/Program Files/Git/cmd/git.exe][v2.24.0.windows.1()]
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[C:/Perl64/bin/perl.exe][v5.24.3()]
 //Details about finding Threads

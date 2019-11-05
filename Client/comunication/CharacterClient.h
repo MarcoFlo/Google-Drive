@@ -9,7 +9,7 @@
 class CharacterClient {
 public:
     CharacterClient(std::shared_ptr<grpc::Channel> channel);
-    void Connect(protobuf::User user);
+    void Connect(protobuf::UserR user);
     void GetSymbols();
 
 
