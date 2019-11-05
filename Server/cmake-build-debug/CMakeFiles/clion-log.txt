@@ -18,5 +18,1177 @@ Call Stack (most recent call first):
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Configuring done
+CMake Warning (dev) in CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target Server.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_cronet.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc++_unsecure.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target gpr.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_ruby_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target address_sorting.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_unsecure.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc++.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc++_error_details.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc++_reflection.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_plugin_support.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpcpp_channelz.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_csharp_ext.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target check_epollexclusive.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_create_jwt.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_objective_c_plugin.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target
+  grpc_print_google_default_creds_token.  AUTOMOC, AUTOUIC and AUTORCC
+  disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_verify_jwt.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target gen_hpack_tables.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target
+  gen_legal_metadata_characters.  AUTOMOC, AUTOUIC and AUTORCC disabled.
+  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target gen_percent_encoding_tables.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_cpp_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_csharp_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_node_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_php_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target grpc_python_plugin.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/src/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target benchmark_main.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/src/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target benchmark.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target basic_test.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target options_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target output_test_helper.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target user_counters_tabular_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target benchmark_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target filter_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target diagnostics_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target donotoptimize_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target skip_with_error_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target memory_manager_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target fixture_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target register_benchmark_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target map_test.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target multiple_ranges_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target templated_fixture_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target link_main_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target reporter_output_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target user_counters_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target internal_threading_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target report_aggregates_only_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target complexity_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target display_aggregates_only_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target user_counters_thousands_test.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/benchmark/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target cxx03_test.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target c-ares.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target acountry.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ahost.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/cares/cares/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target adig.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/gflags/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target gflags_nothreads_static.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target libprotobuf-lite.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target protoc.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target libprotoc.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target libprotobuf.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target boringssl_gtest.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target crypto_test_data.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target crypto.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target crypto_base.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target crypto_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/stack/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target stack.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/lhash/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target lhash.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/err/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target err.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/buf/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target buf.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/base64/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target base64.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/bytestring/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bytestring.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/pool/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target pool.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/rc4/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target rc4.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/conf/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target conf.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/chacha/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target chacha.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/poly1305/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target poly1305.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/curve25519/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target curve25519.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/digest_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target digest_extra.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/cipher_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target cipher_extra.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/rand_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target rand_extra.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/bio/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bio.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/bn_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bn_extra.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/obj/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target obj.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/asn1/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target asn1.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/engine/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target engine.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/dh/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target dh.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/dsa/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target dsa.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/rsa_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target rsa_extra.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/ec_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ec_extra.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/ecdh/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ecdh.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/ecdsa_extra/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ecdsa_extra.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/cmac/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target cmac.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/evp/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target evp.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/hkdf/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target hkdf.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/pem/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target pem.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/x509/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target x509.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/x509v3/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target x509v3.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/pkcs7/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target pkcs7.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/pkcs8/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target pkcs8_lib.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target test_support.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target boringssl_gtest_main.
+  AUTOMOC, AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/crypto/fipsmodule/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target fipsmodule.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/third_party/fiat/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target fiat.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/ssl/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ssl.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/ssl/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ssl_test.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/ssl/test/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bssl_shim.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/tool/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bssl.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target decrepit.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target decrepit_test.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/bio/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target bio_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/blowfish/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target blowfish.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/cast/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target cast.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/cfb/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target cfb.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/des/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target des_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/dh/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target dh_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/dsa/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target dsa_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/evp/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target evp_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/obj/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target obj_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/rc4/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target rc4_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/ripemd/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ripemd_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/rsa/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target rsa_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/ssl/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target ssl_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/x509/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target x509_decrepit.  AUTOMOC,
+  AUTOUIC and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/boringssl/decrepit/xts/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target xts.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/zlib/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target zlib.  AUTOMOC, AUTOUIC and
+  AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/zlib/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target zlibstatic.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/zlib/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target example.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/zlib/CMakeLists.txt:
+  AUTOGEN: No valid Qt version found for target minigzip.  AUTOMOC, AUTOUIC
+  and AUTORCC disabled.  Consider adding:
+
+    find_package(Qt<QTVERSION> COMPONENTS Widgets)
+
+  to your CMakeLists.txt file.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 -- Generating done
 -- Build files have been written to: C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug

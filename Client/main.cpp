@@ -1,5 +1,7 @@
 #include <iostream>
 #include <thread>
+#include <sstream>
+#include <fstream>
 #include <QApplication>
 #include "loginpage.h"
 #include "registrationpage.h"
@@ -8,20 +10,34 @@
 #include "editor.h"
 #include "nuovo.h"
 
-//#include <grpcpp/grpcpp.h>
-//#include "messageP.grpc.pb.h"
-//#include "comunication/CharacterClient.h"
-//#include "comunication/SharedEditor.h"
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
+#include "comunication/SharedEditor.h"
 
+void read(const std::string &filename, std::string &data) {
+    std::ifstream file(filename.c_str(), std::ios::in);
+
+    if (file.is_open()) {
+        std::stringstream ss;
+        ss << file.rdbuf();
+        file.close();
+        data = ss.str();
+    }
+}
 
 int main(int argc, char **argv) {
-
-    //CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
-    //protobuf::User user;
-    //user.set_username("prova@test.it");
-    //SharedEditor editor(client, user);
-
-    //std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
+//    std::string serverCert;
+//    read ( "../../certs/server.cert", serverCert );
+//    grpc::SslCredentialsOptions opts;
+//    opts.pem_root_certs = serverCert;
+//    CharacterClient client(grpc::CreateChannel("localhost:50051", grpc::SslCredentials(opts)));
+//
+//    protobuf::User user;
+//    user.set_username("prova@test.it");
+//    SharedEditor editor(client, user);
+//
+//    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
 
     QApplication a(argc, argv);
     SplashScreen w;
@@ -46,7 +62,7 @@ int main(int argc, char **argv) {
     //è bloccante
     a.exec();
 
-    //thread_.join(); //blocks forever
+//    thread_.join(); //blocks forever
     return 0;
 
 }

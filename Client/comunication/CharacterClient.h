@@ -13,6 +13,7 @@ public:
     void GetSymbols();
 
 
+
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.

@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.5.1)
 project(Server)
 
 set(CMAKE_CXX_STANDARD 17)
-add_definitions(-D_WIN32_WINNT=0x600)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+add_definitions(-D_WIN32_WINNT=0x600 /EHs)
 
 add_subdirectory(../third_party/grpc ${CMAKE_CURRENT_BINARY_DIR}/grpc EXCLUDE_FROM_ALL)
 
@@ -10,7 +15,12 @@ add_subdirectory(../third_party/grpc ${CMAKE_CURRENT_BINARY_DIR}/grpc EXCLUDE_FR
 # this build.
 set(_PROTOBUF_LIBPROTOBUF libprotobuf)
 set(_PROTOBUF_PROTOC $<TARGET_FILE:protoc>)
-set(_GRPC_GRPCPP_UNSECURE grpc++_unsecure)
+
+# needed to build boringssl with VS2017
+set(_gRPC_C_CXX_FLAGS "${_gRPC_C_CXX_FLAGS} /wd4987 /wd4774 /wd4819 /wd4996 /wd4619")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${_gRPC_C_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${_gRPC_C_CXX_FLAGS}")
+
 set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:grpc_cpp_plugin>)
 
 # Proto file
@@ -35,6 +45,7 @@ add_custom_command(
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
+
 add_executable(Server
         ${hw_proto_srcs}
         ${hw_grpc_srcs}
@@ -43,4 +54,8 @@ add_executable(Server
         CharacterServiceImpl.cpp CharacterServiceImpl.h
         ConnectCallData.cpp ConnectCallData.h
         GetSymbolsCallData.cpp GetSymbolsCallData.h)
-target_link_libraries(Server ${_GRPC_GRPCPP_UNSECURE} ${_PROTOBUF_LIBPROTOBUF})
+
+#target_link_libraries(Server grpc++_unsecure ssl ${_PROTOBUF_LIBPROTOBUF})
+
+target_link_libraries(Server grpc++ ${_PROTOBUF_LIBPROTOBUF})
+

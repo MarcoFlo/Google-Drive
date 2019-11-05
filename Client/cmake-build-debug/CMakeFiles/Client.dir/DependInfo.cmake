@@ -60,13 +60,15 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc++_unsecure.dir/DependInfo.cmake"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc++.dir/DependInfo.cmake"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/protobuf/CMakeFiles/libprotobuf.dir/DependInfo.cmake"
-  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc_unsecure.dir/DependInfo.cmake"
-  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/gpr.dir/DependInfo.cmake"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/grpc.dir/DependInfo.cmake"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/boringssl/ssl/CMakeFiles/ssl.dir/DependInfo.cmake"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/boringssl/crypto/CMakeFiles/crypto.dir/DependInfo.cmake"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/zlib/CMakeFiles/zlibstatic.dir/DependInfo.cmake"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/third_party/cares/cares/CMakeFiles/c-ares.dir/DependInfo.cmake"
   "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/address_sorting.dir/DependInfo.cmake"
+  "C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Client/cmake-build-debug/grpc/CMakeFiles/gpr.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -191,6 +191,7 @@ CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj: "C:\Users\flori\Documents\Un
 CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj: messageP.grpc.pb.h
 CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj: messageP.pb.h
 
+CMakeFiles\Server.dir\ConnectCallData.cpp.obj: ..\CallData.h
 CMakeFiles\Server.dir\ConnectCallData.cpp.obj: ..\ConnectCallData.cpp
 CMakeFiles\Server.dir\ConnectCallData.cpp.obj: ..\ConnectCallData.h
 CMakeFiles\Server.dir\ConnectCallData.cpp.obj: "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\third_party\grpc\include\grpc\byte_buffer.h"

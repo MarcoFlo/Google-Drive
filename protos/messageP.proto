@@ -2,16 +2,15 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc GetSymbols (User) returns (stream Message) {}
-    rpc Connect (User) returns (Identifier) {}
+    rpc GetSymbols (Identifier) returns (stream Message) {
+    }
+    rpc Connect (User) returns (Identifier) {
+    }
+    rpc GetFilesDescription (Identifier) returns (FileDescriptionList){}
+    rpc getFileContent (FileDescription) returns (stream FileChunk){}
 }
 
-message User {
-    string username = 7;
-}
-
-message Identifier{
-    int32 editorId = 8;
+message Empty {
 }
 
 message Message {
@@ -24,4 +23,27 @@ message Symbol {
     string character = 4;
     int32 uniqueId = 5;
     repeated int32 pos = 6;
+}
+
+message User {
+    string username = 7;
+}
+
+message Identifier {
+    int32 editorId = 8;
+}
+
+message FileDescriptionList {
+    repeated FileDescription fileDL = 9;
+}
+
+message FileDescription {
+    string name = 10;
+    int32 size = 11;
+    User userO = 12; //userOwner
+    repeated User userAL = 13; //userAccessList
+}
+
+message FileChunk{
+    bytes file = 14;
 }

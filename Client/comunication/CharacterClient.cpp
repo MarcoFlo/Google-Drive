@@ -48,28 +48,28 @@ void CharacterClient::Connect(protobuf::User user) {
 
     //parte comune
     if (status.ok())
-        std::cout << "Just received: " << reply.editorid() << std::endl;
+        std::cout << "Connect just received: " << reply.editorid() << std::endl;
     else
-        std::cout << "RPC failed" << std::endl;
+        std::cout << "Connect rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 
 }
 
 
 void CharacterClient::GetSymbols() {
-    protobuf::User request;
-    request.set_username("prova@test.it");
+    protobuf::Identifier request;
+    request.set_editorid(55);
 
     grpc::ClientContext context;
     std::unique_ptr<grpc::ClientReader<protobuf::Message>> reader(stub_->GetSymbols(&context, request));
 
     protobuf::Message reply;
     while (reader->Read(&reply)) {
-        std::cout << "Got reply: " << reply.symbol().uniqueid() << std::endl;
+        std::cout << "Get Symbols received: " << reply.symbol().uniqueid() << std::endl;
     }
 
     grpc::Status status = reader->Finish();
     if (status.ok()) {
-        std::cout << "GetSymbols rpc succeeded." << std::endl;
+        std::cout << "GetSymbols rpc ended." << std::endl;
     } else {
         std::cout << "GetSymbols rpc failed." << std::endl;
         std::cout << status.error_code() << ": " << status.error_message() << std::endl;

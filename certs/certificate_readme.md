@@ -1,0 +1,1 @@
+Le informazioni inserite per la creazione del certificato del server possono essere qualsiasi, tranne CN che deve essere "localhost"

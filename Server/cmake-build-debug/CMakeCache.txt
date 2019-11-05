@@ -338,6 +338,12 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Path to a program.
 CYGWIN_BAT:FILEPATH=CYGWIN_BAT-NOTFOUND
 
+//Value Computed by CMake
+Client_BINARY_DIR:STATIC=C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug
+
+//Value Computed by CMake
+Client_SOURCE_DIR:STATIC=C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server
+
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
@@ -370,6 +376,27 @@ LIBRT:FILEPATH=LIBRT-NOTFOUND
 
 //Path to a program.
 PERL_EXECUTABLE:FILEPATH=C:/Perl64/bin/perl.exe
+
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Sql.
+Qt5Sql_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Sql
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5Widgets
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=C:/Qt/5.12.5/msvc2017/lib/cmake/Qt5
 
 //Value Computed by CMake
 Server_BINARY_DIR:STATIC=C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/cmake-build-debug
