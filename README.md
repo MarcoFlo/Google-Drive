@@ -8,9 +8,9 @@ La "git clone .. " di un progetto contente submoduli non li scarica, bisogna usa
 > $ git clone --recursive https://github.com/MarcoFlo/Progetto-Malnati.git
 
 ### Perl&Go
-PowerShell as admin > Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco install activeperl
-choco install golang
+PowerShell as admin > Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))   
+choco install activeperl   
+choco install golang  
 
 #### Qt
 La cosa migliore è installarlo in C: direttamente.  
