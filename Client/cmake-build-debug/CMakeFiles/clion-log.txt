@@ -1,10 +1,236 @@
-"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client"
+"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake -G "CodeBlocks - NMake Makefiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Client"
+-- The C compiler identification is MSVC 19.23.28106.4
+-- The CXX compiler identification is MSVC 19.23.28106.4
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.23.28105/bin/Hostx86/x86/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.24.0.windows.1") 
 -- git Version: v1.5.0
 -- Version: 1.5.0
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX
 -- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
 -- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
 -- Performing Test HAVE_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK
 -- Performing Test HAVE_STEADY_CLOCK -- success
+-- Looking for pthread.h
+-- Looking for pthread.h - not found
+-- Found Threads: TRUE  
+-- Performing Test BENCHMARK_HAS_O3_FLAG
+-- Performing Test BENCHMARK_HAS_O3_FLAG - Success
+-- Performing Test BENCHMARK_HAS_CXX03_FLAG
+-- Performing Test BENCHMARK_HAS_CXX03_FLAG - Success
+-- Performing Test BENCHMARK_HAS_WNO_ODR
+-- Performing Test BENCHMARK_HAS_WNO_ODR - Failed
+-- Looking for res_servicename in resolv
+-- Looking for res_servicename in resolv - not found
+-- Looking for gethostbyname in nsl
+-- Looking for gethostbyname in nsl - not found
+-- Looking for gethostbyname in socket
+-- Looking for gethostbyname in socket - not found
+-- Looking for socket in socket
+-- Looking for socket in socket - not found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - not found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include file sys/socket.h
+-- Looking for include file sys/socket.h - not found
+-- Looking for include file arpa/inet.h
+-- Looking for include file arpa/inet.h - not found
+-- Looking for include file arpa/nameser_compat.h
+-- Looking for include file arpa/nameser_compat.h - not found
+-- Looking for include file arpa/nameser.h
+-- Looking for include file arpa/nameser.h - not found
+-- Looking for include file assert.h
+-- Looking for include file assert.h - found
+-- Looking for include file errno.h
+-- Looking for include file errno.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file limits.h
+-- Looking for include file limits.h - found
+-- Looking for include file malloc.h
+-- Looking for include file malloc.h - found
+-- Looking for include file memory.h
+-- Looking for include file memory.h - found
+-- Looking for include file netdb.h
+-- Looking for include file netdb.h - not found
+-- Looking for include file netinet/in.h
+-- Looking for include file netinet/in.h - not found
+-- Looking for include file netinet/tcp.h
+-- Looking for include file netinet/tcp.h - not found
+-- Looking for include file net/if.h
+-- Looking for include file net/if.h - not found
+-- Looking for include file signal.h
+-- Looking for include file signal.h - found
+-- Looking for include file socket.h
+-- Looking for include file socket.h - not found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file stdlib.h
+-- Looking for include file stdlib.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - not found
+-- Looking for include file string.h
+-- Looking for include file string.h - found
+-- Looking for include file stropts.h
+-- Looking for include file stropts.h - not found
+-- Looking for include file sys/ioctl.h
+-- Looking for include file sys/ioctl.h - not found
+-- Looking for include file sys/param.h
+-- Looking for include file sys/param.h - not found
+-- Looking for include file sys/select.h
+-- Looking for include file sys/select.h - not found
+-- Looking for include file sys/stat.h
+-- Looking for include file sys/stat.h - found
+-- Looking for include file sys/time.h
+-- Looking for include file sys/time.h - not found
+-- Looking for include file sys/uio.h
+-- Looking for include file sys/uio.h - not found
+-- Looking for include file time.h
+-- Looking for include file time.h - found
+-- Looking for include file dlfcn.h
+-- Looking for include file dlfcn.h - not found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - not found
+-- Looking for include files winsock2.h, windows.h
+-- Looking for include files winsock2.h, windows.h - found
+-- Looking for 3 include files winsock2.h, ..., windows.h
+-- Looking for 3 include files winsock2.h, ..., windows.h - found
+-- Looking for include files winsock.h, windows.h
+-- Looking for include files winsock.h, windows.h - found
+-- Looking for include file windows.h
+-- Looking for include file windows.h - found
+-- Performing Test HAVE_SOCKLEN_T
+-- Performing Test HAVE_SOCKLEN_T - Success
+-- Performing Test HAVE_TYPE_SOCKET
+-- Performing Test HAVE_TYPE_SOCKET - Success
+-- Performing Test HAVE_BOOL_T
+-- Performing Test HAVE_BOOL_T - Success
+-- Performing Test HAVE_SSIZE_T
+-- Performing Test HAVE_SSIZE_T - Failed
+-- Performing Test HAVE_LONGLONG
+-- Performing Test HAVE_LONGLONG - Success
+-- Performing Test HAVE_SIG_ATOMIC_T
+-- Performing Test HAVE_SIG_ATOMIC_T - Success
+-- Performing Test HAVE_STRUCT_ADDRINFO
+-- Performing Test HAVE_STRUCT_ADDRINFO - Success
+-- Performing Test HAVE_STRUCT_IN6_ADDR
+-- Performing Test HAVE_STRUCT_IN6_ADDR - Success
+-- Performing Test HAVE_STRUCT_SOCKADDR_IN6
+-- Performing Test HAVE_STRUCT_SOCKADDR_IN6 - Success
+-- Performing Test HAVE_STRUCT_SOCKADDR_STORAGE
+-- Performing Test HAVE_STRUCT_SOCKADDR_STORAGE - Success
+-- Performing Test HAVE_STRUCT_TIMEVAL
+-- Performing Test HAVE_STRUCT_TIMEVAL - Success
+-- Looking for AF_INET6
+-- Looking for AF_INET6 - found
+-- Looking for O_NONBLOCK
+-- Looking for O_NONBLOCK - not found
+-- Looking for FIONBIO
+-- Looking for FIONBIO - found
+-- Looking for SIOCGIFADDR
+-- Looking for SIOCGIFADDR - not found
+-- Looking for MSG_NOSIGNAL
+-- Looking for MSG_NOSIGNAL - not found
+-- Looking for PF_INET6
+-- Looking for PF_INET6 - found
+-- Looking for SO_NONBLOCK
+-- Looking for SO_NONBLOCK - not found
+-- Looking for CLOCK_MONOTONIC
+-- Looking for CLOCK_MONOTONIC - not found
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID - Success
+-- Performing Test HAVE_LL
+-- Performing Test HAVE_LL - Success
+-- Looking for bitncmp
+-- Looking for bitncmp - not found
+-- Looking for closesocket
+-- Looking for closesocket - found
+-- Looking for CloseSocket
+-- Looking for CloseSocket - not found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for fcntl
+-- Looking for fcntl - not found
+-- Looking for freeaddrinfo
+-- Looking for freeaddrinfo - found
+-- Looking for getaddrinfo
+-- Looking for getaddrinfo - found
+-- Looking for getenv
+-- Looking for getenv - found
+-- Looking for gethostbyaddr
+-- Looking for gethostbyaddr - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for gethostname
+-- Looking for gethostname - found
+-- Looking for getnameinfo
+-- Looking for getnameinfo - found
+-- Looking for getservbyport_r
+-- Looking for getservbyport_r - not found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - not found
+-- Looking for if_indextoname
+-- Looking for if_indextoname - not found
+-- Looking for inet_net_pton
+-- Looking for inet_net_pton - not found
+-- Looking for ioctl
+-- Looking for ioctl - not found
+-- Looking for ioctlsocket
+-- Looking for ioctlsocket - found
+-- Looking for IoctlSocket
+-- Looking for IoctlSocket - not found
+-- Looking for recv
+-- Looking for recv - found
+-- Looking for recvfrom
+-- Looking for recvfrom - found
+-- Looking for send
+-- Looking for send - found
+-- Looking for setsockopt
+-- Looking for setsockopt - found
+-- Looking for socket
+-- Looking for socket - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - not found
+-- Looking for strcmpi
+-- Looking for strcmpi - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for stricmp
+-- Looking for stricmp - found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - not found
+-- Looking for strncmpi
+-- Looking for strncmpi - not found
+-- Looking for strnicmp
+-- Looking for strnicmp - found
+-- Looking for writev
+-- Looking for writev - not found
+-- Looking for __system_property_get
+-- Looking for __system_property_get - not found
+-- Check size of __int32
+-- Check size of __int32 - done
 -- 
 -- 3.8.0.0
 CMake Warning (dev) at C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/install.cmake:60 (message):
@@ -17,6 +243,15 @@ Call Stack (most recent call first):
   C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/third_party/protobuf/cmake/CMakeLists.txt:231 (include)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
+-- Found Perl: C:/Perl64/bin/perl.exe (found version "5.24.3") 
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of off64_t
+-- Check size of off64_t - failed
+-- Looking for fseeko
+-- Looking for fseeko - not found
+-- Looking for unistd.h
+-- Looking for unistd.h - not found
 -- Configuring done
 CMake Warning (dev) in C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/third_party/grpc/CMakeLists.txt:
   AUTOGEN: No valid Qt version found for target grpc_cronet.  AUTOMOC,
