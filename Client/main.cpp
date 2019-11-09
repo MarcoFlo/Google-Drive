@@ -27,20 +27,28 @@ void read(const std::string &filename, std::string &data) {
 }
 
 int main(int argc, char **argv) {
-//    std::string serverCert;
-//    read ( "../../certs/server.cert", serverCert );
-//    grpc::SslCredentialsOptions opts;
-//    opts.pem_root_certs = serverCert;
-//
-//    auto channel_creds = grpc::SslCredentials(opts);
-//
-//    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
-//
-//    protobuf::UserR user;
-//    user.set_username("prova@test.it");
-//    SharedEditor editor(client, user);
-//
-//    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
+    std::string serverCert;
+    read ( "../../certs/server.cert", serverCert );
+    grpc::SslCredentialsOptions opts;
+    opts.pem_root_certs = serverCert;
+
+    auto channel_creds = grpc::SslCredentials(opts);
+
+    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
+
+    protobuf::UserR userR;
+    userR.set_username("prova@test.it");
+    userR.set_password("1234");
+    userR.set_passwordr("1234");
+    client.Register(userR);
+
+
+    protobuf::UserL userL;
+    userL.set_username("prova@test.it");
+    userL.set_password("1234");
+    SharedEditor editor(client, userL);
+
+    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
 
     QApplication a(argc, argv);
     SplashScreen w;
@@ -65,7 +73,7 @@ int main(int argc, char **argv) {
     //è bloccante
     a.exec();
 
-//    thread_.join(); //blocks forever
+    thread_.join(); //blocks forever
     return 0;
 
 }

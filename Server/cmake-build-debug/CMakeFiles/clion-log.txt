@@ -1,5 +1,4 @@
 "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server"
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.24.0.windows.1") 
 -- git Version: v1.5.0
 -- Version: 1.5.0
 -- Performing Test HAVE_STD_REGEX -- success

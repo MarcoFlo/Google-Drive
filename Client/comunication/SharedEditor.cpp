@@ -13,9 +13,9 @@
 #include "CharacterClient.h"
 #include "SharedEditor.h"
 
-SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserR user) : _client(client), _counter(0) {
+SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _client(client), _counter(0) {
     _siteId = 0;
-            client.Connect(user);
+    client.Login(userL);
     std::cout << _siteId;
 }
 
@@ -121,6 +121,7 @@ void SharedEditor::localInsert(unsigned int index, char value) {
 //    _server.send(msg);
 
 }
+
 /**
  * Questo metodo elimina dal vettore _symbols l’elemento all’indice indicato, prepara un oggetto
  * di tipo Message in cui descrive l’azione compiuta e lo affida all’oggetto _server affinché lo

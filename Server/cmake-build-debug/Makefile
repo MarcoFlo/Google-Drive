@@ -1940,33 +1940,6 @@ CharacterServiceImpl.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.s
 .PHONY : CharacterServiceImpl.cpp.s
 
-ConnectCallData.obj: ConnectCallData.cpp.obj
-
-.PHONY : ConnectCallData.obj
-
-# target to build an object file
-ConnectCallData.cpp.obj:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.obj
-.PHONY : ConnectCallData.cpp.obj
-
-ConnectCallData.i: ConnectCallData.cpp.i
-
-.PHONY : ConnectCallData.i
-
-# target to preprocess a source file
-ConnectCallData.cpp.i:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.i
-.PHONY : ConnectCallData.cpp.i
-
-ConnectCallData.s: ConnectCallData.cpp.s
-
-.PHONY : ConnectCallData.s
-
-# target to generate assembly for a file
-ConnectCallData.cpp.s:
-	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\ConnectCallData.cpp.s
-.PHONY : ConnectCallData.cpp.s
-
 GetSymbolsCallData.obj: GetSymbolsCallData.cpp.obj
 
 .PHONY : GetSymbolsCallData.obj
@@ -1994,6 +1967,33 @@ GetSymbolsCallData.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetSymbolsCallData.cpp.s
 .PHONY : GetSymbolsCallData.cpp.s
 
+LoginCallData.obj: LoginCallData.cpp.obj
+
+.PHONY : LoginCallData.obj
+
+# target to build an object file
+LoginCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LoginCallData.cpp.obj
+.PHONY : LoginCallData.cpp.obj
+
+LoginCallData.i: LoginCallData.cpp.i
+
+.PHONY : LoginCallData.i
+
+# target to preprocess a source file
+LoginCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LoginCallData.cpp.i
+.PHONY : LoginCallData.cpp.i
+
+LoginCallData.s: LoginCallData.cpp.s
+
+.PHONY : LoginCallData.s
+
+# target to generate assembly for a file
+LoginCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LoginCallData.cpp.s
+.PHONY : LoginCallData.cpp.s
+
 MyServiceAuthProcessor.obj: MyServiceAuthProcessor.cpp.obj
 
 .PHONY : MyServiceAuthProcessor.obj
@@ -2020,6 +2020,33 @@ MyServiceAuthProcessor.s: MyServiceAuthProcessor.cpp.s
 MyServiceAuthProcessor.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s
 .PHONY : MyServiceAuthProcessor.cpp.s
+
+RegisterCallData.obj: RegisterCallData.cpp.obj
+
+.PHONY : RegisterCallData.obj
+
+# target to build an object file
+RegisterCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\RegisterCallData.cpp.obj
+.PHONY : RegisterCallData.cpp.obj
+
+RegisterCallData.i: RegisterCallData.cpp.i
+
+.PHONY : RegisterCallData.i
+
+# target to preprocess a source file
+RegisterCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\RegisterCallData.cpp.i
+.PHONY : RegisterCallData.cpp.i
+
+RegisterCallData.s: RegisterCallData.cpp.s
+
+.PHONY : RegisterCallData.s
+
+# target to generate assembly for a file
+RegisterCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\RegisterCallData.cpp.s
+.PHONY : RegisterCallData.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -2252,15 +2279,18 @@ help:
 	@echo ... CharacterServiceImpl.obj
 	@echo ... CharacterServiceImpl.i
 	@echo ... CharacterServiceImpl.s
-	@echo ... ConnectCallData.obj
-	@echo ... ConnectCallData.i
-	@echo ... ConnectCallData.s
 	@echo ... GetSymbolsCallData.obj
 	@echo ... GetSymbolsCallData.i
 	@echo ... GetSymbolsCallData.s
+	@echo ... LoginCallData.obj
+	@echo ... LoginCallData.i
+	@echo ... LoginCallData.s
 	@echo ... MyServiceAuthProcessor.obj
 	@echo ... MyServiceAuthProcessor.i
 	@echo ... MyServiceAuthProcessor.s
+	@echo ... RegisterCallData.obj
+	@echo ... RegisterCallData.i
+	@echo ... RegisterCallData.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

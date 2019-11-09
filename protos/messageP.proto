@@ -2,55 +2,63 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc GetSymbols (Identifier) returns (stream Message) {}
-    rpc Connect (UserR) returns (Identifier) {}
     rpc Register (UserR) returns (Empty) {}
     rpc Login (UserL) returns (Identifier) {}
 
-    rpc GetFilesDescription (Identifier) returns (FileDescriptionList) {}
-    rpc getFileContent (FileDescription) returns (stream FileChunk) {}
+    rpc GetFiles (Empty) returns (FilesInfoList) {}
+    rpc GetFileContent (FileName) returns (stream Chunk) {}
+    rpc GetSymbols (FileName) returns (stream Message) {}
 }
 
-message Empty {
+message Empty {}
+
+message Identifier {
+    int32 id = 17;
 }
 
-message Message {
-    int32 idEditor = 1;
-    Symbol symbol = 2;
-    bool isEraseBool = 3;
+message FileName {
+    string fileName = 18;
 }
 
-message Symbol {
-    string character = 4;
-    int32 uniqueId = 5;
-    repeated int32 pos = 6;
+message Chunk {
+    bytes chunk = 19;
 }
 
 message UserR {
-    string username = 7;
-    string password = 15;
-    string passwordR = 16;
+    string username = 1;
+    string password = 2;
+    string passwordR = 3;
 }
 message UserL {
-    string username = 17;
-    string password = 18;
+    string username = 4;
+    string password = 5;
 }
 
-message Identifier {
-    int32 editorId = 8;
+message FilesInfoList {
+    repeated FileInfo fileIL = 6;
 }
 
-message FileDescriptionList {
-    repeated FileDescription fileDL = 9;
+message FileInfo {
+    string name = 7;
+    int32 size = 8;
+    string usernameO = 9; //email Owner
+    repeated string usernamesAL = 10; //userAccessList
 }
 
-message FileDescription {
-    string name = 10;
-    int32 size = 11;
-    string userO = 12; //email Owner
-    repeated string userAL = 13; //userAccessList
+message Message {
+    int32 idEditor = 11;
+    Symbol symbol = 12;
+    bool isEraseBool = 13;
 }
 
-message FileChunk{
-    bytes file = 14;
+message Symbol {
+    string character = 14;
+    int32 uniqueId = 15;
+    repeated int32 pos = 16;
 }
+
+
+
+
+
+

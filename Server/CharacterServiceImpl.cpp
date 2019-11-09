@@ -8,7 +8,8 @@
 #include "messageP.grpc.pb.h"
 #include "CharacterServiceImpl.h"
 #include "GetSymbolsCallData.h"
-#include "ConnectCallData.h"
+#include "RegisterCallData.h"
+#include "LoginCallData.h"
 #include "MyServiceAuthProcessor.h"
 
 void read(const std::string &filename, std::string &data) {
@@ -71,7 +72,8 @@ void CharacterServiceImpl::Run() {
 
 
 void CharacterServiceImpl::HandleRpcs() {
-    new ConnectCallData(&service_, cq_.get());
+    new RegisterCallData(&service_, cq_.get());
+    new LoginCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     void *tag;  // uniquely identifies a request.
     bool ok;

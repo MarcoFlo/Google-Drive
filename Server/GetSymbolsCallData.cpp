@@ -54,7 +54,7 @@ void GetSymbolsCallData::Proceed() {
                           std::cout << elem.first << "     " << elem.second << std::endl;
                       });
 
-        std::cout << "Received a GetSymbol request from: " << request_.editorid() << std::endl;
+        std::cout << "Received a GetSymbol request for: " << request_.filename() << std::endl;
 
         if (times_ == 0)
             new GetSymbolsCallData(service_, cq_);

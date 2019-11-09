@@ -27,9 +27,11 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
     // if token metadata not necessary, return early, avoid token checking
     auto dispatch_value = std::string(dispatch_kv->second.data(), (dispatch_kv->second).length());
     std::cout << "Processor got call for: " << dispatch_value << std::endl << std::endl;
-    if (dispatch_value == "/protobuf.CharacterService/Connect") {
-        context->AddProperty("ideditor", "ciaone");
-        return grpc::Status::OK;
+    if (dispatch_value == "/protobuf.CharacterService/Register") {
+        return ProcessRegister(auth_metadata);
+    }
+    if (dispatch_value == "/protobuf.CharacterService/Login") {
+        return ProcessLogin(auth_metadata, context);
     }
 
     // determine availability of token metadata
@@ -50,3 +52,58 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
 
     return grpc::Status::OK;
 }
+
+grpc::Status
+MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::InputMetadata &auth_metadata) {
+
+    auto username_kv = auth_metadata.find("username");
+    if (username_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username mancante");
+
+    auto pw_kv = auth_metadata.find("password");
+    if (pw_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password mancante");
+
+    auto pwR_kv = auth_metadata.find("passwordr");
+    if (pwR_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password ripetuta mancante");
+
+    std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
+    std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
+    std::string pwR = std::string(pwR_kv->second.data(), (pwR_kv->second).length());
+
+    if (pw != pwR)
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
+
+    userMap.insert(std::make_pair(username, pw));
+    return grpc::Status::OK;
+}
+
+grpc::Status
+MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::InputMetadata &auth_metadata,
+                                     grpc::AuthContext *context) {
+    auto username_kv = auth_metadata.find("username");
+    if (username_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username mancante");
+
+    auto pw_kv = auth_metadata.find("password");
+    if (pw_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password mancante");
+
+    std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
+    std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
+
+    auto user_kv = userMap.find(username);
+    if (user_kv == userMap.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Utente non registrato");
+
+    if (user_kv->second != pw)
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password sbagliata");
+
+
+
+    context->AddProperty("identifier", "55");
+    return grpc::Status::OK;
+}
+
+

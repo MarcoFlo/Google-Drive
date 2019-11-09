@@ -8,8 +8,10 @@
 
 class CharacterClient {
 public:
-    CharacterClient(std::shared_ptr<grpc::Channel> channel);
-    void Connect(protobuf::UserR user);
+    explicit CharacterClient(std::shared_ptr<grpc::Channel> channel);
+    void Register(protobuf::UserR userR);
+    void Login(protobuf::UserL userL);
+
     void GetSymbols();
 
 

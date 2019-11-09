@@ -12,54 +12,43 @@
 CharacterClient::CharacterClient(std::shared_ptr<grpc::Channel> channel) : stub_(
         protobuf::CharacterService::NewStub(channel)) {}
 
-void CharacterClient::Connect(protobuf::UserR user) {
-
+void CharacterClient::Register(protobuf::UserR userR) {
     grpc::ClientContext context;
-    context.AddMetadata("token", "abcd");
+    context.AddMetadata("username", userR.username());
+    context.AddMetadata("password", userR.password());
+    context.AddMetadata("passwordr", userR.passwordr());
+    protobuf::Empty reply;
+    grpc::CompletionQueue cq;
+    grpc::Status status;
+
+    status = stub_->Register(&context, userR, &reply);
+
+    if (status.ok())
+        std::cout << "Register rpc was successful" << std::endl;
+    else
+        std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+}
+
+void CharacterClient::Login(protobuf::UserL userL) {
+    grpc::ClientContext context;
+    context.AddMetadata("username", userL.username());
+    context.AddMetadata("password", userL.password());
+
     protobuf::Identifier reply;
     grpc::CompletionQueue cq;
     grpc::Status status;
-    void *got_tag;
-    bool ok = false;
 
-    //sync
-    status = stub_->Connect(&context, user, &reply);
+    status = stub_->Login(&context, userL, &reply);
 
-
-    //async1 bloccante
-//    std::unique_ptr<grpc::ClientAsyncResponseReader<protobuf::Identifier> > rpc(
-//            stub_->AsyncConnect(&context, user, &cq));
-//    rpc->Finish(&reply, &status, this);
-//
-//    GPR_ASSERT(cq.Next(&got_tag, &ok));
-//    GPR_ASSERT(got_tag == this);
-//    GPR_ASSERT(ok);
-
-
-    // async 2 bloccante
-//    std::unique_ptr<grpc::ClientAsyncResponseReader<protobuf::Identifier>> rpc(
-//            stub_->PrepareAsyncConnect(&context, user, &cq));
-//    rpc->StartCall();
-//    rpc->Finish(&reply, &status, this);
-//
-//    GPR_ASSERT(cq.Next(&got_tag, &ok));
-//    GPR_ASSERT(got_tag == this);
-//    GPR_ASSERT(ok);
-
-
-    //parte comune
-    if (status.ok()) {
-        std::cout << context.GetServerInitialMetadata().find("ideditor")->second << std::endl;
-        std::cout << "Connect just received: " << reply.editorid() << std::endl;
-    }else
-        std::cout << "Connect rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
-
+    if (status.ok())
+        std::cout << "Login rpc was successful, we got identifier: " << reply.id() << std::endl;
+    else
+        std::cout << "Login rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 }
 
-
 void CharacterClient::GetSymbols() {
-    protobuf::Identifier request;
-    request.set_editorid(55);
+    protobuf::FileName request;
+    request.set_filename("file1");
 
     grpc::ClientContext context;
     context.AddMetadata("token", "abcd");
@@ -79,6 +68,8 @@ void CharacterClient::GetSymbols() {
     }
 
 }
+
+
 
 
 
