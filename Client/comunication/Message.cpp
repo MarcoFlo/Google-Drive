@@ -1,7 +1,3 @@
-//
-// Created by flori on 11/10/2019.
-//
-
 #include <messageP.pb.h>
 #include "Message.h"
 

@@ -1,7 +1,3 @@
-//
-// Created by flori on 23/10/2019.
-//
-
 #include <iostream>
 #include <string>
 #include <grpcpp/grpcpp.h>

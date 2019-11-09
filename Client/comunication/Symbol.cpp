@@ -1,6 +1,3 @@
-//
-// Created by flori on 11/10/2019.
-//
 #include <vector>
 #include <string>
 #include "messageP.grpc.pb.h"

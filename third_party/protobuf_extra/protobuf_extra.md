@@ -1,0 +1,1 @@
+protobuf serialization -> https://www.callibrity.com/blog/protocol-buffers

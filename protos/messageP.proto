@@ -57,6 +57,10 @@ message Symbol {
     repeated int32 pos = 16;
 }
 
+message UserMap{
+    map<string,string> userMap = 20;
+}
+
 
 
 
