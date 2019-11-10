@@ -17,11 +17,12 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
 // determine intercepted method
     std::string dispatch_keyname = ":path";
     auto dispatch_kv = auth_metadata.find(dispatch_keyname);
+    auto dispatch_value = std::string(dispatch_kv->second.data(), (dispatch_kv->second).length());
+
     if (dispatch_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INTERNAL, "Internal Error");
 
     // if token metadata not necessary, return early, avoid token checking
-    auto dispatch_value = std::string(dispatch_kv->second.data(), (dispatch_kv->second).length());
     std::cout << "Processor got call for: " << dispatch_value << std::endl << std::endl;
     if (dispatch_value == "/protobuf.CharacterService/Register") {
         return ProcessRegister(auth_metadata);
@@ -36,14 +37,14 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
         return grpc::Status(grpc::StatusCode::UNAUTHENTICATED, "Missing Token");
 
     // determine validity of token metadata
-    auto token_value = std::string(token_kv->second.data(), (token_kv->second).length());
-    std::cout << "Processor got token: " << token_value << std::endl << std::endl;
-    if (tokens.count(token_value) == 0)
+    auto identifier_value = std::string(token_kv->second.data(), (token_kv->second).length());
+    std::cout << "Processor got token: " << identifier_value << std::endl << std::endl;
+    if (tokenMap.count(identifier_value) == 0)
         return grpc::Status(grpc::StatusCode::UNAUTHENTICATED, "Invalid Token");
 
     // once verified, mark as consumed and store user for later retrieval
-    consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), token_value));     // required
-    context->AddProperty(Const::PeerIdentityPropertyName(), tokens[token_value]);           // optional
+    consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), identifier_value));     // required
+    context->AddProperty(Const::PeerIdentityPropertyName(), tokenMap[identifier_value]);           // optional
     context->SetPeerIdentityPropertyName(Const::PeerIdentityPropertyName());                // optional
 
     return grpc::Status::OK;
@@ -99,9 +100,11 @@ MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::Inp
     if (user_kv->second != pw)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password sbagliata");
 
-
-    context->AddProperty("identifier", std::to_string(idCounter));
+    context->AddProperty("token", std::to_string(idCounter));
+    tokenMap.insert(std::make_pair(std::to_string(idCounter), username));
     idCounter++;
+
+
     return grpc::Status::OK;
 }
 

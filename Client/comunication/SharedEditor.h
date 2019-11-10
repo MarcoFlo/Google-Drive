@@ -10,7 +10,7 @@
 
 class SharedEditor {
     CharacterClient &_client;
-    int _siteId;                               //indice univoco per singolo editor
+    std::string _siteId;                               //indice univoco per singolo editor
     std::vector<Symbol> _symbols;
     int _counter;                               //indice che insieme al siteId crea un indice univoco a livello globale per ogni simbolo
 
@@ -25,7 +25,7 @@ public:
 
     void process(const Message &m);
 
-    int getSiteId();
+    std::string getSiteId();
 
     std::string to_string();
 };

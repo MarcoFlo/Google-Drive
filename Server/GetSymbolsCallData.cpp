@@ -3,16 +3,15 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 
-protobuf::Message MakeMessage(int idEditor, protobuf::Symbol symbol, bool isErase) {
+protobuf::Message MakeMessage(protobuf::Symbol symbol, bool isErase) {
     protobuf::Message msg;
-    msg.set_ideditor(idEditor);
     msg.mutable_symbol()->CopyFrom(symbol);
     msg.set_iserasebool(isErase);
     return msg;
 }
 
 
-protobuf::Symbol MakeSymbol(std::string character, int uniqueId, std::vector<int> pos) {
+protobuf::Symbol MakeSymbol(std::string character, std::string uniqueId, std::vector<int> pos) {
     protobuf::Symbol symbol;
     symbol.set_character(character);
     symbol.set_uniqueid(uniqueId);
@@ -60,7 +59,7 @@ void GetSymbolsCallData::Proceed() {
             new GetSymbolsCallData(service_, cq_);
 
         if (times_++ <= 3) {
-            reply_ = MakeMessage(0, MakeSymbol("a", times_, {0}), false);
+            reply_ = MakeMessage(MakeSymbol("a", std::to_string(times_), {0}), false);
             responder_.Write(reply_, this);
             std::this_thread::sleep_for(std::chrono::seconds(5));
         } else {

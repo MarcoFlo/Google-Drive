@@ -13,11 +13,11 @@ service CharacterService {
 message Empty {}
 
 message Identifier {
-    string id = 17;
+    string token = 17;
 }
 
 message FileName {
-    string fileName = 18;
+    string fileName = 11;
 }
 
 message Chunk {
@@ -46,14 +46,13 @@ message FileInfo {
 }
 
 message Message {
-    int32 idEditor = 11;
     Symbol symbol = 12;
     bool isEraseBool = 13;
 }
 
 message Symbol {
     string character = 14;
-    int32 uniqueId = 15;
+    string uniqueId = 15;
     repeated int32 pos = 16;
 }
 

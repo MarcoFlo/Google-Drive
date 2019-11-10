@@ -48,7 +48,9 @@ int main(int argc, char **argv) {
     userL.set_password("1234");
     SharedEditor editor(client, userL);
 
-    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client);
+    std::string token = client.Login(userL);
+
+    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client, token);
 
     QApplication a(argc, argv);
     SplashScreen w;

@@ -9,10 +9,10 @@
 
 class Symbol {
     char character;
-    int uniqueId;
+    std::string uniqueId;
     std::vector<int> pos;
 public:
-    Symbol(char character, int uniqueId, std::vector<int> &pos);
+    Symbol(char character, std::string uniqueId, std::vector<int> &pos);
 
     bool operator==(const Symbol &symbol);
 
@@ -21,7 +21,7 @@ public:
 
     char getCharacter() const;
 
-    int getUniqueId() const;
+    std::string getUniqueId() const;
 
     const std::vector<int> &getPos() const;
 

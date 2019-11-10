@@ -14,9 +14,7 @@
 #include "SharedEditor.h"
 
 SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _client(client), _counter(0) {
-    _siteId = 0;
-    client.Login(userL);
-    std::cout << _siteId;
+    _siteId = client.Login(userL);
 }
 
 SharedEditor::~SharedEditor() {
@@ -114,10 +112,10 @@ void SharedEditor::localInsert(unsigned int index, char value) {
     std::cout << std::endl;
 #endif
 
-    int uniqueId = std::stoi(std::to_string(_siteId) + std::to_string(_counter++));
+    std::string uniqueId = _siteId + std::to_string(_counter++);
     Symbol symbol(value, uniqueId, posNew);
     _symbols.insert(_symbols.begin() + index, 1, symbol);
-    Message msg(symbol, _siteId, false);
+    Message msg(symbol, false);
 //    _server.send(msg);
 
 }
@@ -136,7 +134,7 @@ void SharedEditor::localErase(unsigned int index) {
     if (index >= _symbols.size())
         index = _symbols.size() - 1;
 
-    Message msg(_symbols.at(index), _siteId, true);
+    Message msg(_symbols.at(index), true);
     _symbols.erase(_symbols.begin() + index);
 //    _server.send(msg);
 
@@ -164,7 +162,7 @@ void SharedEditor::process(const Message &m) {
 
 }
 
-int SharedEditor::getSiteId() {
+std::string SharedEditor::getSiteId() {
     return _siteId;
 }
 

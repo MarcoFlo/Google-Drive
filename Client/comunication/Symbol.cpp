@@ -3,7 +3,7 @@
 #include "messageP.grpc.pb.h"
 #include "Symbol.h"
 
-Symbol::Symbol(char character, int uniqueId, std::vector<int>& pos) : character(character), uniqueId(uniqueId), pos(pos) {}
+Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos) : character(character), uniqueId(uniqueId), pos(pos) {}
 
 protobuf::Symbol Symbol::makeProtobufSymbol() {
     protobuf::Symbol symbol;
@@ -25,7 +25,7 @@ char Symbol::getCharacter() const {
     return character;
 }
 
-int Symbol::getUniqueId() const {
+std::string Symbol::getUniqueId() const {
     return uniqueId;
 }
 

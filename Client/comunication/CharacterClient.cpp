@@ -25,7 +25,7 @@ void CharacterClient::Register(protobuf::UserR userR) {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 }
 
-void CharacterClient::Login(protobuf::UserL userL) {
+std::string CharacterClient::Login(protobuf::UserL userL) {
     grpc::ClientContext context;
     context.AddMetadata("username", userL.username());
     context.AddMetadata("password", userL.password());
@@ -36,18 +36,21 @@ void CharacterClient::Login(protobuf::UserL userL) {
 
     status = stub_->Login(&context, userL, &reply);
 
-    if (status.ok())
-        std::cout << "Login rpc was successful, we got identifier: " << reply.id() << std::endl;
-    else
+    if (status.ok()) {
+        std::cout << "Login rpc was successful, we got identifier: " << reply.token() << std::endl;
+        return reply.token();
+    } else {
         std::cout << "Login rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return "";
+    }
 }
 
-void CharacterClient::GetSymbols() {
+void CharacterClient::GetSymbols(std::string token) {
     protobuf::FileName request;
     request.set_filename("file1");
 
     grpc::ClientContext context;
-    context.AddMetadata("token", "abcd");
+    context.AddMetadata("token", token);
     std::unique_ptr<grpc::ClientReader<protobuf::Message>> reader(stub_->GetSymbols(&context, request));
 
     protobuf::Message reply;

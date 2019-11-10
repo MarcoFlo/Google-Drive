@@ -32,12 +32,11 @@ private:
             }
     };
 
+    //key=username, value=protobuf:UserL da salvare su db
     protobuf::UserMap userMap;
 
-    std::map<std::string, std::string> tokens = {
-            {"abcd",  "prova@test.it"},
-            {"abcde", "sandro@test.it"}
-    };
+    //key=identifier, value=username da tenere a runtime
+    std::map<std::string, std::string> tokenMap;
 
     int idCounter;
 
