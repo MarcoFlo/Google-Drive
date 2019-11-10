@@ -6,6 +6,7 @@
 #include "MyServiceAuthProcessor.h"
 
 MyServiceAuthProcessor::MyServiceAuthProcessor() {
+    idCounter = 0;
     LoadUserMap();
 }
 
@@ -67,10 +68,13 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
     std::string pwR = std::string(pwR_kv->second.data(), (pwR_kv->second).length());
 
+    if (userMap.usermap().contains(username))
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username già in uso");
+
     if (pw != pwR)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
-
-    UpdateUserMap(username, pw);
+    google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> mapPair(username, pw);
+    UpdateUserMap(mapPair);
     return grpc::Status::OK;
 }
 
@@ -96,7 +100,8 @@ MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::Inp
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password sbagliata");
 
 
-    context->AddProperty("identifier", "55");
+    context->AddProperty("identifier", std::to_string(idCounter));
+    idCounter++;
     return grpc::Status::OK;
 }
 
@@ -115,8 +120,9 @@ void MyServiceAuthProcessor::LoadUserMap() {
     }
 }
 
-void MyServiceAuthProcessor::UpdateUserMap(std::string &username, std::string &password) {
-    userMap.mutable_usermap()->insert(username, password);
+void MyServiceAuthProcessor::UpdateUserMap(
+        google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair) {
+    userMap.mutable_usermap()->insert(pair);
 
     std::cout << "Verranno salvati i seguenti utenti: " << std::endl;
     std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {

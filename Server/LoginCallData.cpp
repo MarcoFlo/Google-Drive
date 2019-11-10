@@ -22,7 +22,7 @@ void LoginCallData::Proceed() {
         const grpc::string_ref identifier = ctx_.auth_context()->FindPropertyValues("identifier")[0];
 //      ctx_.AddInitialMetadata("identifier", {identifier.begin(), identifier.end()});
         std::string s = {identifier.begin(), identifier.end()};
-        reply_.set_id(std::stoi(s));
+        reply_.set_id(s);
         status_ = FINISH;
         responder_.Finish(reply_, grpc::Status::OK, this);
 

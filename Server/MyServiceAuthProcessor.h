@@ -18,26 +18,28 @@ public:
 private:
     void LoadUserMap();
 
-    void UpdateUserMap(std::string &username, std::string &password);
+    void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair);
 
-    struct Const {
-        static const std::string &TokenKeyName() {
-            static std::string _("token");
-            return _;
-        }
+    struct Const{
+            static const std::string &TokenKeyName() {
+                static std::string _("token");
+                return _;
+            }
 
-        static const std::string &PeerIdentityPropertyName() {
-            static std::string _("username");
-            return _;
-        }
+            static const std::string &PeerIdentityPropertyName() {
+                static std::string _("username");
+                return _;
+            }
     };
 
     protobuf::UserMap userMap;
 
     std::map<std::string, std::string> tokens = {
-            {"abcd",  "abcd"},
-            {"abcde", "abcde"}
+            {"abcd",  "prova@test.it"},
+            {"abcde", "sandro@test.it"}
     };
+
+    int idCounter;
 
 };
 
