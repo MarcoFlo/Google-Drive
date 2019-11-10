@@ -185,28 +185,9 @@ CMakeFiles\Server.dir\GetSymbolsCallData.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Server.dir\GetSymbolsCallData.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\GetSymbolsCallData.cpp"
 <<
 
-CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj: CMakeFiles\Server.dir\flags.make
-CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj: ..\MyServiceAuthProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.obj"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj /FdCMakeFiles\Server.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
-<<
-
-CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.i"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
-<<
-
-CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.s"
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
-<<
-
 CMakeFiles\Server.dir\LoginCallData.cpp.obj: CMakeFiles\Server.dir\flags.make
 CMakeFiles\Server.dir\LoginCallData.cpp.obj: ..\LoginCallData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Server.dir/LoginCallData.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Server.dir/LoginCallData.cpp.obj"
 	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Server.dir\LoginCallData.cpp.obj /FdCMakeFiles\Server.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\LoginCallData.cpp"
 <<
@@ -223,6 +204,44 @@ CMakeFiles\Server.dir\LoginCallData.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Server.dir\LoginCallData.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\LoginCallData.cpp"
 <<
 
+CMakeFiles\Server.dir\LogoutCallData.cpp.obj: CMakeFiles\Server.dir\flags.make
+CMakeFiles\Server.dir\LogoutCallData.cpp.obj: ..\LogoutCallData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Server.dir/LogoutCallData.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Server.dir\LogoutCallData.cpp.obj /FdCMakeFiles\Server.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\LogoutCallData.cpp"
+<<
+
+CMakeFiles\Server.dir\LogoutCallData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/LogoutCallData.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Server.dir\LogoutCallData.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\LogoutCallData.cpp"
+<<
+
+CMakeFiles\Server.dir\LogoutCallData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/LogoutCallData.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Server.dir\LogoutCallData.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\LogoutCallData.cpp"
+<<
+
+CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj: CMakeFiles\Server.dir\flags.make
+CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj: ..\MyServiceAuthProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj /FdCMakeFiles\Server.dir\ /FS -c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
+<<
+
+CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
+<<
+
+CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/MyServiceAuthProcessor.cpp.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.s /c "C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\MyServiceAuthProcessor.cpp"
+<<
+
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles\Server.dir\messageP.pb.cc.obj" \
@@ -231,8 +250,9 @@ Server_OBJECTS = \
 "CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj" \
 "CMakeFiles\Server.dir\RegisterCallData.cpp.obj" \
 "CMakeFiles\Server.dir\GetSymbolsCallData.cpp.obj" \
-"CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj" \
-"CMakeFiles\Server.dir\LoginCallData.cpp.obj"
+"CMakeFiles\Server.dir\LoginCallData.cpp.obj" \
+"CMakeFiles\Server.dir\LogoutCallData.cpp.obj" \
+"CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
@@ -243,8 +263,9 @@ Server.exe: CMakeFiles\Server.dir\main.cpp.obj
 Server.exe: CMakeFiles\Server.dir\CharacterServiceImpl.cpp.obj
 Server.exe: CMakeFiles\Server.dir\RegisterCallData.cpp.obj
 Server.exe: CMakeFiles\Server.dir\GetSymbolsCallData.cpp.obj
-Server.exe: CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj
 Server.exe: CMakeFiles\Server.dir\LoginCallData.cpp.obj
+Server.exe: CMakeFiles\Server.dir\LogoutCallData.cpp.obj
+Server.exe: CMakeFiles\Server.dir\MyServiceAuthProcessor.cpp.obj
 Server.exe: CMakeFiles\Server.dir\build.make
 Server.exe: grpc\grpc++.lib
 Server.exe: grpc\third_party\protobuf\libprotobufd.lib
@@ -256,7 +277,7 @@ Server.exe: grpc\third_party\cares\cares\lib\cares.lib
 Server.exe: grpc\address_sorting.lib
 Server.exe: grpc\gpr.lib
 Server.exe: CMakeFiles\Server.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Server.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Server.exe"
 	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Server.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Server.dir\objects1.rsp @<<
  /out:Server.exe /implib:Server.lib /pdb:"C:\Users\flori\Documents\Universita\Programmazione di sistema\Malnati\Progetto-Malnati\Server\cmake-build-debug\Server.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console grpc\grpc++.lib grpc\third_party\protobuf\libprotobufd.lib grpc\grpc.lib grpc\third_party\boringssl\ssl\ssl.lib grpc\third_party\boringssl\crypto\crypto.lib grpc\third_party\zlib\zlibstaticd.lib grpc\third_party\cares\cares\lib\cares.lib grpc\address_sorting.lib wsock32.lib ws2_32.lib grpc\gpr.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

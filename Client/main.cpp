@@ -28,7 +28,7 @@ void read(const std::string &filename, std::string &data) {
 
 int main(int argc, char **argv) {
     std::string serverCert;
-    read ( "../../certs/server.cert", serverCert );
+    read("../../certs/server.cert", serverCert);
     grpc::SslCredentialsOptions opts;
     opts.pem_root_certs = serverCert;
 
@@ -46,9 +46,12 @@ int main(int argc, char **argv) {
     protobuf::UserL userL;
     userL.set_username("prova@test.it");
     userL.set_password("1234");
-    SharedEditor editor(client, userL);
+//    SharedEditor editor(client, userL);
 
     std::string token = client.Login(userL);
+//    client.Logout(token);
+//    token = client.Login(userL);
+
 
     std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client, token);
 

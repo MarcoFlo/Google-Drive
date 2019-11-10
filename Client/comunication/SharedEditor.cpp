@@ -18,7 +18,7 @@ SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _cl
 }
 
 SharedEditor::~SharedEditor() {
-//    _client.disconnect(this);
+//    client.Logout(_siteId);
 }
 
 /**

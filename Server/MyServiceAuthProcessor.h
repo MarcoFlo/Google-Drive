@@ -40,6 +40,7 @@ private:
 
     int idCounter;
 
+    grpc::Status ProcessLogout(std::basic_string<char> basicString);
 };
 
 

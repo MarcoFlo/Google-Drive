@@ -1994,6 +1994,33 @@ LoginCallData.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LoginCallData.cpp.s
 .PHONY : LoginCallData.cpp.s
 
+LogoutCallData.obj: LogoutCallData.cpp.obj
+
+.PHONY : LogoutCallData.obj
+
+# target to build an object file
+LogoutCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LogoutCallData.cpp.obj
+.PHONY : LogoutCallData.cpp.obj
+
+LogoutCallData.i: LogoutCallData.cpp.i
+
+.PHONY : LogoutCallData.i
+
+# target to preprocess a source file
+LogoutCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LogoutCallData.cpp.i
+.PHONY : LogoutCallData.cpp.i
+
+LogoutCallData.s: LogoutCallData.cpp.s
+
+.PHONY : LogoutCallData.s
+
+# target to generate assembly for a file
+LogoutCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\LogoutCallData.cpp.s
+.PHONY : LogoutCallData.cpp.s
+
 MyServiceAuthProcessor.obj: MyServiceAuthProcessor.cpp.obj
 
 .PHONY : MyServiceAuthProcessor.obj
@@ -2285,6 +2312,9 @@ help:
 	@echo ... LoginCallData.obj
 	@echo ... LoginCallData.i
 	@echo ... LoginCallData.s
+	@echo ... LogoutCallData.obj
+	@echo ... LogoutCallData.i
+	@echo ... LogoutCallData.s
 	@echo ... MyServiceAuthProcessor.obj
 	@echo ... MyServiceAuthProcessor.i
 	@echo ... MyServiceAuthProcessor.s

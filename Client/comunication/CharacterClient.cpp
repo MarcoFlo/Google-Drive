@@ -45,6 +45,26 @@ std::string CharacterClient::Login(protobuf::UserL userL) {
     }
 }
 
+
+void CharacterClient::Logout(std::string token) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token);
+
+    protobuf::Empty request;
+
+    protobuf::Empty reply;
+    grpc::CompletionQueue cq;
+    grpc::Status status;
+
+    status = stub_->Logout(&context, request, &reply);
+
+    if (status.ok())
+        std::cout << "Logout rpc was successful" << std::endl;
+    else
+        std::cout << "Logout rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+}
+
+
 void CharacterClient::GetSymbols(std::string token) {
     protobuf::FileName request;
     request.set_filename("file1");

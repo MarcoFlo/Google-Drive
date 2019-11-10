@@ -37,14 +37,18 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
         return grpc::Status(grpc::StatusCode::UNAUTHENTICATED, "Missing Token");
 
     // determine validity of token metadata
-    auto identifier_value = std::string(token_kv->second.data(), (token_kv->second).length());
-    std::cout << "Processor got token: " << identifier_value << std::endl << std::endl;
-    if (tokenMap.count(identifier_value) == 0)
+    auto token_value = std::string(token_kv->second.data(), (token_kv->second).length());
+//    std::cout << "Processor got token: " << token_value << std::endl << std::endl;
+    if (tokenMap.count(token_value) == 0)
         return grpc::Status(grpc::StatusCode::UNAUTHENTICATED, "Invalid Token");
 
+    if (dispatch_value == "/protobuf.CharacterService/Logout") {
+        return ProcessLogout(token_value);
+    }
+
     // once verified, mark as consumed and store user for later retrieval
-    consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), identifier_value));     // required
-    context->AddProperty(Const::PeerIdentityPropertyName(), tokenMap[identifier_value]);           // optional
+    consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), token_value));     // required
+    context->AddProperty(Const::PeerIdentityPropertyName(), tokenMap[token_value]);           // optional
     context->SetPeerIdentityPropertyName(Const::PeerIdentityPropertyName());                // optional
 
     return grpc::Status::OK;
@@ -138,5 +142,11 @@ void MyServiceAuthProcessor::UpdateUserMap(
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);
     }
+}
+
+grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
+    std::cout << "logouttttt";
+    tokenMap.erase(token);
+    return grpc::Status::OK;
 }
 

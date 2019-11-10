@@ -9163,6 +9163,12 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/LoginCallData.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/LogoutCallData.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/LogoutCallData.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/MyServiceAuthProcessor.cpp">
 			<Option target="Server"/>
 		</Unit>

@@ -11,6 +11,7 @@ public:
     explicit CharacterClient(std::shared_ptr<grpc::Channel> channel);
     void Register(protobuf::UserR userR);
     std::string Login(protobuf::UserL userL);
+    void Logout(std::string token);
 
     void GetSymbols(std::string token);
 

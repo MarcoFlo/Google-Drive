@@ -4,6 +4,7 @@ package protobuf;
 service CharacterService {
     rpc Register (UserR) returns (Empty) {}
     rpc Login (UserL) returns (Identifier) {}
+    rpc Logout (Empty) returns (Empty) {}
 
     rpc GetFiles (Empty) returns (FilesInfoList) {}
     rpc GetFileContent (FileName) returns (stream Chunk) {}

@@ -58,7 +58,9 @@ add_executable(Server
         CharacterServiceImpl.cpp CharacterServiceImpl.h
         RegisterCallData.cpp RegisterCallData.h
         GetSymbolsCallData.cpp GetSymbolsCallData.h
-        MyServiceAuthProcessor.cpp MyServiceAuthProcessor.h LoginCallData.cpp LoginCallData.h)
+        LoginCallData.cpp LoginCallData.h
+        LogoutCallData.cpp LogoutCallData.h
+        MyServiceAuthProcessor.cpp MyServiceAuthProcessor.h )
 
 #target_link_libraries(Server grpc++_unsecure ssl ${_PROTOBUF_LIBPROTOBUF})
 
