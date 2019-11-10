@@ -70,7 +70,7 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
     if (pw != pwR)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
 
-    UpdateUserMap(std::make_pair(username, pw));
+    UpdateUserMap(username, pw);
     return grpc::Status::OK;
 }
 
@@ -88,8 +88,8 @@ MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::Inp
     std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
 
-    auto user_kv = userMap.find(username);
-    if (user_kv == userMap.end())
+    auto user_kv = userMap.usermap().find(username);
+    if (user_kv == userMap.usermap().end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Utente non registrato");
 
     if (user_kv->second != pw)
@@ -101,37 +101,31 @@ MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::Inp
 }
 
 void MyServiceAuthProcessor::LoadUserMap() {
-    protobuf::UserMap userMapProto;
-
     std::ifstream ifs("userMap.data", std::ios_base::in | std::ios_base::binary);
     if (ifs.peek() != EOF) {
-        if (!userMapProto.ParseFromIstream(&ifs)) {
+        if (!userMap.ParseFromIstream(&ifs)) {
             std::cerr << "La lettura di userMap.data è fallita" << std::endl;
             exit(1);
         }
-        userMap = {userMapProto.usermap().begin(), userMapProto.usermap().end()};
         std::cout << "Sono stati caricati i seguenti utenti: " << std::endl;
-        std::for_each(userMap.begin(), userMap.end(), [](auto &pair) {
+        std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {
             std::cout << pair.first << std::endl;
         });
         std::cout << std::endl;
     }
 }
 
-void MyServiceAuthProcessor::UpdateUserMap(std::pair<std::string, std::string> pair) {
-    userMap.insert(pair);
-    protobuf::UserMap userMapProto;
-
-    userMapProto.mutable_usermap()->insert(userMap.begin(), userMap.end());
+void MyServiceAuthProcessor::UpdateUserMap(std::string &username, std::string &password) {
+    userMap.mutable_usermap()->insert(username, password);
 
     std::cout << "Verranno salvati i seguenti utenti: " << std::endl;
-    std::for_each(userMapProto.usermap().begin(), userMapProto.usermap().end(), [](auto &pair) {
+    std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {
         std::cout << pair.first << std::endl;
     });
     std::cout << std::endl;
 
     std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
-    if (!userMapProto.SerializeToOstream(&ofs)) {
+    if (!userMap.SerializeToOstream(&ofs)) {
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);
     }

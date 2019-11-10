@@ -2,18 +2,23 @@
 #define SERVER_MYSERVICEAUTHPROCESSOR_H
 
 
-class MyServiceAuthProcessor : public grpc::AuthMetadataProcessor{
+class MyServiceAuthProcessor : public grpc::AuthMetadataProcessor {
 public:
 
     MyServiceAuthProcessor();
-    grpc::Status Process(const InputMetadata& auth_metadata, grpc::AuthContext* context, OutputMetadata* consumed_auth_metadata, OutputMetadata* response_metadata) override;
 
-    grpc::Status ProcessRegister(const InputMetadata& auth_metadata);
-    grpc::Status ProcessLogin(const InputMetadata& auth_metadata, grpc::AuthContext* contex);
+    grpc::Status
+    Process(const InputMetadata &auth_metadata, grpc::AuthContext *context, OutputMetadata *consumed_auth_metadata,
+            OutputMetadata *response_metadata) override;
+
+    grpc::Status ProcessRegister(const InputMetadata &auth_metadata);
+
+    grpc::Status ProcessLogin(const InputMetadata &auth_metadata, grpc::AuthContext *contex);
 
 private:
     void LoadUserMap();
-    void UpdateUserMap(std::pair<std::string, std::string> pair);
+
+    void UpdateUserMap(std::string &username, std::string &password);
 
     struct Const {
         static const std::string &TokenKeyName() {
@@ -27,11 +32,11 @@ private:
         }
     };
 
-    std::map<std::string, std::string> userMap;
+    protobuf::UserMap userMap;
 
     std::map<std::string, std::string> tokens = {
-            {"abcd","abcd"},
-            {"abcde","abcde"}
+            {"abcd",  "abcd"},
+            {"abcde", "abcde"}
     };
 
 };
