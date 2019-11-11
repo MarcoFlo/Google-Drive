@@ -49,8 +49,8 @@ int main(int argc, char **argv) {
 //    SharedEditor editor(client, userL);
 
     std::string token = client.Login(userL);
-//    client.Logout(token);
-//    token = client.Login(userL);
+    client.Logout(token);
+    token = client.Login(userL);
 
 
     std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client, token);

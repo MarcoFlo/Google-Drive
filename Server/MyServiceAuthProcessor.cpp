@@ -112,6 +112,12 @@ MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::Inp
     return grpc::Status::OK;
 }
 
+grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
+    tokenMap.erase(token);
+    return grpc::Status::OK;
+}
+
+
 void MyServiceAuthProcessor::LoadUserMap() {
     std::ifstream ifs("userMap.data", std::ios_base::in | std::ios_base::binary);
     if (ifs.peek() != EOF) {
@@ -142,11 +148,5 @@ void MyServiceAuthProcessor::UpdateUserMap(
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);
     }
-}
-
-grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
-    std::cout << "logouttttt";
-    tokenMap.erase(token);
-    return grpc::Status::OK;
 }
 

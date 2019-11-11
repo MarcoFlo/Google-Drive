@@ -29,12 +29,12 @@ void LoginCallData::Proceed() {
                       });
 
 
-
         new LoginCallData(service_, cq_);
 
-        const grpc::string_ref token = ctx_.auth_context()->FindPropertyValues("token")[0];
+        const std::vector<grpc::string_ref> tokenV = ctx_.auth_context()->FindPropertyValues("token");
+        const grpc::string_ref token = tokenV.back();
 //      Se vogliamo restituire un Empty e lasciare il token nei metadati
-//      ctx_.AddInitialMetadata("identifier", {identifier.begin(), identifier.end()});
+//      ctx_.AddInitialMetadata("identifier", {token.begin(), token.end()});
         std::string s = {token.begin(), token.end()};
         reply_.set_token(s);
         status_ = FINISH;

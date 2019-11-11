@@ -14,7 +14,7 @@
 #include "SharedEditor.h"
 
 SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _client(client), _counter(0) {
-    _siteId = client.Login(userL);
+//    _siteId = client.Login(userL);
 }
 
 SharedEditor::~SharedEditor() {

@@ -13,7 +13,7 @@ public:
 
     grpc::Status ProcessRegister(const InputMetadata &auth_metadata);
 
-    grpc::Status ProcessLogin(const InputMetadata &auth_metadata, grpc::AuthContext *contex);
+    grpc::Status ProcessLogin(const InputMetadata &auth_metadata, grpc::AuthContext *context);
 
 private:
     void LoadUserMap();
