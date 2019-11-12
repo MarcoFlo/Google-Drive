@@ -104,6 +104,18 @@
           <verstretch>100</verstretch>
          </sizepolicy>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
@@ -152,7 +164,6 @@
     <property name="title">
      <string>testo</string>
     </property>
-    <addaction name="actionfont"/>
     <addaction name="actiongrassetto"/>
     <addaction name="actioncorsivo"/>
     <addaction name="actionsottolineato"/>
@@ -220,7 +231,6 @@
    <addaction name="actionallineaD"/>
    <addaction name="actionalineaG"/>
    <addaction name="separator"/>
-   <addaction name="actionfont"/>
    <addaction name="actioncolore"/>
    <addaction name="separator"/>
    <addaction name="actiongrassetto"/>
@@ -233,9 +243,14 @@
    </property>
   </action>
   <action name="actionlogo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/images/img/logo.png</normaloff>:/images/img/logo.png</iconset>
+     <normaloff>:/images/img/logo.png</normaloff>
+     <disabledoff>:/images/img/logo.png</disabledoff>
+     <disabledon>:/images/img/logo.png</disabledon>:/images/img/logo.png</iconset>
    </property>
    <property name="text">
     <string>logo</string>
@@ -288,6 +303,9 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>allineaS</string>
    </property>
@@ -306,11 +324,6 @@
    </property>
    <property name="text">
     <string>alineaG</string>
-   </property>
-  </action>
-  <action name="actionfont">
-   <property name="text">
-    <string>font</string>
    </property>
   </action>
   <action name="actiongrassetto">
