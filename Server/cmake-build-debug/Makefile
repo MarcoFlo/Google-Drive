@@ -1940,6 +1940,33 @@ CharacterServiceImpl.cpp.s:
 	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\CharacterServiceImpl.cpp.s
 .PHONY : CharacterServiceImpl.cpp.s
 
+GetFilesCallData.obj: GetFilesCallData.cpp.obj
+
+.PHONY : GetFilesCallData.obj
+
+# target to build an object file
+GetFilesCallData.cpp.obj:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetFilesCallData.cpp.obj
+.PHONY : GetFilesCallData.cpp.obj
+
+GetFilesCallData.i: GetFilesCallData.cpp.i
+
+.PHONY : GetFilesCallData.i
+
+# target to preprocess a source file
+GetFilesCallData.cpp.i:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetFilesCallData.cpp.i
+.PHONY : GetFilesCallData.cpp.i
+
+GetFilesCallData.s: GetFilesCallData.cpp.s
+
+.PHONY : GetFilesCallData.s
+
+# target to generate assembly for a file
+GetFilesCallData.cpp.s:
+	$(MAKE) -f CMakeFiles\Server.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Server.dir\GetFilesCallData.cpp.s
+.PHONY : GetFilesCallData.cpp.s
+
 GetSymbolsCallData.obj: GetSymbolsCallData.cpp.obj
 
 .PHONY : GetSymbolsCallData.obj
@@ -2306,6 +2333,9 @@ help:
 	@echo ... CharacterServiceImpl.obj
 	@echo ... CharacterServiceImpl.i
 	@echo ... CharacterServiceImpl.s
+	@echo ... GetFilesCallData.obj
+	@echo ... GetFilesCallData.i
+	@echo ... GetFilesCallData.s
 	@echo ... GetSymbolsCallData.obj
 	@echo ... GetSymbolsCallData.i
 	@echo ... GetSymbolsCallData.s

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/CharacterServiceImpl.cpp.obj"
+  "CMakeFiles/Server.dir/GetFilesCallData.cpp.obj"
   "CMakeFiles/Server.dir/GetSymbolsCallData.cpp.obj"
   "CMakeFiles/Server.dir/LoginCallData.cpp.obj"
   "CMakeFiles/Server.dir/LogoutCallData.cpp.obj"

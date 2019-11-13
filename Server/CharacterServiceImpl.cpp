@@ -11,6 +11,7 @@
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
 #include "LogoutCallData.h"
+#include "GetFilesCallData.h"
 #include "MyServiceAuthProcessor.h"
 
 void read(const std::string &filename, std::string &data) {
@@ -73,6 +74,7 @@ void CharacterServiceImpl::HandleRpcs() {
     new RegisterCallData(&service_, cq_.get());
     new LoginCallData(&service_, cq_.get());
     new LogoutCallData(&service_, cq_.get());
+    new GetFilesCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     void *tag;  // uniquely identifies a request.
     bool ok;

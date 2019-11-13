@@ -9151,6 +9151,12 @@
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/CharacterServiceImpl.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetFilesCallData.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetFilesCallData.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="C:/Users/flori/Documents/Universita/Programmazione di sistema/Malnati/Progetto-Malnati/Server/GetSymbolsCallData.cpp">
 			<Option target="Server"/>
 		</Unit>
