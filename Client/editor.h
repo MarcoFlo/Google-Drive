@@ -2,6 +2,10 @@
 #define EDITOR_H
 
 #include <QMainWindow>
+#include <QToolButton>
+#include <QList>
+#include <QMenu>
+#include <QLineEdit>
 
 namespace Ui {
 class Editor;
@@ -53,9 +57,46 @@ private slots:
 
         void ShowContextMenu(const QPoint &);
 
+        void checkFont();
+
+        void changeDim();
+
+        void changeFont();
+
+        void changeZoom();
+
+        void setTextFont(QFont *font);
+
+        void setTextDim(int dim);
+
+        void setTextDimEdit();
 
 private:
     Ui::Editor *ui;
+
+    QMenu *dimMenu;
+
+    QList <QAction*> listaDim;
+
+    QToolButton *dim;
+
+    QActionGroup *dimG;
+
+    QMenu *fontMenu;
+
+    QToolButton *font;
+
+    QList <QAction*> listaFont;
+
+    QActionGroup *fontG;
+
+    QLineEdit *lEdit;
+
+    QMenu *zoomMenu;
+
+    QActionGroup *zoomG;
+
+    QToolButton *zoom;
 
 };
 
