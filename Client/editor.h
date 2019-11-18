@@ -74,6 +74,12 @@ private slots:
 
         void setTextDimEdit();
 
+        void on_verticalScrollBar_sliderMoved(int position);
+
+        void on_txt_cursorPositionChanged();
+
+        void resizeEvent(QResizeEvent* event);
+
 private:
     Ui::Editor *ui;
 

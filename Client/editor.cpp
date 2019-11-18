@@ -21,6 +21,7 @@
 #include <QIntValidator>
 #include <QGridLayout>
 #include <QVBoxLayout>
+#include <QThread>
 
 Editor::Editor(QWidget *parent) :
     QMainWindow(parent),
@@ -34,7 +35,7 @@ Editor::Editor(QWidget *parent) :
                 this, SLOT(ShowContextMenu(const QPoint &)));
 
         QObject::connect(ui->txt, SIGNAL(cursorPositionChanged()), this, SLOT(checkFont()));
-
+        on_txt_cursorPositionChanged();
 
         //MENU FONT
 
@@ -242,45 +243,47 @@ Editor::Editor(QWidget *parent) :
        neroB->setCheckable(true);
        neroB->setChecked(true);
        coloreG->addWidget(neroB, 0, 0);
-       QObject::connect(neroB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(neroB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *rossoB = new QPushButton(this);
        rossoB->setStyleSheet("background-color:rgb(255,0,0)");
        rossoB->setAutoExclusive(true);
        rossoB->setCheckable(true);
        coloreG->addWidget(rossoB, 0, 1);
-       QObject::connect(rossoB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(rossoB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *verdeB = new QPushButton(this);
        verdeB->setStyleSheet("background-color:rgb(0,255,0)");
        verdeB->setAutoExclusive(true);
        verdeB->setCheckable(true);
        coloreG->addWidget(verdeB, 0, 2);
-       QObject::connect(verdeB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(verdeB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *gialloB = new QPushButton(this);
        gialloB->setStyleSheet("background-color:rgb(253,244,3)");
        gialloB->setAutoExclusive(true);
        gialloB->setCheckable(true);
        coloreG->addWidget(gialloB, 1, 0);
-       QObject::connect(gialloB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(gialloB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *grigioB = new QPushButton(this);
        grigioB->setStyleSheet("background-color:rgb(112,112,112)");
        grigioB->setAutoExclusive(true);
        grigioB->setCheckable(true);
        coloreG->addWidget(grigioB, 1, 1);
-       QObject::connect(grigioB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(grigioB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *azzurroB = new QPushButton(this);
        azzurroB->setStyleSheet("background-color:rgb(7,203,238)");
        azzurroB->setAutoExclusive(true);
        azzurroB->setCheckable(true);
        coloreG->addWidget(azzurroB, 1, 2);
-       QObject::connect(azzurroB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+       QObject::connect(azzurroB, SIGNAL(clicked(bool)), this, SLOT(changeColor()));
 
        QPushButton *editB = new QPushButton("Altri Colori", this);
        coloreV->addWidget(editB);
+
+       //QObject::connect(editB, SIGNAL(clicked(bool)), this, SLOT(on_actioncolore_triggered()));
 
        colore = new QToolButton(this);
        colore->setStyleSheet("background-color:rgb(0,0,0)");
@@ -409,11 +412,19 @@ void Editor::on_actionsottolineato_triggered()
 
 void Editor::on_actioncolore_triggered()
 {
-    QColor color = QColorDialog::getColor(Qt::black, this, "Scegli un colore");         //bisogna aggiungere il colore attuale
-    if(color.isValid()) {
-        ui->txt->setTextColor(color);
-    }
-    else return;
+    QColor colB = colore->palette().color(QPalette::Background);
+
+                QColor color = QColorDialog::getColor(colB, this, "Scegli un colore");
+                if(color.isValid()) {
+                    ui->txt->setTextColor(color);
+                    QString qss = QString("background-color: %1").arg(color.name());
+                    colore->setStyleSheet(qss);
+                }
+                else {
+                    return;
+                }
+
+                checkFont();
 }
 
 void Editor::on_actionfont_triggered()
@@ -484,6 +495,7 @@ void Editor::checkFont()
         if(QString::compare(listaFont.at(y)->text(), ui->txt->currentFont().family(), Qt::CaseSensitive)==0)
         {
              listaFont.at(y)->setChecked(true);
+             qDebug()<< y;
              break;
         }
         else
@@ -507,6 +519,7 @@ void Editor::checkFont()
         }
         else
         {
+
             listaColor.at(z)->setChecked(false);
         }
     }
@@ -564,12 +577,11 @@ void Editor::changeColor()
 void Editor::setTextFont(QFont *font)
 {
     QTextCursor cursor = ui->txt->textCursor();
-    QTextCharFormat *format = new QTextCharFormat();
-    format->setFont(*font);
-    format->setFontPointSize(ui->txt->currentFont().pointSize());
-
-    cursor.setCharFormat(*format);
-
+    QTextCharFormat format = cursor.charFormat();
+    format.setFont(*font);
+    //format.setFontPointSize(ui->txt->currentFont().pointSize());
+    cursor.setCharFormat(format);
+    ui->txt->setTextCursor(cursor);
     checkFont();
 
 }
@@ -577,12 +589,12 @@ void Editor::setTextFont(QFont *font)
 void Editor::setTextDim(int dim)
 {
     QTextCursor cursor = ui->txt->textCursor();
-    QTextCharFormat *format = new QTextCharFormat();
-    format->setFont(ui->txt->currentFont().family());
-    format->setFontPointSize(dim);
+    QTextCharFormat format = cursor.charFormat();
+    //format.setFont(ui->txt->currentFont().family());
+    format.setFontPointSize(dim);
 
-    cursor.setCharFormat(*format);
-
+    cursor.setCharFormat(format);
+    ui->txt->setTextCursor(cursor);
     checkFont();
 }
 
@@ -591,4 +603,21 @@ void Editor::setTextDimEdit()
 {
     int dim = lEdit->text().toInt();
     setTextDim(dim);
+}
+
+void Editor::on_verticalScrollBar_sliderMoved(int position)
+{
+    ui->txt->verticalScrollBar()->setValue(position);
+}
+
+void Editor::on_txt_cursorPositionChanged()
+{
+    ui->verticalScrollBar->setPageStep(ui->txt->verticalScrollBar()->pageStep());
+    ui->verticalScrollBar->setRange(ui->txt->verticalScrollBar()->minimum(),ui->txt->verticalScrollBar()->maximum());
+    ui->verticalScrollBar->setValue(ui->txt->verticalScrollBar()->value());
+}
+
+void Editor::resizeEvent(QResizeEvent* event)
+{
+    on_txt_cursorPositionChanged();
 }
