@@ -85,7 +85,7 @@ Editor::Editor(QWidget *parent) :
         font->setMenu(fontMenu);
         font->setPopupMode(QToolButton::InstantPopup);
 
-        ui->toolBar_2->insertWidget(ui->actioncolore, font);
+        ui->toolBar_2->insertWidget(ui->actiongrassetto, font);
 
         QObject::connect(fontG, SIGNAL(triggered(QAction*)), this, SLOT(changeFont()));
 
@@ -176,7 +176,7 @@ Editor::Editor(QWidget *parent) :
        dim->setMenu(dimMenu);
        dim->setPopupMode(QToolButton::InstantPopup);
 
-       ui->toolBar_2->insertWidget(ui->actioncolore, dim);
+       ui->toolBar_2->insertWidget(ui->actiongrassetto, dim);
 
        QObject::connect(dimG, SIGNAL(triggered(QAction*)), this, SLOT(changeDim()));
 
@@ -283,14 +283,14 @@ Editor::Editor(QWidget *parent) :
        QPushButton *editB = new QPushButton("Altri Colori", this);
        coloreV->addWidget(editB);
 
-       //QObject::connect(editB, SIGNAL(clicked(bool)), this, SLOT(on_actioncolore_triggered()));
+       QObject::connect(editB, SIGNAL(clicked(bool)), this, SLOT(on_actioncolore_triggered()));
 
        colore = new QToolButton(this);
        colore->setStyleSheet("background-color:rgb(0,0,0)");
        colore->setMenu(coloreM);
        colore->setPopupMode(QToolButton::InstantPopup);
 
-       ui->toolBar_2->insertWidget(ui->actioncolore, colore);
+       ui->toolBar_2->insertWidget(ui->actiongrassetto, colore);
 
        listaColor.insert(0, neroB);
        listaColor.insert(1, rossoB);
@@ -298,6 +298,8 @@ Editor::Editor(QWidget *parent) :
        listaColor.insert(3, gialloB);
        listaColor.insert(4, grigioB);
        listaColor.insert(5, azzurroB);
+
+       ui->toolBar_2->insertSeparator(ui->actiongrassetto);
 }
 
 Editor::~Editor()
@@ -533,13 +535,13 @@ void Editor::changeDim()
 {
     int dim = dimG->checkedAction()->text().toInt();
     setTextDim(dim);
+    lEdit->clear();
 }
 
 void Editor::changeFont()
 {
     QString fontS = fontG->checkedAction()->text();
-    QFont *font = new QFont(fontS);
-    setTextFont(font);
+    setTextFont(fontS);
 }
 
 void Editor::changeZoom()
@@ -574,30 +576,33 @@ void Editor::changeColor()
     checkFont();
 }
 
-void Editor::setTextFont(QFont *font)
+void Editor::setTextFont(QString fontS)
 {
+    QFont *font1 = new QFont(fontS);
     QTextCursor cursor = ui->txt->textCursor();
-    QTextCharFormat format = cursor.charFormat();
-    format.setFont(*font);
-    //format.setFontPointSize(ui->txt->currentFont().pointSize());
+    QTextCharFormat format = cursor.blockCharFormat();
+    format.setFont(*font1);
+    format.setFontPointSize(ui->txt->currentFont().pointSize());
     cursor.setCharFormat(format);
     ui->txt->setTextCursor(cursor);
-    checkFont();
+
+    font->setText(fontS);
+    font->setFont(fontS);
+    //checkFont();
 
 }
 
-void Editor::setTextDim(int dim)
+void Editor::setTextDim(int dim1)
 {
     QTextCursor cursor = ui->txt->textCursor();
-    QTextCharFormat format = cursor.charFormat();
-    //format.setFont(ui->txt->currentFont().family());
-    format.setFontPointSize(dim);
-
+    QTextCharFormat format = cursor.blockCharFormat();
+    format.setFont(ui->txt->currentFont().family());
+    format.setFontPointSize(dim1);
     cursor.setCharFormat(format);
     ui->txt->setTextCursor(cursor);
-    checkFont();
+    dim->setText(QString::number(dim1));
+    //checkFont();
 }
-
 
 void Editor::setTextDimEdit()
 {

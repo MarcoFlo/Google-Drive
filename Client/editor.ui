@@ -119,7 +119,7 @@
      <x>0</x>
      <y>0</y>
      <width>809</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menutools">
@@ -149,7 +149,6 @@
     <addaction name="actiongrassetto"/>
     <addaction name="actioncorsivo"/>
     <addaction name="actionsottolineato"/>
-    <addaction name="actioncolore"/>
    </widget>
    <addaction name="menutools"/>
    <addaction name="menuoj"/>
@@ -212,8 +211,6 @@
    <addaction name="actionallineaC"/>
    <addaction name="actionallineaD"/>
    <addaction name="actionalineaG"/>
-   <addaction name="separator"/>
-   <addaction name="actioncolore"/>
    <addaction name="separator"/>
    <addaction name="actiongrassetto"/>
    <addaction name="actioncorsivo"/>
@@ -330,11 +327,6 @@
    </property>
    <property name="text">
     <string>sottolineato</string>
-   </property>
-  </action>
-  <action name="actioncolore">
-   <property name="text">
-    <string>colore</string>
    </property>
   </action>
  </widget>

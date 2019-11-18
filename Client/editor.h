@@ -68,7 +68,7 @@ private slots:
 
         void changeColor();
 
-        void setTextFont(QFont *font);
+        void setTextFont(QString fontS);
 
         void setTextDim(int dim);
 
