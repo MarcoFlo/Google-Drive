@@ -10,7 +10,7 @@
 #include "editor.h"
 #include "nuovo.h"
 
-#include <grpcpp/grpcpp.h>
+/*#include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
 #include "comunication/SharedEditor.h"
@@ -25,8 +25,9 @@ void read(const std::string &filename, std::string &data) {
         data = ss.str();
     }
 }
-
+*/
 int main(int argc, char **argv) {
+    /*
     std::string serverCert;
     read("../../certs/server.cert", serverCert);
     grpc::SslCredentialsOptions opts;
@@ -54,7 +55,7 @@ int main(int argc, char **argv) {
 
 
     std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client, token);
-
+*/
     QApplication a(argc, argv);
     SplashScreen w;
     LoginPage l;
@@ -78,7 +79,7 @@ int main(int argc, char **argv) {
     //è bloccante
     a.exec();
 
-    thread_.join(); //blocks forever
+//    thread_.join(); //blocks forever
     return 0;
 
 }

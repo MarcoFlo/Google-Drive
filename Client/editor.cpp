@@ -19,6 +19,8 @@
 #include <QList>
 #include <QTextBlock>
 #include <QIntValidator>
+#include <QGridLayout>
+#include <QVBoxLayout>
 
 Editor::Editor(QWidget *parent) :
     QMainWindow(parent),
@@ -71,10 +73,10 @@ Editor::Editor(QWidget *parent) :
         verdana->setFont(QFont("Verdana"));
         fontG->addAction(verdana);
         fontMenu->addAction(verdana);
-        QWidgetAction *altri = new QWidgetAction(fontMenu);
+        /*QWidgetAction *altri = new QWidgetAction(fontMenu);
         QPushButton *altriB = new QPushButton("Altri Caratteri", this);
         altri->setDefaultWidget(altriB);
-        fontMenu->addAction(altri);
+        fontMenu->addAction(altri);*/
 
         font = new QToolButton(this);
         font->setText("Arial");
@@ -86,7 +88,7 @@ Editor::Editor(QWidget *parent) :
 
         QObject::connect(fontG, SIGNAL(triggered(QAction*)), this, SLOT(changeFont()));
 
-        QObject::connect(altriB, SIGNAL(pressed()), this, SLOT(on_actionfont_triggered()));         //non funge
+        //QObject::connect(altriB, SIGNAL(pressed()), this, SLOT(on_actionfont_triggered()));
 
         listaFont = fontMenu->actions();
 
@@ -146,7 +148,8 @@ Editor::Editor(QWidget *parent) :
        QWidgetAction *edit = new QWidgetAction(dimMenu);
        lEdit = new QLineEdit(this);
        edit->setDefaultWidget(lEdit);
-       lEdit->setValidator(new QIntValidator(1, 100, this));                    //bug sul limite
+       lEdit->setValidator(new QIntValidator(1, 100, this));
+       lEdit->setMaxLength(2);
        dimMenu->addAction(edit);
 
        /*QString  menuStyle(
@@ -225,39 +228,73 @@ Editor::Editor(QWidget *parent) :
 
        QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));
 
-       /*prova
+       //COLORE
 
-       QMenu *provaM = new QMenu();
-       provaM->setStyleSheet(" {background-color: yellow} ");
+       QMenu *coloreM = new QMenu();
+       QVBoxLayout *coloreV = new QVBoxLayout(coloreM);
+       QGridLayout *coloreG = new QGridLayout(coloreM);
+       coloreM->setLayout(coloreV);
+       coloreV->addLayout(coloreG);
 
-       QWidgetAction *uno = new QWidgetAction(provaM);
-       QPushButton *unoB = new QPushButton("uno", this);
-       unoB->setAutoExclusive(true);
-       unoB->setCheckable(true);
-       uno->setDefaultWidget(unoB);
-       provaM->addAction(uno);
+       QPushButton *neroB = new QPushButton(this);
+       neroB->setStyleSheet("background-color:rgb(0,0,0)");
+       neroB->setAutoExclusive(true);
+       neroB->setCheckable(true);
+       neroB->setChecked(true);
+       coloreG->addWidget(neroB, 0, 0);
+       QObject::connect(neroB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
 
-       QWidgetAction *due = new QWidgetAction(provaM);
-       QPushButton *dueB = new QPushButton("due", this);
-       dueB->setAutoExclusive(true);
-       dueB->setCheckable(true);
-       due->setDefaultWidget(dueB);
-       provaM->addAction(due);
+       QPushButton *rossoB = new QPushButton(this);
+       rossoB->setStyleSheet("background-color:rgb(255,0,0)");
+       rossoB->setAutoExclusive(true);
+       rossoB->setCheckable(true);
+       coloreG->addWidget(rossoB, 0, 1);
+       QObject::connect(rossoB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
 
-       QWidgetAction *tre = new QWidgetAction(provaM);
-       QPushButton *treB = new QPushButton("tre", this);
-       treB->setAutoExclusive(true);
-       treB->setCheckable(true);
-       tre->setDefaultWidget(treB);
-       provaM->addAction(tre);
+       QPushButton *verdeB = new QPushButton(this);
+       verdeB->setStyleSheet("background-color:rgb(0,255,0)");
+       verdeB->setAutoExclusive(true);
+       verdeB->setCheckable(true);
+       coloreG->addWidget(verdeB, 0, 2);
+       QObject::connect(verdeB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
 
-       QToolButton *prova = new QToolButton(this);
-       prova->setText("prova");
-       prova->setMenu(provaM);
-       prova->setPopupMode(QToolButton::InstantPopup);
+       QPushButton *gialloB = new QPushButton(this);
+       gialloB->setStyleSheet("background-color:rgb(253,244,3)");
+       gialloB->setAutoExclusive(true);
+       gialloB->setCheckable(true);
+       coloreG->addWidget(gialloB, 1, 0);
+       QObject::connect(gialloB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
 
-       ui->toolBar_2->insertWidget(ui->actioncolore, prova);*/
+       QPushButton *grigioB = new QPushButton(this);
+       grigioB->setStyleSheet("background-color:rgb(112,112,112)");
+       grigioB->setAutoExclusive(true);
+       grigioB->setCheckable(true);
+       coloreG->addWidget(grigioB, 1, 1);
+       QObject::connect(grigioB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
 
+       QPushButton *azzurroB = new QPushButton(this);
+       azzurroB->setStyleSheet("background-color:rgb(7,203,238)");
+       azzurroB->setAutoExclusive(true);
+       azzurroB->setCheckable(true);
+       coloreG->addWidget(azzurroB, 1, 2);
+       QObject::connect(azzurroB, SIGNAL(toggled(bool)), this, SLOT(changeColor()));
+
+       QPushButton *editB = new QPushButton("Altri Colori", this);
+       coloreV->addWidget(editB);
+
+       colore = new QToolButton(this);
+       colore->setStyleSheet("background-color:rgb(0,0,0)");
+       colore->setMenu(coloreM);
+       colore->setPopupMode(QToolButton::InstantPopup);
+
+       ui->toolBar_2->insertWidget(ui->actioncolore, colore);
+
+       listaColor.insert(0, neroB);
+       listaColor.insert(1, rossoB);
+       listaColor.insert(2, verdeB);
+       listaColor.insert(3, gialloB);
+       listaColor.insert(4, grigioB);
+       listaColor.insert(5, azzurroB);
 }
 
 Editor::~Editor()
@@ -372,7 +409,7 @@ void Editor::on_actionsottolineato_triggered()
 
 void Editor::on_actioncolore_triggered()
 {
-    QColor color = QColorDialog::getColor(Qt::black, this, "Scegli un colore");
+    QColor color = QColorDialog::getColor(Qt::black, this, "Scegli un colore");         //bisogna aggiungere il colore attuale
     if(color.isValid()) {
         ui->txt->setTextColor(color);
     }
@@ -380,14 +417,14 @@ void Editor::on_actioncolore_triggered()
 }
 
 void Editor::on_actionfont_triggered()
-{                                              //la font Dialog non si aggiorna con lo stile corrente
-    bool ok;
+{
+    /*bool ok;
     QFont font = QFontDialog::getFont(&ok, this);
     if(ok)
     {
         setTextFont(&font);
     }
-    else return;
+    else return;*/
 }
 
 void Editor::ShowContextMenu(const QPoint &pos)
@@ -459,6 +496,24 @@ void Editor::checkFont()
     font->setText(ui->txt->currentFont().family());
     font->setFont(QFont(ui->txt->currentFont().family()));
 
+    QColor colorText=ui->txt->currentCharFormat().foreground().color();
+
+    for(int z=0; z<6; z++)
+    {
+        if(listaColor.at(z)->palette().color(QPalette::Background)==colorText)
+        {
+            listaColor.at(z)->setChecked(true);
+            break;
+        }
+        else
+        {
+            listaColor.at(z)->setChecked(false);
+        }
+    }
+
+    QString qss = QString("background-color: %1").arg(colorText.name());
+    colore->setStyleSheet(qss);
+
 }
 
 void Editor::changeDim()
@@ -476,32 +531,44 @@ void Editor::changeFont()
 
 void Editor::changeZoom()
 {
-    QString zoomS = zoomG->checkedAction()->text();
+    /*QString zoomS = zoomG->checkedAction()->text();
     int zoomI = zoomS.split("%")[0].toInt();                            //da fare
+    if(zoomI>100)
+    {
+        ui->centralwidget->ed
+    }
+    else if(zoom<100)
+    {
+
+    }*/
+
+}
+
+void Editor::changeColor()
+{
+    for(int i=0; i<6; i++)
+    {
+        if(listaColor.at(i)->isChecked())
+        {
+            QColor color1 = listaColor.at(i)->palette().color(QPalette::Background);
+
+            ui->txt->setTextColor(color1);
+
+            break;
+        }
+    }
+
+    checkFont();
 }
 
 void Editor::setTextFont(QFont *font)
 {
     QTextCursor cursor = ui->txt->textCursor();
-    QString sel = cursor.selectedText();
     QTextCharFormat *format = new QTextCharFormat();
     format->setFont(*font);
     format->setFontPointSize(ui->txt->currentFont().pointSize());
 
-    if(QString::compare(sel, "", Qt::CaseSensitive)==0)
-    {
-        cursor.setCharFormat(*format);
-        ui->txt->setTextCursor(cursor);
-    }
-    else
-    {
-        cursor.setBlockCharFormat(*format);                             //non cambia il font della selezione
-        //ui->txt->setTextCursor(cursor);
-        //QTextDocumentFragment sel2 = cursor.selection();
-        //QString sel3 = cursor.selectedText();
-        //ui->txt->textCursor().insertText(sel3)
-        ui->txt->setTextCursor(cursor);
-    }
+    cursor.setCharFormat(*format);
 
     checkFont();
 
@@ -510,28 +577,15 @@ void Editor::setTextFont(QFont *font)
 void Editor::setTextDim(int dim)
 {
     QTextCursor cursor = ui->txt->textCursor();
-    QString sel = cursor.selectedText();
     QTextCharFormat *format = new QTextCharFormat();
     format->setFont(ui->txt->currentFont().family());
     format->setFontPointSize(dim);
 
-    if(QString::compare(sel, "", Qt::CaseSensitive)==0)
-    {
-        cursor.setCharFormat(*format);
-        ui->txt->setTextCursor(cursor);
-    }
-    else
-    {
-        cursor.setBlockCharFormat(*format);                             //non cambia la dim della selezione
-        //ui->txt->setTextCursor(cursor);
-        //QTextDocumentFragment sel2 = cursor.selection();
-        //QString sel3 = cursor.selectedText();
-        //ui->txt->textCursor().insertText(sel3)
-        ui->txt->setTextCursor(cursor);
-    }
+    cursor.setCharFormat(*format);
 
     checkFont();
 }
+
 
 void Editor::setTextDimEdit()
 {

@@ -6,6 +6,7 @@
 #include <QList>
 #include <QMenu>
 #include <QLineEdit>
+#include <QPushButton>
 
 namespace Ui {
 class Editor;
@@ -65,6 +66,8 @@ private slots:
 
         void changeZoom();
 
+        void changeColor();
+
         void setTextFont(QFont *font);
 
         void setTextDim(int dim);
@@ -97,6 +100,10 @@ private:
     QActionGroup *zoomG;
 
     QToolButton *zoom;
+
+    QList <QPushButton*> listaColor;
+
+    QToolButton *colore;
 
 };
 
