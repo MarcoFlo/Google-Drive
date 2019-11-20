@@ -15,9 +15,11 @@ void GetFilesCallData::Proceed() {
     if (status_ == CREATE) {
         status_ = PROCESS;
         service_->RequestGetFiles(&ctx_, &request_, &responder_, cq_, cq_,
-                                this);
+                                  this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a GetFiles request from" << ctx_.auth_context()->GetPeerIdentityPropertyName() << std::endl;
+        new GetFilesCallData(service_, cq_);
+        std::cout << "Received a GetFiles request from" << ctx_.auth_context()->GetPeerIdentityPropertyName()
+                  << std::endl;
 
         std::for_each(ctx_.auth_context()->begin(),
                       ctx_.auth_context()->end(),
@@ -29,9 +31,8 @@ void GetFilesCallData::Proceed() {
                           std::cout << elem.first << "     " << elem.second << std::endl;
                       });
 
+        //TODO
 
-
-        new GetFilesCallData(service_, cq_);
         status_ = FINISH;
         responder_.Finish(reply_, grpc::Status::OK, this);
 
