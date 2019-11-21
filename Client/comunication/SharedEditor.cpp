@@ -14,11 +14,13 @@
 #include "SharedEditor.h"
 
 SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _client(client), _counter(0) {
-//    _siteId = client.Login(userL);
+//    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
+
 }
 
 SharedEditor::~SharedEditor() {
-//    client.Logout(_siteId);
+//    asyncClientGetSymbols->CloseRpc();
+
 }
 
 /**

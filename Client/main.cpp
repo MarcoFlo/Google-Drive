@@ -14,6 +14,7 @@
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
 #include "comunication/SharedEditor.h"
+#include "comunication/AsyncClientGetSymbols.h"
 
 void read(const std::string &filename, std::string &data) {
     std::ifstream file(filename.c_str(), std::ios::in);
@@ -52,8 +53,10 @@ int main(int argc, char **argv) {
     client.Logout(token);
     token = client.Login(userL);
 
+    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
 
-    std::thread thread_ = std::thread(&CharacterClient::GetSymbols, &client, token);
+
+    std::thread thread_ = std::thread(&CharacterClient::AsyncCompleteRpc, &client);
 
     QApplication a(argc, argv);
     SplashScreen w;
@@ -78,7 +81,6 @@ int main(int argc, char **argv) {
     //è bloccante
     a.exec();
 
-    thread_.join(); //blocks forever
     return 0;
 
 }

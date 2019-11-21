@@ -2,6 +2,7 @@
 #include <string>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
+#include "AsyncClientGetSymbols.h"
 #include "CharacterClient.h"
 
 
@@ -65,26 +66,23 @@ void CharacterClient::Logout(std::string token) {
 }
 
 
-void CharacterClient::GetSymbols(std::string token) {
+AsyncClientGetSymbols * CharacterClient::GetSymbols(const std::string& filename,const std::string& token) {
     protobuf::FileName request;
-    request.set_filename("file1");
+    request.set_filename(filename);
+    return new AsyncClientGetSymbols(request, token, cq_, stub_);
+}
 
-    grpc::ClientContext context;
-    context.AddMetadata("token", token);
-    std::unique_ptr<grpc::ClientReader<protobuf::Message>> reader(stub_->GetSymbols(&context, request));
 
-    protobuf::Message reply;
-    while (reader->Read(&reply)) {
-        std::cout << "Get Symbols received: " << reply.symbol().uniqueid() << std::endl;
+void CharacterClient::AsyncCompleteRpc() {
+    void *got_tag;
+    bool ok = false;
+
+    // Block until the next result is available in the completion queue "cq".
+    while (cq_.Next(&got_tag, &ok)) {
+        AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
+        call->HandleAsync(ok);
     }
 
-    grpc::Status status = reader->Finish();
-    if (status.ok()) {
-        std::cout << "GetSymbols rpc ended." << std::endl;
-    } else {
-        std::cout << "GetSymbols rpc failed." << std::endl;
-        std::cout << status.error_code() << ": " << status.error_message() << std::endl;
-    }
 
 }
 

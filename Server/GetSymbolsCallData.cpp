@@ -61,7 +61,7 @@ void GetSymbolsCallData::Proceed() {
         if (times_++ <= 3) {
             reply_ = MakeMessage(MakeSymbol("a", std::to_string(times_), {0}), false);
             responder_.Write(reply_, this);
-            std::this_thread::sleep_for(std::chrono::seconds(5));
+            std::this_thread::sleep_for(std::chrono::seconds(1));
         } else {
             status_ = FINISH;
             responder_.Finish(grpc::Status::OK, this);

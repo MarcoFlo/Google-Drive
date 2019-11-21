@@ -4,23 +4,31 @@
 
 #ifndef CLIENT_CHARACTERCLIENT_H
 #define CLIENT_CHARACTERCLIENT_H
+#include "AsyncClientGetSymbols.h"
 
 
 class CharacterClient {
 public:
     explicit CharacterClient(std::shared_ptr<grpc::Channel> channel);
+
+    void AsyncCompleteRpc();
+
     void Register(protobuf::UserR userR);
+
     std::string Login(protobuf::UserL userL);
+
     void Logout(std::string token);
 
-    void GetSymbols(std::string token);
-
+    AsyncClientGetSymbols *GetSymbols(const std::string &filename, const std::string &token);
 
 
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
     std::unique_ptr<protobuf::CharacterService::Stub> stub_;
+
+    grpc::CompletionQueue cq_;
+
 
 };
 
