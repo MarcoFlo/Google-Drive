@@ -4,15 +4,20 @@
 #include <sstream>
 #include <fstream>
 #include <string>
+#include <vector>
+
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
-#include "CharacterServiceImpl.h"
+#include "shaeredImport.h"
 #include "GetSymbolsCallData.h"
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
 #include "LogoutCallData.h"
 #include "GetFilesCallData.h"
 #include "MyServiceAuthProcessor.h"
+#include "CharacterServiceImpl.h"
+
+
 
 void read(const std::string &filename, std::string &data) {
     std::ifstream file(filename.c_str(), std::ios::in);
@@ -69,7 +74,7 @@ void CharacterServiceImpl::Run() {
     HandleRpcs();
 }
 
-
+// This can be run in multiple threads if needed.
 void CharacterServiceImpl::HandleRpcs() {
     new RegisterCallData(&service_, cq_.get());
     new LoginCallData(&service_, cq_.get());
@@ -80,8 +85,17 @@ void CharacterServiceImpl::HandleRpcs() {
     bool ok;
     while (true) {
         GPR_ASSERT(cq_->Next(&tag, &ok));
-        GPR_ASSERT(ok);
-        static_cast<CallData *>(tag)->Proceed();
+        CallData *callData = static_cast<CallData *>(tag);
+
+        if (callData->getClass() == "GetSymbolsCallData" && callData->getCallStatus() == READ_CALLED) {
+            GetSymbolsCallData *getSymbolsCallData = static_cast<GetSymbolsCallData *> (tag);
+            std::cout << "filename available ->" << getSymbolsCallData->getFileName().filename() << std::endl;
+
+
+        }
+        callData->Proceed(ok);
+
+
     }
 }
 

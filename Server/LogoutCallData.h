@@ -9,7 +9,7 @@
 class LogoutCallData final: public CallData {
 public:
     LogoutCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed();
+    void Proceed(bool ok = true);
 
 private:
 
@@ -30,13 +30,6 @@ private:
 
 // The means to get back to the client.
     grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
-
-// Let's implement a tiny state machine with the following states.
-    enum CallStatus {
-        CREATE, PROCESS, FINISH
-    };
-    CallStatus status_;  // The current serving state.
-
 };
 
 

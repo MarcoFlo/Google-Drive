@@ -7,10 +7,16 @@
 
 #include "CallData.h"
 
-class GetSymbolsCallData final: public CallData {
+class GetSymbolsCallData final : public CallData {
 public:
     GetSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed();
+
+    void Proceed(bool ok = true);
+
+    std::string getClass();
+
+    protobuf::FileName getFileName();
+
 
 private:
 
@@ -30,13 +36,8 @@ private:
     protobuf::Message reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncWriter<protobuf::Message> responder_;
+    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileName> responder_;
 
-// Let's implement a tiny state machine with the following states.
-    enum CallStatus {
-        CREATE, PROCESS, FINISH
-    };
-    CallStatus status_;  // The current serving state.
 
     int times_;
 

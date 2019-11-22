@@ -14,10 +14,12 @@ public:
                           std::unique_ptr<protobuf::CharacterService::Stub> &stub_);
 
 
-    std::unique_ptr<grpc::ClientAsyncReader<protobuf::Message>> responder;
+    std::unique_ptr<grpc::ClientAsyncReaderWriter<protobuf::FileName,protobuf::Message>> responder;
 
     // Container for the data we expect from the server.
     protobuf::Message reply_;
+    
+    protobuf::FileName request_;
 };
 
 

@@ -4,35 +4,37 @@
 
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
     if (callStatus == CREATE) {
-// todo capire perchè se non fai una prima read, la reply è vuota
-        responder->Read(&reply_, (void *) this);
-        callStatus = PROCESS;
-    } else if (callStatus == PROCESS) {
+        responder->Write(request_, this);
+        callStatus = READ;
+    } else if (callStatus == READ) {
         if (!ok) {
-            responder->Finish(&status, (void *) this);
-            callStatus = FINISH;
+            CloseRpc();
             return;
         }
-        responder->Read(&reply_, (void *) this);
-        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << std::endl;
+        callStatus = READ_CALLED;
+        responder->Read(&reply_, this);
 
+    } else if (callStatus == READ_CALLED) {
+        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << std::endl;
+        callStatus = READ;
     } else if (callStatus == FINISH) {
-        std::cout << "Server finished rpc" << std::endl;
+        std::cout << "GetSymbols rpc finished" << std::endl;
         delete this;
     }
 }
 
+
+
 AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileName &request, const std::string &token,
                                              grpc::CompletionQueue &cq_,
-                                             std::unique_ptr<protobuf::CharacterService::Stub> &stub_) {
+                                             std::unique_ptr<protobuf::CharacterService::Stub> &stub_): request_(request) {
     context.AddMetadata("token", token);
-    responder = stub_->AsyncGetSymbols(&context, request, &cq_, (void *) this);
+    responder = stub_->AsyncGetSymbols(&context, &cq_, this);
 }
 
 void AsyncClientGetSymbols::CloseRpc() {
-    responder->Finish(&status, (void *) this);
-    //todo controllare questo delete
-    delete this;
+    responder->Finish(&status, this);
+    callStatus = FINISH;
 
 }
 

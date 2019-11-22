@@ -5,12 +5,12 @@
 
 
 LoginCallData::LoginCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq)
-        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE) {
+        : service_(service), cq_(cq), responder_(&ctx_) {
     Proceed();
 
 }
 
-void LoginCallData::Proceed() {
+void LoginCallData::Proceed(bool ok) {
     if (status_ == CREATE) {
         status_ = PROCESS;
         service_->RequestLogin(&ctx_, &request_, &responder_, cq_, cq_,

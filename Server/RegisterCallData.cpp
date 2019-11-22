@@ -4,12 +4,12 @@
 #include "RegisterCallData.h"
 
 RegisterCallData::RegisterCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq)
-        : service_(service), cq_(cq), responder_(&ctx_), status_(CREATE) {
+        : service_(service), cq_(cq), responder_(&ctx_) {
     Proceed();
 
 }
 
-void RegisterCallData::Proceed() {
+void RegisterCallData::Proceed(bool ok) {
     if (status_ == CREATE) {
         status_ = PROCESS;
         service_->RequestRegister(&ctx_, &request_, &responder_, cq_, cq_,
@@ -26,3 +26,4 @@ void RegisterCallData::Proceed() {
         delete this;
     }
 }
+

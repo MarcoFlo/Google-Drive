@@ -1,14 +1,24 @@
-//
-// Created by flori on 28/10/2019.
-//
-
 #ifndef SERVER_CALLDATA_H
 #define SERVER_CALLDATA_H
 
+#include "shaeredImport.h"
 
 class CallData {
 public:
-    virtual void Proceed() = 0;
+    explicit CallData() : status_(CREATE) {}
+
+    virtual void Proceed(bool = true) = 0;
+
+    virtual std::string getClass() {
+        return "";
+    }
+
+    virtual CallStatus getCallStatus() {
+        return status_;
+    }
+
+    CallStatus status_;  // The current serving state.
+
 };
 
 

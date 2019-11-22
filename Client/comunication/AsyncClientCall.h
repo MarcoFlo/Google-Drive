@@ -9,7 +9,7 @@ public:
     virtual void CloseRpc() = 0;
 
     enum CallStatus {
-        CREATE, PROCESS, FINISH, DESTROY
+        CREATE, READ, READ_CALLED, FINISH, DESTROY
     };
 
     explicit AsyncClientCall() : callStatus(CREATE) {}
