@@ -18,14 +18,6 @@ public:
 
     // Container for the data we expect from the server.
     protobuf::Message reply_;
-    // Context for the client. It could be used to convey extra information to
-    // the server and/or tweak certain RPC behaviors.
-//    grpc::ClientContext context;
-
-    // Storage for the status of the RPC upon completion.
-//    grpc::Status status;
-
-
 };
 
 

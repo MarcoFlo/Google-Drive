@@ -2,9 +2,12 @@
 #include "messageP.grpc.pb.h"
 #include "AsyncClientGetSymbols.h"
 
-//todo capire cosa fare del bool ok
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
-    if (callStatus == PROCESS) {
+    if (callStatus == CREATE) {
+// todo capire perchè se non fai una prima read, la reply è vuota
+        responder->Read(&reply_, (void *) this);
+        callStatus = PROCESS;
+    } else if (callStatus == PROCESS) {
         if (!ok) {
             responder->Finish(&status, (void *) this);
             callStatus = FINISH;
