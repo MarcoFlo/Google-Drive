@@ -4,7 +4,7 @@
 
 class AsyncClientCall {
 public:
-    virtual void HandleAsync(bool = true) = 0;
+    virtual void HandleAsync(bool ok) = 0;
 
     virtual void CloseRpc() = 0;
 

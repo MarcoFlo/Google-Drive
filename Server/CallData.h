@@ -7,7 +7,7 @@ class CallData {
 public:
     explicit CallData() : status_(CREATE) {}
 
-    virtual void Proceed(bool = true) = 0;
+    virtual void Proceed(bool ok) = 0;
 
     virtual std::string getClass() {
         return "";

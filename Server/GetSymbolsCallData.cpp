@@ -30,31 +30,37 @@ GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService 
 }
 
 void GetSymbolsCallData::Proceed(bool ok) {
+    if (status_ == FINISH) {
+        delete this;
+        return;
+    }
+
     if (!ok) {
         std::cout << "finish" << std::endl;
         responder_.Finish(grpc::Status::OK, this);
         status_ = FINISH;
-    } else {
-        if (status_ == CREATE) {
-            std::cout << "create" << std::endl;
+        return;
+    }
+    if (status_ == CREATE) {
+        std::cout << "create" << std::endl;
 
-            // Make this instance progress to the PROCESS state.
-            status_ = READ;
+        // Make this instance progress to the PROCESS state.
+        status_ = READ;
 
-            // As part of the initial CREATE state, we *request* that the system
-            // start processing SayHello requests. In this request, "this" acts are
-            // the tag uniquely identifying the request (so that different CallData
-            // instances can serve different requests concurrently), in this case
-            // the memory address of this CallData instance.
-            service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
-        } else if (status_ == READ) {
-            new GetSymbolsCallData(service_, cq_);
-            std::cout << "Read status" << std::endl;
+        // As part of the initial CREATE state, we *request* that the system
+        // start processing SayHello requests. In this request, "this" acts are
+        // the tag uniquely identifying the request (so that different CallData
+        // instances can serve different requests concurrently), in this case
+        // the memory address of this CallData instance.
+        service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
+    } else if (status_ == READ) {
+        new GetSymbolsCallData(service_, cq_);
+        std::cout << "Read status" << std::endl;
 
-            responder_.Read(&request_, this);
-            status_ = READ_CALLED;
+        responder_.Read(&request_, this);
+        status_ = READ_CALLED;
 
-        } else if (status_ == READ_CALLED) {
+    } else if (status_ == READ_CALLED) {
 
 
 //            std::cout << "Received a GetSymbol request for: " << request_.filename() << std::endl;
@@ -67,14 +73,9 @@ void GetSymbolsCallData::Proceed(bool ok) {
 //                      [](auto &elem) {
 //                          std::cout << elem.first << "     " << elem.second << std::endl;
 //                      });
-            reply_ = MakeMessage(MakeSymbol("a", std::to_string(times_), {0}), false);
-            responder_.Write(reply_, this);
-            status_ = READ;
-        } else {
-            GPR_ASSERT(status_ == FINISH);
-            // Once in the FINISH state, deallocate ourselves (CallData).
-            delete this;
-        }
+        reply_ = MakeMessage(MakeSymbol("a", std::to_string(times_), {0}), false);
+        responder_.Write(reply_, this);
+        status_ = READ;
     }
 }
 
