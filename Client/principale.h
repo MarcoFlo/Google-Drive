@@ -39,6 +39,9 @@ private slots:
 private:
     Ui::Principale *ui;
 
+    /* client stuff */
+    std::string session_id;
+
 };
 
 #endif // PRINCIPALE_H
