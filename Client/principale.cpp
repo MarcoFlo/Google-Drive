@@ -6,17 +6,51 @@
 #include <QFileDialog>
 #include <QMessageBox>
 
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
+#include "comunication/SharedEditor.h"
+#include "comunication/AsyncClientGetSymbols.h"
+
+void read(const std::string &filename, std::string &data) {
+    std::ifstream file(filename.c_str(), std::ios::in);
+
+    if (file.is_open()) {
+        std::stringstream ss;
+        ss << file.rdbuf();
+        file.close();
+        data = ss.str();
+    }
+}
+
 Principale::Principale(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
+
+    // client initialization
+    //
+    std::string serverCert;
+    read("../../certs/server.cert", serverCert);
+    grpc::SslCredentialsOptions opts;
+    opts.pem_root_certs = serverCert;
+    auto channel_creds = grpc::SslCredentials(opts);
+    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
+
 }
 
 Principale::~Principale()
 {
     delete ui;
 }
+
+
+/*
+ *  ****************************************
+ *              PRIVATE SLOTS
+ *  ****************************************
+ */
 
 void Principale::on_nuovo_clicked()
 {

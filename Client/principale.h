@@ -5,6 +5,11 @@
 #include "nuovo.h"
 #include "condividi.h"
 
+#include <iostream>
+#include <thread>
+#include <sstream>
+#include <fstream>
+
 namespace Ui {
 class Principale;
 }
