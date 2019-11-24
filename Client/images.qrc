@@ -1,5 +1,17 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>img/logo.png</file>
-    </qresource>
+  <qresource prefix="/images">
+    <file>img/icons/icons8-redo-50.png</file>
+    <file>img/icons/icons8-undo-50.png</file>
+    <file>img/icons/icons8-bold-30.png</file>
+    <file>img/icons/icons8-italic-30.png</file>
+    <file>img/icons/icons8-underline-30.png</file>
+    <file>img/icons/icons8-align-center-50.png</file>
+    <file>img/icons/icons8-align-justify-50.png</file>
+    <file>img/icons/icons8-align-left-50.png</file>
+    <file>img/icons/icons8-align-right-50.png</file>
+    <file>img/logo.png</file>
+    <file>img/icons/copy.png</file>
+    <file>img/icons/cut.png</file>
+    <file>img/icons/paste.png</file>
+  </qresource>
 </RCC>

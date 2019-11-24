@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
-    <height>600</height>
+    <width>715</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -118,7 +118,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>809</width>
+     <width>715</width>
      <height>21</height>
     </rect>
    </property>
@@ -246,26 +246,46 @@
    </property>
   </action>
   <action name="actionredo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-redo-50.png</normaloff>:/images/img/icons/icons8-redo-50.png</iconset>
+   </property>
    <property name="text">
     <string>redo</string>
    </property>
   </action>
   <action name="actioncopia">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/copy.png</normaloff>:/images/img/icons/copy.png</iconset>
+   </property>
    <property name="text">
     <string>copia</string>
    </property>
   </action>
   <action name="actionincolla">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/paste.png</normaloff>:/images/img/icons/paste.png</iconset>
+   </property>
    <property name="text">
     <string>incolla</string>
    </property>
   </action>
   <action name="actiontaglia">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/cut.png</normaloff>:/images/img/icons/cut.png</iconset>
+   </property>
    <property name="text">
     <string>taglia</string>
    </property>
   </action>
   <action name="actionundo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-undo-50.png</normaloff>:/images/img/icons/icons8-undo-50.png</iconset>
+   </property>
    <property name="text">
     <string>undo</string>
    </property>
@@ -273,6 +293,10 @@
   <action name="actionallineaD">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-align-right-50.png</normaloff>:/images/img/icons/icons8-align-right-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaD</string>
@@ -285,6 +309,10 @@
    <property name="checked">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-align-left-50.png</normaloff>:/images/img/icons/icons8-align-left-50.png</iconset>
+   </property>
    <property name="text">
     <string>allineaS</string>
    </property>
@@ -292,6 +320,10 @@
   <action name="actionallineaC">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-align-center-50.png</normaloff>:/images/img/icons/icons8-align-center-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaC</string>
@@ -301,6 +333,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-align-justify-50.png</normaloff>:/images/img/icons/icons8-align-justify-50.png</iconset>
+   </property>
    <property name="text">
     <string>alineaG</string>
    </property>
@@ -308,6 +344,10 @@
   <action name="actiongrassetto">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-bold-30.png</normaloff>:/images/img/icons/icons8-bold-30.png</iconset>
    </property>
    <property name="text">
     <string>grassetto</string>
@@ -317,6 +357,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-italic-30.png</normaloff>:/images/img/icons/icons8-italic-30.png</iconset>
+   </property>
    <property name="text">
     <string>corsivo</string>
    </property>
@@ -324,6 +368,10 @@
   <action name="actionsottolineato">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/img/icons/icons8-underline-30.png</normaloff>:/images/img/icons/icons8-underline-30.png</iconset>
    </property>
    <property name="text">
     <string>sottolineato</string>

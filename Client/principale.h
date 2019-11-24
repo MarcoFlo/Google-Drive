@@ -2,8 +2,13 @@
 #define PRINCIPALE_H
 
 #include <QMainWindow>
+#include "loginpage.h"
+#include "registrationpage.h"
 #include "nuovo.h"
 #include "condividi.h"
+#include "importa.h"
+#include "splashscreen.h"
+#include "editor.h"
 
 #include <iostream>
 #include <thread>
@@ -43,6 +48,11 @@ private slots:
 
 private:
     Ui::Principale *ui;
+
+    SplashScreen w;
+    LoginPage l;
+    RegistrationPage r;
+    Editor e;
 
     /* client stuff */
     std::string session_id;
