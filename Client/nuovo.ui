@@ -34,7 +34,7 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -72,13 +72,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>250</y>
-     <width>331</width>
-     <height>25</height>
+     <width>338</width>
+     <height>30</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -102,6 +102,12 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>nome</tabstop>
+  <tabstop>cond</tabstop>
+  <tabstop>conferma</tabstop>
+  <tabstop>Annulla</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -33,7 +33,8 @@ SOURCES += \
         nuovo.cpp \
         principale.cpp \
     registrationpage.cpp \
-    splashscreen.cpp
+    splashscreen.cpp \
+    account.cpp
 
 HEADERS += \
     condividi.h \
@@ -43,7 +44,8 @@ HEADERS += \
         nuovo.h \
         principale.h \
     registrationpage.h \
-    splashscreen.h
+    splashscreen.h \
+    account.h
 
 FORMS += \
     condividi.ui \
@@ -53,7 +55,8 @@ FORMS += \
         nuovo.ui \
         principale.ui \
     registrationpage.ui \
-    splashscreen.ui
+    splashscreen.ui \
+    account.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

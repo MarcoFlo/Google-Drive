@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QTimer>
+#include "loginpage.h"
 
 namespace Ui {
 class SplashScreen;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::SplashScreen *ui;
+    LoginPage *l;
 };
 
 #endif // SPLASHSCREEN_H

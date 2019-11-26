@@ -16,17 +16,12 @@ RegistrationPage::~RegistrationPage()
 
 void RegistrationPage::on_annulla_clicked()
 {
-    hide();
-    emit openL();
+    emit closeR();
 }
 
 void RegistrationPage::on_registrati_clicked()
 {
     hide();
-    emit openP();
+    emit closeRReg();
 }
 
-void RegistrationPage::Mostra()
-{
-    show();
-}

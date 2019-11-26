@@ -16,7 +16,7 @@ public:
     ~Nuovo();
 
 signals:
-    void openE();
+    void openE(QString);
 
 private slots:
     void on_Annulla_clicked();

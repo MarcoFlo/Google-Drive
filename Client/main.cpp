@@ -12,6 +12,7 @@
 
 //#include <grpcpp/grpcpp.h>
 //#include "messageP.grpc.pb.h"
+/*
 #include "comunication/CharacterClient.h"
 #include "comunication/SharedEditor.h"
 #include "comunication/AsyncClientGetSymbols.h"
@@ -26,7 +27,7 @@ void read(const std::string &filename, std::string &data) {
         data = ss.str();
     }
 }
-
+*/
 int main(int argc, char **argv) {
     /*
     std::string serverCert;
@@ -61,21 +62,8 @@ int main(int argc, char **argv) {
 */
     QApplication a(argc, argv);
     SplashScreen w;
-    LoginPage l;
-    Principale p;
-    RegistrationPage r;
-    Editor e;
 
-    e.show();
-
-    QObject::connect(&w, SIGNAL(openL()), &l, SLOT(Mostra()));
-    QObject::connect(&l, SIGNAL(openR()), &r, SLOT(Mostra()));
-    QObject::connect(&l, SIGNAL(openP()), &p, SLOT(Mostra()));
-    QObject::connect(&r, SIGNAL(openL()), &l, SLOT(Mostra()));
-    QObject::connect(&r, SIGNAL(openP()), &p, SLOT(Mostra()));
-    QObject::connect(&p, SIGNAL(openL()), &l, SLOT(Mostra()));
-    QObject::connect(&e, SIGNAL(openP()), &p, SLOT(Mostra()));
-    QObject::connect(&p, SIGNAL(openE()), &e, SLOT(Mostra()));
+    w.show();
 
     //fa partire l'interfaccia grafica
     //non lasciarlo nel return
