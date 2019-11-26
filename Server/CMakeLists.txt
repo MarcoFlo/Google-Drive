@@ -62,7 +62,7 @@ add_executable(Server
         LogoutCallData.cpp LogoutCallData.h
         MyServiceAuthProcessor.cpp MyServiceAuthProcessor.h
         RegisterCallData.cpp RegisterCallData.h
-        shaeredImport.h)
+        shaeredImport.h InsertSymbolsCallData.cpp InsertSymbolsCallData.h)
 
 #target_link_libraries(Server grpc++_unsecure ssl ${_PROTOBUF_LIBPROTOBUF})
 

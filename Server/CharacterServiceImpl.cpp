@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-
+#include <map>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "shaeredImport.h"
@@ -16,7 +16,6 @@
 #include "GetFilesCallData.h"
 #include "MyServiceAuthProcessor.h"
 #include "CharacterServiceImpl.h"
-
 
 
 void read(const std::string &filename, std::string &data) {
@@ -90,9 +89,10 @@ void CharacterServiceImpl::HandleRpcs() {
         if (callData->getClass() == "GetSymbolsCallData" && callData->getCallStatus() == READ_CALLED) {
             GetSymbolsCallData *getSymbolsCallData = static_cast<GetSymbolsCallData *> (tag);
             std::cout << "filename available ->" << getSymbolsCallData->getFileName().filename() << std::endl;
-
+            subscribedClientMap[getSymbolsCallData->getFileName().filename()].push_back(getSymbolsCallData);
 
         }
+        if (callData->getClass() == "InsertSymbolsCallData")
         callData->Proceed(ok);
 
 

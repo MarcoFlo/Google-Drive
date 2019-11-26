@@ -9,6 +9,7 @@ service CharacterService {
     rpc GetFiles (Empty) returns (FilesInfoList) {}
     rpc GetFileContent (FileName) returns (stream Chunk) {}
     rpc GetSymbols (stream FileName) returns (stream Message) {}
+    rpc InsertSymbols (stream Message) returns (Empty) {}
 }
 
 message Empty {}

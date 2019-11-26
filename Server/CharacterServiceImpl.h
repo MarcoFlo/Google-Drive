@@ -14,8 +14,7 @@ private:
     std::unique_ptr<grpc::ServerCompletionQueue> cq_;
     protobuf::CharacterService::AsyncService service_;
     std::unique_ptr<grpc::Server> server_;
-//    std::vector<> vectorListeningClient;
-
+    std::map<std::string, std::vector<GetSymbolsCallData *>> subscribedClientMap;
 };
 
 
