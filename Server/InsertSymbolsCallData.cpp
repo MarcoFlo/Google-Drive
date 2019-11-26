@@ -1,40 +1,55 @@
 #include <string>
+#include <map>
+#include <vector>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
+#include "GetSymbolsCallData.h"
 #include "InsertSymbolsCallData.h"
 
 InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service,
-                                             grpc::ServerCompletionQueue *cq): service_(service), cq_(cq), responder_(&ctx_) {
-    Proceed();
+                                             grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
+                                                                                responder_(&ctx_) {
+    HandleInsert();
 
 }
 
-void InsertSymbolsCallData::Proceed(bool ok) {
+void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
+                                         bool ok) {
+    if (status_ == FINISH) {
+        delete this;
+        return;
+    }
+
+    if (!ok) {
+        std::cout << "finish" << std::endl;
+//        responder_.Finish(&reply_, grpc::Status::OK, this);
+        status_ = FINISH;
+        return;
+    }
     if (status_ == CREATE) {
         status_ = PROCESS;
-        service_->RequestInsertSymbols(&ctx_, &request_, &responder_, cq_, cq_,
-                               this);
+        service_->RequestInsertSymbols(&ctx_, &responder_, cq_, cq_,
+                                       this);
     } else if (status_ == PROCESS) {
+        status_ = READ;
+
         new InsertSymbolsCallData(service_, cq_);
+        responder_.Read(&request_, this);
 
-        //        std::cout << "Received a Login request from: " << request_.username() << std::endl;
+    } else if (status_ == READ) {
+        status_ = READ_CALLED;
+
+
+//subscribedClientMap.at(request_.)
 
 
 
 
-        const std::vector<grpc::string_ref> tokenV = ctx_.auth_context()->FindPropertyValues("token");
-        const grpc::string_ref token = tokenV.back();
-//      Se vogliamo restituire un Empty e lasciare il token nei metadati
-//      ctx_.AddInitialMetadata("identifier", {token.begin(), token.end()});
-        std::string s = {token.begin(), token.end()};
-        reply_.set_token(s);
-        status_ = FINISH;
-        responder_.Finish(reply_, grpc::Status::OK, this);
+    } else if (status_ == READ_CALLED) {
 
     } else {
         GPR_ASSERT(status_ == FINISH);
 // Once in the FINISH state, deallocate ourselves (CallData).
         delete this;
     }
-
 }

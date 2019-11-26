@@ -1,14 +1,17 @@
 #ifndef SERVER_INSERTSYMBOLSCALLDATA_H
 #define SERVER_INSERTSYMBOLSCALLDATA_H
 
-
 #include "CallData.h"
+#include "GetSymbolsCallData.h"
 
 class InsertSymbolsCallData final : public CallData {
 public:
     InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true);
+    void Proceed(bool ok = true) {}
+
+    void HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap = std::map<std::string, std::vector<GetSymbolsCallData *>>(),
+                      bool ok = true);
 
 private:
 
@@ -28,7 +31,7 @@ private:
     protobuf::Empty reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::FilesInfoList> responder_;
+    grpc::ServerAsyncReader<protobuf::Empty, protobuf::Message> responder_;
 };
 
 

@@ -1,6 +1,7 @@
 #ifndef SERVER_CHARACTERSERVICEIMPL_H
 #define SERVER_CHARACTERSERVICEIMPL_H
 
+#include "GetSymbolsCallData.h"
 
 class CharacterServiceImpl final : public protobuf::CharacterService::Service {
 public:

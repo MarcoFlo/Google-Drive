@@ -1,4 +1,6 @@
 #include <string>
+#include <map>
+#include <vector>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
@@ -24,12 +26,13 @@ protobuf::Symbol MakeSymbol(std::string character, std::string uniqueId, std::ve
 // with the gRPC runtime.
 GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service,
                                        grpc::ServerCompletionQueue *cq)
-        : service_(service), cq_(cq), responder_(&ctx_), times_(0) {
+        : service_(service), cq_(cq), responder_(&ctx_) {
     // Invoke the serving logic right away.
-    Proceed();
+    HandleGet();
 }
 
-void GetSymbolsCallData::Proceed(bool ok) {
+void
+GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap, bool ok) {
     if (status_ == FINISH) {
         delete this;
         return;
@@ -45,7 +48,7 @@ void GetSymbolsCallData::Proceed(bool ok) {
         std::cout << "create" << std::endl;
 
         // Make this instance progress to the PROCESS state.
-        status_ = READ;
+        status_ = PROCESS;
 
         // As part of the initial CREATE state, we *request* that the system
         // start processing SayHello requests. In this request, "this" acts are
@@ -53,8 +56,11 @@ void GetSymbolsCallData::Proceed(bool ok) {
         // instances can serve different requests concurrently), in this case
         // the memory address of this CallData instance.
         service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
-    } else if (status_ == READ) {
+    } else if (status_ == PROCESS) {
         new GetSymbolsCallData(service_, cq_);
+        status_ = READ;
+
+    } else if (status_ == READ) {
         std::cout << "Read status" << std::endl;
 
         responder_.Read(&request_, this);
@@ -62,18 +68,9 @@ void GetSymbolsCallData::Proceed(bool ok) {
 
     } else if (status_ == READ_CALLED) {
 
-
-//            std::cout << "Received a GetSymbol request for: " << request_.filename() << std::endl;
-//        std::for_each(ctx_.auth_context()->begin(),
-//                      ctx_.auth_context()->end(),
-//                      [](const grpc::AuthProperty &elem) {
-//                          std::cout << elem.first << "    " << elem.second << std::endl;
-//                      });
-//        std::for_each(ctx_.client_metadata().begin(), ctx_.client_metadata().end(),
-//                      [](auto &elem) {
-//                          std::cout << elem.first << "     " << elem.second << std::endl;
-//                      });
-        reply_ = MakeMessage(MakeSymbol("a", std::to_string(times_), {0}), false);
+        std::cout << "filename available ->" << request_.uniquefileid() << std::endl;
+        subscribedClientMap[request_.uniquefileid()].push_back(this);
+        reply_ = MakeMessage(MakeSymbol("a", std::to_string(110), {0}), false);
         responder_.Write(reply_, this);
         status_ = READ;
     }
@@ -84,6 +81,5 @@ std::string GetSymbolsCallData::getClass() {
 }
 
 
-protobuf::FileName GetSymbolsCallData::getFileName() {
-    return request_;
-}
+
+

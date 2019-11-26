@@ -10,6 +10,7 @@
 #include "messageP.grpc.pb.h"
 #include "shaeredImport.h"
 #include "GetSymbolsCallData.h"
+#include "InsertSymbolsCallData.h"
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
 #include "LogoutCallData.h"
@@ -80,20 +81,20 @@ void CharacterServiceImpl::HandleRpcs() {
     new LogoutCallData(&service_, cq_.get());
     new GetFilesCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
+    new InsertSymbolsCallData(&service_, cq_.get());
+
     void *tag;  // uniquely identifies a request.
     bool ok;
     while (true) {
         GPR_ASSERT(cq_->Next(&tag, &ok));
         CallData *callData = static_cast<CallData *>(tag);
 
-        if (callData->getClass() == "GetSymbolsCallData" && callData->getCallStatus() == READ_CALLED) {
-            GetSymbolsCallData *getSymbolsCallData = static_cast<GetSymbolsCallData *> (tag);
-            std::cout << "filename available ->" << getSymbolsCallData->getFileName().filename() << std::endl;
-            subscribedClientMap[getSymbolsCallData->getFileName().filename()].push_back(getSymbolsCallData);
-
-        }
-        if (callData->getClass() == "InsertSymbolsCallData")
-        callData->Proceed(ok);
+        if (callData->getClass() == "GetSymbolsCallData")
+            static_cast<GetSymbolsCallData *> (tag)->HandleGet(subscribedClientMap, ok);
+        else if (callData->getClass() == "InsertSymbolsCallData")
+            static_cast<InsertSymbolsCallData *> (tag)->HandleInsert(subscribedClientMap, ok);
+        else
+            callData->Proceed(ok);
 
 
     }

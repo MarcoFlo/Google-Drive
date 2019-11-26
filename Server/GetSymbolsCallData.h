@@ -1,7 +1,3 @@
-//
-// Created by flori on 30/10/2019.
-//
-
 #ifndef SERVER_GETSYMBOLSCALLDATA_H
 #define SERVER_GETSYMBOLSCALLDATA_H
 
@@ -11,16 +7,18 @@ class GetSymbolsCallData final : public CallData {
 public:
     GetSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true);
+    void Proceed(bool ok = true) {}
+
+    void HandleGet(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap = std::map<std::string, std::vector<GetSymbolsCallData *>>(),
+                   bool ok = true);
 
     std::string getClass();
-
-    protobuf::FileName getFileName();
 
 
 private:
 
-// The means of communication with the gRPC runtime for an asynchronous
+
+    // The means of communication with the gRPC runtime for an asynchronous
 // server.
     protobuf::CharacterService::AsyncService *service_;
 // The producer-consumer queue where for asynchronous server notifications.
@@ -39,7 +37,6 @@ private:
     grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileName> responder_;
 
 
-    int times_;
 
 };
 

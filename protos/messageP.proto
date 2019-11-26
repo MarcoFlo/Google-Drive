@@ -19,7 +19,7 @@ message Identifier {
 }
 
 message FileName {
-    string fileName = 11;
+    string uniqueFileId = 11;
 }
 
 message Chunk {
@@ -41,6 +41,7 @@ message FilesInfoList {
 }
 
 message FileInfo {
+    string uniqueFileId = 21;
     string name = 7;
     int32 size = 8;
     string usernameO = 9; //email Owner
