@@ -21,14 +21,12 @@ protobuf::Symbol MakeSymbol(std::string character, std::string uniqueId, std::ve
     return symbol;
 }
 
-// Take in the "service" instance (in this case representing an asynchronous
-// server) and the completion queue "cq" used for asynchronous communication
-// with the gRPC runtime.
+
 GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service,
                                        grpc::ServerCompletionQueue *cq)
         : service_(service), cq_(cq), responder_(&ctx_) {
-    // Invoke the serving logic right away.
-    HandleGet();
+    status_ = PROCESS;
+    service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
 }
 
 void
@@ -44,19 +42,7 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
         status_ = FINISH;
         return;
     }
-    if (status_ == CREATE) {
-        std::cout << "create" << std::endl;
-
-        // Make this instance progress to the PROCESS state.
-        status_ = PROCESS;
-
-        // As part of the initial CREATE state, we *request* that the system
-        // start processing SayHello requests. In this request, "this" acts are
-        // the tag uniquely identifying the request (so that different CallData
-        // instances can serve different requests concurrently), in this case
-        // the memory address of this CallData instance.
-        service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
-    } else if (status_ == PROCESS) {
+    if (status_ == PROCESS) {
         new GetSymbolsCallData(service_, cq_);
         status_ = READ;
 

@@ -9,8 +9,9 @@
 InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service,
                                              grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
                                                                                 responder_(&ctx_) {
-    HandleInsert();
-
+    status_ = PROCESS;
+    service_->RequestInsertSymbols(&ctx_, &responder_, cq_, cq_,
+                                   this);
 }
 
 void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
@@ -26,11 +27,7 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         status_ = FINISH;
         return;
     }
-    if (status_ == CREATE) {
-        status_ = PROCESS;
-        service_->RequestInsertSymbols(&ctx_, &responder_, cq_, cq_,
-                                       this);
-    } else if (status_ == PROCESS) {
+    if (status_ == PROCESS) {
         status_ = READ;
 
         new InsertSymbolsCallData(service_, cq_);
@@ -53,3 +50,4 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         delete this;
     }
 }
+
