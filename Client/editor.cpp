@@ -1,5 +1,4 @@
-#include "editor.h"
-#include "ui_editor.h"
+
 #include <QScrollBar>
 #include <QAbstractScrollArea>
 #include <QTextEdit>
@@ -24,6 +23,8 @@
 #include <QThread>
 #include <QPixmap>
 #include "account.h"
+#include "ui_editor.h"
+#include "editor.h"
 
 Editor::Editor(QWidget *parent, QString windowName) :
     QMainWindow(parent),

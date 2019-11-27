@@ -12,7 +12,7 @@
 
 //#include <grpcpp/grpcpp.h>
 //#include "messageP.grpc.pb.h"
-/*
+
 #include "comunication/CharacterClient.h"
 #include "comunication/SharedEditor.h"
 #include "comunication/AsyncClientGetSymbols.h"
@@ -27,9 +27,9 @@ void read(const std::string &filename, std::string &data) {
         data = ss.str();
     }
 }
-*/
+
 int main(int argc, char **argv) {
-    /*
+/*
     std::string serverCert;
     read("../../certs/server.cert", serverCert);
     grpc::SslCredentialsOptions opts;

@@ -1,11 +1,13 @@
-#include "principale.h"
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QDebug>
+#include "account.h"
 #include "ui_principale.h"
 #include "nuovo.h"
 #include "condividi.h"
 #include "importa.h"
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QDebug>
+#include "principale.h"
+
 
 Principale::Principale(QWidget *parent) :
     QMainWindow(parent),
