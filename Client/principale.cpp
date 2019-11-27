@@ -12,6 +12,50 @@ Principale::Principale(QWidget *parent) :
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
+
+    //ACCOUNT
+
+    QMenu *accountM = new QMenu();
+    QVBoxLayout *accountV = new QVBoxLayout(accountM);
+    accountM->setLayout(accountV);
+    accountV->setAlignment(Qt::AlignCenter);
+
+    QLabel *icona = new QLabel(accountM);
+    icona->setAlignment(Qt::AlignCenter);
+    QPixmap *iconaP = new QPixmap(":/images/img/logo.png");
+    icona->setPixmap(*iconaP);
+    accountV->addWidget(icona);
+
+    QLabel *nome = new QLabel(accountM);
+    nome->setAlignment(Qt::AlignCenter);
+    nome->setText("nome");
+    accountV->addWidget(nome);
+
+    QLabel *mail = new QLabel(accountM);
+    mail->setAlignment(Qt::AlignCenter);
+    mail->setText("mail");
+    accountV->addWidget(mail);
+
+    QPushButton *modifica = new QPushButton(accountM);
+    modifica->setText("Impostazioni utente");
+    accountV->addWidget(modifica);
+
+    QPushButton *logout = new QPushButton(accountM);
+    logout->setText("Logout");
+    accountV->addWidget(logout);
+
+    QObject::connect(modifica, SIGNAL(clicked()), this, SLOT(on_impostazioni_clicked()));
+    QObject::connect(logout, SIGNAL(clicked()), this, SLOT(on_logout_clicked()));
+
+    QToolButton *account = new QToolButton(this);
+
+    QIcon *icon = new QIcon(":/images/img/logo.png");
+    account->setIcon(*icon);
+    account->setMenu(accountM);
+    account->setPopupMode(QToolButton::InstantPopup);
+
+    ui->horizontalLayout->insertWidget(3, account);
+
 }
 
 Principale::~Principale()
@@ -68,6 +112,7 @@ void Principale::open_edi(QString name)
     hide();
     e=new Editor(this, name);
     QObject::connect(e, SIGNAL(closeE()), this, SLOT(on_closeE_signal()));
+    QObject::connect(e, SIGNAL(closeEP()), this, SLOT(on_closeEP_signal()));
     e->show();
 }
 
@@ -76,4 +121,35 @@ void Principale::on_closeE_signal()
     e->hide();
     this->show();
     delete e;
+}
+
+void Principale::on_impostazioni_clicked()
+{
+    Account account;
+    account.setModal(true);
+    account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    account.exec();
+}
+
+void Principale::on_logout_clicked()
+{
+    emit closeP();
+}
+
+ void Principale::on_closeEP_signal()
+{
+     e->hide();
+     this->show();
+     delete e;
+     on_logout_clicked();
+}
+
+void Principale::on_elimina_clicked()
+{
+
+}
+
+void Principale::on_cerca_clicked()
+{
+
 }

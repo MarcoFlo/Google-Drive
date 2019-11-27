@@ -10,12 +10,9 @@ LoginPage::LoginPage(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->regi->setVisible(false);
-    QSqlDatabase mydb= QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("path del db");
 
-    if(!mydb.open()) {
-        QMessageBox::warning(this,"Database error", "Failed to open the database");
-    }
+    ui->EmailEdit->setText("test");
+    ui->PasswordEdit->setText("test");
 }
 
 LoginPage::~LoginPage()

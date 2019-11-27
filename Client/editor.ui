@@ -113,47 +113,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>809</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menutools">
-    <property name="title">
-     <string>tools</string>
-    </property>
-    <addaction name="actionredo"/>
-    <addaction name="actioncopia"/>
-    <addaction name="separator"/>
-    <addaction name="actionincolla"/>
-    <addaction name="actiontaglia"/>
-    <addaction name="actionundo"/>
-   </widget>
-   <widget class="QMenu" name="menuoj">
-    <property name="title">
-     <string>oj</string>
-    </property>
-    <addaction name="actionallineaD"/>
-    <addaction name="actionallineaS"/>
-    <addaction name="actionallineaC"/>
-    <addaction name="actionalineaG"/>
-   </widget>
-   <widget class="QMenu" name="menutesto">
-    <property name="title">
-     <string>testo</string>
-    </property>
-    <addaction name="actiongrassetto"/>
-    <addaction name="actioncorsivo"/>
-    <addaction name="actionsottolineato"/>
-   </widget>
-   <addaction name="menutools"/>
-   <addaction name="menuoj"/>
-   <addaction name="menutesto"/>
-  </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -184,7 +143,6 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionutente"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
    <property name="windowTitle">
@@ -237,14 +195,6 @@
   <action name="actionlogoU">
    <property name="text">
     <string>logoU</string>
-   </property>
-  </action>
-  <action name="actionutente">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string> </string>
    </property>
   </action>
   <action name="actionredo">
