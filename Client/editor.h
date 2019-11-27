@@ -23,6 +23,8 @@ public:
 signals:
     void closeE();
 
+    void closeEP();
+
 private slots:
 
         void on_actionindietro_triggered();
@@ -81,6 +83,8 @@ private slots:
 
         void on_impostazioni_clicked();
 
+        void on_logout_clicked();
+
 
 private:
     Ui::Editor *ui;
@@ -114,6 +118,8 @@ private:
     QToolButton *colore;
 
     QMenu *coloreM;
+
+    int zoomT = 100;
 
 };
 

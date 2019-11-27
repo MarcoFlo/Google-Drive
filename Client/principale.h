@@ -5,6 +5,7 @@
 #include "nuovo.h"
 #include "condividi.h"
 #include "editor.h"
+#include "account.h"
 
 namespace Ui {
 class Principale;
@@ -23,6 +24,8 @@ public:
 signals:
     void closeE();
     void openE(QString);
+    void closeP();
+    void closeEP();
 
 private slots:
     void on_nuovo_clicked();
@@ -36,6 +39,16 @@ private slots:
     void open_edi(QString name);
 
     void on_closeE_signal();
+
+    void on_impostazioni_clicked();
+
+    void on_logout_clicked();
+
+    void on_closeEP_signal();
+
+    void on_elimina_clicked();
+
+    void on_cerca_clicked();
 
 private:
     Ui::Principale *ui;

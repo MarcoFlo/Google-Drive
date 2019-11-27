@@ -66,20 +66,6 @@
           </property>
          </spacer>
         </item>
-        <item>
-         <widget class="QLabel" name="nome">
-          <property name="text">
-           <string>nome</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="imAccount">
-          <property name="text">
-           <string>imAcoount</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </item>
      </layout>
@@ -168,7 +154,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QListView" name="lista"/>
+      <widget class="QTableWidget" name="lista"/>
       <widget class="QGroupBox" name="info">
        <property name="title">
         <string>Info</string>

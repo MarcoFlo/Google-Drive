@@ -164,6 +164,13 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>condividiB</tabstop>
+  <tabstop>conferma</tabstop>
+  <tabstop>copia</tabstop>
+  <tabstop>annulla</tabstop>
+  <tabstop>url</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

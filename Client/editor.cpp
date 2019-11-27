@@ -66,7 +66,12 @@ Editor::Editor(QWidget *parent, QString windowName) :
         modifica->setText("Impostazioni utente");
         accountV->addWidget(modifica);
 
+        QPushButton *logout = new QPushButton(accountM);
+        logout->setText("Logout");
+        accountV->addWidget(logout);
+
         QObject::connect(modifica, SIGNAL(clicked()), this, SLOT(on_impostazioni_clicked()));
+        QObject::connect(logout, SIGNAL(clicked()), this, SLOT(on_logout_clicked()));
 
         QToolButton *account = new QToolButton(this);
 
@@ -75,8 +80,11 @@ Editor::Editor(QWidget *parent, QString windowName) :
         account->setMenu(accountM);
         account->setPopupMode(QToolButton::InstantPopup);
 
+        QWidget* empty = new QWidget();
+        empty->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Preferred);
+        ui->toolBar_3->addWidget(empty);
 
-        ui->toolBar_3->insertWidget(ui->actionutente, account);
+        ui->toolBar_3->addWidget(account);
 
         //MENU FONT
 
@@ -323,6 +331,8 @@ Editor::Editor(QWidget *parent, QString windowName) :
 
        QPushButton *editB = new QPushButton("Altri Colori", this);
        coloreV->addWidget(editB);
+       editB->setCheckable(true);
+       editB->setAutoExclusive(true);
 
        QObject::connect(editB, SIGNAL(clicked(bool)), this, SLOT(on_actioncolore_triggered()));
 
@@ -361,8 +371,6 @@ void Editor::on_actionredo_triggered()
 void Editor::on_actioncopia_triggered()
 {
     ui->txt->copy();
-    qDebug()<<ui->txt->currentFont().toString();    //"MS Shell Dlg 2,8,-1,5,50,0,0,0,0,0,Normale" font,dim,boh,boh,grassetto,corsivo,sotto...
-
 }
 
 void Editor::on_actionincolla_triggered()
@@ -456,9 +464,7 @@ void Editor::on_actioncolore_triggered()
                     ui->txt->setTextColor(color);
                     QString qss = QString("background-color: %1").arg(color.name());
                     colore->setStyleSheet(qss);
-                }
-                else {
-                    return;
+
                 }
 
                 checkFont();
@@ -532,7 +538,6 @@ void Editor::checkFont()
         if(QString::compare(listaFont.at(y)->text(), ui->txt->currentFont().family(), Qt::CaseSensitive)==0)
         {
              listaFont.at(y)->setChecked(true);
-             qDebug()<< y;
              break;
         }
         else
@@ -581,16 +586,12 @@ void Editor::changeFont()
 
 void Editor::changeZoom()
 {
-    /*QString zoomS = zoomG->checkedAction()->text();
-    int zoomI = zoomS.split("%")[0].toInt();                            //da fare
-    if(zoomI>100)
-    {
-        ui->centralwidget->ed
-    }
-    else if(zoom<100)
-    {
 
-    }*/
+    QString zoomS = zoomG->checkedAction()->text();
+    //int zoomI = zoomS.split("%")[0].toInt();                            //da fare
+    //qDebug()<<zoomI;
+    QString z = "{zoom: " + zoomS + "}";
+    ui->groupBox_2->setStyleSheet(z);
 
 }
 
@@ -666,9 +667,13 @@ void Editor::resizeEvent(QResizeEvent* event)
 
 void Editor::on_impostazioni_clicked()
 {
-    qDebug()<<"ciao";
     Account account;
     account.setModal(true);
     account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     account.exec();
+}
+
+void Editor::on_logout_clicked()
+{
+    emit closeEP();
 }
