@@ -30,6 +30,6 @@ void Nuovo::on_conferma_clicked()
     }
     else {
         hide();
-        emit openE();
+        emit openE(name);
     }
 }

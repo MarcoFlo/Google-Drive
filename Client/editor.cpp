@@ -22,13 +22,15 @@
 #include <QGridLayout>
 #include <QVBoxLayout>
 #include <QThread>
+#include <QPixmap>
+#include "account.h"
 
-Editor::Editor(QWidget *parent) :
+Editor::Editor(QWidget *parent, QString windowName) :
     QMainWindow(parent),
     ui(new Ui::Editor)
 {
     ui->setupUi(this);
-
+    setWindowTitle(windowName);
     this->setContextMenuPolicy(Qt::CustomContextMenu);
 
         connect(this, SIGNAL(customContextMenuRequested(const QPoint &)),
@@ -36,6 +38,45 @@ Editor::Editor(QWidget *parent) :
 
         QObject::connect(ui->txt, SIGNAL(cursorPositionChanged()), this, SLOT(checkFont()));
         on_txt_cursorPositionChanged();
+
+        //ACCOUNT
+
+        QMenu *accountM = new QMenu();
+        QVBoxLayout *accountV = new QVBoxLayout(accountM);
+        accountM->setLayout(accountV);
+        accountV->setAlignment(Qt::AlignCenter);
+
+        QLabel *icona = new QLabel(accountM);
+        icona->setAlignment(Qt::AlignCenter);
+        QPixmap *iconaP = new QPixmap(":/images/img/logo.png");
+        icona->setPixmap(*iconaP);
+        accountV->addWidget(icona);
+
+        QLabel *nome = new QLabel(accountM);
+        nome->setAlignment(Qt::AlignCenter);
+        nome->setText("nome");
+        accountV->addWidget(nome);
+
+        QLabel *mail = new QLabel(accountM);
+        mail->setAlignment(Qt::AlignCenter);
+        mail->setText("mail");
+        accountV->addWidget(mail);
+
+        QPushButton *modifica = new QPushButton(accountM);
+        modifica->setText("Impostazioni utente");
+        accountV->addWidget(modifica);
+
+        QObject::connect(modifica, SIGNAL(clicked()), this, SLOT(on_impostazioni_clicked()));
+
+        QToolButton *account = new QToolButton(this);
+
+        QIcon *icon = new QIcon(":/images/img/logo.png");
+        account->setIcon(*icon);
+        account->setMenu(accountM);
+        account->setPopupMode(QToolButton::InstantPopup);
+
+
+        ui->toolBar_3->insertWidget(ui->actionutente, account);
 
         //MENU FONT
 
@@ -229,9 +270,9 @@ Editor::Editor(QWidget *parent) :
 
        QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));
 
-       //COLORE
+       //MENU COLORE
 
-       QMenu *coloreM = new QMenu();
+       coloreM = new QMenu();
        QVBoxLayout *coloreV = new QVBoxLayout(coloreM);
        QGridLayout *coloreG = new QGridLayout(coloreM);
        coloreM->setLayout(coloreV);
@@ -307,15 +348,9 @@ Editor::~Editor()
     delete ui;
 }
 
-void Editor::Mostra()
-{
-    show();
-}
-
 void Editor::on_actionindietro_triggered()
 {
-    hide();
-    emit openP();
+    emit closeE();
 }
 
 void Editor::on_actionredo_triggered()
@@ -573,6 +608,8 @@ void Editor::changeColor()
         }
     }
 
+    coloreM->close();
+
     checkFont();
 }
 
@@ -625,4 +662,13 @@ void Editor::on_txt_cursorPositionChanged()
 void Editor::resizeEvent(QResizeEvent* event)
 {
     on_txt_cursorPositionChanged();
+}
+
+void Editor::on_impostazioni_clicked()
+{
+    qDebug()<<"ciao";
+    Account account;
+    account.setModal(true);
+    account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    account.exec();
 }

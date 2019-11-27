@@ -17,14 +17,13 @@ class Editor : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Editor(QWidget *parent = nullptr);
+    explicit Editor(QWidget *parent = nullptr, QString windowName=nullptr);
     ~Editor();
 
 signals:
-    void openP();
+    void closeE();
 
 private slots:
-        void Mostra();
 
         void on_actionindietro_triggered();
 
@@ -80,6 +79,9 @@ private slots:
 
         void resizeEvent(QResizeEvent* event);
 
+        void on_impostazioni_clicked();
+
+
 private:
     Ui::Editor *ui;
 
@@ -110,6 +112,8 @@ private:
     QList <QPushButton*> listaColor;
 
     QToolButton *colore;
+
+    QMenu *coloreM;
 
 };
 

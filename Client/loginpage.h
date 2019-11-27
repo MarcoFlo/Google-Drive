@@ -21,18 +21,23 @@ public:
     ~LoginPage();
 
 signals:
-    void openR();
-    void openP();
+    void closeR();
+    void closeP();
 
 private slots:
     void on_Login_clicked();
 
     void on_registrati_clicked();
 
-    void Mostra();
+    void on_closeR_signal();
+
+    void on_closeP_signal();
+
+    void on_closeRReg_signal();
 
 private:
     Ui::LoginPage *ui;
+    RegistrationPage *r;
+    Principale *p;
 };
-
 #endif // LOGINPAGE_H

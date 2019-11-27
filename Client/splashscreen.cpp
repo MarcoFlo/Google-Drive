@@ -1,6 +1,7 @@
 #include "splashscreen.h"
 #include "ui_splashscreen.h"
 
+
 SplashScreen::SplashScreen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SplashScreen)
@@ -18,5 +19,6 @@ SplashScreen::~SplashScreen()
 void SplashScreen::closeSplash()
 {
     hide();
-    emit openL();
+    l= new LoginPage();
+    l->show();
 }

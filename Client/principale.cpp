@@ -5,6 +5,7 @@
 #include "importa.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QDebug>
 
 Principale::Principale(QWidget *parent) :
     QMainWindow(parent),
@@ -21,9 +22,8 @@ Principale::~Principale()
 void Principale::on_nuovo_clicked()
 {
     Nuovo nuovo;
-    QString doc;
     nuovo.setModal(true);
-    QObject::connect(&nuovo, SIGNAL(openE()), this, SLOT(open_edi()));
+    QObject::connect(&nuovo, SIGNAL(openE(QString)), this, SLOT(open_edi(QString)));
     nuovo.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     nuovo.exec();
 }
@@ -36,10 +36,6 @@ void Principale::on_condividi_clicked()
     condividi.exec();
 }
 
-void Principale::Mostra()
-{
-    show();
-}
 
 void Principale::on_scarica_clicked()
 {
@@ -67,8 +63,17 @@ void Principale::on_importa_clicked()
     importa.exec();
 }
 
-void Principale::open_edi()
+void Principale::open_edi(QString name)
 {
     hide();
-    emit openE();
+    e=new Editor(this, name);
+    QObject::connect(e, SIGNAL(closeE()), this, SLOT(on_closeE_signal()));
+    e->show();
+}
+
+void Principale::on_closeE_signal()
+{
+    e->hide();
+    this->show();
+    delete e;
 }

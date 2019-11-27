@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "principale.h"
 
-
 namespace Ui {
 class RegistrationPage;
 }
@@ -18,19 +17,18 @@ public:
     ~RegistrationPage();
 
 signals:
-    void openL();
-    void openP();
+    void closeR();
+    void closeRReg();
 
 private slots:
     void on_annulla_clicked();
 
     void on_registrati_clicked();
 
-    void Mostra();
-
 private:
     Ui::RegistrationPage *ui;
 
 };
+
 
 #endif // REGISTRATIONPAGE_H

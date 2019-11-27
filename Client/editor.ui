@@ -184,8 +184,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionlogoU"/>
-   <addaction name="actionutete"/>
+   <addaction name="actionutente"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
    <property name="windowTitle">
@@ -240,9 +239,12 @@
     <string>logoU</string>
    </property>
   </action>
-  <action name="actionutete">
+  <action name="actionutente">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
-    <string>utente</string>
+    <string> </string>
    </property>
   </action>
   <action name="actionredo">

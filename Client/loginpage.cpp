@@ -9,7 +9,7 @@ LoginPage::LoginPage(QWidget *parent) :
     ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
-
+    ui->regi->setVisible(false);
     QSqlDatabase mydb= QSqlDatabase::addDatabase("QSQLITE");
     mydb.setDatabaseName("path del db");
 
@@ -30,7 +30,9 @@ void LoginPage::on_Login_clicked()
 
     if(username.compare("test")==0 && pass.compare("test")==0) {
         hide();
-        emit openP();
+        p=new Principale();
+        QObject::connect(p, SIGNAL(closeP()), this, SLOT(on_closeP_signal()));
+        p->show();
     }
     else {
         QMessageBox::warning(this,"Login", "Username and/or password is not correct");
@@ -40,11 +42,33 @@ void LoginPage::on_Login_clicked()
 void LoginPage::on_registrati_clicked()
 {
     hide();
-    emit openR();
+    //emit openR();
+    r = new RegistrationPage(this);
+    QObject::connect(r, SIGNAL(closeR()), this, SLOT(on_closeR_signal()));
+    QObject::connect(r, SIGNAL(closeRReg()), this, SLOT(on_closeRReg_signal()));
+    r->show();
 
 }
 
-void LoginPage::Mostra()
-{
-    show();
+void LoginPage::on_closeR_signal() {
+
+    r->hide();
+    this->show();
+    delete r;
 }
+
+void LoginPage::on_closeP_signal() {
+
+    p->hide();
+    this->show();
+    delete p;
+}
+
+void LoginPage::on_closeRReg_signal() {
+    r->hide();
+    ui->regi->setVisible(true);
+    ui->regi->setText("Registrazione completata. Accedi inserendo username e password");
+    this->show();
+    delete r;
+}
+

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "nuovo.h"
 #include "condividi.h"
+#include "editor.h"
 
 namespace Ui {
 class Principale;
@@ -20,24 +21,26 @@ public:
     void abilita(bool s);
 
 signals:
-    void openL();
-    void openE();
+    void closeE();
+    void openE(QString);
 
 private slots:
     void on_nuovo_clicked();
 
     void on_condividi_clicked();
 
-    void Mostra();
-
     void on_scarica_clicked();
 
     void on_importa_clicked();
 
-    void open_edi();
+    void open_edi(QString name);
+
+    void on_closeE_signal();
 
 private:
     Ui::Principale *ui;
+
+    Editor *e;
 
 };
 
