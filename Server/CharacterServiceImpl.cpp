@@ -10,6 +10,7 @@
 #include "messageP.grpc.pb.h"
 #include "shaeredImport.h"
 #include "GetSymbolsCallData.h"
+#include "InsertFileCallData.h"
 #include "InsertSymbolsCallData.h"
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
@@ -82,6 +83,7 @@ void CharacterServiceImpl::HandleRpcs() {
     new GetFilesCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
+    new InsertFileCallData(&service_, cq_.get());
 
     void *tag;  // uniquely identifies a request.
     bool ok;
@@ -93,6 +95,8 @@ void CharacterServiceImpl::HandleRpcs() {
             static_cast<GetSymbolsCallData *> (tag)->HandleGet(subscribedClientMap, ok);
         else if (callData->getClass() == "InsertSymbolsCallData")
             static_cast<InsertSymbolsCallData *> (tag)->HandleInsert(subscribedClientMap, ok);
+        else if (callData->getClass() == "InsertFileCallData")
+            static_cast<InsertFileCallData *> (tag)->HandleInsert(fileClientMap, ok);
         else
             callData->Proceed(ok);
 

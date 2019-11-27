@@ -31,23 +31,20 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         status_ = READ;
 
         new InsertSymbolsCallData(service_, cq_);
-        responder_.Read(&request_, this);
 
     } else if (status_ == READ) {
         status_ = READ_CALLED;
-
-
-//subscribedClientMap.at(request_.)
-
-
+        responder_.Read(&request_, this);
 
 
     } else if (status_ == READ_CALLED) {
-
-    } else {
-        GPR_ASSERT(status_ == FINISH);
-// Once in the FINISH state, deallocate ourselves (CallData).
-        delete this;
+        status_ = READ;
+        protobuf::Message messageReceived = request_;
+        std::for_each(subscribedClientMap.at(request_.uniquefileid()).begin(),
+                      subscribedClientMap.at(request_.uniquefileid()).end(),
+                      [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
+                          getSymbolsCallData->HandleSymbol(messageReceived);
+                      });
     }
 }
 

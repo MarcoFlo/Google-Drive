@@ -19,7 +19,7 @@ public:
 
     void Logout(std::string token);
 
-    AsyncClientGetSymbols *GetSymbols(const std::string &filename, const std::string &token);
+    AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId, const std::string &token);
 
 
 private:

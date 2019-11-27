@@ -66,9 +66,9 @@ void CharacterClient::Logout(std::string token) {
 }
 
 
-AsyncClientGetSymbols * CharacterClient::GetSymbols(const std::string& filename,const std::string& token) {
-    protobuf::FileName request;
-    request.set_filename(filename);
+AsyncClientGetSymbols * CharacterClient::GetSymbols(const std::string& fileUniqueId,const std::string& token) {
+    protobuf::FileUniqueId request;
+    request.set_fileuniqueid(fileUniqueId);
     return new AsyncClientGetSymbols(request, token, cq_, stub_);
 }
 

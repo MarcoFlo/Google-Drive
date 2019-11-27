@@ -5,15 +5,16 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 
-protobuf::Message MakeMessage(const protobuf::Symbol& symbol, bool isErase) {
+protobuf::Message MakeMessage(const std::string &uniqueFileId, const protobuf::Symbol &symbol, bool isErase) {
     protobuf::Message msg;
+    msg.set_uniquefileid(uniqueFileId);
     msg.mutable_symbol()->CopyFrom(symbol);
     msg.set_iserasebool(isErase);
     return msg;
 }
 
 
-protobuf::Symbol MakeSymbol(const std::string& character, const std::string& uniqueId, std::vector<int> pos) {
+protobuf::Symbol MakeSymbol(const std::string &character, const std::string &uniqueId, std::vector<int> pos) {
     protobuf::Symbol symbol;
     symbol.set_character(character);
     symbol.set_uniqueid(uniqueId);
@@ -54,9 +55,11 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
 
     } else if (status_ == READ_CALLED) {
 
-        std::cout << "filename available ->" << request_.uniquefileid() << std::endl;
-        subscribedClientMap[request_.uniquefileid()].push_back(this);
-        reply_ = MakeMessage(MakeSymbol("a", std::to_string(110), {0}), false);
+        std::cout << "filename available ->" << request_.fileuniqueid() << std::endl;
+        subscribedClientMap[request_.fileuniqueid()].push_back(this);
+
+        //todo delete the write here
+        reply_ = MakeMessage("unqueFileId", MakeSymbol("a", std::to_string(110), {0}), false);
         responder_.Write(reply_, this);
         status_ = READ;
     }
@@ -64,6 +67,12 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
 
 std::string GetSymbolsCallData::getClass() {
     return "GetSymbolsCallData";
+}
+
+void GetSymbolsCallData::HandleSymbol(const protobuf::Message &message) {
+
+    responder_.Write(message, this);
+    //todo possibly check the write return status
 }
 
 

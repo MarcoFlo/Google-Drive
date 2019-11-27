@@ -1,12 +1,17 @@
-#ifndef SERVER_LOGINCALLDATA_H
-#define SERVER_LOGINCALLDATA_H
+#ifndef SERVER_INSERTFILECALLDATA_H
+#define SERVER_INSERTFILECALLDATA_H
 
 #include "CallData.h"
 
-class LoginCallData final: public CallData {
+
+class InsertFileCallData final : public CallData {
 public:
-    LoginCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+    InsertFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
+
+    void Proceed(bool ok = true) {}
+
+    void HandleInsert(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
+                      bool ok = true);
 
 private:
 
@@ -21,15 +26,13 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::UserL request_;
+    protobuf::FileName request_;
 // What we send back to the client.
-    protobuf::Identifier reply_;
+    protobuf::Empty reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::Identifier> responder_;
+    grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
 
 };
 
-
-
-#endif //SERVER_LOGINCALLDATA_H
+#endif //SERVER_INSERTFILECALLDATA_H

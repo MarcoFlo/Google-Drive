@@ -12,12 +12,11 @@ public:
     void HandleGet(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
                    bool ok = true);
 
+    void HandleSymbol(const protobuf::Message &message);
+
     std::string getClass();
 
-
 private:
-
-
     // The means of communication with the gRPC runtime for an asynchronous
 // server.
     protobuf::CharacterService::AsyncService *service_;
@@ -29,14 +28,12 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::FileName request_;
+    protobuf::FileUniqueId request_;
 // What we send back to the client.
     protobuf::Message reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileName> responder_;
-
-
+    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileUniqueId> responder_;
 
 };
 
