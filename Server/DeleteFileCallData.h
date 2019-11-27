@@ -1,11 +1,19 @@
-#ifndef SERVER_LOGOUTCALLDATA_H
-#define SERVER_LOGOUTCALLDATA_H
+#ifndef SERVER_DELETEFILECALLDATA_H
+#define SERVER_DELETEFILECALLDATA_H
 
 #include "CallData.h"
-class LogoutCallData final: public CallData {
+
+class DeleteFileCallData final : public CallData {
 public:
-    LogoutCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+    DeleteFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
+
+    void Proceed(bool ok = true) {}
+
+    void HandleDelete(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
+                      bool ok = true);
+
+    std::string getClass();
+
 
 private:
 
@@ -20,13 +28,13 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::Empty request_;
+    protobuf::FileName request_;
 // What we send back to the client.
     protobuf::Empty reply_;
 
 // The means to get back to the client.
     grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
+
 };
 
-
-#endif //SERVER_LOGOUTCALLDATA_H
+#endif //SERVER_DELETEFILECALLDATA_H

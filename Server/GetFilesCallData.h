@@ -1,7 +1,3 @@
-//
-// Created by flori on 11/11/2019.
-//
-
 #ifndef SERVER_GETFILESCALLDATA_H
 #define SERVER_GETFILESCALLDATA_H
 

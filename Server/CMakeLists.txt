@@ -56,6 +56,7 @@ add_executable(Server
         main.cpp
         CallData.h
         CharacterServiceImpl.cpp CharacterServiceImpl.h
+        DeleteFileCallData.cpp DeleteFileCallData.h
         GetFilesCallData.cpp GetFilesCallData.h
         GetSymbolsCallData.cpp GetSymbolsCallData.h
         InsertFileCallData.cpp InsertFileCallData.h

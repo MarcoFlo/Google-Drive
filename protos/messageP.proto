@@ -7,6 +7,7 @@ service CharacterService {
     rpc Logout (Empty) returns (Empty) {}
 
     rpc InsertFile (FileName) returns (Empty) {}
+    rpc DeleteFile (FileName) returns (Empty) {}
     rpc GetFiles (Empty) returns (FilesInfoList) {}
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
