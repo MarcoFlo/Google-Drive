@@ -5,7 +5,7 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 
-protobuf::Message MakeMessage(protobuf::Symbol symbol, bool isErase) {
+protobuf::Message MakeMessage(const protobuf::Symbol& symbol, bool isErase) {
     protobuf::Message msg;
     msg.mutable_symbol()->CopyFrom(symbol);
     msg.set_iserasebool(isErase);
@@ -13,7 +13,7 @@ protobuf::Message MakeMessage(protobuf::Symbol symbol, bool isErase) {
 }
 
 
-protobuf::Symbol MakeSymbol(std::string character, std::string uniqueId, std::vector<int> pos) {
+protobuf::Symbol MakeSymbol(const std::string& character, const std::string& uniqueId, std::vector<int> pos) {
     protobuf::Symbol symbol;
     symbol.set_character(character);
     symbol.set_uniqueid(uniqueId);
