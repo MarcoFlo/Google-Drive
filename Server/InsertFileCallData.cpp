@@ -3,10 +3,10 @@
 #include "messageP.grpc.pb.h"
 #include "InsertFileCallData.h"
 
-protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename, bool isErase) {
+protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
     protobuf::FileInfo fileInfo;
     fileInfo.set_usernameo(owner);
-    fileInfo.set_name(filename);
+    fileInfo.set_filename(filename);
     return fileInfo;
 }
 
@@ -25,28 +25,10 @@ void InsertFileCallData::HandleInsert(std::map<std::string, std::vector<protobuf
         new InsertFileCallData(service_, cq_);
         status_ = FINISH;
 
-        std::for_each(ctx_.auth_context()->begin(),
-                      ctx_.auth_context()->end(),
-                      [](const grpc::AuthProperty &elem) {
-                          std::cout << elem.first << "    " << elem.second << std::endl;
-                      });
-        std::for_each(ctx_.client_metadata().begin(), ctx_.client_metadata().end(),
-                      [](auto &elem) {
-                          std::cout << elem.first << "     " << elem.second << std::endl;
-                      });
-       std::cout <<  ctx_.auth_context()->FindPropertyValues(ctx_.auth_context()->GetPeerIdentityPropertyName()).size() << std::endl;
+        std::string username = ctx_.auth_context()->FindPropertyValues(
+                ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        std::for_each(ctx_.auth_context()->begin(),
-                      ctx_.auth_context()->end(),
-                      [](const grpc::AuthProperty &elem) {
-                          std::cout << elem.first << "    " << elem.second << std::endl;
-                      });
-        std::cout << "AAAAA" << std::endl;
-        std::for_each(ctx_.client_metadata().begin(), ctx_.client_metadata().end(),
-                      [](auto &elem) {
-                          std::cout << elem.first << "     " << elem.second << std::endl;
-                      });
-       //        fileClientMap["todo"].push_back(MakeFileInfo());
+        fileClientMap[username].push_back(MakeFileInfo(username, request_.filename()));
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 

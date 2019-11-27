@@ -10,16 +10,16 @@ public:
 
     void CloseRpc() override;
 
-    AsyncClientGetSymbols(const protobuf::FileUniqueId &request, const std::string &token, grpc::CompletionQueue &cq_,
+    AsyncClientGetSymbols(const protobuf::FileInfo &request, const std::string &token, grpc::CompletionQueue &cq_,
                           std::unique_ptr<protobuf::CharacterService::Stub> &stub_);
 
 
-    std::unique_ptr<grpc::ClientAsyncReaderWriter<protobuf::FileUniqueId,protobuf::Message>> responder;
+    std::unique_ptr<grpc::ClientAsyncReaderWriter<protobuf::FileInfo,protobuf::Message>> responder;
 
     // Container for the data we expect from the server.
     protobuf::Message reply_;
     
-    protobuf::FileUniqueId request_;
+    protobuf::FileInfo request_;
 };
 
 

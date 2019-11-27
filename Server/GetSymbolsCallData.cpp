@@ -1,26 +1,27 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 
-protobuf::Message MakeMessage(const std::string &uniqueFileId, const protobuf::Symbol &symbol, bool isErase) {
-    protobuf::Message msg;
-    msg.set_uniquefileid(uniqueFileId);
-    msg.mutable_symbol()->CopyFrom(symbol);
-    msg.set_iserasebool(isErase);
-    return msg;
-}
-
-
-protobuf::Symbol MakeSymbol(const std::string &character, const std::string &uniqueId, std::vector<int> pos) {
-    protobuf::Symbol symbol;
-    symbol.set_character(character);
-    symbol.set_uniqueid(uniqueId);
-    *symbol.mutable_pos() = {pos.begin(), pos.end()};
-    return symbol;
-}
+//protobuf::Message MakeMessage(const std::string &filename, const std::string &owner, const protobuf::Symbol &symbol, bool isErase) {
+//    protobuf::Message msg;
+//    msg.mutable_fileinfo()->set_filename(filename);
+//    msg.mutable_fileinfo()->set_usernameo(owner);
+//    msg.mutable_symbol()->CopyFrom(symbol);
+//    msg.set_iserasebool(isErase);
+//    return msg;
+//}
+//
+//protobuf::Symbol MakeSymbol(const std::string &character, const std::string &uniqueId, std::vector<int> pos) {
+//    protobuf::Symbol symbol;
+//    symbol.set_character(character);
+//    symbol.set_uniqueid(uniqueId);
+//    *symbol.mutable_pos() = {pos.begin(), pos.end()};
+//    return symbol;
+//}
 
 
 GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service,
@@ -44,24 +45,38 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
         return;
     }
     if (status_ == PROCESS) {
+        status_ = READ_CALLED;
+
         new GetSymbolsCallData(service_, cq_);
-        status_ = READ;
+        responder_.Read(&request_, this);
+
 
     } else if (status_ == READ) {
+        status_ = READ_CALLED;
+
         std::cout << "Read status" << std::endl;
 
         responder_.Read(&request_, this);
-        status_ = READ_CALLED;
 
     } else if (status_ == READ_CALLED) {
-
-        std::cout << "filename available ->" << request_.fileuniqueid() << std::endl;
-        subscribedClientMap[request_.fileuniqueid()].push_back(this);
-
-        //todo delete the write here
-        reply_ = MakeMessage("unqueFileId", MakeSymbol("a", std::to_string(110), {0}), false);
-        responder_.Write(reply_, this);
         status_ = READ;
+        const std::string principal = ctx_.auth_context()->FindPropertyValues(
+                ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
+
+        std::cout << "Get Symbols requested ->" << request_.filename() << std::endl;
+
+        if (principal == request_.usernameo() ||
+            std::find(request_.usernamesal().begin(), request_.usernamesal().end(), principal) !=
+            request_.usernamesal().end()) {
+            //authorized
+            subscribedClientMap[request_.filename() + request_.usernameo()].push_back(this);
+        } else {
+            //not authorized
+            responder_.Finish(grpc::Status::OK, this);
+            status_ = FINISH;
+            return;
+        }
+
     }
 }
 

@@ -40,8 +40,8 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
     } else if (status_ == READ_CALLED) {
         status_ = READ;
         protobuf::Message messageReceived = request_;
-        std::for_each(subscribedClientMap.at(request_.uniquefileid()).begin(),
-                      subscribedClientMap.at(request_.uniquefileid()).end(),
+        std::for_each(subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).begin(),
+                      subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).end(),
                       [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
                           getSymbolsCallData->HandleSymbol(messageReceived);
                       });

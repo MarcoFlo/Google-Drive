@@ -8,8 +8,8 @@ service CharacterService {
 
     rpc InsertFile (FileName) returns (Empty) {}
     rpc GetFiles (Empty) returns (FilesInfoList) {}
-    rpc GetFileContent (FileUniqueId) returns (stream Chunk) {}
-    rpc GetSymbols (stream FileUniqueId) returns (stream Message) {}
+    rpc GetFileContent (FileInfo) returns (stream Chunk) {}
+    rpc GetSymbols (stream FileInfo) returns (stream Message) {}
     rpc InsertSymbols (stream Message) returns (Empty) {}
 }
 
@@ -21,9 +21,6 @@ message Identifier {
 
 message FileName {
     string fileName = 30;
-}
-message FileUniqueId {
-    string fileUniqueId = 11;
 }
 
 message Chunk {
@@ -45,14 +42,14 @@ message FilesInfoList {
 }
 
 message FileInfo {
-    string name = 7;
+    string filename = 7;
     int32 size = 8;
     string usernameO = 9; //email Owner
     repeated string usernamesAL = 10; //userAccessList
 }
 
 message Message {
-    string uniqueFileId = 22;
+    FileInfo fileInfo = 22;
     bool isEraseBool = 13;
     Symbol symbol = 12;
 }

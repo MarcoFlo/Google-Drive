@@ -2,7 +2,7 @@
 #include "messageP.grpc.pb.h"
 #include "AsyncClientGetSymbols.h"
 
-AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileUniqueId &request, const std::string &token,
+AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileInfo &request, const std::string &token,
                                              grpc::CompletionQueue &cq_,
                                              std::unique_ptr<protobuf::CharacterService::Stub> &stub_) : request_(
         request) {

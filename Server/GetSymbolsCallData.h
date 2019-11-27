@@ -28,12 +28,12 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::FileUniqueId request_;
+    protobuf::FileInfo request_;
 // What we send back to the client.
     protobuf::Message reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileUniqueId> responder_;
+    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileInfo> responder_;
 
 };
 
