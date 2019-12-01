@@ -66,7 +66,27 @@ void CharacterClient::Logout(std::string token) {
 }
 
 
-AsyncClientGetSymbols * CharacterClient::GetSymbols(const std::string& fileUniqueId,const std::string& token) {
+void CharacterClient::ShareFile(std::string token, std::string filename, std::string usernameShare) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token);
+    context.AddMetadata("usernameShare", usernameShare);
+
+    protobuf::FileName request;
+    request.set_filename(filename);
+
+    protobuf::Empty reply;
+    grpc::CompletionQueue cq;
+    grpc::Status status;
+
+    status = stub_->ShareFile(&context, request, &reply);
+
+    if (status.ok())
+        std::cout << "Share file rpc was successful" << std::endl;
+    else
+        std::cout << "Share file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+}
+
+AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId, const std::string &token) {
     protobuf::FileInfo request;
     request.set_filename(fileUniqueId);
     return new AsyncClientGetSymbols(request, token, cq_, stub_);

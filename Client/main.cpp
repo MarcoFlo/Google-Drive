@@ -51,6 +51,8 @@ int main(int argc, char **argv) {
     client.Logout(token);
     token = client.Login(user);
 
+    client.ShareFile(token, "filename", "usernameShare@test.it");
+
     AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
 
 

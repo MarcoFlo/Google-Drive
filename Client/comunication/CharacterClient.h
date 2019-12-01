@@ -1,9 +1,6 @@
-//
-// Created by flori on 23/10/2019.
-//
-
 #ifndef CLIENT_CHARACTERCLIENT_H
 #define CLIENT_CHARACTERCLIENT_H
+
 #include "AsyncClientGetSymbols.h"
 
 
@@ -18,6 +15,8 @@ public:
     std::string Login(protobuf::User user);
 
     void Logout(std::string token);
+
+    void ShareFile(std::string token, std::string filename, std::string usernameShare);
 
     AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId, const std::string &token);
 
