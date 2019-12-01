@@ -14,6 +14,9 @@ service CharacterService {
     rpc InsertSymbols (stream Message) returns (Empty) {}
 
     rpc ShareFile(FileName) returns (Empty) {}
+
+    rpc SetProfile(ProfileInfo) returns (Empty) {}
+    rpc GetProfile(Empty) returns (ProfileInfo) {}
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
@@ -61,15 +64,16 @@ message Identifier {
     string token = 17;
 }
 
-//todo forse da cancellare
-message ShareInfo {
-    string filename = 18;
-    string usernameD = 19;
+message ProfileInfo {
+    string username = 18;
+    string name = 19;
+    string surname = 20;
 }
 
-message UserMap{
-    map<string,string> userMap = 20;
+message UserMap {
+    map<string,string> userMap = 30;
 }
+
 
 
 
