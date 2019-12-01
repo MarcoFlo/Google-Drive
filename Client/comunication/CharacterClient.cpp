@@ -9,16 +9,16 @@
 CharacterClient::CharacterClient(std::shared_ptr<grpc::Channel> channel) : stub_(
         protobuf::CharacterService::NewStub(channel)) {}
 
-void CharacterClient::Register(protobuf::UserR userR) {
+void CharacterClient::Register(protobuf::User user) {
     grpc::ClientContext context;
-    context.AddMetadata("username", userR.username());
-    context.AddMetadata("password", userR.password());
-    context.AddMetadata("passwordr", userR.passwordr());
+    context.AddMetadata("username", user.username());
+    context.AddMetadata("password", user.password());
+    context.AddMetadata("passwordr", user.passwordr());
     protobuf::Empty reply;
     grpc::CompletionQueue cq;
     grpc::Status status;
 
-    status = stub_->Register(&context, userR, &reply);
+    status = stub_->Register(&context, user, &reply);
 
     if (status.ok())
         std::cout << "Register rpc was successful" << std::endl;
@@ -26,16 +26,16 @@ void CharacterClient::Register(protobuf::UserR userR) {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 }
 
-std::string CharacterClient::Login(protobuf::UserL userL) {
+std::string CharacterClient::Login(protobuf::User user) {
     grpc::ClientContext context;
-    context.AddMetadata("username", userL.username());
-    context.AddMetadata("password", userL.password());
+    context.AddMetadata("username", user.username());
+    context.AddMetadata("password", user.password());
 
     protobuf::Identifier reply;
     grpc::CompletionQueue cq;
     grpc::Status status;
 
-    status = stub_->Login(&context, userL, &reply);
+    status = stub_->Login(&context, user, &reply);
 
     if (status.ok()) {
         std::cout << "Login rpc was successful, we got identifier: " << reply.token() << std::endl;
@@ -67,8 +67,8 @@ void CharacterClient::Logout(std::string token) {
 
 
 AsyncClientGetSymbols * CharacterClient::GetSymbols(const std::string& fileUniqueId,const std::string& token) {
-    protobuf::FileUniqueId request;
-    request.set_fileuniqueid(fileUniqueId);
+    protobuf::FileInfo request;
+    request.set_filename(fileUniqueId);
     return new AsyncClientGetSymbols(request, token, cq_, stub_);
 }
 

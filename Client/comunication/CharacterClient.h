@@ -13,9 +13,9 @@ public:
 
     void AsyncCompleteRpc();
 
-    void Register(protobuf::UserR userR);
+    void Register(protobuf::User user);
 
-    std::string Login(protobuf::UserL userL);
+    std::string Login(protobuf::User user);
 
     void Logout(std::string token);
 

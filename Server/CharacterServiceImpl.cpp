@@ -12,6 +12,7 @@
 #include "GetSymbolsCallData.h"
 #include "InsertFileCallData.h"
 #include "DeleteFileCallData.h"
+#include "ShareFileCallData.h"
 #include "InsertSymbolsCallData.h"
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
@@ -102,6 +103,8 @@ void CharacterServiceImpl::HandleRpcs() {
             static_cast<InsertFileCallData *> (tag)->HandleInsert(fileClientMap, ok);
         else if (callData->getClass() == "DeleteFileCallData")
             static_cast<DeleteFileCallData *> (tag)->HandleDelete(fileClientMap, ok);
+        else if (callData->getClass() == "ShareFileCallData")
+            static_cast<ShareFileCallData *> (tag)->HandleShare(fileClientMap, ok);
         else
             callData->Proceed(ok);
 

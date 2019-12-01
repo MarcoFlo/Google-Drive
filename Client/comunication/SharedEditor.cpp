@@ -13,7 +13,7 @@
 #include "CharacterClient.h"
 #include "SharedEditor.h"
 
-SharedEditor::SharedEditor(CharacterClient &client, protobuf::UserL userL) : _client(client), _counter(0) {
+SharedEditor::SharedEditor(CharacterClient &client, protobuf::User user) : _client(client), _counter(0) {
 //    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
 
 }

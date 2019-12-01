@@ -46,6 +46,13 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
         return ProcessLogout(token_value);
     }
 
+    if (dispatch_value == "/protobuf.CharacterService/ShareFile")
+    {
+        std::cout << context->FindPropertyValues("usernameShare").front() << std::endl;
+
+//        return ProcessShareFile(context, auth_metadata);
+    }
+
     // once verified, mark as consumed and store user for later retrieval
     consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), token_value));     // required
     context->AddProperty(Const::PeerIdentityPropertyName(), tokenMap[token_value]);           // optional

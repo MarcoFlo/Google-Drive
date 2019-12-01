@@ -39,21 +39,17 @@ int main(int argc, char **argv) {
 
     CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
 
-    protobuf::UserR userR;
-    userR.set_username("prova@test.it");
-    userR.set_password("1234");
-    userR.set_passwordr("1234");
-    client.Register(userR);
+    protobuf::User user;
+    user.set_username("prova@test.it");
+    user.set_password("1234");
+    user.set_passwordr("1234");
+    client.Register(user);
 
+//    SharedEditor editor(client, user);
 
-    protobuf::UserL userL;
-    userL.set_username("prova@test.it");
-    userL.set_password("1234");
-//    SharedEditor editor(client, userL);
-
-    std::string token = client.Login(userL);
+    std::string token = client.Login(user);
     client.Logout(token);
-    token = client.Login(userL);
+    token = client.Login(user);
 
     AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
 

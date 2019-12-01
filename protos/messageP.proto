@@ -13,7 +13,7 @@ service CharacterService {
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
     rpc InsertSymbols (stream Message) returns (Empty) {}
 
-    rpc ShareFile(ShareInfo) returns (Empty) {}
+    rpc ShareFile(FileName) returns (Empty) {}
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
@@ -61,6 +61,7 @@ message Identifier {
     string token = 17;
 }
 
+//todo forse da cancellare
 message ShareInfo {
     string filename = 18;
     string usernameD = 19;

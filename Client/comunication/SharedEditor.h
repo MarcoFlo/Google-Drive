@@ -15,7 +15,7 @@ class SharedEditor {
     int _counter;                               //indice che insieme al siteId crea un indice univoco a livello globale per ogni simbolo
 
 public:
-    explicit SharedEditor(CharacterClient &client, protobuf::UserL userL);
+    explicit SharedEditor(CharacterClient &client, protobuf::User user);
 
     virtual ~SharedEditor();
 
