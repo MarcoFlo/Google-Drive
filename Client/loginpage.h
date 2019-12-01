@@ -8,6 +8,12 @@
 #include <QtDebug>
 #include <QFileInfo>
 
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
+#include "comunication/SharedEditor.h"
+#include "comunication/AsyncClientGetSymbols.h"
+
 namespace Ui {
 class LoginPage;
 }
@@ -18,11 +24,14 @@ class LoginPage : public QMainWindow
 
 public:
     explicit LoginPage(QWidget *parent = nullptr);
+    LoginPage(CharacterClient *client) : client_(client);
     ~LoginPage();
 
 signals:
     void openR();
     void openP();
+
+    void loginSuccess(QString token);
 
 private slots:
     void on_Login_clicked();
@@ -33,6 +42,7 @@ private slots:
 
 private:
     Ui::LoginPage *ui;
+    CharacterClient *client_;
 };
 
 #endif // LOGINPAGE_H

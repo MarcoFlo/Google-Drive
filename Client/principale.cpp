@@ -36,7 +36,7 @@ Principale::Principale(QWidget *parent) :
     grpc::SslCredentialsOptions opts;
     opts.pem_root_certs = serverCert;
     auto channel_creds = grpc::SslCredentials(opts);
-    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
+    client_ = new CharacterClient(grpc::CreateChannel("localhost:50051", channel_creds));
 
 }
 
@@ -45,11 +45,30 @@ Principale::~Principale()
     delete ui;
 }
 
+/**
+ * ********************************************************************************************
+ *                                      INIT FUNCTIONS
+ *  *******************************************************************************************
+ */
 
-/*
- *  ****************************************
- *              PRIVATE SLOTS
- *  ****************************************
+/**
+ * @brief MainWindow::initConnectDialog
+ */
+void Principale::initLogin()
+{
+    l = new LoginPage(client_);
+    //l->setModal(true);    // after loginPage becomes a dialog
+
+    connect(this->l, SIGNAL(loginSuccess(QString)),
+            this, SLOT(on_loginEstablished(QString)));
+
+}
+
+
+/**
+ *  ********************************************************************************************
+ *                                      PRIVATE SLOTS
+ *  ********************************************************************************************
  */
 
 void Principale::on_nuovo_clicked()
@@ -101,6 +120,9 @@ void Principale::on_importa_clicked()
     importa.exec();
 }
 
+/**
+ *
+ */
 void Principale::open_edi()
 {
     hide();

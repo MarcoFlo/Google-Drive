@@ -28,13 +28,21 @@ void LoginPage::on_Login_clicked()
     QString username = ui->EmailEdit->text();
     QString pass = ui->PasswordEdit->text();
 
-    if(username.compare("test")==0 && pass.compare("test")==0) {
-        hide();
-        emit openP();
-    }
-    else {
-        QMessageBox::warning(this,"Login", "Username and/or password is not correct");
-    }
+
+//    if(username.compare("test")==0 && pass.compare("test")==0) {
+//        hide();
+//        emit openP();
+//    }
+//    else {
+//        QMessageBox::warning(this,"Login", "Username and/or password is not correct");
+//    }
+
+    protobuf::UserL userL;
+    userL.set_username(username.toStdString());
+    userL.set_password(pass.toStdString());
+    std::string token = client_->Login(userL);
+    emit loginSuccess(QString::fromStdString(token));
+
 }
 
 void LoginPage::on_registrati_clicked()

@@ -46,16 +46,23 @@ private slots:
 
     void open_edi();
 
+    void on_loginEstablished(QString);
+
 private:
     Ui::Principale *ui;
 
-    SplashScreen w;
-    LoginPage l;
-    RegistrationPage r;
-    Editor e;
+    SplashScreen *w;
+    LoginPage *l;
+    RegistrationPage *r;
+    Editor *e;
 
     /* client stuff */
-    std::string session_id;
+
+    CharacterClient *client_;
+    QString token;
+
+    /* private functions */
+    void initLogin();
 
 };
 
