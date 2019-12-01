@@ -28,20 +28,19 @@ void ShareFileCallData::HandleShare(std::map<std::string, std::vector<protobuf::
                                                return fileInfo.filename() == filename;
                                            });
 
-
-//        if (fileToBeShared != fileList->end()) {
-//            //se è tra i suoi file
-//            if ((*fileToBeShared).usernameo() == request_.filename()) {
-//                //se ha l'autorizzazione
-//                fileToBeShared->add_usernamesal(request_.usernamed());
-//                responder_.Finish(reply_, grpc::Status::OK, this);
-//
-//            }
-//        } else {
-//            //todo
-//            responder_.Finish(reply_, grpc::Status::OK, this);
-//
-//        }
+        if (fileToBeShared != fileList->end()) {
+            //se è tra i suoi file
+            if ((*fileToBeShared).usernameo() == request_.filename()) {
+                //se ha l'autorizzazione
+                const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
+                        "usernameshare").front().data();
+                fileToBeShared->add_usernamesal(usernameShare);
+                responder_.Finish(reply_, grpc::Status::OK, this);
+            }
+        } else {
+            //todo
+            responder_.Finish(reply_, grpc::Status::OK, this);
+        }
 
     } else {
         GPR_ASSERT(status_ == FINISH);

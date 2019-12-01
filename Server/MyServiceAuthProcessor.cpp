@@ -52,7 +52,7 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
     context->SetPeerIdentityPropertyName(Const::PeerIdentityPropertyName());                // optional
 
     if (dispatch_value == "/protobuf.CharacterService/ShareFile") {
-        return ProcessShareFile(auth_metadata);
+        return ProcessShareFile(auth_metadata, context);
     }
 
     return grpc::Status::OK;
@@ -88,7 +88,7 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
 }
 
 grpc::Status
-MyServiceAuthProcessor::ProcessLogin(const grpc_impl::AuthMetadataProcessor::InputMetadata &auth_metadata,
+MyServiceAuthProcessor::ProcessLogin(const InputMetadata &auth_metadata,
                                      grpc::AuthContext *context) {
     auto username_kv = auth_metadata.find("username");
     if (username_kv == auth_metadata.end())
@@ -121,47 +121,56 @@ grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
     return grpc::Status::OK;
 }
 
-grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_metadata) {
+grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_metadata,
+                                                      grpc::AuthContext *context) {
     auto usernameShare_kv = auth_metadata.find("usernameshare");
     if (usernameShare_kv == auth_metadata.end()) {
         auto usernameShare_value = std::string(usernameShare_kv->second.data(), (usernameShare_kv->second).length());
-        if (userMap.usermap().contains(usernameShare_value))
+        if (userMap.usermap().contains(usernameShare_value)) {
+            context->AddProperty("usernameshare", usernameShare_value);
             return grpc::Status::OK;
-        else
-            return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Utente con cui si vuole condividere il file non registrato");
-    }
-
-    void MyServiceAuthProcessor::LoadUserMap() {
-        std::ifstream ifs("userMap.data", std::ios_base::in | std::ios_base::binary);
-        if (ifs.peek() != EOF) {
-            if (!userMap.ParseFromIstream(&ifs)) {
-                std::cerr << "La lettura di userMap.data è fallita" << std::endl;
-                exit(1);
-            }
-            std::cout << "Sono stati caricati i seguenti utenti: " << std::endl;
-            std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {
-                std::cout << pair.first << std::endl;
-            });
-            std::cout << std::endl;
+        } else {
+            return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
+                                "Utente con cui si vuole condividere il file non registrato");
         }
     }
+    else {
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
+                            "Specificare il metadata usernameshare");
+    }
+}
 
-    void MyServiceAuthProcessor::UpdateUserMap(
-            google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair) {
-        userMap.mutable_usermap()->insert(pair);
-
-        std::cout << "Verranno salvati i seguenti utenti: " << std::endl;
+void MyServiceAuthProcessor::LoadUserMap() {
+    std::ifstream ifs("userMap.data", std::ios_base::in | std::ios_base::binary);
+    if (ifs.peek() != EOF) {
+        if (!userMap.ParseFromIstream(&ifs)) {
+            std::cerr << "La lettura di userMap.data è fallita" << std::endl;
+            exit(1);
+        }
+        std::cout << "Sono stati caricati i seguenti utenti: " << std::endl;
         std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {
             std::cout << pair.first << std::endl;
         });
         std::cout << std::endl;
-
-        std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
-        if (!userMap.SerializeToOstream(&ofs)) {
-            std::cerr << "La scrittura di userMap.data è fallita";
-            exit(1);
-        }
     }
+}
+
+void MyServiceAuthProcessor::UpdateUserMap(
+        google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair) {
+    userMap.mutable_usermap()->insert(pair);
+
+    std::cout << "Verranno salvati i seguenti utenti: " << std::endl;
+    std::for_each(userMap.usermap().begin(), userMap.usermap().end(), [](auto &pair) {
+        std::cout << pair.first << std::endl;
+    });
+    std::cout << std::endl;
+
+    std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
+    if (!userMap.SerializeToOstream(&ofs)) {
+        std::cerr << "La scrittura di userMap.data è fallita";
+        exit(1);
+    }
+}
 
 
 

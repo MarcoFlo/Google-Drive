@@ -19,7 +19,7 @@ private:
 
     grpc::Status ProcessLogout(std::basic_string<char> basicString);
 
-    grpc::Status ProcessShareFile(const InputMetadata &auth_metadata);
+    grpc::Status ProcessShareFile(const InputMetadata &auth_metadata, grpc::AuthContext *context);
 
     void LoadUserMap();
 
