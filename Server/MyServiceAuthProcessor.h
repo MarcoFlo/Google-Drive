@@ -11,25 +11,30 @@ public:
     Process(const InputMetadata &auth_metadata, grpc::AuthContext *context, OutputMetadata *consumed_auth_metadata,
             OutputMetadata *response_metadata) override;
 
+
+private:
     grpc::Status ProcessRegister(const InputMetadata &auth_metadata);
 
     grpc::Status ProcessLogin(const InputMetadata &auth_metadata, grpc::AuthContext *context);
 
-private:
+    grpc::Status ProcessLogout(std::basic_string<char> basicString);
+
+    grpc::Status ProcessShareFile(const InputMetadata &auth_metadata);
+
     void LoadUserMap();
 
     void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair);
 
-    struct Const{
-            static const std::string &TokenKeyName() {
-                static std::string _("token");
-                return _;
-            }
+    struct Const {
+        static const std::string &TokenKeyName() {
+            static std::string _("token");
+            return _;
+        }
 
-            static const std::string &PeerIdentityPropertyName() {
-                static std::string _("username");
-                return _;
-            }
+        static const std::string &PeerIdentityPropertyName() {
+            static std::string _("username");
+            return _;
+        }
     };
 
     //key=username, value=protobuf:User da salvare su db
@@ -40,7 +45,6 @@ private:
 
     int idCounter;
 
-    grpc::Status ProcessLogout(std::basic_string<char> basicString);
 };
 
 

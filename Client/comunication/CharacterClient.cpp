@@ -69,7 +69,7 @@ void CharacterClient::Logout(std::string token) {
 void CharacterClient::ShareFile(std::string token, std::string filename, std::string usernameShare) {
     grpc::ClientContext context;
     context.AddMetadata("token", token);
-    context.AddMetadata("usernameShare", usernameShare);
+    context.AddMetadata("usernameshare", usernameShare);
 
     protobuf::FileName request;
     request.set_filename(filename);
