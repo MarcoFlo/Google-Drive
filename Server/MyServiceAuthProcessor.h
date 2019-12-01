@@ -32,7 +32,7 @@ private:
             }
     };
 
-    //key=username, value=protobuf:UserL da salvare su db
+    //key=username, value=protobuf:User da salvare su db
     protobuf::UserMap userMap;
 
     //key=identifier, value=username da tenere a runtime

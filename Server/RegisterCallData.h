@@ -25,7 +25,7 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::UserR request_;
+    protobuf::User request_;
 // What we send back to the client.
     protobuf::Empty reply_;
 

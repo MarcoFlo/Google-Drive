@@ -2,8 +2,8 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc Register (UserR) returns (Empty) {}
-    rpc Login (UserL) returns (Identifier) {}
+    rpc Register (User) returns (Empty) {}
+    rpc Login (User) returns (Identifier) {}
     rpc Logout (Empty) returns (Empty) {}
 
     rpc InsertFile (FileName) returns (Empty) {}
@@ -12,53 +12,58 @@ service CharacterService {
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
     rpc InsertSymbols (stream Message) returns (Empty) {}
+
+    rpc ShareFile(ShareInfo) returns (Empty) {}
 }
 
+//numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
+
 message Empty {}
+
+message Message {
+    FileInfo fileInfo = 1;
+    bool isEraseBool = 2;
+    Symbol symbol = 3;
+}
+
+message Symbol {
+    string character = 4;
+    string uniqueId = 5;
+    repeated int32 pos = 6;
+}
+
+message FileName {
+    string fileName = 7;
+}
+
+message Chunk {
+    bytes chunk = 8;
+}
+
+message FileInfo {
+    string filename = 9;
+    int32 size = 10;
+    string usernameO = 11; //email Owner
+    repeated string usernamesAL = 12; //userAccessList
+}
+
+message FilesInfoList {
+    repeated FileInfo fileIL = 13;
+}
+
+message User {
+    string username = 14;
+    string password = 15;
+    string passwordR = 16;
+}
 
 message Identifier {
     string token = 17;
 }
 
-message FileName {
-    string fileName = 30;
-}
-
-message Chunk {
-    bytes chunk = 19;
-}
-
-message UserR {
-    string username = 1;
-    string password = 2;
-    string passwordR = 3;
-}
-message UserL {
-    string username = 4;
-    string password = 5;
-}
-
-message FilesInfoList {
-    repeated FileInfo fileIL = 6;
-}
-
-message FileInfo {
-    string filename = 7;
-    int32 size = 8;
-    string usernameO = 9; //email Owner
-    repeated string usernamesAL = 10; //userAccessList
-}
-
-message Message {
-    FileInfo fileInfo = 22;
-    bool isEraseBool = 13;
-    Symbol symbol = 12;
-}
-
-message Symbol {
-    string character = 14;
-    string uniqueId = 15;
-    repeated int32 pos = 16;
+message ShareInfo {
+    string filename = 18;
+    string usernameD = 19;
 }
 
 message UserMap{
