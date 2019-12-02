@@ -10,7 +10,7 @@ public:
 
     void Proceed(bool ok = true) {}
 
-    void HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
+    void HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap, std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
                       bool ok = true);
 
 private:

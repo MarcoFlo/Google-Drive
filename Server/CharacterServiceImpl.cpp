@@ -98,7 +98,7 @@ void CharacterServiceImpl::HandleRpcs() {
         if (callData->getClass() == "GetSymbolsCallData")
             static_cast<GetSymbolsCallData *> (tag)->HandleGet(subscribedClientMap, ok);
         else if (callData->getClass() == "InsertSymbolsCallData")
-            static_cast<InsertSymbolsCallData *> (tag)->HandleInsert(subscribedClientMap, ok);
+            static_cast<InsertSymbolsCallData *> (tag)->HandleInsert(subscribedClientMap, fileClientMap, ok);
         else if (callData->getClass() == "InsertFileCallData")
             static_cast<InsertFileCallData *> (tag)->HandleInsert(fileClientMap, ok);
         else if (callData->getClass() == "DeleteFileCallData")

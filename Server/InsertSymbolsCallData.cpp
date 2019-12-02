@@ -15,6 +15,7 @@ InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncSe
 }
 
 void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
+                                         std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
                                          bool ok) {
     if (status_ == FINISH) {
         delete this;
@@ -40,11 +41,21 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
     } else if (status_ == READ_CALLED) {
         status_ = READ;
         protobuf::Message messageReceived = request_;
-        std::for_each(subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).begin(),
-                      subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).end(),
-                      [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
-                          getSymbolsCallData->HandleSymbol(messageReceived);
-                      });
+        const std::string principal = ctx_.auth_context()->FindPropertyValues(
+                ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
+
+        auto fileInsert = std::find_if(fileClientMap.at(principal).begin(), fileClientMap.at(principal).end(),
+                                       [&messageReceived](protobuf::FileInfo &fileInfo) {
+                                           return messageReceived.fileinfo().filename() == fileInfo.filename();
+                                       });
+
+        if (fileInsert != fileClientMap.at(principal).end()) {
+            std::for_each(
+                    subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).begin(),
+                    subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).end(),
+                    [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
+                        getSymbolsCallData->HandleSymbol(messageReceived);
+                    });
+        }
     }
 }
-
