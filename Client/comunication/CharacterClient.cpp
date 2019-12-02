@@ -86,6 +86,27 @@ void CharacterClient::ShareFile(std::string token, std::string filename, std::st
         std::cout << "Share file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 }
 
+void CharacterClient::GetFileContent(std::string token, protobuf::FileInfo fileInfo) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token);
+
+    protobuf::Chunk reply;
+    grpc::Status status;
+
+    std::shared_ptr<grpc::ClientReader<protobuf::Chunk>> stream(stub_->GetFileContent(&context, fileInfo));
+
+    while (stream->Read(&reply)) {
+        std::cout << "Got message " << reply.chunk().data() << std::endl;
+    }
+    status = stream->Finish();
+
+    if (status.ok())
+        std::cout << "Get file rpc was successful" << std::endl;
+    else
+        std::cout << "Get file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+}
+
+
 AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId, const std::string &token) {
     protobuf::FileInfo request;
     request.set_filename(fileUniqueId);
@@ -105,6 +126,8 @@ void CharacterClient::AsyncCompleteRpc() {
 
 
 }
+
+
 
 
 

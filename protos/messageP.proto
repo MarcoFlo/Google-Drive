@@ -17,6 +17,7 @@ service CharacterService {
 
     rpc SetProfile(ProfileInfo) returns (Empty) {}
     rpc GetProfile(Empty) returns (ProfileInfo) {}
+    rpc GetProfileImage(Empty) returns (stream Chunk) {}
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
@@ -40,6 +41,7 @@ message FileName {
 }
 
 message Chunk {
+//    16KiB - 64KiB
     bytes chunk = 8;
 }
 

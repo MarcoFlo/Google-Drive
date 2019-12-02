@@ -18,6 +18,8 @@ public:
 
     void ShareFile(std::string token, std::string filename, std::string usernameShare);
 
+    void GetFileContent(std::string token, protobuf::FileInfo fileInfo);
+
     AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId, const std::string &token);
 
 
