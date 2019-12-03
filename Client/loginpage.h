@@ -2,8 +2,7 @@
 #define LOGINPAGE_H
 
 #include <QMainWindow>
-#include "principale.h"
-#include "registrationpage.h"
+// #include "registrationpage.h" -> circular inclusion!
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
@@ -24,7 +23,7 @@ class LoginPage : public QMainWindow
 
 public:
     explicit LoginPage(QWidget *parent = nullptr);
-    LoginPage(CharacterClient *client) : client_(client);
+    LoginPage(CharacterClient *client);
     ~LoginPage();
 
 signals:

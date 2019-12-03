@@ -2,7 +2,7 @@
 #define REGISTRATIONPAGE_H
 
 #include <QMainWindow>
-#include "principale.h"
+//#include "principale.h" -> circular inclusion!
 
 
 namespace Ui {

@@ -28,6 +28,7 @@ Principale::Principale(QWidget *parent) :
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
+    initLogin();
 
     // client initialization
     //
@@ -47,7 +48,7 @@ Principale::~Principale()
 
 /**
  * ********************************************************************************************
- *                                      INIT FUNCTIONS
+ *                                      PRIVATE FUNCTIONS
  *  *******************************************************************************************
  */
 
@@ -60,7 +61,7 @@ void Principale::initLogin()
     //l->setModal(true);    // after loginPage becomes a dialog
 
     connect(this->l, SIGNAL(loginSuccess(QString)),
-            this, SLOT(on_loginEstablished(QString)));
+            this, SLOT(on_loginSuccess(QString)));
 
 }
 
@@ -120,11 +121,13 @@ void Principale::on_importa_clicked()
     importa.exec();
 }
 
-/**
- *
- */
+
 void Principale::open_edi()
 {
     hide();
     emit openE();
+}
+
+void Principale::on_loginSuccess(QString token) {
+
 }

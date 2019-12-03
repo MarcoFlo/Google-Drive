@@ -46,7 +46,7 @@ private slots:
 
     void open_edi();
 
-    void on_loginEstablished(QString);
+    void on_loginSuccess(QString);
 
 private:
     Ui::Principale *ui;

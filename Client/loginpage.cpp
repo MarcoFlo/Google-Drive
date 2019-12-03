@@ -4,8 +4,9 @@
 #include <QTextStream>
 #include <QMessageBox>
 
-LoginPage::LoginPage(QWidget *parent) :
-    QMainWindow(parent),
+LoginPage::LoginPage(/*QWidget *parent, */CharacterClient *client) :
+    /*QMainWindow(parent),*/
+    client_(client),
     ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
@@ -15,6 +16,8 @@ LoginPage::LoginPage(QWidget *parent) :
 
     if(!mydb.open()) {
         QMessageBox::warning(this,"Database error", "Failed to open the database");
+    } else {
+        QMessageBox::warning(this,"Database error", "Database opened");
     }
 }
 
