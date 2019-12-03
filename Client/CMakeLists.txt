@@ -52,7 +52,7 @@ find_package(Qt5 REQUIRED COMPONENTS Core Widgets Sql)
 
 # mantenere in ordine alfabetico per comodità
 add_executable(Client main.cpp
-        comunication/AsyncClientCall.h comunication/AsyncClientGetSymbols.cpp comunication/AsyncClientGetSymbols.h comunication/CharacterClient.cpp comunication/CharacterClient.h comunication/definitions.h comunication/Message.cpp comunication/Message.h comunication/MyCustomAuthenticator.cpp comunication/MyCustomAuthenticator.h comunication/SharedEditor.cpp comunication/SharedEditor.h comunication/Symbol.h comunication/Symbol.cpp
+        comunication/AsyncClientCall.h comunication/AsyncClientGetSymbols.cpp comunication/AsyncClientGetSymbols.h comunication/CharacterClient.cpp comunication/CharacterClient.h comunication/definitions.h comunication/Message.cpp comunication/Message.h comunication/SharedEditor.cpp comunication/SharedEditor.h comunication/Symbol.h comunication/Symbol.cpp
         account.h condividi.h editor.h importa.h loginpage.h nuovo.h principale.h registrationpage.h splashscreen.h
         account.cpp condividi.cpp editor.cpp importa.cpp loginpage.cpp nuovo.cpp principale.cpp registrationpage.cpp splashscreen.cpp
         account.ui condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui
