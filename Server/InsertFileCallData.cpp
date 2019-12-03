@@ -19,7 +19,7 @@ InsertFileCallData::InsertFileCallData(protobuf::CharacterService::AsyncService 
 }
 
 
-void InsertFileCallData::HandleInsert(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap, bool ok) {
+void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Received a Insert request" << std::endl;
         new InsertFileCallData(service_, cq_);
@@ -28,7 +28,7 @@ void InsertFileCallData::HandleInsert(std::map<std::string, std::vector<protobuf
         std::string username = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        fileClientMap[username].push_back(MakeFileInfo(username, request_.filename()));
+        fileClientMap.mutable_fileclientmap()->at(username).mutable_fileil()->Add(MakeFileInfo(username, request_.filename()));
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 

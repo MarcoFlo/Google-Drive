@@ -13,7 +13,7 @@ ShareFileCallData::ShareFileCallData(protobuf::CharacterService::AsyncService *s
 }
 
 
-void ShareFileCallData::HandleShare(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap, bool ok) {
+void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Share file request" << std::endl;
         new ShareFileCallData(service_, cq_);
@@ -22,13 +22,13 @@ void ShareFileCallData::HandleShare(std::map<std::string, std::vector<protobuf::
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
         std::string filename = request_.filename();
-        std::vector<protobuf::FileInfo> *fileList = &fileClientMap.at(principal);
-        auto fileToBeShared = std::find_if(fileList->begin(), fileList->end(),
+        protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
+        auto fileToBeShared = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
                                            [&filename](protobuf::FileInfo &fileInfo) {
                                                return fileInfo.filename() == filename;
                                            });
 
-        if (fileToBeShared != fileList->end()) {
+        if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
             if ((*fileToBeShared).usernameo() == request_.filename()) {
                 //se ha l'autorizzazione

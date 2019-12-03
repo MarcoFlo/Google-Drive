@@ -9,8 +9,7 @@ public:
 
     void Proceed(bool ok = true) {}
 
-    void HandleDelete(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
-                      bool ok = true);
+    void HandleDelete(protobuf::FileClientMap &fileClientMap, bool ok = true);
 
     std::string getClass();
 

@@ -1,6 +1,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
@@ -15,7 +16,7 @@ InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncSe
 }
 
 void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
-                                         std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
+                                         protobuf::FileClientMap &fileClientMap,
                                          bool ok) {
     if (status_ == FINISH) {
         delete this;
@@ -44,12 +45,13 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        auto fileInsert = std::find_if(fileClientMap.at(principal).begin(), fileClientMap.at(principal).end(),
+        auto fileInsert = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
+                                       fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
                                        [&messageReceived](protobuf::FileInfo &fileInfo) {
                                            return messageReceived.fileinfo().filename() == fileInfo.filename();
                                        });
 
-        if (fileInsert != fileClientMap.at(principal).end()) {
+        if (fileInsert != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
             std::for_each(
                     subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).begin(),
                     subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).end(),

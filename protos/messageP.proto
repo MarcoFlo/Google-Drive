@@ -74,7 +74,11 @@ message ProfileInfo {
 }
 
 message UserMap {
-    map<string,string> userMap = 30;
+    map<string, string> userMap = 30;
+}
+
+message FileClientMap {
+    map<string, FilesInfoList> fileClientMap = 40;
 }
 
 

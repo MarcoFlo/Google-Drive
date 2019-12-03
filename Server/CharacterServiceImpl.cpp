@@ -49,6 +49,7 @@ void CharacterServiceImpl::Run() {
     read("../../certs/server.cert", serverCert);
     read("../../certs/server.key", serverKey);
 
+    LoadFileClienMap();
 
     grpc::SslServerCredentialsOptions::PemKeyCertPair keycert = {serverKey, serverCert};
 //    keycert.private_key = key;
@@ -111,6 +112,23 @@ void CharacterServiceImpl::HandleRpcs() {
 
     }
 }
+
+void CharacterServiceImpl::LoadFileClienMap() {
+    std::ifstream ifs("fileClientMap.data", std::ios_base::in | std::ios_base::binary);
+    if (ifs.peek() != EOF) {
+        if (!fileClientMap.ParseFromIstream(&ifs)) {
+            std::cerr << "La lettura di userMap.data è fallita" << std::endl;
+            exit(1);
+        }
+        std::cout << "Sono stati caricati i seguenti utenti: " << std::endl;
+        std::for_each(fileClientMap.fileclientmap().begin(), fileClientMap.fileclientmap().end(), [](auto &pair) {
+            std::cout << pair.first << std::endl;
+        });
+        std::cout << std::endl;
+    }
+}
+
+
 
 
 

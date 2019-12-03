@@ -9,8 +9,7 @@ public:
 
     void Proceed(bool ok = true) {}
 
-    void HandleShare(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap,
-                      bool ok = true);
+    void HandleShare(protobuf::FileClientMap &fileClientMap, bool ok = true);
 
     std::string getClass();
 

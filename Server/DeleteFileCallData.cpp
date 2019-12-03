@@ -1,4 +1,5 @@
 #include <string>
+#include <algorithm>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "DeleteFileCallData.h"
@@ -13,7 +14,7 @@ DeleteFileCallData::DeleteFileCallData(protobuf::CharacterService::AsyncService 
 }
 
 
-void DeleteFileCallData::HandleDelete(std::map<std::string, std::vector<protobuf::FileInfo>> &fileClientMap, bool ok) {
+void DeleteFileCallData::HandleDelete(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Delete request" << std::endl;
         new DeleteFileCallData(service_, cq_);
@@ -22,18 +23,17 @@ void DeleteFileCallData::HandleDelete(std::map<std::string, std::vector<protobuf
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
         std::string filename = request_.filename();
-        std::vector<protobuf::FileInfo> *fileList = &fileClientMap.at(principal);
-        auto fileToBeDeleted = std::find_if(fileList->begin(), fileList->end(),
+        protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
+        auto fileToBeDeleted = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
                                             [&filename](protobuf::FileInfo &fileInfo) {
                                                 return fileInfo.filename() == filename;
                                             });
-        if (fileToBeDeleted != fileList->end()) {
+        if (fileToBeDeleted != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
             if ((*fileToBeDeleted).usernameo() == request_.filename()) {
                 //se ha l'autorizzazione
-                fileList->erase(fileToBeDeleted);
+                fileList->mutable_fileil()->erase(fileToBeDeleted);
                 responder_.Finish(reply_, grpc::Status::OK, this);
-
             }
         } else {
             //todo

@@ -12,12 +12,13 @@ public:
 private:
     void HandleRpcs();
 
+    void LoadFileClienMap();
+
     std::unique_ptr<grpc::ServerCompletionQueue> cq_;
     protobuf::CharacterService::AsyncService service_;
     std::unique_ptr<grpc::Server> server_;
     std::map<std::string, std::vector<GetSymbolsCallData *>> subscribedClientMap; //key -> uniqueFileId, value-> vector of client with a pending GetSymbols
-    std::map<std::string, std::vector<protobuf::FileInfo>> fileClientMap; // key -> username, value -> vector of fileInfo (size is empty)
-
+    protobuf::FileClientMap fileClientMap; // key -> username, value -> vector of fileInfo (size is empty)
 
 };
 
