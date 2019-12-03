@@ -10,12 +10,12 @@
 #include "editor.h"
 #include "nuovo.h"
 
-//#include <grpcpp/grpcpp.h>
-//#include "messageP.grpc.pb.h"
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
 
-//#include "comunication/CharacterClient.h"
-//#include "comunication/SharedEditor.h"
-//#include "comunication/AsyncClientGetSymbols.h"
+#include "comunication/CharacterClient.h"
+#include "comunication/SharedEditor.h"
+#include "comunication/AsyncClientGetSymbols.h"
 
 void read(const std::string &filename, std::string &data) {
     std::ifstream file(filename.c_str(), std::ios::in);

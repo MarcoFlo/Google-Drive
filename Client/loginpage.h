@@ -8,6 +8,13 @@
 #include <QtDebug>
 #include <QFileInfo>
 #include "splashscreen.h"
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
+#include <iostream>
+#include <thread>
+#include <sstream>
+#include <fstream>
 
 namespace Ui {
 class LoginPage;
@@ -42,6 +49,8 @@ private:
     Ui::LoginPage *ui;
     RegistrationPage *r;
     Principale *p;
-     SplashScreen *splash;
+    SplashScreen *splash;
+    CharacterClient *client_;
+    QString token;
 };
 #endif // LOGINPAGE_H

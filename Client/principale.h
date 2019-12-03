@@ -6,6 +6,9 @@
 #include "condividi.h"
 #include "editor.h"
 #include "account.h"
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
 
 namespace Ui {
 class Principale;
@@ -16,7 +19,8 @@ class Principale : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Principale(QWidget *parent = nullptr);
+    explicit Principale(QWidget *parent = nullptr, QString token = nullptr, CharacterClient *client);
+
     ~Principale();
 
     void abilita(bool s);
@@ -54,6 +58,10 @@ private:
     Ui::Principale *ui;
 
     Editor *e;
+
+    QString token_;
+
+    CharacterClient *client_;
 
 };
 
