@@ -70,6 +70,7 @@ message ProfileInfo {
     string username = 18;
     string name = 19;
     string surname = 20;
+    User user = 21;
 }
 
 message UserMap {
