@@ -1,38 +1,19 @@
-#include "loginpage.h"
-#include "ui_loginpage.h"
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
-
-void read(const std::string &filename, std::string &data) {
-    std::ifstream file(filename.c_str(), std::ios::in);
-
-    if (file.is_open()) {
-        std::stringstream ss;
-        ss << file.rdbuf();
-        file.close();
-        data = ss.str();
-    }
-}
+#include "loginpage.h"
+#include "ui_loginpage.h"
 
 LoginPage::LoginPage(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::LoginPage)
-{
+        QMainWindow(parent),
+        ui(new Ui::LoginPage) {
     ui->setupUi(this);
 
     splash = new SplashScreen(this);
-
     splash->show();
-
     QTimer::singleShot(4000, this, SLOT(closeSplash()));
 
-    std::string serverCert;
-    read("../../certs/server.cert", serverCert);
-    grpc::SslCredentialsOptions opts;
-    opts.pem_root_certs = serverCert;
-    auto channel_creds = grpc::SslCredentials(opts);
-    client_ = new CharacterClient(grpc::CreateChannel("localhost:50051", channel_creds));
+    client_ = new CharacterClient();
 
     ui->regi->setVisible(false);
 
@@ -40,13 +21,11 @@ LoginPage::LoginPage(QWidget *parent) :
     ui->PasswordEdit->setText("test");
 }
 
-LoginPage::~LoginPage()
-{
+LoginPage::~LoginPage() {
     delete ui;
 }
 
-void LoginPage::on_Login_clicked()
-{
+void LoginPage::on_Login_clicked() {
     QString username = ui->EmailEdit->text();
     QString pass = ui->PasswordEdit->text();
 
@@ -55,19 +34,17 @@ void LoginPage::on_Login_clicked()
     userL.set_password(pass.toStdString());
     std::string token = client_->Login(userL);
 
-    if(token.compare("")!=0) {
+    if (token.compare("") != 0) {
         hide();
-        p=new Principale(this, token, client_);
+        p = new Principale(this, client_);
         QObject::connect(p, SIGNAL(closeP()), this, SLOT(on_closeP_signal()));
         p->show();
-    }
-    else {
-        QMessageBox::warning(this,"Login", "Username and/or password is not correct");
+    } else {
+        QMessageBox::warning(this, "Login", "Username and/or password is not correct");
     }
 }
 
-void LoginPage::on_registrati_clicked()
-{
+void LoginPage::on_registrati_clicked() {
     hide();
     r = new RegistrationPage(this);
     QObject::connect(r, SIGNAL(closeR()), this, SLOT(on_closeR_signal()));

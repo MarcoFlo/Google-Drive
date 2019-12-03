@@ -1,15 +1,35 @@
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <fstream>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "AsyncClientGetSymbols.h"
 #include "CharacterClient.h"
 
 
-CharacterClient::CharacterClient(std::shared_ptr<grpc::Channel> channel) : stub_(
-        protobuf::CharacterService::NewStub(channel)) {}
+void read(const std::string &filename, std::string &data) {
+    std::ifstream file(filename.c_str(), std::ios::in);
 
-void CharacterClient::Register(protobuf::User user) {
+    if (file.is_open()) {
+        std::stringstream ss;
+        ss << file.rdbuf();
+        file.close();
+        data = ss.str();
+    }
+}
+
+CharacterClient::CharacterClient() {
+    std::string serverCert;
+    read("../../certs/server.cert", serverCert);
+    grpc::SslCredentialsOptions opts;
+    opts.pem_root_certs = serverCert;
+    auto channel_creds = grpc::SslCredentials(opts);
+
+    stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
+}
+
+void CharacterClient::Register(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
@@ -26,7 +46,7 @@ void CharacterClient::Register(protobuf::User user) {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
 }
 
-std::string CharacterClient::Login(protobuf::User user) {
+std::string CharacterClient::Login(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
@@ -38,18 +58,19 @@ std::string CharacterClient::Login(protobuf::User user) {
     status = stub_->Login(&context, user, &reply);
 
     if (status.ok()) {
-        std::cout << "Login rpc was successful, we got identifier: " << reply.token() << std::endl;
-        return reply.token();
+        std::cout << "Login rpc was successful" << std::endl;
+        token_ = reply.token();
+        return "";
     } else {
         std::cout << "Login rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
-        return "";
+        return status.error_message();
     }
 }
 
 
-void CharacterClient::Logout(std::string token) {
+std::string CharacterClient::Logout() {
     grpc::ClientContext context;
-    context.AddMetadata("token", token);
+    context.AddMetadata("token", token_);
 
     protobuf::Empty request;
 
@@ -59,16 +80,18 @@ void CharacterClient::Logout(std::string token) {
 
     status = stub_->Logout(&context, request, &reply);
 
-    if (status.ok())
+    if (status.ok()) {
         std::cout << "Logout rpc was successful" << std::endl;
-    else
+        return "";
+    } else {
         std::cout << "Logout rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
 }
 
-
-void CharacterClient::ShareFile(std::string token, std::string filename, std::string usernameShare) {
+std::string CharacterClient::ShareFile(std::string &filename, std::string &usernameShare) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token);
+    context.AddMetadata("token", token_);
     context.AddMetadata("usernameshare", usernameShare);
 
     protobuf::FileName request;
@@ -80,15 +103,19 @@ void CharacterClient::ShareFile(std::string token, std::string filename, std::st
 
     status = stub_->ShareFile(&context, request, &reply);
 
-    if (status.ok())
+
+    if (status.ok()) {
         std::cout << "Share file rpc was successful" << std::endl;
-    else
+        return "";
+    } else {
         std::cout << "Share file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
 }
 
-void CharacterClient::GetFileContent(std::string token, protobuf::FileInfo fileInfo) {
+std::string CharacterClient::GetFileContent( protobuf::FileInfo fileInfo) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token);
+    context.AddMetadata("token", token_);
 
     protobuf::Chunk reply;
     grpc::Status status;
@@ -97,20 +124,24 @@ void CharacterClient::GetFileContent(std::string token, protobuf::FileInfo fileI
 
     while (stream->Read(&reply)) {
         std::cout << "Got message " << reply.chunk().data() << std::endl;
+        //todo
     }
     status = stream->Finish();
+    //todo getSymbols
 
-    if (status.ok())
+    if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
-    else
+        return "";
+    } else {
         std::cout << "Get file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
-}
+        return status.error_message();
+    }}
 
 
-AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId, const std::string &token) {
+AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId) {
     protobuf::FileInfo request;
     request.set_filename(fileUniqueId);
-    return new AsyncClientGetSymbols(request, token, cq_, stub_);
+    return new AsyncClientGetSymbols(request, token_, cq_, stub_);
 }
 
 

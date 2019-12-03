@@ -6,22 +6,21 @@
 
 class CharacterClient {
 public:
-    explicit CharacterClient(std::shared_ptr<grpc::Channel> channel);
+    explicit CharacterClient();
 
     void AsyncCompleteRpc();
 
-    void Register(protobuf::User user);
+    void Register(protobuf::User &user);
 
-    std::string Login(protobuf::User user);
+    std::string Login(protobuf::User &user);
 
-    void Logout(std::string token);
+    std::string Logout();
 
-    void ShareFile(std::string token, std::string filename, std::string usernameShare);
+    std::string ShareFile(std::string &filename, std::string &usernameShare);
 
-    void GetFileContent(std::string token, protobuf::FileInfo fileInfo);
+    std::string GetFileContent(protobuf::FileInfo fileInfo);
 
-    AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId, const std::string &token);
-
+    AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId);
 
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
@@ -30,6 +29,7 @@ private:
 
     grpc::CompletionQueue cq_;
 
+    std::string token_;
 
 };
 

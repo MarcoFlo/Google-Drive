@@ -17,27 +17,8 @@
 #include "comunication/SharedEditor.h"
 #include "comunication/AsyncClientGetSymbols.h"
 
-void read(const std::string &filename, std::string &data) {
-    std::ifstream file(filename.c_str(), std::ios::in);
-
-    if (file.is_open()) {
-        std::stringstream ss;
-        ss << file.rdbuf();
-        file.close();
-        data = ss.str();
-    }
-}
-
 int main(int argc, char **argv) {
-/*
-    std::string serverCert;
-    read("../../certs/server.cert", serverCert);
-    grpc::SslCredentialsOptions opts;
-    opts.pem_root_certs = serverCert;
-
-    auto channel_creds = grpc::SslCredentials(opts);
-
-    CharacterClient client(grpc::CreateChannel("localhost:50051", channel_creds));
+    CharacterClient client;
 
     protobuf::User user;
     user.set_username("prova@test.it");
@@ -47,17 +28,17 @@ int main(int argc, char **argv) {
 
 //    SharedEditor editor(client, user);
 
-    std::string token = client.Login(user);
-    client.Logout(token);
-    token = client.Login(user);
+    client.Login(user);
+    client.Logout();
+    client.Login(user);
 
 //    client.ShareFile(token, "filename", "usernameShare@test.it");
 
-    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
+    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1");
 
 
     std::thread thread_ = std::thread(&CharacterClient::AsyncCompleteRpc, &client);
-*/
+
     QApplication a(argc, argv);
     LoginPage log;
 

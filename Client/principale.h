@@ -19,7 +19,7 @@ class Principale : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Principale(QWidget *parent = nullptr, QString token = nullptr, CharacterClient *client);
+    explicit Principale(QWidget *parent = nullptr, CharacterClient *client = nullptr);
 
     ~Principale();
 
@@ -58,8 +58,6 @@ private:
     Ui::Principale *ui;
 
     Editor *e;
-
-    QString token_;
 
     CharacterClient *client_;
 

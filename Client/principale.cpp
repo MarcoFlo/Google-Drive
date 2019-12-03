@@ -9,9 +9,8 @@
 #include "principale.h"
 
 
-Principale::Principale(QWidget *parent, QString token, CharacterClient *client) :
+Principale::Principale(QWidget *parent, CharacterClient *client) :
     QMainWindow(parent),
-    token_(token),
     client_(client),
     ui(new Ui::Principale)
 {

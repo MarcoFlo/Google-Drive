@@ -11,10 +11,6 @@
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
-#include <iostream>
-#include <thread>
-#include <sstream>
-#include <fstream>
 
 namespace Ui {
 class LoginPage;
