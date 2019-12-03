@@ -7,6 +7,7 @@
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
+#include "splashscreen.h"
 
 namespace Ui {
 class LoginPage;
@@ -35,9 +36,12 @@ private slots:
 
     void on_closeRReg_signal();
 
+    void closeSplash();
+
 private:
     Ui::LoginPage *ui;
     RegistrationPage *r;
     Principale *p;
+     SplashScreen *splash;
 };
 #endif // LOGINPAGE_H

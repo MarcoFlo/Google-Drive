@@ -4,11 +4,19 @@
 #include <QTextStream>
 #include <QMessageBox>
 
+
 LoginPage::LoginPage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
+
+    splash = new SplashScreen(this);
+
+    splash->show();
+
+    QTimer::singleShot(4000, this, SLOT(closeSplash()));
+
     ui->regi->setVisible(false);
 
     ui->EmailEdit->setText("test");
@@ -39,7 +47,6 @@ void LoginPage::on_Login_clicked()
 void LoginPage::on_registrati_clicked()
 {
     hide();
-    //emit openR();
     r = new RegistrationPage(this);
     QObject::connect(r, SIGNAL(closeR()), this, SLOT(on_closeR_signal()));
     QObject::connect(r, SIGNAL(closeRReg()), this, SLOT(on_closeRReg_signal()));
@@ -69,3 +76,7 @@ void LoginPage::on_closeRReg_signal() {
     delete r;
 }
 
+void LoginPage::closeSplash() {
+    splash->hide();
+    delete splash;
+}

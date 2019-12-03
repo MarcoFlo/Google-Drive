@@ -234,7 +234,7 @@ Editor::Editor(QWidget *parent, QString windowName) :
 
        listaDim = dimMenu->actions();
 
-       //MENU ZOOM
+       /*MENU ZOOM
 
        zoomMenu = new QMenu();
        zoomG = new QActionGroup(zoomMenu);
@@ -277,7 +277,7 @@ Editor::Editor(QWidget *parent, QString windowName) :
 
        ui->toolBar_2->insertWidget(ui->actionallineaS, zoom);
 
-       QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));
+       QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));*/
 
        //MENU COLORE
 
@@ -585,7 +585,7 @@ void Editor::changeFont()
     setTextFont(fontS);
 }
 
-void Editor::changeZoom()
+/*void Editor::changeZoom()
 {
 
     QString zoomS = zoomG->checkedAction()->text();
@@ -594,7 +594,7 @@ void Editor::changeZoom()
     QString z = "{zoom: " + zoomS + "}";
     ui->groupBox_2->setStyleSheet(z);
 
-}
+}*/
 
 void Editor::changeColor()
 {

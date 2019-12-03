@@ -65,7 +65,7 @@ private slots:
 
         void changeFont();
 
-        void changeZoom();
+        //void changeZoom();
 
         void changeColor();
 
@@ -107,11 +107,11 @@ private:
 
     QLineEdit *lEdit;
 
-    QMenu *zoomMenu;
+    /*QMenu *zoomMenu;
 
     QActionGroup *zoomG;
 
-    QToolButton *zoom;
+    QToolButton *zoom;*/
 
     QList <QPushButton*> listaColor;
 
@@ -119,7 +119,7 @@ private:
 
     QMenu *coloreM;
 
-    int zoomT = 100;
+    //int zoomT = 100;
 
 };
 

@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <QTimer>
-#include "loginpage.h"
 
 namespace Ui {
 class SplashScreen;
@@ -20,12 +19,10 @@ public:
 signals:
     void openL();
 
-private slots:
-    void closeSplash();
-
 private:
     Ui::SplashScreen *ui;
-    LoginPage *l;
+
+
 };
 
 #endif // SPLASHSCREEN_H

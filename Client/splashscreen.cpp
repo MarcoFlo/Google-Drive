@@ -16,9 +16,3 @@ SplashScreen::~SplashScreen()
     delete ui;
 }
 
-void SplashScreen::closeSplash()
-{
-    hide();
-    l= new LoginPage();
-    l->show();
-}
