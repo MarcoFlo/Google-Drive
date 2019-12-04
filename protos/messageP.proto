@@ -2,35 +2,21 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc Register (User) returns (Empty) {
-    }
-    rpc Login (User) returns (Identifier) {
-    }
-    rpc Logout (Empty) returns (Empty) {
-    }
+    rpc Register (User) returns (Empty) {}
+    rpc Login (User) returns (Identifier) {}
+    rpc Logout (Empty) returns (Empty) {}
 
-    rpc InsertFile (FileName) returns (Empty) {
-    }
-    rpc DeleteFile (FileName) returns (Empty) {
-    }
-    rpc GetFiles (Empty) returns (FilesInfoList) {
-    }
-    rpc GetFileContent (FileInfo) returns (stream Chunk) {
-    }
-    rpc GetSymbols (stream FileInfo) returns (stream Message) {
-    }
-    rpc InsertSymbols (stream Message) returns (Empty) {
-    }
+    rpc InsertFile (FileName) returns (Empty) {}
+    rpc DeleteFile (FileName) returns (Empty) {}
+    rpc GetFiles (Empty) returns (FilesInfoList) {}
+    rpc ShareFile (FileName) returns (Empty) {}
+    rpc GetFileContent (FileInfo) returns (stream Chunk) {}
+    rpc GetSymbols (stream FileInfo) returns (stream Message) {}
+    rpc InsertSymbols (stream Message) returns (Empty) {}
 
-    rpc ShareFile (FileName) returns (Empty) {
-    }
-
-    rpc SetProfile (ProfileInfo) returns (Empty) {
-    }
-    rpc GetProfile (Empty) returns (ProfileInfo) {
-    }
-    rpc GetProfileImage (Empty) returns (stream Chunk) {
-    }
+    rpc SetProfile (ProfileInfo) returns (Empty) {}
+    rpc GetProfile (Empty) returns (ProfileInfo) {}
+    rpc GetProfileImage (Empty) returns (stream Chunk) {}
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
