@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "InsertFileCallData.h"
@@ -29,6 +30,7 @@ void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bo
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
         fileClientMap.mutable_fileclientmap()->at(username).mutable_fileil()->Add(MakeFileInfo(username, request_.filename()));
+        UpdateFileClientMap(fileClientMap);
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 

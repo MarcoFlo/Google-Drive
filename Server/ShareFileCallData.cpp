@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "ShareFileCallData.h"
@@ -35,6 +36,8 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
                 fileToBeShared->add_usernamesal(usernameShare);
+                UpdateFileClientMap(fileClientMap);
+
                 responder_.Finish(reply_, grpc::Status::OK, this);
             }
         } else {

@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include <algorithm>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
@@ -33,6 +34,8 @@ void DeleteFileCallData::HandleDelete(protobuf::FileClientMap &fileClientMap, bo
             if ((*fileToBeDeleted).usernameo() == request_.filename()) {
                 //se ha l'autorizzazione
                 fileList->mutable_fileil()->erase(fileToBeDeleted);
+                UpdateFileClientMap(fileClientMap);
+
                 responder_.Finish(reply_, grpc::Status::OK, this);
             }
         } else {

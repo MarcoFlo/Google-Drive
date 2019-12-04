@@ -1,6 +1,3 @@
-//
-// Created by flori on 22/11/2019.
-//
 
 #ifndef SERVER_SHAEREDIMPORT_H
 #define SERVER_SHAEREDIMPORT_H

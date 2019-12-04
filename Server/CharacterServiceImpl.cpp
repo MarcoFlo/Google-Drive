@@ -2,13 +2,9 @@
 #include <iostream>
 #include <memory>
 #include <sstream>
-#include <fstream>
 #include <string>
-#include <vector>
-#include <map>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
-#include "shaeredImport.h"
 #include "GetSymbolsCallData.h"
 #include "InsertFileCallData.h"
 #include "DeleteFileCallData.h"
@@ -80,14 +76,15 @@ void CharacterServiceImpl::Run() {
 
 // This can be run in multiple threads if needed.
 void CharacterServiceImpl::HandleRpcs() {
-    new RegisterCallData(&service_, cq_.get());
-    new LoginCallData(&service_, cq_.get());
-    new LogoutCallData(&service_, cq_.get());
+    new DeleteFileCallData(&service_, cq_.get());
     new GetFilesCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
     new InsertFileCallData(&service_, cq_.get());
-    new DeleteFileCallData(&service_, cq_.get());
+    new LoginCallData(&service_, cq_.get());
+    new LogoutCallData(&service_, cq_.get());
+    new ShareFileCallData(&service_, cq_.get());
+    new RegisterCallData(&service_, cq_.get());
 
 
     void *tag;  // uniquely identifies a request.
@@ -120,9 +117,10 @@ void CharacterServiceImpl::LoadFileClienMap() {
             std::cerr << "La lettura di userMap.data è fallita" << std::endl;
             exit(1);
         }
-        std::cout << "Sono stati caricati i seguenti utenti: " << std::endl;
+        std::cout << "Sono stati caricati i seguenti dati di accesso ai file: " << std::endl;
         std::for_each(fileClientMap.fileclientmap().begin(), fileClientMap.fileclientmap().end(), [](auto &pair) {
             std::cout << pair.first << std::endl;
+            //todo
         });
         std::cout << std::endl;
     }
