@@ -2,27 +2,41 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc Register (User) returns (Empty) {}
-    rpc Login (User) returns (Identifier) {}
-    rpc Logout (Empty) returns (Empty) {}
+    rpc Register (User) returns (Empty) {
+    }
+    rpc Login (User) returns (Identifier) {
+    }
+    rpc Logout (Empty) returns (Empty) {
+    }
 
-    rpc InsertFile (FileName) returns (Empty) {}
-    rpc DeleteFile (FileName) returns (Empty) {}
-    rpc GetFiles (Empty) returns (FilesInfoList) {}
-    rpc GetFileContent (FileInfo) returns (stream Chunk) {}
-    rpc GetSymbols (stream FileInfo) returns (stream Message) {}
-    rpc InsertSymbols (stream Message) returns (Empty) {}
+    rpc InsertFile (FileName) returns (Empty) {
+    }
+    rpc DeleteFile (FileName) returns (Empty) {
+    }
+    rpc GetFiles (Empty) returns (FilesInfoList) {
+    }
+    rpc GetFileContent (FileInfo) returns (stream Chunk) {
+    }
+    rpc GetSymbols (stream FileInfo) returns (stream Message) {
+    }
+    rpc InsertSymbols (stream Message) returns (Empty) {
+    }
 
-    rpc ShareFile(FileName) returns (Empty) {}
+    rpc ShareFile (FileName) returns (Empty) {
+    }
 
-    rpc SetProfile(ProfileInfo) returns (Empty) {}
-    rpc GetProfile(Empty) returns (ProfileInfo) {}
-    rpc GetProfileImage(Empty) returns (stream Chunk) {}
+    rpc SetProfile (ProfileInfo) returns (Empty) {
+    }
+    rpc GetProfile (Empty) returns (ProfileInfo) {
+    }
+    rpc GetProfileImage (Empty) returns (stream Chunk) {
+    }
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
 
-message Empty {}
+message Empty {
+}
 
 message Message {
     FileInfo fileInfo = 1;
@@ -41,7 +55,7 @@ message FileName {
 }
 
 message Chunk {
-//    16KiB - 64KiB
+    //    16KiB - 64KiB
     bytes chunk = 8;
 }
 
@@ -77,10 +91,18 @@ message UserMap {
     map<string, string> userMap = 30;
 }
 
-message FileClientMap {
-    map<string, FilesInfoList> fileClientMap = 40;
+message File {
+    FileInfo fileInfo = 40;
+    repeated Symbol symbols = 41;
 }
 
+message FileList {
+    repeated File file = 42;
+}
+
+message FileClientMap {
+    map<string, FileList> fileClientMap = 43;
+}
 
 
 

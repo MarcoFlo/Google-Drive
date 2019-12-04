@@ -23,19 +23,19 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
         std::string filename = request_.filename();
-        protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
-        auto fileToBeShared = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
-                                           [&filename](protobuf::FileInfo &fileInfo) {
-                                               return fileInfo.filename() == filename;
+        protobuf::FileList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
+        auto fileToBeShared = std::find_if(fileList->mutable_file()->begin(), fileList->mutable_file()->end(),
+                                           [&filename](protobuf::File &file) {
+                                               return file.fileinfo().filename() == filename;
                                            });
 
-        if (fileToBeShared != fileList->mutable_fileil()->end()) {
+        if (fileToBeShared != fileList->mutable_file()->end()) {
             //se è tra i suoi file
-            if ((*fileToBeShared).usernameo() == request_.filename()) {
+            if (fileToBeShared->fileinfo().usernameo() == request_.filename()) {
                 //se ha l'autorizzazione
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
-                fileToBeShared->add_usernamesal(usernameShare);
+                fileToBeShared->mutable_fileinfo()->add_usernamesal(usernameShare);
                 UpdateFileClientMap(fileClientMap);
 
                 responder_.Finish(reply_, grpc::Status::OK, this);

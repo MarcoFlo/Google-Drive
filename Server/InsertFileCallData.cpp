@@ -4,11 +4,11 @@
 #include "messageP.grpc.pb.h"
 #include "InsertFileCallData.h"
 
-protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
-    protobuf::FileInfo fileInfo;
-    fileInfo.set_usernameo(owner);
-    fileInfo.set_filename(filename);
-    return fileInfo;
+protobuf::File MakeFile(const std::string &owner, const std::string &filename) {
+    protobuf::File file;
+    file.mutable_fileinfo()->set_usernameo(owner);
+    file.mutable_fileinfo()->set_filename(filename);
+    return file;
 }
 
 InsertFileCallData::InsertFileCallData(protobuf::CharacterService::AsyncService *service,
@@ -29,7 +29,7 @@ void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bo
         std::string username = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        fileClientMap.mutable_fileclientmap()->at(username).mutable_fileil()->Add(MakeFileInfo(username, request_.filename()));
+        fileClientMap.mutable_fileclientmap()->at(username).mutable_file()->Add(MakeFile(username, request_.filename()));
         UpdateFileClientMap(fileClientMap);
 
         responder_.Finish(reply_, grpc::Status::OK, this);
