@@ -6,6 +6,7 @@
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
+#include "GetFileContentCallData.h"
 #include "InsertFileCallData.h"
 #include "DeleteFileCallData.h"
 #include "ShareFileCallData.h"
@@ -103,6 +104,8 @@ void CharacterServiceImpl::HandleRpcs() {
             static_cast<DeleteFileCallData *> (tag)->HandleDelete(fileClientMap, ok);
         else if (callData->getClass() == "ShareFileCallData")
             static_cast<ShareFileCallData *> (tag)->HandleShare(fileClientMap, ok);
+        else if (callData->getClass() == "GetFileContentCallData")
+            static_cast<GetFileContentCallData *> (tag)->HandleGet(fileClientMap, ok);
         else
             callData->Proceed(ok);
 

@@ -29,7 +29,7 @@ void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bo
         std::string username = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        fileClientMap.mutable_fileclientmap()->at(username).mutable_file()->Add(MakeFile(username, request_.filename()));
+        (*fileClientMap.mutable_fileclientmap())[username].mutable_file()->Add(MakeFile(username, request_.filename()));
         UpdateFileClientMap(fileClientMap);
 
         responder_.Finish(reply_, grpc::Status::OK, this);

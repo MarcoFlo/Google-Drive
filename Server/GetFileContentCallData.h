@@ -1,5 +1,6 @@
 #ifndef SERVER_GETFILECONTENTCALLDATA_H
 #define SERVER_GETFILECONTENTCALLDATA_H
+
 #include "CallData.h"
 
 
@@ -7,9 +8,9 @@ class GetFileContentCallData final : public CallData {
 public:
     GetFileContentCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true);
+    void Proceed(bool ok = true) {};
 
-
+    void HandleGet(protobuf::FileClientMap &fileClientMap, bool ok = true);
 
     std::string getClass();
 
@@ -28,6 +29,8 @@ private:
     protobuf::FileInfo request_;
 // What we send back to the client.
     protobuf::Chunk reply_;
+
+    protobuf::File replyF_;
 
 // The means to get back to the client.
     grpc::ServerAsyncWriter<protobuf::Chunk> responder_;

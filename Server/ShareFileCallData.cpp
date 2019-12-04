@@ -36,6 +36,11 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
                 fileToBeShared->mutable_fileinfo()->add_usernamesal(usernameShare);
+
+                (*fileClientMap.mutable_fileclientmap())[usernameShare].mutable_file()->Add(
+                        dynamic_cast<protobuf::File &&>(*fileToBeShared));
+
+
                 UpdateFileClientMap(fileClientMap);
 
                 responder_.Finish(reply_, grpc::Status::OK, this);
