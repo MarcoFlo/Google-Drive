@@ -16,7 +16,7 @@ public:
 
     std::string Logout();
 
-    std::string ShareFile(std::string &filename, std::string &usernameShare);
+    std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
     std::string GetFileContent(protobuf::FileInfo fileInfo);
 
