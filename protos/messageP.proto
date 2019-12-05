@@ -6,10 +6,10 @@ service CharacterService {
     rpc Login (User) returns (Identifier) {}
     rpc Logout (Empty) returns (Empty) {}
 
-    rpc InsertFile (FileName) returns (Empty) {}
-    rpc DeleteFile (FileName) returns (Empty) {}
+    rpc InsertFile (FileName) returns (FileInfo) {}
+    rpc DeleteFile (FileInfo) returns (Empty) {}
     rpc GetFiles (Empty) returns (FilesInfoList) {}
-    rpc ShareFile (FileName) returns (Empty) {}
+    rpc ShareFile (FileInfo) returns (Empty) {}
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
     rpc InsertSymbols (stream Message) returns (Empty) {}
@@ -43,10 +43,12 @@ message FileName {
 message Chunk {
     //    16KiB - 64KiB
     bytes chunk = 8;
+    int32 size = 60;
 }
 
 message FileInfo {
     string filename = 9;
+    string identifier = 70;
     int32 size = 10;
     string usernameO = 11; //email Owner
     repeated string usernamesAL = 12; //userAccessList
@@ -77,17 +79,12 @@ message UserMap {
     map<string, string> userMap = 30;
 }
 
-message File {
-    FileInfo fileInfo = 40;
-    repeated Symbol symbols = 41;
-}
-
-message FileList {
-    repeated File file = 42;
-}
-
 message FileClientMap {
-    map<string, FileList> fileClientMap = 43;
+    map<string, FilesInfoList> fileClientMap = 43;
+}
+
+message SymbolVector {
+    repeated Symbol symbolVector = 50;
 }
 
 

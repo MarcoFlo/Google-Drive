@@ -30,7 +30,7 @@ private:
 // What we send back to the client.
     protobuf::Chunk reply_;
 
-    protobuf::File replyF_;
+    std::string fileIdentifier;
 
 // The means to get back to the client.
     grpc::ServerAsyncWriter<protobuf::Chunk> responder_;

@@ -45,17 +45,20 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        auto fileInsert = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->begin(),
-                                       fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->end(),
-                                       [&messageReceived](protobuf::File &file) {
-                                           return messageReceived.fileinfo().filename() == file.fileinfo().filename();
+        auto fileInsert = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
+                                       fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
+                                       [&messageReceived](protobuf::FileInfo &file) {
+                                           return messageReceived.fileinfo().identifier() == file.identifier();
                                        });
 
-        if (fileInsert != fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->end()) {
-            //todo rivedere la chiave di questa mappa (magari aggiungere a FileInfo un counter incrementale
+        if (fileInsert != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
+            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(), std::ios::out | std::ios::app );
+            request_.symbol().SerializeToOstream(&output);
+            output.close();
+
             std::for_each(
-                    subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).begin(),
-                    subscribedClientMap.at(request_.fileinfo().filename() + request_.fileinfo().usernameo()).end(),
+                    subscribedClientMap.at(request_.fileinfo().identifier()).begin(),
+                    subscribedClientMap.at(request_.fileinfo().identifier()).end(),
                     [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
                         getSymbolsCallData->HandleSymbol(messageReceived);
                     });

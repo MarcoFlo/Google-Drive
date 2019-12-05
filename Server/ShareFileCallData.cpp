@@ -22,23 +22,23 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        std::string filename = request_.filename();
-        protobuf::FileList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
-        auto fileToBeShared = std::find_if(fileList->mutable_file()->begin(), fileList->mutable_file()->end(),
-                                           [&filename](protobuf::File &file) {
-                                               return file.fileinfo().filename() == filename;
+        std::string fileIdentifier = request_.identifier();
+        protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
+        auto fileToBeShared = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
+                                           [&fileIdentifier](protobuf::FileInfo &file) {
+                                               return file.identifier() == fileIdentifier;
                                            });
 
-        if (fileToBeShared != fileList->mutable_file()->end()) {
+        if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if (fileToBeShared->fileinfo().usernameo() == request_.filename()) {
+            if (fileToBeShared->usernameo() == request_.filename()) {
                 //se ha l'autorizzazione
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
-                fileToBeShared->mutable_fileinfo()->add_usernamesal(usernameShare);
+                fileToBeShared->add_usernamesal(usernameShare);
 
-                (*fileClientMap.mutable_fileclientmap())[usernameShare].mutable_file()->Add(
-                        dynamic_cast<protobuf::File &&>(*fileToBeShared));
+                (*fileClientMap.mutable_fileclientmap())[usernameShare].mutable_fileil()->Add(
+                        (std::move(*fileToBeShared)));
 
 
                 UpdateFileClientMap(fileClientMap);

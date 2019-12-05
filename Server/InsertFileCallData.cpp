@@ -1,14 +1,17 @@
 #include <string>
 #include <iostream>
+#include <chrono>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "InsertFileCallData.h"
 
-protobuf::File MakeFile(const std::string &owner, const std::string &filename) {
-    protobuf::File file;
-    file.mutable_fileinfo()->set_usernameo(owner);
-    file.mutable_fileinfo()->set_filename(filename);
-    return file;
+protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
+    protobuf::FileInfo fileInfo;
+    auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch());
+    fileInfo.set_identifier(std::to_string(ns.count()));
+    fileInfo.set_usernameo(owner);
+    fileInfo.set_filename(filename);
+    return fileInfo;
 }
 
 InsertFileCallData::InsertFileCallData(protobuf::CharacterService::AsyncService *service,
@@ -29,8 +32,12 @@ void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bo
         std::string username = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        (*fileClientMap.mutable_fileclientmap())[username].mutable_file()->Add(MakeFile(username, request_.filename()));
+        protobuf::FileInfo fileInfo = MakeFileInfo(username, request_.filename());
+        reply_ = fileInfo;
+        (*fileClientMap.mutable_fileclientmap())[username].mutable_fileil()->Add(std::move(fileInfo));
         UpdateFileClientMap(fileClientMap);
+
+        std::ofstream output("fileContainer/" + reply_.identifier());
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 

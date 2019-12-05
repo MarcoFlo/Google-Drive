@@ -1,10 +1,10 @@
-#include <iostream>
+#include <filesystem>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "CharacterServiceImpl.h"
 
-
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
+    std::filesystem::create_directories("fileContainer");
     CharacterServiceImpl server;
     server.Run();
 

@@ -27,10 +27,10 @@ private:
 // What we get from the client.
     protobuf::FileName request_;
 // What we send back to the client.
-    protobuf::Empty reply_;
+    protobuf::FileInfo reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
+    grpc::ServerAsyncResponseWriter<protobuf::FileInfo> responder_;
 
 };
 

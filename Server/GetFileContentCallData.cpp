@@ -36,14 +36,14 @@ GetFileContentCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool o
         std::cout << "Get file requested ->" << request_.filename() << std::endl;
 
         if (fileClientMap.fileclientmap().contains(principal)) {
-            auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->begin(),
-                                        fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->end(),
-                                        [&messageReceived](protobuf::File &file) {
-                                            return messageReceived.filename() == file.fileinfo().filename();
+            auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
+                                        fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
+                                        [&messageReceived](protobuf::FileInfo &file) {
+                                            return messageReceived.identifier() == file.identifier();
                                         });
-            if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_file()->end()) {
+            if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 status_ = WRITE;
-                replyF_ = *fileGet;
+                fileIdentifier = (*fileGet).identifier();
             }
         } else {
             responder_.Finish(grpc::Status::OK, this);
@@ -54,7 +54,12 @@ GetFileContentCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool o
     {
         //todo
 //        char *array = new char[5];
-//        replyF_.symbols().Get(0).SerializeToArray(array+5, 5);
+//        std::unique_ptr<char[]> str(new char[4]);
+        protobuf::SymbolVector symbolVector;
+        std::ifstream input("fileContainer/" + fileIdentifier, std::ios_base::in | std::ios_base::binary);
+        symbolVector.ParseFromIstream(&input);
+
+
 
     }
 }

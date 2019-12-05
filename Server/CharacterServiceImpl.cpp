@@ -20,7 +20,7 @@
 
 
 void read(const std::string &filename, std::string &data) {
-    std::ifstream file(filename.c_str(), std::ios::in);
+    std::ifstream file(filename.c_str());
     if (file.is_open()) {
         std::stringstream ss;
         ss << file.rdbuf();
