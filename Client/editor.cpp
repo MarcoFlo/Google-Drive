@@ -570,6 +570,37 @@ void Editor::checkFont()
     QString qss = QString("background-color: %1").arg(colorText.name());
     colore->setStyleSheet(qss);
 
+    ui->txt->alignment();
+
+    if(ui->txt->alignment() == Qt::AlignLeft) {
+
+        ui->actionallineaD->setChecked(false);
+        ui->actionallineaC->setChecked(false);
+        ui->actionallineaS->setChecked(true);
+        ui->actionalineaG->setChecked(false);
+    }
+    else if(ui->txt->alignment() == Qt::AlignRight) {
+
+        ui->actionallineaD->setChecked(true);
+        ui->actionallineaC->setChecked(false);
+        ui->actionallineaS->setChecked(false);
+        ui->actionalineaG->setChecked(false);
+    }
+    else if(ui->txt->alignment() == Qt::AlignCenter) {
+
+        ui->actionallineaD->setChecked(false);
+        ui->actionallineaC->setChecked(true);
+        ui->actionallineaS->setChecked(false);
+        ui->actionalineaG->setChecked(false);
+    }
+    else if(ui->txt->alignment() == Qt::AlignJustify) {
+
+        ui->actionallineaD->setChecked(false);
+        ui->actionallineaC->setChecked(false);
+        ui->actionallineaS->setChecked(false);
+        ui->actionalineaG->setChecked(true);
+    }
+
 }
 
 void Editor::changeDim()
