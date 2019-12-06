@@ -31,15 +31,16 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
 
         if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if (fileToBeShared->usernameo() == request_.filename()) {
+            if (fileToBeShared->usernameo() == request_.usernameo()) {
                 //se ha l'autorizzazione
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
+                //usernameShare added to the list of the owner
                 fileToBeShared->add_usernamesal(usernameShare);
 
+                //fileInfo added to the list of the sharer
                 (*fileClientMap.mutable_fileclientmap())[usernameShare].mutable_fileil()->Add(
                         (std::move(*fileToBeShared)));
-
 
                 UpdateFileClientMap(fileClientMap);
 
