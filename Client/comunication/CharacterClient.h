@@ -31,6 +31,9 @@ private:
 
     std::string token_;
 
+    //current opened file
+    protobuf::SymbolVector symbolVector_;
+
 };
 
 #endif //CLIENT_CHARACTERCLIENT_H

@@ -113,7 +113,7 @@ std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string 
     }
 }
 
-std::string CharacterClient::GetFileContent( protobuf::FileInfo fileInfo) {
+std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
 
@@ -122,20 +122,24 @@ std::string CharacterClient::GetFileContent( protobuf::FileInfo fileInfo) {
 
     std::shared_ptr<grpc::ClientReader<protobuf::Chunk>> stream(stub_->GetFileContent(&context, fileInfo));
 
+    protobuf::SymbolVector symbolVectorPartial;
     while (stream->Read(&reply)) {
-        std::cout << "Got message " << reply.chunk().data() << std::endl;
-        //todo
+        std::istringstream istream(*reply.mutable_chunk());
+        symbolVectorPartial.ParseFromIstream(&istream);
+        symbolVector_.mutable_symbolvector()->MergeFrom(symbolVectorPartial.symbolvector());
     }
     status = stream->Finish();
-    //todo getSymbols
+    //todo chiamare getSymbols
 
     if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
         return "";
+
     } else {
         std::cout << "Get file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
         return status.error_message();
-    }}
+    }
+}
 
 
 AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId) {
