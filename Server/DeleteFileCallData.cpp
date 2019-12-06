@@ -31,7 +31,7 @@ void DeleteFileCallData::HandleDelete(protobuf::FileClientMap &fileClientMap, bo
                                             });
         if (fileToBeDeleted != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if ((*fileToBeDeleted).usernameo() == request_.filename()) {
+            if ((*fileToBeDeleted).usernameo() == request_.usernameo()) {
                 //se ha l'autorizzazione
                 fileList->mutable_fileil()->erase(fileToBeDeleted);
                 UpdateFileClientMap(fileClientMap);
