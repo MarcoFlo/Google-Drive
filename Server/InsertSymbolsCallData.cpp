@@ -52,8 +52,12 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
                                        });
 
         if (fileInsert != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
+            //scrittura su file passando dal vettore in modo che scrivendo un symbol alla volta poi si possa comunque leggere il tutto come vettore
+            protobuf::SymbolVector symbolVector;
+            protobuf::Symbol symbol = request_.symbol();
+            symbolVector.mutable_symbolvector()->Add(std::move(symbol));
             std::ofstream output("fileContainer/" + request_.fileinfo().identifier(), std::ios::out | std::ios::app );
-            request_.symbol().SerializeToOstream(&output);
+            symbolVector.SerializeToOstream(&output);
             output.close();
 
             std::for_each(
