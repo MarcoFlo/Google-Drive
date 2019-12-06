@@ -3,10 +3,16 @@
 
 #include "CallData.h"
 
-class GetFilesCallData final: public CallData {
+class GetFilesCallData final : public CallData {
 public:
     GetFilesCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+
+    void Proceed(bool ok = true) {}
+
+    void HandleGet(protobuf::FileClientMap &fileClientMap, bool ok = true);
+
+    std::string getClass();
+
 
 private:
 

@@ -106,6 +106,8 @@ void CharacterServiceImpl::HandleRpcs() {
             static_cast<ShareFileCallData *> (tag)->HandleShare(fileClientMap, ok);
         else if (callData->getClass() == "GetFileContentCallData")
             static_cast<GetFileContentCallData *> (tag)->HandleGet(fileClientMap, ok);
+        else if (callData->getClass() == "GetFilesCallData")
+            static_cast<GetFilesCallData *> (tag)->HandleGet(fileClientMap, ok);
         else
             callData->Proceed(ok);
 
