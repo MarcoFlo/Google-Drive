@@ -56,7 +56,7 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
             symbolVector.mutable_symbolvector()->Add(std::move(symbol));
-            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(), std::ios::out | std::ios::app );
+            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(), std::ios::out | std::ios::app | std::ios_base::binary);
             symbolVector.SerializeToOstream(&output);
             output.close();
 
