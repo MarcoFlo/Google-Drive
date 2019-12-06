@@ -69,3 +69,7 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
         }
     }
 }
+
+std::string InsertSymbolsCallData::getClass() {
+    return "InsertSymbolsCallData";
+}
