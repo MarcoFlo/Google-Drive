@@ -69,7 +69,7 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
             std::find(request_.usernamesal().begin(), request_.usernamesal().end(), principal) !=
             request_.usernamesal().end()) {
             //authorized
-            subscribedClientMap[request_.filename() + request_.usernameo()].push_back(this);
+            subscribedClientMap[request_.identifier()].push_back(this);
         } else {
             //not authorized
             responder_.Finish(grpc::Status::OK, this);
