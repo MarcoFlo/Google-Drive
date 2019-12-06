@@ -43,26 +43,57 @@ GetFileContentCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool o
                                         });
             if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 status_ = WRITE;
-                fileIdentifier = (*fileGet).identifier();
+                std::ifstream input("fileContainer/" + (*fileGet).identifier(),
+                                    std::ios_base::in | std::ios_base::binary);
+                symbolVector.ParseFromIstream(&input);
+
+            } else {
+                //todo no such file
             }
         } else {
             responder_.Finish(grpc::Status::OK, this);
             status_ = FINISH;
         }
-    }
-    else if(status_ == WRITE)
-    {
-        //todo
-//        char *array = new char[5];
-//        std::unique_ptr<char[]> str(new char[4]);
-        protobuf::SymbolVector symbolVector;
-        std::ifstream input("fileContainer/" + fileIdentifier, std::ios_base::in | std::ios_base::binary);
-        symbolVector.ParseFromIstream(&input);
+    } else if (status_ == WRITE) {
+        protobuf::Chunk chunk;
+        int vectorSize = chunkSize = symbolVector.ByteSize();
 
+        if (vectorSize < 64000) {
+            //Se siamo sotto i 64KB non spezzettiamo
+            status_ = FINISH;
 
+            chunk.mutable_chunk()->assign(symbolVector.SerializeAsString());
+            responder_.WriteAndFinish(chunk, grpc::WriteOptions(), grpc::Status::OK, this);
+        } else {
+            //altrimenti cerchiamo si stare attorno allo sweet spot di 32000 (16K-64K sono valori buoni)
 
+            int averageSymbolSize =
+                    (symbolVector.symbolvector(0).ByteSize() + symbolVector.symbolvector(vectorSize / 2).ByteSize() +
+                     symbolVector.symbolvector(vectorSize).ByteSize()) / 3; //non serve una misurazione precisa contando che i singoli symbol anche nella loro variabilità in dimensione sono molto più piccoli di 32K
+
+            chunkSize = 32000 / averageSymbolSize;
+            protobuf::SymbolVector symbolVectorPartial;
+
+            if (index + chunkSize < symbolVector.symbolvector_size()) {
+                //devo scrivere almeno ancora una volta
+                symbolVectorPartial.mutable_symbolvector()->CopyFrom(
+                        {symbolVector.symbolvector().begin() + index,
+                         symbolVector.symbolvector().begin() + index + chunkSize});
+                chunk.mutable_chunk()->assign(symbolVectorPartial.SerializeAsString());
+                responder_.Write(chunk, this);
+            } else {
+                //è l'ultima volta che devo scrivere
+                status_ = FINISH;
+                symbolVectorPartial.mutable_symbolvector()->CopyFrom(
+                        {symbolVector.symbolvector().begin() + index,
+                         symbolVector.symbolvector().end()});
+                chunk.mutable_chunk()->assign(symbolVectorPartial.SerializeAsString());
+                responder_.WriteAndFinish(chunk, grpc::WriteOptions(), grpc::Status::OK, this);
+            }
+        }
     }
 }
+
 
 std::string GetFileContentCallData::getClass() {
     return "GetFileContentCallData";

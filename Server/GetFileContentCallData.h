@@ -27,10 +27,11 @@ private:
 
 // What we get from the client.
     protobuf::FileInfo request_;
-// What we send back to the client.
-    protobuf::Chunk reply_;
+// What we send back to the client (as a protobuf::Chunk).
+    protobuf::SymbolVector symbolVector;
 
-    std::string fileIdentifier;
+    int index = 0;
+    int chunkSize;
 
 // The means to get back to the client.
     grpc::ServerAsyncWriter<protobuf::Chunk> responder_;
