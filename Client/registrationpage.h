@@ -13,7 +13,7 @@ class RegistrationPage : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit RegistrationPage(QWidget *parent = nullptr);
+    explicit RegistrationPage(QWidget *parent = nullptr, CharacterClient *client = nullptr);
     ~RegistrationPage();
 
 signals:
@@ -27,6 +27,8 @@ private slots:
 
 private:
     Ui::RegistrationPage *ui;
+
+    CharacterClient *client_;
 
 };
 

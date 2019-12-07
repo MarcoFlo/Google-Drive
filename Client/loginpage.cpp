@@ -37,7 +37,7 @@ void LoginPage::on_Login_clicked() {
     std::string token = client_->Login(userL);
 
     if (token.compare("") != 0) {
-        hide();
+        this->hide();
         p = new Principale(this, client_);
         QObject::connect(p, SIGNAL(closeP()), this, SLOT(on_closeP_signal()));
         p->show();

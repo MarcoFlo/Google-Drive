@@ -156,3 +156,9 @@ void Principale::on_cerca_clicked()
 {
 
 }
+
+void Principale::closeEvent( QCloseEvent* event )
+{
+    emit closeP();
+    //event->accept();
+}

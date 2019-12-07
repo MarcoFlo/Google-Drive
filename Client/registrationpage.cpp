@@ -2,8 +2,9 @@
 #include "ui_registrationpage.h"
 
 
-RegistrationPage::RegistrationPage(QWidget *parent) :
+RegistrationPage::RegistrationPage(QWidget *parent, CharacterClient *client) :
     QMainWindow(parent),
+    client_(client),
     ui(new Ui::RegistrationPage)
 {
     ui->setupUi(this);

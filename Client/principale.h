@@ -54,6 +54,9 @@ private slots:
 
     void on_cerca_clicked();
 
+    // override
+    void closeEvent( QCloseEvent* event );
+
 private:
     Ui::Principale *ui;
 

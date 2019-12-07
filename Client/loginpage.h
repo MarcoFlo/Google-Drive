@@ -25,9 +25,9 @@ public:
     ~LoginPage();
 
 signals:
-    void closeR();
-    void closeP();
-    void closeRReg();
+//    void closeR();    /* should be emitted by registration page */
+//    void closeP();    /* should be emitted by principale */
+//    void closeRReg();   /* should be emitted by principale */
 
 private slots:
     void on_Login_clicked();
