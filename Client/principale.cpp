@@ -136,7 +136,7 @@ void Principale::on_impostazioni_clicked()
 
 void Principale::on_logout_clicked()
 {
-    emit closeP();
+    emit logout();
 }
 
  void Principale::on_closeEP_signal()
@@ -160,5 +160,5 @@ void Principale::on_cerca_clicked()
 void Principale::closeEvent( QCloseEvent* event )
 {
     emit closeP();
-    //event->accept();
+    event->accept();
 }

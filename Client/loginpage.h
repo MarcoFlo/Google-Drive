@@ -42,6 +42,8 @@ private slots:
 
     void closeSplash();
 
+    void on_logout_signal();
+
 private:
     Ui::LoginPage *ui;
     RegistrationPage *r;

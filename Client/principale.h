@@ -25,11 +25,18 @@ public:
 
     void abilita(bool s);
 
+    // override
+//    void closeEvent( QCloseEvent* event );
+
 signals:
     void closeE();
     void openE(QString);
     void closeP();
     void closeEP();
+    void logout();
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
 
 private slots:
     void on_nuovo_clicked();
@@ -53,9 +60,6 @@ private slots:
     void on_elimina_clicked();
 
     void on_cerca_clicked();
-
-    // override
-    void closeEvent( QCloseEvent* event );
 
 private:
     Ui::Principale *ui;

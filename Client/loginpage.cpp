@@ -39,6 +39,7 @@ void LoginPage::on_Login_clicked() {
     if (token.compare("") != 0) {
         this->hide();
         p = new Principale(this, client_);
+        QObject::connect(p, SIGNAL(logout()), this, SLOT(on_logout_signal()));
         QObject::connect(p, SIGNAL(closeP()), this, SLOT(on_closeP_signal()));
         p->show();
     } else {
@@ -63,10 +64,9 @@ void LoginPage::on_closeR_signal() {
 }
 
 void LoginPage::on_closeP_signal() {
-
-    p->hide();
+    //p->hide();
     this->show();
-    delete p;
+    //delete p;     /* maybe deleted when is closed */
 }
 
 void LoginPage::on_closeRReg_signal() {
@@ -80,4 +80,10 @@ void LoginPage::on_closeRReg_signal() {
 void LoginPage::closeSplash() {
     splash->hide();
     delete splash;
+}
+
+void LoginPage::on_logout_signal() {
+    p->hide();
+    this->show();
+    delete p;
 }
