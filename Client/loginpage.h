@@ -27,6 +27,7 @@ public:
 signals:
     void closeR();
     void closeP();
+    void closeRReg();
 
 private slots:
     void on_Login_clicked();
