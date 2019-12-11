@@ -34,9 +34,9 @@ void LoginPage::on_Login_clicked() {
     protobuf::User userL;
     userL.set_username(username.toStdString());
     userL.set_password(pass.toStdString());
-    std::string token = client_->Login(userL);
+    std::string login_error = client_->Login(userL);
 
-    if (token.compare("") != 0) {
+    if (login_error.compare("") == 0) {   // status == ok
         this->hide();
         p = new Principale(this, client_);
         QObject::connect(p, SIGNAL(logout()), this, SLOT(on_logout_signal()));
