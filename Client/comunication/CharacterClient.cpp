@@ -162,6 +162,10 @@ void CharacterClient::AsyncCompleteRpc() {
 
 }
 
+std::string CharacterClient::getToken() {
+    return token_;
+}
+
 
 
 

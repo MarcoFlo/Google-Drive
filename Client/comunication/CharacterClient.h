@@ -22,6 +22,8 @@ public:
 
     AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId);
 
+    std::string getToken();
+
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
