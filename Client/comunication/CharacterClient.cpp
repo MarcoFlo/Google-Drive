@@ -29,7 +29,7 @@ CharacterClient::CharacterClient() {
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
 }
 
-void CharacterClient::Register(protobuf::User &user) {
+std::string CharacterClient::Register(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
@@ -40,10 +40,15 @@ void CharacterClient::Register(protobuf::User &user) {
 
     status = stub_->Register(&context, user, &reply);
 
-    if (status.ok())
+    if (status.ok()) {
         std::cout << "Register rpc was successful" << std::endl;
-    else
+        return "";
+    }
+    else {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+
 }
 
 std::string CharacterClient::Login(protobuf::User &user) {

@@ -1,6 +1,7 @@
 #include "registrationpage.h"
 #include "ui_registrationpage.h"
 
+#include <QMessageBox>
 
 RegistrationPage::RegistrationPage(QWidget *parent, CharacterClient *client) :
     QMainWindow(parent),
@@ -22,7 +23,22 @@ void RegistrationPage::on_annulla_clicked()
 
 void RegistrationPage::on_registrati_clicked()
 {
-    hide();
-    emit closeRReg();
+    QString username = ui->usernameEdit->text();
+    QString pass = ui->passwordEdit->text();
+    QString pass2 = ui->password2Edit->text();
+
+    protobuf::User userR;
+    userR.set_username(username.toStdString());
+    userR.set_password(pass.toStdString());
+    userR.set_passwordr(pass2.toStdString());
+    std::string reg_error = this->client_->Register(userR);
+
+    if (reg_error.compare("") == 0) {   // status == ok
+        hide();
+        emit closeRReg();
+    }
+    else {
+        QMessageBox::warning(this, "Registration", "Invalid data");
+    }
 }
 

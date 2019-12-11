@@ -10,7 +10,7 @@ public:
 
     void AsyncCompleteRpc();
 
-    void Register(protobuf::User &user);
+    std::string Register(protobuf::User &user);
 
     std::string Login(protobuf::User &user);
 
