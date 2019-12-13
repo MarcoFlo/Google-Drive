@@ -15,9 +15,9 @@ InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncSe
                                    this);
 }
 
-void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
-                                         protobuf::FileClientMap &fileClientMap,
-                                         bool ok) {
+void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fileClientMap,
+                                                     std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap,
+                                                     bool ok) {
     if (status_ == FINISH) {
         delete this;
         return;
@@ -56,20 +56,17 @@ void InsertSymbolsCallData::HandleInsert(std::map<std::string, std::vector<GetSy
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
             symbolVector.mutable_symbolvector()->Add(std::move(symbol));
-            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(), std::ios::out | std::ios::app | std::ios_base::binary);
+            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(),
+                                 std::ios::out | std::ios::app | std::ios_base::binary);
             symbolVector.SerializeToOstream(&output);
             output.close();
 
             std::for_each(
                     subscribedClientMap.at(request_.fileinfo().identifier()).begin(),
                     subscribedClientMap.at(request_.fileinfo().identifier()).end(),
-                    [&messageReceived](GetSymbolsCallData *getSymbolsCallData) {
-                        getSymbolsCallData->HandleSymbol(messageReceived);
+                    [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
+                        dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
                     });
         }
     }
-}
-
-std::string InsertSymbolsCallData::getClass() {
-    return "InsertSymbolsCallData";
 }

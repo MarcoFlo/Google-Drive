@@ -1,18 +1,13 @@
 #ifndef SERVER_SHAREFILECALLDATA_H
 #define SERVER_SHAREFILECALLDATA_H
 
-#include "CallData.h"
+#include "AbstractFileCallData.h"
 
-class ShareFileCallData final : public CallData {
+class ShareFileCallData final : public AbstractFileCallData {
 public:
     ShareFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleShare(protobuf::FileClientMap &fileClientMap, bool ok = true);
-
-    std::string getClass();
-
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override ;
 
 private:
 

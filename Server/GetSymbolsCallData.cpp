@@ -32,7 +32,7 @@ GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService 
 }
 
 void
-GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap, bool ok) {
+GetSymbolsCallData::HandleSubscribedCall(std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap, bool ok) {
     if (status_ == FINISH) {
         delete this;
         return;
@@ -78,10 +78,6 @@ GetSymbolsCallData::HandleGet(std::map<std::string, std::vector<GetSymbolsCallDa
         }
 
     }
-}
-
-std::string GetSymbolsCallData::getClass() {
-    return "GetSymbolsCallData";
 }
 
 void GetSymbolsCallData::HandleSymbol(const protobuf::Message &message) {

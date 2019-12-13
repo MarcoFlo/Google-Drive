@@ -1,20 +1,15 @@
 #ifndef SERVER_INSERTSYMBOLSCALLDATA_H
 #define SERVER_INSERTSYMBOLSCALLDATA_H
 
-#include "CallData.h"
-#include "GetSymbolsCallData.h"
+#include "AbstractFileSubscribedCallData.h"
 
-class InsertSymbolsCallData final : public CallData {
+class InsertSymbolsCallData final : public AbstractFileSubscribedCallData {
 public:
     InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleInsert(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
-                      protobuf::FileClientMap &fileClientMap,
-                      bool ok = true);
-
-    std::string getClass();
+    void HandleFileSubscribedCall(protobuf::FileClientMap &fileClientMap,
+                                  std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap,
+                                  bool ok) override;
 
 private:
 

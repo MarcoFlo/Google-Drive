@@ -13,7 +13,7 @@ void LogoutCallData::Proceed(bool ok) {
     if (status_ == CREATE) {
         status_ = PROCESS;
         service_->RequestLogout(&ctx_, &request_, &responder_, cq_, cq_,
-                               this);
+                                this);
     } else if (status_ == PROCESS) {
         std::cout << "Received a Logout request" << std::endl;
 
@@ -26,7 +26,6 @@ void LogoutCallData::Proceed(bool ok) {
                       [](auto &elem) {
                           std::cout << elem.first << "     " << elem.second << std::endl;
                       });
-
 
 
         new LogoutCallData(service_, cq_);

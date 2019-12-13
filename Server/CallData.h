@@ -4,6 +4,9 @@
 #include <fstream>
 #include "shaeredImport.h"
 
+/**
+ * CallData -> AbstractFileCallData, AbstractFileSubscribedCallData, AbstractSuscribedCallData, TutteLeClassiDiLogin
+ */
 class CallData {
 public:
     explicit CallData() : status_(CREATE) {}
@@ -12,10 +15,6 @@ public:
 
     virtual std::string getClass() {
         return "";
-    }
-
-    virtual CallStatus getCallStatus() {
-        return status_;
     }
 
     void UpdateFileClientMap(protobuf::FileClientMap &fileClientMap) {

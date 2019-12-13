@@ -12,7 +12,7 @@ GetFileContentCallData::GetFileContentCallData(protobuf::CharacterService::Async
 }
 
 void
-GetFileContentCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool ok) {
+GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == FINISH) {
         delete this;
         return;
@@ -92,9 +92,4 @@ GetFileContentCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool o
             }
         }
     }
-}
-
-
-std::string GetFileContentCallData::getClass() {
-    return "GetFileContentCallData";
 }

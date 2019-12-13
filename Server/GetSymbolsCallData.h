@@ -1,20 +1,16 @@
 #ifndef SERVER_GETSYMBOLSCALLDATA_H
 #define SERVER_GETSYMBOLSCALLDATA_H
 
-#include "CallData.h"
+#include "AbstractSubscribedCallData.h"
 
-class GetSymbolsCallData final : public CallData {
+class GetSymbolsCallData final: public AbstractSubscribedCallData {
 public:
     GetSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleGet(std::map<std::string, std::vector<GetSymbolsCallData *>> &subscribedClientMap,
-                   bool ok = true);
+    void HandleSubscribedCall(std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap,
+                              bool ok) override;
 
     void HandleSymbol(const protobuf::Message &message);
-
-    std::string getClass();
 
 private:
     // The means of communication with the gRPC runtime for an asynchronous

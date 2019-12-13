@@ -14,7 +14,7 @@ ShareFileCallData::ShareFileCallData(protobuf::CharacterService::AsyncService *s
 }
 
 
-void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool ok) {
+void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Share file request" << std::endl;
         new ShareFileCallData(service_, cq_);
@@ -57,6 +57,3 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
     }
 }
 
-std::string ShareFileCallData::getClass() {
-    return "ShareFileCallData";
-}

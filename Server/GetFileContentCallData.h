@@ -1,18 +1,14 @@
 #ifndef SERVER_GETFILECONTENTCALLDATA_H
 #define SERVER_GETFILECONTENTCALLDATA_H
 
-#include "CallData.h"
+#include "AbstractFileCallData.h"
 
 
-class GetFileContentCallData final : public CallData {
+class GetFileContentCallData final : public AbstractFileCallData {
 public:
     GetFileContentCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {};
-
-    void HandleGet(protobuf::FileClientMap &fileClientMap, bool ok = true);
-
-    std::string getClass();
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok = true);
 
 private:
     // The means of communication with the gRPC runtime for an asynchronous

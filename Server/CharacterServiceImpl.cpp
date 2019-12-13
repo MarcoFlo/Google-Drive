@@ -94,24 +94,15 @@ void CharacterServiceImpl::HandleRpcs() {
         GPR_ASSERT(cq_->Next(&tag, &ok));
         CallData *callData = static_cast<CallData *>(tag);
 
-        if (callData->getClass() == "GetSymbolsCallData")
-            static_cast<GetSymbolsCallData *> (tag)->HandleGet(subscribedClientMap, ok);
-        else if (callData->getClass() == "InsertSymbolsCallData")
-            static_cast<InsertSymbolsCallData *> (tag)->HandleInsert(subscribedClientMap, fileClientMap, ok);
-        else if (callData->getClass() == "InsertFileCallData")
-            static_cast<InsertFileCallData *> (tag)->HandleInsert(fileClientMap, ok);
-        else if (callData->getClass() == "DeleteFileCallData")
-            static_cast<DeleteFileCallData *> (tag)->HandleDelete(fileClientMap, ok);
-        else if (callData->getClass() == "ShareFileCallData")
-            static_cast<ShareFileCallData *> (tag)->HandleShare(fileClientMap, ok);
-        else if (callData->getClass() == "GetFileContentCallData")
-            static_cast<GetFileContentCallData *> (tag)->HandleGet(fileClientMap, ok);
-        else if (callData->getClass() == "GetFilesCallData")
-            static_cast<GetFilesCallData *> (tag)->HandleGet(fileClientMap, ok);
+        if (callData->getClass() == "FileCallData")
+            static_cast<AbstractFileCallData *> (tag)->HandleFileCall(fileClientMap, ok);
+        else if (callData->getClass() == "SubscribedCallData")
+            static_cast<AbstractSubscribedCallData *> (tag)->HandleSubscribedCall(subscribedClientMap, ok);
+        else if (callData->getClass() == "FileSubscribedCallData")
+            static_cast<AbstractFileSubscribedCallData *> (tag)->HandleFileSubscribedCall(fileClientMap,
+                                                                                          subscribedClientMap, ok);
         else
             callData->Proceed(ok);
-
-
     }
 }
 

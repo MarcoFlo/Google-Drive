@@ -7,10 +7,11 @@
 
 #include "CallData.h"
 
-class RegisterCallData final: public CallData {
+class RegisterCallData final : public CallData {
 public:
     RegisterCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+
+    void Proceed(bool ok = true) override;
 
 private:
 

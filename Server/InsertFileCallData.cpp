@@ -23,7 +23,7 @@ InsertFileCallData::InsertFileCallData(protobuf::CharacterService::AsyncService 
 }
 
 
-void InsertFileCallData::HandleInsert(protobuf::FileClientMap &fileClientMap, bool ok) {
+void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Received a Insert request" << std::endl;
         new InsertFileCallData(service_, cq_);

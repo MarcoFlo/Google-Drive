@@ -2,10 +2,12 @@
 #define SERVER_LOGOUTCALLDATA_H
 
 #include "CallData.h"
-class LogoutCallData final: public CallData {
+
+class LogoutCallData final : public CallData {
 public:
     LogoutCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+
+    void Proceed(bool ok = true) override;
 
 private:
 

@@ -15,7 +15,7 @@ DeleteFileCallData::DeleteFileCallData(protobuf::CharacterService::AsyncService 
 }
 
 
-void DeleteFileCallData::HandleDelete(protobuf::FileClientMap &fileClientMap, bool ok) {
+void DeleteFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
     if (status_ == READ_CALLED) {
         std::cout << "Delete request" << std::endl;
         new DeleteFileCallData(service_, cq_);
@@ -50,6 +50,3 @@ void DeleteFileCallData::HandleDelete(protobuf::FileClientMap &fileClientMap, bo
     }
 }
 
-std::string DeleteFileCallData::getClass() {
-    return "DeleteFileCallData";
-}
