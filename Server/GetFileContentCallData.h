@@ -27,7 +27,7 @@ private:
     protobuf::SymbolVector symbolVector;
 
     int index = 0;
-    int chunkSize;
+    int chunkSize = 0;
 
 // The means to get back to the client.
     grpc::ServerAsyncWriter<protobuf::Chunk> responder_;
