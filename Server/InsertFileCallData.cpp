@@ -17,14 +17,18 @@ protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &fil
 InsertFileCallData::InsertFileCallData(protobuf::CharacterService::AsyncService *service,
                                        grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
                                                                           responder_(&ctx_) {
-    status_ = READ_CALLED;
+    status_ = PROCESS;
     service_->RequestInsertFile(&ctx_, &request_, &responder_, cq_, cq_,
                                 this);
 }
 
-
 void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
-    if (status_ == READ_CALLED) {
+    if (status_ == FINISH) {
+        delete this;
+        return;
+    }
+
+    if (status_ == PROCESS) {
         std::cout << "Received a Insert request" << std::endl;
         new InsertFileCallData(service_, cq_);
         status_ = FINISH;
@@ -41,10 +45,6 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 
-    } else {
-        GPR_ASSERT(status_ == FINISH);
-// Once in the FINISH state, deallocate ourselves (CallData).
-        delete this;
     }
 }
 
