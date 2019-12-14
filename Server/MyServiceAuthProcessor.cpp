@@ -42,14 +42,14 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
     if (tokenMap.count(token_value) == 0)
         return grpc::Status(grpc::StatusCode::UNAUTHENTICATED, "Invalid Token");
 
-    if (dispatch_value == "/protobuf.CharacterService/Logout") {
-        return ProcessLogout(token_value);
-    }
-
     // once verified, mark as consumed and store user for later retrieval
     consumed_auth_metadata->insert(std::make_pair(Const::TokenKeyName(), token_value));     // required
     context->AddProperty(Const::PeerIdentityPropertyName(), tokenMap[token_value]);           // optional
     context->SetPeerIdentityPropertyName(Const::PeerIdentityPropertyName());                // optional
+
+    if (dispatch_value == "/protobuf.CharacterService/Logout") {
+        return ProcessLogout(token_value);
+    }
 
     if (dispatch_value == "/protobuf.CharacterService/ShareFile") {
         return ProcessShareFile(auth_metadata, context);
