@@ -29,16 +29,13 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
         status_ = FINISH;
         return;
     }
+
     if (status_ == PROCESS) {
         status_ = READ;
-
         new InsertSymbolsCallData(service_, cq_);
-
     } else if (status_ == READ) {
         status_ = READ_CALLED;
         responder_.Read(&request_, this);
-
-
     } else if (status_ == READ_CALLED) {
         status_ = READ;
         protobuf::Message messageReceived = request_;
@@ -67,6 +64,9 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                     [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
                         dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
                     });
+        } else {
+            status_ = FINISH;
+            responder_.Finish(reply_, grpc::Status(grpc::StatusCode::NOT_FOUND, "File non presente"), this);
         }
     }
 }
