@@ -11,7 +11,12 @@ GetFilesCallData::GetFilesCallData(protobuf::CharacterService::AsyncService *ser
                               this);
 }
 
-void GetFilesCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool ok) {
+void GetFilesCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
+    if (status_ == FINISH) {
+        delete this;
+        return;
+    }
+
     if (status_ == PROCESS) {
         new GetFilesCallData(service_, cq_);
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
@@ -24,17 +29,9 @@ void GetFilesCallData::HandleGet(protobuf::FileClientMap &fileClientMap, bool ok
             status_ = FINISH;
             responder_.Finish(reply_, grpc::Status::OK, this);
         } else {
+            //restituisce una lista vuota
             status_ = FINISH;
             responder_.Finish(reply_, grpc::Status::OK, this);
         }
     }
-
-    if (status_ == FINISH) {
-// Once in the FINISH state, deallocate ourselves (CallData).
-        delete this;
-    }
-}
-
-std::string GetFilesCallData::getClass() {
-    return "GetFilesCallData";
 }

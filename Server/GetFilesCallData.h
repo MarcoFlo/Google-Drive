@@ -1,18 +1,13 @@
 #ifndef SERVER_GETFILESCALLDATA_H
 #define SERVER_GETFILESCALLDATA_H
 
-#include "CallData.h"
+#include "AbstractFileCallData.h"
 
-class GetFilesCallData final : public CallData {
+class GetFilesCallData final : public AbstractFileCallData {
 public:
     GetFilesCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleGet(protobuf::FileClientMap &fileClientMap, bool ok = true);
-
-    std::string getClass();
-
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
 
 private:
 

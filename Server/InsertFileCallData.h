@@ -1,16 +1,14 @@
 #ifndef SERVER_INSERTFILECALLDATA_H
 #define SERVER_INSERTFILECALLDATA_H
 
-#include "CallData.h"
+#include "AbstractFileCallData.h"
 
 
-class InsertFileCallData final : public CallData {
+class InsertFileCallData final : public AbstractFileCallData {
 public:
     InsertFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleInsert(protobuf::FileClientMap &fileClientMap, bool ok = true);
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
 
 private:
 

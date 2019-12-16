@@ -6,28 +6,17 @@
 LogoutCallData::LogoutCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq)
         : service_(service), cq_(cq), responder_(&ctx_) {
     Proceed();
-
 }
 
 void LogoutCallData::Proceed(bool ok) {
     if (status_ == CREATE) {
         status_ = PROCESS;
         service_->RequestLogout(&ctx_, &request_, &responder_, cq_, cq_,
-                               this);
+                                this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a Logout request" << std::endl;
-
-        std::for_each(ctx_.auth_context()->begin(),
-                      ctx_.auth_context()->end(),
-                      [](const grpc::AuthProperty &elem) {
-                          std::cout << elem.first << "    " << elem.second << std::endl;
-                      });
-        std::for_each(ctx_.client_metadata().begin(), ctx_.client_metadata().end(),
-                      [](auto &elem) {
-                          std::cout << elem.first << "     " << elem.second << std::endl;
-                      });
-
-
+        const std::string principal = ctx_.auth_context()->FindPropertyValues(
+                ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
+        std::cout << "Received a Logout request from " << principal << std::endl;
 
         new LogoutCallData(service_, cq_);
         status_ = FINISH;
@@ -35,7 +24,6 @@ void LogoutCallData::Proceed(bool ok) {
 
     } else {
         GPR_ASSERT(status_ == FINISH);
-// Once in the FINISH state, deallocate ourselves (CallData).
         delete this;
     }
 }

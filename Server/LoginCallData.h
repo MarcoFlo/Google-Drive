@@ -3,10 +3,11 @@
 
 #include "CallData.h"
 
-class LoginCallData final: public CallData {
+class LoginCallData final : public CallData {
 public:
     LoginCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
-    void Proceed(bool ok = true);
+
+    void Proceed(bool ok = true) override;
 
 private:
 
@@ -29,7 +30,6 @@ private:
     grpc::ServerAsyncResponseWriter<protobuf::Identifier> responder_;
 
 };
-
 
 
 #endif //SERVER_LOGINCALLDATA_H

@@ -54,6 +54,7 @@ add_executable(Server
         ${hw_proto_srcs}
         ${hw_grpc_srcs}
         main.cpp
+        AbstractFileCallData.h AbstractSubscribedCallData.h AbstractFileSubscribedCallData.h
         CallData.h
         CharacterServiceImpl.cpp CharacterServiceImpl.h
         DeleteFileCallData.cpp DeleteFileCallData.h

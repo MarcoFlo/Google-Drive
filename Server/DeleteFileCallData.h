@@ -1,18 +1,13 @@
 #ifndef SERVER_DELETEFILECALLDATA_H
 #define SERVER_DELETEFILECALLDATA_H
 
-#include "CallData.h"
+#include "AbstractFileCallData.h"
 
-class DeleteFileCallData final : public CallData {
+class DeleteFileCallData final : public AbstractFileCallData {
 public:
     DeleteFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void Proceed(bool ok = true) {}
-
-    void HandleDelete(protobuf::FileClientMap &fileClientMap, bool ok = true);
-
-    std::string getClass();
-
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
 
 private:
 

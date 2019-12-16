@@ -14,7 +14,12 @@ ShareFileCallData::ShareFileCallData(protobuf::CharacterService::AsyncService *s
 }
 
 
-void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool ok) {
+void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
+    if (status_ == FINISH) {
+        delete this;
+        return;
+    }
+
     if (status_ == READ_CALLED) {
         std::cout << "Share file request" << std::endl;
         new ShareFileCallData(service_, cq_);
@@ -45,18 +50,13 @@ void ShareFileCallData::HandleShare(protobuf::FileClientMap &fileClientMap, bool
                 UpdateFileClientMap(fileClientMap);
 
                 responder_.Finish(reply_, grpc::Status::OK, this);
+            } else {
+                responder_.Finish(reply_, grpc::Status(grpc::StatusCode::PERMISSION_DENIED,
+                                                       "Un file pu essere condiviso solo dal proprietario"), this);
             }
         } else {
-            //todo
-            responder_.Finish(reply_, grpc::Status::OK, this);
+            responder_.Finish(reply_, grpc::Status(grpc::StatusCode::NOT_FOUND, "File non presente"), this);
         }
-
-    } else {
-        GPR_ASSERT(status_ == FINISH);
-        delete this;
     }
 }
 
-std::string ShareFileCallData::getClass() {
-    return "ShareFileCallData";
-}
