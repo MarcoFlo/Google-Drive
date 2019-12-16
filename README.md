@@ -12,8 +12,7 @@ choco install golang
 - Perl  
 choco install activeperl 
 
-- nasm
-choco install nasm (and add it to PATH)
+- choco install nasm (and add it to PATH)
 
 - Qt  
 La cosa migliore è installarlo in C: direttamente.  
