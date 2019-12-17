@@ -9,6 +9,8 @@ RegistrationPage::RegistrationPage(QWidget *parent, CharacterClient *client) :
     ui(new Ui::RegistrationPage)
 {
     ui->setupUi(this);
+    QPixmap *logo = new QPixmap("$/img/logo.png");
+    ui->fotoprofilo->setPixmap(*logo);
 }
 
 RegistrationPage::~RegistrationPage()

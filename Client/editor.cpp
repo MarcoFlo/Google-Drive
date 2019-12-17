@@ -32,8 +32,11 @@ Editor::Editor(QWidget *parent, QString windowName) :
 {
     ui->setupUi(this);
     setWindowTitle(windowName);
-    this->setContextMenuPolicy(Qt::CustomContextMenu);
 
+    QIcon *logo= new QIcon(QPixmap("$/img/logo.png"));
+    ui->actionlogo->setIcon(*logo);
+
+    this->setContextMenuPolicy(Qt::CustomContextMenu);
         connect(this, SIGNAL(customContextMenuRequested(const QPoint &)),
                 this, SLOT(ShowContextMenu(const QPoint &)));
 

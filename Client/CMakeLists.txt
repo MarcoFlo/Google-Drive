@@ -59,6 +59,32 @@ add_executable(Client main.cpp
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
 
+
+# we don't want to copy if we're building in the source dir
+if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
+
+    # list of files for which we add a copy rule
+    set(data_SHADOW img/logo.png)
+
+    foreach(item IN LISTS data_SHADOW)
+        message(STATUS ${item})
+        add_custom_command(
+                OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/${item}"
+                COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/${item}" "${CMAKE_CURRENT_BINARY_DIR}/${item}"
+                DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${item}"
+        )
+    endforeach()
+endif()
+
+# files are only copied if a target depends on them
+add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/logo.png")
+
 #target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++_unsecure ${_PROTOBUF_LIBPROTOBUF})
 target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++ ${_PROTOBUF_LIBPROTOBUF})
+
+find_package(Qt5Widgets REQUIRED)
+
+
+
+
 

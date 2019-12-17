@@ -15,12 +15,12 @@ LoginPage::LoginPage(QWidget *parent) :
 
     client_ = new CharacterClient();
 
-    QPixmap *logo = new QPixmap("img/logo.png");
+    QPixmap *logo = new QPixmap("$/img/logo.png");
     ui->logo->setPixmap(*logo);
     ui->regi->setVisible(false);
 
-    ui->EmailEdit->setText("test");
-    ui->PasswordEdit->setText("test");
+    ui->EmailEdit->setText("prova@test.it");
+    ui->PasswordEdit->setText("1234");
 }
 
 LoginPage::~LoginPage() {
