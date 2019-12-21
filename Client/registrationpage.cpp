@@ -31,10 +31,10 @@ void RegistrationPage::on_registrati_clicked()
     userR.set_username(username.toStdString());
     userR.set_password(pass.toStdString());
     userR.set_passwordr(pass2.toStdString());
-    std::string reg_error = this->client_->Register(userR);
+    std::string error = this->client_->Register(userR);
 
-    if (reg_error.compare("") == 0) {   // status == ok
-        hide();
+    if (error.compare("") == 0) {   // status == ok
+        //hide(); // already made by loginpage
         emit closeRReg();
     }
     else {
