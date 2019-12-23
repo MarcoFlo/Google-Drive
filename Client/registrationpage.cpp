@@ -35,6 +35,7 @@ void RegistrationPage::on_registrati_clicked()
 
     if (error.compare("") == 0) {   // status == ok
         //hide(); // already made by loginpage
+        std::cout << "EMIT SIGNAL" << std::endl;
         emit closeRReg();
     }
     else {
