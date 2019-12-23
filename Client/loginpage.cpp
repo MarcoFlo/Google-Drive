@@ -48,8 +48,8 @@ void LoginPage::on_Login_clicked() {
 }
 
 void LoginPage::on_registrati_clicked() {
-    hide();
-    r = new RegistrationPage(this);
+    this->hide();
+    r = new RegistrationPage(this, client_);
     QObject::connect(r, SIGNAL(closeR()), this, SLOT(on_closeR_signal()));
     QObject::connect(r, SIGNAL(closeRReg()), this, SLOT(on_closeRReg_signal()));
     r->show();

@@ -25,7 +25,6 @@ void RegistrationPage::on_annulla_clicked()
 
 void RegistrationPage::on_registrati_clicked()
 {
-    std::cout << "*****************************" << std::endl;
     QString username = ui->usernameEdit->text();
     QString pass = ui->passwordEdit->text();
     QString pass2 = ui->password2Edit->text();
@@ -34,12 +33,10 @@ void RegistrationPage::on_registrati_clicked()
     userR.set_username(username.toStdString());
     userR.set_password(pass.toStdString());
     userR.set_passwordr(pass2.toStdString());
-    std::string error = this->client_->Register(userR); // problem here
-    std::cout << "*****************************" << std::endl;
+    std::string error = this->client_->Register(userR);
 
     if (error.compare("") == 0) {   // status == ok
         //hide(); // already made by loginpage
-        std::cout << "EMIT SIGNAL" << std::endl;
         emit closeRReg();
     }
     else {
