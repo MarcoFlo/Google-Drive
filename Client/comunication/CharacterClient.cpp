@@ -11,7 +11,6 @@
 #include "CharacterClient.h"
 
 
-
 void read(const std::string &filename, std::string &data) {
     std::ifstream file(filename.c_str(), std::ios::in);
 
@@ -128,7 +127,7 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
 
     if (status.ok()) {
         std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
-        fileidentifier_ = reply.fileidentifier();
+        currentFileIdentifier_ = reply.fileidentifier();
         GetSymbols(reply);
         return reply.fileidentifier();
     } else {
@@ -155,6 +154,24 @@ std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
     }
 }
 
+//Il risultato viene depositato in lastFileInfoList per poter restituire il messaggio d'errore
+std::string CharacterClient::GetFiles() {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty request;
+    grpc::Status status;
+
+    status = stub_->GetFiles(&context, request, &lastFileInfoList_);
+
+    if (status.ok()) {
+        std::cout << "Get files rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Get files rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
 
 std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string &usernameShare) {
     grpc::ClientContext context;
@@ -199,7 +216,7 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 
     if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
-        fileidentifier_ = fileInfo.fileidentifier();
+        currentFileIdentifier_ = fileInfo.fileidentifier();
         GetSymbols(fileInfo);
         return "";
 
@@ -217,7 +234,7 @@ AsyncClientGetSymbols *CharacterClient::GetSymbols(const protobuf::FileInfo &fil
 
 std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
     // si sta provando a inserire prima che il file sia aperto correttamente
-    if(fileidentifier_.empty())
+    if (currentFileIdentifier_.empty())
         return "";
 
     grpc::ClientContext context;
@@ -226,7 +243,7 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
     protobuf::Empty reply;
     grpc::Status status;
 
-    Message message(fileidentifier_,symbol, isErase);
+    Message message(currentFileIdentifier_, symbol, isErase);
 
     status = stub_->InsertSymbols(&context, message.makeProtobufMessage(), &reply);
 
@@ -235,7 +252,8 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
         std::cout << "Insert symbols rpc was successful" << std::endl;
         return "";
     } else {
-        std::cout << "Insert symbols rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        std::cout << "Insert symbols rpc failed: " << status.error_code() << ": " << status.error_message()
+                  << std::endl;
         return status.error_message();
     }
 }

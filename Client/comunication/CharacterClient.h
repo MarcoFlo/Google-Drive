@@ -23,6 +23,8 @@ public:
 
     std::string RemoveFile(const protobuf::FileInfo &fileInfo);
 
+    std::string GetFiles();
+
     std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);
@@ -41,8 +43,8 @@ private:
     grpc::CompletionQueue cq_;
 
     std::string token_;
-    std::string fileidentifier_;
-
+    std::string currentFileIdentifier_;
+    protobuf::FilesInfoList lastFileInfoList_;
 
     //current opened file
     protobuf::SymbolVector symbolVector_;
