@@ -1,11 +1,11 @@
-#ifndef SERVER_DELETEFILECALLDATA_H
-#define SERVER_DELETEFILECALLDATA_H
+#ifndef SERVER_REMOVEFILECALLDATA_H
+#define SERVER_REMOVEFILECALLDATA_H
 
 #include "AbstractFileCallData.h"
 
-class DeleteFileCallData final : public AbstractFileCallData {
+class RemoveFileCallData final : public AbstractFileCallData {
 public:
-    DeleteFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
+    RemoveFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
     void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
 
@@ -31,4 +31,4 @@ private:
 
 };
 
-#endif //SERVER_DELETEFILECALLDATA_H
+#endif //SERVER_REMOVEFILECALLDATA_H

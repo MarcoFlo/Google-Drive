@@ -61,7 +61,6 @@ std::string CharacterClient::Register(protobuf::User &user) {
     context.AddMetadata("password", user.password());
     context.AddMetadata("passwordr", user.passwordr());
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->Register(&context, user, &reply);
@@ -82,7 +81,6 @@ std::string CharacterClient::Login(protobuf::User &user) {
     context.AddMetadata("password", user.password());
 
     protobuf::Identifier reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->Login(&context, user, &reply);
@@ -105,7 +103,6 @@ std::string CharacterClient::Logout() {
     protobuf::Empty request;
 
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->Logout(&context, request, &reply);
@@ -125,7 +122,6 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
 
 
     protobuf::FileInfo reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->InsertFile(&context, request, &reply);
@@ -141,6 +137,24 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
     }
 }
 
+std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty reply;
+    grpc::Status status;
+
+    status = stub_->RemoveFile(&context, fileInfo, &reply);
+
+    if (status.ok()) {
+        std::cout << "Remove file rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Remove file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
 
 std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string &usernameShare) {
     grpc::ClientContext context;
@@ -151,7 +165,6 @@ std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string 
     request.set_fileidentifier(fileIdentifier);
 
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->ShareFile(&context, request, &reply);
@@ -211,7 +224,6 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
     context.AddMetadata("token", token_);
 
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     Message message(fileidentifier_,symbol, isErase);

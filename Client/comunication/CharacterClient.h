@@ -21,6 +21,8 @@ public:
 
     std::string InsertFile(const protobuf::FileName &fileName);
 
+    std::string RemoveFile(const protobuf::FileInfo &fileInfo);
+
     std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);

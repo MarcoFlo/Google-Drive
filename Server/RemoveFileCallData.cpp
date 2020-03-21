@@ -3,19 +3,19 @@
 #include <algorithm>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
-#include "DeleteFileCallData.h"
+#include "RemoveFileCallData.h"
 
 
-DeleteFileCallData::DeleteFileCallData(protobuf::CharacterService::AsyncService *service,
+RemoveFileCallData::RemoveFileCallData(protobuf::CharacterService::AsyncService *service,
                                        grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
                                                                           responder_(&ctx_) {
     status_ = READ_CALLED;
-    service_->RequestDeleteFile(&ctx_, &request_, &responder_, cq_, cq_,
+    service_->RequestRemoveFile(&ctx_, &request_, &responder_, cq_, cq_,
                                 this);
 }
 
 
-void DeleteFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
+void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
     //ok non viene controllato perchè la connessione viene Finish solo dal server
     if (status_ == FINISH) {
         delete this;
@@ -23,21 +23,21 @@ void DeleteFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
     }
 
     if (status_ == READ_CALLED) {
-        std::cout << "Delete request" << std::endl;
-        new DeleteFileCallData(service_, cq_);
+        std::cout << "Remove request for " << request_.filename()  << std::endl;
+        new RemoveFileCallData(service_, cq_);
         status_ = FINISH;
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
         std::string fileIdentifier = request_.fileidentifier();
         protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
-        auto fileToBeDeleted = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
+        auto fileToBeRemoved = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
                                             [&fileIdentifier](protobuf::FileInfo &file) {
                                                 return file.fileidentifier() == fileIdentifier;
                                             });
-        if (fileToBeDeleted != fileList->mutable_fileil()->end()) {
+        if (fileToBeRemoved != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if ((*fileToBeDeleted).usernameo() == request_.usernameo()) {
+            if ((*fileToBeRemoved).usernameo() == request_.usernameo()) {
                 //se ha l'autorizzazione
                 if (remove(request_.fileidentifier().c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file
