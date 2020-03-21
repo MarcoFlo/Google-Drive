@@ -136,7 +136,12 @@ void Principale::on_impostazioni_clicked()
 
 void Principale::on_logout_clicked()
 {
-    emit logout();
+    std::string error = client_->Logout();
+
+    if (error.compare("") == 0)
+        emit logout();
+    else
+        QMessageBox::warning(this, "Logout", "Logout service failed");
 }
 
  void Principale::on_closeEP_signal()

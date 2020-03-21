@@ -15,12 +15,12 @@ LoginPage::LoginPage(QWidget *parent) :
 
     client_ = new CharacterClient();
 
-    QPixmap *logo = new QPixmap("img/logo.png");
+    QPixmap *logo = new QPixmap("$/img/logo.png");
     ui->logo->setPixmap(*logo);
     ui->regi->setVisible(false);
 
-    ui->EmailEdit->setText("test");
-    ui->PasswordEdit->setText("test");
+    ui->EmailEdit->setText("prova@test.it");
+    ui->PasswordEdit->setText("1234");
 }
 
 LoginPage::~LoginPage() {
@@ -34,9 +34,9 @@ void LoginPage::on_Login_clicked() {
     protobuf::User userL;
     userL.set_username(username.toStdString());
     userL.set_password(pass.toStdString());
-    std::string login_error = client_->Login(userL);
+    std::string error = client_->Login(userL);
 
-    if (login_error.compare("") == 0) {   // status == ok
+    if (error.compare("") == 0) {   // status == ok
         this->hide();
         p = new Principale(this, client_);
         QObject::connect(p, SIGNAL(logout()), this, SLOT(on_logout_signal()));
@@ -48,8 +48,8 @@ void LoginPage::on_Login_clicked() {
 }
 
 void LoginPage::on_registrati_clicked() {
-    hide();
-    r = new RegistrationPage(this);
+    this->hide();
+    r = new RegistrationPage(this, client_);
     QObject::connect(r, SIGNAL(closeR()), this, SLOT(on_closeR_signal()));
     QObject::connect(r, SIGNAL(closeRReg()), this, SLOT(on_closeRReg_signal()));
     r->show();
