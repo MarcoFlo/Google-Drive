@@ -6,7 +6,7 @@
 class AsyncClientGetSymbols final : public AsyncClientCall {
 public:
 
-    void HandleAsync(bool ok = true) override;
+    void HandleAsync(bool ok) override;
 
     void CloseRpc() override;
 

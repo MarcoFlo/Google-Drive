@@ -27,6 +27,9 @@ CharacterClient::CharacterClient() {
     auto channel_creds = grpc::SslCredentials(opts);
 
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
+    grpc::ClientContext context;
+
+    responderSymbols = stub_->AsyncInsertSymbols(&context, nullptr, &cq_, this);
 }
 
 std::string CharacterClient::Register(protobuf::User &user) {
@@ -43,8 +46,7 @@ std::string CharacterClient::Register(protobuf::User &user) {
     if (status.ok()) {
         std::cout << "Register rpc was successful" << std::endl;
         return "";
-    }
-    else {
+    } else {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
         return status.error_message();
     }
@@ -118,7 +120,7 @@ std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string 
     }
 }
 
-std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
+std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
 
@@ -138,6 +140,7 @@ std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
 
     if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
+        GetSymbols(fileInfo);
         return "";
 
     } else {
@@ -147,10 +150,8 @@ std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
 }
 
 
-AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId) {
-    protobuf::FileInfo request;
-    request.set_filename(fileUniqueId);
-    return new AsyncClientGetSymbols(request, token_, cq_, stub_);
+AsyncClientGetSymbols *CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
+    return new AsyncClientGetSymbols(fileInfo, token_, cq_, stub_);
 }
 
 
@@ -163,15 +164,17 @@ void CharacterClient::AsyncCompleteRpc() {
         AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
         call->HandleAsync(ok);
     }
+}
 
+std::string CharacterClient::InsertSymbols(const protobuf::Message &message) {
 
+    responderSymbols->Write(message, this);
+    return std::string();
 }
 
 std::string CharacterClient::getToken() {
     return token_;
 }
-
-
 
 
 

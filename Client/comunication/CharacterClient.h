@@ -18,9 +18,11 @@ public:
 
     std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
-    std::string GetFileContent(protobuf::FileInfo fileInfo);
+    std::string GetFileContent(const protobuf::FileInfo& fileInfo);
 
-    AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId);
+    AsyncClientGetSymbols *GetSymbols(const protobuf::FileInfo &fileInfo);
+
+    std::string InsertSymbols(const protobuf::Message &message);
 
     std::string getToken();
 
@@ -30,6 +32,8 @@ private:
     std::unique_ptr<protobuf::CharacterService::Stub> stub_;
 
     grpc::CompletionQueue cq_;
+
+    std::unique_ptr<grpc::ClientAsyncWriter<protobuf::Message>> responderSymbols;
 
     std::string token_;
 

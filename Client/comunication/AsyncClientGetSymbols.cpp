@@ -24,6 +24,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
 
     } else if (callStatus == READ_CALLED) {
         std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << std::endl;
+        //todo inserire il simbolo
         callStatus = READ;
     } else if (callStatus == FINISH) {
         std::cout << "GetSymbols rpc finished" << std::endl;
