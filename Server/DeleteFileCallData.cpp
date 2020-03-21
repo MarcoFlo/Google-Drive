@@ -29,24 +29,24 @@ void DeleteFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        std::string fileIdentifier = request_.identifier();
+        std::string fileIdentifier = request_.fileidentifier();
         protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
         auto fileToBeDeleted = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
                                             [&fileIdentifier](protobuf::FileInfo &file) {
-                                                return file.identifier() == fileIdentifier;
+                                                return file.fileidentifier() == fileIdentifier;
                                             });
         if (fileToBeDeleted != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
             if ((*fileToBeDeleted).usernameo() == request_.usernameo()) {
                 //se ha l'autorizzazione
-                if (remove(request_.identifier().c_str()) == 0) {
+                if (remove(request_.fileidentifier().c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file
                     std::for_each(fileClientMap.mutable_fileclientmap()->begin(),
                                   fileClientMap.mutable_fileclientmap()->end(), [&fileIdentifier](auto &pair) {
                                 auto fileToBeDeleted = std::find_if(pair.second.mutable_fileil()->begin(),
                                                                     pair.second.mutable_fileil()->end(),
                                                                     [&fileIdentifier](protobuf::FileInfo &file) {
-                                                                        return file.identifier() == fileIdentifier;
+                                                                        return file.fileidentifier() == fileIdentifier;
                                                                     });
                                 pair.second.mutable_fileil()->erase(fileToBeDeleted);
 

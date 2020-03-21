@@ -1,6 +1,7 @@
 #ifndef CLIENT_CHARACTERCLIENT_H
 #define CLIENT_CHARACTERCLIENT_H
 
+#include "Symbol.h"
 #include "AsyncClientGetSymbols.h"
 
 
@@ -8,7 +9,9 @@ class CharacterClient {
 public:
     explicit CharacterClient();
 
-    void AsyncCompleteRpc();
+    virtual ~CharacterClient();
+
+    void AsyncCompleteRpc(CharacterClient *pClient);
 
     std::string Register(protobuf::User &user);
 
@@ -16,13 +19,15 @@ public:
 
     std::string Logout();
 
+    std::string InsertFile(const protobuf::FileName &fileName);
+
     std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
-    std::string GetFileContent(const protobuf::FileInfo& fileInfo);
+    std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
     AsyncClientGetSymbols *GetSymbols(const protobuf::FileInfo &fileInfo);
 
-    std::string InsertSymbols(const protobuf::Message &message);
+    std::string InsertSymbols(Symbol &symbol, bool isErase);
 
     std::string getToken();
 
@@ -33,12 +38,13 @@ private:
 
     grpc::CompletionQueue cq_;
 
-    std::unique_ptr<grpc::ClientAsyncWriter<protobuf::Message>> responderSymbols;
-
     std::string token_;
+    std::string fileidentifier_;
+
 
     //current opened file
     protobuf::SymbolVector symbolVector_;
+    std::thread thread_;
 
 };
 

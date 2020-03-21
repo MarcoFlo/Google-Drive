@@ -3,13 +3,13 @@
 #include "messageP.grpc.pb.h"
 #include "Symbol.h"
 
-Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos) : character(character), uniqueId(uniqueId), pos(pos) {}
+Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos) : character_(character), uniqueId_(uniqueId), pos_(pos) {}
 
 protobuf::Symbol Symbol::makeProtobufSymbol() {
     protobuf::Symbol symbol;
-    symbol.set_character(reinterpret_cast<const char *>(character));
-    symbol.set_uniqueid(uniqueId);
-    *symbol.mutable_pos() = {pos.begin(), pos.end()};
+    symbol.set_character(std::to_string(character_));
+    symbol.set_uniqueid(uniqueId_);
+    *symbol.mutable_pos() = {pos_.begin(), pos_.end()};
     return symbol;
 }
 
@@ -22,15 +22,15 @@ bool Symbol::operator<(const Symbol &symbol) const {
 }
 
 char Symbol::getCharacter() const {
-    return character;
+    return character_;
 }
 
 std::string Symbol::getUniqueId() const {
-    return uniqueId;
+    return uniqueId_;
 }
 
 const std::vector<int> &Symbol::getPos() const {
-    return pos;
+    return pos_;
 }
 
 

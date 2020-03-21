@@ -8,7 +8,7 @@
 protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
     protobuf::FileInfo fileInfo;
     auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch());
-    fileInfo.set_identifier(std::to_string(ns.count()));
+    fileInfo.set_fileidentifier(std::to_string(ns.count()) + filename);
     fileInfo.set_usernameo(owner);
     fileInfo.set_filename(filename);
     return fileInfo;
@@ -29,7 +29,7 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
     }
 
     if (status_ == PROCESS) {
-        std::cout << "Received a Insert request" << std::endl;
+        std::cout << "Received a InsertFile request" << std::endl;
         new InsertFileCallData(service_, cq_);
         status_ = FINISH;
 
@@ -41,7 +41,7 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
         (*fileClientMap.mutable_fileclientmap())[username].mutable_fileil()->Add(std::move(fileInfo));
         UpdateFileClientMap(fileClientMap);
 
-        std::ofstream output("fileContainer/" + reply_.identifier());
+        std::ofstream output("fileContainer/" + reply_.fileidentifier());
 
         responder_.Finish(reply_, grpc::Status::OK, this);
 

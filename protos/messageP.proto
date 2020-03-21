@@ -12,7 +12,7 @@ service CharacterService {
     rpc ShareFile (FileInfo) returns (Empty) {}
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
-    rpc InsertSymbols (stream Message) returns (Empty) {}
+    rpc InsertSymbols (Message) returns (Empty) {}
 
     rpc SetProfile (ProfileInfo) returns (Empty) {}
     rpc GetProfile (Empty) returns (ProfileInfo) {}
@@ -25,7 +25,7 @@ message Empty {
 }
 
 message Message {
-    FileInfo fileInfo = 1;
+    string fileIdentifier = 1;
     bool isEraseBool = 2;
     Symbol symbol = 3;
 }
@@ -48,7 +48,7 @@ message Chunk {
 
 message FileInfo {
     string filename = 9;
-    string identifier = 70;
+    string fileIdentifier = 70;
     int32 size = 10;
     string usernameO = 11; //email Owner
     repeated string usernamesAL = 12; //userAccessList

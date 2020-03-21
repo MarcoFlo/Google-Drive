@@ -117,7 +117,8 @@ void SharedEditor::localInsert(unsigned int index, char value) {
     std::string uniqueId = _siteId + std::to_string(_counter++);
     Symbol symbol(value, uniqueId, posNew);
     _symbols.insert(_symbols.begin() + index, 1, symbol);
-    Message msg(symbol, false);
+    std::string fileIdentifier = "fileIDentifier";
+    Message msg(fileIdentifier, symbol, false);
 //    _server.send(msg);
 
 }
@@ -136,7 +137,9 @@ void SharedEditor::localErase(unsigned int index) {
     if (index >= _symbols.size())
         index = _symbols.size() - 1;
 
-    Message msg(_symbols.at(index), true);
+    std::string fileIdentifier = "fileIDentifier";
+
+    Message msg(fileIdentifier, _symbols.at(index), true);
     _symbols.erase(_symbols.begin() + index);
 //    _server.send(msg);
 

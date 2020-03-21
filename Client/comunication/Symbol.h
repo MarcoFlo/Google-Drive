@@ -8,9 +8,9 @@
 
 
 class Symbol {
-    char character;
-    std::string uniqueId;
-    std::vector<int> pos;
+    char character_;
+    std::string uniqueId_;
+    std::vector<int> pos_;
 public:
     Symbol(char character, std::string uniqueId, std::vector<int> &pos);
 

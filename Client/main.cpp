@@ -32,12 +32,17 @@ int main(int argc, char **argv) {
     client.Logout();
     client.Login(user);
 
-//    client.ShareFile(token, "filename", "usernameShare@test.it");
+    protobuf::FileName fileName;
+    fileName.set_filename("file1");
+    client.InsertFile(fileName);
 
-    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1");
 
+    std::vector<int> posNew;
+    posNew.push_back(1);
+    Symbol symbol('a', "uniqueID", posNew);
 
-    std::thread thread_ = std::thread(&CharacterClient::AsyncCompleteRpc, &client);
+    client.InsertSymbols(symbol, false);
+
 
     QApplication a(argc, argv);
     LoginPage log;

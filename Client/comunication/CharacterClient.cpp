@@ -2,10 +2,14 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <thread>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "AsyncClientGetSymbols.h"
+#include "Symbol.h"
+#include "Message.h"
 #include "CharacterClient.h"
+
 
 
 void read(const std::string &filename, std::string &data) {
@@ -27,10 +31,29 @@ CharacterClient::CharacterClient() {
     auto channel_creds = grpc::SslCredentials(opts);
 
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
-    grpc::ClientContext context;
 
-    responderSymbols = stub_->AsyncInsertSymbols(&context, nullptr, &cq_, this);
+    //per gestire i simboli che ci arrivano dal server
+    thread_ = std::thread([this] { this->AsyncCompleteRpc(this); });
+
 }
+
+CharacterClient::~CharacterClient() {
+    if (thread_.joinable())
+        thread_.join();
+}
+
+void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
+    void *got_tag;
+    bool ok = false;
+
+    // Block until the next result is available in the completion queue "cq".
+    while (pClient->cq_.Next(&got_tag, &ok)) {
+        AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
+        call->HandleAsync(ok);
+
+    }
+}
+
 
 std::string CharacterClient::Register(protobuf::User &user) {
     grpc::ClientContext context;
@@ -96,13 +119,36 @@ std::string CharacterClient::Logout() {
     }
 }
 
+std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+
+    protobuf::FileInfo reply;
+    grpc::CompletionQueue cq;
+    grpc::Status status;
+
+    status = stub_->InsertFile(&context, request, &reply);
+
+    if (status.ok()) {
+        std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
+        fileidentifier_ = reply.fileidentifier();
+        GetSymbols(reply);
+        return reply.fileidentifier();
+    } else {
+        std::cout << "Insert file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
+
 std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string &usernameShare) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
     context.AddMetadata("usernameshare", usernameShare);
 
     protobuf::FileInfo request;
-    request.set_identifier(fileIdentifier);
+    request.set_fileidentifier(fileIdentifier);
 
     protobuf::Empty reply;
     grpc::CompletionQueue cq;
@@ -140,6 +186,7 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 
     if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
+        fileidentifier_ = fileInfo.fileidentifier();
         GetSymbols(fileInfo);
         return "";
 
@@ -155,26 +202,36 @@ AsyncClientGetSymbols *CharacterClient::GetSymbols(const protobuf::FileInfo &fil
 }
 
 
-void CharacterClient::AsyncCompleteRpc() {
-    void *got_tag;
-    bool ok = false;
+std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
+    // si sta provando a inserire prima che il file sia aperto correttamente
+    if(fileidentifier_.empty())
+        return "";
 
-    // Block until the next result is available in the completion queue "cq".
-    while (cq_.Next(&got_tag, &ok)) {
-        AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
-        call->HandleAsync(ok);
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty reply;
+    grpc::CompletionQueue cq;
+    grpc::Status status;
+
+    Message message(fileidentifier_,symbol, isErase);
+
+    status = stub_->InsertSymbols(&context, message.makeProtobufMessage(), &reply);
+
+
+    if (status.ok()) {
+        std::cout << "Insert symbols rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Insert symbols rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
     }
-}
-
-std::string CharacterClient::InsertSymbols(const protobuf::Message &message) {
-
-    responderSymbols->Write(message, this);
-    return std::string();
 }
 
 std::string CharacterClient::getToken() {
     return token_;
 }
+
 
 
 
