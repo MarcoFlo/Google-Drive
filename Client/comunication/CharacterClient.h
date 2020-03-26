@@ -33,7 +33,9 @@ public:
 
     std::string InsertSymbols(Symbol &symbol, bool isErase);
 
-    std::string getToken();
+    protobuf::FilesInfoList getFileInfoList();
+
+    protobuf::SymbolVector getSymbolVector();
 
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the

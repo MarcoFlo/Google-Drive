@@ -258,8 +258,12 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
     }
 }
 
-std::string CharacterClient::getToken() {
-    return token_;
+protobuf::FilesInfoList CharacterClient::getFileInfoList() {
+    return lastFileInfoList_;
+}
+
+protobuf::SymbolVector CharacterClient::getSymbolVector() {
+    return symbolVector_;
 }
 
 
