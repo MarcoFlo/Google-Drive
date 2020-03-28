@@ -47,7 +47,7 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
                                         });
             if (fileGet == fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 responder_.Finish(reply_, grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "File duplicato"), this);
-
+                return;
             }
         }
 
