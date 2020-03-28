@@ -29,7 +29,7 @@ public:
 
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
-    AsyncClientGetSymbols *GetSymbols(const protobuf::FileInfo &fileInfo);
+    void GetSymbols(const protobuf::FileInfo &fileInfo);
 
     std::string InsertSymbols(Symbol &symbol, bool isErase);
 

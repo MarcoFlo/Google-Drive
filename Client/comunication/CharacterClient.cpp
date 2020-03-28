@@ -227,8 +227,8 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 }
 
 
-AsyncClientGetSymbols *CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
-    return new AsyncClientGetSymbols(fileInfo, token_, cq_, stub_);
+void CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
+    new AsyncClientGetSymbols(fileInfo, token_, cq_, stub_);
 }
 
 
