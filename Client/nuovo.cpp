@@ -24,6 +24,7 @@ void Nuovo::on_Annulla_clicked()
 void Nuovo::on_conferma_clicked()
 {
     QString name = ui->nome->text();
+
     if(name.compare("")==0)
     {
         //QMessageBox::warning(this,"Creazione", "Inserire il nome del documento da creare");

@@ -19,7 +19,7 @@
 
 int main(int argc, char **argv) {
     CharacterClient client;
-
+/*
     protobuf::User user;
     user.set_username("prova@test.it");
     user.set_password("1234");
@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
     Symbol symbol('a', "uniqueID", posNew);
 
     client.InsertSymbols(symbol, false);
-
+*/
 
     QApplication a(argc, argv);
     LoginPage log;

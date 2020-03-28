@@ -12,10 +12,11 @@
 Principale::Principale(QWidget *parent, CharacterClient *client) :
     QMainWindow(parent),
     client_(client),
+
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
-
+    int i;
     //ACCOUNT
 
     QMenu *accountM = new QMenu();
@@ -59,6 +60,7 @@ Principale::Principale(QWidget *parent, CharacterClient *client) :
 
     ui->horizontalLayout->insertWidget(3, account);
 
+    insertTab();
 }
 
 Principale::~Principale()
@@ -112,6 +114,9 @@ void Principale::on_importa_clicked()
 
 void Principale::open_edi(QString name)
 {
+    protobuf::FileName fileName;
+    fileName.set_filename(name.toStdString().c_str());
+    client_->InsertFile(fileName);
     hide();
     e=new Editor(this, name);
     QObject::connect(e, SIGNAL(closeE()), this, SLOT(on_closeE_signal()));
@@ -124,6 +129,7 @@ void Principale::on_closeE_signal()
     e->hide();
     this->show();
     delete e;
+    insertTab();
 }
 
 void Principale::on_impostazioni_clicked()
@@ -166,4 +172,30 @@ void Principale::closeEvent( QCloseEvent* event )
 {
     emit closeP();
     event->accept();
+}
+
+void Principale::insertTab()
+{
+    protobuf::FilesInfoList clientFilesInfo;
+    int i=0;
+
+    if(client_->GetFiles().compare("")!= 0)
+    {
+        clientFilesInfo = client_->getFileInfoList();
+    }
+    QStringList etichette;
+    etichette << "#" << "Nome file" << "Data creazione" << "Proprietario" << "Ultima modifica";
+    ui->lista->setColumnCount(5);
+    ui->lista->setHorizontalHeaderLabels(etichette);
+    protobuf::FileInfo fileInfo;
+
+    for(i=0; i < clientFilesInfo.fileil_size(); i++)
+    {
+        ui->lista->insertRow(ui->lista->rowCount());
+        fileInfo = clientFilesInfo.fileil(i);
+        ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::fromStdString(fileInfo.fileidentifier())));
+        ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
+        ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
+        ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.usernameo())));
+    }
 }

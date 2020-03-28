@@ -61,12 +61,19 @@ private slots:
 
     void on_cerca_clicked();
 
+    void insertTab();
+
 private:
     Ui::Principale *ui;
 
     Editor *e;
 
     CharacterClient *client_;
+
+    enum columnEti
+    {
+        NUM, NAME, SIZE, PROP, LAST
+    };
 
 };
 
