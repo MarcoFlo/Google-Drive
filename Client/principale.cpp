@@ -16,7 +16,6 @@ Principale::Principale(QWidget *parent, CharacterClient *client) :
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
-    int i;
     //ACCOUNT
 
     QMenu *accountM = new QMenu();
@@ -117,6 +116,7 @@ void Principale::open_edi(QString name)
     protobuf::FileName fileName;
     fileName.set_filename(name.toStdString().c_str());
     client_->InsertFile(fileName);
+
     hide();
     e=new Editor(this, name);
     QObject::connect(e, SIGNAL(closeE()), this, SLOT(on_closeE_signal()));
@@ -144,7 +144,7 @@ void Principale::on_logout_clicked()
 {
     std::string error = client_->Logout();
 
-    if (error.compare("") == 0)
+    if (error == "")
         emit logout();
     else
         QMessageBox::warning(this, "Logout", "Logout service failed");
@@ -176,10 +176,12 @@ void Principale::closeEvent( QCloseEvent* event )
 
 void Principale::insertTab()
 {
+    ui->lista->clear();
+    ui->lista->setRowCount(0);
     protobuf::FilesInfoList clientFilesInfo;
     int i=0;
 
-    if(client_->GetFiles().compare("")!= 0)
+    if(client_->GetFiles() == "")
     {
         clientFilesInfo = client_->getFileInfoList();
     }

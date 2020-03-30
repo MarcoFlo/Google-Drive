@@ -37,6 +37,8 @@ public:
 
     protobuf::SymbolVector getSymbolVector();
 
+    std::string getUsername();
+
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
@@ -47,6 +49,7 @@ private:
     std::string token_;
     std::string currentFileIdentifier_;
     protobuf::FilesInfoList lastFileInfoList_;
+    std::string username_;
 
     //current opened file
     protobuf::SymbolVector symbolVector_;

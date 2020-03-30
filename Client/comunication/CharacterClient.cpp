@@ -47,7 +47,7 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
 
     // Block until the next result is available in the completion queue "cq".
     while (pClient->cq_.Next(&got_tag, &ok)) {
-        AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
+        auto *call = static_cast<AsyncClientCall *>(got_tag);
         call->HandleAsync(ok);
 
     }
@@ -61,7 +61,7 @@ std::string CharacterClient::Register(protobuf::User &user) {
     context.AddMetadata("passwordr", user.passwordr());
     protobuf::Empty reply;
     grpc::Status status;
-
+    username_=user.username();
     status = stub_->Register(&context, user, &reply);
 
     if (status.ok()) {
@@ -266,7 +266,9 @@ protobuf::SymbolVector CharacterClient::getSymbolVector() {
     return symbolVector_;
 }
 
-
+std::string CharacterClient::getUsername() {
+    return username_;
+}
 
 
 
