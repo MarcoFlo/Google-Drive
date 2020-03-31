@@ -30,10 +30,11 @@ public:
 
 signals:
     void closeE();
-    void openE(QString);
+    void openE(QString, QString);
     void closeP();
     void closeEP();
     void logout();
+    void share(QString);
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -47,7 +48,7 @@ private slots:
 
     void on_importa_clicked();
 
-    void open_edi(QString name);
+    void open_edi(std::string);
 
     void on_closeE_signal();
 
@@ -63,6 +64,14 @@ private slots:
 
     void insertTab();
 
+    void onNuovoReturn(QString, QString);
+
+    void on_row_select();
+
+    void onCondividiReturn(QString);
+
+    void cellDoubleClicked();
+
 private:
     Ui::Principale *ui;
 
@@ -74,6 +83,8 @@ private:
     {
         NUM, NAME, SIZE, PROP, LAST
     };
+
+    protobuf::FilesInfoList *clientFiles_;
 
 };
 

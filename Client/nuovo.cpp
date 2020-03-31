@@ -24,15 +24,14 @@ void Nuovo::on_Annulla_clicked()
 void Nuovo::on_conferma_clicked()
 {
     QString name = ui->nome->text();
+    QString share = ui->cond->text();
 
     if(name.compare("")==0)
     {
-        //QMessageBox::warning(this,"Creazione", "Inserire il nome del documento da creare");
-        hide();
-        emit openE("gisella");
+        QMessageBox::warning(this,"Creazione", "Inserire il nome del documento da creare");
     }
     else {
         hide();
-        emit openE(name);
+        emit openE(name, share);
     }
 }

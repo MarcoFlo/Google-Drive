@@ -39,6 +39,9 @@ public:
 
     std::string getUsername();
 
+    std::list<int> searchFileInfo(std::string);
+
+    protobuf::FileInfo getFileInfo(std::string);
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.

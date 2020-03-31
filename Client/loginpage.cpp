@@ -84,6 +84,7 @@ void LoginPage::closeSplash() {
 
 void LoginPage::on_logout_signal() {
     p->hide();
+    client_->Logout();
     this->show();
     delete p;
 }

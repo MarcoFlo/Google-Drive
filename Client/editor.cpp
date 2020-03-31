@@ -22,17 +22,20 @@
 #include <QVBoxLayout>
 #include <QThread>
 #include <QPixmap>
+#include <messageP.pb.h>
 #include "account.h"
 #include "ui_editor.h"
 #include "editor.h"
 
-Editor::Editor(QWidget *parent, QString windowName) :
+Editor::Editor(QWidget *parent, std::string fileid) :
     QMainWindow(parent),
     ui(new Ui::Editor)
 {
     ui->setupUi(this);
-    setWindowTitle(windowName);
-
+ /*   client->GetFiles();
+    protobuf::FileInfo file = client->getFileInfo(fileid);
+    setWindowTitle(QString::fromStdString(file.filename()));*/
+    setWindowTitle(QString::fromStdString(fileid));
     QIcon *logo= new QIcon(QPixmap("$/img/logo.png"));
     ui->actionlogo->setIcon(*logo);
 

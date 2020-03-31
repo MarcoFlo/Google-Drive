@@ -270,7 +270,30 @@ std::string CharacterClient::getUsername() {
     return username_;
 }
 
+std::list<int> CharacterClient::searchFileInfo(std::string name) {
+    int i=0;
+    std::list<int> *searchList = new std::list<int>;
 
+    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
+    {
+        if(lastFileInfoList_.fileil(i).filename().find(name) != std::string::npos)
+        {
+            searchList->push_back(i);
+        }
+    }
+    return *searchList;
+}
 
+protobuf::FileInfo CharacterClient::getFileInfo(std::string id) {
+    int i=0;
+
+    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
+    {
+        if(lastFileInfoList_.fileil(i).fileidentifier() == id)
+        {
+            return lastFileInfoList_.fileil(i);
+        }
+    }
+}
 
 

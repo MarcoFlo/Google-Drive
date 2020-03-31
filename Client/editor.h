@@ -17,7 +17,7 @@ class Editor : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Editor(QWidget *parent = nullptr, QString windowName=nullptr);
+    explicit Editor(QWidget *parent = nullptr, std::string fileid=nullptr);
     ~Editor();
 
 signals:

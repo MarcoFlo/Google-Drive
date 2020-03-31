@@ -28,3 +28,9 @@ void Condividi::on_copia_clicked()
     ui->url->copy();
 
 }
+
+void Condividi::on_conferma_clicked()
+{
+    hide();
+    emit share(ui->condividiB->text());
+}
