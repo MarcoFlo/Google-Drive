@@ -7,7 +7,7 @@ SplashScreen::SplashScreen(QWidget *parent) :
     ui(new Ui::SplashScreen)
 {
     ui->setupUi(this);
-    QTimer::singleShot(4000, this, SLOT(closeSplash()));
+    //QTimer::singleShot(2000, this, SLOT(closeSplash()));
 
 }
 

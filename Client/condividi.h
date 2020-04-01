@@ -15,8 +15,7 @@ public:
     explicit Condividi(QWidget *parent = nullptr);
     ~Condividi();
 
-
-    signals:
+signals:
     void share(QString);
 
 private slots:

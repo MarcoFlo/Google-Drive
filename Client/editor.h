@@ -7,6 +7,9 @@
 #include <QMenu>
 #include <QLineEdit>
 #include <QPushButton>
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
 
 namespace Ui {
 class Editor;
@@ -17,7 +20,7 @@ class Editor : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Editor(QWidget *parent = nullptr, std::string fileid=nullptr);
+    explicit Editor(QWidget *parent = nullptr, std::string *fileid=nullptr, CharacterClient *client_=nullptr);
     ~Editor();
 
 signals:
@@ -26,6 +29,16 @@ signals:
     void closeEP();
 
 private slots:
+
+        void setupGeneral();
+
+        void setupAccount();
+
+        void setupFont();
+
+        void setupSize();
+
+        void setupColor();
 
         void on_actionindietro_triggered();
 
@@ -120,6 +133,8 @@ private:
     QMenu *coloreM;
 
     //int zoomT = 100;
+
+    protobuf::FileInfo *file;
 
 };
 

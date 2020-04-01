@@ -6,9 +6,6 @@ Account::Account(QWidget *parent) :
     ui(new Ui::Account)
 {
     ui->setupUi(this);
-
-    QPixmap *logo = new QPixmap("$/img/logo.png");
-    ui->label->setPixmap(*logo);
 }
 
 Account::~Account()

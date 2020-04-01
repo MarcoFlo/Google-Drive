@@ -1,21 +1,6 @@
-#include <iostream>
-#include <thread>
-#include <sstream>
-#include <fstream>
 #include <QApplication>
-#include "loginpage.h"
-#include "registrationpage.h"
 #include "principale.h"
-#include "splashscreen.h"
-#include "editor.h"
-#include "nuovo.h"
-
-#include <grpcpp/grpcpp.h>
-#include "messageP.grpc.pb.h"
-
 #include "comunication/CharacterClient.h"
-#include "comunication/SharedEditor.h"
-#include "comunication/AsyncClientGetSymbols.h"
 
 int main(int argc, char **argv) {
     CharacterClient client;
@@ -48,9 +33,9 @@ int main(int argc, char **argv) {
 */
 
     QApplication a(argc, argv);
-    LoginPage log;
+    Principale main;
 
-    log.show();
+    main.show();
 
     //fa partire l'interfaccia grafica
     //non lasciarlo nel return

@@ -1,16 +1,12 @@
 #include "registrationpage.h"
 #include "ui_registrationpage.h"
 
-#include <QMessageBox>
-
-RegistrationPage::RegistrationPage(QWidget *parent, CharacterClient *client) :
+RegistrationPage::RegistrationPage(QWidget *parent) :
     QMainWindow(parent),
-    client_(client),
     ui(new Ui::RegistrationPage)
 {
     ui->setupUi(this);
-    QPixmap *logo = new QPixmap("$/img/logo.png");
-    ui->fotoprofilo->setPixmap(*logo);
+    client_=new CharacterClient();
 }
 
 RegistrationPage::~RegistrationPage()
@@ -28,15 +24,13 @@ void RegistrationPage::on_registrati_clicked()
     QString username = ui->usernameEdit->text();
     QString pass = ui->passwordEdit->text();
     QString pass2 = ui->password2Edit->text();
-
     protobuf::User userR;
     userR.set_username(username.toStdString());
     userR.set_password(pass.toStdString());
     userR.set_passwordr(pass2.toStdString());
-    std::string error = this->client_->Register(userR);
+   std::string error = this->client_->Register(userR);
 
-    if (error.compare("") == 0) {   // status == ok
-        //hide(); // already made by loginpage
+    if (error.empty()) {
         emit closeRReg();
     }
     else {
