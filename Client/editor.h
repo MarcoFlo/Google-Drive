@@ -20,7 +20,7 @@ class Editor : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Editor(QWidget *parent = nullptr, std::string *fileid=nullptr, CharacterClient *client_=nullptr);
+    explicit Editor(QWidget *parent = nullptr, std::string *fileid=nullptr, CharacterClient *client=nullptr);
     ~Editor();
 
 signals:
@@ -135,6 +135,8 @@ private:
     //int zoomT = 100;
 
     protobuf::FileInfo *file;
+
+    CharacterClient *client_;
 
 };
 

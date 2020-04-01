@@ -10,8 +10,8 @@ Principale::Principale(QWidget *parent) :
     ui(new Ui::Principale)
 {
     ui->setupUi(this);
-    setupUI();
     showSplash();
+    setupUI();
 }
 
 Principale::~Principale()

@@ -61,7 +61,6 @@ std::string CharacterClient::Register(protobuf::User &user) {
     context.AddMetadata("passwordr", user.passwordr());
     protobuf::Empty reply;
     grpc::Status status;
-    username_=user.username();
     status = stub_->Register(&context, user, &reply);
 
     if (status.ok()) {
@@ -78,7 +77,7 @@ std::string CharacterClient::Login(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
-
+    username_=user.username();
     protobuf::Identifier reply;
     grpc::Status status;
 

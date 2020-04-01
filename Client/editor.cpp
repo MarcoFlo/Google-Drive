@@ -21,10 +21,11 @@
 #include "ui_editor.h"
 #include "editor.h"
 
-Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client_) :
+Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
     ui(new Ui::Editor)
 {
+    client_=client;
     ui->setupUi(this);
     client_->GetFiles();
     file = new protobuf::FileInfo();
@@ -70,7 +71,7 @@ void Editor::setupAccount() {
 
     QLabel *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
-    nome->setText("nome");
+    nome->setText(QString::fromStdString(client_->getUsername()));
     accountV->addWidget(nome);
 
     QLabel *mail = new QLabel(accountM);
