@@ -23,7 +23,7 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
     }
 
     if (status_ == READ_CALLED) {
-        std::cout << "Remove request for " << request_.filename()  << std::endl;
+        std::cout << "Remove request for " << request_.fileidentifier() << std::endl;
         new RemoveFileCallData(service_, cq_);
         status_ = FINISH;
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
@@ -39,7 +39,7 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
             //se è tra i suoi file
             if ((*fileToBeRemoved).usernameo() == request_.usernameo()) {
                 //se ha l'autorizzazione
-                if (remove(request_.fileidentifier().c_str()) == 0) {
+                if (remove(("fileContainer/" + request_.fileidentifier()).c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file
                     std::for_each(fileClientMap.mutable_fileclientmap()->begin(),
                                   fileClientMap.mutable_fileclientmap()->end(), [&fileIdentifier](auto &pair) {
@@ -55,7 +55,7 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
 
                     responder_.Finish(reply_, grpc::Status::OK, this);
                 } else {
-                    std::cout << "It wasn't possible to delete the file" << std::endl; //probably not closed correctly
+                    std::cout << "It wasn't possible to delete the file, function 'remove' failed " << std::endl;
                     responder_.Finish(reply_, grpc::Status(grpc::StatusCode::INTERNAL, "Internal error"), this);
                 }
             } else {
