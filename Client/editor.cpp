@@ -17,9 +17,11 @@
 #include <QThread>
 #include <QPixmap>
 #include <messageP.pb.h>
+#include <QtWidgets/QMessageBox>
 #include "account.h"
 #include "ui_editor.h"
 #include "editor.h"
+#include "comunication/Symbol.h"
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -28,9 +30,12 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     client_=client;
     ui->setupUi(this);
     client_->GetFiles();
-    file = new protobuf::FileInfo();
-    *file= client_->getFileInfo(*fileid);
-
+    file_ = new protobuf::FileInfo();
+    *file_ = client_->getFileInfo(*fileid);
+    if(!client_->GetFileContent(*file_).empty())
+    {
+        QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
+    }
     setupGeneral();
 }
 
@@ -40,7 +45,7 @@ Editor::~Editor()
 }
 
 void Editor::setupGeneral() {
-    setWindowTitle(QString::fromStdString(file->filename()));
+    setWindowTitle(QString::fromStdString(file_->filename()));
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, SIGNAL(customContextMenuRequested(const QPoint &)),
             this, SLOT(ShowContextMenu(const QPoint &)));
@@ -53,6 +58,9 @@ void Editor::setupGeneral() {
     setupSize();
     setupColor();
     ui->toolBar_2->insertSeparator(ui->actiongrassetto);
+    //readFile();
+   // QObject::connect(ui->txt, SIGNAL(textChanged()), this, SLOT(saveFile()));
+    on_txt_cursorPositionChanged();
 }
 
 void Editor::setupAccount() {
@@ -661,6 +669,37 @@ void Editor::on_impostazioni_clicked()
 void Editor::on_logout_clicked()
 {
     emit closeEP();
+}
+
+void Editor::readFile() {
+    int i=0;
+    QTextCursor cursor = ui->txt->textCursor();
+
+    if(!client_->GetFileContent(*file_).empty())
+    {
+        QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
+    }
+    for(i=0; i<client_->getSymbolVector().symbolvector_size(); i++)
+    {
+        protobuf::Symbol symbol = client_->getSymbolVector().symbolvector(i);
+        cursor.setPosition(symbol.pos().data()[0]);
+        ui->txt->setTextCursor(cursor);
+        ui->txt->setPlainText(symbol.character().c_str());
+    }
+}
+
+void Editor::saveFile() {
+    QTextCursor cur = ui->txt->textCursor();
+    cur.movePosition(QTextCursor::PreviousCharacter,QTextCursor::KeepAnchor,1);
+    qDebug() << cur.selectedText();
+    std::vector<int> pos;
+    pos.push_back(cur.position());
+    Symbol *symbol = new Symbol(cur.selectedText().toStdString()[0],client_->getUsername(), pos);
+/*
+    symbol.set_character(cur.selectedText().toStdString());
+    symbol.set_pos(0, cur.position());
+    symbol.set_uniqueid(client_->getUsername());*/
+    client_->InsertSymbols(*symbol, false);
 }
 
 /*void Editor::setupZoom() {

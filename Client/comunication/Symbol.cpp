@@ -3,6 +3,8 @@
 #include "messageP.grpc.pb.h"
 #include "Symbol.h"
 
+Symbol::Symbol() {}
+
 Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos) : character_(character), uniqueId_(uniqueId), pos_(pos) {}
 
 protobuf::Symbol Symbol::makeProtobufSymbol() {

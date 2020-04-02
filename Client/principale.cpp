@@ -268,7 +268,7 @@ void Principale::onNuovoReturn(QString name, QString share)
     size_t pos =0;
     std::string s = (share.toStdString()+" ");
 
-    while ((pos = s.find(delimiter)) != std::string::npos) {
+    while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
         token = s.substr(0, pos);
         client_->ShareFile(fileid, token);
         s.erase(0, pos + delimiter.length());
@@ -279,6 +279,8 @@ void Principale::onNuovoReturn(QString name, QString share)
 
 void Principale::onCondividiReturn(const QString nomi)
 {
+    if(nomi.isEmpty())
+        return;
     std::string delimiter = " ";
     std::string token;
     size_t pos =0;

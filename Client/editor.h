@@ -98,6 +98,9 @@ private slots:
 
         void on_logout_clicked();
 
+        void readFile();
+
+        void saveFile();
 
 private:
     Ui::Editor *ui;
@@ -134,7 +137,7 @@ private:
 
     //int zoomT = 100;
 
-    protobuf::FileInfo *file;
+    protobuf::FileInfo *file_;
 
     CharacterClient *client_;
 
