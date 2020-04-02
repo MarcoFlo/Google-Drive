@@ -7,6 +7,7 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 #include "GetFileContentCallData.h"
+#include "GetProfileInfoCallData.h"
 #include "InsertFileCallData.h"
 #include "RemoveFileCallData.h"
 #include "ShareFileCallData.h"
@@ -78,7 +79,9 @@ void CharacterServiceImpl::Run() {
 // This can be run in multiple threads if needed.
 void CharacterServiceImpl::HandleRpcs() {
     new RemoveFileCallData(&service_, cq_.get());
+    new GetFileContentCallData(&service_, cq_.get());
     new GetFilesCallData(&service_, cq_.get());
+    new GetProfileInfoCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
     new InsertFileCallData(&service_, cq_.get());
