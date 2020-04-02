@@ -124,7 +124,7 @@ grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
 grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_metadata,
                                                       grpc::AuthContext *context) {
     auto usernameShare_kv = auth_metadata.find("usernameshare");
-    if (usernameShare_kv == auth_metadata.end()) {
+    if (usernameShare_kv != auth_metadata.end()) {
         auto usernameShare_value = std::string(usernameShare_kv->second.data(), (usernameShare_kv->second).length());
         if (userMap.usermap().contains(usernameShare_value)) {
             context->AddProperty("usernameshare", usernameShare_value);
