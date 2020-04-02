@@ -127,6 +127,7 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
     if (status.ok()) {
         std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
         currentFileIdentifier_ = reply.fileidentifier();
+        // todo capire se rimuovere
         GetSymbols(reply);
         return reply.fileidentifier();
     } else {

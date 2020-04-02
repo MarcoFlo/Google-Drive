@@ -36,7 +36,7 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
 
         if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if (fileToBeShared->usernameo() == request_.usernameo()) {
+            if (fileToBeShared->usernameo() == principal) {
                 //se ha l'autorizzazione
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
