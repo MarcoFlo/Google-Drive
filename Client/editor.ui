@@ -174,6 +174,10 @@
    <addaction name="actionsottolineato"/>
   </widget>
   <action name="actionindietro">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/icons8-go-back-50.png</normaloff>:/icons/img/ico/icons8-go-back-50.png</iconset>
+   </property>
    <property name="text">
     <string>indietro</string>
    </property>
