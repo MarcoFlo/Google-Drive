@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
-    <height>600</height>
+    <width>759</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -198,26 +198,46 @@
    </property>
   </action>
   <action name="actionredo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/redo-50.png</normaloff>:/icons/img/ico/redo-50.png</iconset>
+   </property>
    <property name="text">
     <string>redo</string>
    </property>
   </action>
   <action name="actioncopia">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/copy.png</normaloff>:/icons/img/ico/copy.png</iconset>
+   </property>
    <property name="text">
     <string>copia</string>
    </property>
   </action>
   <action name="actionincolla">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/paste.png</normaloff>:/icons/img/ico/paste.png</iconset>
+   </property>
    <property name="text">
     <string>incolla</string>
    </property>
   </action>
   <action name="actiontaglia">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/cut.png</normaloff>:/icons/img/ico/cut.png</iconset>
+   </property>
    <property name="text">
     <string>taglia</string>
    </property>
   </action>
   <action name="actionundo">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/undo-50.png</normaloff>:/icons/img/ico/undo-50.png</iconset>
+   </property>
    <property name="text">
     <string>undo</string>
    </property>
@@ -225,6 +245,10 @@
   <action name="actionallineaD">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/align-right-50.png</normaloff>:/icons/img/ico/align-right-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaD</string>
@@ -237,6 +261,10 @@
    <property name="checked">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/align-left-50.png</normaloff>:/icons/img/ico/align-left-50.png</iconset>
+   </property>
    <property name="text">
     <string>allineaS</string>
    </property>
@@ -244,6 +272,10 @@
   <action name="actionallineaC">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/align-center-50.png</normaloff>:/icons/img/ico/align-center-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaC</string>
@@ -253,6 +285,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/align-justify-50.png</normaloff>:/icons/img/ico/align-justify-50.png</iconset>
+   </property>
    <property name="text">
     <string>alineaG</string>
    </property>
@@ -260,6 +296,10 @@
   <action name="actiongrassetto">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/bold-30.png</normaloff>:/icons/img/ico/bold-30.png</iconset>
    </property>
    <property name="text">
     <string>grassetto</string>
@@ -269,6 +309,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/italic-30.png</normaloff>:/icons/img/ico/italic-30.png</iconset>
+   </property>
    <property name="text">
     <string>corsivo</string>
    </property>
@@ -276,6 +320,10 @@
   <action name="actionsottolineato">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icons/img/ico/underline-30.png</normaloff>:/icons/img/ico/underline-30.png</iconset>
    </property>
    <property name="text">
     <string>sottolineato</string>
