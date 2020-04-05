@@ -1,5 +1,19 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>img/logo.png</file>
-    </qresource>
+  <qresource prefix="images">
+    <file>img/logo.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>img/ico/align-center-50.png</file>
+    <file>img/ico/align-justify-50.png</file>
+    <file>img/ico/align-left-50.png</file>
+    <file>img/ico/align-right-50.png</file>
+    <file>img/ico/bold-30.png</file>
+    <file>img/ico/copy.png</file>
+    <file>img/ico/cut.png</file>
+    <file>img/ico/italic-30.png</file>
+    <file>img/ico/paste.png</file>
+    <file>img/ico/redo-50.png</file>
+    <file>img/ico/underline-30.png</file>
+    <file>img/ico/undo-50.png</file>
+  </qresource>
 </RCC>
