@@ -8,7 +8,7 @@
 protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
     protobuf::FileInfo fileInfo;
     auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch());
-    fileInfo.set_identifier(std::to_string(ns.count()));
+    fileInfo.set_fileidentifier(std::to_string(ns.count()) + filename);
     fileInfo.set_usernameo(owner);
     fileInfo.set_filename(filename);
     return fileInfo;
@@ -29,22 +29,85 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
     }
 
     if (status_ == PROCESS) {
-        std::cout << "Received a Insert request" << std::endl;
         new InsertFileCallData(service_, cq_);
         status_ = FINISH;
 
-        std::string username = ctx_.auth_context()->FindPropertyValues(
+        std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        protobuf::FileInfo fileInfo = MakeFileInfo(username, request_.filename());
+        std::string filename = request_.filename();
+        std::cout << "Received a InsertFile request -> " << filename << std::endl;
+
+        if (fileClientMap.mutable_fileclientmap()->find(principal) != fileClientMap.mutable_fileclientmap()->end()) {
+            //controllo per il nome file duplicato
+            auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
+                                        fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
+                                        [&filename](protobuf::FileInfo &file) {
+                                            return filename == file.filename();
+                                        });
+            if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
+                responder_.Finish(reply_, grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "File duplicato"), this);
+                return;
+            }
+        }
+
+        protobuf::FileInfo fileInfo = MakeFileInfo(principal, filename);
         reply_ = fileInfo;
-        (*fileClientMap.mutable_fileclientmap())[username].mutable_fileil()->Add(std::move(fileInfo));
+        (*fileClientMap.mutable_fileclientmap())[principal].mutable_fileil()->Add(std::move(fileInfo));
+
+        //aggiorna la la mappa su file
         UpdateFileClientMap(fileClientMap);
 
-        std::ofstream output("fileContainer/" + reply_.identifier());
+        //crea il nuovo file
+        std::ofstream output("fileContainer/" + reply_.fileidentifier());
 
         responder_.Finish(reply_, grpc::Status::OK, this);
-
     }
 }
 
+
+
+/*
+ *
+ *
+ *     if (status_ == PROCESS) {
+        new InsertFileCallData(service_, cq_);
+        status_ = FINISH;
+
+        std::string principal = ctx_.auth_context()->FindPropertyValues(
+                ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
+
+        std::string filename = request_.filename();
+        std::cout << "Received a InsertFile request -> " << filename << std::endl;
+
+        try {
+            fileClientMap.mutable_fileclientmap()->at(principal);
+            //controllo per il nome file duplicato
+            auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
+                                        fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
+                                        [&filename](protobuf::FileInfo &file) {
+                                            return filename == file.filename();
+                                        });
+            if (fileGet == fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
+                responder_.Finish(reply_, grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "File duplicato"), this);
+
+            }
+        }
+        catch (...) {
+            std::cout << "exc";
+        }
+        protobuf::FileInfo fileInfo = MakeFileInfo(principal, filename);
+        reply_ = fileInfo;
+        (*fileClientMap.mutable_fileclientmap())[principal].mutable_fileil()->Add(std::move(fileInfo));
+
+        //aggiorna la la mappa su file
+        UpdateFileClientMap(fileClientMap);
+
+        //crea il nuovo file
+        std::ofstream output("fileContainer/" + reply_.fileidentifier());
+
+        responder_.Finish(reply_, grpc::Status::OK, this);
+    }
+}
+
+ */

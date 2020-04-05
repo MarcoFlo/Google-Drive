@@ -1,26 +1,18 @@
 //
 // Created by flori on 11/10/2019.
 //
+#include "SharedEditor.h"
+#include "definitions.h"
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <grpcpp/grpcpp.h>
-#include <google/protobuf/util/message_differencer.h>
-#include "messageP.grpc.pb.h"
-#include "definitions.h"
-#include "Symbol.h"
-#include "Message.h"
-#include "CharacterClient.h"
-#include "SharedEditor.h"
 
-SharedEditor::SharedEditor(CharacterClient &client, protobuf::User user) : _client(client), _counter(0) {
-//    AsyncClientGetSymbols *asyncClientGetSymbols = client.GetSymbols("file1", token);
-
+SharedEditor::SharedEditor(NetworkServer &server) : _server(server), _counter(0) {
+    _siteId = server.connect(this);
 }
 
 SharedEditor::~SharedEditor() {
-//    asyncClientGetSymbols->CloseRpc();
-
+    _server.disconnect(this);
 }
 
 /**
@@ -39,7 +31,7 @@ SharedEditor::~SharedEditor() {
  * @param index
  * @param value
  */
-void SharedEditor::localInsert(unsigned int index, char value) {
+void SharedEditor::localInsert(int index, char value) {
     std::vector<int> posPre = {0};
     std::vector<int> posPost = {2};
 
@@ -61,13 +53,13 @@ void SharedEditor::localInsert(unsigned int index, char value) {
 
 #if debug == 1
     //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
-    for (unsigned int i = 0; i < posPre.size(); i++) {
+    for (int i = 0; i < posPre.size(); i++) {
         std::cout << posPre.at(i);
         if (i == 0 && i != posPre.size() - 1)
             std::cout << ",";
     }
     std::cout << "<" << value << "<";
-    for (unsigned int i = 0; i < posPost.size(); i++) {
+    for (int i = 0; i < posPost.size(); i++) {
         std::cout << posPost.at(i);
         if (i == 0 && i != posPost.size() - 1)
             std::cout << ",";
@@ -106,7 +98,7 @@ void SharedEditor::localInsert(unsigned int index, char value) {
 #if debug == 1
     // stampa l'indice frazionario scelto
     std::cout << "  -->  ";
-    for (unsigned int j = 0; j < posNew.size(); ++j) {
+    for (int j = 0; j < posNew.size(); ++j) {
         std::cout << posNew[j];
         if (j == 0 && j != posNew.size() - 1)
             std::cout << ",";
@@ -114,12 +106,11 @@ void SharedEditor::localInsert(unsigned int index, char value) {
     std::cout << std::endl;
 #endif
 
-    std::string uniqueId = _siteId + std::to_string(_counter++);
+    int uniqueId = std::stoi(std::to_string(_siteId) + std::to_string(_counter++));
     Symbol symbol(value, uniqueId, posNew);
     _symbols.insert(_symbols.begin() + index, 1, symbol);
-    std::string fileIdentifier = "fileIDentifier";
-    Message msg(fileIdentifier, symbol, false);
-//    _server.send(msg);
+    Message msg(symbol, _siteId, false);
+    _server.send(msg);
 
 }
 
@@ -130,18 +121,16 @@ void SharedEditor::localInsert(unsigned int index, char value) {
  *
  * @param index
  */
-void SharedEditor::localErase(unsigned int index) {
+void SharedEditor::localErase(int index) {
     if (_symbols.size() == 0)
         return;
 
     if (index >= _symbols.size())
         index = _symbols.size() - 1;
 
-    std::string fileIdentifier = "fileIDentifier";
-
-    Message msg(fileIdentifier, _symbols.at(index), true);
+    Message msg(_symbols.at(index), _siteId, true);
     _symbols.erase(_symbols.begin() + index);
-//    _server.send(msg);
+    _server.send(msg);
 
 }
 
@@ -167,7 +156,7 @@ void SharedEditor::process(const Message &m) {
 
 }
 
-std::string SharedEditor::getSiteId() {
+int SharedEditor::getSiteId() {
     return _siteId;
 }
 

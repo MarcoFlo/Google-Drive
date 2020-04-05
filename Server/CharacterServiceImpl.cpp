@@ -7,8 +7,9 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 #include "GetFileContentCallData.h"
+#include "GetProfileInfoCallData.h"
 #include "InsertFileCallData.h"
-#include "DeleteFileCallData.h"
+#include "RemoveFileCallData.h"
 #include "ShareFileCallData.h"
 #include "InsertSymbolsCallData.h"
 #include "RegisterCallData.h"
@@ -77,8 +78,10 @@ void CharacterServiceImpl::Run() {
 
 // This can be run in multiple threads if needed.
 void CharacterServiceImpl::HandleRpcs() {
-    new DeleteFileCallData(&service_, cq_.get());
+    new RemoveFileCallData(&service_, cq_.get());
+    new GetFileContentCallData(&service_, cq_.get());
     new GetFilesCallData(&service_, cq_.get());
+    new GetProfileInfoCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
     new InsertFileCallData(&service_, cq_.get());
@@ -116,7 +119,7 @@ void CharacterServiceImpl::LoadFileClienMap() {
         std::cout << "Sono stati caricati i seguenti dati di accesso ai file: " << std::endl;
         std::for_each(fileClientMap.fileclientmap().begin(), fileClientMap.fileclientmap().end(), [](auto &pair) {
             std::cout << pair.first << std::endl;
-            //todo
+            std::cout << "\tList file a cui ha accesso -> todo" << std::endl;
         });
         std::cout << std::endl;
     }

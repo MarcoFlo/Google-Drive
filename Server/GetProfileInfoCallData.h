@@ -1,13 +1,13 @@
-#ifndef SERVER_DELETEFILECALLDATA_H
-#define SERVER_DELETEFILECALLDATA_H
+#ifndef SERVER_GETPROFILEINFOCALLDATA_H
+#define SERVER_GETPROFILEINFOCALLDATA_H
+#include "CallData.h"
 
-#include "AbstractFileCallData.h"
 
-class DeleteFileCallData final : public AbstractFileCallData {
+class GetProfileInfoCallData final : public CallData {
 public:
-    DeleteFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
+    GetProfileInfoCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
+    void Proceed(bool ok = true) override;
 
 private:
 
@@ -22,13 +22,13 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::FileInfo request_;
+    protobuf::Empty request_;
 // What we send back to the client.
-    protobuf::Empty reply_;
+    protobuf::ProfileInfo reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
-
+    grpc::ServerAsyncResponseWriter<protobuf::ProfileInfo> responder_;
 };
 
-#endif //SERVER_DELETEFILECALLDATA_H
+
+#endif //SERVER_GETPROFILEINFOCALLDATA_H

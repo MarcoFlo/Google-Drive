@@ -16,9 +16,6 @@ public:
     explicit SplashScreen(QWidget *parent = nullptr);
     ~SplashScreen();
 
-signals:
-    void openL();
-
 private:
     Ui::SplashScreen *ui;
 

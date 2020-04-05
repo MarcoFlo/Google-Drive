@@ -2,12 +2,9 @@
 #define LOGINPAGE_H
 
 #include <QMainWindow>
-#include "principale.h"
-#include "registrationpage.h"
 #include <QtSql>
 #include <QtDebug>
 #include <QFileInfo>
-#include "splashscreen.h"
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
@@ -23,32 +20,19 @@ class LoginPage : public QMainWindow
 public:
     explicit LoginPage(QWidget *parent = nullptr);
     ~LoginPage();
+    void on_closeRReg_signal();
 
 signals:
-//    void closeR();    /* should be emitted by registration page */
-//    void closeP();    /* should be emitted by principale */
-//    void closeRReg();   /* should be emitted by principale */
+    void clientReturn(CharacterClient*);
+    void regRequest();
 
 private slots:
     void on_Login_clicked();
 
     void on_registrati_clicked();
 
-    void on_closeR_signal();
-
-    void on_closeP_signal();
-
-    void on_closeRReg_signal();
-
-    void closeSplash();
-
-    void on_logout_signal();
-
 private:
     Ui::LoginPage *ui;
-    RegistrationPage *r;
-    Principale *p;
-    SplashScreen *splash;
     CharacterClient *client_;
     QString token;
 };

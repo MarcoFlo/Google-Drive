@@ -2,6 +2,7 @@
 #include "ui_condividi.h"
 #include <QKeyEvent>
 #include <QProcess>
+#include <QtWidgets/QMessageBox>
 
 Condividi::Condividi(QWidget *parent) :
     QDialog(parent),
@@ -26,5 +27,18 @@ void Condividi::on_copia_clicked()
 {
     ui->url->selectAll();
     ui->url->copy();
+}
+
+void Condividi::on_conferma_clicked()
+{
+    QString people=ui->condividiB->text();
+    if(people == "")
+    {
+        QMessageBox::warning(this, "Condivisione", "Inserire dei nomi utente");
+    } else
+    {
+        emit share(people);
+        hide();
+    }
 
 }

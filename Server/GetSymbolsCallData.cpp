@@ -22,7 +22,7 @@ GetSymbolsCallData::HandleSubscribedCall(
     }
 
     if (!ok) {
-        std::cout << "finish" << std::endl;
+        std::cout << "finish getSymbols" << std::endl;
         responder_.Finish(grpc::Status::OK, this);
         status_ = FINISH;
         return;
@@ -46,7 +46,7 @@ GetSymbolsCallData::HandleSubscribedCall(
             std::find(request_.usernamesal().begin(), request_.usernamesal().end(), principal) !=
             request_.usernamesal().end()) {
             //authorized
-            subscribedClientMap[request_.identifier()].push_back(this);
+            subscribedClientMap[request_.fileidentifier()].push_back(this);
         } else {
             status_ = FINISH;
             responder_.Finish(grpc::Status(grpc::StatusCode::PERMISSION_DENIED,
@@ -57,6 +57,7 @@ GetSymbolsCallData::HandleSubscribedCall(
 }
 
 void GetSymbolsCallData::HandleSymbol(const protobuf::Message &message) {
+    std::cout << "Write message back to subscribed clients " << std::endl;
     responder_.Write(message, this);
 }
 

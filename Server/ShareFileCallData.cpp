@@ -27,16 +27,16 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        std::string fileIdentifier = request_.identifier();
+        std::string fileIdentifier = request_.fileidentifier();
         protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
         auto fileToBeShared = std::find_if(fileList->mutable_fileil()->begin(), fileList->mutable_fileil()->end(),
                                            [&fileIdentifier](protobuf::FileInfo &file) {
-                                               return file.identifier() == fileIdentifier;
+                                               return file.fileidentifier() == fileIdentifier;
                                            });
 
         if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if (fileToBeShared->usernameo() == request_.usernameo()) {
+            if (fileToBeShared->usernameo() == principal) {
                 //se ha l'autorizzazione
                 const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();

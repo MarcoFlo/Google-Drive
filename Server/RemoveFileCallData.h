@@ -1,15 +1,13 @@
-#ifndef SERVER_INSERTSYMBOLSCALLDATA_H
-#define SERVER_INSERTSYMBOLSCALLDATA_H
+#ifndef SERVER_REMOVEFILECALLDATA_H
+#define SERVER_REMOVEFILECALLDATA_H
 
-#include "AbstractFileSubscribedCallData.h"
+#include "AbstractFileCallData.h"
 
-class InsertSymbolsCallData final : public AbstractFileSubscribedCallData {
+class RemoveFileCallData final : public AbstractFileCallData {
 public:
-    InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
+    RemoveFileCallData(protobuf::CharacterService::AsyncService *service, grpc::ServerCompletionQueue *cq);
 
-    void HandleFileSubscribedCall(protobuf::FileClientMap &fileClientMap,
-                                  std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap,
-                                  bool ok) override;
+    void HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) override;
 
 private:
 
@@ -24,13 +22,13 @@ private:
     grpc::ServerContext ctx_;
 
 // What we get from the client.
-    protobuf::Message request_;
+    protobuf::FileInfo request_;
 // What we send back to the client.
     protobuf::Empty reply_;
 
 // The means to get back to the client.
     grpc::ServerAsyncResponseWriter<protobuf::Empty> responder_;
+
 };
 
-
-#endif //SERVER_INSERTSYMBOLSCALLDATA_H
+#endif //SERVER_REMOVEFILECALLDATA_H

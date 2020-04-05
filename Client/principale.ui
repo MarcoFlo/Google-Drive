@@ -193,5 +193,22 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>cercaBarra</sender>
+   <signal>returnPressed()</signal>
+   <receiver>cerca</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>661</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>718</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

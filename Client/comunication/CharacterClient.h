@@ -1,6 +1,7 @@
 #ifndef CLIENT_CHARACTERCLIENT_H
 #define CLIENT_CHARACTERCLIENT_H
 
+#include "Symbol.h"
 #include "AsyncClientGetSymbols.h"
 
 
@@ -8,7 +9,9 @@ class CharacterClient {
 public:
     explicit CharacterClient();
 
-    void AsyncCompleteRpc();
+    virtual ~CharacterClient();
+
+    void AsyncCompleteRpc(CharacterClient *pClient);
 
     std::string Register(protobuf::User &user);
 
@@ -16,14 +19,29 @@ public:
 
     std::string Logout();
 
+    std::string InsertFile(const protobuf::FileName &fileName);
+
+    std::string RemoveFile(const protobuf::FileInfo &fileInfo);
+
+    std::string GetFiles();
+
     std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
 
-    std::string GetFileContent(protobuf::FileInfo fileInfo);
+    std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
-    AsyncClientGetSymbols *GetSymbols(const std::string &fileUniqueId);
+    void GetSymbols(const protobuf::FileInfo &fileInfo);
 
-    std::string getToken();
+    std::string InsertSymbols(Symbol &symbol, bool isErase);
 
+    protobuf::FilesInfoList getFileInfoList();
+
+    protobuf::SymbolVector getSymbolVector();
+
+    std::string getUsername();
+
+    std::list<int> searchFileInfo(std::string);
+
+    protobuf::FileInfo getFileInfo(std::string);
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
@@ -32,9 +50,13 @@ private:
     grpc::CompletionQueue cq_;
 
     std::string token_;
+    std::string currentFileIdentifier_;
+    protobuf::FilesInfoList lastFileInfoList_;
+    std::string username_;
 
     //current opened file
     protobuf::SymbolVector symbolVector_;
+    std::thread thread_;
 
 };
 

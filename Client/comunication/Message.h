@@ -9,10 +9,11 @@
 #include "Symbol.h"
 
 class Message {
-    Symbol symbol;
-    bool isEraseBool;
+    std::string file_identifier_;
+    Symbol symbol_;
+    bool isEraseBool_;
 public:
-    Message(Symbol &symbol, bool isErase);
+    Message(std::string &file_identifier, Symbol &symbol, bool isErase);
     protobuf::Message makeProtobufMessage();
 
     const Symbol &getSymbol() const;

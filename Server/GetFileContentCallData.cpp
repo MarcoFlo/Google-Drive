@@ -39,11 +39,11 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
                                         fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
                                         [&messageReceived](protobuf::FileInfo &file) {
-                                            return messageReceived.identifier() == file.identifier();
+                                            return messageReceived.fileidentifier() == file.fileidentifier();
                                         });
             if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 status_ = WRITE;
-                std::ifstream input("fileContainer/" + (*fileGet).identifier(),
+                std::ifstream input("fileContainer/" + (*fileGet).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
 

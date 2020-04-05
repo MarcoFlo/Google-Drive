@@ -2,9 +2,12 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <thread>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "AsyncClientGetSymbols.h"
+#include "Symbol.h"
+#include "Message.h"
 #include "CharacterClient.h"
 
 
@@ -27,7 +30,29 @@ CharacterClient::CharacterClient() {
     auto channel_creds = grpc::SslCredentials(opts);
 
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
+
+    //per gestire i simboli che ci arrivano dal server
+    thread_ = std::thread([this] { this->AsyncCompleteRpc(this); });
+
 }
+
+CharacterClient::~CharacterClient() {
+    if (thread_.joinable())
+        thread_.join();
+}
+
+void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
+    void *got_tag;
+    bool ok = false;
+
+    // Block until the next result is available in the completion queue "cq".
+    while (pClient->cq_.Next(&got_tag, &ok)) {
+        auto *call = static_cast<AsyncClientCall *>(got_tag);
+        call->HandleAsync(ok);
+
+    }
+}
+
 
 std::string CharacterClient::Register(protobuf::User &user) {
     grpc::ClientContext context;
@@ -35,16 +60,13 @@ std::string CharacterClient::Register(protobuf::User &user) {
     context.AddMetadata("password", user.password());
     context.AddMetadata("passwordr", user.passwordr());
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
-
     status = stub_->Register(&context, user, &reply);
 
     if (status.ok()) {
         std::cout << "Register rpc was successful" << std::endl;
         return "";
-    }
-    else {
+    } else {
         std::cout << "Register rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
         return status.error_message();
     }
@@ -55,9 +77,8 @@ std::string CharacterClient::Login(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
-
+    username_=user.username();
     protobuf::Identifier reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->Login(&context, user, &reply);
@@ -80,7 +101,6 @@ std::string CharacterClient::Logout() {
     protobuf::Empty request;
 
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->Logout(&context, request, &reply);
@@ -94,16 +114,74 @@ std::string CharacterClient::Logout() {
     }
 }
 
+std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+
+    protobuf::FileInfo reply;
+    grpc::Status status;
+
+    status = stub_->InsertFile(&context, request, &reply);
+
+    if (status.ok()) {
+        std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
+        currentFileIdentifier_ = reply.fileidentifier();
+        // todo capire se rimuovere
+        GetSymbols(reply);
+        return reply.fileidentifier();
+    } else {
+        std::cout << "Insert file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
+std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty reply;
+    grpc::Status status;
+
+    status = stub_->RemoveFile(&context, fileInfo, &reply);
+
+    if (status.ok()) {
+        std::cout << "Remove file rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Remove file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
+//Il risultato viene depositato in lastFileInfoList per poter restituire il messaggio d'errore
+std::string CharacterClient::GetFiles() {
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty request;
+    grpc::Status status;
+
+    status = stub_->GetFiles(&context, request, &lastFileInfoList_);
+
+    if (status.ok()) {
+        std::cout << "Get files rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Get files rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
 std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string &usernameShare) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
     context.AddMetadata("usernameshare", usernameShare);
 
     protobuf::FileInfo request;
-    request.set_identifier(fileIdentifier);
+    request.set_fileidentifier(fileIdentifier);
 
     protobuf::Empty reply;
-    grpc::CompletionQueue cq;
     grpc::Status status;
 
     status = stub_->ShareFile(&context, request, &reply);
@@ -118,7 +196,7 @@ std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string 
     }
 }
 
-std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
+std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
 
@@ -138,6 +216,8 @@ std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
 
     if (status.ok()) {
         std::cout << "Get file rpc was successful" << std::endl;
+        currentFileIdentifier_ = fileInfo.fileidentifier();
+        GetSymbols(fileInfo);
         return "";
 
     } else {
@@ -147,34 +227,73 @@ std::string CharacterClient::GetFileContent(protobuf::FileInfo fileInfo) {
 }
 
 
-AsyncClientGetSymbols *CharacterClient::GetSymbols(const std::string &fileUniqueId) {
-    protobuf::FileInfo request;
-    request.set_filename(fileUniqueId);
-    return new AsyncClientGetSymbols(request, token_, cq_, stub_);
+void CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
+    new AsyncClientGetSymbols(fileInfo, token_, cq_, stub_);
 }
 
 
-void CharacterClient::AsyncCompleteRpc() {
-    void *got_tag;
-    bool ok = false;
+std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
+    // si sta provando a inserire prima che il file sia aperto correttamente
+    if (currentFileIdentifier_.empty())
+        return "";
 
-    // Block until the next result is available in the completion queue "cq".
-    while (cq_.Next(&got_tag, &ok)) {
-        AsyncClientCall *call = static_cast<AsyncClientCall *>(got_tag);
-        call->HandleAsync(ok);
+    grpc::ClientContext context;
+    context.AddMetadata("token", token_);
+
+    protobuf::Empty reply;
+    grpc::Status status;
+
+    Message message(currentFileIdentifier_, symbol, isErase);
+
+    status = stub_->InsertSymbols(&context, message.makeProtobufMessage(), &reply);
+
+
+    if (status.ok()) {
+        std::cout << "Insert symbols rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Insert symbols rpc failed: " << status.error_code() << ": " << status.error_message()
+                  << std::endl;
+        return status.error_message();
     }
-
-
 }
 
-std::string CharacterClient::getToken() {
-    return token_;
+protobuf::FilesInfoList CharacterClient::getFileInfoList() {
+    return lastFileInfoList_;
 }
 
+protobuf::SymbolVector CharacterClient::getSymbolVector() {
+    return symbolVector_;
+}
 
+std::string CharacterClient::getUsername() {
+    return username_;
+}
 
+std::list<int> CharacterClient::searchFileInfo(std::string name) {
+    int i=0;
+    std::list<int> *searchList = new std::list<int>;
 
+    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
+    {
+        if(lastFileInfoList_.fileil(i).filename().find(name) != std::string::npos)
+        {
+            searchList->push_back(i);
+        }
+    }
+    return *searchList;
+}
 
+protobuf::FileInfo CharacterClient::getFileInfo(std::string id) {
+    int i=0;
 
+    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
+    {
+        if(lastFileInfoList_.fileil(i).fileidentifier() == id)
+        {
+            return lastFileInfoList_.fileil(i);
+        }
+    }
+}
 
 

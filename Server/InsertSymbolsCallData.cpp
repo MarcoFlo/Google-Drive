@@ -11,8 +11,7 @@ InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncSe
                                              grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
                                                                                 responder_(&ctx_) {
     status_ = PROCESS;
-    service_->RequestInsertSymbols(&ctx_, &responder_, cq_, cq_,
-                                   this);
+    service_->RequestInsertSymbols(&ctx_, &request_, &responder_, cq_, cq_, this);
 }
 
 void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fileClientMap,
@@ -24,20 +23,18 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
     }
 
     if (!ok) {
-        std::cout << "finish" << std::endl;
+        std::cout << "finish insertSymbols -> !ok" << std::endl;
 //        responder_.Finish(&reply_, grpc::Status::OK, this);
         status_ = FINISH;
         return;
     }
 
     if (status_ == PROCESS) {
-        status_ = READ;
+        std::cout << "InsertSymbols request" << std::endl;
+
         new InsertSymbolsCallData(service_, cq_);
-    } else if (status_ == READ) {
-        status_ = READ_CALLED;
-        responder_.Read(&request_, this);
-    } else if (status_ == READ_CALLED) {
-        status_ = READ;
+        status_ = FINISH;
+
         protobuf::Message messageReceived = request_;
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
@@ -45,7 +42,7 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
         auto fileInsert = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
                                        fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end(),
                                        [&messageReceived](protobuf::FileInfo &file) {
-                                           return messageReceived.fileinfo().identifier() == file.identifier();
+                                           return messageReceived.fileidentifier() == file.fileidentifier();
                                        });
 
         if (fileInsert != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
@@ -53,17 +50,18 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
             symbolVector.mutable_symbolvector()->Add(std::move(symbol));
-            std::ofstream output("fileContainer/" + request_.fileinfo().identifier(),
+            std::ofstream output("fileContainer/" + request_.fileidentifier(),
                                  std::ios::out | std::ios::app | std::ios_base::binary);
             symbolVector.SerializeToOstream(&output);
             output.close();
 
             std::for_each(
-                    subscribedClientMap.at(request_.fileinfo().identifier()).begin(),
-                    subscribedClientMap.at(request_.fileinfo().identifier()).end(),
+                    subscribedClientMap.at(request_.fileidentifier()).begin(),
+                    subscribedClientMap.at(request_.fileidentifier()).end(),
                     [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
                         dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
                     });
+            responder_.Finish(reply_, grpc::Status::OK, this);
         } else {
             status_ = FINISH;
             responder_.Finish(reply_, grpc::Status(grpc::StatusCode::NOT_FOUND, "File non presente"), this);

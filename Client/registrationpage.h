@@ -2,7 +2,11 @@
 #define REGISTRATIONPAGE_H
 
 #include <QMainWindow>
-#include "principale.h"
+#include <QMessageBox>
+#include <messageP.pb.h>
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
 
 namespace Ui {
 class RegistrationPage;
@@ -13,7 +17,7 @@ class RegistrationPage : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit RegistrationPage(QWidget *parent = nullptr, CharacterClient *client = nullptr);
+    explicit RegistrationPage(QWidget *parent = nullptr);
     ~RegistrationPage();
 
 signals:
