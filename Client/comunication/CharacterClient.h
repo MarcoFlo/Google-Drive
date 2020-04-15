@@ -25,7 +25,7 @@ public:
 
     std::string GetFiles();
 
-    std::string ShareFile(std::string &fileIdentifier, std::string &usernameShare);
+    std::string ShareFile(const std::string &fileIdentifier, const std::string &usernameShare);
 
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
@@ -42,6 +42,7 @@ public:
     std::list<int> searchFileInfo(std::string);
 
     protobuf::FileInfo getFileInfo(std::string);
+
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
