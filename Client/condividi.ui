@@ -6,166 +6,222 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>386</width>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>20</y>
-     <width>191</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>CONDIVIDI</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>70</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Link:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>140</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Condividi con:</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="condividiB">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>170</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>90</y>
-     <width>241</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
-    <property name="spacing">
-     <number>25</number>
-    </property>
-    <item>
-     <widget class="QLineEdit" name="url">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="cursor">
-       <cursorShape>ArrowCursor</cursorShape>
-      </property>
-      <property name="mouseTracking">
-       <bool>false</bool>
-      </property>
-      <property name="autoFillBackground">
-       <bool>false</bool>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: transparent;</string>
-      </property>
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="text">
-       <string>Qua ci sarà il link</string>
-      </property>
-      <property name="frame">
-       <bool>false</bool>
-      </property>
-      <property name="echoMode">
-       <enum>QLineEdit::Normal</enum>
-      </property>
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="copia">
-      <property name="text">
-       <string>Copia</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>250</y>
-     <width>338</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <property name="spacing">
-     <number>150</number>
-    </property>
-    <item>
-     <widget class="QPushButton" name="annulla">
-      <property name="text">
-       <string>Annulla</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="conferma">
-      <property name="text">
-       <string>Conferma</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(14,34,56)</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #dfe6e9;
+font-size: 20px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+     </property>
+     <property name="text">
+      <string>CONDIVIDI</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <property name="leftMargin">
+      <number>32</number>
+     </property>
+     <property name="rightMargin">
+      <number>32</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="url">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Calibri</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#dfe6e9;
+border: 1px #dfe6e9;
+</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="text">
+        <string>Qua ci sarà il link</string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="copia">
+       <property name="styleSheet">
+        <string notr="true">color: #dfe6e9;
+font-size: 12px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+       </property>
+       <property name="text">
+        <string>Copia</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>32</number>
+     </property>
+     <property name="topMargin">
+      <number>7</number>
+     </property>
+     <property name="rightMargin">
+      <number>32</number>
+     </property>
+     <property name="bottomMargin">
+      <number>13</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">color: #dfe6e9;
+font-size: 15px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+       </property>
+       <property name="text">
+        <string>Condividi con:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="condividiB">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#dfe6e9;
+border: 1px #dfe6e9;
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>120</number>
+     </property>
+     <property name="leftMargin">
+      <number>32</number>
+     </property>
+     <property name="rightMargin">
+      <number>32</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="annulla">
+       <property name="styleSheet">
+        <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+       </property>
+       <property name="text">
+        <string>Annulla</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="conferma">
+       <property name="styleSheet">
+        <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+       </property>
+       <property name="text">
+        <string>Conferma</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <tabstops>
-  <tabstop>condividiB</tabstop>
   <tabstop>conferma</tabstop>
   <tabstop>copia</tabstop>
   <tabstop>annulla</tabstop>

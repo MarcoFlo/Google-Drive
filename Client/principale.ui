@@ -6,12 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
-    <height>430</height>
+    <width>817</width>
+    <height>413</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>815</width>
+    <height>400</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(14,34,56)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -26,7 +35,7 @@
      <height>0</height>
     </size>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,1">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
     <property name="spacing">
      <number>15</number>
     </property>
@@ -83,8 +92,20 @@
       </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>13</number>
+        </property>
         <item>
          <widget class="QPushButton" name="nuovo">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+          </property>
           <property name="text">
            <string>Nuovo</string>
           </property>
@@ -92,6 +113,15 @@
         </item>
         <item>
          <widget class="QPushButton" name="elimina">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+          </property>
           <property name="text">
            <string>Elimina</string>
           </property>
@@ -99,6 +129,15 @@
         </item>
         <item>
          <widget class="QPushButton" name="scarica">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+          </property>
           <property name="text">
            <string>Scarica</string>
           </property>
@@ -106,6 +145,15 @@
         </item>
         <item>
          <widget class="QPushButton" name="condividi">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+          </property>
           <property name="text">
            <string>Condividi</string>
           </property>
@@ -113,6 +161,15 @@
         </item>
         <item>
          <widget class="QPushButton" name="importa">
+          <property name="styleSheet">
+           <string notr="true">border-radius: 15px;
+background-color: rgb(26,65,108);
+padding: 6px;
+color: #dfe6e9;
+border: none;
+font-size: 15px;
+font-family: 'Calibri'</string>
+          </property>
           <property name="text">
            <string>Importa</string>
           </property>
@@ -125,23 +182,70 @@
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>40</width>
-          <height>20</height>
+          <width>98</width>
+          <height>16</height>
          </size>
         </property>
        </spacer>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>30</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
         <item>
-         <widget class="QLineEdit" name="cercaBarra"/>
+         <widget class="QLineEdit" name="cercaBarra">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>16</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:#dfe6e9;
+border: 1px #dfe6e9;
+</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="cerca">
+          <property name="styleSheet">
+           <string notr="true">color: #dfe6e9;
+font-size: 12px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+          </property>
           <property name="text">
-           <string>Cerca</string>
+           <string>Annulla</string>
           </property>
          </widget>
         </item>
@@ -151,20 +255,54 @@
     </item>
     <item>
      <widget class="QSplitter" name="barra3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QTableWidget" name="lista"/>
       <widget class="QGroupBox" name="info">
+       <property name="maximumSize">
+        <size>
+         <width>220</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #dfe6e9;
+font-size: 15px #dfe6e9;
+font-family: 'Calibri';
+background-color:none</string>
+       </property>
        <property name="title">
         <string>Info</string>
        </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="topMargin">
+         <number>8</number>
+        </property>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+         </layout>
         </item>
         <item>
          <widget class="QLabel" name="data">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <property name="text">
            <string>Data</string>
           </property>
