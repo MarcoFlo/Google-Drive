@@ -12,6 +12,7 @@ Principale::Principale(QWidget *parent) :
     ui->setupUi(this);
     showSplash();
     setupUI();
+    //Principale->setStyleSheet("QPushButton { background-color: yellow }");
 }
 
 Principale::~Principale()
@@ -31,26 +32,56 @@ void Principale::setupUI()
     auto *accountV = new QVBoxLayout(accountM);
     accountM->setLayout(accountV);
     accountV->setAlignment(Qt::AlignCenter);
+    accountM->setStyleSheet("background-color: #0a3d62;"
+                                      "border: 1px solid white;"
+                                      "padding: 10px;");
 
-    auto *icona = new QLabel(accountM);
+    /*auto *icona = new QLabel(accountM);
     icona->setAlignment(Qt::AlignCenter);
+    icona->setStyleSheet("border-radius: 12px;"
+                                   "border: 1px white;"
+                                   "padding: 10px;");*/
 
     auto *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
     nome->setText("nome");
+    nome->setStyleSheet("color: #dfe6e9;"
+                                  "font-size: 15px;"
+                                  "border: none;"
+                                  "padding: 5px;"
+                                  "font-family: 'Calibri';");
     accountV->addWidget(nome);
 
     auto *mail = new QLabel(accountM);
     mail->setAlignment(Qt::AlignCenter);
     mail->setText("mail");
+    mail->setStyleSheet("color: #dfe6e9;"
+                        "font-size: 15px;"
+                        "border: none;"
+                        "padding: 5px;"
+                        "font-family: 'Calibri';");
     accountV->addWidget(mail);
 
     auto *modifica = new QPushButton(accountM);
     modifica->setText("Impostazioni utente");
+    modifica->setStyleSheet("border-radius: 12px;"
+                            "background-color: #3c6382;"
+                            "padding: 6px;"
+                            "color: #dfe6e9;"
+                            "border: none;"
+                            "font-size: 15px;"
+                            "font-family: 'Calibri';");
     accountV->addWidget(modifica);
 
     auto *logout = new QPushButton(accountM);
     logout->setText("Logout");
+    logout->setStyleSheet("border-radius: 12px;"
+                            "background-color: #3c6382;"
+                            "padding: 6px;"
+                            "color: #dfe6e9;"
+                            "border: none;"
+                            "font-size: 15px;"
+                            "font-family: 'Calibri';");
     accountV->addWidget(logout);
 
     QObject::connect(modifica, SIGNAL(clicked()), this, SLOT(on_impostazioni_clicked()));
@@ -58,6 +89,7 @@ void Principale::setupUI()
     QObject::connect(ui->lista->selectionModel(), SIGNAL(selectionChanged(const QItemSelection &, const QItemSelection &)), this, SLOT(on_row_select()));
 
     auto *account = new QToolButton(this);
+    account->setStyleSheet("::menu-indicator {image: none;}");
 
     auto *icon = new QIcon(":/images/img/logo.png");
     account->setIcon(*icon);
@@ -65,10 +97,56 @@ void Principale::setupUI()
     account->setPopupMode(QToolButton::InstantPopup);
 
     ui->horizontalLayout->insertWidget(3, account);
+    
+     ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
+                                "                               background-color: #8395a7;"
+                                "                               padding: 6px;"
+                                "                               color: #dfe6e9;"
+                                "                               border: none;"
+                                "                               font-size: 15px;"
+                                "                               font-family: 'Calibri';}");
 
-    ui->elimina->setDisabled(true);
+
+
+    ui->condividi->setStyleSheet("::disabled {border-radius: 12px;"
+                               "                               background-color: #8395a7;"
+                               "                               padding: 6px;"
+                               "                               color: #dfe6e9;"
+                               "                               border: none;"
+                               "                               font-size: 15px;"
+                               "                               font-family: 'Calibri';}");
+
+
+    ui->scarica->setStyleSheet("::disabled {border-radius: 12px;"
+                               "                               background-color: #8395a7;"
+                               "                               padding: 6px;"
+                               "                               color: #dfe6e9;"
+                               "                               border: none;"
+                               "                               font-size: 15px;"
+                               "                               font-family: 'Calibri';}");
+
+
+    ui->nuovo->setStyleSheet("::disabled {border-radius: 12px;"
+                               "                               background-color: #8395a7;"
+                               "                               padding: 6px;"
+                               "                               color: #dfe6e9;"
+                               "                               border: none;"
+                               "                               font-size: 15px;"
+                               "                               font-family: 'Calibri';}");
+
+
+    ui->importa->setStyleSheet("::disabled {border-radius: 12px;"
+                               "                               background-color: #8395a7;"
+                               "                               padding: 6px;"
+                               "                               color: #dfe6e9;"
+                               "                               border: none;"
+                               "                               font-size: 15px;"
+                               "                               font-family: 'Calibri';}");
+
+    /*ui->elimina->setDisabled(true);
     ui->condividi->setDisabled(true);
-    ui->scarica->setDisabled(true);
+    ui->scarica->setDisabled(true);*/
+
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;
     etichette << "#" << "Nome file" << "Data creazione" << "Proprietario" << "Ultima modifica";
