@@ -10,16 +10,29 @@
     <height>309</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>LoginPage</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(14,34,56)</string>
+   <string notr="true">background-color: rgb(243, 249, 225);
+border-color:10px solid black;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
     <item>
      <widget class="QLabel" name="logo">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color:none</string>
       </property>
@@ -94,7 +107,7 @@ background-color:none;</string>
          <item row="0" column="0">
           <widget class="QLabel" name="Email">
            <property name="styleSheet">
-            <string notr="true">color: #dfe6e9;
+            <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -127,8 +140,9 @@ background-color:none</string>
             <bool>false</bool>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
+            <string notr="true">border:1px solid #3a848a;
+color: #3a848a;
+
 
 </string>
            </property>
@@ -143,7 +157,7 @@ border: 1px #dfe6e9;
          <item row="1" column="0">
           <widget class="QLabel" name="Password">
            <property name="styleSheet">
-            <string notr="true">color: #dfe6e9;
+            <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -173,10 +187,8 @@ background-color:none</string>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
-
-</string>
+            <string notr="true">border:1px solid #3a848a;
+color: #3a848a;</string>
            </property>
            <property name="text">
             <string/>
@@ -214,9 +226,9 @@ border: 1px #dfe6e9;
               <colorrole role="WindowText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -232,18 +244,18 @@ border: 1px #dfe6e9;
               <colorrole role="Text">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
               <colorrole role="ButtonText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -265,12 +277,30 @@ border: 1px #dfe6e9;
                 </color>
                </brush>
               </colorrole>
+              <colorrole role="Highlight">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="PlaceholderText">
                <brush brushstyle="NoBrush">
                 <color alpha="128">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -279,9 +309,9 @@ border: 1px #dfe6e9;
               <colorrole role="WindowText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -297,18 +327,18 @@ border: 1px #dfe6e9;
               <colorrole role="Text">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
               <colorrole role="ButtonText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -330,12 +360,30 @@ border: 1px #dfe6e9;
                 </color>
                </brush>
               </colorrole>
+              <colorrole role="Highlight">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="PlaceholderText">
                <brush brushstyle="NoBrush">
                 <color alpha="128">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -344,9 +392,9 @@ border: 1px #dfe6e9;
               <colorrole role="WindowText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -362,18 +410,18 @@ border: 1px #dfe6e9;
               <colorrole role="Text">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
               <colorrole role="ButtonText">
                <brush brushstyle="SolidPattern">
                 <color alpha="255">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
@@ -395,26 +443,60 @@ border: 1px #dfe6e9;
                 </color>
                </brush>
               </colorrole>
+              <colorrole role="Highlight">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
               <colorrole role="PlaceholderText">
                <brush brushstyle="NoBrush">
                 <color alpha="128">
-                 <red>223</red>
-                 <green>230</green>
-                 <blue>233</blue>
+                 <red>58</red>
+                 <green>132</green>
+                 <blue>138</blue>
                 </color>
                </brush>
               </colorrole>
              </disabled>
             </palette>
            </property>
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
            <property name="styleSheet">
-            <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+            <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;
+
+selection-color: rgb(255, 255, 255);
+selection-background-color:#3a848a ;
+
+highlight-background-color: #3a848a;</string>
            </property>
            <property name="text">
             <string>Login</string>
@@ -425,18 +507,35 @@ font-family: 'Calibri'</string>
            <property name="checked">
             <bool>false</bool>
            </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="registrati">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="styleSheet">
-            <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+            <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;
+
+selection-color: rgb(255, 255, 255);
+selection-background-color:#3a848a ;</string>
            </property>
            <property name="text">
             <string>Registrati</string>

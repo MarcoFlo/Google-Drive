@@ -20,7 +20,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(14,34,56)</string>
+   <string notr="true">background-color: rgb(243, 249, 225);
+border-color:10px solid black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -55,6 +56,9 @@
       </property>
       <item>
        <widget class="QLabel" name="icona">
+        <property name="styleSheet">
+         <string notr="true">background-colo:none;</string>
+        </property>
         <property name="text">
          <string>icona</string>
         </property>
@@ -99,12 +103,13 @@
          <widget class="QPushButton" name="nuovo">
           <property name="styleSheet">
            <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
           </property>
           <property name="text">
            <string>Nuovo</string>
@@ -113,14 +118,19 @@ font-family: 'Calibri'</string>
         </item>
         <item>
          <widget class="QPushButton" name="elimina">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="styleSheet">
-           <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+           <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;
+
+disabled-border-color: solid grey;</string>
           </property>
           <property name="text">
            <string>Elimina</string>
@@ -130,13 +140,13 @@ font-family: 'Calibri'</string>
         <item>
          <widget class="QPushButton" name="scarica">
           <property name="styleSheet">
-           <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+           <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
           </property>
           <property name="text">
            <string>Scarica</string>
@@ -146,13 +156,13 @@ font-family: 'Calibri'</string>
         <item>
          <widget class="QPushButton" name="condividi">
           <property name="styleSheet">
-           <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+           <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
           </property>
           <property name="text">
            <string>Condividi</string>
@@ -162,13 +172,13 @@ font-family: 'Calibri'</string>
         <item>
          <widget class="QPushButton" name="importa">
           <property name="styleSheet">
-           <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+           <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
           </property>
           <property name="text">
            <string>Importa</string>
@@ -228,8 +238,9 @@ font-family: 'Calibri'</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
+           <string notr="true">border:1px solid #3a848a;
+color: #3a848a;
+background-color:none;
 </string>
           </property>
          </widget>
@@ -237,9 +248,9 @@ border: 1px #dfe6e9;
         <item>
          <widget class="QPushButton" name="cerca">
           <property name="styleSheet">
-           <string notr="true">color: #dfe6e9;
+           <string notr="true">color: #3a848a;
 font-size: 12px;
-border: none;
+border: 1px solid #3a848a;
 padding: 5px;
 font-family: 'Calibri';
 background-color:none</string>
@@ -261,10 +272,30 @@ background-color:none</string>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:none;</string>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QTableWidget" name="lista"/>
+      <widget class="QTableWidget" name="lista">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:none;
+border: 2px solid #336b8a;
+font-family:'Calibri';
+font-size:12px;
+font-color:#336b8a;</string>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+       </property>
+      </widget>
       <widget class="QGroupBox" name="info">
        <property name="maximumSize">
         <size>
@@ -273,10 +304,13 @@ background-color:none</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: #dfe6e9;
-font-size: 15px #dfe6e9;
+        <string notr="true">color: #336b8a;
+font-color: #336b8a;
+font-size: 15px;
 font-family: 'Calibri';
-background-color:none</string>
+background-color:none;
+
+</string>
        </property>
        <property name="title">
         <string>Info</string>
@@ -310,6 +344,9 @@ background-color:none</string>
         </item>
         <item>
          <widget class="QLabel" name="dataMod">
+          <property name="styleSheet">
+           <string notr="true">color:#336b8a</string>
+          </property>
           <property name="text">
            <string>Data ultima modifica</string>
           </property>
@@ -328,7 +365,6 @@ background-color:none</string>
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections>

@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(14,34,56)</string>
+   <string notr="true">background-color: rgb(243, 249, 225);
+border-color:10px solid black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -55,6 +56,12 @@ background-color: none</string>
            </property>
            <item>
             <widget class="QLabel" name="fotoprofilo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="maximumSize">
               <size>
                <width>100</width>
@@ -62,7 +69,8 @@ background-color: none</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:none</string>
+              <string notr="true">background-color:none;
+border: 1px solid #3a848a;</string>
              </property>
              <property name="text">
               <string/>
@@ -81,9 +89,9 @@ background-color: none</string>
            <item>
             <widget class="QPushButton" name="pushButton">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 12px;
-border: none;
+border: 1px solid #3a848a;
 padding: 5px;
 font-family: 'Calibri';
 background-color:none</string>
@@ -106,7 +114,7 @@ background-color:none</string>
            <item row="0" column="0">
             <widget class="QLabel" name="username">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -139,8 +147,8 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
+              <string notr="true">border:1px solid #3a848a;
+color: #3a848a;
 </string>
              </property>
             </widget>
@@ -148,7 +156,7 @@ border: 1px #dfe6e9;
            <item row="1" column="0">
             <widget class="QLabel" name="nome">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -175,8 +183,8 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
+              <string notr="true">border:1px solid #3a848a;
+color: #3a848a;
 </string>
              </property>
             </widget>
@@ -184,7 +192,7 @@ border: 1px #dfe6e9;
            <item row="2" column="0">
             <widget class="QLabel" name="email">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -211,16 +219,15 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
-</string>
+              <string notr="true">border:1px solid #3a848a;
+color: #3a848a;</string>
              </property>
             </widget>
            </item>
            <item row="3" column="0">
             <widget class="QLabel" name="password">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -247,16 +254,15 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
-</string>
+              <string notr="true">border:1px solid #3a848a;
+color: #3a848a;</string>
              </property>
             </widget>
            </item>
            <item row="4" column="0">
             <widget class="QLabel" name="password2">
              <property name="styleSheet">
-              <string notr="true">color: #dfe6e9;
+              <string notr="true">color: #3a848a;
 font-size: 15px;
 border: none;
 padding: 5px;
@@ -283,9 +289,8 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color:#dfe6e9;
-border: 1px #dfe6e9;
-</string>
+              <string notr="true">border:1px solid #3a848a;
+color: #3a848a;</string>
              </property>
             </widget>
            </item>
@@ -307,13 +312,13 @@ border: 1px #dfe6e9;
          <item>
           <widget class="QPushButton" name="registrati">
            <property name="styleSheet">
-            <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+            <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
            </property>
            <property name="text">
             <string>Registrati</string>
@@ -323,13 +328,13 @@ font-family: 'Calibri'</string>
          <item>
           <widget class="QPushButton" name="annulla">
            <property name="styleSheet">
-            <string notr="true">border-radius: 15px;
-background-color: rgb(26,65,108);
+            <string notr="true">background-color:none;
+border:2px solid #3a848a;
 padding: 6px;
-color: #dfe6e9;
-border: none;
+color: #3a848a;
 font-size: 15px;
-font-family: 'Calibri'</string>
+font-family: 'Calibri';
+border-radius: 15px;</string>
            </property>
            <property name="text">
             <string>Annulla</string>

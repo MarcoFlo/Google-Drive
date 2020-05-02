@@ -14,7 +14,9 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(14,34,56)</string>
+   <string notr="true">background-color:#3a848a;
+
+border: 1px solid #3a848a;</string>
   </property>
  </widget>
  <resources/>
