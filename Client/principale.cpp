@@ -97,8 +97,8 @@ void Principale::setupUI()
     account->setPopupMode(QToolButton::InstantPopup);
 
     ui->horizontalLayout->insertWidget(3, account);
-    
-     ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
+
+     /*ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
                                 "                               background-color: #8395a7;"
                                 "                               padding: 6px;"
                                 "                               color: #dfe6e9;"
@@ -141,14 +141,19 @@ void Principale::setupUI()
                                "                               color: #dfe6e9;"
                                "                               border: none;"
                                "                               font-size: 15px;"
-                               "                               font-family: 'Calibri';}");
+                               "                               font-family: 'Calibri';}");*/
 
-    /*ui->elimina->setDisabled(true);
+    ui->elimina->setDisabled(true);
     ui->condividi->setDisabled(true);
-    ui->scarica->setDisabled(true);*/
+    ui->scarica->setDisabled(true);
 
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;
+    ui->lista->setStyleSheet("background-color: #dfe6e9;"
+                             "color: #3c6382;"
+                             "font-family: 'Calibri';"
+                             "font-size: 12px;");
+    
     etichette << "#" << "Nome file" << "Data creazione" << "Proprietario" << "Ultima modifica";
     ui->lista->setColumnCount(5);
     ui->lista->setHorizontalHeaderLabels(etichette);
