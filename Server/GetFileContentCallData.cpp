@@ -49,12 +49,6 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
 
                 int vectorSize = symbolVector.ByteSize();
 
-                if (vectorSize == 0) {
-                    responder_.Finish(grpc::Status::OK, this);
-                    status_ = FINISH;
-                    return;
-                }
-
                 int averageSymbolSize =
                         (symbolVector.symbolvector(0).ByteSize() +
                          symbolVector.symbolvector(vectorSize / 2).ByteSize() +
