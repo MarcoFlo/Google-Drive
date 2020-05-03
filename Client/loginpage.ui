@@ -20,7 +20,7 @@
    <string>LoginPage</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(243, 249, 225);
+   <string notr="true">background-color: rgb(247, 247, 247);
 border-color:10px solid black;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -40,7 +40,7 @@ border-color:10px solid black;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/images/img/logo.png</pixmap>
+       <pixmap>:/images/img/logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -491,12 +491,7 @@ padding: 6px;
 color: #3a848a;
 font-size: 15px;
 font-family: 'Calibri';
-border-radius: 15px;
-
-selection-color: rgb(255, 255, 255);
-selection-background-color:#3a848a ;
-
-highlight-background-color: #3a848a;</string>
+border-radius: 15px;</string>
            </property>
            <property name="text">
             <string>Login</string>
@@ -532,10 +527,7 @@ padding: 6px;
 color: #3a848a;
 font-size: 15px;
 font-family: 'Calibri';
-border-radius: 15px;
-
-selection-color: rgb(255, 255, 255);
-selection-background-color:#3a848a ;</string>
+border-radius: 15px;</string>
            </property>
            <property name="text">
             <string>Registrati</string>

@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(243, 249, 225);
+   <string notr="true">background-color: rgb(247, 247, 247);
 border-color:10px solid black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -57,7 +57,7 @@ border-color:10px solid black;</string>
       <item>
        <widget class="QLabel" name="icona">
         <property name="styleSheet">
-         <string notr="true">background-colo:none;</string>
+         <string notr="true">background-color:none;</string>
         </property>
         <property name="text">
          <string>icona</string>
@@ -290,7 +290,7 @@ background-color:none</string>
 border: 2px solid #336b8a;
 font-family:'Calibri';
 font-size:12px;
-font-color:#336b8a;</string>
+color:#336b8a;</string>
        </property>
        <property name="sizeAdjustPolicy">
         <enum>QAbstractScrollArea::AdjustIgnored</enum>
@@ -305,7 +305,6 @@ font-color:#336b8a;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: #336b8a;
-font-color: #336b8a;
 font-size: 15px;
 font-family: 'Calibri';
 background-color:none;

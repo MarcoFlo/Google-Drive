@@ -143,9 +143,9 @@ void Principale::setupUI()
                                "                               font-size: 15px;"
                                "                               font-family: 'Calibri';}");*/
 
-    ui->elimina->setDisabled(true);
+    /*ui->elimina->setDisabled(true);
     ui->condividi->setDisabled(true);
-    ui->scarica->setDisabled(true);
+    ui->scarica->setDisabled(true);*/
 
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;

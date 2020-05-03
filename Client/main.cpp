@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 
     client.GetFiles();
     client.GetFileContent(client.getFileInfoList().fileil(0));
-    /*
+    */
 
     QApplication a(argc, argv);
     Principale main;
