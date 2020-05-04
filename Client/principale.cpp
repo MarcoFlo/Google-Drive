@@ -12,7 +12,7 @@ Principale::Principale(QWidget *parent) :
     ui->setupUi(this);
     showSplash();
     setupUI();
-    //Principale->setStyleSheet("QPushButton { background-color: yellow }");
+    this->setEnabled(FALSE);
 }
 
 Principale::~Principale()
@@ -28,6 +28,7 @@ void Principale::closeEvent( QCloseEvent* event )
 
 void Principale::setupUI()
 {
+
     auto *accountM = new QMenu();
     auto *accountV = new QVBoxLayout(accountM);
     accountM->setLayout(accountV);
@@ -98,7 +99,7 @@ void Principale::setupUI()
 
     ui->horizontalLayout->insertWidget(3, account);
 
-     /*ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
+     ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
                                 "                               background-color: #8395a7;"
                                 "                               padding: 6px;"
                                 "                               color: #dfe6e9;"
@@ -126,7 +127,7 @@ void Principale::setupUI()
                                "                               font-family: 'Calibri';}");
 
 
-    ui->nuovo->setStyleSheet("::disabled {border-radius: 12px;"
+    /*ui->nuovo->setStyleSheet("::disabled {border-radius: 12px;"
                                "                               background-color: #8395a7;"
                                "                               padding: 6px;"
                                "                               color: #dfe6e9;"
@@ -143,9 +144,9 @@ void Principale::setupUI()
                                "                               font-size: 15px;"
                                "                               font-family: 'Calibri';}");*/
 
-    /*ui->elimina->setDisabled(true);
+    ui->elimina->setDisabled(true);
     ui->condividi->setDisabled(true);
-    ui->scarica->setDisabled(true);*/
+    ui->scarica->setDisabled(true);
 
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;
@@ -386,6 +387,7 @@ void Principale::onLoginReturn(CharacterClient* cli)
     client_=cli;
     delete login;
     insertTab();
+    this->setEnabled(TRUE);
 }
 
 void Principale::onRegistrationRequest()

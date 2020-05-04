@@ -28,7 +28,6 @@ signals:
 
 private slots:
     void on_Login_clicked();
-
     void on_registrati_clicked();
 
 private:

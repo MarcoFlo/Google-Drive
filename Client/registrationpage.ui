@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>564</width>
-    <height>309</height>
+    <width>571</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,14 +15,14 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(247, 247, 247);
-border-color:10px solid black;</string>
+border-color:2px solid black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="styleSheet">
-       <string notr="true">border: none;
+       <string notr="true">border: 2px solid #336b8a;
 background-color: none</string>
       </property>
       <property name="title">
@@ -38,7 +38,10 @@ background-color: none</string>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <property name="spacing">
-          <number>28</number>
+          <number>18</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
          </property>
          <property name="topMargin">
           <number>14</number>
@@ -48,23 +51,38 @@ background-color: none</string>
            <property name="spacing">
             <number>0</number>
            </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
            <property name="topMargin">
             <number>19</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
            <property name="bottomMargin">
             <number>14</number>
            </property>
            <item>
             <widget class="QLabel" name="fotoprofilo">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="maximumSize">
+             <property name="minimumSize">
               <size>
                <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>210</width>
                <height>100</height>
               </size>
              </property>
@@ -74,9 +92,6 @@ border: 1px solid #3a848a;</string>
              </property>
              <property name="text">
               <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="images.qrc">:/images/img/logo.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -88,13 +103,40 @@ border: 1px solid #3a848a;</string>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>-1</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
              <property name="styleSheet">
-              <string notr="true">color: #3a848a;
-font-size: 12px;
-border: 1px solid #3a848a;
-padding: 5px;
-font-family: 'Calibri';
-background-color:none</string>
+              <string notr="true">QPushButton
+{
+	color: #3a848a;
+	font-size: 12px;
+	border: 1px solid #3a848a;
+	padding: 5px;
+	font-family: 'Calibri';
+	background-color:none;
+}
+QPushButton:hover
+{
+	border:2px solid #3a848a;
+}</string>
              </property>
              <property name="text">
               <string>Sfoglia</string>
@@ -106,10 +148,16 @@ background-color:none</string>
          <item>
           <layout class="QFormLayout" name="formLayout">
            <property name="horizontalSpacing">
-            <number>6</number>
+            <number>16</number>
            </property>
            <property name="verticalSpacing">
             <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
            <item row="0" column="0">
             <widget class="QLabel" name="username">
@@ -128,10 +176,22 @@ background-color:none</string>
            </item>
            <item row="0" column="1">
             <widget class="QLineEdit" name="usernameEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>600</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="sizeIncrement">
@@ -147,8 +207,18 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">border:1px solid #3a848a;
-color: #3a848a;
+              <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:pressed
+{
+	border:2px solid #3a848a;
+}
 </string>
              </property>
             </widget>
@@ -184,7 +254,7 @@ background-color:none</string>
              </property>
              <property name="styleSheet">
               <string notr="true">border:1px solid #3a848a;
-color: #3a848a;
+
 </string>
              </property>
             </widget>
@@ -220,7 +290,7 @@ background-color:none</string>
              </property>
              <property name="styleSheet">
               <string notr="true">border:1px solid #3a848a;
-color: #3a848a;</string>
+</string>
              </property>
             </widget>
            </item>
@@ -241,10 +311,22 @@ background-color:none</string>
            </item>
            <item row="3" column="1">
             <widget class="QLineEdit" name="passwordEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>100</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="font">
@@ -255,7 +337,10 @@ background-color:none</string>
              </property>
              <property name="styleSheet">
               <string notr="true">border:1px solid #3a848a;
-color: #3a848a;</string>
+</string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
              </property>
             </widget>
            </item>
@@ -290,11 +375,30 @@ background-color:none</string>
              </property>
              <property name="styleSheet">
               <string notr="true">border:1px solid #3a848a;
-color: #3a848a;</string>
+</string>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
              </property>
             </widget>
            </item>
           </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>
@@ -306,19 +410,42 @@ color: #3a848a;</string>
          <property name="leftMargin">
           <number>20</number>
          </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
          <property name="rightMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
           <number>20</number>
          </property>
          <item>
           <widget class="QPushButton" name="registrati">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color:none;
-border:2px solid #3a848a;
-padding: 6px;
-color: #3a848a;
-font-size: 15px;
-font-family: 'Calibri';
-border-radius: 15px;</string>
+            <string notr="true">QPushButton
+{
+	background-color:none;
+	border:2px solid #336b8a;
+	padding: 6px;
+	color: #336b8a;
+	font-size: 15px;
+	font-family: 'Calibri';
+	border-radius: 15px;
+}
+QPushButton:hover
+{
+	background-color: #336b8a;
+	color:white;
+}
+</string>
            </property>
            <property name="text">
             <string>Registrati</string>
@@ -327,14 +454,31 @@ border-radius: 15px;</string>
          </item>
          <item>
           <widget class="QPushButton" name="annulla">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color:none;
-border:2px solid #3a848a;
-padding: 6px;
-color: #3a848a;
-font-size: 15px;
-font-family: 'Calibri';
-border-radius: 15px;</string>
+            <string notr="true">QPushButton
+{
+	background-color:none;
+	border:2px solid #336b8a;
+	padding: 6px;
+	color: #336b8a;
+	font-size: 15px;
+	font-family: 'Calibri';
+	border-radius: 15px;
+}
+QPushButton:hover
+{
+	background-color: #336b8a;
+	color:white;
+}
+</string>
            </property>
            <property name="text">
             <string>Annulla</string>

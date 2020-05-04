@@ -12,6 +12,8 @@ LoginPage::LoginPage(QWidget *parent) :
     ui->regi->setVisible(false);
     ui->EmailEdit->setText("prova@test.it");
     ui->PasswordEdit->setText("1234");
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+
 }
 
 LoginPage::~LoginPage() {

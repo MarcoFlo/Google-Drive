@@ -7,6 +7,7 @@ RegistrationPage::RegistrationPage(QWidget *parent) :
 {
     ui->setupUi(this);
     client_=new CharacterClient();
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 }
 
 RegistrationPage::~RegistrationPage()
