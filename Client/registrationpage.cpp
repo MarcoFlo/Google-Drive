@@ -22,7 +22,7 @@ void RegistrationPage::on_annulla_clicked()
 
 void RegistrationPage::on_registrati_clicked()
 {
-    QString username = ui->usernameEdit->text();
+    QString username = ui->emailEdit->text();
     QString pass = ui->passwordEdit->text();
     QString pass2 = ui->password2Edit->text();
     protobuf::User userR;

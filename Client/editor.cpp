@@ -58,8 +58,8 @@ void Editor::setupGeneral() {
     setupSize();
     setupColor();
     ui->toolBar_2->insertSeparator(ui->actiongrassetto);
-    //readFile();
-   // QObject::connect(ui->txt, SIGNAL(textChanged()), this, SLOT(saveFile()));
+    readFile();
+    QObject::connect(ui->txt, SIGNAL(textChanged()), this, SLOT(saveFile()));
     on_txt_cursorPositionChanged();
 }
 
