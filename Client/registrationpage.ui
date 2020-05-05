@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(247, 247, 247);
+   <string notr="true">background-color: white;
 border-color:2px solid black;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -215,10 +215,11 @@ QLineEdit:hover
 {
 	border:2px solid #3a848a;
 }
-QLineEdit:pressed
+QLineEdit:focus
 {
 	border:2px solid #3a848a;
 }
+
 </string>
              </property>
             </widget>
@@ -253,8 +254,18 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">border:1px solid #3a848a;
-
+              <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
 </string>
              </property>
             </widget>
@@ -289,7 +300,18 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">border:1px solid #3a848a;
+              <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
 </string>
              </property>
             </widget>
@@ -336,7 +358,18 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">border:1px solid #3a848a;
+              <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
 </string>
              </property>
              <property name="echoMode">
@@ -374,7 +407,18 @@ background-color:none</string>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">border:1px solid #3a848a;
+              <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
 </string>
              </property>
              <property name="echoMode">

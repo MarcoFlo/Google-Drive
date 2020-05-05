@@ -150,14 +150,14 @@ void Principale::setupUI()
 
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;
-    ui->lista->setStyleSheet("background-color: #dfe6e9;"
+    /*ui->lista->setStyleSheet("background-color: #dfe6e9;"
                              "color: #3c6382;"
                              "font-family: 'Calibri';"
                              "font-size: 12px;");
     
     etichette << "#" << "Nome file" << "Data creazione" << "Proprietario" << "Ultima modifica";
     ui->lista->setColumnCount(5);
-    ui->lista->setHorizontalHeaderLabels(etichette);
+    ui->lista->setHorizontalHeaderLabels(etichette);*/
 
     connect(ui->lista, &QTableWidget::cellDoubleClicked, this, &Principale::cellDoubleClicked);
 
@@ -227,6 +227,7 @@ void Principale::on_logout_clicked()
                          SLOT(onLoginReturn(CharacterClient * )));
         QObject::connect(login, SIGNAL(regRequest()), this, SLOT(onRegistrationRequest()));
         login->show();
+        this->setEnabled(false);
     }
     else
         QMessageBox::warning(this, "Logout", "Logout service failed");
@@ -340,7 +341,7 @@ void Principale::insertTab()
     {
         ui->lista->insertRow(ui->lista->rowCount());
         fileInfo = clientFiles_->fileil(i);
-        ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(i)));
+        ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(i+1)));
         ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
         ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
         ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.usernameo())));
