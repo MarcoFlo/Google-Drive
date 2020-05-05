@@ -160,6 +160,8 @@ void Principale::setupUI()
     ui->lista->setHorizontalHeaderLabels(etichette);
 
     connect(ui->lista, &QTableWidget::cellDoubleClicked, this, &Principale::cellDoubleClicked);
+
+    ui->annullaCerca->setVisible(false);
 }
 
 void Principale::on_nuovo_clicked()
@@ -244,8 +246,10 @@ void Principale::on_cerca_clicked()
     if(cerca.empty())
     {
         insertTab();
+        ui->annullaCerca->setVisible(false);
     }
     else {
+        ui->annullaCerca->setVisible(true);
         std::list<int> search;
         search = client_->searchFileInfo(ui->cercaBarra->text().toStdString());
 
@@ -327,6 +331,8 @@ void Principale::insertTab()
 
     if(client_->GetFiles().empty())
     {
+        *clientFiles_ = client_->getFileInfoList();
+    } else {
         *clientFiles_ = client_->getFileInfoList();
     }
 
@@ -421,4 +427,10 @@ void Principale::closeSplash() {
     QObject::connect(login, SIGNAL(clientReturn(CharacterClient*)), this, SLOT(onLoginReturn(CharacterClient*)));
     QObject::connect(login, SIGNAL(regRequest()), this, SLOT(onRegistrationRequest()));
     login->show();
+}
+
+void Principale::on_annullaCerca_clicked()
+{
+    ui->cercaBarra->setText("");
+    on_cerca_clicked();
 }

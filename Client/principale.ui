@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>817</width>
-    <height>413</height>
+    <width>1065</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -185,6 +185,13 @@ border-radius: 15px;</string>
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="aggiorna">
+          <property name="text">
+           <string>Aggiorna</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>
@@ -255,6 +262,13 @@ padding: 5px;
 font-family: 'Calibri';
 background-color:none</string>
           </property>
+          <property name="text">
+           <string>Cerca</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="annullaCerca">
           <property name="text">
            <string>Annulla</string>
           </property>
@@ -374,12 +388,28 @@ background-color:none;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>661</x>
-     <y>65</y>
+     <x>900</x>
+     <y>81</y>
     </hint>
     <hint type="destinationlabel">
-     <x>718</x>
-     <y>65</y>
+     <x>947</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aggiorna</sender>
+   <signal>clicked()</signal>
+   <receiver>annullaCerca</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>464</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>979</x>
+     <y>63</y>
     </hint>
    </hints>
   </connection>
