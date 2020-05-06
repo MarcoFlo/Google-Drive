@@ -59,10 +59,9 @@ border-color:10px solid black;</string>
      <number>0</number>
     </property>
     <item>
-     <widget class="QGroupBox" name="">
+     <widget class="QGroupBox" name="groupBox">
       <property name="styleSheet">
-       <string notr="true">background-color: #3a848a;
-border: none;</string>
+       <string notr="true">background-color:#3a848a</string>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <property name="sizeConstraint">
@@ -549,11 +548,15 @@ QPushButton:hover
           <bool>false</bool>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color:none;
-border: 2px solid #336b8a;
-font-family:'Calibri';
-font-size:13px;
-text-align:center;</string>
+          <string notr="true">QTableWidget
+{
+	background-color:none;
+	border: 2px solid #336b8a;
+	font-family:'Calibri';
+	font-size:13px;
+	text-align:center;
+}
+</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -631,7 +634,7 @@ text-align:center;</string>
           <number>4</number>
          </property>
          <attribute name="horizontalHeaderVisible">
-          <bool>true</bool>
+          <bool>false</bool>
          </attribute>
          <attribute name="horizontalHeaderCascadingSectionResizes">
           <bool>false</bool>
