@@ -32,10 +32,10 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     client_->GetFiles();
     file_ = new protobuf::FileInfo();
     *file_ = client_->getFileInfo(*fileid);
-    if(!client_->GetFileContent(*file_).empty())
+/*    if(!client_->GetFileContent(*file_).empty())
     {
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
-    }
+    }*/
     setupGeneral();
 }
 

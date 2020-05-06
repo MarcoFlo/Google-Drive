@@ -13,7 +13,9 @@ GetFileContentCallData::GetFileContentCallData(protobuf::CharacterService::Async
 
 void
 GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
+    std::cout << "bau \n";
     if (status_ == FINISH) {
+        std::cout << "miao \n";
         delete this;
         return;
     }
@@ -33,7 +35,7 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
-        std::cout << "Get file requested ->" << request_.filename() << std::endl;
+        std::cout << "Get file content requested ->" << request_.filename() << std::endl;
 
         if (fileClientMap.fileclientmap().contains(principal)) {
             auto fileGet = std::find_if(fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->begin(),
@@ -47,11 +49,11 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
 
-                int vectorSize = symbolVector.ByteSize();
+                int vectorSize = symbolVector.symbolvector_size()-1;
 
-                if (vectorSize == 0) {
-                    responder_.Finish(grpc::Status::OK, this);
+                if (symbolVector.ByteSize() == 0) {
                     status_ = FINISH;
+                    responder_.Finish(grpc::Status::OK, this);
                     return;
                 }
 
@@ -70,10 +72,10 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             status_ = FINISH;
             responder_.Finish(grpc::Status(grpc::StatusCode::NOT_FOUND, "File non presente"), this);
         }
-    } else if (status_ == WRITE) {
+    } else if(status_ == WRITE) {
         protobuf::Chunk chunk;
         int vectorSize = symbolVector.ByteSize();
-
+        std::cout << vectorSize;
         if (vectorSize < 64000) {
             //Se siamo sotto i 64KB non spezzettiamo
             status_ = FINISH;
