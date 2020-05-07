@@ -23,6 +23,8 @@
 #include "editor.h"
 #include "comunication/Symbol.h"
 
+
+
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
     ui(new Ui::Editor)
@@ -73,7 +75,7 @@ void Editor::setupAccount() {
 
     QLabel *icona = new QLabel(accountM);
     icona->setAlignment(Qt::AlignCenter);
-    QPixmap *iconaP = new QPixmap(":/images/img/logo.png");
+    QPixmap *iconaP = new QPixmap("img/logo.png");
     icona->setPixmap(*iconaP);
     accountV->addWidget(icona);
 
@@ -100,7 +102,7 @@ void Editor::setupAccount() {
 
     QToolButton *account = new QToolButton(this);
 
-    QIcon *icon = new QIcon(":/images/img/logo.png");
+    QIcon *icon = new QIcon(":/img/logo.png");
     account->setIcon(*icon);
     account->setMenu(accountM);
     account->setPopupMode(QToolButton::InstantPopup);

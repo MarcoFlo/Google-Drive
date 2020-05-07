@@ -4,6 +4,7 @@
 #include <sstream>
 #include "principale.h"
 #include "ui_principale.h"
+#include <QCloseEvent>
 
 Principale::Principale(QWidget *parent) :
     QMainWindow(parent),
@@ -241,6 +242,7 @@ void Principale::on_logout_clicked()
         QObject::connect(login, SIGNAL(regRequest()), this, SLOT(onRegistrationRequest()));
         login->show();
         this->setEnabled(false);
+        login->setEnabled(true);
     }
     else
         QMessageBox::warning(this, "Logout", "Logout service failed");

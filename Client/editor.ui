@@ -174,8 +174,12 @@ background-color:none;
     <string>toolBar</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 1px solid #3a848a;
-background-color:#3a848a;</string>
+    <string notr="true">QToolBar
+{
+	border: 1px solid #3a848a;
+	background-color:#3a848a;
+}
+</string>
    </property>
    <property name="movable">
     <bool>false</bool>

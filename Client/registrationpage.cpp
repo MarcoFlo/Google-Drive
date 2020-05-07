@@ -22,17 +22,22 @@ void RegistrationPage::on_annulla_clicked()
 
 void RegistrationPage::on_registrati_clicked()
 {
-    QString username = ui->emailEdit->text();
-    QString pass = ui->passwordEdit->text();
-    QString pass2 = ui->password2Edit->text();
-    protobuf::User userR;
-    userR.set_username(username.toStdString());
-    userR.set_password(pass.toStdString());
-    userR.set_passwordr(pass2.toStdString());
-   std::string error = this->client_->Register(userR);
-
-    if (error.empty()) {
-        emit closeRReg();
+    if(ui->usernameEdit->text().isEmpty() == false && ui->nomeEdit->text().isEmpty() == false && ui->emailEdit->text().isEmpty() == false && ui->passwordEdit->text().isEmpty() == false && ui->password2Edit->text().isEmpty() == false && ui->passwordEdit->text() == ui->password2Edit->text())
+    {
+        QString username = ui->emailEdit->text();
+        QString pass = ui->passwordEdit->text();
+        QString pass2 = ui->password2Edit->text();
+        protobuf::User userR;
+        userR.set_username(username.toStdString());
+        userR.set_password(pass.toStdString());
+        userR.set_passwordr(pass2.toStdString());
+        std::string error = this->client_->Register(userR);
+        if (error.empty()) {
+            emit closeRReg();
+        }
+        else {
+            QMessageBox::warning(this, "Registration", "Invalid data");
+        }
     }
     else {
         QMessageBox::warning(this, "Registration", "Invalid data");
