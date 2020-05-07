@@ -33,8 +33,8 @@ void Principale::setupUI()
     auto *accountV = new QVBoxLayout(accountM);
     accountM->setLayout(accountV);
     accountV->setAlignment(Qt::AlignCenter);
-    accountM->setStyleSheet("background-color: #0a3d62;"
-                                      "border: 1px solid white;"
+    accountM->setStyleSheet("background-color: white;"
+                                      "border: 1px solid #336b8a;"
                                       "padding: 10px;");
 
     /*auto *icona = new QLabel(accountM);
@@ -46,43 +46,53 @@ void Principale::setupUI()
     auto *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
     nome->setText("nome");
-    nome->setStyleSheet("color: #dfe6e9;"
-                                  "font-size: 15px;"
-                                  "border: none;"
-                                  "padding: 5px;"
-                                  "font-family: 'Calibri';");
+    nome->setStyleSheet("color: #3a848a;"
+                        "font-size: 15px;"
+                        "border: none;"
+                        "padding: 5px;"
+                        "font-family: 'Calibri';"
+                        "background-color:none");
     accountV->addWidget(nome);
 
     auto *mail = new QLabel(accountM);
     mail->setAlignment(Qt::AlignCenter);
     mail->setText("mail");
-    mail->setStyleSheet("color: #dfe6e9;"
+    mail->setStyleSheet("color: #3a848a;"
                         "font-size: 15px;"
                         "border: none;"
                         "padding: 5px;"
-                        "font-family: 'Calibri';");
+                        "font-family: 'Calibri';"
+                        "background-color:none");
     accountV->addWidget(mail);
 
     auto *modifica = new QPushButton(accountM);
     modifica->setText("Impostazioni utente");
-    modifica->setStyleSheet("border-radius: 12px;"
-                            "background-color: #3c6382;"
+    modifica->setStyleSheet("QPushButton {"
+                            "background-color:none;"
+                            "border:2px solid #336b8a;"
                             "padding: 6px;"
-                            "color: #dfe6e9;"
-                            "border: none;"
+                            "color: #336b8a;"
                             "font-size: 15px;"
-                            "font-family: 'Calibri';");
+                            "font-family: 'Calibri';"
+                            "border-radius: 15px;}"
+                            "QPushButton:hover {"
+                            "background-color: #336b8a;"
+                            "color:white;};");
     accountV->addWidget(modifica);
 
     auto *logout = new QPushButton(accountM);
     logout->setText("Logout");
-    logout->setStyleSheet("border-radius: 12px;"
-                            "background-color: #3c6382;"
-                            "padding: 6px;"
-                            "color: #dfe6e9;"
-                            "border: none;"
-                            "font-size: 15px;"
-                            "font-family: 'Calibri';");
+    logout->setStyleSheet("QPushButton {"
+                          "background-color:none;"
+                          "border:2px solid #336b8a;"
+                          "padding: 6px;"
+                          "color: #336b8a;"
+                          "font-size: 15px;"
+                          "font-family: 'Calibri';"
+                          "border-radius: 15px;}"
+                          "QPushButton:hover {"
+                          "background-color: #336b8a;"
+                          "color:white;};");
     accountV->addWidget(logout);
 
     QObject::connect(modifica, SIGNAL(clicked()), this, SLOT(on_impostazioni_clicked()));
@@ -90,7 +100,10 @@ void Principale::setupUI()
     QObject::connect(ui->lista->selectionModel(), SIGNAL(selectionChanged(const QItemSelection &, const QItemSelection &)), this, SLOT(on_row_select()));
 
     auto *account = new QToolButton(this);
-    account->setStyleSheet("::menu-indicator {image: none;}");
+    account->setStyleSheet("QToolButton::menu-indicator {"
+                           "image: none;}"
+                           "QToolButton {"
+                           "border: 1px solid white;}");
 
     auto *icon = new QIcon(":/images/img/logo.png");
     account->setIcon(*icon);
@@ -99,7 +112,7 @@ void Principale::setupUI()
 
     ui->horizontalLayout->insertWidget(3, account);
 
-     ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
+     /*ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
                                 "                               background-color: #8395a7;"
                                 "                               padding: 6px;"
                                 "                               color: #dfe6e9;"
@@ -124,7 +137,7 @@ void Principale::setupUI()
                                "                               color: #dfe6e9;"
                                "                               border: none;"
                                "                               font-size: 15px;"
-                               "                               font-family: 'Calibri';}");
+                               "                               font-family: 'Calibri';}");*/
 
 
     /*ui->nuovo->setStyleSheet("::disabled {border-radius: 12px;"

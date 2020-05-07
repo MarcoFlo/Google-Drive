@@ -379,13 +379,19 @@ QLineEdit:focus
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <property name="spacing">
-         <number>50</number>
+         <number>99</number>
         </property>
         <property name="leftMargin">
-         <number>50</number>
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>20</number>
         </property>
         <property name="rightMargin">
-         <number>50</number>
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
         </property>
         <item>
          <widget class="QPushButton" name="pushButton">

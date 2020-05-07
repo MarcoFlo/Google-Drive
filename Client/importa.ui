@@ -38,6 +38,9 @@ background-color: white</string>
         <property name="leftMargin">
          <number>32</number>
         </property>
+        <property name="topMargin">
+         <number>24</number>
+        </property>
         <property name="rightMargin">
          <number>32</number>
         </property>
@@ -107,6 +110,9 @@ QPushButton:hover
         </property>
         <property name="leftMargin">
          <number>32</number>
+        </property>
+        <property name="topMargin">
+         <number>16</number>
         </property>
         <property name="rightMargin">
          <number>32</number>

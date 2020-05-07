@@ -165,10 +165,13 @@ QLineEdit:focus
          <number>32</number>
         </property>
         <property name="topMargin">
-         <number>0</number>
+         <number>15</number>
         </property>
         <property name="rightMargin">
          <number>32</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
         </property>
         <item>
          <widget class="QPushButton" name="Annulla">

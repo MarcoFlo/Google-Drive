@@ -255,7 +255,7 @@ QLineEdit:focus
             <property name="font">
              <font>
               <family>Calibri</family>
-              <pointsize>11</pointsize>
+              <pointsize>9</pointsize>
              </font>
             </property>
             <property name="styleSheet">

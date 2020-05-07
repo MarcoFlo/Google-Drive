@@ -82,7 +82,7 @@ add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/logo.png"
 #target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++_unsecure ${_PROTOBUF_LIBPROTOBUF})
 target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++ ${_PROTOBUF_LIBPROTOBUF})
 
-find_package(Qt5Widgets REQUIRED)
+
 
 
 
