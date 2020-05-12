@@ -23,8 +23,8 @@
 #include "ui_editor.h"
 #include "editor.h"
 #include "comunication/Symbol.h"
-
-
+#include <QtCore>
+#include <QKeyEvent>
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -342,6 +342,7 @@ void Editor::setupColor() {
 
 void Editor::on_actionindietro_triggered()
 {
+    client_->closeFile();
     emit closeE();
 }
 
@@ -698,15 +699,22 @@ void Editor::readFile() {
 void Editor::saveFile() {
     QTextCursor cur = ui->txt->textCursor();
     cur.movePosition(QTextCursor::PreviousCharacter,QTextCursor::KeepAnchor,1);
-    qDebug() << cur.selectedText();
     std::vector<int> pos;
     pos.push_back(cur.position());
     Symbol *symbol = new Symbol(cur.selectedText().toStdString()[0],client_->getUsername(), pos);
-/*
-    symbol.set_character(cur.selectedText().toStdString());
-    symbol.set_pos(0, cur.position());
-    symbol.set_uniqueid(client_->getUsername());*/
     client_->InsertSymbols(*symbol, false);
+   /* if(event->key() == Qt::Key_Delete)
+    {
+        std::cout <<"bau";
+        pos.push_back(cur.position()+1);
+        Symbol *symbol = new Symbol(cur.selectedText().toStdString()[0],client_->getUsername(), pos);
+        client_->InsertSymbols(*symbol, true);
+    }
+    else {
+        std::cout <<"miao";
+
+    }*/
+
 }
 
 /*void Editor::setupZoom() {

@@ -39,9 +39,11 @@ public:
 
     std::string getUsername();
 
-    std::list<int> searchFileInfo(std::string);
+    std::list<int> searchFileInfo(const std::string&);
 
-    protobuf::FileInfo getFileInfo(std::string);
+    protobuf::FileInfo getFileInfo(const std::string&);
+
+    void closeFile();
 
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the

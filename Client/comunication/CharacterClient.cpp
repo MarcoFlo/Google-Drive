@@ -273,7 +273,7 @@ std::string CharacterClient::getUsername() {
     return username_;
 }
 
-std::list<int> CharacterClient::searchFileInfo(std::string name) {
+std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
     int i = 0;
     std::list<int> *searchList = new std::list<int>;
 
@@ -285,7 +285,7 @@ std::list<int> CharacterClient::searchFileInfo(std::string name) {
     return *searchList;
 }
 
-protobuf::FileInfo CharacterClient::getFileInfo(std::string id) {
+protobuf::FileInfo CharacterClient::getFileInfo(const std::string& id) {
     int i = 0;
 
     for (i = 0; i < lastFileInfoList_.fileil_size(); i++) {
@@ -295,4 +295,6 @@ protobuf::FileInfo CharacterClient::getFileInfo(std::string id) {
     }
 }
 
-
+void CharacterClient::closeFile(){
+    symbolVector_.Clear();
+}
