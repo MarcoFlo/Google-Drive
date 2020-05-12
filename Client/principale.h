@@ -94,6 +94,8 @@ private slots:
 
     void closeSplash();
 
+    void on_annullaCerca_clicked();
+
 private:
     Ui::Principale *ui;
 

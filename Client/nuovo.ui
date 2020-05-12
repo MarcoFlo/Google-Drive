@@ -6,101 +6,229 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>386</width>
+    <height>226</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>371</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Nuovo</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>70</y>
-     <width>271</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Nome:</string>
+  <property name="styleSheet">
+   <string notr="true">background-color:white;
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #336b8a;
+background-color: white</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>6</number>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="topMargin">
+       <number>5</number>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="nome"/>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Condividi con:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="cond"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>250</y>
-     <width>338</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="spacing">
-     <number>150</number>
-    </property>
-    <item>
-     <widget class="QPushButton" name="Annulla">
-      <property name="text">
-       <string>Annulla</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="conferma">
-      <property name="text">
-       <string>Conferma</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>32</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>32</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #3a848a;
+font-size: 15px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+          </property>
+          <property name="text">
+           <string>Nome:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="nome">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+	background-color:none;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true">color: #3a848a;
+font-size: 15px;
+border: none;
+padding: 5px;
+font-family: 'Calibri';
+background-color:none</string>
+          </property>
+          <property name="text">
+           <string>Condividi con:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="cond">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit
+{
+	border:1px solid #3a848a;
+	background-color:none;
+}
+QLineEdit:hover
+{
+	border:2px solid #3a848a;
+}
+QLineEdit:focus
+{
+	border:2px solid #3a848a;
+}
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>120</number>
+        </property>
+        <property name="leftMargin">
+         <number>32</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>32</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="Annulla">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	background-color:none;
+	border:2px solid #336b8a;
+	padding: 6px;
+	color: #336b8a;
+	font-size: 15px;
+	font-family: 'Calibri';
+	border-radius: 15px;
+}
+QPushButton:hover
+{
+	background-color: #336b8a;
+	color:white;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Annulla</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="conferma">
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	background-color:none;
+	border:2px solid #336b8a;
+	padding: 6px;
+	color: #336b8a;
+	font-size: 15px;
+	font-family: 'Calibri';
+	border-radius: 15px;
+}
+QPushButton:hover
+{
+	background-color: #336b8a;
+	color:white;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Conferma</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <tabstops>
   <tabstop>nome</tabstop>

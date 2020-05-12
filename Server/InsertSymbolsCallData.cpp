@@ -55,12 +55,12 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             symbolVector.SerializeToOstream(&output);
             output.close();
 
-            std::for_each(
+          /*  std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
                     [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
                         dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
-                    });
+                    });*/
             responder_.Finish(reply_, grpc::Status::OK, this);
         } else {
             status_ = FINISH;

@@ -77,7 +77,7 @@ std::string CharacterClient::Login(protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
-    username_=user.username();
+    username_ = user.username();
     protobuf::Identifier reply;
     grpc::Status status;
 
@@ -128,7 +128,7 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
         std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
         currentFileIdentifier_ = reply.fileidentifier();
         // todo capire se rimuovere
-        GetSymbols(reply);
+//        GetSymbols(reply);
         return reply.fileidentifier();
     } else {
         std::cout << "Insert file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
@@ -173,7 +173,7 @@ std::string CharacterClient::GetFiles() {
     }
 }
 
-std::string CharacterClient::ShareFile(std::string &fileIdentifier, std::string &usernameShare) {
+std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const std::string &usernameShare) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
     context.AddMetadata("usernameshare", usernameShare);
@@ -207,6 +207,8 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 
     protobuf::SymbolVector symbolVectorPartial;
     while (stream->Read(&reply)) {
+        std::cout << "Get file content" << std::endl;
+
         std::istringstream istream(*reply.mutable_chunk());
         symbolVectorPartial.ParseFromIstream(&istream);
         symbolVector_.mutable_symbolvector()->MergeFrom(symbolVectorPartial.symbolvector());
@@ -215,13 +217,14 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
     //todo chiamare getSymbols
 
     if (status.ok()) {
-        std::cout << "Get file rpc was successful" << std::endl;
+        std::cout << "Get file content rpc was successful" << std::endl;
         currentFileIdentifier_ = fileInfo.fileidentifier();
         GetSymbols(fileInfo);
         return "";
 
     } else {
-        std::cout << "Get file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        std::cout << "Get file content rpc failed: " << status.error_code() << ": " << status.error_message()
+                  << std::endl;
         return status.error_message();
     }
 }
@@ -271,13 +274,11 @@ std::string CharacterClient::getUsername() {
 }
 
 std::list<int> CharacterClient::searchFileInfo(std::string name) {
-    int i=0;
+    int i = 0;
     std::list<int> *searchList = new std::list<int>;
 
-    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
-    {
-        if(lastFileInfoList_.fileil(i).filename().find(name) != std::string::npos)
-        {
+    for (i = 0; i < lastFileInfoList_.fileil_size(); i++) {
+        if (lastFileInfoList_.fileil(i).filename().find(name) != std::string::npos) {
             searchList->push_back(i);
         }
     }
@@ -285,12 +286,10 @@ std::list<int> CharacterClient::searchFileInfo(std::string name) {
 }
 
 protobuf::FileInfo CharacterClient::getFileInfo(std::string id) {
-    int i=0;
+    int i = 0;
 
-    for (i=0; i< lastFileInfoList_.fileil_size(); i++)
-    {
-        if(lastFileInfoList_.fileil(i).fileidentifier() == id)
-        {
+    for (i = 0; i < lastFileInfoList_.fileil_size(); i++) {
+        if (lastFileInfoList_.fileil(i).fileidentifier() == id) {
             return lastFileInfoList_.fileil(i);
         }
     }

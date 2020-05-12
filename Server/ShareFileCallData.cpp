@@ -21,11 +21,11 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
     }
 
     if (status_ == READ_CALLED) {
-        std::cout << "Share file request" << std::endl;
         new ShareFileCallData(service_, cq_);
         status_ = FINISH;
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
+        std::cout << "Share file request from " << principal;
 
         std::string fileIdentifier = request_.fileidentifier();
         protobuf::FilesInfoList *fileList = &fileClientMap.mutable_fileclientmap()->at(principal);
@@ -38,21 +38,24 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             //se è tra i suoi file
             if (fileToBeShared->usernameo() == principal) {
                 //se ha l'autorizzazione
-                const std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
+                std::string usernameShare = ctx_.auth_context()->FindPropertyValues(
                         "usernameshare").front().data();
+                std::cout << " to " << usernameShare << " for " << fileToBeShared->filename() << std::endl;
+
                 //usernameShare added to the list of the owner
                 fileToBeShared->add_usernamesal(usernameShare);
 
                 //fileInfo added to the list of the sharer
+                protobuf::FileInfo file_copy(*fileToBeShared);
                 (*fileClientMap.mutable_fileclientmap())[usernameShare].mutable_fileil()->Add(
-                        (std::move(*fileToBeShared)));
+                        (std::move(file_copy)));
 
                 UpdateFileClientMap(fileClientMap);
 
                 responder_.Finish(reply_, grpc::Status::OK, this);
             } else {
                 responder_.Finish(reply_, grpc::Status(grpc::StatusCode::PERMISSION_DENIED,
-                                                       "Un file pu essere condiviso solo dal proprietario"), this);
+                                                       "Un file può essere condiviso solo dal proprietario"), this);
             }
         } else {
             responder_.Finish(reply_, grpc::Status(grpc::StatusCode::NOT_FOUND, "File non presente"), this);

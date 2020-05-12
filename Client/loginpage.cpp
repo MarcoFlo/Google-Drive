@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include "loginpage.h"
 #include "ui_loginpage.h"
+#include <QAction>
 
 LoginPage::LoginPage(QWidget *parent) :
         QMainWindow(parent),
@@ -12,6 +13,8 @@ LoginPage::LoginPage(QWidget *parent) :
     ui->regi->setVisible(false);
     ui->EmailEdit->setText("prova@test.it");
     ui->PasswordEdit->setText("1234");
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    //ui->Login->setShortcut(Qt::Key_Enter);
 }
 
 LoginPage::~LoginPage() {

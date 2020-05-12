@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # alternativa: settings -> build,execution,deployment -> cmake options = -DCMAKE_PREFIX_PATH=C:/Qt/5.12.5/msvc2017/lib/cmake
 #set(CMAKE_PREFIX_PATH "C:/Qt/5.12.5/msvc2017/lib/cmake")
-
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets Sql)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -48,14 +48,14 @@ add_custom_command(
 # Include generated *.pb.h files
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-find_package(Qt5 REQUIRED COMPONENTS Core Widgets Sql)
+
 
 # mantenere in ordine alfabetico per comodità
 add_executable(Client main.cpp
         comunication/AsyncClientCall.h comunication/AsyncClientGetSymbols.cpp comunication/AsyncClientGetSymbols.h comunication/CharacterClient.cpp comunication/CharacterClient.h comunication/definitions.h comunication/Message.cpp comunication/Message.h comunication/SharedEditor.cpp comunication/SharedEditor.h comunication/Symbol.h comunication/Symbol.cpp
         account.h condividi.h editor.h importa.h loginpage.h nuovo.h principale.h registrationpage.h splashscreen.h
         account.cpp condividi.cpp editor.cpp importa.cpp loginpage.cpp nuovo.cpp principale.cpp registrationpage.cpp splashscreen.cpp
-        account.ui condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui
+        account.ui condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui img/logo.png
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
 
@@ -77,14 +77,25 @@ if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 endif()
 
 # files are only copied if a target depends on them
-add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/logo.png")
+add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}" /img/logo.png)
 
 #target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++_unsecure ${_PROTOBUF_LIBPROTOBUF})
 target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++ ${_PROTOBUF_LIBPROTOBUF})
 
-find_package(Qt5Widgets REQUIRED)
+find_package( Qt5Core REQUIRED )
+find_package( Qt5Widgets REQUIRED )
+find_package( Qt5Gui REQUIRED )
+qt5_use_modules( Client Core Widgets Gui )
 
+include_directories(/img)
+include_directories(/img/ico)
 
+add_library(img)
 
+link_directories(/img)
+
+link_libraries(img)
+
+set(BOOST_ROOT "/img")
 
 
