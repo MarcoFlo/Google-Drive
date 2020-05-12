@@ -16,6 +16,7 @@
 #include <QVBoxLayout>
 #include <QThread>
 #include <QPixmap>
+#include <QChar>
 #include <messageP.pb.h>
 #include <QtWidgets/QMessageBox>
 #include "account.h"
@@ -681,12 +682,16 @@ void Editor::readFile() {
     {
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }
+
+    std::cout << client_->getSymbolVector().DebugString() << "\n";
+
     for(i=0; i<client_->getSymbolVector().symbolvector_size(); i++)
     {
         protobuf::Symbol symbol = client_->getSymbolVector().symbolvector(i);
         cursor.setPosition(symbol.pos().data()[0]);
         ui->txt->setTextCursor(cursor);
-        ui->txt->setPlainText(symbol.character().c_str());
+        char p = std::stoi(symbol.character());
+        ui->txt->insertPlainText(QChar(p));
     }
 }
 

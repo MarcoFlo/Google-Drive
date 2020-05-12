@@ -96,7 +96,7 @@ void CharacterServiceImpl::HandleRpcs() {
     while (true) {
         GPR_ASSERT(cq_->Next(&tag, &ok));
         CallData *callData = static_cast<CallData *>(tag);
-
+        std::cout << "bee\n";
         if (callData->getClass() == "FileCallData")
             static_cast<AbstractFileCallData *> (tag)->HandleFileCall(fileClientMap, ok);
         else if (callData->getClass() == "SubscribedCallData")
