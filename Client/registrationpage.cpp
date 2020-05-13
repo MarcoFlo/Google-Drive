@@ -1,3 +1,4 @@
+#include <regex>
 #include "registrationpage.h"
 #include "ui_registrationpage.h"
 
@@ -8,6 +9,9 @@ RegistrationPage::RegistrationPage(QWidget *parent) :
     ui->setupUi(this);
     client_=new CharacterClient();
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    QObject::connect(ui->emailEdit, SIGNAL(editingFinished()), this, SLOT(is_email_valid()));
+    QObject::connect(ui->password2Edit, SIGNAL(editingFinished()), this, SLOT(is_pass_valid()));
+    QObject::connect(ui->passwordEdit, SIGNAL(editingFinished()), this, SLOT(is_pass_valid()));
 }
 
 RegistrationPage::~RegistrationPage()
@@ -22,8 +26,13 @@ void RegistrationPage::on_annulla_clicked()
 
 void RegistrationPage::on_registrati_clicked()
 {
-    if(ui->usernameEdit->text().isEmpty() == false && ui->nomeEdit->text().isEmpty() == false && ui->emailEdit->text().isEmpty() == false && ui->passwordEdit->text().isEmpty() == false && ui->password2Edit->text().isEmpty() == false && ui->passwordEdit->text() == ui->password2Edit->text())
-    {
+    if(!is_something_empty()) {
+        QMessageBox::warning(this, "Registration", "Riempire i campi vuoti");
+    } else if(!is_email_valid()) {
+        QMessageBox::warning(this, "Registration", "L'email non è valida");
+    } else if(!is_pass_valid()) {
+        QMessageBox::warning(this, "Registration", "Le password non corrispondono");
+    } else {
         QString username = ui->emailEdit->text();
         QString pass = ui->passwordEdit->text();
         QString pass2 = ui->password2Edit->text();
@@ -39,8 +48,40 @@ void RegistrationPage::on_registrati_clicked()
             QMessageBox::warning(this, "Registration", "Invalid data");
         }
     }
-    else {
-        QMessageBox::warning(this, "Registration", "Invalid data");
-    }
 }
 
+bool RegistrationPage::is_email_valid()
+{
+    // define a regular expression
+    const std::regex pattern(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
+    bool fin;
+    // try to match the string with the regular expression
+    if((fin = std::regex_match(ui->emailEdit->text().toStdString(), pattern))) {
+        ui->email->setText("Email valida");
+        ui->email->setStyleSheet("QLabel { color : green; }");
+    } else {
+        ui->email->setText("Inserire una email valida");
+        ui->email->setStyleSheet("QLabel { color : red; }");
+    }
+    return fin;
+}
+
+bool RegistrationPage::is_pass_valid()
+{
+    bool fin= ui->passwordEdit->text() == ui->password2Edit->text();
+
+    if(fin) {
+        ui->password2->setText("Password uguali");
+        ui->password2->setStyleSheet("QLabel { color : green; }");
+    } else {
+        ui->password2->setText("Le password non corrispondono");
+        ui->password2->setStyleSheet("QLabel { color : red; }");
+    }
+    return fin;
+}
+
+bool RegistrationPage::is_something_empty()
+{
+    return !ui->usernameEdit->text().isEmpty() && !ui->nomeEdit->text().isEmpty() && !ui->emailEdit->text().isEmpty() &&
+           !ui->passwordEdit->text().isEmpty() && !ui->password2Edit->text().isEmpty();
+}

@@ -29,6 +29,12 @@ private slots:
 
     void on_registrati_clicked();
 
+    bool is_email_valid();
+
+    bool is_pass_valid();
+
+    bool is_something_empty();
+
 private:
     Ui::RegistrationPage *ui;
 
