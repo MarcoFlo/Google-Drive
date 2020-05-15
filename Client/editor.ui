@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>933</width>
-    <height>462</height>
+    <width>841</width>
+    <height>487</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -297,7 +297,7 @@ QToolButton::hover
   <action name="actionindietro">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/icons8-go-back-50.png</normaloff>:/icons/img/ico/icons8-go-back-50.png</iconset>
+     <normaloff>:/images/img/ico/icons8-go-back-50.png</normaloff>:/images/img/ico/icons8-go-back-50.png</iconset>
    </property>
    <property name="text">
     <string>indietro</string>
@@ -325,7 +325,7 @@ QToolButton::hover
   <action name="actionredo">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/redo-50.png</normaloff>:/icons/img/ico/redo-50.png</iconset>
+     <normaloff>:/images/img/ico/redo-50.png</normaloff>:/images/img/ico/redo-50.png</iconset>
    </property>
    <property name="text">
     <string>redo</string>
@@ -334,7 +334,7 @@ QToolButton::hover
   <action name="actioncopia">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/copy.png</normaloff>:/icons/img/ico/copy.png</iconset>
+     <normaloff>:/images/img/ico/copy.png</normaloff>:/images/img/ico/copy.png</iconset>
    </property>
    <property name="text">
     <string>copia</string>
@@ -346,7 +346,7 @@ QToolButton::hover
   <action name="actionincolla">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/paste.png</normaloff>:/icons/img/ico/paste.png</iconset>
+     <normaloff>:/images/img/ico/paste.png</normaloff>:/images/img/ico/paste.png</iconset>
    </property>
    <property name="text">
     <string>incolla</string>
@@ -361,7 +361,7 @@ QToolButton::hover
   <action name="actiontaglia">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/cut.png</normaloff>:/icons/img/ico/cut.png</iconset>
+     <normaloff>:/images/img/ico/cut.png</normaloff>:/images/img/ico/cut.png</iconset>
    </property>
    <property name="text">
     <string>taglia</string>
@@ -373,7 +373,7 @@ QToolButton::hover
   <action name="actionundo">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/undo-50.png</normaloff>:/icons/img/ico/undo-50.png</iconset>
+     <normaloff>:/images/img/ico/undo-50.png</normaloff>:/images/img/ico/undo-50.png</iconset>
    </property>
    <property name="text">
     <string>undo</string>
@@ -385,7 +385,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/align-right-50.png</normaloff>:/icons/img/ico/align-right-50.png</iconset>
+     <normaloff>:/images/img/ico/align-right-50.png</normaloff>:/images/img/ico/align-right-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaD</string>
@@ -400,7 +400,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/align-left-50.png</normaloff>:/icons/img/ico/align-left-50.png</iconset>
+     <normaloff>:/images/img/ico/align-left-50.png</normaloff>:/images/img/ico/align-left-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaS</string>
@@ -412,7 +412,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/align-center-50.png</normaloff>:/icons/img/ico/align-center-50.png</iconset>
+     <normaloff>:/images/img/ico/align-center-50.png</normaloff>:/images/img/ico/align-center-50.png</iconset>
    </property>
    <property name="text">
     <string>allineaC</string>
@@ -424,7 +424,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/align-justify-50.png</normaloff>:/icons/img/ico/align-justify-50.png</iconset>
+     <normaloff>:/images/img/ico/align-justify-50.png</normaloff>:/images/img/ico/align-justify-50.png</iconset>
    </property>
    <property name="text">
     <string>alineaG</string>
@@ -436,7 +436,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/bold-30.png</normaloff>:/icons/img/ico/bold-30.png</iconset>
+     <normaloff>:/images/img/ico/bold-30.png</normaloff>:/images/img/ico/bold-30.png</iconset>
    </property>
    <property name="text">
     <string>grassetto</string>
@@ -448,7 +448,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/italic-30.png</normaloff>:/icons/img/ico/italic-30.png</iconset>
+     <normaloff>:/images/img/ico/italic-30.png</normaloff>:/images/img/ico/italic-30.png</iconset>
    </property>
    <property name="text">
     <string>corsivo</string>
@@ -460,7 +460,7 @@ QToolButton::hover
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icons/img/ico/underline-30.png</normaloff>:/icons/img/ico/underline-30.png</iconset>
+     <normaloff>:/images/img/ico/underline-30.png</normaloff>:/images/img/ico/underline-30.png</iconset>
    </property>
    <property name="text">
     <string>sottolineato</string>
