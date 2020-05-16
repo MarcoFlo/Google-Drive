@@ -1,6 +1,7 @@
 #include "nuovo.h"
 #include "ui_nuovo.h"
 #include <QMessageBox>
+//#include "comunication/CharacterClient.h"
 
 Nuovo::Nuovo(QWidget *parent) :
     QDialog(parent),
@@ -14,7 +15,10 @@ Nuovo::~Nuovo()
 {
     delete ui;
 }
-
+/*void Nuovo::setClient(CharacterClient* cli)
+{
+    client = cli;
+}*/
 void Nuovo::on_Annulla_clicked()
 {
 
@@ -30,8 +34,20 @@ void Nuovo::on_conferma_clicked()
     {
         QMessageBox::warning(this,"Creazione", "Inserire il nome del documento da creare");
     }
-    else {
-        hide();
-        emit openE(name, share);
-    }
+    //else {
+      //  std::list<int> cli;
+        //cli = client->searchFileInfo(name.toStdString());
+
+        /*(cli.empty() == false)
+        {
+            QMessageBox::warning(this,"Creazione", "Esiste già un documento con questo nome");
+        }
+        else
+        {*/
+            //cli.clear();
+            hide();
+            emit openE(name, share);
+        //}
+
+    //}
 }

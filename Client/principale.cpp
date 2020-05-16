@@ -106,7 +106,7 @@ void Principale::setupUI()
                            "QToolButton {"
                            "border: 1px solid white;}");
 
-    auto *icon = new QIcon(":/images/img/logo.png");
+    auto *icon = new QIcon(":/images/img/logovero.png");
     account->setIcon(*icon);
     account->setMenu(accountM);
     account->setPopupMode(QToolButton::InstantPopup);
@@ -181,6 +181,7 @@ void Principale::setupUI()
 void Principale::on_nuovo_clicked()
 {
     Nuovo nuovo;
+    //nuovo.setClient(client_);
     nuovo.setModal(true);
     QObject::connect(&nuovo, SIGNAL(openE(QString, QString)), this, SLOT(onNuovoReturn(QString, QString)));
     nuovo.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -365,6 +366,15 @@ void Principale::insertTab()
 
 void Principale::onNuovoReturn(QString name, QString share)
 {
+    std::list<int> search;
+    search = client_->searchFileInfo(name.toStdString());
+    if(search.empty() == false)
+    {
+        QMessageBox::warning(this,"Creazione", "Esiste già un documento con questo nome");
+        search.clear();
+        return;
+    }
+
     protobuf::FileName fileName;
     std::string namefile = name.toStdString();
     fileName.set_filename(namefile.c_str());

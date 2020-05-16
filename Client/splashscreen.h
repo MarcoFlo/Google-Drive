@@ -15,6 +15,7 @@ class SplashScreen : public QDialog
 public:
     explicit SplashScreen(QWidget *parent = nullptr);
     ~SplashScreen();
+    void setupUI();
 
 private:
     Ui::SplashScreen *ui;

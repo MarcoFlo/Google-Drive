@@ -691,8 +691,29 @@ void Editor::readFile() {
         protobuf::Symbol symbol = client_->getSymbolVector().symbolvector(i);
         cursor.setPosition(symbol.pos().data()[0]);
         ui->txt->setTextCursor(cursor);
-        char p = std::stoi(symbol.character());
-        ui->txt->insertPlainText(QChar(p));
+        const char* y = symbol.character().c_str();
+        int i = atoi(y);
+        switch(i)
+        {
+            case (-30):
+                ui->txt->insertPlainText("\n");
+                break;
+            case (9):
+                ui->txt->insertPlainText("\t");
+                break;
+            case (-61):
+                ui->txt->insertPlainText("è");
+                break;
+            case (-62):
+                ui->txt->insertPlainText("°");
+                break;
+            default:
+                char p = std::stoi(symbol.character());
+                ui->txt->insertPlainText(QChar(p));
+        }
+
+        //ui->txt->setPlainText(symbol.character().c_str());
+        //ui->txt->setPlainText(QChar(t));
     }
 }
 
