@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="images">
+    <file>img/logoVero.png</file>
+    <file>img/scrittaB.png</file>
+    <file>img/scrittaC.png</file>
     <file>img/ico/align-center-50.png</file>
     <file>img/ico/align-justify-50.png</file>
     <file>img/ico/align-left-50.png</file>
