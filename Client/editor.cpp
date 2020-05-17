@@ -48,6 +48,10 @@ Editor::~Editor()
 }
 
 void Editor::setupGeneral() {
+
+    QIcon *ic = new QIcon(":/images/img/logoVero.png");
+    setWindowIcon(*ic);
+
     setWindowTitle(QString::fromStdString(file_->filename()));
     this->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, SIGNAL(customContextMenuRequested(const QPoint &)),
@@ -56,7 +60,7 @@ void Editor::setupGeneral() {
     QObject::connect(ui->txt, SIGNAL(cursorPositionChanged()), this, SLOT(checkFont()));
     on_txt_cursorPositionChanged();
 
-    setupAccount();
+    //setupAccount();
     setupFont();
     setupSize();
     setupColor();
@@ -64,6 +68,7 @@ void Editor::setupGeneral() {
     readFile();
     QObject::connect(ui->txt, SIGNAL(textChanged()), this, SLOT(saveFile()));
     on_txt_cursorPositionChanged();
+
 }
 
 void Editor::setupAccount() {
@@ -119,8 +124,18 @@ void Editor::setupFont() {
     //MENU FONT
 
     fontMenu = new QMenu();
+    fontMenu->setStyleSheet("QMenu {"
+                            "background-color: white;"
+                            "border: 1px solid #336b8a;}"
+                            "QMenu::item:selected {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}"
+                            "QMenu::item:checked {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}");
     fontG = new QActionGroup(fontMenu);
     fontG->setExclusive(true);
+
 
     QAction *arial = new QAction("Arial", fontMenu);
     arial->setCheckable(true);
@@ -179,6 +194,15 @@ void Editor::setupSize() {
     //MENU DIM
 
     dimMenu = new QMenu();
+    dimMenu->setStyleSheet("QMenu {"
+                            "background-color: white;"
+                            "border: 1px solid #336b8a;}"
+                            "QMenu::item:selected {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}"
+                            "QMenu::item:checked {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}");
     dimG = new QActionGroup(dimMenu);
     dimG->setExclusive(true);
 
@@ -232,25 +256,14 @@ void Editor::setupSize() {
     edit->setDefaultWidget(lEdit);
     lEdit->setValidator(new QIntValidator(1, 100, this));
     lEdit->setMaxLength(2);
+    lEdit->setStyleSheet("QLineEdit {"
+                         "border:1px solid #3a848a;}"
+                         "QLineEdit:hover {"
+                         "border:2px solid #3a848a;}"
+                         "QLineEdit:focus {"
+                         "border:2px solid #3a848a;}");
+
     dimMenu->addAction(edit);
-
-    /*QString  menuStyle(
-               "QMenu::item{"
-               "background-color: rgb(0, 170, 0);"
-               "color: rgb(255, 255, 255);"
-               "}"
-               "QMenu::item:selected{"
-               "background-color: rgb(0, 85, 127);"
-               "color: rgb(255, 255, 255);"
-               "}"
-            );*/
-
-
-    /*QString menuStyle(
-                "QMenu::item{"
-                "width: 1px}");*/
-
-    //dimMenu->setStyleSheet(menuStyle);
 
     dim = new QToolButton(this);
     dim->setText("8");
@@ -270,10 +283,19 @@ void Editor::setupColor() {
     //MENU COLORE
 
     coloreM = new QMenu();
+    coloreM->setStyleSheet("QMenu {"
+                            "background-color: white;"
+                            "border: 1px solid #336b8a;}"
+                            "QMenu::item:selected {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}"
+                            "QMenu::item:checked {"
+                            "background-color: rgba(245, 245, 245, 200);"
+                            "color: black;}");
     QVBoxLayout *coloreV = new QVBoxLayout(coloreM);
     QGridLayout *coloreG = new QGridLayout(coloreM);
-    coloreM->setLayout(coloreV);
     coloreV->addLayout(coloreG);
+    coloreM->setLayout(coloreV);
 
     QPushButton *neroB = new QPushButton(this);
     neroB->setStyleSheet("background-color:rgb(0,0,0)");
@@ -322,6 +344,15 @@ void Editor::setupColor() {
     coloreV->addWidget(editB);
     editB->setCheckable(true);
     editB->setAutoExclusive(true);
+    editB->setStyleSheet("QPushButton {"
+                         "color: #3a848a;"
+                         "font-size: 12px;"
+                         "border: 1px solid #3a848a;"
+                         "padding: 5px;"
+                         "font-family: 'Calibri';"
+                         "background-color:none;}"
+                         "QPushButton:hover {"
+                         "border:2px solid #3a848a;}");
 
     QObject::connect(editB, SIGNAL(clicked(bool)), this, SLOT(on_actioncolore_triggered()));
 

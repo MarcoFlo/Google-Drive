@@ -15,6 +15,7 @@ LoginPage::LoginPage(QWidget *parent) :
     ui->PasswordEdit->setText("1234");
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     //ui->Login->setShortcut(Qt::Key_Enter);
+
 }
 
 LoginPage::~LoginPage() {

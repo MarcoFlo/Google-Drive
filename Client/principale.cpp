@@ -29,6 +29,14 @@ void Principale::closeEvent( QCloseEvent* event )
 
 void Principale::setupUI()
 {
+    setWindowTitle("Just Wtite");
+    QIcon *ic = new QIcon(":/images/img/logoVero.png");
+    setWindowIcon(*ic);
+
+
+    QPixmap *pixmap = new QPixmap(":/images/img/logoVero.png");
+    ui->icona->setPixmap(*pixmap);
+    
 
     auto *accountM = new QMenu();
     auto *accountV = new QVBoxLayout(accountM);
