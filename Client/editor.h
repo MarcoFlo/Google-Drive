@@ -100,7 +100,7 @@ private slots:
 
         void readFile();
 
-        void saveFile();
+        void insertFile(char r);
 
 private:
     Ui::Editor *ui;
@@ -141,6 +141,7 @@ private:
 
     CharacterClient *client_;
 
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // EDITOR_H

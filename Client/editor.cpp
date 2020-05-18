@@ -25,6 +25,7 @@
 #include "comunication/Symbol.h"
 #include <QtCore>
 #include <QKeyEvent>
+#include <regex>
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -66,7 +67,8 @@ void Editor::setupGeneral() {
     setupColor();
     ui->toolBar_2->insertSeparator(ui->actiongrassetto);
     readFile();
-    QObject::connect(ui->txt, SIGNAL(textChanged()), this, SLOT(saveFile()));
+    ui->txt->installEventFilter(this);
+    //QObject::connect(ui->txt, SIGNAL(keyPressEvent(QKeyEvent*)), this, SLOT(saveFile(QKeyEvent*)));
     on_txt_cursorPositionChanged();
 
 }
@@ -748,12 +750,11 @@ void Editor::readFile() {
     }
 }
 
-void Editor::saveFile() {
+void Editor::insertFile(char r) {
     QTextCursor cur = ui->txt->textCursor();
-    cur.movePosition(QTextCursor::PreviousCharacter,QTextCursor::KeepAnchor,1);
     std::vector<int> pos;
     pos.push_back(cur.position());
-    Symbol *symbol = new Symbol(cur.selectedText().toStdString()[0],client_->getUsername(), pos);
+    Symbol *symbol = new Symbol(r,client_->getUsername(), pos);
     client_->InsertSymbols(*symbol, false);
    /* if(event->key() == Qt::Key_Delete)
     {
@@ -768,6 +769,8 @@ void Editor::saveFile() {
     }*/
 
 }
+
+
 
 /*void Editor::setupZoom() {
  * /*MENU ZOOM
@@ -815,3 +818,38 @@ void Editor::saveFile() {
 
        QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));*/
  // }
+
+ bool Editor::eventFilter(QObject* obj, QEvent *event)
+ {
+     const std::regex pattern(R"(\w+|\W)");
+     if(obj == ui->txt)
+     {
+         if (event->type() == QEvent::KeyPress)
+         {
+             QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+             std::cout << keyEvent->key() << "\n";
+             if (keyEvent->key() == Qt::Key_Up)
+             {
+                 qDebug() << "lineEdit -> Qt::Key_Up";
+                 return true;
+             }  else if(keyEvent->key() == Qt::Key_Down)
+             {
+                 qDebug() << "lineEdit -> Qt::Key_Down";
+                 return true;
+             } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
+                 std::cout << "cancella\n";
+             }
+             else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
+             keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
+             keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave || keyEvent->key() == Qt::Key_Igrave ||
+             keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
+                 insertFile(keyEvent->text().toStdString()[0]);
+             }
+             else if(std::regex_match(keyEvent->text().toStdString(), pattern)) {
+                 insertFile(keyEvent->text().toStdString()[0]);
+             }
+         }
+         return false;
+     }
+     return QMainWindow::eventFilter(obj, event);
+ }
