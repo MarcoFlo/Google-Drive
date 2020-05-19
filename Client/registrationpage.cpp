@@ -36,10 +36,17 @@ void RegistrationPage::on_registrati_clicked()
         QString username = ui->emailEdit->text();
         QString pass = ui->passwordEdit->text();
         QString pass2 = ui->password2Edit->text();
+        //QString nome = ui->usernameEdit->text();
+        //QString cognome = ui->nomeEdit->text();
         protobuf::User userR;
+        //protobuf::ProfileInfo profInfo;
         userR.set_username(username.toStdString());
         userR.set_password(pass.toStdString());
         userR.set_passwordr(pass2.toStdString());
+        /*profInfo.set_name(nome.toStdString());
+        profInfo.set_surname(cognome.toStdString());
+        profInfo.set_username(username.toStdString());
+        profInfo.set_allocated_user(&userR);*/
         std::string error = this->client_->Register(userR);
         if (error.empty()) {
             emit closeRReg();

@@ -39,6 +39,8 @@ public:
 
     std::string getUsername();
 
+    //std::string getPassword();
+
     std::list<int> searchFileInfo(const std::string&);
 
     protobuf::FileInfo getFileInfo(const std::string&);
@@ -56,6 +58,7 @@ private:
     std::string currentFileIdentifier_;
     protobuf::FilesInfoList lastFileInfoList_;
     std::string username_;
+    //std::string password_;
 
     //current opened file
     protobuf::SymbolVector symbolVector_;

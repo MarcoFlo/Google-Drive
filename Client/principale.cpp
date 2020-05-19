@@ -54,7 +54,10 @@ void Principale::setupUI()
 
     auto *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
-    nome->setText("nome");
+    //QString s = client_->getNome().c_str();
+    //s.append(" ");
+    //s.append(client_->getCognome().c_str());
+    //nome->setText(s);
     nome->setStyleSheet("color: #3a848a;"
                         "font-size: 15px;"
                         "border: none;"
@@ -65,7 +68,7 @@ void Principale::setupUI()
 
     auto *mail = new QLabel(accountM);
     mail->setAlignment(Qt::AlignCenter);
-    mail->setText("mail");
+    //mail->setText(client_->getUsername().c_str());
     mail->setStyleSheet("color: #3a848a;"
                         "font-size: 15px;"
                         "border: none;"
@@ -235,6 +238,7 @@ void Principale::on_importa_clicked()
 void Principale::on_impostazioni_clicked()
 {
     Account account;
+    //account.setUser(client_);
     account.setModal(true);
     account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     account.exec();

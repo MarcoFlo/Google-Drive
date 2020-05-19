@@ -78,6 +78,7 @@ std::string CharacterClient::Login(protobuf::User &user) {
     context.AddMetadata("username", user.username());
     context.AddMetadata("password", user.password());
     username_ = user.username();
+    //password_ = user.password();
     protobuf::Identifier reply;
     grpc::Status status;
 
@@ -272,6 +273,10 @@ protobuf::SymbolVector CharacterClient::getSymbolVector() {
 std::string CharacterClient::getUsername() {
     return username_;
 }
+
+/*std::string CharacterClient::getPassword() {
+    return password_;
+}*/
 
 std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
     int i = 0;
