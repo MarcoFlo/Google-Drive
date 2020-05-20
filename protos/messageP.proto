@@ -2,7 +2,7 @@ syntax = "proto3";
 package protobuf;
 
 service CharacterService {
-    rpc Register (User) returns (Empty) {}
+    rpc Register (ProfileInfo) returns (Empty) {}
     rpc Login (User) returns (Identifier) {}
     rpc Logout (Empty) returns (Empty) {}
 
@@ -50,8 +50,8 @@ message FileInfo {
     string filename = 9;
     string fileIdentifier = 70;
     int32 size = 10;
-    string usernameO = 11; //email Owner
-    repeated string usernamesAL = 12; //userAccessList
+    string emailO = 11; //email Owner
+    repeated string emailAL = 12; //userAccessList
 }
 
 message FilesInfoList {
@@ -59,7 +59,7 @@ message FilesInfoList {
 }
 
 message User {
-    string username = 14;
+    string email = 14;
     string password = 15;
     string passwordR = 16;
 }

@@ -42,9 +42,9 @@ GetSymbolsCallData::HandleSubscribedCall(
 
         std::cout << "Get Symbols requested ->" << request_.filename() << std::endl;
 
-        if (principal == request_.usernameo() ||
-            std::find(request_.usernamesal().begin(), request_.usernamesal().end(), principal) !=
-            request_.usernamesal().end()) {
+        if (principal == request_.emailo() ||
+            std::find(request_.emailal().begin(), request_.emailal().end(), principal) !=
+            request_.emailal().end()) {
             //authorized
             subscribedClientMap[request_.fileidentifier()].push_back(this);
         } else {

@@ -1,4 +1,4 @@
-    #include <string>
+#include <string>
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "RegisterCallData.h"
@@ -15,7 +15,11 @@ void RegisterCallData::Proceed(bool ok) {
         service_->RequestRegister(&ctx_, &request_, &responder_, cq_, cq_,
                                   this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a Register request from: " << request_.username() << std::endl;
+        std::cout << "Received a Register request from: " << request_.user().email() << std::endl;
+
+        //todo gestire queste ed eventuali altre informazioni con un apposita struttura dati da mettere su file
+        std::cout << request_.username() << "\t" << request_.name() << "\t" << request_.surname() << std::endl;
+
         new RegisterCallData(service_, cq_);
         status_ = FINISH;
         responder_.Finish(reply_, grpc::Status::OK, this);

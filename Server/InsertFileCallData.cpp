@@ -9,7 +9,7 @@ protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &fil
     protobuf::FileInfo fileInfo;
     auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch());
     fileInfo.set_fileidentifier(std::to_string(ns.count()) + filename);
-    fileInfo.set_usernameo(owner);
+    fileInfo.set_emailo(owner);
     fileInfo.set_filename(filename);
     return fileInfo;
 }

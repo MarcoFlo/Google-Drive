@@ -160,7 +160,7 @@ QPushButton:hover
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="username">
+            <widget class="QLabel" name="email">
              <property name="styleSheet">
               <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -175,7 +175,7 @@ background-color:none</string>
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLineEdit" name="usernameEdit">
+            <widget class="QLineEdit" name="emailEdit">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -540,7 +540,7 @@ QPushButton:hover
  <resources/>
  <connections>
   <connection>
-   <sender>usernameEdit</sender>
+   <sender>emailEdit</sender>
    <signal>returnPressed()</signal>
    <receiver>registrati</receiver>
    <slot>click()</slot>
