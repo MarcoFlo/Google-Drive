@@ -33,21 +33,21 @@ void RegistrationPage::on_registrati_clicked()
     } else if(!is_pass_valid()) {
         QMessageBox::warning(this, "Registration", "Le password non corrispondono");
     } else {
-        QString username = ui->emailEdit->text();
+        QString email = ui->emailEdit->text();
         QString pass = ui->passwordEdit->text();
         QString pass2 = ui->password2Edit->text();
-        //QString nome = ui->usernameEdit->text();
+        //QString nome = ui->emailEdit->text();
         //QString cognome = ui->nomeEdit->text();
-        protobuf::User userR;
+        protobuf::ProfileInfo profileInfo;
         //protobuf::ProfileInfo profInfo;
-        userR.set_username(username.toStdString());
-        userR.set_password(pass.toStdString());
-        userR.set_passwordr(pass2.toStdString());
+        profileInfo.mutable_user()->set_email(email.toStdString());
+        profileInfo.mutable_user()->set_password(pass.toStdString());
+        profileInfo.mutable_user()->set_passwordr(pass2.toStdString());
         /*profInfo.set_name(nome.toStdString());
         profInfo.set_surname(cognome.toStdString());
-        profInfo.set_username(username.toStdString());
+        profInfo.email(email.toStdString());
         profInfo.set_allocated_user(&userR);*/
-        std::string error = this->client_->Register(userR);
+        std::string error = this->client_->Register(profileInfo);
         if (error.empty()) {
             emit closeRReg();
         }
@@ -89,6 +89,6 @@ bool RegistrationPage::is_pass_valid()
 
 bool RegistrationPage::is_something_empty()
 {
-    return !ui->usernameEdit->text().isEmpty() && !ui->nomeEdit->text().isEmpty() && !ui->emailEdit->text().isEmpty() &&
+    return !ui->emailEdit->text().isEmpty() && !ui->nomeEdit->text().isEmpty() && !ui->emailEdit->text().isEmpty() &&
            !ui->passwordEdit->text().isEmpty() && !ui->password2Edit->text().isEmpty();
 }

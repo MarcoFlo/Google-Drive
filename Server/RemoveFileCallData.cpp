@@ -37,7 +37,7 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
                                             });
         if (fileToBeRemoved != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if ((*fileToBeRemoved).usernameo() == request_.usernameo()) {
+            if ((*fileToBeRemoved).emailo() == request_.emailo()) {
                 //se ha l'autorizzazione
                 if (remove(("fileContainer/" + request_.fileidentifier()).c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file

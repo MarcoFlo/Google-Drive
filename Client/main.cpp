@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 
     /*
     protobuf::User user;
-    user.set_username("provabase@test.it");
+    user.set_email("provabase@test.it");
     user.set_password("1234");
     user.set_passwordr("1234");
     client.Register(user);

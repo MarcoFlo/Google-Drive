@@ -13,7 +13,7 @@ public:
 
     void AsyncCompleteRpc(CharacterClient *pClient);
 
-    std::string Register(protobuf::User &user);
+    std::string Register(protobuf::ProfileInfo &profileInfo);
 
     std::string Login(protobuf::User &user);
 
@@ -25,7 +25,7 @@ public:
 
     std::string GetFiles();
 
-    std::string ShareFile(const std::string &fileIdentifier, const std::string &usernameShare);
+    std::string ShareFile(const std::string &fileIdentifier, const std::string &emailShare);
 
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
@@ -37,7 +37,7 @@ public:
 
     protobuf::SymbolVector getSymbolVector();
 
-    std::string getUsername();
+    std::string getEmail();
 
     //std::string getPassword();
 
@@ -57,7 +57,7 @@ private:
     std::string token_;
     std::string currentFileIdentifier_;
     protobuf::FilesInfoList lastFileInfoList_;
-    std::string username_;
+    std::string email_;
     //std::string password_;
 
     //current opened file

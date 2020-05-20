@@ -50,8 +50,8 @@ message FileInfo {
     string filename = 9;
     string fileIdentifier = 70;
     int32 size = 10;
-    string usernameO = 11; //email Owner
-    repeated string usernamesAL = 12; //userAccessList
+    string emailO = 11; //email Owner
+    repeated string emailAL = 12; //userAccessList
 }
 
 message FilesInfoList {

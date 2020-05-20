@@ -23,11 +23,11 @@ LoginPage::~LoginPage() {
 }
 
 void LoginPage::on_Login_clicked() {
-    QString username = ui->EmailEdit->text();
+    QString email = ui->EmailEdit->text();
     QString pass = ui->PasswordEdit->text();
 
     protobuf::User userL;
-    userL.set_username(username.toStdString());
+    userL.set_email(email.toStdString());
     userL.set_password(pass.toStdString());
     std::string error = client_->Login(userL);
 
@@ -46,7 +46,7 @@ void LoginPage::on_registrati_clicked() {
 
 void LoginPage::on_closeRReg_signal() {
     ui->regi->setVisible(true);
-    ui->regi->setText("Registrazione completata. Accedi inserendo username e password");
+    ui->regi->setText("Registrazione completata. Accedi inserendo email e password");
     this->show();
 }
 

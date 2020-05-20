@@ -54,14 +54,14 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
 }
 
 
-std::string CharacterClient::Register(protobuf::User &user) {
+std::string CharacterClient::Register(protobuf::ProfileInfo &profileInfo) {
     grpc::ClientContext context;
-    context.AddMetadata("username", user.username());
-    context.AddMetadata("password", user.password());
-    context.AddMetadata("passwordr", user.passwordr());
+    context.AddMetadata("email", profileInfo.user().email());
+    context.AddMetadata("password", profileInfo.user().password());
+    context.AddMetadata("passwordr", profileInfo.user().passwordr());
     protobuf::Empty reply;
     grpc::Status status;
-    status = stub_->Register(&context, user, &reply);
+    status = stub_->Register(&context, profileInfo, &reply);
 
     if (status.ok()) {
         std::cout << "Register rpc was successful" << std::endl;
@@ -75,9 +75,9 @@ std::string CharacterClient::Register(protobuf::User &user) {
 
 std::string CharacterClient::Login(protobuf::User &user) {
     grpc::ClientContext context;
-    context.AddMetadata("username", user.username());
+    context.AddMetadata("email", user.email());
     context.AddMetadata("password", user.password());
-    username_ = user.username();
+    email_ = user.email();
     //password_ = user.password();
     protobuf::Identifier reply;
     grpc::Status status;
@@ -174,10 +174,10 @@ std::string CharacterClient::GetFiles() {
     }
 }
 
-std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const std::string &usernameShare) {
+std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const std::string &emailShare) {
     grpc::ClientContext context;
     context.AddMetadata("token", token_);
-    context.AddMetadata("usernameshare", usernameShare);
+    context.AddMetadata("emailshare", emailShare);
 
     protobuf::FileInfo request;
     request.set_fileidentifier(fileIdentifier);
@@ -270,8 +270,8 @@ protobuf::SymbolVector CharacterClient::getSymbolVector() {
     return symbolVector_;
 }
 
-std::string CharacterClient::getUsername() {
-    return username_;
+std::string CharacterClient::getEmail() {
+    return email_;
 }
 
 /*std::string CharacterClient::getPassword() {

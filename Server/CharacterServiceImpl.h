@@ -18,7 +18,7 @@ private:
     protobuf::CharacterService::AsyncService service_;
     std::unique_ptr<grpc::Server> server_;
     std::map<std::string, std::vector<AbstractSubscribedCallData *>> subscribedClientMap; //key -> uniqueFileId, value-> vector of client with a pending GetSymbols
-    protobuf::FileClientMap fileClientMap; // key -> username, value -> FilesInfoList
+    protobuf::FileClientMap fileClientMap; // key -> email, value -> FilesInfoList
 
 };
 

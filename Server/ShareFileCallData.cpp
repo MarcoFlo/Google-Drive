@@ -36,14 +36,14 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
 
         if (fileToBeShared != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if (fileToBeShared->usernameo() == principal) {
+            if (fileToBeShared->emailo() == principal) {
                 //se ha l'autorizzazione
                 std::string emailShare = ctx_.auth_context()->FindPropertyValues(
                         "emailshare").front().data();
                 std::cout << " to " << emailShare << " for " << fileToBeShared->filename() << std::endl;
 
-                //usernameShare added to the list of the owner
-                fileToBeShared->add_usernamesal(emailShare);
+                //emailShare added to the list of the owner
+                fileToBeShared->add_emailal(emailShare);
 
                 //fileInfo added to the list of the sharer
                 protobuf::FileInfo file_copy(*fileToBeShared);

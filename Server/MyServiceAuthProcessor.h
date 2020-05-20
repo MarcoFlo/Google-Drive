@@ -32,15 +32,15 @@ private:
         }
 
         static const std::string &PeerIdentityPropertyName() {
-            static std::string _("username");
+            static std::string _("email");
             return _;
         }
     };
 
-    //key=username, value=protobuf:User da salvare su db
+    //key=email, value=protobuf:User da salvare su db
     protobuf::UserMap userMap;
 
-    //key=identifier, value=username da tenere a runtime
+    //key=identifier, value=email da tenere a runtime
     std::map<std::string, std::string> tokenMap;
 
     int idCounter;
