@@ -16,7 +16,7 @@ void LoginCallData::Proceed(bool ok) {
         service_->RequestLogin(&ctx_, &request_, &responder_, cq_, cq_,
                                this);
     } else if (status_ == PROCESS) {
-        std::cout << "Received a Login request from: " << request_.username() << std::endl;
+        std::cout << "Received a Login request from: " << request_.email() << std::endl;
         status_ = FINISH;
         new LoginCallData(service_, cq_);
 

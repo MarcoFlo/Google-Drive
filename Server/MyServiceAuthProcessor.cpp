@@ -61,8 +61,8 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
 grpc::Status
 MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::InputMetadata &auth_metadata) {
 
-    auto username_kv = auth_metadata.find("username");
-    if (username_kv == auth_metadata.end())
+    auto email_kv = auth_metadata.find("email");
+    if (email_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username mancante");
 
     auto pw_kv = auth_metadata.find("password");
@@ -73,16 +73,16 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
     if (pwR_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password ripetuta mancante");
 
-    std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
+    std::string email = std::string(email_kv->second.data(), (email_kv->second).length());
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
     std::string pwR = std::string(pwR_kv->second.data(), (pwR_kv->second).length());
 
-    if (userMap.usermap().contains(username))
+    if (userMap.usermap().contains(email))
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username già in uso");
 
     if (pw != pwR)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
-    google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> mapPair(username, pw);
+    google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> mapPair(email, pw);
     UpdateUserMap(mapPair);
     return grpc::Status::OK;
 }
@@ -90,18 +90,18 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
 grpc::Status
 MyServiceAuthProcessor::ProcessLogin(const InputMetadata &auth_metadata,
                                      grpc::AuthContext *context) {
-    auto username_kv = auth_metadata.find("username");
-    if (username_kv == auth_metadata.end())
+    auto email_kv = auth_metadata.find("email");
+    if (email_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username mancante");
 
     auto pw_kv = auth_metadata.find("password");
     if (pw_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password mancante");
 
-    std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
+    std::string email = std::string(email_kv->second.data(), (email_kv->second).length());
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
 
-    auto user_kv = userMap.usermap().find(username);
+    auto user_kv = userMap.usermap().find(email);
     if (user_kv == userMap.usermap().end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Utente non registrato");
 
@@ -109,7 +109,7 @@ MyServiceAuthProcessor::ProcessLogin(const InputMetadata &auth_metadata,
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password sbagliata");
 
     context->AddProperty("token", std::to_string(idCounter));
-    tokenMap.insert(std::make_pair(std::to_string(idCounter), username));
+    tokenMap.insert(std::make_pair(std::to_string(idCounter), email));
     idCounter++;
 
 
@@ -123,11 +123,11 @@ grpc::Status MyServiceAuthProcessor::ProcessLogout(std::string token) {
 
 grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_metadata,
                                                       grpc::AuthContext *context) {
-    auto usernameShare_kv = auth_metadata.find("usernameshare");
-    if (usernameShare_kv != auth_metadata.end()) {
-        auto usernameShare_value = std::string(usernameShare_kv->second.data(), (usernameShare_kv->second).length());
-        if (userMap.usermap().contains(usernameShare_value)) {
-            context->AddProperty("usernameshare", usernameShare_value);
+    auto emailShare_kv = auth_metadata.find("emailshare");
+    if (emailShare_kv != auth_metadata.end()) {
+        auto emailShare_value = std::string(emailShare_kv->second.data(), (emailShare_kv->second).length());
+        if (userMap.usermap().contains(emailShare_value)) {
+            context->AddProperty("emailshare", emailShare_value);
             return grpc::Status::OK;
         } else {
             return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
@@ -136,7 +136,7 @@ grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_
     }
     else {
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
-                            "Specificare il metadata usernameshare");
+                            "Specificare il metadata emailshare");
     }
 }
 
