@@ -94,7 +94,7 @@ private slots:
 
         void resizeEvent(QResizeEvent* event);
 
-        void on_impostazioni_clicked();
+        //void on_impostazioni_clicked();
 
         void on_logout_clicked();
 

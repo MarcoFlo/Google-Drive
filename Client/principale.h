@@ -13,6 +13,7 @@
 #include "editor.h"
 #include "loginpage.h"
 #include "splashscreen.h"
+#include <QLabel>
 
 namespace Ui {
 class Principale;
@@ -92,6 +93,8 @@ private slots:
 
     void showSplash();
 
+    void cellClicked();
+
     void closeSplash();
 
     void on_annullaCerca_clicked();
@@ -101,7 +104,11 @@ private:
 
     Editor *e;
 
+    QLabel *mail;
+
     LoginPage *login;
+
+    Account *account;
 
     RegistrationPage *regist;
 

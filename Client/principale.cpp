@@ -50,7 +50,7 @@ void Principale::setupUI()
     icona->setAlignment(Qt::AlignCenter);
     icona->setStyleSheet("border-radius: 12px;"
                                    "border: 1px white;"
-                                   "padding: 10px;");*/
+                                   "padding: 10px;");
 
     auto *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
@@ -64,11 +64,10 @@ void Principale::setupUI()
                         "padding: 5px;"
                         "font-family: 'Calibri';"
                         "background-color:none");
-    accountV->addWidget(nome);
+    accountV->addWidget(nome);*/
 
-    auto *mail = new QLabel(accountM);
+    mail = new QLabel(accountM);
     mail->setAlignment(Qt::AlignCenter);
-    //mail->setText(client_->getUsername().c_str());
     mail->setStyleSheet("color: #3a848a;"
                         "font-size: 15px;"
                         "border: none;"
@@ -185,6 +184,7 @@ void Principale::setupUI()
     ui->lista->setHorizontalHeaderLabels(etichette);*/
 
     connect(ui->lista, &QTableWidget::cellDoubleClicked, this, &Principale::cellDoubleClicked);
+    connect(ui->lista, &QTableWidget::cellClicked, this, &Principale::cellClicked);
 
     ui->annullaCerca->setVisible(false);
 }
@@ -237,11 +237,11 @@ void Principale::on_importa_clicked()
 
 void Principale::on_impostazioni_clicked()
 {
-    Account account;
+    account = new Account(this, client_);
     //account.setUser(client_);
-    account.setModal(true);
-    account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    account.exec();
+    //account->setModal(true);
+    //account->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    account->show();
 }
 
 void Principale::on_logout_clicked()
@@ -309,6 +309,18 @@ void Principale::cellDoubleClicked() {
     int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
     std::string file = clientFiles_->fileil(fileindex).fileidentifier();
     open_edi(&file);
+}
+
+void Principale::cellClicked()
+{
+    QItemSelectionModel *selitem = ui->lista->selectionModel();
+    int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
+    std::string fileind = clientFiles_->fileil(fileindex).fileidentifier();
+    protobuf::FileInfo *file_ = new protobuf::FileInfo();
+    *file_ = client_->getFileInfo(fileind);
+
+    ui->proprietarioL->setText(QString::fromStdString(file_->emailo()));
+    ui->dataL->setText(QString::fromStdString(file_->date()));
 }
 
 void Principale::on_row_select()
@@ -431,6 +443,7 @@ void Principale::onLoginReturn(CharacterClient* cli)
     client_=cli;
     delete login;
     insertTab();
+    mail->setText(QString::fromStdString(client_->getEmail()));
     this->setEnabled(TRUE);
 }
 

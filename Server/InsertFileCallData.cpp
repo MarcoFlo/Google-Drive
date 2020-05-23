@@ -4,6 +4,7 @@
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "InsertFileCallData.h"
+#include <ctime>
 
 protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &filename) {
     protobuf::FileInfo fileInfo;
@@ -11,6 +12,20 @@ protobuf::FileInfo MakeFileInfo(const std::string &owner, const std::string &fil
     fileInfo.set_fileidentifier(std::to_string(ns.count()) + filename);
     fileInfo.set_emailo(owner);
     fileInfo.set_filename(filename);
+
+    char buffer [80];
+    time_t currentTime;
+    time(&currentTime);
+    struct tm *localTime = localtime(&currentTime);
+    strftime(buffer, 80, "%d/%m/%Y, %I:%M%p", localTime);
+    fileInfo.set_date(buffer);
+
+    /*time_t currentTime;
+    time(&currentTime);
+    fileInfo.set_date(asctime(localtime(&currentTime)));*/
+
+
+
     return fileInfo;
 }
 

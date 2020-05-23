@@ -73,7 +73,7 @@ void Editor::setupGeneral() {
 
 }
 
-void Editor::setupAccount() {
+/*void Editor::setupAccount() {
     //ACCOUNT
 
     QMenu *accountM = new QMenu();
@@ -120,7 +120,7 @@ void Editor::setupAccount() {
     ui->toolBar_3->addWidget(empty);
 
     ui->toolBar_3->addWidget(account);
-}
+}*/
 
 void Editor::setupFont() {
     //MENU FONT
@@ -695,13 +695,13 @@ void Editor::resizeEvent(QResizeEvent* event)
     on_txt_cursorPositionChanged();
 }
 
-void Editor::on_impostazioni_clicked()
+/*void Editor::on_impostazioni_clicked()
 {
     Account account;
     account.setModal(true);
     account.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     account.exec();
-}
+}*/
 
 void Editor::on_logout_clicked()
 {

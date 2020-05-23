@@ -323,6 +323,9 @@ QLineEdit:focus
 }
 </string>
             </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
            </widget>
           </item>
           <item row="4" column="0">
@@ -369,6 +372,9 @@ QLineEdit:focus
 	border:2px solid #3a848a;
 }
 </string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
             </property>
            </widget>
           </item>

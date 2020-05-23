@@ -78,7 +78,7 @@ std::string CharacterClient::Login(protobuf::User &user) {
     context.AddMetadata("email", user.email());
     context.AddMetadata("password", user.password());
     email_ = user.email();
-    //password_ = user.password();
+    password_ = user.password();
     protobuf::Identifier reply;
     grpc::Status status;
 
@@ -126,8 +126,9 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
     status = stub_->InsertFile(&context, request, &reply);
 
     if (status.ok()) {
-        std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
+        std::cout << "Insert file rpc was successful -> " << reply.filename() << reply.date() << std::endl;
         currentFileIdentifier_ = reply.fileidentifier();
+
         // todo capire se rimuovere
 //        GetSymbols(reply);
         return reply.fileidentifier();
@@ -135,6 +136,7 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
         std::cout << "Insert file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
         return status.error_message();
     }
+
 }
 
 std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
@@ -274,9 +276,9 @@ std::string CharacterClient::getEmail() {
     return email_;
 }
 
-/*std::string CharacterClient::getPassword() {
+std::string CharacterClient::getPassword() {
     return password_;
-}*/
+}
 
 std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
     int i = 0;

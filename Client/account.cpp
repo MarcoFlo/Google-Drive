@@ -2,18 +2,26 @@
 #include "ui_account.h"
 #include <QMessageBox>
 #include <regex>
-#include "messageP.grpc.pb.h"
-#include <grpcpp/grpcpp.h>
+//#include <QFileDialog>
+//#include <QMessageBox>
+#include <QDebug>
+#include <sstream>
+#include "principale.h"
+#include "ui_principale.h"
+#include <QCloseEvent>
 
-Account::Account(QWidget *parent) :
-    QDialog(parent),
+
+Account::Account(QWidget *parent, CharacterClient *user) :
+        QDialog(parent),
     ui(new Ui::Account)
 {
+    client_ = user;
     ui->setupUi(this);
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     //ui->lineEdit->setText(client_->getNome().c_str());
     //ui->lineEdit_2->setText(client_->getCognome().c_str());
-    //ui->lineEdit_3->setText(client_->getUsername().c_str());
-    //ui->lineEdit_4->setText(client_->getPassword().c_str());
+    ui->lineEdit_3->setText(client_->getEmail().c_str());
+    ui->lineEdit_4->setText(client_->getPassword().c_str());
 }
 
 Account::~Account()
@@ -26,6 +34,12 @@ Account::~Account()
 }*/
 
 void Account::on_pushButton_clicked()
+{
+    this->hide();
+    //parent->attivo(true);
+}
+
+void Account::on_pushButton_2_clicked()
 {
     if(is_something_empty() == false)
     {
@@ -41,7 +55,7 @@ void Account::on_pushButton_clicked()
     {
         //cambia
     }*/
-    //if(client_->getUsername().c_str() != ui->lineEdit_3->text())
+    if(client_->getEmail().c_str() != ui->lineEdit_3->text())
     {
         if(is_email_valid() == false)
         {

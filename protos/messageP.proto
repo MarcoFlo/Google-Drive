@@ -48,6 +48,7 @@ message Chunk {
 
 message FileInfo {
     string filename = 9;
+    string date = 22;
     string fileIdentifier = 70;
     int32 size = 10;
     string emailO = 11; //email Owner
