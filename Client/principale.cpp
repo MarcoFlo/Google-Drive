@@ -191,6 +191,14 @@ void Principale::setupUI()
 
 void Principale::on_nuovo_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     Nuovo nuovo;
     //nuovo.setClient(client_);
     nuovo.setModal(true);
@@ -201,6 +209,14 @@ void Principale::on_nuovo_clicked()
 
 void Principale::on_condividi_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     Condividi condividi;
     condividi.setModal(true);
     condividi.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -211,6 +227,14 @@ void Principale::on_condividi_clicked()
 
 void Principale::on_scarica_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     QString fileName = QFileDialog::getSaveFileName(this,
            tr("Salva con nome"), "C:/Users/gigiv/Downloads/untitled.pdf",
            tr("Adobe Acrobat Document (*.pdf);;Tutti i file (*.*)"));
@@ -229,6 +253,14 @@ void Principale::on_scarica_clicked()
 
 void Principale::on_importa_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     Importa importa;
     importa.setModal(true);
     importa.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -237,6 +269,14 @@ void Principale::on_importa_clicked()
 
 void Principale::on_impostazioni_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     account = new Account(this, client_);
     //account.setUser(client_);
     //account->setModal(true);
@@ -246,6 +286,14 @@ void Principale::on_impostazioni_clicked()
 
 void Principale::on_logout_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     std::string error = client_->Logout();
     ui->lista->clearContents();
     if (error.empty()) {
@@ -263,6 +311,14 @@ void Principale::on_logout_clicked()
 
 void Principale::on_elimina_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     QItemSelectionModel *selitem = ui->lista->selectionModel();
     int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
     client_->RemoveFile(clientFiles_->fileil(fileindex));
@@ -271,6 +327,14 @@ void Principale::on_elimina_clicked()
 
 void Principale::on_cerca_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     std::string cerca= ui->cercaBarra->text().toStdString();
     if(cerca.empty())
     {
@@ -308,6 +372,14 @@ void Principale::cellDoubleClicked() {
     QItemSelectionModel *selitem = ui->lista->selectionModel();
     int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
     std::string file = clientFiles_->fileil(fileindex).fileidentifier();
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     open_edi(&file);
 }
 
@@ -318,9 +390,28 @@ void Principale::cellClicked()
     std::string fileind = clientFiles_->fileil(fileindex).fileidentifier();
     protobuf::FileInfo *file_ = new protobuf::FileInfo();
     *file_ = client_->getFileInfo(fileind);
-
+    ui->proprietarioL->setText("");
     ui->proprietarioL->setText(QString::fromStdString(file_->emailo()));
+    ui->dataL->setText("");
     ui->dataL->setText(QString::fromStdString(file_->date()));
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
+
+    for(int i = 0; i < file_->emailal_size(); i++)
+    {
+        QLabel *item = new QLabel(this);
+        item->setStyleSheet("color: black;"
+                            "font-size: 12px;"
+                            "font-family: 'Calibri';"
+                            "background-color:none;");
+        item->setText(file_->emailal(i).c_str());
+        ui->verticalLayout_4->addWidget(item);
+
+    }
 }
 
 void Principale::on_row_select()
@@ -482,6 +573,14 @@ void Principale::closeSplash() {
 
 void Principale::on_annullaCerca_clicked()
 {
+    ui->proprietarioL->setText("");
+    ui->dataL->setText("");
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
     ui->cercaBarra->setText("");
     on_cerca_clicked();
 }

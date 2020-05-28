@@ -160,7 +160,7 @@ QPushButton:hover
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="email">
+            <widget class="QLabel" name="nome_3">
              <property name="styleSheet">
               <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -175,7 +175,7 @@ background-color:none</string>
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QLineEdit" name="emailEdit">
+            <widget class="QLineEdit" name="nomeEdit">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -225,7 +225,7 @@ QLineEdit:focus
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QLabel" name="nome">
+            <widget class="QLabel" name="cognome">
              <property name="styleSheet">
               <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -240,7 +240,7 @@ background-color:none</string>
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QLineEdit" name="nomeEdit">
+            <widget class="QLineEdit" name="cognomeEdit">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -540,7 +540,7 @@ QPushButton:hover
  <resources/>
  <connections>
   <connection>
-   <sender>emailEdit</sender>
+   <sender>nomeEdit</sender>
    <signal>returnPressed()</signal>
    <receiver>registrati</receiver>
    <slot>click()</slot>
@@ -556,7 +556,7 @@ QPushButton:hover
    </hints>
   </connection>
   <connection>
-   <sender>nomeEdit</sender>
+   <sender>cognomeEdit</sender>
    <signal>returnPressed()</signal>
    <receiver>registrati</receiver>
    <slot>click()</slot>
@@ -572,7 +572,7 @@ QPushButton:hover
    </hints>
   </connection>
   <connection>
-   <sender>emailEdit</sender>
+   <sender>nomeEdit</sender>
    <signal>returnPressed()</signal>
    <receiver>registrati</receiver>
    <slot>click()</slot>
