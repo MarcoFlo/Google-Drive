@@ -113,7 +113,7 @@ void CharacterServiceImpl::LoadFileClienMap() {
     std::ifstream ifs("fileClientMap.data", std::ios_base::in | std::ios_base::binary);
     if (ifs.peek() != EOF) {
         if (!fileClientMap.ParseFromIstream(&ifs)) {
-            std::cerr << "La lettura di userMap.data è fallita" << std::endl;
+            std::cerr << "La lettura di fileClientMap.data è fallita" << std::endl;
             exit(1);
         }
         std::cout << "Sono stati caricati i seguenti dati di accesso ai file: " << std::endl;

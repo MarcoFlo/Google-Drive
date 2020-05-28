@@ -23,7 +23,7 @@ private:
 
     void LoadUserMap();
 
-    void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair);
+    void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> &pair);
 
     struct Const {
         static const std::string &TokenKeyName() {

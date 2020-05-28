@@ -13,19 +13,18 @@
 
 Account::Account(QWidget *parent, CharacterClient *user) :
         QDialog(parent),
-    ui(new Ui::Account)
-{
+        ui(new Ui::Account) {
     client_ = user;
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    //ui->lineEdit->setText(client_->getNome().c_str());
-    //ui->lineEdit_2->setText(client_->getCognome().c_str());
-    ui->lineEdit_3->setText(client_->getEmail().c_str());
-    ui->lineEdit_4->setText(client_->getPassword().c_str());
+    protobuf::ProfileInfo profileInfoLogged = client_->getProfileInfoLogged();
+    ui->lineEdit->setText((profileInfoLogged.name() + "\t" + profileInfoLogged.surname()).c_str());
+    ui->lineEdit_2->setText(profileInfoLogged.username().c_str());
+    ui->lineEdit_3->setText(profileInfoLogged.user().email().c_str());
+    ui->lineEdit_4->setText(profileInfoLogged.user().password().c_str());
 }
 
-Account::~Account()
-{
+Account::~Account() {
     delete ui;
 }
 
@@ -33,16 +32,13 @@ Account::~Account()
     client_ = user_;
 }*/
 
-void Account::on_pushButton_clicked()
-{
+void Account::on_pushButton_clicked() {
     this->hide();
     //parent->attivo(true);
 }
 
-void Account::on_pushButton_2_clicked()
-{
-    if(is_something_empty() == false)
-    {
+void Account::on_pushButton_2_clicked() {
+    if (is_something_empty() == false) {
         QMessageBox::warning(this, "Account", "Riempire i campi vuoti");
         return;
     }
@@ -55,10 +51,8 @@ void Account::on_pushButton_2_clicked()
     {
         //cambia
     }*/
-    if(client_->getEmail().c_str() != ui->lineEdit_3->text())
-    {
-        if(is_email_valid() == false)
-        {
+    if (client_->getProfileInfoLogged().user().email().c_str() != ui->lineEdit_3->text()) {
+        if (is_email_valid() == false) {
             QMessageBox::warning(this, "Account", "L'email non è valida");
             return;
         }
@@ -67,8 +61,7 @@ void Account::on_pushButton_2_clicked()
     }
     //if(client_->getPassword().c_str() != ui->lineEdit_4->text())
     {
-        if(is_pass_valid() == false)
-        {
+        if (is_pass_valid() == false) {
             QMessageBox::warning(this, "Account", "Le password non corrispondono");
             return;
         }
@@ -78,13 +71,12 @@ void Account::on_pushButton_2_clicked()
     this->hide();
 }
 
-bool Account::is_email_valid()
-{
+bool Account::is_email_valid() {
     // define a regular expression
     const std::regex pattern(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
     bool fin;
     // try to match the string with the regular expression
-    if((fin = std::regex_match(ui->lineEdit_3->text().toStdString(), pattern))) {
+    if ((fin = std::regex_match(ui->lineEdit_3->text().toStdString(), pattern))) {
         ui->label_4->setText("Email valida");
         ui->label_4->setStyleSheet("QLabel { color : green; }");
     } else {
@@ -94,11 +86,10 @@ bool Account::is_email_valid()
     return fin;
 }
 
-bool Account::is_pass_valid()
-{
-    bool fin= ui->lineEdit_4->text() == ui->lineEdit_5->text();
+bool Account::is_pass_valid() {
+    bool fin = ui->lineEdit_4->text() == ui->lineEdit_5->text();
 
-    if(fin) {
+    if (fin) {
         ui->label_5->setText("Password uguali");
         ui->label_5->setStyleSheet("QLabel { color : green; }");
     } else {
@@ -108,8 +99,7 @@ bool Account::is_pass_valid()
     return fin;
 }
 
-bool Account::is_something_empty()
-{
+bool Account::is_something_empty() {
     return !ui->lineEdit->text().isEmpty() && !ui->lineEdit_2->text().isEmpty() && !ui->lineEdit_3->text().isEmpty() &&
            !ui->lineEdit_4->text().isEmpty();
 }

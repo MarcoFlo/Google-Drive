@@ -443,7 +443,7 @@ void Principale::onLoginReturn(CharacterClient* cli)
     client_=cli;
     delete login;
     insertTab();
-    mail->setText(QString::fromStdString(client_->getEmail()));
+    mail->setText(QString::fromStdString(client_->getProfileInfoLogged().user().email()));
     this->setEnabled(TRUE);
 }
 

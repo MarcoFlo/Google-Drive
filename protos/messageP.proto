@@ -3,7 +3,7 @@ package protobuf;
 
 service CharacterService {
     rpc Register (ProfileInfo) returns (Empty) {}
-    rpc Login (User) returns (Identifier) {}
+    rpc Login (User) returns (UserLogged) {}
     rpc Logout (Empty) returns (Empty) {}
 
     rpc InsertFile (FileName) returns (FileInfo) {}
@@ -16,7 +16,7 @@ service CharacterService {
 
     rpc SetProfile (ProfileInfo) returns (Empty) {}
     rpc GetProfile (Empty) returns (ProfileInfo) {}
-    rpc GetProfileImage (Empty) returns (stream Chunk) {}
+//    rpc GetProfileImage (Empty) returns (stream Chunk) {}
 }
 
 //numeri compresi tra 1 e 16 sono più efficienti, i message più usati/importanti hanno precedenza
@@ -65,8 +65,9 @@ message User {
     string passwordR = 16;
 }
 
-message Identifier {
+message UserLogged {
     string token = 17;
+    ProfileInfo profileInfo = 60;
 }
 
 message ProfileInfo {
@@ -77,7 +78,7 @@ message ProfileInfo {
 }
 
 message UserMap {
-    map<string, string> userMap = 30;
+    map<string, ProfileInfo> userMap = 30;
 }
 
 message FileClientMap {

@@ -73,16 +73,38 @@ MyServiceAuthProcessor::ProcessRegister(const grpc_impl::AuthMetadataProcessor::
     if (pwR_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password ripetuta mancante");
 
+    auto username_kv = auth_metadata.find("username");
+    if (username_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "username mancante");
+
+    auto name_kv = auth_metadata.find("name");
+    if (name_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "name mancante");
+
+    auto surname_kv = auth_metadata.find("surname");
+    if (surname_kv == auth_metadata.end())
+        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "surname mancante");
+
     std::string email = std::string(email_kv->second.data(), (email_kv->second).length());
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
     std::string pwR = std::string(pwR_kv->second.data(), (pwR_kv->second).length());
+    std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
+    std::string name = std::string(name_kv->second.data(), (name_kv->second).length());
+    std::string surname = std::string(surname_kv->second.data(), (surname_kv->second).length());
+
+    protobuf::ProfileInfo profileInfo;
+    profileInfo.set_username(username);
+    profileInfo.set_name(name);
+    profileInfo.set_surname(surname);
+    profileInfo.mutable_user()->set_email(email);
+    profileInfo.mutable_user()->set_password(pw);
 
     if (userMap.usermap().contains(email))
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username già in uso");
 
     if (pw != pwR)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
-    google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> mapPair(email, pw);
+    google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> mapPair(email, profileInfo);
     UpdateUserMap(mapPair);
     return grpc::Status::OK;
 }
@@ -105,10 +127,16 @@ MyServiceAuthProcessor::ProcessLogin(const InputMetadata &auth_metadata,
     if (user_kv == userMap.usermap().end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Utente non registrato");
 
-    if (user_kv->second != pw)
+    if (user_kv->second.user().password() != pw)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password sbagliata");
 
     context->AddProperty("token", std::to_string(idCounter));
+    context->AddProperty("username", user_kv->second.username());
+    context->AddProperty("name", user_kv->second.name());
+    context->AddProperty("surname", user_kv->second.surname());
+    context->AddProperty("email", user_kv->second.user().email());
+
+
     tokenMap.insert(std::make_pair(std::to_string(idCounter), email));
     idCounter++;
 
@@ -133,8 +161,7 @@ grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_
             return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
                                 "Utente con cui si vuole condividere il file non registrato");
         }
-    }
-    else {
+    } else {
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT,
                             "Specificare il metadata emailshare");
     }
@@ -156,7 +183,7 @@ void MyServiceAuthProcessor::LoadUserMap() {
 }
 
 void MyServiceAuthProcessor::UpdateUserMap(
-        google::protobuf::MapPair<std::basic_string<char>, std::basic_string<char>> &pair) {
+        google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> &pair) {
     userMap.mutable_usermap()->insert(pair);
 
     std::cout << "Verranno salvati i seguenti utenti: " << std::endl;

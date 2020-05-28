@@ -32,7 +32,7 @@ private slots:
 
         void setupGeneral();
 
-        void setupAccount();
+//        void setupAccount();
 
         void setupFont();
 

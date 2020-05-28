@@ -5,21 +5,28 @@
 int main(int argc, char **argv) {
     CharacterClient client;
 
+
+    protobuf::ProfileInfo profileInfo;
+    profileInfo.mutable_user()->set_email("provabase@test.it");
+    profileInfo.mutable_user()->set_password("1234");
+    profileInfo.mutable_user()->set_passwordr("1234");
+    profileInfo.set_username("username");
+    profileInfo.set_name("name");
+    profileInfo.set_surname("surname");
+    client.Register(profileInfo);
+    client.Login(profileInfo.user());
+    protobuf::ProfileInfo userLogged = client.getProfileInfoLogged();
+
+    std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
+              << userLogged.username() << "\t" << userLogged.user().email() << std::endl;
     /*
-    protobuf::User user;
-    user.set_email("provabase@test.it");
-    user.set_password("1234");
-    user.set_passwordr("1234");
-    client.Register(user);
-    client.Login(user);
+        protobuf::FileName fileName;
+        fileName.set_filename("fileshare");
+        client.InsertFile(fileName);
 
-    protobuf::FileName fileName;
-    fileName.set_filename("fileshare");
-    client.InsertFile(fileName);
-
-    client.GetFiles();
-    client.GetFileContent(client.getFileInfoList().fileil(0));
-    */
+        client.GetFiles();
+        client.GetFileContent(client.getFileInfoList().fileil(0));
+        */
 
     QApplication a(argc, argv);
     Principale main;

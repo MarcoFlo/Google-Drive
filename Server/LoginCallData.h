@@ -24,10 +24,10 @@ private:
 // What we get from the client.
     protobuf::User request_;
 // What we send back to the client.
-    protobuf::Identifier reply_;
+    protobuf::UserLogged reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter<protobuf::Identifier> responder_;
+    grpc::ServerAsyncResponseWriter<protobuf::UserLogged> responder_;
 
 };
 

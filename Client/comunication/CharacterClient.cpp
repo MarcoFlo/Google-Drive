@@ -59,6 +59,11 @@ std::string CharacterClient::Register(protobuf::ProfileInfo &profileInfo) {
     context.AddMetadata("email", profileInfo.user().email());
     context.AddMetadata("password", profileInfo.user().password());
     context.AddMetadata("passwordr", profileInfo.user().passwordr());
+    context.AddMetadata("username", profileInfo.username());
+    context.AddMetadata("name", profileInfo.name());
+    context.AddMetadata("surname", profileInfo.surname());
+
+
     protobuf::Empty reply;
     grpc::Status status;
     status = stub_->Register(&context, profileInfo, &reply);
@@ -73,20 +78,20 @@ std::string CharacterClient::Register(protobuf::ProfileInfo &profileInfo) {
 
 }
 
-std::string CharacterClient::Login(protobuf::User &user) {
+std::string CharacterClient::Login(const protobuf::User &user) {
     grpc::ClientContext context;
     context.AddMetadata("email", user.email());
     context.AddMetadata("password", user.password());
     email_ = user.email();
-    password_ = user.password();
-    protobuf::Identifier reply;
+
+    protobuf::UserLogged reply;
     grpc::Status status;
 
     status = stub_->Login(&context, user, &reply);
 
     if (status.ok()) {
         std::cout << "Login rpc was successful" << std::endl;
-        token_ = reply.token();
+        userLogged_ = reply;
         return "";
     } else {
         std::cout << "Login rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
@@ -97,7 +102,7 @@ std::string CharacterClient::Login(protobuf::User &user) {
 
 std::string CharacterClient::Logout() {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
     protobuf::Empty request;
 
@@ -117,7 +122,7 @@ std::string CharacterClient::Logout() {
 
 std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
 
     protobuf::FileInfo reply;
@@ -126,9 +131,8 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
     status = stub_->InsertFile(&context, request, &reply);
 
     if (status.ok()) {
-        std::cout << "Insert file rpc was successful -> " << reply.filename() << reply.date() << std::endl;
+        std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
         currentFileIdentifier_ = reply.fileidentifier();
-
         // todo capire se rimuovere
 //        GetSymbols(reply);
         return reply.fileidentifier();
@@ -136,12 +140,11 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
         std::cout << "Insert file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
         return status.error_message();
     }
-
 }
 
 std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
     protobuf::Empty reply;
     grpc::Status status;
@@ -160,7 +163,7 @@ std::string CharacterClient::RemoveFile(const protobuf::FileInfo &fileInfo) {
 //Il risultato viene depositato in lastFileInfoList per poter restituire il messaggio d'errore
 std::string CharacterClient::GetFiles() {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
     protobuf::Empty request;
     grpc::Status status;
@@ -178,7 +181,7 @@ std::string CharacterClient::GetFiles() {
 
 std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const std::string &emailShare) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
     context.AddMetadata("emailshare", emailShare);
 
     protobuf::FileInfo request;
@@ -201,7 +204,7 @@ std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const 
 
 std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) {
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
     protobuf::Chunk reply;
     grpc::Status status;
@@ -234,7 +237,7 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 
 
 void CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
-    new AsyncClientGetSymbols(fileInfo, token_, cq_, stub_);
+    new AsyncClientGetSymbols(fileInfo, userLogged_.token(), cq_, stub_);
 }
 
 
@@ -244,7 +247,7 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
         return "";
 
     grpc::ClientContext context;
-    context.AddMetadata("token", token_);
+    context.AddMetadata("token", userLogged_.token());
 
     protobuf::Empty reply;
     grpc::Status status;
@@ -272,14 +275,6 @@ protobuf::SymbolVector CharacterClient::getSymbolVector() {
     return symbolVector_;
 }
 
-std::string CharacterClient::getEmail() {
-    return email_;
-}
-
-std::string CharacterClient::getPassword() {
-    return password_;
-}
-
 std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
     int i = 0;
     std::list<int> *searchList = new std::list<int>;
@@ -300,8 +295,14 @@ protobuf::FileInfo CharacterClient::getFileInfo(const std::string& id) {
             return lastFileInfoList_.fileil(i);
         }
     }
+    return protobuf::FileInfo();
 }
 
 void CharacterClient::closeFile(){
     symbolVector_.Clear();
 }
+
+protobuf::ProfileInfo CharacterClient::getProfileInfoLogged() {
+    return userLogged_.profileinfo();
+}
+
