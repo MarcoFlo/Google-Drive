@@ -29,13 +29,35 @@ void LoginCallData::Proceed(bool ok) {
 //                      [](auto &elem) {
 //                          std::cout << elem.first << "     " << elem.second << std::endl;
 //                      });
-
-        const std::vector<grpc::string_ref> tokenV = ctx_.auth_context()->FindPropertyValues("token");
-        const grpc::string_ref &token = tokenV.back();
 //      Se vogliamo restituire un Empty e lasciare il token nei metadati
 //      ctx_.AddInitialMetadata("identifier", {token.begin(), token.end()});
-        std::string s = {token.begin(), token.end()};
-        reply_.set_token(s);
+        const std::vector<grpc::string_ref> tokenV = ctx_.auth_context()->FindPropertyValues("token");
+        const grpc::string_ref &tokenR = tokenV.back();
+        std::string tokenS = {tokenR.begin(), tokenR.end()};
+
+
+        const std::vector<grpc::string_ref> usernameV = ctx_.auth_context()->FindPropertyValues("username");
+        const grpc::string_ref &usernameR = usernameV.back();
+        std::string usernameS = {usernameR.begin(), usernameR.end()};
+
+        const std::vector<grpc::string_ref> nameV = ctx_.auth_context()->FindPropertyValues("name");
+        const grpc::string_ref &nameR = nameV.back();
+        std::string nameS = {nameR.begin(), nameR.end()};
+
+        const std::vector<grpc::string_ref> surnameV = ctx_.auth_context()->FindPropertyValues("surname");
+        const grpc::string_ref &surnameR = surnameV.back();
+        std::string surnameS = {surnameR.begin(), surnameR.end()};
+
+        const std::vector<grpc::string_ref> emailV = ctx_.auth_context()->FindPropertyValues("email");
+        const grpc::string_ref &emailR = emailV.back();
+        std::string emailS = {emailR.begin(), emailR.end()};
+
+        reply_.set_token(tokenS);
+        reply_.mutable_profileinfo()->set_username(usernameS);
+        reply_.mutable_profileinfo()->set_name(nameS);
+        reply_.mutable_profileinfo()->set_surname(surnameS);
+        reply_.mutable_profileinfo()->mutable_user()->set_email(emailS);
+
         responder_.Finish(reply_, grpc::Status::OK, this);
     } else {
         GPR_ASSERT(status_ == FINISH);

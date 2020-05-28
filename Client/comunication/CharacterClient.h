@@ -15,7 +15,7 @@ public:
 
     std::string Register(protobuf::ProfileInfo &profileInfo);
 
-    std::string Login(protobuf::User &user);
+    std::string Login(const protobuf::User &user);
 
     std::string Logout();
 
@@ -37,9 +37,7 @@ public:
 
     protobuf::SymbolVector getSymbolVector();
 
-    std::string getEmail();
-
-    std::string getPassword();
+    protobuf::ProfileInfo getProfileInfoLogged();
 
     std::list<int> searchFileInfo(const std::string&);
 
@@ -54,7 +52,7 @@ private:
 
     grpc::CompletionQueue cq_;
 
-    std::string token_;
+    protobuf::UserLogged userLogged_;
     std::string currentFileIdentifier_;
     protobuf::FilesInfoList lastFileInfoList_;
     std::string email_;

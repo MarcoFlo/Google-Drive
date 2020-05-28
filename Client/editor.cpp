@@ -89,7 +89,7 @@ void Editor::setupGeneral() {
 
     QLabel *nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
-    nome->setText(QString::fromStdString(client_->getEmail()));
+    nome->setText(QString::fromStdString(client_->getProfileInfoLogged().user().email()));
     accountV->addWidget(nome);
 
     QLabel *mail = new QLabel(accountM);
@@ -754,7 +754,7 @@ void Editor::insertFile(char r) {
     QTextCursor cur = ui->txt->textCursor();
     std::vector<int> pos;
     pos.push_back(cur.position());
-    Symbol *symbol = new Symbol(r, client_->getEmail(), pos);
+    Symbol *symbol = new Symbol(r, client_->getProfileInfoLogged().user().email(), pos);
     client_->InsertSymbols(*symbol, false);
    /* if(event->key() == Qt::Key_Delete)
     {
