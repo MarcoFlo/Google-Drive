@@ -869,7 +869,14 @@ background-color:none;
            </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_4"/>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="spacing">
+             <number>2</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetNoConstraint</enum>
+            </property>
+           </layout>
           </item>
           <item>
            <widget class="QLabel" name="data">

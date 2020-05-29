@@ -3,13 +3,18 @@
 #include <QKeyEvent>
 #include <QProcess>
 #include <QtWidgets/QMessageBox>
+#include <regex>
 
-Condividi::Condividi(QWidget *parent) :
+Condividi::Condividi(QWidget *parent, QString s, CharacterClient *user) :
     QDialog(parent),
     ui(new Ui::Condividi)
 {
+    client = user;
+    url = s;
     ui->setupUi(this);
     ui->url->setReadOnly(true);
+    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    ui->url->setText(url);
 
 }
 
@@ -31,14 +36,34 @@ void Condividi::on_copia_clicked()
 
 void Condividi::on_conferma_clicked()
 {
-    QString people=ui->condividiB->text();
+    people=ui->condividiB->text();
     if(people == "")
     {
         QMessageBox::warning(this, "Condivisione", "Inserire dei nomi utente");
-    } else
+    }
+    else if(!is_email_valid())
     {
-        emit share(people);
+        QMessageBox::warning(this, "Condivisione", "Inserire email valida");
+    }
+    else
+    {
         hide();
+        emit share(people);
+
     }
 
+}
+
+bool Condividi::is_email_valid()
+{
+    // define a regular expression
+    const std::regex pattern(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
+    bool fin;
+    // try to match the string with the regular expression
+    if((fin = std::regex_match(people.toStdString(), pattern))) {
+
+    } else {
+
+    }
+    return fin;
 }

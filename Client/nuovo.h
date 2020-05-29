@@ -2,7 +2,13 @@
 #define NUOVO_H
 
 #include <QDialog>
-//#include "comunication/CharacterClient.h"
+#include "messageP.grpc.pb.h"
+#include <grpcpp/grpcpp.h>
+#include "comunication/CharacterClient.h"
+#include <QMainWindow>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 
 namespace Ui {
 class Nuovo;
@@ -13,9 +19,10 @@ class Nuovo : public QDialog
     Q_OBJECT
 
 public:
-    explicit Nuovo(QWidget *parent = nullptr);
+    explicit Nuovo(QWidget *parent = nullptr, CharacterClient *user = nullptr);
     ~Nuovo();
-    //void Nuovo::setClient(CharacterClient* cli);
+    bool is_email_valid();
+
 
 signals:
     void openE(QString, QString);
@@ -26,10 +33,10 @@ private slots:
     void on_conferma_clicked();
 
 
-
 private:
     Ui::Nuovo *ui;
-    //CharacterClient *client;
+    CharacterClient *client;
+    QString share;
 };
 
 #endif // NUOVO_H

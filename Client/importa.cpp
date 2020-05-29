@@ -21,4 +21,10 @@ void Importa::on_incolla_clicked()
 void Importa::on_annulla_clicked()
 {
     this->hide();
+    emit import(ui->linkB->text());
+}
+
+void Importa::on_conferma_clicked()
+{
+    emit import(ui->linkB->text());
 }

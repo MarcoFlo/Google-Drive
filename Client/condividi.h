@@ -2,6 +2,9 @@
 #define CONDIVIDI_H
 
 #include <QDialog>
+#include <grpcpp/grpcpp.h>
+#include "messageP.grpc.pb.h"
+#include "comunication/CharacterClient.h"
 
 namespace Ui {
 class Condividi;
@@ -12,8 +15,9 @@ class Condividi : public QDialog
     Q_OBJECT
 
 public:
-    explicit Condividi(QWidget *parent = nullptr);
+    explicit Condividi(QWidget *parent = nullptr, QString s = nullptr, CharacterClient *user = nullptr);
     ~Condividi();
+    bool is_email_valid();
 
 signals:
     void share(QString);
@@ -27,6 +31,9 @@ private slots:
 
 private:
     Ui::Condividi *ui;
+    QString people;
+    CharacterClient *client;
+    QString url;
 };
 
 #endif // CONDIVIDI_H

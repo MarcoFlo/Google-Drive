@@ -50,9 +50,9 @@ void Principale::setupUI()
     icona->setAlignment(Qt::AlignCenter);
     icona->setStyleSheet("border-radius: 12px;"
                                    "border: 1px white;"
-                                   "padding: 10px;");
+                                   "padding: 10px;");*/
 
-    auto *nome = new QLabel(accountM);
+    nome = new QLabel(accountM);
     nome->setAlignment(Qt::AlignCenter);
     //QString s = client_->getNome().c_str();
     //s.append(" ");
@@ -64,7 +64,7 @@ void Principale::setupUI()
                         "padding: 5px;"
                         "font-family: 'Calibri';"
                         "background-color:none");
-    accountV->addWidget(nome);*/
+    accountV->addWidget(nome);
 
     mail = new QLabel(accountM);
     mail->setAlignment(Qt::AlignCenter);
@@ -110,18 +110,19 @@ void Principale::setupUI()
     QObject::connect(logout, SIGNAL(clicked()), this, SLOT(on_logout_clicked()));
     QObject::connect(ui->lista->selectionModel(), SIGNAL(selectionChanged(const QItemSelection &, const QItemSelection &)), this, SLOT(on_row_select()));
 
-    auto *account = new QToolButton(this);
-    account->setStyleSheet("QToolButton::menu-indicator {"
+    accountT = new QToolButton(this);
+
+    accountT->setStyleSheet("QToolButton::menu-indicator {"
                            "image: none;}"
                            "QToolButton {"
                            "border: 1px solid white;}");
 
-    auto *icon = new QIcon(":/images/img/logovero.png");
-    account->setIcon(*icon);
-    account->setMenu(accountM);
-    account->setPopupMode(QToolButton::InstantPopup);
+    //auto *icon = new QIcon(":/images/img/logovero.png");
+    //accountT->setIcon(*icon);
+    accountT->setMenu(accountM);
+    accountT->setPopupMode(QToolButton::InstantPopup);
 
-    ui->horizontalLayout->insertWidget(3, account);
+    ui->horizontalLayout->insertWidget(3, accountT);
 
      /*ui->elimina->setStyleSheet("::disabled {border-radius: 12px;"
                                 "                               background-color: #8395a7;"
@@ -199,12 +200,12 @@ void Principale::on_nuovo_clicked()
         //delete wItem;
         delete wItem->widget();
     }
-    Nuovo nuovo;
-    //nuovo.setClient(client_);
-    nuovo.setModal(true);
-    QObject::connect(&nuovo, SIGNAL(openE(QString, QString)), this, SLOT(onNuovoReturn(QString, QString)));
-    nuovo.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    nuovo.exec();
+
+    nuovo = new Nuovo(this, client_);
+    //nuovo->setModal(true);
+    QObject::connect(nuovo, SIGNAL(openE(QString, QString)), this, SLOT(onNuovoReturn(QString, QString)));
+    //nuovo->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    nuovo->show();
 }
 
 void Principale::on_condividi_clicked()
@@ -217,11 +218,11 @@ void Principale::on_condividi_clicked()
         //delete wItem;
         delete wItem->widget();
     }
-    Condividi condividi;
-    condividi.setModal(true);
-    condividi.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    QObject::connect(&condividi, SIGNAL(share(QString)), this, SLOT(onCondividiReturn(QString)));
-    condividi.exec();
+    condividi = new Condividi(this, link, client_);
+    //condividi.setModal(true);
+    //condividi.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    QObject::connect(condividi, SIGNAL(share(QString)), this, SLOT(onCondividiReturn(QString)));
+    condividi->show();
 }
 
 
@@ -264,6 +265,7 @@ void Principale::on_importa_clicked()
     Importa importa;
     importa.setModal(true);
     importa.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    QObject::connect(&importa, SIGNAL(import(QString)), this, SLOT(onImportaReturn(QString)));
     importa.exec();
 }
 
@@ -288,6 +290,7 @@ void Principale::on_logout_clicked()
 {
     ui->proprietarioL->setText("");
     ui->dataL->setText("");
+    accountT->setText("");
     QLayoutItem *wItem;
     while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
     {
@@ -394,6 +397,7 @@ void Principale::cellClicked()
     ui->proprietarioL->setText(QString::fromStdString(file_->emailo()));
     ui->dataL->setText("");
     ui->dataL->setText(QString::fromStdString(file_->date()));
+    link = QString::fromStdString(file_->fileidentifier());
     QLayoutItem *wItem;
     while ((wItem = ui->verticalLayout_4->takeAt(0)) != 0)
     {
@@ -481,28 +485,32 @@ void Principale::insertTab()
 
 void Principale::onNuovoReturn(QString name, QString share)
 {
-    std::list<int> search;
+    /*std::list<int> search;
     search = client_->searchFileInfo(name.toStdString());
     if(search.empty() == false)
     {
         QMessageBox::warning(this,"Creazione", "Esiste già un documento con questo nome");
         search.clear();
         return;
-    }
+    }*/
 
     protobuf::FileName fileName;
     std::string namefile = name.toStdString();
     fileName.set_filename(namefile.c_str());
     std::string fileid =client_->InsertFile(fileName);
-    std::string delimiter = " ";
-    std::string token;
-    size_t pos =0;
-    std::string s = (share.toStdString()+" ");
 
-    while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
-        token = s.substr(0, pos);
-        client_->ShareFile(fileid, token);
-        s.erase(0, pos + delimiter.length());
+    if(share.compare("") != 0)
+    {
+        std::string delimiter = " ";
+        std::string token;
+        size_t pos =0;
+        std::string s = (share.toStdString()+" ");
+
+        while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
+            token = s.substr(0, pos);
+            client_->ShareFile(fileid, token);
+            s.erase(0, pos + delimiter.length());
+        }
     }
 
     open_edi(&fileid);
@@ -529,12 +537,28 @@ void Principale::onCondividiReturn(const QString nomi)
     QMessageBox::information(this, "Condivisione completata", "La condivisione ha avuto successo");
 }
 
+void Principale::onImportaReturn(const QString link)
+{
+    client_->ShareFile(link.toStdString(), userLogged.user().email());
+}
+
 void Principale::onLoginReturn(CharacterClient* cli)
 {
     client_=cli;
+    userLogged = client_->getProfileInfoLogged();
     delete login;
     insertTab();
-    mail->setText(QString::fromStdString(client_->getProfileInfoLogged().user().email()));
+    nome->setText(QString::fromStdString(userLogged.name()));
+    mail->setText(QString::fromStdString(userLogged.user().email()));
+    accountT->setText(QString::fromStdString(userLogged.username()));
+    accountT->setStyleSheet("QToolButton::menu-indicator {"
+                            "image: none;}"
+                            "QToolButton {"
+                            "border: 1px solid white;"
+                            "color: white;"
+                            "font-size: 17px; "
+                            "text-align: center}");
+
     this->setEnabled(TRUE);
 }
 

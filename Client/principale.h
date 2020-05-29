@@ -14,6 +14,7 @@
 #include "loginpage.h"
 #include "splashscreen.h"
 #include <QLabel>
+#include <QToolButton>
 
 namespace Ui {
 class Principale;
@@ -44,6 +45,7 @@ signals:
     void regRequest();
     void closeR();
     void closeRReg();
+    void import(QString);
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -83,6 +85,8 @@ private slots:
 
     void onCondividiReturn(const QString);
 
+    void onImportaReturn(const QString);
+
     void onLoginReturn(CharacterClient*);
 
     void onRegistrationRequest();
@@ -106,9 +110,17 @@ private:
 
     QLabel *mail;
 
+    QLabel *nome;
+
+    QToolButton *accountT;
+
     LoginPage *login;
 
     Account *account;
+
+    Nuovo *nuovo;
+
+    Condividi *condividi;
 
     RegistrationPage *regist;
 
@@ -123,6 +135,9 @@ private:
 
     protobuf::FilesInfoList *clientFiles_;
 
+    protobuf::ProfileInfo userLogged;
+
+    QString link;
 };
 
 #endif // PRINCIPALE_H

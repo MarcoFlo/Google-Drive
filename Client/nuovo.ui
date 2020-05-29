@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>386</width>
-    <height>226</height>
+    <height>232</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -83,7 +83,7 @@ background-color:none</string>
           <property name="font">
            <font>
             <family>Calibri</family>
-            <pointsize>15</pointsize>
+            <pointsize>13</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -124,16 +124,22 @@ background-color:none</string>
         </item>
         <item>
          <widget class="QLineEdit" name="cond">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>25</height>
+            <height>35</height>
            </size>
           </property>
           <property name="font">
            <font>
             <family>Calibri</family>
-            <pointsize>15</pointsize>
+            <pointsize>13</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -151,6 +157,9 @@ QLineEdit:focus
 	border:2px solid #3a848a;
 }
 </string>
+          </property>
+          <property name="maxLength">
+           <number>32781</number>
           </property>
          </widget>
         </item>

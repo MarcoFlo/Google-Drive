@@ -35,6 +35,8 @@ private:
     Ui::Account *ui;
 
     CharacterClient *client_;
+
+    protobuf::ProfileInfo profileInfoLogged;
 };
 
 #endif // ACCOUNT_H

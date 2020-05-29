@@ -3,7 +3,6 @@
 #include <QMessageBox>
 #include <regex>
 //#include <QFileDialog>
-//#include <QMessageBox>
 #include <QDebug>
 #include <sstream>
 #include "principale.h"
@@ -17,8 +16,8 @@ Account::Account(QWidget *parent, CharacterClient *user) :
     client_ = user;
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    protobuf::ProfileInfo profileInfoLogged = client_->getProfileInfoLogged();
-    ui->lineEdit->setText((profileInfoLogged.name() + "\t" + profileInfoLogged.surname()).c_str());
+    profileInfoLogged = client_->getProfileInfoLogged();
+    ui->lineEdit->setText(profileInfoLogged.name().c_str());
     ui->lineEdit_2->setText(profileInfoLogged.username().c_str());
     ui->lineEdit_3->setText(profileInfoLogged.user().email().c_str());
     ui->lineEdit_4->setText(profileInfoLogged.user().password().c_str());
@@ -28,9 +27,6 @@ Account::~Account() {
     delete ui;
 }
 
-/*void Account::setUser(CharacterClient *user_) {
-    client_ = user_;
-}*/
 
 void Account::on_pushButton_clicked() {
     this->hide();
@@ -41,8 +37,11 @@ void Account::on_pushButton_2_clicked() {
     if (is_something_empty() == false) {
         QMessageBox::warning(this, "Account", "Riempire i campi vuoti");
         return;
-    }
+    } else{
 
+
+
+    }
     /*if(client_->getNome().c_str() != ui->lineEdit->text())
     {
         //cambia
@@ -51,7 +50,7 @@ void Account::on_pushButton_2_clicked() {
     {
         //cambia
     }*/
-    if (client_->getProfileInfoLogged().user().email().c_str() != ui->lineEdit_3->text()) {
+    if (profileInfoLogged.user().email().c_str() != ui->lineEdit_3->text()) {
         if (is_email_valid() == false) {
             QMessageBox::warning(this, "Account", "L'email non è valida");
             return;

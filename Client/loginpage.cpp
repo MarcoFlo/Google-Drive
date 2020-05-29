@@ -31,6 +31,7 @@ void LoginPage::on_Login_clicked() {
     userL.set_password(pass.toStdString());
     std::string error = client_->Login(userL);
 
+
     if (error.empty()) {   // status == ok
         this->hide();
         emit clientReturn(client_);

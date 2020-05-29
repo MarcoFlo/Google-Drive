@@ -171,6 +171,12 @@ background-color:none</string>
             <height>25</height>
            </size>
           </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit
 {

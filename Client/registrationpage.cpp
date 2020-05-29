@@ -28,33 +28,38 @@ void RegistrationPage::on_registrati_clicked()
 {
     if(!is_something_empty()) {
         QMessageBox::warning(this, "Registration", "Riempire i campi vuoti");
-    } else if(!is_email_valid()) {
-        QMessageBox::warning(this, "Registration", "L'email non è valida");
-    } else if(!is_pass_valid()) {
-        QMessageBox::warning(this, "Registration", "Le password non corrispondono");
-    } else {
-        QString email = ui->emailEdit->text();
-        QString pass = ui->passwordEdit->text();
-        QString pass2 = ui->password2Edit->text();
-        //QString nome = ui->emailEdit->text();
-        //QString cognome = ui->nomeEdit->text();
-        protobuf::ProfileInfo profileInfo;
-        //protobuf::ProfileInfo profInfo;
-        profileInfo.mutable_user()->set_email(email.toStdString());
-        profileInfo.mutable_user()->set_password(pass.toStdString());
-        profileInfo.mutable_user()->set_passwordr(pass2.toStdString());
-        /*profInfo.set_name(nome.toStdString());
-        profInfo.set_surname(cognome.toStdString());
-        profInfo.email(email.toStdString());
-        profInfo.set_allocated_user(&userR);*/
-        std::string error = this->client_->Register(profileInfo);
-        if (error.empty()) {
-            emit closeRReg();
-        }
-        else {
-            QMessageBox::warning(this, "Registration", "Invalid data");
+        return;
+    } else{
+
+        if(!is_email_valid()) {
+            QMessageBox::warning(this, "Registration", "L'email non è valida");
+            return;
+        } else if(!is_pass_valid()) {
+            QMessageBox::warning(this, "Registration", "Le password non corrispondono");
+            return;
+        } else {
+            QString email = ui->emailEdit->text();
+            QString pass = ui->passwordEdit->text();
+            QString pass2 = ui->password2Edit->text();
+            QString nomeCognome = ui->nome_cognomeEdit->text();
+            QString username = ui->usernameEdit->text();
+            protobuf::ProfileInfo profileInfo;
+            //protobuf::ProfileInfo profInfo;
+            profileInfo.mutable_user()->set_email(email.toStdString());
+            profileInfo.mutable_user()->set_password(pass.toStdString());
+            profileInfo.mutable_user()->set_passwordr(pass2.toStdString());
+            profileInfo.set_name(nomeCognome.toStdString());
+            profileInfo.set_username(username.toStdString());
+            std::string error = this->client_->Register(profileInfo);
+            if (error.empty()) {
+                emit closeRReg();
+            }
+            else {
+                QMessageBox::warning(this, "Registration", "Invalid data");
+            }
         }
     }
+
 }
 
 bool RegistrationPage::is_email_valid()
@@ -89,6 +94,6 @@ bool RegistrationPage::is_pass_valid()
 
 bool RegistrationPage::is_something_empty()
 {
-    return !ui->emailEdit->text().isEmpty() && !ui->nomeEdit->text().isEmpty() && !ui->emailEdit->text().isEmpty() &&
+    return !ui->emailEdit->text().isEmpty() && !ui->nome_cognomeEdit->text().isEmpty() && !ui->emailEdit->text().isEmpty() &&
            !ui->passwordEdit->text().isEmpty() && !ui->password2Edit->text().isEmpty();
 }
