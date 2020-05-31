@@ -22,7 +22,6 @@
 #include "account.h"
 #include "ui_editor.h"
 #include "editor.h"
-#include "comunication/Symbol.h"
 #include <QtCore>
 #include <QKeyEvent>
 #include <regex>
@@ -32,6 +31,8 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     ui(new Ui::Editor)
 {
     client_=client;
+    _symbolsP=new protobuf::SymbolVector();
+    symbol_ = new std::vector<Symbol>();
     ui->setupUi(this);
     client_->GetFiles();
     file_ = new protobuf::FileInfo();
@@ -710,6 +711,7 @@ void Editor::on_logout_clicked()
 
 void Editor::readFile() {
     int i=0;
+    int j=0;
     QTextCursor cursor = ui->txt->textCursor();
 
     if(!client_->GetFileContent(*file_).empty())
@@ -718,15 +720,22 @@ void Editor::readFile() {
     }
 
     std::cout << client_->getSymbolVector().DebugString() << "\n";
+    *_symbolsP=client_->getSymbolVector();
 
-    for(i=0; i<client_->getSymbolVector().symbolvector_size(); i++)
+    for(i=0; i<_symbolsP->symbolvector_size(); i++)
     {
-        protobuf::Symbol symbol = client_->getSymbolVector().symbolvector(i);
-        cursor.setPosition(symbol.pos().data()[0]);
+        symbol_->push_back(Symbol(_symbolsP->symbolvector(i)));
+        std::sort(symbol_->begin(), symbol_->end());
+    }
+
+    for(i=0; i<_symbolsP->symbolvector_size(); i++)
+    {
+        cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
-        const char* y = symbol.character().c_str();
-        int i = atoi(y);
-        switch(i)
+        char y = symbol_->at(i).getCharacter();
+        //j = atoi(y);
+        ui->txt->insertPlainText(QChar(y));
+       /* switch(j)
         {
             case (-30):
                 ui->txt->insertPlainText("\n");
@@ -743,7 +752,7 @@ void Editor::readFile() {
             default:
                 char p = std::stoi(symbol.character());
                 ui->txt->insertPlainText(QChar(p));
-        }
+        }*/
 
         //ui->txt->setPlainText(symbol.character().c_str());
         //ui->txt->setPlainText(QChar(t));
@@ -756,17 +765,6 @@ void Editor::insertFile(char r) {
     pos.push_back(cur.position());
     Symbol *symbol = new Symbol(r, client_->getProfileInfoLogged().user().email(), pos);
     client_->InsertSymbols(*symbol, false);
-   /* if(event->key() == Qt::Key_Delete)
-    {
-        std::cout <<"bau";
-        pos.push_back(cur.position()+1);
-        Symbol *symbol = new Symbol(cur.selectedText().toStdString()[0],client_->getUsername(), pos);
-        client_->InsertSymbols(*symbol, true);
-    }
-    else {
-        std::cout <<"miao";
-
-    }*/
 
 }
 
@@ -838,18 +836,124 @@ void Editor::insertFile(char r) {
                  return true;
              } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
                  std::cout << "cancella\n";
+                 localErase(ui->txt->textCursor().position());
              }
              else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
              keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
              keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave || keyEvent->key() == Qt::Key_Igrave ||
              keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
-                 insertFile(keyEvent->text().toStdString()[0]);
+                 localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
              }
              else if(std::regex_match(keyEvent->text().toStdString(), pattern)) {
-                 insertFile(keyEvent->text().toStdString()[0]);
+                 localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
              }
          }
          return false;
      }
      return QMainWindow::eventFilter(obj, event);
  }
+
+void Editor::localInsert(int index, char value) {
+    std::vector<int> posPre = {0};
+    std::vector<int> posPost = {2};
+
+    if (symbol_->size() < index)
+        //se cerco di inserire a un indice oltre la fine, inserisco alla fine
+        index = symbol_->size();
+
+    if (symbol_->size() == index) {
+        if (index != 0) {
+            posPre = symbol_->at(index - 1).getPos();
+            posPost = {(posPre.at(posPre.size() - 1) + 2)};
+        }
+    } else {
+        if (index != 0)
+            posPre = symbol_->at(index - 1).getPos();
+
+        posPost = symbol_->at(index).getPos();
+    }
+
+#if debug == 1
+    //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
+    for (int i = 0; i < posPre.size(); i++) {
+        std::cout << posPre.at(i);
+        if (i == 0 && i != posPre.size() - 1)
+            std::cout << ",";
+    }
+    std::cout << "<" << value << "<";
+    for (int i = 0; i < posPost.size(); i++) {
+        std::cout << posPost.at(i);
+        if (i == 0 && i != posPost.size() - 1)
+            std::cout << ",";
+    }
+#endif
+
+    int newVal;
+    bool isPreBigger = posPre.size() >= posPost.size();
+    std::vector<int> posNew = isPreBigger ? posPre : posPost;
+    unsigned int maxI = posNew.size() - 1;
+
+    if (posPre.size() == posPost.size()) {
+        newVal = (posPre.at(maxI) + posPost.at(maxI)) / 2;
+        if (newVal != posPre.at(maxI)) {
+            //stiamo inserendo tra 1 e 3
+            posNew.at(maxI) = newVal;
+        } else {
+            //stiamo inserendo tra 3,4 e 3,5
+            posNew.push_back(5);
+        }
+    } else {
+        if (posNew.at(maxI) == 1) {
+            //stiamo inserendo tra 4 e 4,1
+            posNew.at(maxI) = 0;
+            posNew.push_back(5);
+        } else if (posNew.at(maxI) == 9) {
+            //stiamo inserendo tra 3,9 e 4
+            posNew.push_back(5);
+        } else {
+            //stiamo inserendo tra 3,477777 e 3,5
+            newVal = isPreBigger ? (posNew.at(maxI) + 10) / 2 : posNew.at(maxI) / 2;
+            posNew.at(maxI) = newVal;
+        }
+    }
+
+#if debug == 1
+    // stampa l'indice frazionario scelto
+    std::cout << "  -->  ";
+    for (int j = 0; j < posNew.size(); ++j) {
+        std::cout << posNew[j];
+        if (j == 0 && j != posNew.size() - 1)
+            std::cout << ",";
+    }
+    std::cout << std::endl;
+#endif
+
+    std::string uniqueId = client_->getProfileInfoLogged().user().email();
+    Symbol symbol(value, uniqueId, posNew);
+    symbol_->insert(symbol_->begin() + index, 1, symbol);
+    protobuf::Symbol s= symbol.makeProtobufSymbol();
+    client_->InsertSymbols(symbol, false);
+
+}
+
+/**
+ * Questo metodo elimina dal vettore _symbols l’elemento all’indice indicato, prepara un oggetto
+ * di tipo Message in cui descrive l’azione compiuta e lo affida all’oggetto _server affinché lo
+ * consegni agli altri SharedEditor.
+ *
+ * @param index
+ */
+void Editor::localErase(int index) {
+    if (symbol_->size() == 0)
+        return;
+
+    if (index >= symbol_->size())
+        index = symbol_->size() - 1;
+
+    client_->InsertSymbols(symbol_->at(index), true);
+  /*
+    Message msg(_symbols.at(index), _siteId, true);
+    _symbols.erase(_symbols.begin() + index);
+    _server.send(msg);*/
+
+}

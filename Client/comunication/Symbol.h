@@ -8,6 +8,7 @@
 
 
 class Symbol {
+
     char character_;
     std::string uniqueId_;
     std::vector<int> pos_;
@@ -15,6 +16,8 @@ public:
     Symbol();
 
     Symbol(char character, std::string uniqueId, std::vector<int> &pos);
+
+    Symbol(protobuf::Symbol);
 
     bool operator==(const Symbol &symbol);
 

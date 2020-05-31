@@ -153,7 +153,6 @@ void SharedEditor::process(const Message &m) {
         _symbols.push_back(sNew);
         std::sort(_symbols.begin(), _symbols.end());
     }
-
 }
 
 int SharedEditor::getSiteId() {

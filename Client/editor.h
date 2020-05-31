@@ -10,6 +10,7 @@
 #include <grpcpp/grpcpp.h>
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
+#include "comunication/Symbol.h"
 
 namespace Ui {
 class Editor;
@@ -102,6 +103,10 @@ private slots:
 
         void insertFile(char r);
 
+        void localInsert(int index, char value);
+
+        void localErase(int index);
+
 private:
     Ui::Editor *ui;
 
@@ -140,6 +145,10 @@ private:
     protobuf::FileInfo *file_;
 
     CharacterClient *client_;
+
+    std::vector<Symbol> *symbol_;
+
+    protobuf::SymbolVector *_symbolsP;
 
     bool eventFilter(QObject *obj, QEvent *event);
 };
