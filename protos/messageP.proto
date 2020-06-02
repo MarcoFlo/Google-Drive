@@ -34,6 +34,12 @@ message Symbol {
     string character = 4;
     string uniqueId = 5;
     repeated int32 pos = 6;
+    bool bold = 23;
+    bool underline = 24;
+    bool italic = 25;
+    int32 dimension = 26;
+    string color = 27;
+    string font = 29;
 }
 
 message FileName {

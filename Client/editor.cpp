@@ -447,9 +447,13 @@ void Editor::on_actiongrassetto_triggered()
 {
 
     if(ui->actiongrassetto->isChecked())
+    {
         ui->txt->setFontWeight(QFont::Bold);
+        bold = true;
+    }
     else {
         ui->txt->setFontWeight(QFont::Normal);
+        bold = false;
     }
 }
 
@@ -457,11 +461,13 @@ void Editor::on_actiongrassetto_triggered()
 void Editor::on_actioncorsivo_triggered()
 {
     ui->txt->setFontItalic(ui->actioncorsivo->isChecked());
+    italic = ui->actioncorsivo->isChecked();
 }
 
 void Editor::on_actionsottolineato_triggered()
 {
     ui->txt->setFontUnderline(ui->actionsottolineato->isChecked());
+    underline = ui->actionsottolineato->isChecked();
 }
 
 void Editor::on_actioncolore_triggered()
@@ -512,11 +518,15 @@ void Editor::ShowContextMenu(const QPoint &pos)
 void Editor::checkFont()
 {
     ui->actiongrassetto->setChecked(ui->txt->currentFont().bold());
+    bold = ui->txt->currentFont().bold();
 
     ui->actionsottolineato->setChecked(ui->txt->currentFont().underline());
+    underline = ui->txt->currentFont().underline();
 
     ui->actioncorsivo->setChecked(ui->txt->currentFont().italic());
+    italic = ui->txt->currentFont().italic();
 
+    dimS = ui->txt->currentFont().pointSize();
     for(int i=0; i<11; i++){
 
         if(QString::compare(listaDim.at(i)->text(), QString::number(ui->txt->currentFont().pointSize()), Qt::CaseSensitive)==0)
@@ -533,6 +543,7 @@ void Editor::checkFont()
 
     dim->setText(QString::number(ui->txt->currentFont().pointSize()));
 
+    fontS = ui->txt->currentFont().family();
     for(int y=0; y<6; y++){
 
         if(QString::compare(listaFont.at(y)->text(), ui->txt->currentFont().family(), Qt::CaseSensitive)==0)
@@ -552,6 +563,7 @@ void Editor::checkFont()
 
     QColor colorText=ui->txt->currentCharFormat().foreground().color();
 
+    colorS = ui->txt->currentCharFormat().foreground().color().name();
     for(int z=0; z<6; z++)
     {
         if(listaColor.at(z)->palette().color(QPalette::Background)==colorText)
@@ -604,14 +616,14 @@ void Editor::checkFont()
 
 void Editor::changeDim()
 {
-    int dimens = dimG->checkedAction()->text().toInt();
-    setTextDim(dimens);
+    dimS = dimG->checkedAction()->text().toInt();
+    setTextDim(dimS);
     lEdit->clear();
 }
 
 void Editor::changeFont()
 {
-    QString fontS = fontG->checkedAction()->text();
+    fontS = fontG->checkedAction()->text();
     setTextFont(fontS);
 }
 
@@ -633,7 +645,7 @@ void Editor::changeColor()
         if(listaColor.at(i)->isChecked())
         {
             QColor color1 = listaColor.at(i)->palette().color(QPalette::Background);
-
+            colorS = color1.name();
             ui->txt->setTextColor(color1);
 
             break;
@@ -675,8 +687,8 @@ void Editor::setTextDim(int dim1)
 
 void Editor::setTextDimEdit()
 {
-    int dimension = lEdit->text().toInt();
-    setTextDim(dimension);
+    dimS = lEdit->text().toInt();
+    setTextDim(dimS);
 }
 
 void Editor::on_verticalScrollBar_sliderMoved(int position)
@@ -730,11 +742,38 @@ void Editor::readFile() {
 
     for(i=0; i<_symbolsP->symbolvector_size(); i++)
     {
+        /*if(symbol_->at(i).getBold() == true)
+            ui->txt->setFontWeight(QFont::Bold);
+        else
+            ui->txt->setFontWeight(QFont::Normal);
+        ui->txt->setFontUnderline(symbol_->at(i).getUnderline());
+        ui->txt->setFontItalic(symbol_->at(i).getItalic());*/
+        QFont font;
+        font.setBold(symbol_->at(i).getBold());
+        font.setUnderline(symbol_->at(i).getUnderline());
+        font.setItalic(symbol_->at(i).getItalic());
+        if(symbol_->at(i).getDimension() == -842150451)
+            font.setWeight(15);
+        else
+            font.setWeight(symbol_->at(i).getDimension());
+        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+            font.setFamily("Arial");
+        else
+            font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+
+
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
+        ui->txt->setCurrentFont(font);
         char y = symbol_->at(i).getCharacter();
         //j = atoi(y);
         ui->txt->insertPlainText(QChar(y));
+
+
+        //QTextCursor cur = ui->txt->textCursor();
+        //cur.movePosition(QTextCursor::PreviousCharacter,QTextCursor::KeepAnchor,1);
+
+
        /* switch(j)
         {
             case (-30):
@@ -763,8 +802,9 @@ void Editor::insertFile(char r) {
     QTextCursor cur = ui->txt->textCursor();
     std::vector<int> pos;
     pos.push_back(cur.position());
-    Symbol *symbol = new Symbol(r, client_->getProfileInfoLogged().user().email(), pos);
-    client_->InsertSymbols(*symbol, false);
+
+    //Symbol *symbol = new Symbol(r, client_->getProfileInfoLogged().user().email(), pos);
+    //client_->InsertSymbols(*symbol, false);
 
 }
 
@@ -929,7 +969,7 @@ void Editor::localInsert(int index, char value) {
 #endif
 
     std::string uniqueId = client_->getProfileInfoLogged().user().email();
-    Symbol symbol(value, uniqueId, posNew);
+    Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString());
     symbol_->insert(symbol_->begin() + index, 1, symbol);
     protobuf::Symbol s= symbol.makeProtobufSymbol();
     client_->InsertSymbols(symbol, false);

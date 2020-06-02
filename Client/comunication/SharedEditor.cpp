@@ -114,8 +114,15 @@ void SharedEditor::localInsert(unsigned int index, char value) {
     std::cout << std::endl;
 #endif
 
+    bool bold = true;
+    bool underlined = true;
+    bool italic = true;
+    int dimension = 0;
+    std::string color = nullptr;
+    std::string font = nullptr;
+
     std::string uniqueId = _siteId + std::to_string(_counter++);
-    Symbol symbol(value, uniqueId, posNew);
+    Symbol symbol(value, uniqueId, posNew, bold, underlined, italic, dimension, color, font);
     _symbols.insert(_symbols.begin() + index, 1, symbol);
     std::string fileIdentifier = "fileIDentifier";
     Message msg(fileIdentifier, symbol, false);

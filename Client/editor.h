@@ -151,6 +151,18 @@ private:
     protobuf::SymbolVector *_symbolsP;
 
     bool eventFilter(QObject *obj, QEvent *event);
+
+    bool bold;
+
+    bool underline;
+
+    bool italic;
+
+    int dimS;
+
+    QString colorS;
+
+    QString fontS;
 };
 
 #endif // EDITOR_H
