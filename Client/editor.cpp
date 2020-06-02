@@ -25,6 +25,7 @@
 #include <QtCore>
 #include <QKeyEvent>
 #include <regex>
+#include <QPainter>
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -477,6 +478,7 @@ void Editor::on_actioncolore_triggered()
                 QColor color = QColorDialog::getColor(colB, this, "Scegli un colore");
                 if(color.isValid()) {
                     ui->txt->setTextColor(color);
+                    colorS = color.name();
                     QString qss = QString("background-color: %1").arg(color.name());
                     colore->setStyleSheet(qss);
 
@@ -664,7 +666,20 @@ void Editor::setTextFont(QString fontS)
     QTextCharFormat format = cursor.blockCharFormat();
     format.setFont(*font1);
     format.setFontPointSize(ui->txt->currentFont().pointSize());
+    format.setFontUnderline(underline);
+    format.setFontItalic(italic);
+    if(bold == true)
+        format.setFontWeight(QFont::Bold);
+    else
+        format.setFontWeight(QFont::Normal);
+
     cursor.setCharFormat(format);
+
+    QColor colB = colore->palette().color(QPalette::Background);
+    QPalette pal;
+    pal.setColor(QPalette::Foreground, colB);
+    ui->txt->setPalette(pal);
+
     ui->txt->setTextCursor(cursor);
 
     font->setText(fontS);
@@ -679,6 +694,15 @@ void Editor::setTextDim(int dim1)
     QTextCharFormat format = cursor.blockCharFormat();
     format.setFont(ui->txt->currentFont().family());
     format.setFontPointSize(dim1);
+    format.setFontUnderline(underline);
+    format.setFontItalic(italic);
+    if(bold == true)
+        format.setFontWeight(QFont::Bold);
+    else
+        format.setFontWeight(QFont::Normal);
+    
+    //setta colore
+
     cursor.setCharFormat(format);
     ui->txt->setTextCursor(cursor);
     dim->setText(QString::number(dim1));
@@ -753,17 +777,26 @@ void Editor::readFile() {
         font.setUnderline(symbol_->at(i).getUnderline());
         font.setItalic(symbol_->at(i).getItalic());
         if(symbol_->at(i).getDimension() == -842150451)
-            font.setWeight(15);
+            font.setPointSize(8);
         else
-            font.setWeight(symbol_->at(i).getDimension());
+            font.setPointSize(symbol_->at(i).getDimension());
         if(QString::fromStdString(symbol_->at(i).getFont()) == "")
             font.setFamily("Arial");
         else
             font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
 
+        //QString qss = QString("color: %1").arg(QString::fromStdString(symbol_->at(i).getColor()));
+        //colore->setStyleSheet(qss);
+        //font.setStyle(qss);
+        //ui->txt->setTextColor(QString::fromStdString(symbol_->at(i).getColor()));
+        QPalette palette = ui->txt->palette();
+        QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        palette.setColor(QPalette::Foreground, color2);
+
 
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
+        ui->txt->setPalette(palette);
         ui->txt->setCurrentFont(font);
         char y = symbol_->at(i).getCharacter();
         //j = atoi(y);

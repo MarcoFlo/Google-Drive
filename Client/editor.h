@@ -152,11 +152,11 @@ private:
 
     bool eventFilter(QObject *obj, QEvent *event);
 
-    bool bold;
+    bool bold = false;
 
-    bool underline;
+    bool underline = false;
 
-    bool italic;
+    bool italic = false;
 
     int dimS;
 
