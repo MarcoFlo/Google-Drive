@@ -19,14 +19,10 @@ int main(int argc, char **argv) {
 
     std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
               << userLogged.username() << "\t" << userLogged.user().email() << std::endl;
-    /*
-        protobuf::FileName fileName;
-        fileName.set_filename("fileshare");
-        client.InsertFile(fileName);
 
-        client.GetFiles();
-        client.GetFileContent(client.getFileInfoList().fileil(0));
-        */
+//    client.ImportFile("1591635029186033100adf");
+    client.Logout();
+
 
     QApplication a(argc, argv);
     Principale main;

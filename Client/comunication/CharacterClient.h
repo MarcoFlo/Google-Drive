@@ -27,6 +27,8 @@ public:
 
     std::string ShareFile(const std::string &fileIdentifier, const std::string &emailShare);
 
+    std::string ImportFile(const std::string &fileIdentifier);
+
     std::string GetFileContent(const protobuf::FileInfo &fileInfo);
 
     void GetSymbols(const protobuf::FileInfo &fileInfo);

@@ -11,6 +11,7 @@
 #include "InsertFileCallData.h"
 #include "RemoveFileCallData.h"
 #include "ShareFileCallData.h"
+#include "ImportFileCallData.h"
 #include "InsertSymbolsCallData.h"
 #include "RegisterCallData.h"
 #include "LoginCallData.h"
@@ -84,6 +85,7 @@ void CharacterServiceImpl::HandleRpcs() {
     new GetProfileInfoCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
+    new ImportFileCallData(&service_, cq_.get());
     new InsertFileCallData(&service_, cq_.get());
     new LoginCallData(&service_, cq_.get());
     new LogoutCallData(&service_, cq_.get());

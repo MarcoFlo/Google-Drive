@@ -10,6 +10,7 @@ service CharacterService {
     rpc RemoveFile (FileInfo) returns (Empty) {}
     rpc GetFiles (Empty) returns (FilesInfoList) {}
     rpc ShareFile (FileInfo) returns (Empty) {}
+    rpc ImportFile (FileInfo) returns (Empty) {} //usato solo il fileIdentifier
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
     rpc GetSymbols (stream FileInfo) returns (stream Message) {}
     rpc InsertSymbols (Message) returns (Empty) {}

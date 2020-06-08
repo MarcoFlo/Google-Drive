@@ -202,6 +202,28 @@ std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const 
     }
 }
 
+std::string CharacterClient::ImportFile(const std::string &fileIdentifier) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", userLogged_.token());
+
+    protobuf::FileInfo request;
+    request.set_fileidentifier(fileIdentifier);
+
+    protobuf::Empty reply;
+    grpc::Status status;
+
+    status = stub_->ImportFile(&context, request, &reply);
+
+
+    if (status.ok()) {
+        std::cout << "Import file rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "Import file rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
 std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) {
     grpc::ClientContext context;
     context.AddMetadata("token", userLogged_.token());
