@@ -168,7 +168,7 @@ background-color:none;
          <item>
           <layout class="QVBoxLayout" name="verticalLayout">
            <property name="sizeConstraint">
-            <enum>QLayout::SetNoConstraint</enum>
+            <enum>QLayout::SetFixedSize</enum>
            </property>
           </layout>
          </item>

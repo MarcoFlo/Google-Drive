@@ -52,9 +52,12 @@ void Condividi::on_conferma_clicked()
         while ((pos = s.find(delimiter)) != std::string::npos) {
             token = s.substr(0, pos);
             std::cout << token << std::endl;
-            if (!is_email_valid(token)) {
-                QMessageBox::warning(this, "Condivisione", "Una o più email non sono valide");
-                return;
+            if(token != "" && token != " ")
+            {
+                if (!is_email_valid(token)) {
+                    QMessageBox::warning(this, "Condivisione", "Una o più email non sono valide");
+                    return;
+                }
             }
             s.erase(0, pos + delimiter.length());
         }

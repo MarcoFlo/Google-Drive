@@ -416,6 +416,7 @@ void Principale::cellClicked()
                             "font-family: 'Calibri';"
                             "background-color:none;");
         item->setText(file_->emailal(i).c_str());
+        item->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
         ui->verticalLayout_4->addWidget(item);
 
     }
@@ -511,7 +512,10 @@ void Principale::onNuovoReturn(QString name, QString share)
 
         while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
             token = s.substr(0, pos);
-            client_->ShareFile(fileid, token);
+            if(token != "" && token != " ")
+            {
+                client_->ShareFile(fileid, token);
+            }
             s.erase(0, pos + delimiter.length());
         }
     }
@@ -531,10 +535,13 @@ void Principale::onCondividiReturn(const QString nomi)
     int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
     std::string file = clientFiles_->fileil(fileindex).fileidentifier();
 
-    while ((pos = s.find(delimiter)) != std::string::npos) {
+    while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
         token = s.substr(0, pos);
         std::cout << token << std::endl;
-        client_->ShareFile(file, token);
+        if(token != "" && token != " ")
+        {
+            client_->ShareFile(file, token);
+        }
         s.erase(0, pos + delimiter.length());
     }
     QMessageBox::information(this, "Condivisione completata", "La condivisione ha avuto successo");

@@ -874,7 +874,7 @@ background-color:none;
              <number>2</number>
             </property>
             <property name="sizeConstraint">
-             <enum>QLayout::SetNoConstraint</enum>
+             <enum>QLayout::SetFixedSize</enum>
             </property>
            </layout>
           </item>

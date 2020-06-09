@@ -54,7 +54,7 @@ Editor::~Editor()
 
 void Editor::setupGeneral() {
 
-    colorL = {"yellow", "red", "green", "blue", "grey"};
+    colorL = {"#fdb9c9", "#ffdcbe", "#f6f3b5", "#bbf6f3", "#a7e0f4", "#b2d8b5", "#b7b4db", "#d6bddd", "#c0d6e4", "#fb9692", "#c0d6e4", "#fab297", "#afd7b4", "#c0c0c0"};
 
     //
     QLayoutItem *wItem;
@@ -73,6 +73,7 @@ void Editor::setupGeneral() {
                                       "color: black;"
                                       "background-color: %1").arg(colorq);
     io->setStyleSheet(colorstyleq);
+    io->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     ui->verticalLayout->addWidget(io);
 
     for(int i = 0; i < file_->emailal_size(); i++)
