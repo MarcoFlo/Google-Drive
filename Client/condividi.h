@@ -17,7 +17,7 @@ class Condividi : public QDialog
 public:
     explicit Condividi(QWidget *parent = nullptr, QString s = nullptr, CharacterClient *user = nullptr);
     ~Condividi();
-    bool is_email_valid();
+    bool is_email_valid(std::string s);
 
 signals:
     void share(QString);

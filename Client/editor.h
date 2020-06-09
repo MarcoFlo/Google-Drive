@@ -11,6 +11,7 @@
 #include "messageP.grpc.pb.h"
 #include "comunication/CharacterClient.h"
 #include "comunication/Symbol.h"
+#include <QList>
 
 namespace Ui {
 class Editor;
@@ -107,6 +108,8 @@ private slots:
 
         void localErase(int index);
 
+        void on_actionevidenzia_utente_triggered();
+
 private:
     Ui::Editor *ui;
 
@@ -163,6 +166,10 @@ private:
     QString colorS;
 
     QString fontS;
+
+    QList<QString> colorL;
+
+    QList<QString> emailL;
 };
 
 #endif // EDITOR_H

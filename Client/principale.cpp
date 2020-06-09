@@ -404,7 +404,10 @@ void Principale::cellClicked()
         //delete wItem;
         delete wItem->widget();
     }
-
+    if(file_->emailal_size() == 0)
+    {
+        QMessageBox::warning(this, "bla", "non c'è nulla");
+    }
     for(int i = 0; i < file_->emailal_size(); i++)
     {
         QLabel *item = new QLabel(this);
@@ -539,7 +542,23 @@ void Principale::onCondividiReturn(const QString nomi)
 
 void Principale::onImportaReturn(const QString link)
 {
-    client_->ShareFile(link.toStdString(), userLogged.user().email());
+    for(int i = 0; i < clientFiles_->fileil_size(); i++)
+    {
+        if(clientFiles_->fileil(i).fileidentifier() == link.toStdString())
+        {
+            QMessageBox::warning(this, "Import", "Il documento è già stato importato");
+            return;
+        }
+    }
+
+    std::string error = client_->ImportFile(link.toStdString());
+
+    if (error.empty()) {   // status == ok
+        QMessageBox::information(this, "Import", "Il documento è stato importato correttamente");
+        insertTab();
+    } else {
+        QMessageBox::warning(this, "Import", "Il documento associato al link non è stato trovato");
+    }
 }
 
 void Principale::onLoginReturn(CharacterClient* cli)

@@ -26,6 +26,8 @@
 #include <QKeyEvent>
 #include <regex>
 #include <QPainter>
+#include <QMessageBox>
+#include <QList>
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -51,6 +53,45 @@ Editor::~Editor()
 }
 
 void Editor::setupGeneral() {
+
+    colorL = {"yellow", "red", "green", "blue", "grey"};
+
+    //
+    QLayoutItem *wItem;
+    while ((wItem = ui->verticalLayout->takeAt(0)) != 0)
+    {
+        //delete wItem;
+        delete wItem->widget();
+    }
+
+    QLabel *io = new QLabel(this);
+    io->setText(file_->emailo().c_str());
+    emailL.append(file_->emailo().c_str());
+    QString colorq = colorL[0];
+    QString colorstyleq = QString("font-size: 12px;"
+                                      "font-family: 'Calibri';"
+                                      "color: black;"
+                                      "background-color: %1").arg(colorq);
+    io->setStyleSheet(colorstyleq);
+    ui->verticalLayout->addWidget(io);
+
+    for(int i = 0; i < file_->emailal_size(); i++)
+    {
+        if(file_->emailal(i).c_str() != file_->emailo().c_str())
+        {
+            QLabel *item = new QLabel(this);
+            item->setText(file_->emailal(i).c_str());
+            emailL.append(file_->emailal(i).c_str());
+            QString colorqqqq = colorL[i+1];
+            QString colorstyle = QString("font-size: 12px;"
+                                         "font-family: 'Calibri';"
+                                         "color: black;"
+                                         "background-color: %1").arg(colorqqqq);
+            item->setStyleSheet(colorstyle);
+            ui->verticalLayout->addWidget(item);
+        }
+    }
+    //
 
     QIcon *ic = new QIcon(":/images/img/logoVero.png");
     setWindowIcon(*ic);
@@ -766,12 +807,6 @@ void Editor::readFile() {
 
     for(i=0; i<_symbolsP->symbolvector_size(); i++)
     {
-        /*if(symbol_->at(i).getBold() == true)
-            ui->txt->setFontWeight(QFont::Bold);
-        else
-            ui->txt->setFontWeight(QFont::Normal);
-        ui->txt->setFontUnderline(symbol_->at(i).getUnderline());
-        ui->txt->setFontItalic(symbol_->at(i).getItalic());*/
         QFont font;
         font.setBold(symbol_->at(i).getBold());
         font.setUnderline(symbol_->at(i).getUnderline());
@@ -793,11 +828,10 @@ void Editor::readFile() {
         QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
         palette.setColor(QPalette::Foreground, color2);
 
-
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
-        ui->txt->setPalette(palette);
         ui->txt->setCurrentFont(font);
+        ui->txt->setPalette(palette);
         char y = symbol_->at(i).getCharacter();
         //j = atoi(y);
         ui->txt->insertPlainText(QChar(y));
@@ -1029,4 +1063,68 @@ void Editor::localErase(int index) {
     _symbols.erase(_symbols.begin() + index);
     _server.send(msg);*/
 
+}
+
+void Editor::on_actionevidenzia_utente_triggered()
+{
+    ui->txt->clear();
+    int i=0;
+    int j=0;
+    QTextCursor cursor = ui->txt->textCursor();
+
+    if(!client_->GetFileContent(*file_).empty())
+    {
+        QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
+    }
+
+    std::cout << client_->getSymbolVector().DebugString() << "\n";
+    *_symbolsP=client_->getSymbolVector();
+
+    for(i=0; i<_symbolsP->symbolvector_size(); i++)
+    {
+        symbol_->push_back(Symbol(_symbolsP->symbolvector(i)));
+        std::sort(symbol_->begin(), symbol_->end());
+    }
+
+    for(i=0; i<_symbolsP->symbolvector_size(); i++) {
+        QFont font;
+        font.setBold(symbol_->at(i).getBold());
+        font.setUnderline(symbol_->at(i).getUnderline());
+        font.setItalic(symbol_->at(i).getItalic());
+        if (symbol_->at(i).getDimension() == -842150451)
+            font.setPointSize(8);
+        else
+            font.setPointSize(symbol_->at(i).getDimension());
+        if (QString::fromStdString(symbol_->at(i).getFont()) == "")
+            font.setFamily("Arial");
+        else
+            font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+
+        //QString qss = QString("color: %1").arg(QString::fromStdString(symbol_->at(i).getColor()));
+        //colore->setStyleSheet(qss);
+        //font.setStyle(qss);
+        //ui->txt->setTextColor(QString::fromStdString(symbol_->at(i).getColor()));
+        QPalette palette = ui->txt->palette();
+        QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        palette.setColor(QPalette::Foreground, color2);
+
+        if(ui->actionevidenzia_utente->isChecked() == false)
+        {
+            QString email = QString::fromStdString(symbol_->at(i).getUniqueId());
+
+            int c = emailL.indexOf(email);
+            QString colorU = colorL[c];
+            QColor color3 = QColor(colorU);
+
+            palette.setColor(QPalette::Highlight, color3);
+        }
+
+        cursor.setPosition(i);
+        ui->txt->setTextCursor(cursor);
+        ui->txt->setCurrentFont(font);
+        ui->txt->setPalette(palette);
+        char y = symbol_->at(i).getCharacter();
+        //j = atoi(y);
+        ui->txt->insertPlainText(QChar(y));
+    }
 }

@@ -166,7 +166,11 @@ background-color:none;
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout"/>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -329,6 +333,7 @@ QToolButton:focus
    <addaction name="separator"/>
    <addaction name="actiontaglia"/>
    <addaction name="actioncopia"/>
+   <addaction name="actionevidenzia_utente"/>
    <addaction name="actionincolla"/>
    <addaction name="separator"/>
    <addaction name="actionallineaS"/>
@@ -507,6 +512,14 @@ QToolButton:focus
    </property>
    <property name="text">
     <string>sottolineato</string>
+   </property>
+  </action>
+  <action name="actionevidenzia_utente">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>evidenzia utente</string>
    </property>
   </action>
  </widget>

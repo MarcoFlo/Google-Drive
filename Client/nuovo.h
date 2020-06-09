@@ -21,7 +21,7 @@ class Nuovo : public QDialog
 public:
     explicit Nuovo(QWidget *parent = nullptr, CharacterClient *user = nullptr);
     ~Nuovo();
-    bool is_email_valid();
+    bool is_email_valid(std::string s);
 
 
 signals:

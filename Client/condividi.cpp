@@ -39,28 +39,40 @@ void Condividi::on_conferma_clicked()
     people=ui->condividiB->text();
     if(people == "")
     {
-        QMessageBox::warning(this, "Condivisione", "Inserire dei nomi utente");
-    }
-    else if(!is_email_valid())
-    {
-        QMessageBox::warning(this, "Condivisione", "Inserire email valida");
+        QMessageBox::warning(this, "Condivisione", "Inserire uno o più nomi utente");
+        return;
     }
     else
     {
-        hide();
-        emit share(people);
+        std::string delimiter = " ";
+        std::string token;
+        size_t pos =0;
+        std::string s = (people.toStdString()+" ");
+
+        while ((pos = s.find(delimiter)) != std::string::npos) {
+            token = s.substr(0, pos);
+            std::cout << token << std::endl;
+            if (!is_email_valid(token)) {
+                QMessageBox::warning(this, "Condivisione", "Una o più email non sono valide");
+                return;
+            }
+            s.erase(0, pos + delimiter.length());
+        }
 
     }
 
+    hide();
+    emit share(people);
+
 }
 
-bool Condividi::is_email_valid()
+bool Condividi::is_email_valid(std::string s)
 {
     // define a regular expression
     const std::regex pattern(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
     bool fin;
     // try to match the string with the regular expression
-    if((fin = std::regex_match(people.toStdString(), pattern))) {
+    if((fin = std::regex_match(s, pattern))) {
 
     } else {
 

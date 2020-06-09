@@ -49,14 +49,24 @@ void Nuovo::on_conferma_clicked()
 
             if (share.compare("") != 0) {
 
-                if (!is_email_valid()) {
-                    //aggiungere per email separate da spazio
-                    QMessageBox::warning(this, "Creazione", "Email non valida");
-                } else{
+                std::string delimiter = " ";
+                std::string token;
+                size_t pos =0;
+                std::string s = (share.toStdString()+" ");
+
+                while ((pos = s.find(delimiter)) != std::string::npos) {
+                    token = s.substr(0, pos);
+                    std::cout << token << std::endl;
+                    if (!is_email_valid(token)) {
+                        QMessageBox::warning(this, "Creazione", "Una o più email non sono valide");
+                        return;
+                    }
+                    s.erase(0, pos + delimiter.length());
+                }
 
                     this->hide();
                     emit openE(name, share);
-                }
+
             } else{
 
                 this->hide();
@@ -68,13 +78,13 @@ void Nuovo::on_conferma_clicked()
 
 }
 
-bool Nuovo::is_email_valid()
+bool Nuovo::is_email_valid(std::string s)
 {
     // define a regular expression
     const std::regex pattern(R"((\w+)(\.|_)?(\w*)@(\w+)(\.(\w+))+)");
     bool fin;
     // try to match the string with the regular expression
-    fin = std::regex_match(share.toStdString(), pattern);
+    fin = std::regex_match(s, pattern);
 
     return fin;
 }
