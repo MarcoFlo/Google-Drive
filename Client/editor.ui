@@ -172,6 +172,28 @@ background-color:none;
            </property>
           </layout>
          </item>
+         <item>
+          <widget class="QPushButton" name="evidenzia">
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+	color: #3a848a;
+	font-size: 12px;
+	border: 1px solid #3a848a;
+	padding: 5px;
+	font-family: 'Calibri';
+	background-color:none;
+}
+QPushButton:hover
+{
+	border:2px solid #3a848a;
+}</string>
+           </property>
+           <property name="text">
+            <string>Evidenzia</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
       </item>
@@ -333,7 +355,6 @@ QToolButton:focus
    <addaction name="separator"/>
    <addaction name="actiontaglia"/>
    <addaction name="actioncopia"/>
-   <addaction name="actionevidenzia_utente"/>
    <addaction name="actionincolla"/>
    <addaction name="separator"/>
    <addaction name="actionallineaS"/>
@@ -512,14 +533,6 @@ QToolButton:focus
    </property>
    <property name="text">
     <string>sottolineato</string>
-   </property>
-  </action>
-  <action name="actionevidenzia_utente">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>evidenzia utente</string>
    </property>
   </action>
  </widget>

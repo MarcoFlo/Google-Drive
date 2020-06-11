@@ -108,7 +108,7 @@ private slots:
 
         void localErase(int index);
 
-        void on_actionevidenzia_utente_triggered();
+        void on_evidenzia_clicked();
 
 private:
     Ui::Editor *ui;
@@ -172,6 +172,8 @@ private:
     QList<QString> emailL;
 
     bool insert = true;
+
+    bool evidenzia = false;
 };
 
 #endif // EDITOR_H

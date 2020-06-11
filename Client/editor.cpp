@@ -656,6 +656,13 @@ void Editor::checkFont()
         ui->actionalineaG->setChecked(true);
     }
 
+    QTextCharFormat formato = ui->txt->currentCharFormat();
+    QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
+    int c = emailL.indexOf(email);
+    QString colorU = colorL[c];
+    QColor colB = QColor(colorU);
+    formato.setBackground(colB);
+    ui->txt->setCurrentCharFormat(formato);
 }
 
 void Editor::changeDim()
@@ -715,13 +722,19 @@ void Editor::setTextFont(QString fontS)
     else
         format.setFontWeight(QFont::Normal);
 
+    QColor colF = colore->palette().color(QPalette::Background);
+    format.setForeground(colF);
+
+    QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
+    int c = emailL.indexOf(email);
+    QString colorU = colorL[c];
+    QColor colB = QColor(colorU);
+    format.setBackground(colB);
+    //QPalette pal;
+    //pal.setColor(QPalette::Foreground, colB);
+    //ui->txt->setPalette(pal);
+
     cursor.setCharFormat(format);
-
-    QColor colB = colore->palette().color(QPalette::Background);
-    QPalette pal;
-    pal.setColor(QPalette::Foreground, colB);
-    ui->txt->setPalette(pal);
-
     ui->txt->setTextCursor(cursor);
 
     font->setText(fontS);
@@ -742,8 +755,15 @@ void Editor::setTextDim(int dim1)
         format.setFontWeight(QFont::Bold);
     else
         format.setFontWeight(QFont::Normal);
-    
-    //setta colore
+
+    QColor colF = colore->palette().color(QPalette::Background);
+    format.setForeground(colF);
+
+    QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
+    int c = emailL.indexOf(email);
+    QString colorU = colorL[c];
+    QColor colB = QColor(colorU);
+    format.setBackground(colB);
 
     cursor.setCharFormat(format);
     ui->txt->setTextCursor(cursor);
@@ -808,7 +828,41 @@ void Editor::readFile() {
 
     for(i=0; i<symbol_->size(); i++)
     {
-        QFont font;
+        QFont *font2;
+
+        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+            //font.setFamily("Arial");
+            font2 = new QFont("Arial");
+        else
+            //font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+            font2 = new QFont(QString::fromStdString(symbol_->at(i).getFont()));
+
+        QTextCharFormat formato = cursor.blockCharFormat();
+        formato.setFont(*font2);
+
+        if(symbol_->at(i).getDimension() == -842150451)
+            formato.setFontPointSize(8);
+        else
+            formato.setFontPointSize(symbol_->at(i).getDimension());
+
+        formato.setFontUnderline(symbol_->at(i).getUnderline());
+        formato.setFontItalic(symbol_->at(i).getItalic());
+        if(symbol_->at(i).getBold() == true)
+            formato.setFontWeight(QFont::Bold);
+        else
+            formato.setFontWeight(QFont::Normal);
+
+
+
+        QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        formato.setForeground(colB);
+
+        cursor.setCharFormat(formato);
+        //QPalette pal;
+        //pal.setColor(QPalette::Foreground, colB);
+
+
+        /*QFont font;
         font.setBold(symbol_->at(i).getBold());
         font.setUnderline(symbol_->at(i).getUnderline());
         font.setItalic(symbol_->at(i).getItalic());
@@ -827,12 +881,13 @@ void Editor::readFile() {
         //ui->txt->setTextColor(QString::fromStdString(symbol_->at(i).getColor()));
         QPalette palette = ui->txt->palette();
         QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
-        palette.setColor(QPalette::Foreground, color2);
+        palette.setColor(QPalette::Foreground, color2);*/
 
+        //ui->txt->setPalette(pal);
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
-        ui->txt->setCurrentFont(font);
-        ui->txt->setPalette(palette);
+        //ui->txt->setCurrentFont(font);
+        //ui->txt->setPalette(palette);
         char y = symbol_->at(i).getCharacter();
         //j = atoi(y);
         ui->txt->insertPlainText(QChar(y));
@@ -962,7 +1017,7 @@ void Editor::insertFile(char r) {
          }
          return QMainWindow::eventFilter(obj, event);
      }
-
+    return false;
  }
 
 void Editor::localInsert(int index, char value) {
@@ -1080,7 +1135,7 @@ void Editor::localErase(int index) {
 
 }
 
-void Editor::on_actionevidenzia_utente_triggered()
+void Editor::on_evidenzia_clicked()
 {
     insert = false;
     ui->txt->clear();
@@ -1101,7 +1156,48 @@ void Editor::on_actionevidenzia_utente_triggered()
 
     for(i=0; i < symbol_->size(); i++)
     {
-        QFont font;
+        QFont *font2;
+
+        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+            //font.setFamily("Arial");
+            font2 = new QFont("Arial");
+        else
+            //font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+            font2 = new QFont(QString::fromStdString(symbol_->at(i).getFont()));
+
+        QTextCharFormat formato = cursor.blockCharFormat();
+        formato.setFont(*font2);
+
+        if(symbol_->at(i).getDimension() == -842150451)
+            formato.setFontPointSize(8);
+        else
+            formato.setFontPointSize(symbol_->at(i).getDimension());
+
+        formato.setFontUnderline(symbol_->at(i).getUnderline());
+        formato.setFontItalic(symbol_->at(i).getItalic());
+        if(symbol_->at(i).getBold() == true)
+            formato.setFontWeight(QFont::Bold);
+        else
+            formato.setFontWeight(QFont::Normal);
+
+
+        QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        formato.setForeground(colB);
+
+        if(evidenzia == false)
+        {
+            QString email = QString::fromStdString(symbol_->at(i).getUniqueId());
+
+            int c = emailL.indexOf(email);
+            QString colorU = colorL[c];
+            QColor color3 = QColor(colorU);
+            formato.setBackground(color3);
+            //palette.setColor(QPalette::Highlight, color3);
+        }
+
+        cursor.setCharFormat(formato);
+
+        /*QFont font;
         font.setBold(symbol_->at(i).getBold());
         font.setUnderline(symbol_->at(i).getUnderline());
         font.setItalic(symbol_->at(i).getItalic());
@@ -1115,12 +1211,12 @@ void Editor::on_actionevidenzia_utente_triggered()
             font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
         QPalette palette = ui->txt->palette();
         QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
-        palette.setColor(QPalette::Foreground, color2);
+        palette.setColor(QPalette::Foreground, color2);*/
 
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
-        ui->txt->setCurrentFont(font);
-        ui->txt->setPalette(palette);
+        //ui->txt->setCurrentFont(font);
+        //ui->txt->setPalette(palette);
         char y = symbol_->at(i).getCharacter();
         ui->txt->insertPlainText(QChar(y));
     }
@@ -1167,6 +1263,19 @@ void Editor::on_actionevidenzia_utente_triggered()
         ui->txt->insertPlainText(QChar(y));
 
     }*/
+    QTextCharFormat formato2 = ui->txt->currentCharFormat();
+    QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
+    int c = emailL.indexOf(email);
+    QString colorU = colorL[c];
+    QColor colB = QColor(colorU);
+    formato2.setBackground(colB);
+    ui->txt->setCurrentCharFormat(formato2);
+
+    if(evidenzia == false)
+        evidenzia = true;
+    else
+        evidenzia = false;
+
     insert = true;
 }
 
