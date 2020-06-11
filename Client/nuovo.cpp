@@ -44,21 +44,19 @@ void Nuovo::on_conferma_clicked()
         if (cli.empty() == false) {
             cli.clear();
             QMessageBox::warning(this, "Creazione", "Esiste già un documento con questo nome");
-        }
-        else {
+        } else {
 
             if (share.compare("") != 0) {
 
                 std::string delimiter = " ";
                 std::string token;
-                size_t pos =0;
-                std::string s = (share.toStdString()+" ");
+                size_t pos = 0;
+                std::string s = (share.toStdString() + " ");
 
                 while ((pos = s.find(delimiter)) != std::string::npos) {
                     token = s.substr(0, pos);
                     std::cout << token << std::endl;
-                    if(token != "" && token != " ")
-                    {
+                    if (token != "" && token != " ") {
                         if (!is_email_valid(token)) {
                             QMessageBox::warning(this, "Creazione", "Una o più email non sono valide");
                             return;
@@ -67,17 +65,16 @@ void Nuovo::on_conferma_clicked()
                     s.erase(0, pos + delimiter.length());
                 }
 
-                    this->hide();
-                    emit openE(name, share);
+                this->hide();
+                emit openE(name, share);
 
-            } else{
+            } else {
 
                 this->hide();
                 emit openE(name, share);
             }
         }
     }
-
 
 }
 

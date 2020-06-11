@@ -404,10 +404,10 @@ void Principale::cellClicked()
         //delete wItem;
         delete wItem->widget();
     }
-    if(file_->emailal_size() == 0)
+    /*if(file_->emailal_size() == 0)
     {
         QMessageBox::warning(this, "bla", "non c'è nulla");
-    }
+    }*/
     for(int i = 0; i < file_->emailal_size(); i++)
     {
         QLabel *item = new QLabel(this);

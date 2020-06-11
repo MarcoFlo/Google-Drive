@@ -138,6 +138,7 @@ private:
     protobuf::ProfileInfo userLogged;
 
     QString link;
+
 };
 
 #endif // PRINCIPALE_H

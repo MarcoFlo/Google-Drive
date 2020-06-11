@@ -36,6 +36,8 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     client_=client;
     _symbolsP=new protobuf::SymbolVector();
     symbol_ = new std::vector<Symbol>();
+    _symbolsP2=new protobuf::SymbolVector();
+    symbol2_ = new std::vector<Symbol>();
     ui->setupUi(this);
     client_->GetFiles();
     file_ = new protobuf::FileInfo();
@@ -927,62 +929,69 @@ void Editor::insertFile(char r) {
 
  bool Editor::eventFilter(QObject* obj, QEvent *event)
  {
-     const std::regex pattern(R"(\w+|\W)");
-     if(obj == ui->txt)
+     if(insert == true)
      {
-         if (event->type() == QEvent::KeyPress)
+         const std::regex pattern(R"(\w+|\W)");
+         if(obj == ui->txt)
          {
-             QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
-             std::cout << keyEvent->key() << "\n";
-             if (keyEvent->key() == Qt::Key_Up)
+             if (event->type() == QEvent::KeyPress)
              {
-                 qDebug() << "lineEdit -> Qt::Key_Up";
-                 return true;
-             }  else if(keyEvent->key() == Qt::Key_Down)
-             {
-                 qDebug() << "lineEdit -> Qt::Key_Down";
-                 return true;
-             } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
-                 std::cout << "cancella\n";
-                 localErase(ui->txt->textCursor().position());
+                 QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+                 std::cout << keyEvent->key() << "\n";
+                 if (keyEvent->key() == Qt::Key_Up)
+                 {
+                     qDebug() << "lineEdit -> Qt::Key_Up";
+                     return true;
+                 }  else if(keyEvent->key() == Qt::Key_Down)
+                 {
+                     qDebug() << "lineEdit -> Qt::Key_Down";
+                     return true;
+                 } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
+                     std::cout << "cancella\n";
+                     localErase(ui->txt->textCursor().position());
+                 }
+                 else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
+                         keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
+                         keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave || keyEvent->key() == Qt::Key_Igrave ||
+                         keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
+                     localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
+                 }
+                 else if(std::regex_match(keyEvent->text().toStdString(), pattern)) {
+                     localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
+                 }
              }
-             else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
-             keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
-             keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave || keyEvent->key() == Qt::Key_Igrave ||
-             keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
-                 localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
-             }
-             else if(std::regex_match(keyEvent->text().toStdString(), pattern)) {
-                 localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
-             }
+             return false;
          }
-         return false;
+         return QMainWindow::eventFilter(obj, event);
      }
-     return QMainWindow::eventFilter(obj, event);
+
  }
 
 void Editor::localInsert(int index, char value) {
-    std::vector<int> posPre = {0};
-    std::vector<int> posPost = {2};
 
-    if (symbol_->size() < index)
-        //se cerco di inserire a un indice oltre la fine, inserisco alla fine
-        index = symbol_->size();
+     if(insert == true)
+     {
+         std::vector<int> posPre = {0};
+         std::vector<int> posPost = {2};
 
-    if (symbol_->size() == index) {
-        if (index != 0) {
-            posPre = symbol_->at(index - 1).getPos();
-            posPost = {(posPre.at(posPre.size() - 1) + 2)};
-        }
-    } else {
-        if (index != 0)
-            posPre = symbol_->at(index - 1).getPos();
+         if (symbol_->size() < index)
+             //se cerco di inserire a un indice oltre la fine, inserisco alla fine
+             index = symbol_->size();
 
-        posPost = symbol_->at(index).getPos();
-    }
+         if (symbol_->size() == index) {
+             if (index != 0) {
+                 posPre = symbol_->at(index - 1).getPos();
+                 posPost = {(posPre.at(posPre.size() - 1) + 2)};
+             }
+         } else {
+             if (index != 0)
+                 posPre = symbol_->at(index - 1).getPos();
+
+             posPost = symbol_->at(index).getPos();
+         }
 
 #if debug == 1
-    //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
+         //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
     for (int i = 0; i < posPre.size(); i++) {
         std::cout << posPre.at(i);
         if (i == 0 && i != posPre.size() - 1)
@@ -996,37 +1005,37 @@ void Editor::localInsert(int index, char value) {
     }
 #endif
 
-    int newVal;
-    bool isPreBigger = posPre.size() >= posPost.size();
-    std::vector<int> posNew = isPreBigger ? posPre : posPost;
-    unsigned int maxI = posNew.size() - 1;
+         int newVal;
+         bool isPreBigger = posPre.size() >= posPost.size();
+         std::vector<int> posNew = isPreBigger ? posPre : posPost;
+         unsigned int maxI = posNew.size() - 1;
 
-    if (posPre.size() == posPost.size()) {
-        newVal = (posPre.at(maxI) + posPost.at(maxI)) / 2;
-        if (newVal != posPre.at(maxI)) {
-            //stiamo inserendo tra 1 e 3
-            posNew.at(maxI) = newVal;
-        } else {
-            //stiamo inserendo tra 3,4 e 3,5
-            posNew.push_back(5);
-        }
-    } else {
-        if (posNew.at(maxI) == 1) {
-            //stiamo inserendo tra 4 e 4,1
-            posNew.at(maxI) = 0;
-            posNew.push_back(5);
-        } else if (posNew.at(maxI) == 9) {
-            //stiamo inserendo tra 3,9 e 4
-            posNew.push_back(5);
-        } else {
-            //stiamo inserendo tra 3,477777 e 3,5
-            newVal = isPreBigger ? (posNew.at(maxI) + 10) / 2 : posNew.at(maxI) / 2;
-            posNew.at(maxI) = newVal;
-        }
-    }
+         if (posPre.size() == posPost.size()) {
+             newVal = (posPre.at(maxI) + posPost.at(maxI)) / 2;
+             if (newVal != posPre.at(maxI)) {
+                 //stiamo inserendo tra 1 e 3
+                 posNew.at(maxI) = newVal;
+             } else {
+                 //stiamo inserendo tra 3,4 e 3,5
+                 posNew.push_back(5);
+             }
+         } else {
+             if (posNew.at(maxI) == 1) {
+                 //stiamo inserendo tra 4 e 4,1
+                 posNew.at(maxI) = 0;
+                 posNew.push_back(5);
+             } else if (posNew.at(maxI) == 9) {
+                 //stiamo inserendo tra 3,9 e 4
+                 posNew.push_back(5);
+             } else {
+                 //stiamo inserendo tra 3,477777 e 3,5
+                 newVal = isPreBigger ? (posNew.at(maxI) + 10) / 2 : posNew.at(maxI) / 2;
+                 posNew.at(maxI) = newVal;
+             }
+         }
 
 #if debug == 1
-    // stampa l'indice frazionario scelto
+         // stampa l'indice frazionario scelto
     std::cout << "  -->  ";
     for (int j = 0; j < posNew.size(); ++j) {
         std::cout << posNew[j];
@@ -1036,11 +1045,13 @@ void Editor::localInsert(int index, char value) {
     std::cout << std::endl;
 #endif
 
-    std::string uniqueId = client_->getProfileInfoLogged().user().email();
-    Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString());
-    symbol_->insert(symbol_->begin() + index, 1, symbol);
-    protobuf::Symbol s= symbol.makeProtobufSymbol();
-    client_->InsertSymbols(symbol, false);
+         std::string uniqueId = client_->getProfileInfoLogged().user().email();
+         Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString());
+         symbol_->insert(symbol_->begin() + index, 1, symbol);
+         protobuf::Symbol s= symbol.makeProtobufSymbol();
+         client_->InsertSymbols(symbol, false);
+     }
+
 
 }
 
@@ -1052,13 +1063,18 @@ void Editor::localInsert(int index, char value) {
  * @param index
  */
 void Editor::localErase(int index) {
-    if (symbol_->size() == 0)
-        return;
 
-    if (index >= symbol_->size())
-        index = symbol_->size() - 1;
+    if(insert == true)
+    {
+        if (symbol_->size() == 0)
+            return;
 
-    client_->InsertSymbols(symbol_->at(index), true);
+        if (index >= symbol_->size())
+            index = symbol_->size() - 1;
+
+        client_->InsertSymbols(symbol_->at(index), true);
+    }
+
   /*
     Message msg(_symbols.at(index), _siteId, true);
     _symbols.erase(_symbols.begin() + index);
@@ -1068,7 +1084,19 @@ void Editor::localErase(int index) {
 
 void Editor::on_actionevidenzia_utente_triggered()
 {
+    insert = false;
     ui->txt->clear();
+    /*if(ui->actionevidenzia_utente->isChecked() == true)
+    {
+        ui->txt->clear();
+        QTextCursor cursor = ui->txt->textCursor();
+        cursor.setPosition(0);
+        ui->txt->setTextCursor(cursor);
+    } else{
+        readFile();
+    }*/
+    symbol2_->clear();
+    _symbolsP2->clear_symbolvector();
     int i=0;
     int j=0;
     QTextCursor cursor = ui->txt->textCursor();
@@ -1079,37 +1107,37 @@ void Editor::on_actionevidenzia_utente_triggered()
     }
 
     std::cout << client_->getSymbolVector().DebugString() << "\n";
-    *_symbolsP=client_->getSymbolVector();
+    *_symbolsP2=client_->getSymbolVector();
 
-    for(i=0; i<_symbolsP->symbolvector_size(); i++)
+    for(i=0; i<_symbolsP2->symbolvector_size(); i++)
     {
-        symbol_->push_back(Symbol(_symbolsP->symbolvector(i)));
-        std::sort(symbol_->begin(), symbol_->end());
+        symbol2_->push_back(Symbol(_symbolsP2->symbolvector(i)));
+        std::sort(symbol2_->begin(), symbol2_->end());
     }
 
-    for(i=0; i<_symbolsP->symbolvector_size(); i++) {
+    for(i=0; i<_symbolsP2->symbolvector_size(); i++) {
         QFont font;
-        font.setBold(symbol_->at(i).getBold());
-        font.setUnderline(symbol_->at(i).getUnderline());
-        font.setItalic(symbol_->at(i).getItalic());
-        if (symbol_->at(i).getDimension() == -842150451)
+        font.setBold(symbol2_->at(i).getBold());
+        font.setUnderline(symbol2_->at(i).getUnderline());
+        font.setItalic(symbol2_->at(i).getItalic());
+        if (symbol2_->at(i).getDimension() == -842150451)
             font.setPointSize(8);
         else
-            font.setPointSize(symbol_->at(i).getDimension());
-        if (QString::fromStdString(symbol_->at(i).getFont()) == "")
+            font.setPointSize(symbol2_->at(i).getDimension());
+        if (QString::fromStdString(symbol2_->at(i).getFont()) == "")
             font.setFamily("Arial");
         else
-            font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+            font.setFamily(QString::fromStdString(symbol2_->at(i).getFont()));
 
         //QString qss = QString("color: %1").arg(QString::fromStdString(symbol_->at(i).getColor()));
         //colore->setStyleSheet(qss);
         //font.setStyle(qss);
         //ui->txt->setTextColor(QString::fromStdString(symbol_->at(i).getColor()));
         QPalette palette = ui->txt->palette();
-        QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        QColor color2 = QColor(QString::fromStdString(symbol2_->at(i).getColor()));
         palette.setColor(QPalette::Foreground, color2);
 
-        if(ui->actionevidenzia_utente->isChecked() == false)
+        /*if(ui->actionevidenzia_utente->isChecked() == false)
         {
             QString email = QString::fromStdString(symbol_->at(i).getUniqueId());
 
@@ -1118,14 +1146,16 @@ void Editor::on_actionevidenzia_utente_triggered()
             QColor color3 = QColor(colorU);
 
             palette.setColor(QPalette::Highlight, color3);
-        }
+        }*/
 
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
         ui->txt->setCurrentFont(font);
         ui->txt->setPalette(palette);
-        char y = symbol_->at(i).getCharacter();
+        char y = symbol2_->at(i).getCharacter();
         //j = atoi(y);
         ui->txt->insertPlainText(QChar(y));
+
     }
+    insert = true;
 }
