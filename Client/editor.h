@@ -153,10 +153,6 @@ private:
 
     protobuf::SymbolVector *_symbolsP;
 
-    std::vector<Symbol> *symbol2_;
-
-    protobuf::SymbolVector *_symbolsP2;
-
     bool eventFilter(QObject *obj, QEvent *event);
 
     bool bold = false;

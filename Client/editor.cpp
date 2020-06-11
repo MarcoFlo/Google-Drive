@@ -36,8 +36,6 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     client_=client;
     _symbolsP=new protobuf::SymbolVector();
     symbol_ = new std::vector<Symbol>();
-    _symbolsP2=new protobuf::SymbolVector();
-    symbol2_ = new std::vector<Symbol>();
     ui->setupUi(this);
     client_->GetFiles();
     file_ = new protobuf::FileInfo();
@@ -808,7 +806,7 @@ void Editor::readFile() {
         std::sort(symbol_->begin(), symbol_->end());
     }
 
-    for(i=0; i<_symbolsP->symbolvector_size(); i++)
+    for(i=0; i<symbol_->size(); i++)
     {
         QFont font;
         font.setBold(symbol_->at(i).getBold());
@@ -929,14 +927,14 @@ void Editor::insertFile(char r) {
 
  bool Editor::eventFilter(QObject* obj, QEvent *event)
  {
-     if(insert == true)
+     if(insert)
      {
          const std::regex pattern(R"(\w+|\W)");
          if(obj == ui->txt)
          {
              if (event->type() == QEvent::KeyPress)
              {
-                 QKeyEvent* keyEvent = static_cast<QKeyEvent*>(event);
+                 QKeyEvent* keyEvent = dynamic_cast<QKeyEvent*>(event);
                  std::cout << keyEvent->key() << "\n";
                  if (keyEvent->key() == Qt::Key_Up)
                  {
@@ -969,7 +967,7 @@ void Editor::insertFile(char r) {
 
 void Editor::localInsert(int index, char value) {
 
-     if(insert == true)
+     if(insert)
      {
          std::vector<int> posPre = {0};
          std::vector<int> posPost = {2};
@@ -1064,7 +1062,7 @@ void Editor::localInsert(int index, char value) {
  */
 void Editor::localErase(int index) {
 
-    if(insert == true)
+    if(insert)
     {
         if (symbol_->size() == 0)
             return;
@@ -1095,26 +1093,38 @@ void Editor::on_actionevidenzia_utente_triggered()
     } else{
         readFile();
     }*/
-    symbol2_->clear();
-    _symbolsP2->clear_symbolvector();
     int i=0;
     int j=0;
     QTextCursor cursor = ui->txt->textCursor();
 
-    if(!client_->GetFileContent(*file_).empty())
-    {
-        QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
-    }
-
     std::cout << client_->getSymbolVector().DebugString() << "\n";
-    *_symbolsP2=client_->getSymbolVector();
 
-    for(i=0; i<_symbolsP2->symbolvector_size(); i++)
+    for(i=0; i < symbol_->size(); i++)
     {
-        symbol2_->push_back(Symbol(_symbolsP2->symbolvector(i)));
-        std::sort(symbol2_->begin(), symbol2_->end());
-    }
+        QFont font;
+        font.setBold(symbol_->at(i).getBold());
+        font.setUnderline(symbol_->at(i).getUnderline());
+        font.setItalic(symbol_->at(i).getItalic());
+        if(symbol_->at(i).getDimension() == -842150451)
+            font.setPointSize(8);
+        else
+            font.setPointSize(symbol_->at(i).getDimension());
+        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+            font.setFamily("Arial");
+        else
+            font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+        QPalette palette = ui->txt->palette();
+        QColor color2 = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        palette.setColor(QPalette::Foreground, color2);
 
+        cursor.setPosition(i);
+        ui->txt->setTextCursor(cursor);
+        ui->txt->setCurrentFont(font);
+        ui->txt->setPalette(palette);
+        char y = symbol_->at(i).getCharacter();
+        ui->txt->insertPlainText(QChar(y));
+    }
+/*
     for(i=0; i<_symbolsP2->symbolvector_size(); i++) {
         QFont font;
         font.setBold(symbol2_->at(i).getBold());
@@ -1147,7 +1157,7 @@ void Editor::on_actionevidenzia_utente_triggered()
 
             palette.setColor(QPalette::Highlight, color3);
         }*/
-
+/*
         cursor.setPosition(i);
         ui->txt->setTextCursor(cursor);
         ui->txt->setCurrentFont(font);
@@ -1156,6 +1166,7 @@ void Editor::on_actionevidenzia_utente_triggered()
         //j = atoi(y);
         ui->txt->insertPlainText(QChar(y));
 
-    }
+    }*/
     insert = true;
 }
+
