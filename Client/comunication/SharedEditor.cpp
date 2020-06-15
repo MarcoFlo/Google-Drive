@@ -120,9 +120,10 @@ void SharedEditor::localInsert(unsigned int index, char value) {
     int dimension = 0;
     std::string color = nullptr;
     std::string font = nullptr;
+    std::string allineamento = nullptr;
 
     std::string uniqueId = _siteId + std::to_string(_counter++);
-    Symbol symbol(value, uniqueId, posNew, bold, underlined, italic, dimension, color, font);
+    Symbol symbol(value, uniqueId, posNew, bold, underlined, italic, dimension, color, font, allineamento);
     _symbols.insert(_symbols.begin() + index, 1, symbol);
     std::string fileIdentifier = "fileIDentifier";
     Message msg(fileIdentifier, symbol, false);

@@ -5,7 +5,7 @@
 
 Symbol::Symbol() {}
 
-Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos, bool bold, bool underline, bool italic, int dimension, std::string color, std::string font) : character_(character), uniqueId_(uniqueId), pos_(pos), bold_(bold), underline_(underline), italic_(italic), dimension_(dimension), color_(color), font_(font) {}
+Symbol::Symbol(char character, std::string uniqueId, std::vector<int>& pos, bool bold, bool underline, bool italic, int dimension, std::string color, std::string font, std::string allineamento) : character_(character), uniqueId_(uniqueId), pos_(pos), bold_(bold), underline_(underline), italic_(italic), dimension_(dimension), color_(color), font_(font), allineamento_(allineamento) {}
 
 Symbol::Symbol(protobuf::Symbol s) {
     int i=0;
@@ -17,6 +17,7 @@ Symbol::Symbol(protobuf::Symbol s) {
     dimension_ = s.dimension();
     color_ = s.color();
     font_ = s.font();
+    allineamento_ = s.allineamento();
     for(i=0; i < s.pos_size(); i++)
     {
         pos_.push_back(s.pos(i));
@@ -33,6 +34,7 @@ protobuf::Symbol Symbol::makeProtobufSymbol() {
     symbol.set_dimension(dimension_);
     symbol.set_color(color_);
     symbol.set_font(font_);
+    symbol.set_allineamento(allineamento_);
     *symbol.mutable_pos() = {pos_.begin(), pos_.end()};
     return symbol;
 }
@@ -79,5 +81,9 @@ std::string Symbol::getColor() const {
 
 std::string Symbol::getFont() const {
     return font_;
+}
+
+std::string Symbol::getAllineamento() const {
+    return allineamento_;
 }
 

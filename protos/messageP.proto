@@ -41,6 +41,7 @@ message Symbol {
     int32 dimension = 26;
     string color = 27;
     string font = 29;
+    string allineamento = 31;
 }
 
 message FileName {

@@ -18,10 +18,12 @@ class Symbol {
     int dimension_;
     std::string color_;
     std::string font_;
+    std::string allineamento_;
+
 public:
     Symbol();
 
-    Symbol(char character, std::string uniqueId, std::vector<int> &pos, bool bold, bool underline, bool italic, int dimension, std::string color, std::string font);
+    Symbol(char character, std::string uniqueId, std::vector<int> &pos, bool bold, bool underline, bool italic, int dimension, std::string color, std::string font, std::string allineamento);
 
     Symbol(protobuf::Symbol);
 
@@ -47,6 +49,8 @@ public:
     std::string getColor() const;
 
     std::string getFont() const;
+
+    std::string getAllineamento() const;
 
     protobuf::Symbol makeProtobufSymbol();
 };

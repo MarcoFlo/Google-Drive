@@ -127,8 +127,8 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
 
     protobuf::FileInfo reply;
     grpc::Status status;
-
-    status = stub_->InsertFile(&context, request, &reply);
+    if(&request!= nullptr)
+        status = stub_->InsertFile(&context, request, &reply);
 
     if (status.ok()) {
         std::cout << "Insert file rpc was successful -> " << reply.filename() << std::endl;
@@ -186,6 +186,7 @@ std::string CharacterClient::ShareFile(const std::string &fileIdentifier, const 
 
     protobuf::FileInfo request;
     request.set_fileidentifier(fileIdentifier);
+    //request.set_emailo(emailShare);
 
     protobuf::Empty reply;
     grpc::Status status;

@@ -50,6 +50,7 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
             symbolVector.mutable_symbolvector()->Add(std::move(symbol));
+
             std::ofstream output("fileContainer/" + request_.fileidentifier(),
                                  std::ios::out | std::ios::app | std::ios_base::binary);
             symbolVector.SerializeToOstream(&output);

@@ -455,6 +455,7 @@ void Editor::on_actionallineaD_triggered()
     ui->actionallineaC->setChecked(false);
     ui->actionallineaS->setChecked(false);
     ui->actionalineaG->setChecked(false);
+    allineamento = "destra";
 
 }
 
@@ -465,6 +466,7 @@ void Editor::on_actionallineaS_triggered()
     ui->actionallineaC->setChecked(false);
     ui->actionallineaS->setChecked(true);
     ui->actionalineaG->setChecked(false);
+    allineamento = "sinistra";
 }
 
 void Editor::on_actionallineaC_triggered()
@@ -474,6 +476,7 @@ void Editor::on_actionallineaC_triggered()
     ui->actionallineaC->setChecked(true);
     ui->actionallineaS->setChecked(false);
     ui->actionalineaG->setChecked(false);
+    allineamento = "centro";
 }
 
 void Editor::on_actionalineaG_triggered()
@@ -483,7 +486,7 @@ void Editor::on_actionalineaG_triggered()
     ui->actionallineaC->setChecked(false);
     ui->actionallineaS->setChecked(false);
     ui->actionalineaG->setChecked(true);
-
+    allineamento = "giustificato";
 }
 
 void Editor::on_actiongrassetto_triggered()
@@ -633,6 +636,7 @@ void Editor::checkFont()
         ui->actionallineaC->setChecked(false);
         ui->actionallineaS->setChecked(true);
         ui->actionalineaG->setChecked(false);
+        allineamento = "sinistra";
     }
     else if(ui->txt->alignment() == Qt::AlignRight) {
 
@@ -640,6 +644,7 @@ void Editor::checkFont()
         ui->actionallineaC->setChecked(false);
         ui->actionallineaS->setChecked(false);
         ui->actionalineaG->setChecked(false);
+        allineamento = "destra";
     }
     else if(ui->txt->alignment() == Qt::AlignCenter) {
 
@@ -647,6 +652,7 @@ void Editor::checkFont()
         ui->actionallineaC->setChecked(true);
         ui->actionallineaS->setChecked(false);
         ui->actionalineaG->setChecked(false);
+        allineamento = "centro";
     }
     else if(ui->txt->alignment() == Qt::AlignJustify) {
 
@@ -654,14 +660,24 @@ void Editor::checkFont()
         ui->actionallineaC->setChecked(false);
         ui->actionallineaS->setChecked(false);
         ui->actionalineaG->setChecked(true);
+        allineamento = "giustificato";
     }
 
     QTextCharFormat formato = ui->txt->currentCharFormat();
-    QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
-    int c = emailL.indexOf(email);
-    QString colorU = colorL[c];
-    QColor colB = QColor(colorU);
-    formato.setBackground(colB);
+
+    if(evidenzia == true)
+    {
+
+        QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
+        int c = emailL.indexOf(email);
+        QString colorU = colorL[c];
+        QColor colB = QColor(colorU);
+        formato.setBackground(colB);
+
+    } else{
+        QColor colB = QColor("white");
+        formato.setBackground(colB);
+    }
     ui->txt->setCurrentCharFormat(formato);
 }
 
@@ -728,8 +744,15 @@ void Editor::setTextFont(QString fontS)
     QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
-    QColor colB = QColor(colorU);
-    format.setBackground(colB);
+    if(evidenzia == true)
+    {
+        QColor colB = QColor(colorU);
+        format.setBackground(colB);
+    }
+    else{
+        QColor colB = QColor("white");
+        format.setBackground(colB);
+    }
     //QPalette pal;
     //pal.setColor(QPalette::Foreground, colB);
     //ui->txt->setPalette(pal);
@@ -762,8 +785,16 @@ void Editor::setTextDim(int dim1)
     QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
-    QColor colB = QColor(colorU);
-    format.setBackground(colB);
+
+    if(evidenzia == true)
+    {
+        QColor colB = QColor(colorU);
+        format.setBackground(colB);
+    }
+    else{
+        QColor colB = QColor("white");
+        format.setBackground(colB);
+    }
 
     cursor.setCharFormat(format);
     ui->txt->setTextCursor(cursor);
@@ -856,6 +887,26 @@ void Editor::readFile() {
 
         QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
         formato.setForeground(colB);
+
+        QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
+
+        if(all == "destra")
+        {
+            ui->txt->setAlignment(Qt::AlignRight);
+            //formato.setVerticalAlignment(Qt::AlignRight);
+        }
+        else if(all == "sinistra")
+        {
+            ui->txt->setAlignment(Qt::AlignLeft);
+        }
+        else if(all == "centro")
+        {
+            ui->txt->setAlignment(Qt::AlignCenter);
+        }
+        else if(all == "giustificato")
+        {
+            ui->txt->setAlignment(Qt::AlignJustify);
+        }
 
         cursor.setCharFormat(formato);
         //QPalette pal;
@@ -1099,7 +1150,7 @@ void Editor::localInsert(int index, char value) {
 #endif
 
          std::string uniqueId = client_->getProfileInfoLogged().user().email();
-         Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString());
+         Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString(), allineamento.toStdString());
          symbol_->insert(symbol_->begin() + index, 1, symbol);
          protobuf::Symbol s= symbol.makeProtobufSymbol();
          client_->InsertSymbols(symbol, false);
@@ -1193,6 +1244,26 @@ void Editor::on_evidenzia_clicked()
             QColor color3 = QColor(colorU);
             formato.setBackground(color3);
             //palette.setColor(QPalette::Highlight, color3);
+        }
+
+        QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
+
+        if(all == "destra")
+        {
+            ui->txt->setAlignment(Qt::AlignRight);
+            //formato.setVerticalAlignment(Qt::AlignRight);
+        }
+        else if(all == "sinistra")
+        {
+            ui->txt->setAlignment(Qt::AlignLeft);
+        }
+        else if(all == "centro")
+        {
+            ui->txt->setAlignment(Qt::AlignCenter);
+        }
+        else if(all == "giustificato")
+        {
+            ui->txt->setAlignment(Qt::AlignJustify);
         }
 
         cursor.setCharFormat(formato);

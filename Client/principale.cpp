@@ -475,15 +475,20 @@ void Principale::insertTab()
     } else {
         *clientFiles_ = client_->getFileInfoList();
     }
-
+    int z = 0;
     for(i=0; i < clientFiles_->fileil_size(); i++)
     {
-        ui->lista->insertRow(ui->lista->rowCount());
-        fileInfo = clientFiles_->fileil(i);
-        ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(i)));
-        ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
-        ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
-        ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
+            fileInfo = clientFiles_->fileil(i);
+            //if(QString::fromStdString(fileInfo.filename()) != "")
+            //{
+                ui->lista->insertRow(ui->lista->rowCount());
+                ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(i)));
+                ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
+                ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
+                ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
+                //z++;
+            //}
+
     }
 }
 
@@ -503,8 +508,8 @@ void Principale::onNuovoReturn(QString name, QString share)
     fileName.set_filename(namefile.c_str());
     std::string fileid =client_->InsertFile(fileName);
 
-    if(share.compare("") != 0)
-    {
+    //if(share.compare("") != 0)
+    //{
         std::string delimiter = " ";
         std::string token;
         size_t pos =0;
@@ -518,7 +523,7 @@ void Principale::onNuovoReturn(QString name, QString share)
             }
             s.erase(0, pos + delimiter.length());
         }
-    }
+    //}
 
     open_edi(&fileid);
 }

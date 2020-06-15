@@ -174,6 +174,8 @@ private:
     bool insert = true;
 
     bool evidenzia = false;
+
+    QString allineamento = "sinistra";
 };
 
 #endif // EDITOR_H
