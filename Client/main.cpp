@@ -15,12 +15,23 @@ int main(int argc, char **argv) {
     profileInfo.set_surname("surname");
     client.Register(profileInfo);
     client.Login(profileInfo.user());
-    protobuf::ProfileInfo userLogged = client.getProfileInfoLogged();
 
+    client.GetProfile();
+    protobuf::ProfileInfo userLogged = client.getProfileInfoLogged();
     std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
               << userLogged.username() << "\t" << userLogged.user().email() << std::endl;
 
-//    client.ImportFile("1591635029186033100adf");
+    userLogged.set_name("a");
+    userLogged.set_surname("b");
+    userLogged.set_username("c");
+    userLogged.mutable_user()->set_email("d");
+    userLogged.mutable_user()->set_password("pw");
+    userLogged.mutable_user()->set_passwordr("pw");
+    client.SetProfile(userLogged);
+    std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
+              << userLogged.username() << "\t" << userLogged.user().email() << "\t" << userLogged.user().password()
+              << std::endl;
+
     client.Logout();
 
 

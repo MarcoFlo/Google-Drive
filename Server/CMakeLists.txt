@@ -60,6 +60,7 @@ add_executable(Server
         RemoveFileCallData.cpp RemoveFileCallData.h
         GetFileContentCallData.cpp GetFileContentCallData.h
         GetFilesCallData.cpp GetFilesCallData.h
+        GetProfileCallData.cpp GetProfileCallData.h
         GetProfileInfoCallData.cpp GetProfileInfoCallData.h
         GetSymbolsCallData.cpp GetSymbolsCallData.h
         ImportFileCallData.cpp ImportFileCallData.h
@@ -69,6 +70,7 @@ add_executable(Server
         LogoutCallData.cpp LogoutCallData.h
         MyServiceAuthProcessor.cpp MyServiceAuthProcessor.h
         RegisterCallData.cpp RegisterCallData.h
+        SetProfileCallData.cpp SetProfileCallData.h
         ShareFileCallData.cpp ShareFileCallData.h
         shaeredImport.h)
 

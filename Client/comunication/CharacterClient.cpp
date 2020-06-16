@@ -290,6 +290,53 @@ std::string CharacterClient::InsertSymbols(Symbol &symbol, bool isErase) {
     }
 }
 
+
+std::string CharacterClient::GetProfile() {
+    grpc::ClientContext context;
+    context.AddMetadata("token", userLogged_.token());
+
+    protobuf::Empty request;
+    grpc::Status status;
+
+    protobuf::ProfileInfo reply;
+
+    status = stub_->GetProfile(&context, request, userLogged_.mutable_profileinfo());
+
+    if (status.ok()) {
+        std::cout << "GetProfile rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "GetProfile rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
+std::string CharacterClient::SetProfile(protobuf::ProfileInfo &profileInfo) {
+    grpc::ClientContext context;
+    context.AddMetadata("token", userLogged_.token());
+
+    context.AddMetadata("email", profileInfo.user().email());
+    context.AddMetadata("password", profileInfo.user().password());
+    context.AddMetadata("passwordr", profileInfo.user().passwordr());
+    context.AddMetadata("username", profileInfo.username());
+    context.AddMetadata("name", profileInfo.name());
+    context.AddMetadata("surname", profileInfo.surname());
+
+
+    protobuf::Empty reply;
+    grpc::Status status;
+    status = stub_->SetProfile(&context, profileInfo, &reply);
+
+    if (status.ok()) {
+        std::cout << "SetProfile rpc was successful" << std::endl;
+        return "";
+    } else {
+        std::cout << "SetProfile rpc failed: " << status.error_code() << ": " << status.error_message() << std::endl;
+        return status.error_message();
+    }
+}
+
+
 protobuf::FilesInfoList CharacterClient::getFileInfoList() {
     return lastFileInfoList_;
 }

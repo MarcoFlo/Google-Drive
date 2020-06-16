@@ -21,6 +21,10 @@ private:
 
     grpc::Status ProcessShareFile(const InputMetadata &auth_metadata, grpc::AuthContext *context);
 
+    grpc::Status ProcessSetProfile(const std::string &toke_value, const InputMetadata &auth_metadata, grpc::AuthContext *context);
+
+    grpc::Status ProcessGetProfile(const std::string &toke_value, grpc::AuthContext *context);
+
     void LoadUserMap();
 
     void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> &pair);

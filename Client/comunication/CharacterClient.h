@@ -15,6 +15,10 @@ public:
 
     std::string Register(protobuf::ProfileInfo &profileInfo);
 
+    std::string GetProfile();
+
+    std::string SetProfile(protobuf::ProfileInfo &profileInfo);
+
     std::string Login(const protobuf::User &user);
 
     std::string Logout();
@@ -41,9 +45,9 @@ public:
 
     protobuf::ProfileInfo getProfileInfoLogged();
 
-    std::list<int> searchFileInfo(const std::string&);
+    std::list<int> searchFileInfo(const std::string &);
 
-    protobuf::FileInfo getFileInfo(const std::string&);
+    protobuf::FileInfo getFileInfo(const std::string &);
 
     void closeFile();
 
