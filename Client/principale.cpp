@@ -283,6 +283,7 @@ void Principale::on_impostazioni_clicked()
     //account.setUser(client_);
     //account->setModal(true);
     //account->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    QObject::connect(account, SIGNAL(closeAccount(CharacterClient*)), this, SLOT(on_closeAccount_signal(CharacterClient*)));
     account->show();
 }
 
@@ -639,3 +640,23 @@ void Principale::on_annullaCerca_clicked()
     ui->cercaBarra->setText("");
     on_cerca_clicked();
 }
+
+void Principale::on_closeAccount_signal(CharacterClient* user) {
+    on_logout_clicked();
+    onLoginReturn(user);
+}
+    /*client_ = user;
+    userLogged = client_->getProfileInfoLogged();
+    delete account;
+    QMessageBox::information(this, "Account", "Modifica effettuata");
+    insertTab();
+    nome->setText(QString::fromStdString(userLogged.name()));
+    mail->setText(QString::fromStdString(userLogged.user().email()));
+    accountT->setText(QString::fromStdString(userLogged.username()));
+    accountT->setStyleSheet("QToolButton::menu-indicator {"
+                            "image: none;}"
+                            "QToolButton {"
+                            "border: 1px solid white;"
+                            "color: white;"
+                            "font-size: 17px; "
+                            "text-align: center}");*/

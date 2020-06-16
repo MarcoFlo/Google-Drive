@@ -21,6 +21,7 @@ Account::Account(QWidget *parent, CharacterClient *user) :
     ui->lineEdit_2->setText(profileInfoLogged.username().c_str());
     ui->lineEdit_3->setText(profileInfoLogged.user().email().c_str());
     ui->lineEdit_4->setText(profileInfoLogged.user().password().c_str());
+    ui->lineEdit_5->setText(profileInfoLogged.user().password().c_str());
 }
 
 Account::~Account() {
@@ -39,35 +40,30 @@ void Account::on_pushButton_2_clicked() {
         return;
     } else{
 
-
-
-    }
-    /*if(client_->getNome().c_str() != ui->lineEdit->text())
-    {
-        //cambia
-    }
-    if(client_->getCognome().c_str() != ui->lineEdit_2->text())
-    {
-        //cambia
-    }*/
-    if (profileInfoLogged.user().email().c_str() != ui->lineEdit_3->text()) {
-        if (is_email_valid() == false) {
+        if(!is_email_valid()) {
             QMessageBox::warning(this, "Account", "L'email non è valida");
             return;
-        }
-
-        //cambia
-    }
-    //if(client_->getPassword().c_str() != ui->lineEdit_4->text())
-    {
-        if (is_pass_valid() == false) {
+        } else if(!is_pass_valid()) {
             QMessageBox::warning(this, "Account", "Le password non corrispondono");
             return;
-        }
+        } else {
 
-        //cambia
+            profileInfoLogged.set_name(ui->lineEdit->text().toStdString());
+            profileInfoLogged.set_username(ui->lineEdit_2->text().toStdString());
+            profileInfoLogged.mutable_user()->set_email(ui->lineEdit_3->text().toStdString());
+            profileInfoLogged.mutable_user()->set_password(ui->lineEdit_4->text().toStdString());
+            profileInfoLogged.mutable_user()->set_passwordr(ui->lineEdit_5->text().toStdString());
+            std::string error = client_->SetProfile(profileInfoLogged);
+
+            if (error.empty()) {
+                emit closeAccount(client_);
+                this->hide();
+            }
+            else {
+                QMessageBox::warning(this, "Account", "Invalid data");
+            }
+        }
     }
-    this->hide();
 }
 
 bool Account::is_email_valid() {
@@ -76,11 +72,11 @@ bool Account::is_email_valid() {
     bool fin;
     // try to match the string with the regular expression
     if ((fin = std::regex_match(ui->lineEdit_3->text().toStdString(), pattern))) {
-        ui->label_4->setText("Email valida");
-        ui->label_4->setStyleSheet("QLabel { color : green; }");
+        ui->email->setText("Email valida");
+        ui->email->setStyleSheet("QLabel { color : green; }");
     } else {
-        ui->label_4->setText("Inserire una email valida");
-        ui->label_4->setStyleSheet("QLabel { color : red; }");
+        ui->email->setText("Inserire una email valida");
+        ui->email->setStyleSheet("QLabel { color : red; }");
     }
     return fin;
 }
@@ -89,16 +85,16 @@ bool Account::is_pass_valid() {
     bool fin = ui->lineEdit_4->text() == ui->lineEdit_5->text();
 
     if (fin) {
-        ui->label_5->setText("Password uguali");
-        ui->label_5->setStyleSheet("QLabel { color : green; }");
+        ui->password->setText("Password uguali");
+        ui->password->setStyleSheet("QLabel { color : green; }");
     } else {
-        ui->label_5->setText("Le password non corrispondono");
-        ui->label_5->setStyleSheet("QLabel { color : red; }");
+        ui->password->setText("Le password non corrispondono");
+        ui->password->setStyleSheet("QLabel { color : red; }");
     }
     return fin;
 }
 
 bool Account::is_something_empty() {
     return !ui->lineEdit->text().isEmpty() && !ui->lineEdit_2->text().isEmpty() && !ui->lineEdit_3->text().isEmpty() &&
-           !ui->lineEdit_4->text().isEmpty();
+           !ui->lineEdit_4->text().isEmpty() && !ui->lineEdit_5->text().isEmpty();
 }

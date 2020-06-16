@@ -232,7 +232,7 @@ QLineEdit:focus
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="email">
             <property name="styleSheet">
              <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -279,7 +279,7 @@ QLineEdit:focus
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_5">
+           <widget class="QLabel" name="password">
             <property name="styleSheet">
              <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -329,7 +329,7 @@ QLineEdit:focus
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QLabel" name="label_6">
+           <widget class="QLabel" name="password2">
             <property name="styleSheet">
              <string notr="true">color: #3a848a;
 font-size: 15px;
@@ -461,7 +461,9 @@ QPushButton:hover
   <tabstop>lineEdit_2</tabstop>
   <tabstop>lineEdit_3</tabstop>
   <tabstop>lineEdit_4</tabstop>
+  <tabstop>lineEdit_5</tabstop>
   <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
   <tabstop>pushButton</tabstop>
  </tabstops>
  <resources/>

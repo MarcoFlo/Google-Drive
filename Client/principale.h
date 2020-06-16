@@ -46,6 +46,7 @@ signals:
     void closeR();
     void closeRReg();
     void import(QString);
+    void closeAccount(CharacterClient*);
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -95,6 +96,8 @@ private slots:
 
     void on_closeReg_signal();
 
+    void on_closeAccount_signal(CharacterClient*);
+
     void showSplash();
 
     void cellClicked();
@@ -102,6 +105,7 @@ private slots:
     void closeSplash();
 
     void on_annullaCerca_clicked();
+
 
 private:
     Ui::Principale *ui;
