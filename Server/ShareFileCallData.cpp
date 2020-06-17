@@ -38,8 +38,7 @@ void ShareFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             //se è tra i suoi file
             if (fileToBeShared->emailo() == principal) {
                 //se ha l'autorizzazione
-                std::string emailShare = ctx_.auth_context()->FindPropertyValues(
-                        "emailshare").front().data();
+                std::string emailShare = (ctx_.auth_context()->FindPropertyValues("emailshare").end() - 1)->data();
                 std::cout << " to " << emailShare << " for " << fileToBeShared->filename() << std::endl;
 
                 //emailShare added to the list of the owner
