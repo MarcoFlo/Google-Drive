@@ -1167,9 +1167,10 @@ void Editor::localInsert(int index, char value) {
  * @param index
  */
 void Editor::localErase(int index) {
-
+    std::cout << "bau";
     if(insert)
     {
+        std::cout << "miao";
         if (symbol_->size() == 0)
             return;
 

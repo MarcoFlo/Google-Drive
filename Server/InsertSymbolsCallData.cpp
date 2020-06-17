@@ -7,6 +7,7 @@
 #include "GetSymbolsCallData.h"
 #include "InsertSymbolsCallData.h"
 
+
 InsertSymbolsCallData::InsertSymbolsCallData(protobuf::CharacterService::AsyncService *service,
                                              grpc::ServerCompletionQueue *cq) : service_(service), cq_(cq),
                                                                                 responder_(&ctx_) {
@@ -49,13 +50,28 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             //scrittura su file passando dal vettore in modo che scrivendo un symbol alla volta poi si possa comunque leggere il tutto come vettore
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
-            symbolVector.mutable_symbolvector()->Add(std::move(symbol));
+            if(!request_.iserasebool()) {
+                symbolVector.mutable_symbolvector()->Add(std::move(symbol));
 
-            std::ofstream output("fileContainer/" + request_.fileidentifier(),
-                                 std::ios::out | std::ios::app | std::ios_base::binary);
-            symbolVector.SerializeToOstream(&output);
-            output.close();
-
+                std::ofstream output("fileContainer/" + request_.fileidentifier(),
+                                     std::ios::out | std::ios::app | std::ios_base::binary);
+                symbolVector.SerializeToOstream(&output);
+                output.close();
+            }
+            else {
+                auto vec=symbolVector.mutable_symbolvector();
+                std::cout << "bau\n";
+                google::protobuf::internal::RepeatedPtrIterator<protobuf::Symbol> findPos = std::find(vec->begin(), vec->end(), symbol);
+                std::cout << "miao\n";
+                vec->erase(findPos);
+                std::cout << "bee\n";
+                std::ofstream output("fileContainer/" + request_.fileidentifier(),
+                                     std::ios::out | std::ios::app | std::ios_base::binary);
+                std::cout << "muu\n";
+                symbolVector.SerializeToOstream(&output);
+                std::cout << "quack\n";
+                output.close();
+            }
           /*  std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
