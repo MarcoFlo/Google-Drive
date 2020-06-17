@@ -61,7 +61,6 @@ add_executable(Server
         GetFileContentCallData.cpp GetFileContentCallData.h
         GetFilesCallData.cpp GetFilesCallData.h
         GetProfileCallData.cpp GetProfileCallData.h
-        GetProfileInfoCallData.cpp GetProfileInfoCallData.h
         GetSymbolsCallData.cpp GetSymbolsCallData.h
         ImportFileCallData.cpp ImportFileCallData.h
         InsertFileCallData.cpp InsertFileCallData.h

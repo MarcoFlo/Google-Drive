@@ -29,6 +29,8 @@ private:
 
     void UpdateUserMap(google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> &pair);
 
+    void UpdateUserMap(protobuf::UserMap &userMap);
+
     struct Const {
         static const std::string &TokenKeyName() {
             static std::string _("token");

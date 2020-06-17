@@ -27,7 +27,7 @@ private:
     protobuf::ProfileInfo reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncResponseWriter <protobuf::ProfileInfo> responder_;
+    grpc::ServerAsyncResponseWriter<protobuf::ProfileInfo> responder_;
 };
 
 #endif //SERVER_GETPROFILECALLDATA_H

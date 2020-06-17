@@ -315,7 +315,6 @@ std::string CharacterClient::SetProfile(protobuf::ProfileInfo &profileInfo) {
     grpc::ClientContext context;
     context.AddMetadata("token", userLogged_.token());
 
-    context.AddMetadata("email", profileInfo.user().email());
     context.AddMetadata("password", profileInfo.user().password());
     context.AddMetadata("passwordr", profileInfo.user().passwordr());
     context.AddMetadata("username", profileInfo.username());

@@ -8,8 +8,8 @@ int main(int argc, char **argv) {
 
     protobuf::ProfileInfo profileInfo;
     profileInfo.mutable_user()->set_email("provabase@test.it");
-    profileInfo.mutable_user()->set_password("1234");
-    profileInfo.mutable_user()->set_passwordr("1234");
+    profileInfo.mutable_user()->set_password("pw");
+    profileInfo.mutable_user()->set_passwordr("pw");
     profileInfo.set_username("username");
     profileInfo.set_name("name");
     profileInfo.set_surname("surname");
@@ -17,19 +17,36 @@ int main(int argc, char **argv) {
     client.Login(profileInfo.user());
 
     client.GetProfile();
-    protobuf::ProfileInfo userLogged = client.getProfileInfoLogged();
-    std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
-              << userLogged.username() << "\t" << userLogged.user().email() << std::endl;
+    protobuf::ProfileInfo oldProfileInfo = client.getProfileInfoLogged();
+    std::cout << oldProfileInfo.name() << "\t" << oldProfileInfo.surname() << "\t"
+              << oldProfileInfo.username() << "\t" << oldProfileInfo.user().email() << "\t" << oldProfileInfo.user().password()
+              << std::endl;
 
-    userLogged.set_name("a");
-    userLogged.set_surname("b");
-    userLogged.set_username("c");
-    userLogged.mutable_user()->set_email("d");
-    userLogged.mutable_user()->set_password("pw");
-    userLogged.mutable_user()->set_passwordr("pw");
-    client.SetProfile(userLogged);
-    std::cout << userLogged.name() << "\t" << userLogged.surname() << "\t"
-              << userLogged.username() << "\t" << userLogged.user().email() << "\t" << userLogged.user().password()
+    protobuf::ProfileInfo newProfileInfo;
+    newProfileInfo.set_name("a");
+    newProfileInfo.set_surname("b");
+    newProfileInfo.set_username("c");
+    newProfileInfo.mutable_user()->set_password("pw");
+    newProfileInfo.mutable_user()->set_passwordr("pw");
+    client.SetProfile(newProfileInfo);
+    client.GetProfile();
+    newProfileInfo = client.getProfileInfoLogged();
+    std::cout << newProfileInfo.name() << "\t" << newProfileInfo.surname() << "\t"
+              << newProfileInfo.username() << "\t" << newProfileInfo.user().email() << "\t" << newProfileInfo.user().password()
+              << std::endl;
+
+
+    protobuf::ProfileInfo nProfileInfo;
+    nProfileInfo.set_name("aaaa");
+    nProfileInfo.set_surname("bbbb");
+    nProfileInfo.set_username("cccc");
+    nProfileInfo.mutable_user()->set_password("pw");
+    nProfileInfo.mutable_user()->set_passwordr("pw");
+    client.SetProfile(nProfileInfo);
+    client.GetProfile();
+    nProfileInfo = client.getProfileInfoLogged();
+    std::cout << nProfileInfo.name() << "\t" << nProfileInfo.surname() << "\t"
+              << nProfileInfo.username() << "\t" << nProfileInfo.user().email() << "\t" << nProfileInfo.user().password()
               << std::endl;
 
     client.Logout();

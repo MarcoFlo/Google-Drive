@@ -7,7 +7,6 @@
 #include "messageP.grpc.pb.h"
 #include "GetSymbolsCallData.h"
 #include "GetFileContentCallData.h"
-#include "GetProfileInfoCallData.h"
 #include "GetProfileCallData.h"
 #include "SetProfileCallData.h"
 #include "InsertFileCallData.h"
@@ -85,7 +84,6 @@ void CharacterServiceImpl::HandleRpcs() {
     new GetFileContentCallData(&service_, cq_.get());
     new GetFilesCallData(&service_, cq_.get());
     new GetProfileCallData(&service_, cq_.get());
-    new GetProfileInfoCallData(&service_, cq_.get());
     new GetSymbolsCallData(&service_, cq_.get());
     new InsertSymbolsCallData(&service_, cq_.get());
     new ImportFileCallData(&service_, cq_.get());
@@ -102,7 +100,6 @@ void CharacterServiceImpl::HandleRpcs() {
     while (true) {
         GPR_ASSERT(cq_->Next(&tag, &ok));
         CallData *callData = static_cast<CallData *>(tag);
-        std::cout << "bee\n";
         if (callData->getClass() == "FileCallData")
             static_cast<AbstractFileCallData *> (tag)->HandleFileCall(fileClientMap, ok);
         else if (callData->getClass() == "SubscribedCallData")

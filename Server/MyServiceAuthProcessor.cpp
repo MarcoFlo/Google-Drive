@@ -60,7 +60,7 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
     }
 
     if (dispatch_value == "/protobuf.CharacterService/SetProfile") {
-        return ProcessSetProfile(token_value,auth_metadata, context);
+        return ProcessSetProfile(token_value, auth_metadata, context);
     }
 
     return grpc::Status::OK;
@@ -176,13 +176,9 @@ grpc::Status MyServiceAuthProcessor::ProcessShareFile(const InputMetadata &auth_
 }
 
 
-grpc::Status MyServiceAuthProcessor::ProcessSetProfile(const std::string &toke_value, const InputMetadata &auth_metadata,
-                                                       grpc::AuthContext *context) {
-
-    auto email_kv = auth_metadata.find("email");
-    if (email_kv == auth_metadata.end())
-        return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Username mancante");
-
+grpc::Status
+MyServiceAuthProcessor::ProcessSetProfile(const std::string &toke_value, const InputMetadata &auth_metadata,
+                                          grpc::AuthContext *context) {
     auto pw_kv = auth_metadata.find("password");
     if (pw_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Password mancante");
@@ -203,40 +199,41 @@ grpc::Status MyServiceAuthProcessor::ProcessSetProfile(const std::string &toke_v
     if (surname_kv == auth_metadata.end())
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "surname mancante");
 
-    std::string email = std::string(email_kv->second.data(), (email_kv->second).length());
     std::string pw = std::string(pw_kv->second.data(), (pw_kv->second).length());
     std::string pwR = std::string(pwR_kv->second.data(), (pwR_kv->second).length());
     std::string username = std::string(username_kv->second.data(), (username_kv->second).length());
     std::string name = std::string(name_kv->second.data(), (name_kv->second).length());
     std::string surname = std::string(surname_kv->second.data(), (surname_kv->second).length());
 
-    protobuf::ProfileInfo profileInfo = userMap.mutable_usermap()->at(tokenMap[toke_value]);
-    profileInfo.set_username(username);
-    profileInfo.set_name(name);
-    profileInfo.set_surname(surname);
-    profileInfo.mutable_user()->set_email(email);
-    profileInfo.mutable_user()->set_password(pw);
+    protobuf::ProfileInfo *profileInfo = &userMap.mutable_usermap()->at(tokenMap[toke_value]);
+    profileInfo->set_username(username);
+    profileInfo->set_name(name);
+    profileInfo->set_surname(surname);
+    profileInfo->mutable_user()->set_password(pw);
 
 
     if (pw != pwR)
         return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Le due password non coincidono");
-    google::protobuf::MapPair<std::basic_string<char>, protobuf::ProfileInfo> mapPair(email, profileInfo);
-    UpdateUserMap(mapPair);
-
-    std::cout << "username   " << userMap.mutable_usermap()->at(tokenMap[toke_value]).username() << std::endl;
+    UpdateUserMap(userMap);
     return grpc::Status::OK;
 }
 
 
 grpc::Status MyServiceAuthProcessor::ProcessGetProfile(const std::string &token_value,
                                                        grpc::AuthContext *context) {
-    protobuf::ProfileInfo profileInfo = userMap.usermap().at(tokenMap[token_value]);
+    protobuf::ProfileInfo profileInfo = userMap.mutable_usermap()->at(tokenMap[token_value]);
 
-    context->AddProperty("email", profileInfo.user().email());
-    context->AddProperty("password", profileInfo.user().password());
-    context->AddProperty("username", profileInfo.username());
-    context->AddProperty("name", profileInfo.name());
-    context->AddProperty("surname", profileInfo.surname());
+    std::string pw = profileInfo.user().password();
+    std::string email = profileInfo.user().email();
+    std::string username = profileInfo.username();
+    std::string name = profileInfo.name();
+    std::string surname =  profileInfo.surname();
+
+    context->AddProperty("email",email);
+    context->AddProperty("password", pw);
+    context->AddProperty("username", username);
+    context->AddProperty("name", name);
+    context->AddProperty("surname", surname);
 
     return grpc::Status::OK;
 }
@@ -268,6 +265,20 @@ void MyServiceAuthProcessor::UpdateUserMap(
 
     std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
     if (!userMap.SerializeToOstream(&ofs)) {
+        std::cerr << "La scrittura di userMap.data è fallita";
+        exit(1);
+    }
+}
+
+void MyServiceAuthProcessor::UpdateUserMap(protobuf::UserMap &newUserMap) {
+    std::cout << "Verranno salvati i seguenti utenti: " << std::endl;
+    std::for_each(newUserMap.usermap().begin(), newUserMap.usermap().end(), [](auto &pair) {
+        std::cout << pair.first << std::endl;
+    });
+    std::cout << std::endl;
+
+    std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
+    if (!newUserMap.SerializeToOstream(&ofs)) {
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);
     }
