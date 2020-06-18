@@ -48,15 +48,16 @@ void Account::on_pushButton_2_clicked() {
             return;
         } else {
 
-            profileInfoLogged.set_name(ui->lineEdit->text().toStdString());
-            profileInfoLogged.set_username(ui->lineEdit_2->text().toStdString());
-            profileInfoLogged.mutable_user()->set_email(ui->lineEdit_3->text().toStdString());
-            profileInfoLogged.mutable_user()->set_password(ui->lineEdit_4->text().toStdString());
-            profileInfoLogged.mutable_user()->set_passwordr(ui->lineEdit_5->text().toStdString());
-            std::string error = client_->SetProfile(profileInfoLogged);
+            protobuf::ProfileInfo profileInfoLoggedNew;
+            profileInfoLoggedNew.set_name(ui->lineEdit->text().toStdString());
+            profileInfoLoggedNew.set_username(ui->lineEdit_2->text().toStdString());
+            profileInfoLoggedNew.mutable_user()->set_email(ui->lineEdit_3->text().toStdString());
+            profileInfoLoggedNew.mutable_user()->set_password(ui->lineEdit_4->text().toStdString());
+            profileInfoLoggedNew.mutable_user()->set_passwordr(ui->lineEdit_5->text().toStdString());
+            std::string error = client_->SetProfile(profileInfoLoggedNew);
 
             if (error.empty()) {
-                emit closeAccount(client_);
+                emit closeAccount();
                 this->hide();
             }
             else {

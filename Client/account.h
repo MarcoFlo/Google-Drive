@@ -32,7 +32,7 @@ private slots:
     void on_pushButton_clicked();
 
 signals:
-    void closeAccount(CharacterClient*);
+    void closeAccount();
 
 private:
     Ui::Account *ui;

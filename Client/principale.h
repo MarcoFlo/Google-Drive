@@ -46,7 +46,7 @@ signals:
     void closeR();
     void closeRReg();
     void import(QString);
-    void closeAccount(CharacterClient*);
+    void closeAccount();
 
 protected:
     void closeEvent(QCloseEvent *event) override;
@@ -96,7 +96,7 @@ private slots:
 
     void on_closeReg_signal();
 
-    void on_closeAccount_signal(CharacterClient*);
+    void on_closeAccount_signal();
 
     void showSplash();
 

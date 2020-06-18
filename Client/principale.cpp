@@ -283,7 +283,7 @@ void Principale::on_impostazioni_clicked()
     //account.setUser(client_);
     //account->setModal(true);
     //account->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    QObject::connect(account, SIGNAL(closeAccount(CharacterClient*)), this, SLOT(on_closeAccount_signal(CharacterClient*)));
+    QObject::connect(account, SIGNAL(closeAccount()), this, SLOT(on_closeAccount_signal()));
     account->show();
 }
 
@@ -374,7 +374,8 @@ void Principale::on_cerca_clicked()
 
 void Principale::cellDoubleClicked() {
     QItemSelectionModel *selitem = ui->lista->selectionModel();
-    int fileindex = selitem->selectedRows(NUM)[0].data().toInt();
+    int fileindex = (selitem->selectedRows(NUM)[0].data().toInt());
+    //fileindex = fileindex * 2;
     std::string file = clientFiles_->fileil(fileindex).fileidentifier();
     ui->proprietarioL->setText("");
     ui->dataL->setText("");
@@ -486,7 +487,7 @@ void Principale::insertTab()
                 ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
                 ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
                 ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
-                //z++;
+                z++;
             //}
 
     }
@@ -640,13 +641,12 @@ void Principale::on_annullaCerca_clicked()
     on_cerca_clicked();
 }
 
-void Principale::on_closeAccount_signal(CharacterClient* user) {
-    on_logout_clicked();
-    onLoginReturn(user);
-}
-    /*client_ = user;
+void Principale::on_closeAccount_signal() {
+
+    client_->GetProfile();
     userLogged = client_->getProfileInfoLogged();
-    delete account;
+
+    //delete account;
     QMessageBox::information(this, "Account", "Modifica effettuata");
     insertTab();
     nome->setText(QString::fromStdString(userLogged.name()));
@@ -658,4 +658,8 @@ void Principale::on_closeAccount_signal(CharacterClient* user) {
                             "border: 1px solid white;"
                             "color: white;"
                             "font-size: 17px; "
-                            "text-align: center}");*/
+                            "text-align: center}");
+}
+
+
+

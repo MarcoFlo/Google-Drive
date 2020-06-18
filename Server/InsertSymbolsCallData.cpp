@@ -58,7 +58,7 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                 symbolVector.SerializeToOstream(&output);
                 output.close();
             }
-            else {
+            /*else {
                 auto vec=symbolVector.mutable_symbolvector();
                 std::cout << "bau\n";
                 google::protobuf::internal::RepeatedPtrIterator<protobuf::Symbol> findPos = std::find(vec->begin(), vec->end(), symbol);
@@ -71,7 +71,7 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                 symbolVector.SerializeToOstream(&output);
                 std::cout << "quack\n";
                 output.close();
-            }
+            }*/
           /*  std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
