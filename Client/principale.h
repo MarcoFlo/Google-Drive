@@ -58,7 +58,7 @@ private slots:
 
     void on_condividi_clicked();
 
-    void on_scarica_clicked();
+    //void on_scarica_clicked();
 
     void on_importa_clicked();
 

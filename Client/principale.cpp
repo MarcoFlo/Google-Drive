@@ -171,7 +171,7 @@ void Principale::setupUI()
 
     ui->elimina->setDisabled(true);
     ui->condividi->setDisabled(true);
-    ui->scarica->setDisabled(true);
+    //ui->scarica->setDisabled(true);
 
     ui->lista->setSelectionBehavior(QAbstractItemView::SelectRows);
     QStringList etichette;
@@ -226,7 +226,7 @@ void Principale::on_condividi_clicked()
 }
 
 
-void Principale::on_scarica_clicked()
+/*void Principale::on_scarica_clicked()
 {
     ui->proprietarioL->setText("");
     ui->dataL->setText("");
@@ -250,7 +250,7 @@ void Principale::on_scarica_clicked()
                 return;
                  }
         }
-}
+}*/
 
 void Principale::on_importa_clicked()
 {
@@ -366,8 +366,8 @@ void Principale::on_cerca_clicked()
             fileInfo = clientFiles_->fileil(it);
             ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(it)));
             ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
-            ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
-            ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
+            //ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
+            ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
         }
     }
 }
@@ -429,12 +429,12 @@ void Principale::on_row_select()
     if(ui->lista->selectionModel()->hasSelection()) {
         ui->elimina->setEnabled(true);
         ui->condividi->setEnabled(true);
-        ui->scarica->setEnabled(true);
+        //ui->scarica->setEnabled(true);
     }
     else {
         ui->elimina->setEnabled(false);
         ui->condividi->setEnabled(false);
-        ui->scarica->setEnabled(false);
+        //ui->scarica->setEnabled(false);
     }
 }
 
@@ -485,8 +485,8 @@ void Principale::insertTab()
                 ui->lista->insertRow(ui->lista->rowCount());
                 ui->lista->setItem(ui->lista->rowCount() - 1, NUM, new QTableWidgetItem(QString::number(i)));
                 ui->lista->setItem(ui->lista->rowCount() - 1, NAME, new QTableWidgetItem(QString::fromStdString(fileInfo.filename())));
-                ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
-                ui->lista->setItem(ui->lista->rowCount() - 1, PROP, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
+                //ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(fileInfo.size()));
+                ui->lista->setItem(ui->lista->rowCount() - 1, SIZE, new QTableWidgetItem(QString::fromStdString(fileInfo.emailo())));
                 z++;
             //}
 
