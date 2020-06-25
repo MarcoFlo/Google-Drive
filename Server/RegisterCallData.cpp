@@ -17,7 +17,6 @@ void RegisterCallData::Proceed(bool ok) {
     } else if (status_ == PROCESS) {
         std::cout << "Received a Register request from: " << request_.user().email() << std::endl;
 
-        //todo gestire queste ed eventuali altre informazioni con un apposita struttura dati da mettere su file
         std::cout << request_.username() << "\t" << request_.name() << "\t" << request_.surname() << std::endl;
 
         new RegisterCallData(service_, cq_);

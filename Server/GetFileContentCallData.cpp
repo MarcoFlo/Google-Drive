@@ -13,15 +13,12 @@ GetFileContentCallData::GetFileContentCallData(protobuf::CharacterService::Async
 
 void
 GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, bool ok) {
-    std::cout << "bau \n";
     if (status_ == FINISH) {
-        std::cout << "miao \n";
         delete this;
         return;
     }
 
     if (!ok) {
-        std::cout << "finish" << std::endl;
         responder_.Finish(grpc::Status::OK, this);
         status_ = FINISH;
         return;
@@ -112,6 +109,5 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             }
         }
     }
-    std::cout << "woof\n";
     return;
 }

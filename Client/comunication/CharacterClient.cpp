@@ -32,13 +32,7 @@ CharacterClient::CharacterClient() {
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
 
     //per gestire i simboli che ci arrivano dal server
-    thread_ = std::thread([this] { this->AsyncCompleteRpc(this); });
-
-}
-
-CharacterClient::~CharacterClient() {
-    if (thread_.joinable())
-        thread_.join();
+    std::thread([this] { this->AsyncCompleteRpc(this); }).detach();
 }
 
 void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
@@ -127,7 +121,7 @@ std::string CharacterClient::InsertFile(const protobuf::FileName &request) {
 
     protobuf::FileInfo reply;
     grpc::Status status;
-    if(&request!= nullptr)
+    if (&request != nullptr)
         status = stub_->InsertFile(&context, request, &reply);
 
     if (status.ok()) {
@@ -344,7 +338,7 @@ protobuf::SymbolVector CharacterClient::getSymbolVector() {
     return symbolVector_;
 }
 
-std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
+std::list<int> CharacterClient::searchFileInfo(const std::string &name) {
     int i = 0;
     std::list<int> *searchList = new std::list<int>;
 
@@ -356,7 +350,7 @@ std::list<int> CharacterClient::searchFileInfo(const std::string& name) {
     return *searchList;
 }
 
-protobuf::FileInfo CharacterClient::getFileInfo(const std::string& id) {
+protobuf::FileInfo CharacterClient::getFileInfo(const std::string &id) {
     int i = 0;
 
     for (i = 0; i < lastFileInfoList_.fileil_size(); i++) {
@@ -367,7 +361,7 @@ protobuf::FileInfo CharacterClient::getFileInfo(const std::string& id) {
     return protobuf::FileInfo();
 }
 
-void CharacterClient::closeFile(){
+void CharacterClient::closeFile() {
     symbolVector_.Clear();
 }
 

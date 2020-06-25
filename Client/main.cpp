@@ -3,8 +3,6 @@
 #include "comunication/CharacterClient.h"
 
 int main(int argc, char **argv) {
-    CharacterClient client;
-
     QApplication a(argc, argv);
     Principale main;
 

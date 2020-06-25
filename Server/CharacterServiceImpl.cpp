@@ -122,7 +122,7 @@ void CharacterServiceImpl::LoadFileClienMap() {
         std::cout << "Sono stati caricati i seguenti dati di accesso ai file: " << std::endl;
         std::for_each(fileClientMap.fileclientmap().begin(), fileClientMap.fileclientmap().end(), [](auto &pair) {
             std::cout << pair.first << std::endl;
-            std::cout << "\tList file a cui ha accesso -> todo" << std::endl;
+            std::cout << "\t......" << std::endl;
         });
         std::cout << std::endl;
     }
