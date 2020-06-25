@@ -459,6 +459,7 @@ void Principale::open_edi(std::string *name)
     e=new Editor(this, name, client_);
     QObject::connect(e, SIGNAL(closeE()), this, SLOT(on_closeE_signal()));
     QObject::connect(e, SIGNAL(closeEP()), this, SLOT(on_closeEP_signal()));
+    insertTab();
     e->show();
 }
 
