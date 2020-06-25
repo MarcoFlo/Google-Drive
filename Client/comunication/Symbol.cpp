@@ -40,7 +40,13 @@ protobuf::Symbol Symbol::makeProtobufSymbol() {
 }
 
 bool Symbol::operator==(const Symbol &symbol) {
-    return this->getUniqueId()==symbol.getUniqueId();
+    if(this->getPos().size()==symbol.getPos().size()) {
+        bool fieldsEqual = std::equal(this->getPos().begin(), this->getPos().end(), symbol.getPos().begin());
+        if (fieldsEqual) {
+            return true;
+        }
+    }
+    return false;
 }
 
 bool Symbol::operator<(const Symbol &symbol) const {

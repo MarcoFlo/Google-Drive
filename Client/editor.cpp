@@ -1052,7 +1052,7 @@ void Editor::insertFile(char r) {
                      return true;
                  } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
                      std::cout << "cancella\n";
-                     localErase(ui->txt->textCursor().position());
+                     localErase(ui->txt->textCursor().position()-1);
                  }
                  else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
                          keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
@@ -1153,6 +1153,7 @@ void Editor::localInsert(int index, char value) {
          Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString(), allineamento.toStdString());
          symbol_->insert(symbol_->begin() + index, 1, symbol);
          protobuf::Symbol s= symbol.makeProtobufSymbol();
+         std::cout << symbol.makeProtobufSymbol().DebugString() <<"/n";
          client_->InsertSymbols(symbol, false);
      }
 
@@ -1167,17 +1168,17 @@ void Editor::localInsert(int index, char value) {
  * @param index
  */
 void Editor::localErase(int index) {
-    std::cout << "bau";
     if(insert)
     {
-        std::cout << "miao";
-        if (symbol_->size() == 0)
+        if (symbol_->empty())
             return;
 
         if (index >= symbol_->size())
             index = symbol_->size() - 1;
-
+        std::cout << symbol_->at(index).getCharacter()<<"\n"<<symbol_->at(index).getUniqueId()<<"\n";
         client_->InsertSymbols(symbol_->at(index), true);
+        std::cout << symbol_->at(index).makeProtobufSymbol().DebugString() <<"/n";
+        symbol_->erase(std::find(symbol_->begin(), symbol_->end(), symbol_->at(index)));
     }
 
   /*
@@ -1227,7 +1228,7 @@ void Editor::on_evidenzia_clicked()
 
         formato.setFontUnderline(symbol_->at(i).getUnderline());
         formato.setFontItalic(symbol_->at(i).getItalic());
-        if(symbol_->at(i).getBold() == true)
+        if(symbol_->at(i).getBold())
             formato.setFontWeight(QFont::Bold);
         else
             formato.setFontWeight(QFont::Normal);
@@ -1236,7 +1237,7 @@ void Editor::on_evidenzia_clicked()
         QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
         formato.setForeground(colB);
 
-        if(evidenzia == false)
+        if(!evidenzia)
         {
             QString email = QString::fromStdString(symbol_->at(i).getUniqueId());
 

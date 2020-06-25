@@ -58,20 +58,22 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                 symbolVector.SerializeToOstream(&output);
                 output.close();
             }
-            /*else {
+            else {
+                std::ifstream input("fileContainer/" + (*fileInsert).fileidentifier(),
+                                    std::ios_base::in | std::ios_base::binary);
+                symbolVector.ParseFromIstream(&input);
+                input.close();
                 auto vec=symbolVector.mutable_symbolvector();
-                std::cout << "bau\n";
                 google::protobuf::internal::RepeatedPtrIterator<protobuf::Symbol> findPos = std::find(vec->begin(), vec->end(), symbol);
-                std::cout << "miao\n";
                 vec->erase(findPos);
-                std::cout << "bee\n";
                 std::ofstream output("fileContainer/" + request_.fileidentifier(),
-                                     std::ios::out | std::ios::app | std::ios_base::binary);
-                std::cout << "muu\n";
-                symbolVector.SerializeToOstream(&output);
-                std::cout << "quack\n";
+                                     std::ios::out | std::ios::trunc);
                 output.close();
-            }*/
+                std::ofstream  out("fileContainer/" + request_.fileidentifier(),
+                                   std::ios::out | std::ios::app | std::ios_base::binary);
+                symbolVector.SerializeToOstream(&out);
+                out.close();
+            }
           /*  std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
