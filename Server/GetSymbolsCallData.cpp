@@ -9,8 +9,8 @@
 GetSymbolsCallData::GetSymbolsCallData(protobuf::CharacterService::AsyncService *service,
                                        grpc::ServerCompletionQueue *cq)
         : service_(service), cq_(cq), responder_(&ctx_) {
-    status_ = PROCESS;
-    service_->RequestGetSymbols(&ctx_, &responder_, cq_, cq_, this);
+    status_ = READ_CALLED;
+    service_->RequestGetSymbols(&ctx_, &request_, &responder_, cq_, cq_, this);
 }
 
 void
@@ -28,15 +28,9 @@ GetSymbolsCallData::HandleSubscribedCall(
         return;
     }
 
-    if (status_ == PROCESS) {
-        status_ = READ_CALLED;
+    if (status_ == READ_CALLED) {
         new GetSymbolsCallData(service_, cq_);
-        responder_.Read(&request_, this);
-    } else if (status_ == READ) {
-        status_ = READ_CALLED;
-        responder_.Read(&request_, this);
-    } else if (status_ == READ_CALLED) {
-        status_ = READ;
+        status_ = WRITE;
         const std::string principal = ctx_.auth_context()->FindPropertyValues(
                 ctx_.auth_context()->GetPeerIdentityPropertyName()).front().data();
 
@@ -57,7 +51,7 @@ GetSymbolsCallData::HandleSubscribedCall(
 }
 
 void GetSymbolsCallData::HandleSymbol(const protobuf::Message &message) {
-    std::cout << "Write message back to subscribed clients " << std::endl;
+    std::cout << "Write message from " << message.symbol().uniqueid() << std::endl;
     responder_.Write(message, this);
 }
 

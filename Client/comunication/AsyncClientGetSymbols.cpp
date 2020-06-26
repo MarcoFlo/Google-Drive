@@ -7,14 +7,11 @@ AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileInfo &request, 
                                              std::unique_ptr<protobuf::CharacterService::Stub> &stub_) : request_(
         request) {
     context.AddMetadata("token", token);
-    responder = stub_->AsyncGetSymbols(&context, &cq_, this);
+    responder = stub_->AsyncGetSymbols(&context, request_, &cq_, this);
 }
 
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
-    if (callStatus == CREATE) {
-        responder->Write(request_, this);
-        callStatus = READ;
-    } else if (callStatus == READ) {
+    if (callStatus == READ) {
         if (!ok) {
             CloseRpc();
             return;

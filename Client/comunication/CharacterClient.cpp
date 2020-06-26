@@ -237,7 +237,6 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
         symbolVector_.mutable_symbolvector()->MergeFrom(symbolVectorPartial.symbolvector());
     }
     status = stream->Finish();
-    //todo chiamare getSymbols
 
     if (status.ok()) {
         std::cout << "Get file content rpc was successful" << std::endl;

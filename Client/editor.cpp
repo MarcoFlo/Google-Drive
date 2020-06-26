@@ -848,7 +848,7 @@ void Editor::readFile() {
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }
 
-    std::cout << client_->getSymbolVector().DebugString() << "\n";
+//    std::cout << client_->getSymbolVector().DebugString() << std::endl;
     *_symbolsP=client_->getSymbolVector();
 
     for(i=0; i<_symbolsP->symbolvector_size(); i++)
@@ -1041,7 +1041,7 @@ void Editor::insertFile(char r) {
              if (event->type() == QEvent::KeyPress)
              {
                  QKeyEvent* keyEvent = dynamic_cast<QKeyEvent*>(event);
-                 std::cout << keyEvent->key() << "\n";
+//                 std::cout << keyEvent->key() << std::endl;
                  if (keyEvent->key() == Qt::Key_Up)
                  {
                      qDebug() << "lineEdit -> Qt::Key_Up";
@@ -1153,7 +1153,7 @@ void Editor::localInsert(int index, char value) {
          Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString(), allineamento.toStdString());
          symbol_->insert(symbol_->begin() + index, 1, symbol);
          protobuf::Symbol s= symbol.makeProtobufSymbol();
-         std::cout << symbol.makeProtobufSymbol().DebugString() <<"/n";
+//         std::cout << symbol.makeProtobufSymbol().DebugString() << std::endl;
          client_->InsertSymbols(symbol, false);
      }
 
@@ -1177,7 +1177,7 @@ void Editor::localErase(int index) {
             index = symbol_->size() - 1;
         std::cout << symbol_->at(index).getCharacter()<<"\n"<<symbol_->at(index).getUniqueId()<<"\n";
         client_->InsertSymbols(symbol_->at(index), true);
-        std::cout << symbol_->at(index).makeProtobufSymbol().DebugString() <<"/n";
+//        std::cout << symbol_->at(index).makeProtobufSymbol().DebugString() << std::endl;
         symbol_->erase(std::find(symbol_->begin(), symbol_->end(), symbol_->at(index)));
     }
 
@@ -1205,7 +1205,7 @@ void Editor::on_evidenzia_clicked()
     int j=0;
     QTextCursor cursor = ui->txt->textCursor();
 
-    std::cout << client_->getSymbolVector().DebugString() << "\n";
+//    std::cout << client_->getSymbolVector().DebugString() << std::endl;
 
     for(i=0; i < symbol_->size(); i++)
     {

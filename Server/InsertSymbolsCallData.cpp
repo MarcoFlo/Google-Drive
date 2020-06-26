@@ -50,36 +50,38 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             //scrittura su file passando dal vettore in modo che scrivendo un symbol alla volta poi si possa comunque leggere il tutto come vettore
             protobuf::SymbolVector symbolVector;
             protobuf::Symbol symbol = request_.symbol();
-            if(!request_.iserasebool()) {
+            if (!request_.iserasebool()) {
                 symbolVector.mutable_symbolvector()->Add(std::move(symbol));
 
                 std::ofstream output("fileContainer/" + request_.fileidentifier(),
                                      std::ios::out | std::ios::app | std::ios_base::binary);
                 symbolVector.SerializeToOstream(&output);
                 output.close();
-            }
-            else {
+            } else {
                 std::ifstream input("fileContainer/" + (*fileInsert).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
                 input.close();
-                auto vec=symbolVector.mutable_symbolvector();
-                google::protobuf::internal::RepeatedPtrIterator<protobuf::Symbol> findPos = std::find(vec->begin(), vec->end(), symbol);
+                auto vec = symbolVector.mutable_symbolvector();
+                google::protobuf::internal::RepeatedPtrIterator<protobuf::Symbol> findPos = std::find(vec->begin(),
+                                                                                                      vec->end(),
+                                                                                                      symbol);
                 vec->erase(findPos);
                 std::ofstream output("fileContainer/" + request_.fileidentifier(),
                                      std::ios::out | std::ios::trunc);
                 output.close();
-                std::ofstream  out("fileContainer/" + request_.fileidentifier(),
-                                   std::ios::out | std::ios::app | std::ios_base::binary);
+                std::ofstream out("fileContainer/" + request_.fileidentifier(),
+                                  std::ios::out | std::ios::app | std::ios_base::binary);
                 symbolVector.SerializeToOstream(&out);
                 out.close();
             }
-          /*  std::for_each(
+
+            std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
                     [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
                         dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
-                    });*/
+                    });
             responder_.Finish(reply_, grpc::Status::OK, this);
         } else {
             status_ = FINISH;

@@ -12,7 +12,7 @@ service CharacterService {
     rpc ShareFile (FileInfo) returns (Empty) {}
     rpc ImportFile (FileInfo) returns (Empty) {} //usato solo il fileIdentifier
     rpc GetFileContent (FileInfo) returns (stream Chunk) {}
-    rpc GetSymbols (stream FileInfo) returns (stream Message) {}
+    rpc GetSymbols (FileInfo) returns (stream Message) {}
     rpc InsertSymbols (Message) returns (Empty) {}
 
     rpc SetProfile (ProfileInfo) returns (Empty) {}

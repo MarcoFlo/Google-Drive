@@ -29,7 +29,7 @@ private:
     protobuf::Message reply_;
 
 // The means to get back to the client.
-    grpc::ServerAsyncReaderWriter<protobuf::Message, protobuf::FileInfo> responder_;
+    grpc::ServerAsyncWriter<protobuf::Message> responder_;
 
 };
 

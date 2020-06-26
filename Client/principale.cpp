@@ -544,7 +544,7 @@ void Principale::onCondividiReturn(const QString nomi)
 
     while ((pos = s.find(delimiter)) != std::string::npos && s != " ") {
         token = s.substr(0, pos);
-        std::cout << token << std::endl;
+//        std::cout << token << std::endl;
         if(token != "" && token != " ")
         {
             client_->ShareFile(file, token);

@@ -14,7 +14,7 @@ public:
                           std::unique_ptr<protobuf::CharacterService::Stub> &stub_);
 
 
-    std::unique_ptr<grpc::ClientAsyncReaderWriter<protobuf::FileInfo,protobuf::Message>> responder;
+    std::unique_ptr<grpc::ClientAsyncReader<protobuf::Message>> responder;
 
     // Container for the data we expect from the server.
     protobuf::Message reply_;

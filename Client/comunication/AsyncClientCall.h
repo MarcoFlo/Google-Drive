@@ -12,7 +12,7 @@ public:
         CREATE, READ, READ_CALLED, FINISH, DESTROY
     };
 
-    explicit AsyncClientCall() : callStatus(CREATE) {}
+    explicit AsyncClientCall() : callStatus(READ) {}
 
     grpc::ClientContext context;
     grpc::Status status;
