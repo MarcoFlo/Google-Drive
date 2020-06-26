@@ -46,6 +46,7 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
                 std::ifstream input("fileContainer/" + (*fileGet).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
+                input.close();
                 std::cout << "vectorSize: " << symbolVector.symbolvector_size() << " bytesize: " << symbolVector.ByteSize() << "\n";
                 int vectorSize = symbolVector.symbolvector_size()-1;
 
