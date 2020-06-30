@@ -19,7 +19,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
         callStatus = READ_CALLED;
         responder->Read(&reply_, this);
     } else if (callStatus == READ_CALLED) {
-        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << "\n" << reply_.symbol().character()
+        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << "\t" << reply_.symbol().character()
                   << std::endl;
         //todo inserire il simbolo
         responder->Read(&reply_, this);

@@ -9,6 +9,8 @@ class CharacterClient {
 public:
     explicit CharacterClient();
 
+    virtual ~CharacterClient();
+
     void AsyncCompleteRpc(CharacterClient *pClient);
 
     std::string Register(protobuf::ProfileInfo &profileInfo);
@@ -61,6 +63,8 @@ private:
     protobuf::FilesInfoList lastFileInfoList_;
     std::string email_;
     std::string password_;
+
+    std::unique_ptr<AsyncClientGetSymbols> asyncClientGetSymbols;
 
     //current opened file
     protobuf::SymbolVector symbolVector_;

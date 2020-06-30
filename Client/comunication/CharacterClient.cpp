@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <string>
 #include <sstream>
 #include <fstream>
@@ -251,7 +252,7 @@ std::string CharacterClient::GetFileContent(const protobuf::FileInfo &fileInfo) 
 
 
 void CharacterClient::GetSymbols(const protobuf::FileInfo &fileInfo) {
-    new AsyncClientGetSymbols(fileInfo, userLogged_.token(), cq_, stub_);
+    asyncClientGetSymbols = std::make_unique<AsyncClientGetSymbols>(fileInfo, userLogged_.token(), cq_, stub_);
 }
 
 
@@ -364,5 +365,10 @@ void CharacterClient::closeFile() {
 
 protobuf::ProfileInfo CharacterClient::getProfileInfoLogged() {
     return userLogged_.profileinfo();
+}
+
+CharacterClient::~CharacterClient() {
+    if (asyncClientGetSymbols != nullptr)
+        asyncClientGetSymbols->CloseRpc();
 }
 
