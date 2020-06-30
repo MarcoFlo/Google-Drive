@@ -42,12 +42,12 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
                                         });
             if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 status_ = WRITE;
-                std::cout << (*fileGet).fileidentifier() << "\n";
+//                std::cout << (*fileGet).fileidentifier() << "\n";
                 std::ifstream input("db/fileContainer/" + (*fileGet).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
                 input.close();
-                std::cout << "vectorSize: " << symbolVector.symbolvector_size() << " bytesize: " << symbolVector.ByteSize() << "\n";
+//                std::cout << "vectorSize: " << symbolVector.symbolvector_size() << " bytesize: " << symbolVector.ByteSize() << "\n";
                 int vectorSize = symbolVector.symbolvector_size()-1;
 
                 if (symbolVector.ByteSize() == 0) {
@@ -61,11 +61,12 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
                          symbolVector.symbolvector(vectorSize / 2).ByteSize() +
                          symbolVector.symbolvector(vectorSize).ByteSize()) /
                         3; //non serve una misurazione precisa contando che i singoli symbol anche nella loro variabilità in dimensione sono molto più piccoli di 32K
-                std::cout << "AverageSymbolSize: "<< averageSymbolSize << "\n";
+//                std::cout << "AverageSymbolSize: "<< averageSymbolSize << "\n";
                 chunkSize = 32000 / averageSymbolSize;
-                std::cout << "chunkSize: " << chunkSize << "\n";
+//                std::cout << "chunkSize: " << chunkSize << "\n";
 
                 protobuf::Chunk msg;
+                // todo why ?
                 msg.set_chunk("prova");
                 responder_.Write(msg, this);
                 return;
@@ -80,7 +81,7 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
     } else if(status_ == WRITE) {
         protobuf::Chunk chunk;
         int vectorSize = symbolVector.ByteSize();
-        std::cout << "VectorSize: " << vectorSize << "\n" << "symbolVector: " << symbolVector.DebugString() <<"\n";
+//        std::cout << "VectorSize: " << vectorSize << "\n" << "symbolVector: " << symbolVector.DebugString() <<"\n";
         if (vectorSize < 64000) {
             //Se siamo sotto i 64KB non spezzettiamo
             status_ = FINISH;
