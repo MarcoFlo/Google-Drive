@@ -4,7 +4,7 @@
 #include "CharacterServiceImpl.h"
 
 int main(int argc, char **argv) {
-    std::filesystem::create_directories("fileContainer");
+    std::filesystem::create_directories("db/fileContainer");
     CharacterServiceImpl server;
     server.Run();
 

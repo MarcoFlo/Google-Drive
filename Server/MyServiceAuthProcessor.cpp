@@ -239,7 +239,7 @@ grpc::Status MyServiceAuthProcessor::ProcessGetProfile(const std::string &token_
 }
 
 void MyServiceAuthProcessor::LoadUserMap() {
-    std::ifstream ifs("userMap.data", std::ios_base::in | std::ios_base::binary);
+    std::ifstream ifs("db/userMap.data", std::ios_base::in | std::ios_base::binary);
     if (ifs.peek() != EOF) {
         if (!userMap.ParseFromIstream(&ifs)) {
             std::cerr << "La lettura di userMap.data è fallita" << std::endl;
@@ -263,7 +263,7 @@ void MyServiceAuthProcessor::UpdateUserMap(
     });
     std::cout << std::endl;
 
-    std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
+    std::ofstream ofs("db/userMap.data", std::ios_base::out | std::ios_base::binary);
     if (!userMap.SerializeToOstream(&ofs)) {
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);
@@ -277,7 +277,7 @@ void MyServiceAuthProcessor::UpdateUserMap(protobuf::UserMap &newUserMap) {
     });
     std::cout << std::endl;
 
-    std::ofstream ofs("userMap.data", std::ios_base::out | std::ios_base::binary);
+    std::ofstream ofs("db/userMap.data", std::ios_base::out | std::ios_base::binary);
     if (!newUserMap.SerializeToOstream(&ofs)) {
         std::cerr << "La scrittura di userMap.data è fallita";
         exit(1);

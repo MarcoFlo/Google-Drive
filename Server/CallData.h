@@ -18,7 +18,7 @@ public:
     }
 
     void UpdateFileClientMap(protobuf::FileClientMap &fileClientMap) {
-        std::ofstream ofs("fileClientMap.data", std::ios_base::out | std::ios_base::binary);
+        std::ofstream ofs("db/fileClientMap.data", std::ios_base::out | std::ios_base::binary);
         if (!fileClientMap.SerializeToOstream(&ofs)) {
             std::cerr << "La scrittura di fileClientMap.data è fallita";
             exit(1);

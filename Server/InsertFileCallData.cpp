@@ -74,7 +74,7 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
         UpdateFileClientMap(fileClientMap);
 
         //crea il nuovo file
-        std::ofstream output("fileContainer/" + reply_.fileidentifier());
+        std::ofstream output("db/fileContainer/" + reply_.fileidentifier());
 
         responder_.Finish(reply_, grpc::Status::OK, this);
     }
@@ -119,7 +119,7 @@ void InsertFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
         UpdateFileClientMap(fileClientMap);
 
         //crea il nuovo file
-        std::ofstream output("fileContainer/" + reply_.fileidentifier());
+        std::ofstream output("db/fileContainer/" + reply_.fileidentifier());
 
         responder_.Finish(reply_, grpc::Status::OK, this);
     }

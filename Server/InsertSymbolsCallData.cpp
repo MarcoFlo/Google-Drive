@@ -53,12 +53,12 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             if (!request_.iserasebool()) {
                 symbolVector.mutable_symbolvector()->Add(std::move(symbol));
 
-                std::ofstream output("fileContainer/" + request_.fileidentifier(),
+                std::ofstream output("db/fileContainer/" + request_.fileidentifier(),
                                      std::ios::out | std::ios::app | std::ios_base::binary);
                 symbolVector.SerializeToOstream(&output);
                 output.close();
             } else {
-                std::ifstream input("fileContainer/" + (*fileInsert).fileidentifier(),
+                std::ifstream input("db/fileContainer/" + (*fileInsert).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
                 input.close();
@@ -67,10 +67,10 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                                                                                                       vec->end(),
                                                                                                       symbol);
                 vec->erase(findPos);
-                std::ofstream output("fileContainer/" + request_.fileidentifier(),
+                std::ofstream output("db/fileContainer/" + request_.fileidentifier(),
                                      std::ios::out | std::ios::trunc);
                 output.close();
-                std::ofstream out("fileContainer/" + request_.fileidentifier(),
+                std::ofstream out("db/fileContainer/" + request_.fileidentifier(),
                                   std::ios::out | std::ios::app | std::ios_base::binary);
                 symbolVector.SerializeToOstream(&out);
                 out.close();

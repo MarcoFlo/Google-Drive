@@ -113,7 +113,7 @@ void CharacterServiceImpl::HandleRpcs() {
 }
 
 void CharacterServiceImpl::LoadFileClienMap() {
-    std::ifstream ifs("fileClientMap.data", std::ios_base::in | std::ios_base::binary);
+    std::ifstream ifs("db/fileClientMap.data", std::ios_base::in | std::ios_base::binary);
     if (ifs.peek() != EOF) {
         if (!fileClientMap.ParseFromIstream(&ifs)) {
             std::cerr << "La lettura di fileClientMap.data è fallita" << std::endl;

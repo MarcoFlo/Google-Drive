@@ -43,7 +43,7 @@ GetFileContentCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, b
             if (fileGet != fileClientMap.mutable_fileclientmap()->at(principal).mutable_fileil()->end()) {
                 status_ = WRITE;
                 std::cout << (*fileGet).fileidentifier() << "\n";
-                std::ifstream input("fileContainer/" + (*fileGet).fileidentifier(),
+                std::ifstream input("db/fileContainer/" + (*fileGet).fileidentifier(),
                                     std::ios_base::in | std::ios_base::binary);
                 symbolVector.ParseFromIstream(&input);
                 input.close();
