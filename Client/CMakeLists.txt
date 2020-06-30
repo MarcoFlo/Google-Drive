@@ -55,7 +55,7 @@ add_executable(Client main.cpp
         comunication/AsyncClientCall.h comunication/AsyncClientGetSymbols.cpp comunication/AsyncClientGetSymbols.h comunication/CharacterClient.cpp comunication/CharacterClient.h comunication/definitions.h comunication/Message.cpp comunication/Message.h comunication/SharedEditor.cpp comunication/SharedEditor.h comunication/Symbol.h comunication/Symbol.cpp
         account.h condividi.h editor.h importa.h loginpage.h nuovo.h principale.h registrationpage.h splashscreen.h
         account.cpp condividi.cpp editor.cpp importa.cpp loginpage.cpp nuovo.cpp principale.cpp registrationpage.cpp splashscreen.cpp
-        account.ui condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui img/logo.png images.qrc
+        account.ui condividi.ui editor.ui importa.ui loginpage.ui nuovo.ui principale.ui registrationpage.ui splashscreen.ui images.qrc
         ${hw_proto_srcs}
         ${hw_grpc_srcs})
 
@@ -64,7 +64,7 @@ add_executable(Client main.cpp
 if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 
     # list of files for which we add a copy rule
-    set(data_SHADOW img/logo.png)
+#    set(data_SHADOW img/logo.png)
 
     foreach(item IN LISTS data_SHADOW)
         message(STATUS ${item})
@@ -77,7 +77,7 @@ if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 endif()
 
 # files are only copied if a target depends on them
-add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}" /img/logo.png)
+add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}")
 
 #target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++_unsecure ${_PROTOBUF_LIBPROTOBUF})
 target_link_libraries(Client Qt5::Widgets Qt5::Sql Qt5::Core grpc++ ${_PROTOBUF_LIBPROTOBUF})
