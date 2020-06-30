@@ -41,9 +41,7 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
 
     // Block until the next result is available in the completion queue "cq".
     while (pClient->cq_.Next(&got_tag, &ok)) {
-        auto *call = static_cast<AsyncClientCall *>(got_tag);
-        call->HandleAsync(ok);
-
+        static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
     }
 }
 

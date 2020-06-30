@@ -4,25 +4,25 @@
 
 AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileInfo &request, const std::string &token,
                                              grpc::CompletionQueue &cq_,
-                                             std::unique_ptr<protobuf::CharacterService::Stub> &stub_) : request_(
-        request) {
+                                             std::unique_ptr<protobuf::CharacterService::Stub> &stub_)
+        : callStatus(READ), request_(request) {
     context.AddMetadata("token", token);
     responder = stub_->AsyncGetSymbols(&context, request_, &cq_, this);
 }
 
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
+    if (!ok) {
+        CloseRpc();
+        return;
+    }
     if (callStatus == READ) {
-        if (!ok) {
-            CloseRpc();
-            return;
-        }
         callStatus = READ_CALLED;
         responder->Read(&reply_, this);
-
     } else if (callStatus == READ_CALLED) {
-        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << std::endl;
+        std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << "\n" << reply_.symbol().character()
+                  << std::endl;
         //todo inserire il simbolo
-        callStatus = READ;
+        responder->Read(&reply_, this);
     } else if (callStatus == FINISH) {
         std::cout << "GetSymbols rpc finished" << std::endl;
         delete this;
@@ -31,6 +31,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
 
 
 void AsyncClientGetSymbols::CloseRpc() {
+    std::cout << "CloseRpc()" << std::endl;
     responder->Finish(&status, this);
     callStatus = FINISH;
 

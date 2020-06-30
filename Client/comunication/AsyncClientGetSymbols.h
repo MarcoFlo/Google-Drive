@@ -1,14 +1,12 @@
 #ifndef CLIENT_ASYNCCLIENTGETSYMBOLS_H
 #define CLIENT_ASYNCCLIENTGETSYMBOLS_H
 
-#include "AsyncClientCall.h"
-
-class AsyncClientGetSymbols final : public AsyncClientCall {
+class AsyncClientGetSymbols {
 public:
 
-    void HandleAsync(bool ok) override;
+    void HandleAsync(bool ok);
 
-    void CloseRpc() override;
+    void CloseRpc();
 
     AsyncClientGetSymbols(const protobuf::FileInfo &request, const std::string &token, grpc::CompletionQueue &cq_,
                           std::unique_ptr<protobuf::CharacterService::Stub> &stub_);
@@ -18,8 +16,16 @@ public:
 
     // Container for the data we expect from the server.
     protobuf::Message reply_;
-    
+
     protobuf::FileInfo request_;
+
+    enum CallStatus {
+        CREATE, READ, READ_CALLED, FINISH, DESTROY
+    };
+
+    grpc::ClientContext context;
+    grpc::Status status;
+    CallStatus callStatus;
 };
 
 
