@@ -42,6 +42,7 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
 
     // Block until the next result is available in the completion queue "cq".
     while (pClient->cq_.Next(&got_tag, &ok)) {
+        std::cout << got_tag << std::endl;
         static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
     }
 }
@@ -368,7 +369,7 @@ protobuf::ProfileInfo CharacterClient::getProfileInfoLogged() {
 }
 
 CharacterClient::~CharacterClient() {
-    if (asyncClientGetSymbols != nullptr)
-        asyncClientGetSymbols->CloseRpc();
+//    if (asyncClientGetSymbols != nullptr)
+//        asyncClientGetSymbols->CloseRpc();
 }
 

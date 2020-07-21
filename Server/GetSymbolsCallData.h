@@ -27,6 +27,7 @@ private:
     protobuf::FileInfo request_;
 // What we send back to the client.
     protobuf::Message reply_;
+    std::string mailPrincipal;
 
 // The means to get back to the client.
     grpc::ServerAsyncWriter<protobuf::Message> responder_;

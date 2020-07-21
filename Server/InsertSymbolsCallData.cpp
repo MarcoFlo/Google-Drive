@@ -80,7 +80,7 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
                     [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
-                        dynamic_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
+                        static_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
                     });
             responder_.Finish(reply_, grpc::Status::OK, this);
         } else {

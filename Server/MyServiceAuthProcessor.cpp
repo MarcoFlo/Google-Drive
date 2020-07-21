@@ -23,7 +23,7 @@ grpc::Status MyServiceAuthProcessor::Process(const grpc_impl::AuthMetadataProces
         return grpc::Status(grpc::StatusCode::INTERNAL, "Internal Error");
 
     // if token metadata not necessary, return early, avoid token checking
-    std::cout << "Processor got call for: " << dispatch_value << std::endl << std::endl;
+    std::cout << std::endl << "Processor got call for: " << dispatch_value << std::endl;
     if (dispatch_value == "/protobuf.CharacterService/Register") {
         return ProcessRegister(auth_metadata);
     }
@@ -227,9 +227,9 @@ grpc::Status MyServiceAuthProcessor::ProcessGetProfile(const std::string &token_
     std::string email = profileInfo.user().email();
     std::string username = profileInfo.username();
     std::string name = profileInfo.name();
-    std::string surname =  profileInfo.surname();
+    std::string surname = profileInfo.surname();
 
-    context->AddProperty("email",email);
+    context->AddProperty("email", email);
     context->AddProperty("password", pw);
     context->AddProperty("username", username);
     context->AddProperty("name", name);

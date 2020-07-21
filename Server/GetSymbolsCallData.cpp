@@ -17,12 +17,13 @@ void
 GetSymbolsCallData::HandleSubscribedCall(
         std::map<std::string, std::vector<AbstractSubscribedCallData *>> &subscribedClientMap, bool ok) {
     if (status_ == FINISH) {
+        std::cout << "Finish GetSymbols" << std::endl;
         delete this;
         return;
     }
 
     if (!ok) {
-        std::cout << "finish getSymbols" << std::endl;
+        std::cout << "!ok getSymbols" << std::endl;
         responder_.Finish(grpc::Status::OK, this);
         status_ = FINISH;
         return;
@@ -40,6 +41,13 @@ GetSymbolsCallData::HandleSubscribedCall(
             std::find(request_.emailal().begin(), request_.emailal().end(), principal) !=
             request_.emailal().end()) {
             //authorized
+            mailPrincipal = principal;
+            subscribedClientMap[request_.fileidentifier()].erase(
+                    std::remove_if(subscribedClientMap[request_.fileidentifier()].begin(),
+                                   subscribedClientMap[request_.fileidentifier()].end(),
+                                   [&principal](AbstractSubscribedCallData *call) {
+                                       return static_cast<GetSymbolsCallData *>(call)->mailPrincipal == principal;
+                                   }), subscribedClientMap[request_.fileidentifier()].end());
             subscribedClientMap[request_.fileidentifier()].push_back(this);
         } else {
             status_ = FINISH;

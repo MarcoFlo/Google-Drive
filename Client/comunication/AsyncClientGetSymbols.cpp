@@ -31,6 +31,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
 
 
 void AsyncClientGetSymbols::CloseRpc() {
+// non funziona correttamente in grpc
     std::cout << "CloseRpc()" << std::endl;
     responder->Finish(&status, this);
     callStatus = FINISH;
