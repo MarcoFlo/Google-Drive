@@ -79,8 +79,10 @@ void InsertSymbolsCallData::HandleFileSubscribedCall(protobuf::FileClientMap &fi
             std::for_each(
                     subscribedClientMap.at(request_.fileidentifier()).begin(),
                     subscribedClientMap.at(request_.fileidentifier()).end(),
-                    [&messageReceived](AbstractSubscribedCallData *getSymbolsCallData) {
-                        static_cast<GetSymbolsCallData *>(getSymbolsCallData)->HandleSymbol(messageReceived);
+                    [&messageReceived, &principal](AbstractSubscribedCallData *getSymbolsCallData) {
+                        GetSymbolsCallData *call = static_cast<GetSymbolsCallData *>(getSymbolsCallData);
+                        if (call->mailPrincipal != principal)
+                            call->HandleSymbol(messageReceived);
                     });
             responder_.Finish(reply_, grpc::Status::OK, this);
         } else {

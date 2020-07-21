@@ -2,6 +2,7 @@
 #define SERVER_GETSYMBOLSCALLDATA_H
 
 #include "AbstractSubscribedCallData.h"
+#include "InsertSymbolsCallData.h"
 
 class GetSymbolsCallData final: public AbstractSubscribedCallData {
 public:
@@ -11,6 +12,8 @@ public:
                               bool ok) override;
 
     void HandleSymbol(const protobuf::Message &message);
+
+    friend class InsertSymbolsCallData;
 
 private:
     // The means of communication with the gRPC runtime for an asynchronous
