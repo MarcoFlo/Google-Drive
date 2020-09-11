@@ -39,7 +39,7 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
             //se è tra i suoi file
             if ((*fileToBeRemoved).emailo() == request_.emailo()) {
                 //se ha l'autorizzazione
-                if (remove(("fileContainer/" + request_.fileidentifier()).c_str()) == 0) {
+                if (remove(("db/fileContainer/" + request_.fileidentifier()).c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file
                     std::for_each(fileClientMap.mutable_fileclientmap()->begin(),
                                   fileClientMap.mutable_fileclientmap()->end(), [&fileIdentifier](auto &pair) {
