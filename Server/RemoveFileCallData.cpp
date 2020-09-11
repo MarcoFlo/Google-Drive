@@ -37,19 +37,22 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
                                             });
         if (fileToBeRemoved != fileList->mutable_fileil()->end()) {
             //se è tra i suoi file
-            if ((*fileToBeRemoved).emailo() == request_.emailo()) {
+            if ((*fileToBeRemoved).emailo() == principal) {
                 //se ha l'autorizzazione
                 if (remove(("db/fileContainer/" + request_.fileidentifier()).c_str()) == 0) {
                     //cancello da tutti le filesInfoList il file
                     std::for_each(fileClientMap.mutable_fileclientmap()->begin(),
                                   fileClientMap.mutable_fileclientmap()->end(), [&fileIdentifier](auto &pair) {
-                                auto fileToBeDeleted = std::find_if(pair.second.mutable_fileil()->begin(),
-                                                                    pair.second.mutable_fileil()->end(),
-                                                                    [&fileIdentifier](protobuf::FileInfo &file) {
-                                                                        return file.fileidentifier() == fileIdentifier;
-                                                                    });
-                                pair.second.mutable_fileil()->erase(fileToBeDeleted);
+                                try {
+                                    auto fileToBeDeleted = std::find_if(pair.second.mutable_fileil()->begin(),
+                                                                        pair.second.mutable_fileil()->end(),
+                                                                        [&fileIdentifier](protobuf::FileInfo &file) {
+                                                                            return file.fileidentifier() ==
+                                                                                   fileIdentifier;
+                                                                        });
+                                    pair.second.mutable_fileil()->erase(fileToBeDeleted);
 
+                                } catch (...) {}
                             });
                     UpdateFileClientMap(fileClientMap);
 
@@ -58,12 +61,15 @@ void RemoveFileCallData::HandleFileCall(protobuf::FileClientMap &fileClientMap, 
                     //Get the remove error message.
                     DWORD errorMessageID = ::GetLastError();
                     LPSTR messageBuffer = nullptr;
-                    size_t size = FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-                                                 NULL, errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
+                    size_t size = FormatMessageA(
+                            FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+                            NULL, errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR) &messageBuffer, 0,
+                            NULL);
                     std::string message(messageBuffer, size);
                     LocalFree(messageBuffer);
 
-                    std::cout << "It wasn't possible to delete the file, function 'remove()' failed -> " << message << std::endl;
+                    std::cout << "It wasn't possible to delete the file, function 'remove()' failed -> " << message
+                              << std::endl;
                     responder_.Finish(reply_, grpc::Status(grpc::StatusCode::INTERNAL, "Internal error"), this);
                 }
             } else {
