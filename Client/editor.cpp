@@ -28,6 +28,9 @@
 #include <QPainter>
 #include <QMessageBox>
 #include <QList>
+#include <csignal>
+
+std::atomic<bool> exit_thread_flag{false};
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
     QMainWindow(parent),
@@ -45,7 +48,9 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }*/
     setupGeneral();
-    QObject::connect(reinterpret_cast<const QObject *>(client_), SIGNAL(newAsync()), this, SLOT(add_async_symbol()));
+    std::thread([this] { this->AsyncCompleteRpc(client_); }).detach();
+    QObject::connect(this, SIGNAL(newAsync()), this, SLOT(add_async_symbol()));
+
 }
 
 Editor::~Editor()
@@ -421,6 +426,7 @@ void Editor::setupColor() {
 void Editor::on_actionindietro_triggered()
 {
     client_->closeFile();
+    exit_thread_flag=true;
     emit closeE();
 }
 
@@ -1341,18 +1347,100 @@ void Editor::on_evidenzia_clicked()
     QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
-    QColor colB = QColor(colorU);
+    auto colB = QColor(colorU);
     formato2.setBackground(colB);
     ui->txt->setCurrentCharFormat(formato2);
 
-    if(evidenzia == false)
-        evidenzia = true;
-    else
-        evidenzia = false;
+    evidenzia = !evidenzia;
 
     insert = true;
 }
 
 void Editor::add_async_symbol() {
     std::cout << "Buonasera";
+    ui->txt->setText("");
+    int i=0;
+    int j=0;
+    QTextCursor cursor = ui->txt->textCursor();
+    symbol_->push_back(Symbol(asyncSymbol));
+    std::sort(symbol_->begin(), symbol_->end());
+
+    for(i=0; i<symbol_->size(); i++)
+    {
+        QFont *font2;
+
+        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+            //font.setFamily("Arial");
+            font2 = new QFont("Arial");
+        else
+            //font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
+            font2 = new QFont(QString::fromStdString(symbol_->at(i).getFont()));
+
+        QTextCharFormat formato = cursor.blockCharFormat();
+        formato.setFont(*font2);
+
+        if(symbol_->at(i).getDimension() == -842150451)
+            formato.setFontPointSize(8);
+        else
+            formato.setFontPointSize(symbol_->at(i).getDimension());
+
+        formato.setFontUnderline(symbol_->at(i).getUnderline());
+        formato.setFontItalic(symbol_->at(i).getItalic());
+        if(symbol_->at(i).getBold())
+            formato.setFontWeight(QFont::Bold);
+        else
+            formato.setFontWeight(QFont::Normal);
+
+
+
+        QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
+        formato.setForeground(colB);
+
+        QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
+
+        if(all == "destra")
+        {
+            ui->txt->setAlignment(Qt::AlignRight);
+            //formato.setVerticalAlignment(Qt::AlignRight);
+        }
+        else if(all == "sinistra")
+        {
+            ui->txt->setAlignment(Qt::AlignLeft);
+        }
+        else if(all == "centro")
+        {
+            ui->txt->setAlignment(Qt::AlignCenter);
+        }
+        else if(all == "giustificato")
+        {
+            ui->txt->setAlignment(Qt::AlignJustify);
+        }
+
+        cursor.setCharFormat(formato);
+
+        cursor.setPosition(i);
+        ui->txt->setTextCursor(cursor);
+
+        char y = symbol_->at(i).getCharacter();
+        ui->txt->insertPlainText(QChar(y));
+
+    }
+}
+
+
+void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
+    void *got_tag;
+    bool ok = false;
+
+    // Block until the next result is available in the completion queue "cq".
+    while(!exit_thread_flag) {
+        while (pClient->cq_.Next(&got_tag, &ok)) {
+            std::cout << got_tag << std::endl;
+            static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
+            if (ok) {
+                asyncSymbol = static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
+                emit newAsync();
+            }
+        }
+    }
 }

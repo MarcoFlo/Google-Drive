@@ -114,6 +114,8 @@ private slots:
 
         void add_async_symbol();
 
+        void AsyncCompleteRpc(CharacterClient *pClient);
+
 private:
     Ui::Editor *ui;
 
@@ -180,6 +182,9 @@ private:
     bool evidenzia = false;
 
     QString allineamento = "sinistra";
+
+    protobuf::Symbol asyncSymbol;
+
 };
 
 #endif // EDITOR_H

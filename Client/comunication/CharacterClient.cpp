@@ -10,6 +10,8 @@
 #include "Symbol.h"
 #include "Message.h"
 #include "CharacterClient.h"
+#include <csignal>
+
 
 
 void read(const std::string &filename, std::string &data) {
@@ -33,9 +35,9 @@ CharacterClient::CharacterClient() {
     stub_ = protobuf::CharacterService::NewStub(grpc::CreateChannel("localhost:50051", channel_creds));
 
     //per gestire i simboli che ci arrivano dal server
-    std::thread([this] { this->AsyncCompleteRpc(this); }).detach();
+    //std::thread([this] { this->AsyncCompleteRpc(this); }).detach();
 }
-
+/*
 void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
     void *got_tag;
     bool ok = false;
@@ -46,11 +48,11 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
         static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
         if(ok) {
             asyncSymbol=static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
-            emit newAsync();
+            raise(SIGSEGV);
         }
     }
 }
-
+*/
 
 std::string CharacterClient::Register(protobuf::ProfileInfo &profileInfo) {
     grpc::ClientContext context;

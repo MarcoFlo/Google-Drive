@@ -3,7 +3,6 @@
 
 #include "Symbol.h"
 #include "AsyncClientGetSymbols.h"
-#include <QtCore/qobjectdefs.h>
 
 class CharacterClient {
 public:
@@ -11,7 +10,7 @@ public:
 
     virtual ~CharacterClient();
 
-    void AsyncCompleteRpc(CharacterClient *pClient);
+    //void AsyncCompleteRpc(CharacterClient *pClient);
 
     std::string Register(protobuf::ProfileInfo &profileInfo);
 
@@ -50,15 +49,12 @@ public:
     protobuf::FileInfo getFileInfo(const std::string &);
 
     void closeFile();
-signals:
 
-            void newAsync();
+    grpc::CompletionQueue cq_;
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
     std::unique_ptr<protobuf::CharacterService::Stub> stub_;
-
-    grpc::CompletionQueue cq_;
 
     protobuf::UserLogged userLogged_;
     std::string currentFileIdentifier_;
