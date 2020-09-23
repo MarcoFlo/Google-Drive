@@ -28,7 +28,7 @@ public:
     grpc::ClientContext context;
     grpc::Status status;
     CallStatus callStatus;
-    bool flag = false;
+    bool flag;
 private:
     protobuf::Symbol symbol;
 };

@@ -8,6 +8,7 @@ AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileInfo &request, 
         : callStatus(READ), request_(request) {
     context.AddMetadata("token", token);
     responder = stub_->AsyncGetSymbols(&context, request_, &cq_, this);
+    flag = false;
 }
 
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
