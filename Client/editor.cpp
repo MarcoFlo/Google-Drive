@@ -1279,6 +1279,8 @@ void Editor::on_evidenzia_clicked() {
 
 void Editor::add_async_symbol() {
     std::cout << "Buonasera"<< std::endl;
+    ui->txt->setText("");
+    this->readFile();
 }
 
 
@@ -1292,7 +1294,7 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
             std::cout << got_tag << std::endl;
             static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
             bool fieldsEqual = std::equal(asyncSymbol.pos().begin(), asyncSymbol.pos().end(), static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol().pos().begin());
-            if (!fieldsEqual) {
+            if (ok) {
                 asyncSymbol = static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
                 emit newAsync();
             }

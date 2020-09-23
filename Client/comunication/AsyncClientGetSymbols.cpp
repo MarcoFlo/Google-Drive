@@ -15,6 +15,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
         CloseRpc();
         return;
     }
+
     if (callStatus == READ) {
         callStatus = READ_CALLED;
         responder->Read(&reply_, this);
