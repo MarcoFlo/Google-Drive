@@ -1280,7 +1280,10 @@ void Editor::on_evidenzia_clicked() {
 void Editor::add_async_symbol() {
     std::cout << "Buonasera"<< std::endl;
     ui->txt->setText("");
-    this->readFile();
+    _symbolsP->clear_symbolvector();
+    symbol_->erase(symbol_->begin(), symbol_->end());
+    client_->closeFile();
+    readFile();
 }
 
 
@@ -1289,7 +1292,6 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
     bool ok = false;
 
     // Block until the next result is available in the completion queue "cq".
-    while (!exit_thread_flag) {
         while (pClient->cq_.Next(&got_tag, &ok)) {
             std::cout << got_tag << std::endl;
             static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
@@ -1299,7 +1301,6 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
                 emit newAsync();
             }
         }
-    }
 }
 
 void Editor::startAsyncClient() {
