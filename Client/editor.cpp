@@ -1294,7 +1294,7 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
             std::cout << got_tag << std::endl;
             static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
             bool fieldsEqual = std::equal(asyncSymbol.pos().begin(), asyncSymbol.pos().end(), static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol().pos().begin());
-            if (ok) {
+            if (ok && static_cast<AsyncClientGetSymbols *>(got_tag)->flag) {
                 asyncSymbol = static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
                 emit newAsync();
             }

@@ -23,6 +23,7 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
         std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << "\t" << reply_.symbol().character()
                   << std::endl;
         symbol=reply_.symbol();
+        flag = true;
         //todo inserire il simbolo
         responder->Read(&reply_, this);
     } else if (callStatus == FINISH) {
@@ -41,6 +42,7 @@ void AsyncClientGetSymbols::CloseRpc() {
 }
 
 protobuf::Symbol AsyncClientGetSymbols::GetSymbol() {
+    flag = false;
     return symbol;
 }
 
