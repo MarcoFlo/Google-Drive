@@ -379,3 +379,10 @@ CharacterClient::~CharacterClient() {
 //        asyncClientGetSymbols->CloseRpc();
 }
 
+void CharacterClient::setAsyncfun() {
+    asyncFun=true;
+}
+
+bool CharacterClient::getAsyncfun() {
+    return asyncFun;
+}

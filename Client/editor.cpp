@@ -47,6 +47,7 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }*/
     setupGeneral();
+    startAsyncClient();
     QObject::connect(this, SIGNAL(newAsync()), this, SLOT(add_async_symbol()));
 
 }
@@ -1357,5 +1358,8 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
 }
 
 void Editor::startAsyncClient() {
-    std::thread([this] { this->AsyncCompleteRpc(client_); }).detach();
+    if(!client_->getAsyncfun()) {
+        std::thread([this] { this->AsyncCompleteRpc(client_); }).detach();
+        client_->setAsyncfun();
+    }
 }
