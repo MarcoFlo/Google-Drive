@@ -1278,65 +1278,7 @@ void Editor::on_evidenzia_clicked() {
 }
 
 void Editor::add_async_symbol() {
-    std::cout << "Buonasera";
-    ui->txt->setText("");
-    int i = 0;
-    int j = 0;
-    QTextCursor cursor = ui->txt->textCursor();
-    symbol_->push_back(Symbol(asyncSymbol));
-    std::sort(symbol_->begin(), symbol_->end());
-
-    for (i = 0; i < symbol_->size(); i++) {
-        QFont *font2;
-
-        if (QString::fromStdString(symbol_->at(i).getFont()) == "")
-            //font.setFamily("Arial");
-            font2 = new QFont("Arial");
-        else
-            //font.setFamily(QString::fromStdString(symbol_->at(i).getFont()));
-            font2 = new QFont(QString::fromStdString(symbol_->at(i).getFont()));
-
-        QTextCharFormat formato = cursor.blockCharFormat();
-        formato.setFont(*font2);
-
-        if (symbol_->at(i).getDimension() == -842150451)
-            formato.setFontPointSize(8);
-        else
-            formato.setFontPointSize(symbol_->at(i).getDimension());
-
-        formato.setFontUnderline(symbol_->at(i).getUnderline());
-        formato.setFontItalic(symbol_->at(i).getItalic());
-        if (symbol_->at(i).getBold())
-            formato.setFontWeight(QFont::Bold);
-        else
-            formato.setFontWeight(QFont::Normal);
-
-
-        QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
-        formato.setForeground(colB);
-
-        QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
-
-        if (all == "destra") {
-            ui->txt->setAlignment(Qt::AlignRight);
-            //formato.setVerticalAlignment(Qt::AlignRight);
-        } else if (all == "sinistra") {
-            ui->txt->setAlignment(Qt::AlignLeft);
-        } else if (all == "centro") {
-            ui->txt->setAlignment(Qt::AlignCenter);
-        } else if (all == "giustificato") {
-            ui->txt->setAlignment(Qt::AlignJustify);
-        }
-
-        cursor.setCharFormat(formato);
-
-        cursor.setPosition(i);
-        ui->txt->setTextCursor(cursor);
-
-        char y = symbol_->at(i).getCharacter();
-        ui->txt->insertPlainText(QChar(y));
-
-    }
+    std::cout << "Buonasera"<< std::endl;
 }
 
 
@@ -1349,7 +1291,8 @@ void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
         while (pClient->cq_.Next(&got_tag, &ok)) {
             std::cout << got_tag << std::endl;
             static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
-            if (ok) {
+            bool fieldsEqual = std::equal(asyncSymbol.pos().begin(), asyncSymbol.pos().end(), static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol().pos().begin());
+            if (!fieldsEqual) {
                 asyncSymbol = static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
                 emit newAsync();
             }
@@ -1361,5 +1304,6 @@ void Editor::startAsyncClient() {
     if(!client_->getAsyncfun()) {
         std::thread([this] { this->AsyncCompleteRpc(client_); }).detach();
         client_->setAsyncfun();
+        std::cout << client_->getAsyncfun() << std::endl;
     }
 }
