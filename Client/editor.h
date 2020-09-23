@@ -116,6 +116,8 @@ private slots:
 
         void AsyncCompleteRpc(CharacterClient *pClient);
 
+        void startAsyncClient();
+
 private:
     Ui::Editor *ui;
 
