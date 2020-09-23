@@ -3,7 +3,7 @@
 
 #include "Symbol.h"
 #include "AsyncClientGetSymbols.h"
-
+#include <QtCore/qobjectdefs.h>
 
 class CharacterClient {
 public:
@@ -50,7 +50,9 @@ public:
     protobuf::FileInfo getFileInfo(const std::string &);
 
     void closeFile();
+signals:
 
+            void newAsync();
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
@@ -68,7 +70,7 @@ private:
 
     //current opened file
     protobuf::SymbolVector symbolVector_;
-
+    protobuf::Symbol asyncSymbol;
 };
 
 #endif //CLIENT_CHARACTERCLIENT_H

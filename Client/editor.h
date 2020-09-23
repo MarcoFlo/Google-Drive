@@ -30,6 +30,8 @@ signals:
 
     void closeEP();
 
+    void newAsync();
+
 private slots:
 
         void setupGeneral();
@@ -109,6 +111,8 @@ private slots:
         void localErase(int index);
 
         void on_evidenzia_clicked();
+
+        void add_async_symbol();
 
 private:
     Ui::Editor *ui;

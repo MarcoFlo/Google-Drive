@@ -44,6 +44,10 @@ void CharacterClient::AsyncCompleteRpc(CharacterClient *pClient) {
     while (pClient->cq_.Next(&got_tag, &ok)) {
         std::cout << got_tag << std::endl;
         static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
+        if(ok) {
+            asyncSymbol=static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
+            emit newAsync();
+        }
     }
 }
 
