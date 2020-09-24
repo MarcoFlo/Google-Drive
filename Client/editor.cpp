@@ -58,7 +58,7 @@ Editor::~Editor() {
 
 void Editor::setupGeneral() {
 
-    colorL = {"#fdb9c9", "#ffdcbe", "#f6f3b5", "#bbf6f3", "#a7e0f4", "#b2d8b5", "#b7b4db", "#d6bddd", "#c0d6e4",
+    colorL = {"#38ff4c", "#ffde38", "#7aff38", "#38ff9c", "#a7e0f4", "#b2d8b5", "#b7b4db", "#d6bddd", "#c0d6e4",
               "#fb9692", "#c0d6e4", "#fab297", "#afd7b4", "#c0c0c0"};
 
     //
@@ -1278,7 +1278,6 @@ void Editor::on_evidenzia_clicked() {
 }
 
 void Editor::add_async_symbol() {
-    std::cout << "Buonasera"<< std::endl;
     ui->txt->setText("");
     _symbolsP->clear_symbolvector();
     symbol_->erase(symbol_->begin(), symbol_->end());
