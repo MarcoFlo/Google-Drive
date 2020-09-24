@@ -8,6 +8,7 @@ AsyncClientGetSymbols::AsyncClientGetSymbols(const protobuf::FileInfo &request, 
         : callStatus(READ), request_(request) {
     context.AddMetadata("token", token);
     responder = stub_->AsyncGetSymbols(&context, request_, &cq_, this);
+    flag = false;
 }
 
 void AsyncClientGetSymbols::HandleAsync(bool ok) {
@@ -15,12 +16,15 @@ void AsyncClientGetSymbols::HandleAsync(bool ok) {
         CloseRpc();
         return;
     }
+
     if (callStatus == READ) {
         callStatus = READ_CALLED;
         responder->Read(&reply_, this);
     } else if (callStatus == READ_CALLED) {
         std::cout << "Get Symbols received: " << reply_.symbol().uniqueid() << "\t" << reply_.symbol().character()
                   << std::endl;
+        symbol=reply_.symbol();
+        flag = true;
         //todo inserire il simbolo
         responder->Read(&reply_, this);
     } else if (callStatus == FINISH) {
@@ -38,6 +42,9 @@ void AsyncClientGetSymbols::CloseRpc() {
 
 }
 
-
+protobuf::Symbol AsyncClientGetSymbols::GetSymbol() {
+    flag = false;
+    return symbol;
+}
 
 

@@ -4,14 +4,13 @@
 #include "Symbol.h"
 #include "AsyncClientGetSymbols.h"
 
-
 class CharacterClient {
 public:
     explicit CharacterClient();
 
     virtual ~CharacterClient();
 
-    void AsyncCompleteRpc(CharacterClient *pClient);
+    //void AsyncCompleteRpc(CharacterClient *pClient);
 
     std::string Register(protobuf::ProfileInfo &profileInfo);
 
@@ -51,12 +50,16 @@ public:
 
     void closeFile();
 
+    grpc::CompletionQueue cq_;
+
+    void setAsyncfun();
+
+    bool getAsyncfun();
+
 private:
     // Out of the passed in Channel comes the stub, stored here, our view of the
     // server's exposed services.
     std::unique_ptr<protobuf::CharacterService::Stub> stub_;
-
-    grpc::CompletionQueue cq_;
 
     protobuf::UserLogged userLogged_;
     std::string currentFileIdentifier_;
@@ -68,7 +71,8 @@ private:
 
     //current opened file
     protobuf::SymbolVector symbolVector_;
-
+    protobuf::Symbol asyncSymbol;
+    bool asyncFun= false;
 };
 
 #endif //CLIENT_CHARACTERCLIENT_H

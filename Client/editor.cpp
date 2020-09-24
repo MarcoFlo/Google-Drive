@@ -28,13 +28,15 @@
 #include <QPainter>
 #include <QMessageBox>
 #include <QList>
+#include <csignal>
+
+std::atomic<bool> exit_thread_flag{false};
 
 Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
-    QMainWindow(parent),
-    ui(new Ui::Editor)
-{
-    client_=client;
-    _symbolsP=new protobuf::SymbolVector();
+        QMainWindow(parent),
+        ui(new Ui::Editor) {
+    client_ = client;
+    _symbolsP = new protobuf::SymbolVector();
     symbol_ = new std::vector<Symbol>();
     ui->setupUi(this);
     client_->GetFiles();
@@ -45,21 +47,23 @@ Editor::Editor(QWidget *parent, std::string *fileid, CharacterClient *client) :
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }*/
     setupGeneral();
+    startAsyncClient();
+    QObject::connect(this, SIGNAL(newAsync()), this, SLOT(add_async_symbol()));
+
 }
 
-Editor::~Editor()
-{
+Editor::~Editor() {
     delete ui;
 }
 
 void Editor::setupGeneral() {
 
-    colorL = {"#fdb9c9", "#ffdcbe", "#f6f3b5", "#bbf6f3", "#a7e0f4", "#b2d8b5", "#b7b4db", "#d6bddd", "#c0d6e4", "#fb9692", "#c0d6e4", "#fab297", "#afd7b4", "#c0c0c0"};
+    colorL = {"#38ff4c", "#ffde38", "#7aff38", "#38ff9c", "#a7e0f4", "#b2d8b5", "#b7b4db", "#d6bddd", "#c0d6e4",
+              "#fb9692", "#c0d6e4", "#fab297", "#afd7b4", "#c0c0c0"};
 
     //
     QLayoutItem *wItem;
-    while ((wItem = ui->verticalLayout->takeAt(0)) != 0)
-    {
+    while ((wItem = ui->verticalLayout->takeAt(0)) != 0) {
         //delete wItem;
         delete wItem->widget();
     }
@@ -69,21 +73,19 @@ void Editor::setupGeneral() {
     emailL.append(file_->emailo().c_str());
     QString colorq = colorL[0];
     QString colorstyleq = QString("font-size: 12px;"
-                                      "font-family: 'Calibri';"
-                                      "color: black;"
-                                      "background-color: %1").arg(colorq);
+                                  "font-family: 'Calibri';"
+                                  "color: black;"
+                                  "background-color: %1").arg(colorq);
     io->setStyleSheet(colorstyleq);
     io->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     ui->verticalLayout->addWidget(io);
 
-    for(int i = 0; i < file_->emailal_size(); i++)
-    {
-        if(file_->emailal(i).c_str() != file_->emailo().c_str())
-        {
+    for (int i = 0; i < file_->emailal_size(); i++) {
+        if (file_->emailal(i).c_str() != file_->emailo().c_str()) {
             QLabel *item = new QLabel(this);
             item->setText(file_->emailal(i).c_str());
             emailL.append(file_->emailal(i).c_str());
-            QString colorqqqq = colorL[i+1];
+            QString colorqqqq = colorL[i + 1];
             QString colorstyle = QString("font-size: 12px;"
                                          "font-family: 'Calibri';"
                                          "color: black;"
@@ -227,7 +229,7 @@ void Editor::setupFont() {
 
     ui->toolBar_2->insertWidget(ui->actiongrassetto, font);
 
-    QObject::connect(fontG, SIGNAL(triggered(QAction*)), this, SLOT(changeFont()));
+    QObject::connect(fontG, SIGNAL(triggered(QAction * )), this, SLOT(changeFont()));
 
     //QObject::connect(altriB, SIGNAL(pressed()), this, SLOT(on_actionfont_triggered()));
 
@@ -241,14 +243,14 @@ void Editor::setupSize() {
 
     dimMenu = new QMenu();
     dimMenu->setStyleSheet("QMenu {"
-                            "background-color: white;"
-                            "border: 1px solid #336b8a;}"
-                            "QMenu::item:selected {"
-                            "background-color: rgba(245, 245, 245, 200);"
-                            "color: black;}"
-                            "QMenu::item:checked {"
-                            "background-color: rgba(245, 245, 245, 200);"
-                            "color: black;}");
+                           "background-color: white;"
+                           "border: 1px solid #336b8a;}"
+                           "QMenu::item:selected {"
+                           "background-color: rgba(245, 245, 245, 200);"
+                           "color: black;}"
+                           "QMenu::item:checked {"
+                           "background-color: rgba(245, 245, 245, 200);"
+                           "color: black;}");
     dimG = new QActionGroup(dimMenu);
     dimG->setExclusive(true);
 
@@ -318,7 +320,7 @@ void Editor::setupSize() {
 
     ui->toolBar_2->insertWidget(ui->actiongrassetto, dim);
 
-    QObject::connect(dimG, SIGNAL(triggered(QAction*)), this, SLOT(changeDim()));
+    QObject::connect(dimG, SIGNAL(triggered(QAction * )), this, SLOT(changeDim()));
 
     QObject::connect(lEdit, SIGNAL(editingFinished()), this, SLOT(setTextDimEdit()));
 
@@ -330,14 +332,14 @@ void Editor::setupColor() {
 
     coloreM = new QMenu();
     coloreM->setStyleSheet("QMenu {"
-                            "background-color: white;"
-                            "border: 1px solid #336b8a;}"
-                            "QMenu::item:selected {"
-                            "background-color: rgba(245, 245, 245, 200);"
-                            "color: black;}"
-                            "QMenu::item:checked {"
-                            "background-color: rgba(245, 245, 245, 200);"
-                            "color: black;}");
+                           "background-color: white;"
+                           "border: 1px solid #336b8a;}"
+                           "QMenu::item:selected {"
+                           "background-color: rgba(245, 245, 245, 200);"
+                           "color: black;}"
+                           "QMenu::item:checked {"
+                           "background-color: rgba(245, 245, 245, 200);"
+                           "color: black;}");
     QVBoxLayout *coloreV = new QVBoxLayout(coloreM);
     QGridLayout *coloreG = new QGridLayout(coloreM);
     coloreV->addLayout(coloreG);
@@ -417,39 +419,33 @@ void Editor::setupColor() {
     listaColor.insert(5, azzurroB);
 }
 
-void Editor::on_actionindietro_triggered()
-{
+void Editor::on_actionindietro_triggered() {
     client_->closeFile();
+    exit_thread_flag = true;
     emit closeE();
 }
 
-void Editor::on_actionredo_triggered()
-{
+void Editor::on_actionredo_triggered() {
     ui->txt->redo();
 }
 
-void Editor::on_actioncopia_triggered()
-{
+void Editor::on_actioncopia_triggered() {
     ui->txt->copy();
 }
 
-void Editor::on_actionincolla_triggered()
-{
+void Editor::on_actionincolla_triggered() {
     ui->txt->paste();
 }
 
-void Editor::on_actiontaglia_triggered()
-{
+void Editor::on_actiontaglia_triggered() {
     ui->txt->cut();
 }
 
-void Editor::on_actionundo_triggered()
-{
+void Editor::on_actionundo_triggered() {
     ui->txt->undo();
 }
 
-void Editor::on_actionallineaD_triggered()
-{
+void Editor::on_actionallineaD_triggered() {
     ui->txt->setAlignment(Qt::AlignRight);
     ui->actionallineaD->setChecked(true);
     ui->actionallineaC->setChecked(false);
@@ -459,8 +455,7 @@ void Editor::on_actionallineaD_triggered()
 
 }
 
-void Editor::on_actionallineaS_triggered()
-{
+void Editor::on_actionallineaS_triggered() {
     ui->txt->setAlignment(Qt::AlignLeft);
     ui->actionallineaD->setChecked(false);
     ui->actionallineaC->setChecked(false);
@@ -469,8 +464,7 @@ void Editor::on_actionallineaS_triggered()
     allineamento = "sinistra";
 }
 
-void Editor::on_actionallineaC_triggered()
-{
+void Editor::on_actionallineaC_triggered() {
     ui->txt->setAlignment(Qt::AlignCenter);
     ui->actionallineaD->setChecked(false);
     ui->actionallineaC->setChecked(true);
@@ -479,8 +473,7 @@ void Editor::on_actionallineaC_triggered()
     allineamento = "centro";
 }
 
-void Editor::on_actionalineaG_triggered()
-{
+void Editor::on_actionalineaG_triggered() {
     ui->txt->setAlignment(Qt::AlignJustify);
     ui->actionallineaD->setChecked(false);
     ui->actionallineaC->setChecked(false);
@@ -489,51 +482,44 @@ void Editor::on_actionalineaG_triggered()
     allineamento = "giustificato";
 }
 
-void Editor::on_actiongrassetto_triggered()
-{
+void Editor::on_actiongrassetto_triggered() {
 
-    if(ui->actiongrassetto->isChecked())
-    {
+    if (ui->actiongrassetto->isChecked()) {
         ui->txt->setFontWeight(QFont::Bold);
         bold = true;
-    }
-    else {
+    } else {
         ui->txt->setFontWeight(QFont::Normal);
         bold = false;
     }
 }
 
 
-void Editor::on_actioncorsivo_triggered()
-{
+void Editor::on_actioncorsivo_triggered() {
     ui->txt->setFontItalic(ui->actioncorsivo->isChecked());
     italic = ui->actioncorsivo->isChecked();
 }
 
-void Editor::on_actionsottolineato_triggered()
-{
+void Editor::on_actionsottolineato_triggered() {
     ui->txt->setFontUnderline(ui->actionsottolineato->isChecked());
     underline = ui->actionsottolineato->isChecked();
 }
 
-void Editor::on_actioncolore_triggered()
-{
+void Editor::on_actioncolore_triggered() {
     QColor colB = colore->palette().color(QPalette::Background);
 
-                QColor color = QColorDialog::getColor(colB, this, "Scegli un colore");
-                if(color.isValid()) {
-                    ui->txt->setTextColor(color);
-                    colorS = color.name();
-                    QString qss = QString("background-color: %1").arg(color.name());
-                    colore->setStyleSheet(qss);
+    QColor color = QColorDialog::getColor(colB, this, "Scegli un colore");
+    if (color.isValid()) {
+        ui->txt->setTextColor(color);
+        colorS = color.name();
+        QString qss = QString("background-color: %1").arg(color.name());
+        colore->setStyleSheet(qss);
 
-                }
+    }
 
-                checkFont();
+    checkFont();
 }
 
-void Editor::on_actionfont_triggered()
-{
+void Editor::on_actionfont_triggered() {
     /*bool ok;
     QFont font = QFontDialog::getFont(&ok, this);
     if(ok)
@@ -543,27 +529,25 @@ void Editor::on_actionfont_triggered()
     else return;*/
 }
 
-void Editor::ShowContextMenu(const QPoint &pos)
-{
+void Editor::ShowContextMenu(const QPoint &pos) {
     QMenu contextMenu(tr("Context menu"), this);
 
-       QAction action3("Taglia", this);
-       QAction action1("Copia", this);
-       QAction action2("Incolla", this);
+    QAction action3("Taglia", this);
+    QAction action1("Copia", this);
+    QAction action2("Incolla", this);
 
-       connect(&action1, SIGNAL(triggered()), this, SLOT(ui->txt->cut();));
-       connect(&action2, SIGNAL(triggered()), this, SLOT(ui->txt->copy();));
-       connect(&action3, SIGNAL(triggered()), this, SLOT(ui->txt->paste();));
+    connect(&action1, SIGNAL(triggered()), this, SLOT(ui->txt->cut();));
+    connect(&action2, SIGNAL(triggered()), this, SLOT(ui->txt->copy();));
+    connect(&action3, SIGNAL(triggered()), this, SLOT(ui->txt->paste();));
 
-       contextMenu.addAction(&action1);
-       contextMenu.addAction(&action2);
-       contextMenu.addAction(&action3);
+    contextMenu.addAction(&action1);
+    contextMenu.addAction(&action2);
+    contextMenu.addAction(&action3);
 
-       contextMenu.exec(mapToGlobal(pos));
+    contextMenu.exec(mapToGlobal(pos));
 }
 
-void Editor::checkFont()
-{
+void Editor::checkFont() {
     ui->actiongrassetto->setChecked(ui->txt->currentFont().bold());
     bold = ui->txt->currentFont().bold();
 
@@ -574,16 +558,14 @@ void Editor::checkFont()
     italic = ui->txt->currentFont().italic();
 
     dimS = ui->txt->currentFont().pointSize();
-    for(int i=0; i<11; i++){
+    for (int i = 0; i < 11; i++) {
 
-        if(QString::compare(listaDim.at(i)->text(), QString::number(ui->txt->currentFont().pointSize()), Qt::CaseSensitive)==0)
-        {
-             listaDim.at(i)->setChecked(true);
-             break;
-        }
-        else
-        {
-             listaDim.at(i)->setChecked(false);
+        if (QString::compare(listaDim.at(i)->text(), QString::number(ui->txt->currentFont().pointSize()),
+                             Qt::CaseSensitive) == 0) {
+            listaDim.at(i)->setChecked(true);
+            break;
+        } else {
+            listaDim.at(i)->setChecked(false);
         }
 
     }
@@ -591,16 +573,13 @@ void Editor::checkFont()
     dim->setText(QString::number(ui->txt->currentFont().pointSize()));
 
     fontS = ui->txt->currentFont().family();
-    for(int y=0; y<6; y++){
+    for (int y = 0; y < 6; y++) {
 
-        if(QString::compare(listaFont.at(y)->text(), ui->txt->currentFont().family(), Qt::CaseSensitive)==0)
-        {
-             listaFont.at(y)->setChecked(true);
-             break;
-        }
-        else
-        {
-             listaFont.at(y)->setChecked(false);
+        if (QString::compare(listaFont.at(y)->text(), ui->txt->currentFont().family(), Qt::CaseSensitive) == 0) {
+            listaFont.at(y)->setChecked(true);
+            break;
+        } else {
+            listaFont.at(y)->setChecked(false);
         }
 
     }
@@ -608,18 +587,14 @@ void Editor::checkFont()
     font->setText(ui->txt->currentFont().family());
     font->setFont(QFont(ui->txt->currentFont().family()));
 
-    QColor colorText=ui->txt->currentCharFormat().foreground().color();
+    QColor colorText = ui->txt->currentCharFormat().foreground().color();
 
     colorS = ui->txt->currentCharFormat().foreground().color().name();
-    for(int z=0; z<6; z++)
-    {
-        if(listaColor.at(z)->palette().color(QPalette::Background)==colorText)
-        {
+    for (int z = 0; z < 6; z++) {
+        if (listaColor.at(z)->palette().color(QPalette::Background) == colorText) {
             listaColor.at(z)->setChecked(true);
             break;
-        }
-        else
-        {
+        } else {
 
             listaColor.at(z)->setChecked(false);
         }
@@ -630,31 +605,28 @@ void Editor::checkFont()
 
     ui->txt->alignment();
 
-    if(ui->txt->alignment() == Qt::AlignLeft) {
+    if (ui->txt->alignment() == Qt::AlignLeft) {
 
         ui->actionallineaD->setChecked(false);
         ui->actionallineaC->setChecked(false);
         ui->actionallineaS->setChecked(true);
         ui->actionalineaG->setChecked(false);
         allineamento = "sinistra";
-    }
-    else if(ui->txt->alignment() == Qt::AlignRight) {
+    } else if (ui->txt->alignment() == Qt::AlignRight) {
 
         ui->actionallineaD->setChecked(true);
         ui->actionallineaC->setChecked(false);
         ui->actionallineaS->setChecked(false);
         ui->actionalineaG->setChecked(false);
         allineamento = "destra";
-    }
-    else if(ui->txt->alignment() == Qt::AlignCenter) {
+    } else if (ui->txt->alignment() == Qt::AlignCenter) {
 
         ui->actionallineaD->setChecked(false);
         ui->actionallineaC->setChecked(true);
         ui->actionallineaS->setChecked(false);
         ui->actionalineaG->setChecked(false);
         allineamento = "centro";
-    }
-    else if(ui->txt->alignment() == Qt::AlignJustify) {
+    } else if (ui->txt->alignment() == Qt::AlignJustify) {
 
         ui->actionallineaD->setChecked(false);
         ui->actionallineaC->setChecked(false);
@@ -665,8 +637,7 @@ void Editor::checkFont()
 
     QTextCharFormat formato = ui->txt->currentCharFormat();
 
-    if(evidenzia == true)
-    {
+    if (evidenzia == true) {
 
         QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
         int c = emailL.indexOf(email);
@@ -674,22 +645,20 @@ void Editor::checkFont()
         QColor colB = QColor(colorU);
         formato.setBackground(colB);
 
-    } else{
+    } else {
         QColor colB = QColor("white");
         formato.setBackground(colB);
     }
     ui->txt->setCurrentCharFormat(formato);
 }
 
-void Editor::changeDim()
-{
+void Editor::changeDim() {
     dimS = dimG->checkedAction()->text().toInt();
     setTextDim(dimS);
     lEdit->clear();
 }
 
-void Editor::changeFont()
-{
+void Editor::changeFont() {
     fontS = fontG->checkedAction()->text();
     setTextFont(fontS);
 }
@@ -705,12 +674,9 @@ void Editor::changeFont()
 
 }*/
 
-void Editor::changeColor()
-{
-    for(int i=0; i<6; i++)
-    {
-        if(listaColor.at(i)->isChecked())
-        {
+void Editor::changeColor() {
+    for (int i = 0; i < 6; i++) {
+        if (listaColor.at(i)->isChecked()) {
             QColor color1 = listaColor.at(i)->palette().color(QPalette::Background);
             colorS = color1.name();
             ui->txt->setTextColor(color1);
@@ -724,8 +690,7 @@ void Editor::changeColor()
     checkFont();
 }
 
-void Editor::setTextFont(QString fontS)
-{
+void Editor::setTextFont(QString fontS) {
     QFont *font1 = new QFont(fontS);
     QTextCursor cursor = ui->txt->textCursor();
     QTextCharFormat format = cursor.blockCharFormat();
@@ -733,7 +698,7 @@ void Editor::setTextFont(QString fontS)
     format.setFontPointSize(ui->txt->currentFont().pointSize());
     format.setFontUnderline(underline);
     format.setFontItalic(italic);
-    if(bold == true)
+    if (bold == true)
         format.setFontWeight(QFont::Bold);
     else
         format.setFontWeight(QFont::Normal);
@@ -744,12 +709,10 @@ void Editor::setTextFont(QString fontS)
     QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
-    if(evidenzia == true)
-    {
+    if (evidenzia == true) {
         QColor colB = QColor(colorU);
         format.setBackground(colB);
-    }
-    else{
+    } else {
         QColor colB = QColor("white");
         format.setBackground(colB);
     }
@@ -766,15 +729,14 @@ void Editor::setTextFont(QString fontS)
 
 }
 
-void Editor::setTextDim(int dim1)
-{
+void Editor::setTextDim(int dim1) {
     QTextCursor cursor = ui->txt->textCursor();
     QTextCharFormat format = cursor.blockCharFormat();
     format.setFont(ui->txt->currentFont().family());
     format.setFontPointSize(dim1);
     format.setFontUnderline(underline);
     format.setFontItalic(italic);
-    if(bold == true)
+    if (bold == true)
         format.setFontWeight(QFont::Bold);
     else
         format.setFontWeight(QFont::Normal);
@@ -786,12 +748,10 @@ void Editor::setTextDim(int dim1)
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
 
-    if(evidenzia == true)
-    {
+    if (evidenzia == true) {
         QColor colB = QColor(colorU);
         format.setBackground(colB);
-    }
-    else{
+    } else {
         QColor colB = QColor("white");
         format.setBackground(colB);
     }
@@ -802,26 +762,22 @@ void Editor::setTextDim(int dim1)
     //checkFont();
 }
 
-void Editor::setTextDimEdit()
-{
+void Editor::setTextDimEdit() {
     dimS = lEdit->text().toInt();
     setTextDim(dimS);
 }
 
-void Editor::on_verticalScrollBar_sliderMoved(int position)
-{
+void Editor::on_verticalScrollBar_sliderMoved(int position) {
     ui->txt->verticalScrollBar()->setValue(position);
 }
 
-void Editor::on_txt_cursorPositionChanged()
-{
+void Editor::on_txt_cursorPositionChanged() {
     ui->verticalScrollBar->setPageStep(ui->txt->verticalScrollBar()->pageStep());
-    ui->verticalScrollBar->setRange(ui->txt->verticalScrollBar()->minimum(),ui->txt->verticalScrollBar()->maximum());
+    ui->verticalScrollBar->setRange(ui->txt->verticalScrollBar()->minimum(), ui->txt->verticalScrollBar()->maximum());
     ui->verticalScrollBar->setValue(ui->txt->verticalScrollBar()->value());
 }
 
-void Editor::resizeEvent(QResizeEvent* event)
-{
+void Editor::resizeEvent(QResizeEvent *event) {
     on_txt_cursorPositionChanged();
 }
 
@@ -833,35 +789,31 @@ void Editor::resizeEvent(QResizeEvent* event)
     account.exec();
 }*/
 
-void Editor::on_logout_clicked()
-{
+void Editor::on_logout_clicked() {
     emit closeEP();
 }
 
 void Editor::readFile() {
-    int i=0;
-    int j=0;
+    int i = 0;
+    int j = 0;
     QTextCursor cursor = ui->txt->textCursor();
 
-    if(!client_->GetFileContent(*file_).empty())
-    {
+    if (!client_->GetFileContent(*file_).empty()) {
         QMessageBox::warning(this, "Errore", "Non è stato possibile leggere il file");
     }
 
 //    std::cout << client_->getSymbolVector().DebugString() << std::endl;
-    *_symbolsP=client_->getSymbolVector();
+    *_symbolsP = client_->getSymbolVector();
 
-    for(i=0; i<_symbolsP->symbolvector_size(); i++)
-    {
+    for (i = 0; i < _symbolsP->symbolvector_size(); i++) {
         symbol_->push_back(Symbol(_symbolsP->symbolvector(i)));
         std::sort(symbol_->begin(), symbol_->end());
     }
 
-    for(i=0; i<symbol_->size(); i++)
-    {
+    for (i = 0; i < symbol_->size(); i++) {
         QFont *font2;
 
-        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+        if (QString::fromStdString(symbol_->at(i).getFont()) == "")
             //font.setFamily("Arial");
             font2 = new QFont("Arial");
         else
@@ -871,18 +823,17 @@ void Editor::readFile() {
         QTextCharFormat formato = cursor.blockCharFormat();
         formato.setFont(*font2);
 
-        if(symbol_->at(i).getDimension() == -842150451)
+        if (symbol_->at(i).getDimension() == -842150451)
             formato.setFontPointSize(8);
         else
             formato.setFontPointSize(symbol_->at(i).getDimension());
 
         formato.setFontUnderline(symbol_->at(i).getUnderline());
         formato.setFontItalic(symbol_->at(i).getItalic());
-        if(symbol_->at(i).getBold() == true)
+        if (symbol_->at(i).getBold() == true)
             formato.setFontWeight(QFont::Bold);
         else
             formato.setFontWeight(QFont::Normal);
-
 
 
         QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
@@ -890,21 +841,14 @@ void Editor::readFile() {
 
         QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
 
-        if(all == "destra")
-        {
+        if (all == "destra") {
             ui->txt->setAlignment(Qt::AlignRight);
             //formato.setVerticalAlignment(Qt::AlignRight);
-        }
-        else if(all == "sinistra")
-        {
+        } else if (all == "sinistra") {
             ui->txt->setAlignment(Qt::AlignLeft);
-        }
-        else if(all == "centro")
-        {
+        } else if (all == "centro") {
             ui->txt->setAlignment(Qt::AlignCenter);
-        }
-        else if(all == "giustificato")
-        {
+        } else if (all == "giustificato") {
             ui->txt->setAlignment(Qt::AlignJustify);
         }
 
@@ -948,24 +892,24 @@ void Editor::readFile() {
         //cur.movePosition(QTextCursor::PreviousCharacter,QTextCursor::KeepAnchor,1);
 
 
-       /* switch(j)
-        {
-            case (-30):
-                ui->txt->insertPlainText("\n");
-                break;
-            case (9):
-                ui->txt->insertPlainText("\t");
-                break;
-            case (-61):
-                ui->txt->insertPlainText("è");
-                break;
-            case (-62):
-                ui->txt->insertPlainText("°");
-                break;
-            default:
-                char p = std::stoi(symbol.character());
-                ui->txt->insertPlainText(QChar(p));
-        }*/
+        /* switch(j)
+         {
+             case (-30):
+                 ui->txt->insertPlainText("\n");
+                 break;
+             case (9):
+                 ui->txt->insertPlainText("\t");
+                 break;
+             case (-61):
+                 ui->txt->insertPlainText("è");
+                 break;
+             case (-62):
+                 ui->txt->insertPlainText("°");
+                 break;
+             default:
+                 char p = std::stoi(symbol.character());
+                 ui->txt->insertPlainText(QChar(p));
+         }*/
 
         //ui->txt->setPlainText(symbol.character().c_str());
         //ui->txt->setPlainText(QChar(t));
@@ -1029,133 +973,128 @@ void Editor::insertFile(char r) {
        ui->toolBar_2->insertWidget(ui->actionallineaS, zoom);
 
        QObject::connect(zoomG, SIGNAL(triggered(QAction*)), this, SLOT(changeZoom()));*/
- // }
+// }
 
- bool Editor::eventFilter(QObject* obj, QEvent *event)
- {
-     if(insert)
-     {
-         const std::regex pattern(R"(\w+|\W)");
-         if(obj == ui->txt)
-         {
-             if (event->type() == QEvent::KeyPress)
-             {
-                 QKeyEvent* keyEvent = dynamic_cast<QKeyEvent*>(event);
+bool Editor::eventFilter(QObject *obj, QEvent *event) {
+    if (insert) {
+        const std::regex pattern(R"(\w+|\W)");
+        if (obj == ui->txt) {
+            if (event->type() == QEvent::KeyPress) {
+                QKeyEvent *keyEvent = dynamic_cast<QKeyEvent *>(event);
 //                 std::cout << keyEvent->key() << std::endl;
-                 if (keyEvent->key() == Qt::Key_Up)
-                 {
-                     qDebug() << "lineEdit -> Qt::Key_Up";
-                     return true;
-                 }  else if(keyEvent->key() == Qt::Key_Down)
-                 {
-                     qDebug() << "lineEdit -> Qt::Key_Down";
-                     return true;
-                 } else if(keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel || keyEvent->key() == Qt::Key_Backspace) {
-                     std::cout << "cancella\n";
-                     localErase(ui->txt->textCursor().position()-1);
-                 }
-                 else if(keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
-                         keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute || keyEvent->key() == Qt::Key_Eacute ||
-                         keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave || keyEvent->key() == Qt::Key_Igrave ||
-                         keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
-                     localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
-                 }
-                 else if(std::regex_match(keyEvent->text().toStdString(), pattern)) {
-                     localInsert(ui->txt->textCursor().position(),keyEvent->text().toStdString()[0]);
-                 }
-             }
-             return false;
-         }
-         return QMainWindow::eventFilter(obj, event);
-     }
+                if (keyEvent->key() == Qt::Key_Up) {
+                    qDebug() << "lineEdit -> Qt::Key_Up";
+                    return true;
+                } else if (keyEvent->key() == Qt::Key_Down) {
+                    qDebug() << "lineEdit -> Qt::Key_Down";
+                    return true;
+                } else if (keyEvent->key() == Qt::Key_Delete || keyEvent->key() == Qt::Key_Cancel ||
+                           keyEvent->key() == Qt::Key_Backspace) {
+                    std::cout << "cancella\n";
+                    localErase(ui->txt->textCursor().position() - 1);
+                } else if (keyEvent->key() == Qt::Key_Aacute || keyEvent->key() == Qt::Key_Oacute ||
+                           keyEvent->key() == Qt::Key_Iacute || keyEvent->key() == Qt::Key_Uacute ||
+                           keyEvent->key() == Qt::Key_Eacute ||
+                           keyEvent->key() == Qt::Key_Agrave || keyEvent->key() == Qt::Key_Egrave ||
+                           keyEvent->key() == Qt::Key_Igrave ||
+                           keyEvent->key() == Qt::Key_Ograve || keyEvent->key() == Qt::Key_Ugrave) {
+                    localInsert(ui->txt->textCursor().position(), keyEvent->text().toStdString()[0]);
+                } else if (std::regex_match(keyEvent->text().toStdString(), pattern)) {
+                    localInsert(ui->txt->textCursor().position(), keyEvent->text().toStdString()[0]);
+                }
+            }
+            return false;
+        }
+        return QMainWindow::eventFilter(obj, event);
+    }
     return false;
- }
+}
 
 void Editor::localInsert(int index, char value) {
 
-     if(insert)
-     {
-         std::vector<int> posPre = {0};
-         std::vector<int> posPost = {2};
+    if (insert) {
+        std::vector<int> posPre = {0};
+        std::vector<int> posPost = {2};
 
-         if (symbol_->size() < index)
-             //se cerco di inserire a un indice oltre la fine, inserisco alla fine
-             index = symbol_->size();
+        if (symbol_->size() < index)
+            //se cerco di inserire a un indice oltre la fine, inserisco alla fine
+            index = symbol_->size();
 
-         if (symbol_->size() == index) {
-             if (index != 0) {
-                 posPre = symbol_->at(index - 1).getPos();
-                 posPost = {(posPre.at(posPre.size() - 1) + 2)};
-             }
-         } else {
-             if (index != 0)
-                 posPre = symbol_->at(index - 1).getPos();
+        if (symbol_->size() == index) {
+            if (index != 0) {
+                posPre = symbol_->at(index - 1).getPos();
+                posPost = {(posPre.at(posPre.size() - 1) + 2)};
+            }
+        } else {
+            if (index != 0)
+                posPre = symbol_->at(index - 1).getPos();
 
-             posPost = symbol_->at(index).getPos();
-         }
-
-#if debug == 1
-         //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
-    for (int i = 0; i < posPre.size(); i++) {
-        std::cout << posPre.at(i);
-        if (i == 0 && i != posPre.size() - 1)
-            std::cout << ",";
-    }
-    std::cout << "<" << value << "<";
-    for (int i = 0; i < posPost.size(); i++) {
-        std::cout << posPost.at(i);
-        if (i == 0 && i != posPost.size() - 1)
-            std::cout << ",";
-    }
-#endif
-
-         int newVal;
-         bool isPreBigger = posPre.size() >= posPost.size();
-         std::vector<int> posNew = isPreBigger ? posPre : posPost;
-         unsigned int maxI = posNew.size() - 1;
-
-         if (posPre.size() == posPost.size()) {
-             newVal = (posPre.at(maxI) + posPost.at(maxI)) / 2;
-             if (newVal != posPre.at(maxI)) {
-                 //stiamo inserendo tra 1 e 3
-                 posNew.at(maxI) = newVal;
-             } else {
-                 //stiamo inserendo tra 3,4 e 3,5
-                 posNew.push_back(5);
-             }
-         } else {
-             if (posNew.at(maxI) == 1) {
-                 //stiamo inserendo tra 4 e 4,1
-                 posNew.at(maxI) = 0;
-                 posNew.push_back(5);
-             } else if (posNew.at(maxI) == 9) {
-                 //stiamo inserendo tra 3,9 e 4
-                 posNew.push_back(5);
-             } else {
-                 //stiamo inserendo tra 3,477777 e 3,5
-                 newVal = isPreBigger ? (posNew.at(maxI) + 10) / 2 : posNew.at(maxI) / 2;
-                 posNew.at(maxI) = newVal;
-             }
-         }
+            posPost = symbol_->at(index).getPos();
+        }
 
 #if debug == 1
-         // stampa l'indice frazionario scelto
-    std::cout << "  -->  ";
-    for (int j = 0; j < posNew.size(); ++j) {
-        std::cout << posNew[j];
-        if (j == 0 && j != posNew.size() - 1)
-            std::cout << ",";
-    }
-    std::cout << std::endl;
+        //stampa il range in cui deve essere contenuto l'indice frazionario di @value, ad es 0<c<2
+   for (int i = 0; i < posPre.size(); i++) {
+       std::cout << posPre.at(i);
+       if (i == 0 && i != posPre.size() - 1)
+           std::cout << ",";
+   }
+   std::cout << "<" << value << "<";
+   for (int i = 0; i < posPost.size(); i++) {
+       std::cout << posPost.at(i);
+       if (i == 0 && i != posPost.size() - 1)
+           std::cout << ",";
+   }
 #endif
 
-         std::string uniqueId = client_->getProfileInfoLogged().user().email();
-         Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString(), allineamento.toStdString());
-         symbol_->insert(symbol_->begin() + index, 1, symbol);
-         protobuf::Symbol s= symbol.makeProtobufSymbol();
+        int newVal;
+        bool isPreBigger = posPre.size() >= posPost.size();
+        std::vector<int> posNew = isPreBigger ? posPre : posPost;
+        unsigned int maxI = posNew.size() - 1;
+
+        if (posPre.size() == posPost.size()) {
+            newVal = (posPre.at(maxI) + posPost.at(maxI)) / 2;
+            if (newVal != posPre.at(maxI)) {
+                //stiamo inserendo tra 1 e 3
+                posNew.at(maxI) = newVal;
+            } else {
+                //stiamo inserendo tra 3,4 e 3,5
+                posNew.push_back(5);
+            }
+        } else {
+            if (posNew.at(maxI) == 1) {
+                //stiamo inserendo tra 4 e 4,1
+                posNew.at(maxI) = 0;
+                posNew.push_back(5);
+            } else if (posNew.at(maxI) == 9) {
+                //stiamo inserendo tra 3,9 e 4
+                posNew.push_back(5);
+            } else {
+                //stiamo inserendo tra 3,477777 e 3,5
+                newVal = isPreBigger ? (posNew.at(maxI) + 10) / 2 : posNew.at(maxI) / 2;
+                posNew.at(maxI) = newVal;
+            }
+        }
+
+#if debug == 1
+        // stampa l'indice frazionario scelto
+   std::cout << "  -->  ";
+   for (int j = 0; j < posNew.size(); ++j) {
+       std::cout << posNew[j];
+       if (j == 0 && j != posNew.size() - 1)
+           std::cout << ",";
+   }
+   std::cout << std::endl;
+#endif
+
+        std::string uniqueId = client_->getProfileInfoLogged().user().email();
+        Symbol symbol(value, uniqueId, posNew, bold, underline, italic, dimS, colorS.toStdString(), fontS.toStdString(),
+                      allineamento.toStdString());
+        symbol_->insert(symbol_->begin() + index, 1, symbol);
+        protobuf::Symbol s = symbol.makeProtobufSymbol();
 //         std::cout << symbol.makeProtobufSymbol().DebugString() << std::endl;
-         client_->InsertSymbols(symbol, false);
-     }
+        client_->InsertSymbols(symbol, false);
+    }
 
 
 }
@@ -1168,28 +1107,26 @@ void Editor::localInsert(int index, char value) {
  * @param index
  */
 void Editor::localErase(int index) {
-    if(insert)
-    {
+    if (insert) {
         if (symbol_->empty())
             return;
 
         if (index >= symbol_->size())
             index = symbol_->size() - 1;
-        std::cout << symbol_->at(index).getCharacter()<<"\n"<<symbol_->at(index).getUniqueId()<<"\n";
+        std::cout << symbol_->at(index).getCharacter() << "\n" << symbol_->at(index).getUniqueId() << "\n";
         client_->InsertSymbols(symbol_->at(index), true);
 //        std::cout << symbol_->at(index).makeProtobufSymbol().DebugString() << std::endl;
         symbol_->erase(std::find(symbol_->begin(), symbol_->end(), symbol_->at(index)));
     }
 
-  /*
-    Message msg(_symbols.at(index), _siteId, true);
-    _symbols.erase(_symbols.begin() + index);
-    _server.send(msg);*/
+    /*
+      Message msg(_symbols.at(index), _siteId, true);
+      _symbols.erase(_symbols.begin() + index);
+      _server.send(msg);*/
 
 }
 
-void Editor::on_evidenzia_clicked()
-{
+void Editor::on_evidenzia_clicked() {
     insert = false;
     ui->txt->clear();
     /*if(ui->actionevidenzia_utente->isChecked() == true)
@@ -1201,17 +1138,16 @@ void Editor::on_evidenzia_clicked()
     } else{
         readFile();
     }*/
-    int i=0;
-    int j=0;
+    int i = 0;
+    int j = 0;
     QTextCursor cursor = ui->txt->textCursor();
 
 //    std::cout << client_->getSymbolVector().DebugString() << std::endl;
 
-    for(i=0; i < symbol_->size(); i++)
-    {
+    for (i = 0; i < symbol_->size(); i++) {
         QFont *font2;
 
-        if(QString::fromStdString(symbol_->at(i).getFont()) == "")
+        if (QString::fromStdString(symbol_->at(i).getFont()) == "")
             //font.setFamily("Arial");
             font2 = new QFont("Arial");
         else
@@ -1221,14 +1157,14 @@ void Editor::on_evidenzia_clicked()
         QTextCharFormat formato = cursor.blockCharFormat();
         formato.setFont(*font2);
 
-        if(symbol_->at(i).getDimension() == -842150451)
+        if (symbol_->at(i).getDimension() == -842150451)
             formato.setFontPointSize(8);
         else
             formato.setFontPointSize(symbol_->at(i).getDimension());
 
         formato.setFontUnderline(symbol_->at(i).getUnderline());
         formato.setFontItalic(symbol_->at(i).getItalic());
-        if(symbol_->at(i).getBold())
+        if (symbol_->at(i).getBold())
             formato.setFontWeight(QFont::Bold);
         else
             formato.setFontWeight(QFont::Normal);
@@ -1237,8 +1173,7 @@ void Editor::on_evidenzia_clicked()
         QColor colB = QColor(QString::fromStdString(symbol_->at(i).getColor()));
         formato.setForeground(colB);
 
-        if(!evidenzia)
-        {
+        if (!evidenzia) {
             QString email = QString::fromStdString(symbol_->at(i).getUniqueId());
 
             int c = emailL.indexOf(email);
@@ -1250,21 +1185,14 @@ void Editor::on_evidenzia_clicked()
 
         QString all = QString::fromStdString(symbol_->at(i).getAllineamento());
 
-        if(all == "destra")
-        {
+        if (all == "destra") {
             ui->txt->setAlignment(Qt::AlignRight);
             //formato.setVerticalAlignment(Qt::AlignRight);
-        }
-        else if(all == "sinistra")
-        {
+        } else if (all == "sinistra") {
             ui->txt->setAlignment(Qt::AlignLeft);
-        }
-        else if(all == "centro")
-        {
+        } else if (all == "centro") {
             ui->txt->setAlignment(Qt::AlignCenter);
-        }
-        else if(all == "giustificato")
-        {
+        } else if (all == "giustificato") {
             ui->txt->setAlignment(Qt::AlignJustify);
         }
 
@@ -1340,15 +1268,45 @@ void Editor::on_evidenzia_clicked()
     QString email = QString::fromStdString(client_->getProfileInfoLogged().user().email());
     int c = emailL.indexOf(email);
     QString colorU = colorL[c];
-    QColor colB = QColor(colorU);
+    auto colB = QColor(colorU);
     formato2.setBackground(colB);
     ui->txt->setCurrentCharFormat(formato2);
 
-    if(evidenzia == false)
-        evidenzia = true;
-    else
-        evidenzia = false;
+    evidenzia = !evidenzia;
 
     insert = true;
 }
 
+void Editor::add_async_symbol() {
+    std::cout << "add_async_symbol"<< std::endl;
+    ui->txt->setText("");
+    _symbolsP->clear_symbolvector();
+    symbol_->erase(symbol_->begin(), symbol_->end());
+    client_->closeFile();
+    readFile();
+}
+
+
+void Editor::AsyncCompleteRpc(CharacterClient *pClient) {
+    void *got_tag;
+    bool ok = false;
+
+    // Block until the next result is available in the completion queue "cq".
+        while (pClient->cq_.Next(&got_tag, &ok)) {
+            std::cout << got_tag << std::endl;
+            static_cast<AsyncClientGetSymbols *>(got_tag)->HandleAsync(ok);
+
+            if (ok && static_cast<AsyncClientGetSymbols *>(got_tag)->flag) {
+                asyncSymbol = static_cast<AsyncClientGetSymbols *>(got_tag)->GetSymbol();
+                emit newAsync();
+            }
+        }
+}
+
+void Editor::startAsyncClient() {
+    if(!client_->getAsyncfun()) {
+        std::thread([this] { this->AsyncCompleteRpc(client_); }).detach();
+        client_->setAsyncfun();
+        std::cout << client_->getAsyncfun() << std::endl;
+    }
+}

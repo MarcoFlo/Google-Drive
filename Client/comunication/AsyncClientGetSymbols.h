@@ -19,6 +19,8 @@ public:
 
     protobuf::FileInfo request_;
 
+    protobuf::Symbol GetSymbol();
+
     enum CallStatus {
         CREATE, READ, READ_CALLED, FINISH, DESTROY
     };
@@ -26,6 +28,9 @@ public:
     grpc::ClientContext context;
     grpc::Status status;
     CallStatus callStatus;
+    bool flag;
+private:
+    protobuf::Symbol symbol;
 };
 
 

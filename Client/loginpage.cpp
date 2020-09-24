@@ -10,6 +10,24 @@ LoginPage::LoginPage(QWidget *parent) :
     ui->setupUi(this);
     client_ = new CharacterClient();
 
+    protobuf::ProfileInfo user;
+    user.set_username("prova@test.it");
+    user.set_name("prova");
+    user.set_surname("prova");
+    user.mutable_user()->set_email("prova@test.it");
+    user.mutable_user()->set_password("1234");
+    user.mutable_user()->set_passwordr("1234");
+    client_->Register(user);
+
+    protobuf::ProfileInfo user1;
+    user1.set_username("prova1@test.it");
+    user1.set_name("prova1");
+    user1.set_surname("prova1");
+    user1.mutable_user()->set_email("prova1@test.it");
+    user1.mutable_user()->set_password("1234");
+    user1.mutable_user()->set_passwordr("1234");
+    client_->Register(user1);
+
     ui->regi->setVisible(false);
     ui->EmailEdit->setText("prova@test.it");
     ui->PasswordEdit->setText("1234");

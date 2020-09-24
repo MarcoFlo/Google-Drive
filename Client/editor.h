@@ -30,6 +30,8 @@ signals:
 
     void closeEP();
 
+    void newAsync();
+
 private slots:
 
         void setupGeneral();
@@ -110,6 +112,12 @@ private slots:
 
         void on_evidenzia_clicked();
 
+        void add_async_symbol();
+
+        void AsyncCompleteRpc(CharacterClient *pClient);
+
+        void startAsyncClient();
+
 private:
     Ui::Editor *ui;
 
@@ -176,6 +184,9 @@ private:
     bool evidenzia = false;
 
     QString allineamento = "sinistra";
+
+    protobuf::Symbol asyncSymbol;
+
 };
 
 #endif // EDITOR_H
