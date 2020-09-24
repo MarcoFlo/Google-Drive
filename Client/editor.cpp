@@ -1278,6 +1278,7 @@ void Editor::on_evidenzia_clicked() {
 }
 
 void Editor::add_async_symbol() {
+    std::cout << "add_async_symbol"<< std::endl;
     ui->txt->setText("");
     _symbolsP->clear_symbolvector();
     symbol_->erase(symbol_->begin(), symbol_->end());
